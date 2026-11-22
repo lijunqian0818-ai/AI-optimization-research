@@ -1,0 +1,302 @@
+{
+ "inputs": {
+  "pilot_full_timing_s": {
+   "1_list": 0.6,
+   "2_market": 40.3,
+   "3_panel": 8.8,
+   "4_universe": 0.7,
+   "5_features": 30.4,
+   "6_base": 3485.1,
+   "7_standard_orders": 56.8,
+   "8_gates": 6444.8,
+   "9_backtests": 1061.8,
+   "10_estimands": 262.4
+  },
+  "pilot_threads": 24,
+  "pilot_T": 4,
+  "pilot_seeds": 3,
+  "pilot_base_log_s": {
+   "lgbm_tune": [
+    35,
+    78,
+    38,
+    58
+   ],
+   "lgbm_deploy": [
+    901,
+    913,
+    916
+   ],
+   "ridge_tune": [
+    15,
+    16,
+    16,
+    224
+   ],
+   "ridge_deploy": [
+    206
+   ]
+  }
+ },
+ "base": {
+  "lgbm_tuning_s": 2612.5,
+  "lgbm_deploy_base_s": 4550.0,
+  "lgbm_deploy_basev_s_if_other_config": 4550.0,
+  "ridge_tuning_s": 542.0,
+  "ridge_deploy_base_s": 206.0,
+  "ridge_deploy_basev_s_if_other_config": 206.0,
+  "basis": "pilot full-run log: per tuning fit and per deployment seed at 4 LightGBM threads; ridge tuning scaled from 4 to 8 configurations (enet configurations dominate); the 30-configuration mean cost is assumed equal to the 4-configuration mean (UNVERIFIED)",
+  "total_s_at_4_threads_range": [
+   8433.0,
+   21992.375
+  ],
+  "range_note": "low: BASE-V picks the base's configuration (fits reused), cheap configurations; high: other configuration for BASE-V, configuration cost x1.55, an elastic-net ridge deployment 8x a ridge one"
+ },
+ "gates": {
+  "pilot_thread_seconds_upper": 154675.2,
+  "fits_per_method_pilot": 39,
+  "fits_per_method_confirm": 325,
+  "method_weight_pilot": 13.277777777777779,
+  "method_weight_confirm": 17.555555555555557,
+  "rows_factor": 1.5,
+  "config_cost_factor": [
+   1.2,
+   1.55
+  ],
+  "confirm_thread_seconds_range": [
+   1840570.1623430967,
+   3962338.5439330554
+  ],
+  "wall_hours_at_threads": {
+   "10": [
+    51.12694895397491,
+    110.06495955369599
+   ],
+   "16": [
+    31.954343096234318,
+    68.79059972105999
+   ],
+   "24": [
+    21.302895397489543,
+    45.860399814039994
+   ]
+  },
+  "basis": "pilot stage-8 wall time x 24 threads (an upper bound on the CPU actually used) scaled by fits per method, a heavy-method weight of 4 for the all-candidate NET-U / NET-U15, and the larger Y-1 training windows; the lower end of the range assumes 60% pilot utilisation"
+ },
+ "backtests": {
+  "proc_s_per_run_pilot": 24.13181818181818,
+  "runs_main": 280,
+  "runs_rnd_200": 8000,
+  "runs_trend_perf_tuning": 180,
+  "proc_s_without_rnd": 11100.636363636362,
+  "proc_s_rnd_200": 193054.54545454544
+ },
+ "other_s": {
+  "market_panel_features": 79.5,
+  "standard_orders": 69.42222222222222,
+  "estimands_B10000": 1312.0
+ },
+ "smoke_per_trial": {
+  "lgbm|BASE": {
+   "trials": 4,
+   "mean_s_per_trial": 20.6925,
+   "deploy_s": [
+    46.4,
+    46.9
+   ]
+  },
+  "lgbm|BASE-V": {
+   "trials": 4,
+   "mean_s_per_trial": 20.6925,
+   "deploy_s": [
+    46.4,
+    46.9
+   ]
+  },
+  "ridge|BASE": {
+   "trials": 4,
+   "mean_s_per_trial": 2.9275,
+   "deploy_s": [
+    10.1,
+    10.1
+   ]
+  },
+  "ridge|BASE-V": {
+   "trials": 4,
+   "mean_s_per_trial": 2.9275,
+   "deploy_s": [
+    9.8,
+    9.8
+   ]
+  },
+  "lgbm|LOSS-LR(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 20.84,
+   "deploy_s": 15.75
+  },
+  "lgbm|LOSS(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 33.739999999999995,
+   "deploy_s": 50.28
+  },
+  "lgbm|LOSS(+Z_H)": {
+   "trials": 4,
+   "mean_s_per_trial": 34.677499999999995,
+   "deploy_s": 50.79
+  },
+  "lgbm|LOSS(+Z_O*)": {
+   "trials": 4,
+   "mean_s_per_trial": 35.59,
+   "deploy_s": 51.99
+  },
+  "lgbm|LOSS(+Z_O)": {
+   "trials": 4,
+   "mean_s_per_trial": 36.33,
+   "deploy_s": 26.37
+  },
+  "lgbm|LOSS(+Z_H+Z_O*)": {
+   "trials": 4,
+   "mean_s_per_trial": 36.685,
+   "deploy_s": 52.68
+  },
+  "lgbm|LOSS(+perm Z_H)": {
+   "trials": 4,
+   "mean_s_per_trial": 33.08,
+   "deploy_s": 49.48
+  },
+  "lgbm|LOSS(+perm Z_O*)": {
+   "trials": 4,
+   "mean_s_per_trial": 34.4525,
+   "deploy_s": 67.68
+  },
+  "lgbm|NET-K(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 30.2375,
+   "deploy_s": 57.67
+  },
+  "lgbm|NET-K(+Z_H)": {
+   "trials": 4,
+   "mean_s_per_trial": 30.807500000000005,
+   "deploy_s": 59.9
+  },
+  "lgbm|NET-K(+Z_O*)": {
+   "trials": 4,
+   "mean_s_per_trial": 32.845,
+   "deploy_s": 34.01
+  },
+  "lgbm|NET-U(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 31.24,
+   "deploy_s": 50.29
+  },
+  "lgbm|NET-U15(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 36.085,
+   "deploy_s": 21.41
+  },
+  "ridge|LOSS-LR(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 23.5875,
+   "deploy_s": 15.06
+  },
+  "ridge|LOSS(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 36.4075,
+   "deploy_s": 22.82
+  },
+  "ridge|LOSS(+Z_H)": {
+   "trials": 4,
+   "mean_s_per_trial": 33.135,
+   "deploy_s": 23.1
+  },
+  "ridge|LOSS(+Z_O*)": {
+   "trials": 4,
+   "mean_s_per_trial": 32.9025,
+   "deploy_s": 51.05
+  },
+  "ridge|LOSS(+Z_O)": {
+   "trials": 4,
+   "mean_s_per_trial": 33.435,
+   "deploy_s": 66.32
+  },
+  "ridge|LOSS(+Z_H+Z_O*)": {
+   "trials": 4,
+   "mean_s_per_trial": 32.9,
+   "deploy_s": 54.14
+  },
+  "ridge|LOSS(+perm Z_H)": {
+   "trials": 4,
+   "mean_s_per_trial": 32.66,
+   "deploy_s": 32.28
+  },
+  "ridge|LOSS(+perm Z_O*)": {
+   "trials": 4,
+   "mean_s_per_trial": 32.5325,
+   "deploy_s": 51.84
+  },
+  "ridge|NET-K(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 29.54,
+   "deploy_s": 58.45
+  },
+  "ridge|NET-K(+Z_H)": {
+   "trials": 4,
+   "mean_s_per_trial": 29.615,
+   "deploy_s": 48.07
+  },
+  "ridge|NET-K(+Z_O*)": {
+   "trials": 4,
+   "mean_s_per_trial": 29.965,
+   "deploy_s": 36.36
+  },
+  "ridge|NET-U(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 24.017500000000002,
+   "deploy_s": 37.33
+  },
+  "ridge|NET-U15(-Z)": {
+   "trials": 4,
+   "mean_s_per_trial": 24.459999999999997,
+   "deploy_s": 39.44
+  }
+ },
+ "smoke_timing": {
+  "1_list": {
+   "seconds": 0.1
+  },
+  "2_market": {
+   "seconds": 13.5
+  },
+  "3_panel": {
+   "seconds": 18.0
+  },
+  "4_universe": {
+   "seconds": 0.2
+  },
+  "5_features": {
+   "seconds": 11.1
+  },
+  "6_standard_orders": {
+   "seconds": 19.3
+  },
+  "7_base": {
+   "seconds": 220.8
+  },
+  "8_gates": {
+   "seconds": 944.9
+  },
+  "9_backtests": {
+   "seconds": 170.5
+  },
+  "10_estimands": {
+   "seconds": 22.5
+  }
+ },
+ "total_hours_without_rnd200": [
+  54.49196270257199,
+  117.1964663578486
+ ],
+ "rnd200_extra_hours": 10.725252525252525,
+ "threads": 10,
+ "written": "2026-11-17T11:52:22"
+}

@@ -1,0 +1,658 @@
+﻿TY  - JOUR
+TI  - Imperfect Oracles: The Effect of Strategic Information on Stock Markets
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C005; identifier arXiv:2011.10837] 模拟市场中交易者获得关于他人策略的带噪信息（不完美预言机）时的获利能力
+PY  - 2020
+T2  - ICAART 2021
+AU  - Miklos Borsi
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00005
+N1  - sr-screener TA [R00005]: UNCLEAR (Unclear - needs next stage / team decision) - Noisy information on others' strategies in simulated market; game content unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Informed manipulation
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C009; identifier doi:10.1016/s0022-0531(03)00101-7] 知情操纵：内幕者在均衡中的操纵性交易
+PY  - 2004
+DO  - 10.1016/s0022-0531(03)00101-7
+T2  - Journal of Economic Theory
+AU  - Archishman Chakraborty
+AU  - Bilge Yılmaz
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00009
+N1  - sr-screener TA [R00009]: UNCLEAR (Unclear - needs next stage / team decision) - Pre-2010 informed manipulation equilibrium; foundational status uncertain | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - SafeAdapt-Poker: Counterfactual Risk Calibration for Budgeted Adaptation under Opponent Shift
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C010; identifier arXiv:2610.20473] 纯扑克：对手行为漂移下带预算的反事实风险校准（“何时偏离均衡”）；思想可借鉴
+PY  - 2026
+T2  - arXiv preprint
+AU  - Miaobo Hu
+AU  - Shuhao Hu
+AU  - Xiaobo Guo
+AU  - Xin Wang
+AU  - Bokun Wang
+AU  - Rui Chen
+AU  - et al.
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00010
+N1  - sr-screener TA [R00010]: UNCLEAR (Unclear - needs next stage / team decision) - Poker-only, but risk calibration for when to deviate suggests transferable decision-theory link | A: exclude/E4 | B: unclear/UNC | by ADJ
+ER  - 
+
+TY  - JOUR
+TI  - Opponent Modeling in Multiplayer Imperfect-Information Games
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C011; identifier arXiv:2212.06027] 多人不完全信息博弈中的对手建模（纯博弈算法）
+PY  - 2022
+T2  - arXiv preprint
+AU  - Sam Ganzfried
+AU  - Kevin A. Wang
+AU  - Max Chiswick
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00011
+N1  - sr-screener TA [R00011]: UNCLEAR (Unclear - needs next stage / team decision) - Opponent modeling in imperfect-information games; general game theory, finance link unstated | A: exclude/E4 | B: unclear/UNC | by ADJ
+ER  - 
+
+TY  - JOUR
+TI  - Artificial intelligence approach to momentum risk-taking
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C012; identifier arXiv:1911.08448] 动量风险承担的数学模型与自动交易系统；摘要检索命中 poker，关联程度未读全文确认
+PY  - 2019
+T2  - arXiv preprint
+AU  - Ivan Cherednik
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00012
+N1  - sr-screener TA [R00012]: UNCLEAR (Unclear - needs next stage / team decision) - Momentum risk-taking trading system; poker/risk link unconfirmed | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - BDLOB: Bayesian Deep Convolutional Neural Networks for Limit Order Books
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C037; identifier arXiv:1811.10041] 贝叶斯深度网络估计不确定性并用于仓位/是否交易的决策（限价单簿）
+PY  - 2018
+T2  - NeurIPS 2018 Bayesian Deep Learning Workshop
+AU  - Zihao Zhang
+AU  - Stefan Zohren
+AU  - Stephen Roberts
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00037
+N1  - sr-screener TA [R00037]: UNCLEAR (Unclear - needs next stage / team decision) - LOB model; uncertainty used for trade/sizing, HFT specificity unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Dynamic Trading with Predictable Returns and Transaction Costs
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C043; identifier doi:10.1111/jofi.12080] 可预测收益 + 交易成本下的动态交易
+PY  - 2013
+DO  - 10.1111/jofi.12080
+T2  - The Journal of Finance
+AU  - Nicolae Gârleanu
+AU  - Lasse Heje Pedersen
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00043
+N1  - sr-screener TA [R00043]: UNCLEAR (Unclear - needs next stage / team decision) - Dynamic trading with costs; how-much-to-trade rule, abstract not shown | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Noise Trader Risk in Financial Markets
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C053; identifier doi:10.1086/261703] 噪声交易者风险（DSSW 1990）
+PY  - 1990
+DO  - 10.1086/261703
+T2  - Journal of Political Economy
+AU  - J. Bradford De Long
+AU  - Andrei Shleifer
+AU  - Lawrence H. Summers
+AU  - Robert J. Waldmann
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00053
+N1  - sr-screener TA [R00053]: UNCLEAR (Unclear - needs next stage / team decision) - Noise trader risk; foundational relevance to other participants uncertain | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - A Deep Reinforcement Learning Framework for Dynamic Portfolio Optimization: Evidence from China's Stock Market
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C057; identifier arXiv:2412.18563] 中国股市动态组合优化的深度 RL 框架
+PY  - 2024
+T2  - arXiv preprint
+AU  - Gang Huang
+AU  - Xiaohua Zhou
+AU  - Qingyang Song
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00057
+N1  - sr-screener TA [R00057]: UNCLEAR (Unclear - needs next stage / team decision) - RL portfolio China; risk modelling not stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C060; identifier arXiv:2011.09607] FinRL：股票交易深度 RL 库，常用基线实现
+PY  - 2020
+T2  - NeurIPS 2020 Deep RL Workshop
+AU  - Xiao-Yang Liu
+AU  - Hongyang Yang
+AU  - Qian Chen
+AU  - Runjia Zhang
+AU  - Liuqing Yang
+AU  - Bowen Xiao
+AU  - et al.
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00060
+N1  - sr-screener TA [R00060]: UNCLEAR (Unclear - needs next stage / team decision) - RL trading library; risk or multi-agent content not stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Reinforcement Learning for Market Making in a Multi-agent Dealer Market
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C061; identifier arXiv:1911.05892] 多智能体交易商市场中的 RL 做市
+PY  - 2019
+T2  - arXiv preprint
+AU  - Sumitra Ganesh
+AU  - Nelson Vadori
+AU  - Mengda Xu
+AU  - Hua Zheng
+AU  - Prashant Reddy
+AU  - Manuela Veloso
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00061
+N1  - sr-screener TA [R00061]: UNCLEAR (Unclear - needs next stage / team decision) - Multi-agent RL dealer market making; opponent modelling plausible, not clearly HFT-specific | A: unclear/UNC | B: exclude/E5 | by ADJ
+ER  - 
+
+TY  - JOUR
+TI  - AlphaStock: A Buying-Winners-and-Selling-Losers Investment Strategy using Interpretable Deep Reinforcement Attention Networks
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C062; identifier arXiv:1908.02646] AlphaStock：可解释深度 RL 注意力网络做买赢卖输策略
+PY  - 2019
+T2  - KDD 2019
+AU  - Jingyuan Wang
+AU  - Yang Zhang
+AU  - Ke Tang
+AU  - Junjie Wu
+AU  - Zhang Xiong
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00062
+N1  - sr-screener TA [R00062]: UNCLEAR (Unclear - needs next stage / team decision) - RL stock selection; risk modelling not stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Emergence from Emergence: Financial Market Simulation via Learning with Heterogeneous Preferences
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C064; identifier arXiv:2511.05207] 异质偏好智能体的多智能体 RL 市场模拟
+PY  - 2025
+T2  - arXiv preprint
+AU  - Ryuji Hashimoto
+AU  - Ryosuke Takata
+AU  - Masahiro Suzuki
+AU  - Yuki Tanaka
+AU  - Kiyoshi Izumi
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00064
+N1  - sr-screener TA [R00064]: UNCLEAR (Unclear - needs next stage / team decision) - Multi-agent RL with heterogeneous agents; may model other participants, not stated | A: unclear/UNC | B: exclude/E2 | by ADJ
+ER  - 
+
+TY  - JOUR
+TI  - JaxMARL-HFT: GPU-Accelerated Large-Scale Multi-Agent Reinforcement Learning for High-Frequency Trading
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C065; identifier arXiv:2511.02136] 高频交易多智能体 RL 环境
+PY  - 2025
+T2  - ICAIF 2025
+AU  - Valentin Mohl
+AU  - Sascha Frey
+AU  - Reuben Leyland
+AU  - Kang Li
+AU  - George Nigmatulin
+AU  - Mihai Cucuringu
+AU  - et al.
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00065
+N1  - sr-screener TA [R00065]: UNCLEAR (Unclear - needs next stage / team decision) - Multi-agent RL for HFT; unclear whether agent/opponent or risk modelling is present | A: exclude/E5 | B: exclude/E5 | by QC
+ER  - 
+
+TY  - JOUR
+TI  - ABIDES-MARL: A Multi-Agent Reinforcement Learning Environment for Optimal Execution with Endogenous Liquidity
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C066; identifier arXiv:2511.02016] 带内生流动性的多智能体 RL 最优执行环境（摘要提及 Kyle 类模型）
+PY  - 2025
+T2  - arXiv preprint
+AU  - Patrick Cheridito
+AU  - Jean-Loup Dupret
+AU  - Zhexin Wu
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00066
+N1  - sr-screener TA [R00066]: UNCLEAR (Unclear - needs next stage / team decision) - Multi-agent execution environment mentioning Kyle-type models | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Multi-Agent Reinforcement Learning for Market Making: Competition without Collusion
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C067; identifier arXiv:2510.25929] 多智能体 RL 做市：竞争而无合谋
+PY  - 2025
+T2  - arXiv preprint
+AU  - Ziyi Wang
+AU  - Carmine Ventre
+AU  - Maria Polukarov
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00067
+N1  - sr-screener TA [R00067]: UNCLEAR (Unclear - needs next stage / team decision) - Multi-agent RL market making; competitor modelling plausible, HFT specificity not established | A: unclear/UNC | B: exclude/E5 | by ADJ
+ER  - 
+
+TY  - JOUR
+TI  - Order book regulatory impact on stock market quality: a multi-agent reinforcement learning perspective
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C068; identifier arXiv:2302.04184] 多智能体 RL 视角下订单簿监管对市场质量的影响
+PY  - 2023
+T2  - arXiv preprint
+AU  - Johann Lussange
+AU  - Boris Gutkin
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00068
+N1  - sr-screener TA [R00068]: UNCLEAR (Unclear - needs next stage / team decision) - Multi-agent RL order-book market simulation; informed-trader or adverse-selection content not stated | A: exclude/E5 | B: exclude/E5 | by QC
+ER  - 
+
+TY  - JOUR
+TI  - Optimizing Trading Strategies in Quantitative Markets using Multi-Agent Reinforcement Learning
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C069; identifier arXiv:2303.11959] 多智能体 RL 优化量化交易策略
+PY  - 2023
+T2  - arXiv preprint
+AU  - Hengxi Zhang
+AU  - Zhendong Shi
+AU  - Yuanquan Hu
+AU  - Wenbo Ding
+AU  - Ercan E. Kuruoglu
+AU  - Xiao-Ping Zhang
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00069
+N1  - sr-screener TA [R00069]: UNCLEAR (Unclear - needs next stage / team decision) - Multi-agent RL quant trading; details not stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Recent Advances in Reinforcement Learning in Finance
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C071; identifier arXiv:2112.04553] 金融中 RL 的综述
+PY  - 2021
+T2  - arXiv preprint
+AU  - Ben Hambly
+AU  - Renyuan Xu
+AU  - Huining Yang
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00071
+N1  - sr-screener TA [R00071]: UNCLEAR (Unclear - needs next stage / team decision) - RL in finance survey; may cover risk-aware trading | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Reinforcement Learning for Quantitative Trading
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C072; identifier arXiv:2109.13851] 量化交易 RL 综述
+PY  - 2021
+T2  - arXiv preprint
+AU  - Shuo Sun
+AU  - Rundong Wang
+AU  - Bo An
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00072
+N1  - sr-screener TA [R00072]: UNCLEAR (Unclear - needs next stage / team decision) - RL quantitative trading survey; coverage unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Reinforcement Learning in Quantitative Algorithmic Trading: A Review
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C074; identifier arXiv:2106.00123] 量化交易深度 RL 综述
+PY  - 2021
+T2  - arXiv preprint
+AU  - Tidor-Vlad Pricope
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00074
+N1  - sr-screener TA [R00074]: UNCLEAR (Unclear - needs next stage / team decision) - Deep RL algorithmic trading review; coverage unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Reinforcement Learning for Trading—A Critical Survey
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C075; identifier doi:10.3390/data6110119] 交易深度 RL 批判性综述
+PY  - 2021
+DO  - 10.3390/data6110119
+T2  - Data
+AU  - Adrian Millea
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00075
+N1  - sr-screener TA [R00075]: UNCLEAR (Unclear - needs next stage / team decision) - Deep RL trading survey; coverage unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Stock price formation: useful insights from a multi-agent reinforcement learning model
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C077; identifier arXiv:1910.05137] 多智能体 RL 模型下的股价形成
+PY  - 2019
+T2  - arXiv preprint
+AU  - J. Lussange
+AU  - S. Bourgeois-Gironde
+AU  - S. Palminteri
+AU  - B. Gutkin
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00077
+N1  - sr-screener TA [R00077]: UNCLEAR (Unclear - needs next stage / team decision) - Multi-agent RL stock market model; opponent/multi-agent modelling plausibly met (T3) | A: unclear/UNC | B: exclude/E2 | by ADJ
+ER  - 
+
+TY  - JOUR
+TI  - Fairness in Multi-agent Reinforcement Learning for Stock Trading
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C078; identifier arXiv:2001.00918] 多智能体 RL 股票交易中的公平性
+PY  - 2019
+T2  - arXiv preprint
+AU  - Wenhang Bao
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00078
+N1  - sr-screener TA [R00078]: UNCLEAR (Unclear - needs next stage / team decision) - Multi-agent RL stock trading; fairness focus | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Robust Reinforcement Learning for Practical Algorithmic Trading
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C079; identifier doi:10.1109/access.2019.2932789] 稳健深度 RL 算法交易
+PY  - 2019
+DO  - 10.1109/access.2019.2932789
+T2  - IEEE Access
+AU  - Yang Li
+AU  - Wanshan Zheng
+AU  - Zibin Zheng
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00079
+N1  - sr-screener TA [R00079]: UNCLEAR (Unclear - needs next stage / team decision) - Robust deep RL trading; risk modelling not stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - A Deep Reinforcement Learning Framework for the Financial Portfolio Management Problem
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C080; identifier arXiv:1706.10059] 组合管理深度 RL 经典框架（EIIE）
+PY  - 2017
+T2  - arXiv preprint
+AU  - Zhengyao Jiang
+AU  - Dixing Xu
+AU  - Jinjun Liang
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00080
+N1  - sr-screener TA [R00080]: UNCLEAR (Unclear - needs next stage / team decision) - RL portfolio management; risk or agents not stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Direct Reinforcement Learning for Financial Signal Representation and Trading
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C081; identifier doi:10.1109/TNNLS.2016.2522401] 深度直接 RL 交易
+PY  - 2017
+DO  - 10.1109/TNNLS.2016.2522401
+T2  - IEEE Transactions on Neural Networks and Learning Systems
+AU  - Yue Deng
+AU  - Feng Bao
+AU  - Youyong Kong
+AU  - Zhiquan Ren
+AU  - Qionghai Dai
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00081
+N1  - sr-screener TA [R00081]: UNCLEAR (Unclear - needs next stage / team decision) - RL trading; risk or multi-agent content not stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Risk-Sensitive and Robust Decision-Making: a CVaR Optimization Approach
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C082; identifier arXiv:1506.02188] CVaR MDP 的优化方法（风险敏感与稳健决策）
+PY  - 2015
+T2  - arXiv preprint
+AU  - Yinlam Chow
+AU  - Aviv Tamar
+AU  - Shie Mannor
+AU  - Marco Pavone
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00082
+N1  - sr-screener TA [R00082]: UNCLEAR (Unclear - needs next stage / team decision) - General CVaR risk-sensitive MDP; trading link not stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Generating Synergistic Formulaic Alpha Collections via Reinforcement Learning
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C089; identifier arXiv:2306.12964] AlphaGen：RL 生成协同公式化因子集合
+PY  - 2023
+T2  - KDD 2023
+AU  - Shuo Yu
+AU  - Hongyan Xue
+AU  - Xiang Ao
+AU  - Feiyang Pan
+AU  - Jia He
+AU  - Dandan Tu
+AU  - et al.
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00089
+N1  - sr-screener TA [R00089]: UNCLEAR (Unclear - needs next stage / team decision) - RL factor generation; dynamic weighting not clearly stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Machine learning in the Chinese stock market
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C091; identifier doi:10.1016/j.jfineco.2021.08.017] 中国股市中的机器学习（A 股 ML 因子基准）
+PY  - 2022
+DO  - 10.1016/j.jfineco.2021.08.017
+T2  - Journal of Financial Economics
+AU  - Markus Leippold
+AU  - Qian Wang
+AU  - Wenyu Zhou
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00091
+N1  - sr-screener TA [R00091]: UNCLEAR (Unclear - needs next stage / team decision) - A-share ML factor benchmark; possible baseline, no decision layer stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Qlib: An AI-oriented Quantitative Investment Platform
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C093; identifier arXiv:2009.11189] Qlib：量化投资平台（A 股数据与因子/模型基线）
+PY  - 2020
+T2  - arXiv preprint
+AU  - Xiao Yang
+AU  - Weiqing Liu
+AU  - Dong Zhou
+AU  - Jiang Bian
+AU  - Tie-Yan Liu
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00093
+N1  - sr-screener TA [R00093]: UNCLEAR (Unclear - needs next stage / team decision) - Quant platform with A-share baselines; topic fit unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Empirical Asset Pricing via Machine Learning
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C094; identifier doi:10.1093/rfs/hhaa009] Gu-Kelly-Xiu：机器学习实证资产定价（多因子 ML 基线）
+PY  - 2020
+DO  - 10.1093/rfs/hhaa009
+T2  - The Review of Financial Studies
+AU  - Shihao Gu
+AU  - Bryan Kelly
+AU  - Dacheng Xiu
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00094
+N1  - sr-screener TA [R00094]: UNCLEAR (Unclear - needs next stage / team decision) - Standard multi-factor ML baseline; no decision component stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Size and value in China
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C096; identifier doi:10.1016/j.jfineco.2019.03.008] 中国的规模与价值因子（A 股因子模型基准）
+PY  - 2019
+DO  - 10.1016/j.jfineco.2019.03.008
+T2  - Journal of Financial Economics
+AU  - Jianan Liu
+AU  - Robert F. Stambaugh
+AU  - Yu Yuan
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00096
+N1  - sr-screener TA [R00096]: UNCLEAR (Unclear - needs next stage / team decision) - China A-share multi-factor benchmark; dynamic factor weighting/timing (T4) not stated | A: unclear/UNC | B: exclude/E2 | by ADJ
+ER  - 
+
+TY  - JOUR
+TI  - Firm Characteristics and Chinese Stocks
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C099; identifier doi:10.3724/sp.j.1383.304014] 公司特征与中国股票收益
+PY  - 2018
+DO  - 10.3724/sp.j.1383.304014
+T2  - Journal of Management Science and Engineering
+AU  - Fuwei Jiang
+AU  - Guohao Tang
+AU  - Guofu Zhou
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00099
+N1  - sr-screener TA [R00099]: UNCLEAR (Unclear - needs next stage / team decision) - China stock characteristics/factor evidence; T4 plausible but timing not stated | A: unclear/UNC | B: exclude/E2 | by ADJ
+ER  - 
+
+TY  - JOUR
+TI  - Presidential Address: Sophisticated Investors and Market Efficiency
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C108; identifier doi:10.1111/j.1540-6261.2009.01472.x] Stein：成熟投资者与市场效率（拥挤交易问题）
+PY  - 2009
+DO  - 10.1111/j.1540-6261.2009.01472.x
+T2  - The Journal of Finance
+AU  - Jeremy C. Stein
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00108
+N1  - sr-screener TA [R00108]: UNCLEAR (Unclear - needs next stage / team decision) - 2009 crowding paper; possibly foundational, date borderline | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - The Disposition Effect and Underreaction to News
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C109; identifier doi:10.1111/j.1540-6261.2006.00896.x] Frazzini：处置效应与对消息反应不足
+PY  - 2006
+DO  - 10.1111/j.1540-6261.2006.00896.x
+T2  - The Journal of Finance
+AU  - Andrea Frazzini
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00109
+N1  - sr-screener TA [R00109]: UNCLEAR (Unclear - needs next stage / team decision) - 2006 disposition effect; foundational status unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Do Investor Sophistication and Trading Experience Eliminate Behavioral Biases in Financial Markets?
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C111; identifier doi:10.1007/s10679-005-2262-0] 投资者成熟度与交易经验能否消除行为偏差（Feng-Seasholes，中国账户数据）
+PY  - 2005
+DO  - 10.1007/s10679-005-2262-0
+T2  - Review of Finance
+AU  - Lei Feng
+AU  - Mark S. Seasholes
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00111
+N1  - sr-screener TA [R00111]: UNCLEAR (Unclear - needs next stage / team decision) - 2005 Chinese disposition evidence; foundational status unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Prospect Theory and Stock Market Anomalies
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C114; identifier doi:10.1111/jofi.13061] 前景理论与股票异象
+PY  - 2021
+DO  - 10.1111/jofi.13061
+T2  - The Journal of Finance
+AU  - Nicholas Barberis
+AU  - Lawrence J. Jin
+AU  - Baolian Wang
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00114
+N1  - sr-screener TA [R00114]: UNCLEAR (Unclear - needs next stage / team decision) - Prospect theory and anomalies; capital gains overhang link not stated | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - What Drives the Disposition Effect? An Analysis of a Long‐Standing Preference‐Based Explanation
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C118; identifier doi:10.1111/j.1540-6261.2009.01448.x] 处置效应的偏好解释
+PY  - 2009
+DO  - 10.1111/j.1540-6261.2009.01448.x
+T2  - The Journal of Finance
+AU  - Nicholas Barberis
+AU  - Wei Xiong
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00118
+N1  - sr-screener TA [R00118]: UNCLEAR (Unclear - needs next stage / team decision) - 2009 disposition effect; foundational status unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Analysis of Kelly-optimal portfolios
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C133; identifier arXiv:0712.2771] Kelly 最优组合分析
+PY  - 2007
+T2  - Quantitative Finance 10 (2010)
+AU  - Paolo Laureti
+AU  - Matus Medo
+AU  - Yi-Cheng Zhang
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00133
+N1  - sr-screener TA [R00133]: UNCLEAR (Unclear - needs next stage / team decision) - Kelly portfolios analysis, 2007; foundational status unsure | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Optimal Portfolio Choice with Parameter Uncertainty
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C134; identifier doi:10.1017/S0022109000004129] 参数不确定下的最优组合选择（Kan-Zhou）
+PY  - 2007
+DO  - 10.1017/S0022109000004129
+T2  - Journal of Financial and Quantitative Analysis
+AU  - Raymond Kan
+AU  - Guofu Zhou
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00134
+N1  - sr-screener TA [R00134]: UNCLEAR (Unclear - needs next stage / team decision) - Parameter-uncertainty portfolio choice, 2007; possible foundational T6 | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - A Survey on Game Theory Optimal Poker
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C149; identifier arXiv:2401.06168] GTO 扑克综述
+PY  - 2024
+T2  - arXiv preprint
+AU  - Prathamesh Sonawane
+AU  - Arav Chheda
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Unclear
+ID  - R00149
+N1  - sr-screener TA [R00149]: UNCLEAR (Unclear - needs next stage / team decision) - Poker GTO survey; finance link and foundational status unclear | A: unclear/UNC | B: unclear/UNC | by A+B
+ER  - 
+

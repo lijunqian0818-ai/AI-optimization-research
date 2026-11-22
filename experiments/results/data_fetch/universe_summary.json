@@ -1,0 +1,48 @@
+{
+ "built_at": "2026-11-15 17:30:46",
+ "start": "2008-01-01",
+ "end": "2026-06-30",
+ "bs_basic_rows": 9038,
+ "bs_basic_by_type": {
+  "1": 5566,
+  "5": 1725,
+  "4": 1151,
+  "2": 596
+ },
+ "type1_rows": 5566,
+ "type1_other_prefix": {},
+ "a_shares_in_basic_table": 5566,
+ "excluded_delisted_before_start": 57,
+ "excluded_listed_after_end": 31,
+ "worklist_n": 5478,
+ "worklist_delisted_by_end": 273,
+ "worklist_outdate_nonempty": 285,
+ "worklist_by_board": {
+  "sse_main": 1816,
+  "chinext": 1439,
+  "szse_main(sme_until_2021)": 973,
+  "szse_main": 636,
+  "star": 613,
+  "chinext(prefix_302_unverified)": 1
+ },
+ "worklist_by_exchange": {
+  "sz": 3049,
+  "sh": 2429
+ },
+ "exchange_delist_lists": {
+  "sse_delist": {
+   "rows": 161,
+   "a_share_rows": 154,
+   "a_share_terminated_since_start": 127,
+   "of_those_absent_from_bs_basic": [],
+   "of_those_in_worklist": 127
+  },
+  "szse_delist": {
+   "rows": 213,
+   "a_share_rows": 190,
+   "a_share_terminated_since_start": 159,
+   "of_those_absent_from_bs_basic": [],
+   "of_those_in_worklist": 159
+  }
+ }
+}

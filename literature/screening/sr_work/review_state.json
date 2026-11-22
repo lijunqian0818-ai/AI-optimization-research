@@ -1,0 +1,14 @@
+{
+ "ta": {
+  "review_id": "8c47780a-4b0c-429b-8db1-d0752499dc2a",
+  "dataset": "06f59767418c9281c39388f372baff0155e81e864df4a22ebb257e0af042c2f2",
+  "stage": "ta",
+  "protocol_hash": "c55c645cd7c8bc8aee88cd6bc177f4703454a4e885589257866d2accab645540",
+  "config_hash": "8181e460c7ad9d0a2c1355c24cc25c44b4c34ddd30d804b12b6be824b2f83b71",
+  "content_id": "42f00ac9c0ed18de033d7498d33b395506a427ef5a8b5e4155c4782336ba8ae9",
+  "config_scope": "stage-v1",
+  "revision": 2,
+  "protocol_path": "C:\\Users\\lijun\\Desktop\\AI-Optimization-Research\\literature\\screening\\screening_protocol.md",
+  "context_id": "6bdc3fe7d9efdda7b1d1775668a1073561c6feea0765d91363bcadf047368bbb"
+ }
+}

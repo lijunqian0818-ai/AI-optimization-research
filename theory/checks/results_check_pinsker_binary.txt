@@ -1,0 +1,9 @@
+=== Step 2: kl(x,y) - 2(x-y)^2 on a 2001 x 2001 grid of (0,1)^2 ===
+min gap = 0.000e+00  (must be >= 0 up to rounding); number of grid points with gap < -1e-12: 0
+min of 1/(x(1-x)) on the grid = 4.000000  (claim: >= 4)
+
+=== Step 1: random P, Q on finite sets ===
+seed  instances  min[KL - kl(x,y)]  max|TV - (x-y)|  min[KL - 2 TV^2]
+1     20000      -1.776e-15         3.608e-16        +6.515e-11
+2     20000      -1.110e-15         3.886e-16        +6.316e-11
+3     20000      -1.776e-15         3.331e-16        +1.352e-10

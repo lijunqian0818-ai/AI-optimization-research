@@ -1,0 +1,219 @@
+{
+ "module": "v07_rules",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ },
+ "n": 20,
+ "passed": 20,
+ "failed": 0,
+ "seconds": 0.05,
+ "results": [
+  {
+   "test": "test_reference_cost_close_instant_component",
+   "doc": "E-7 (b): a reference path that changes ONLY at a close.",
+   "status": "pass",
+   "info": {
+    "C_E_open": 0.7699999999999998,
+    "C_E_close": 0.05133333333333352
+   }
+  },
+  {
+   "test": "test_record_date_2015_09_08_two_readings",
+   "doc": "Record date 2015-09-08 under both readings of the 2015 notice (PLAN 3.10 list item 17).",
+   "status": "pass",
+   "info": {
+    "from": {
+     "cash_paid": 500.0,
+     "liability": 100.0,
+     "W_open_ex": 99892.3,
+     "spendable": 90392.3,
+     "label_net": 9883.185
+    },
+    "after": {
+     "cash_paid": 475.0,
+     "liability": 75.0,
+     "W_open_ex": 99892.3,
+     "spendable": 90392.3,
+     "label_net": 9883.185
+    }
+   }
+  },
+  {
+   "test": "test_forced_class_U_event_label_U_ledger_as_URS",
+   "doc": "An event the event table could not classify (forced_class 'U'): the label of every entry whose",
+   "status": "pass"
+  },
+  {
+   "test": "test_same_day_dividend_and_rights_record_date_in_suspension",
+   "doc": "PLAN 3.8 (iii) note (7).  Last traded close 10.00 (day 2); suspended days 3..5.",
+   "status": "pass",
+   "info": {
+    "same_day": 9.25,
+    "rights_first": 9.166666666666666
+   }
+  },
+  {
+   "test": "test_cash_exit_no_sell_charge_liability_debited",
+   "doc": "E-13 (a): buy 1000 @ 10 (7.7); dividend 0.5 gross with record date = entry day (2016: paid 500,",
+   "status": "pass",
+   "info": {
+    "cash_after_exit": 100892.3,
+    "sensitivity_charges": 13.335
+   }
+  },
+  {
+   "test": "test_sell_charges_exclude_cash_part",
+   "doc": "E-13 (c): a lot with a dividend in its holding period: the sell-side charges are computed on the",
+   "status": "pass"
+  },
+  {
+   "test": "test_successor_event_on_succession_day_is_U",
+   "doc": "PLAN 3.8 (iii) note (9).  SZ is exchanged into SZ2 at 0.5 on day 3; SZ2 has a 2-for-1 split with",
+   "status": "pass"
+  },
+  {
+   "test": "test_successor_event_after_succession_day_applies",
+   "doc": "Entitlement by record date >= succession day: SZ -> SZ2 at 0.5 on day 3; SZ2 pays 0.2 gross with",
+   "status": "pass"
+  },
+  {
+   "test": "test_lot_by_succession_and_direct_lot_then_cash_out_of_successor",
+   "doc": "E-14 (b): G holds a lot that arrived by succession (SZ -> SZ2 on day 3; 500 shares) and a directly",
+   "status": "pass",
+   "info": {
+    "R2_daily_rel": 3.5656081110011215e-17,
+    "lemma3_residual": 3.637978807091713e-12,
+    "terms_minus_wealth_diff": -7.275957614183426e-12
+   }
+  },
+  {
+   "test": "test_rights_issue_with_missing_record_date",
+   "doc": "PLAN 3.8 (iii) note (10); U58 = 10.  Entry day 1, H = 2, mark day 3.",
+   "status": "pass",
+   "info": {
+    "M_by_reason": {
+     "rights issue without record date (ex-date inside the window)": 3,
+     "rights issue without record date and ex-date": 5
+    }
+   }
+  },
+  {
+   "test": "test_missing_row_inside_P1_carry_gives_M",
+   "doc": "PLAN 3.8 (iii) note (11).  Entry day 1; last traded close 10.2 on day 2; day 3 suspended;",
+   "status": "pass"
+  },
+  {
+   "test": "test_filled_from_xsrc_flag_is_carried_through",
+   "doc": "PLAN 3.11 rule 12 / E-16 (b): a row inserted by the fetch pipeline from the cross-check source is",
+   "status": "pass"
+  },
+  {
+   "test": "test_disposition_table_absent_falls_back_to_write_off",
+   "doc": "E-18 (a): no table, or no row for the name -> class U, written off (the v0.6 behaviour), and the",
+   "status": "pass"
+  },
+  {
+   "test": "test_disposition_share_exchange_with_carry",
+   "doc": "E-18 (b): SZ leaves the bar file after day 2 (last close 10.40); the table says: exchanged into",
+   "status": "pass",
+   "info": {
+    "carry_value": 10400.0,
+    "value_after_succession": 10500.0
+   }
+  },
+  {
+   "test": "test_disposition_cash_other_terminated_and_errors",
+   "doc": "E-18 (c) cash exit -> S-d; (d) 'other' and 'terminated' -> class U; (e) a row whose successor is",
+   "status": "pass",
+   "info": {
+    "error_rows_tested": 6
+   }
+  },
+  {
+   "test": "test_cash_return_overnight_only_intraday_zero",
+   "doc": "E-19: cash return 3.65% p.a. (ACT/365 -> 1e-4 per calendar day), intraday rate 0.",
+   "status": "pass"
+  },
+  {
+   "test": "test_conventions_hash_in_result_records",
+   "doc": "E-20: the SHA-256 of config.py and rule_calendar.py is in every result record; a record without",
+   "status": "pass",
+   "info": {
+    "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+   }
+  },
+  {
+   "test": "test_deadline_labels_missing_record_gives_lower_0_upper_1",
+   "doc": "Cor. 1.3 labels (draft; I-s6.4) with H = 2, D = H + 3 = 5; all entries on day 1; frozen at the",
+   "status": "pass",
+   "info": {
+    "sz.000001": [
+     0,
+     0
+    ],
+    "sz.000004": [
+     1,
+     1
+    ],
+    "sz.000002": [
+     0,
+     1
+    ],
+    "sz.000005": [
+     0,
+     1
+    ],
+    "sz.000006": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "test": "test_monitor_counts_and_truncation",
+   "doc": "K_T, P_T, N_T (O1) and K^lo, K^hi, P^D (deadline labels) from frozen labels only.",
+   "status": "pass",
+   "info": {
+    "o1_T4": {
+     "T": 4,
+     "N_T": 5,
+     "K_T": 4,
+     "P_T": 0,
+     "revealed": 5,
+     "outcomes": {
+      "value": 3,
+      "U": 1,
+      "M": 1
+     }
+    },
+    "deadline_T7": {
+     "T": 7,
+     "N_T": 5,
+     "J_T": 5,
+     "K_lo_T": 1,
+     "K_hi_T": 4,
+     "P_D_T": 0,
+     "sold_by_deadline": 3,
+     "certified": 2
+    }
+   }
+  },
+  {
+   "test": "test_R3_days_over_tolerance_are_listed_and_traced",
+   "doc": "R3 has to be triggered to be tested: the track is fed a market that deliberately differs from",
+   "status": "pass",
+   "info": {
+    "explained_day": "2016-03-04",
+    "explained_by": [
+     "sz.000001: dist event effective 2016-03-04"
+    ],
+    "unexplained_days": [
+     "2016-03-07",
+     "2016-03-08"
+    ]
+   }
+  }
+ ]
+}

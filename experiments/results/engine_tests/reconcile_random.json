@@ -1,0 +1,852 @@
+{
+ "module": "reconcile_random",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ },
+ "n": 6,
+ "passed": 6,
+ "failed": 0,
+ "seconds": 6.64,
+ "results": [
+  {
+   "test": "test_seed_11_2012-10-08",
+   "doc": "random market, seed 11, panel from 2012-10-08",
+   "status": "pass",
+   "info": {
+    "seed": 11,
+    "start": "2012-10-08",
+    "lots_G": 278,
+    "lots_B": 399,
+    "naive_vs_ledger_rel": 1.4901161193847656e-15,
+    "naive_variants_rel": {
+     "min_commission_lot_rounding": 7.275957614183426e-16,
+     "terminal_factor_1": 2.4214386940002442e-15,
+     "cap_zero": 1.0244548320770264e-15
+    },
+    "min_commission_binding_orders": 1601,
+    "write_offs_with_value": 7,
+    "naive_variants_max_rel": 2.4214386940002442e-15,
+    "R2_daily_rel": 4.551270340210509e-16,
+    "R2_cum_rel": 2.004753696382977e-16,
+    "R3_days_over_tolerance": 0,
+    "R1_residual_rel": 1.0477378964424133e-16,
+    "R1_residual_alt_rel": 1.7462298274040223e-16,
+    "terms_vs_wealth_diff_rel": 3.608874976634979e-16,
+    "return_vector_mismatch": 0.0,
+    "zero_baseline_intervals": {
+     "on": 7,
+     "id": 6
+    },
+    "zero_baseline_without_fallback": 0,
+    "interval_sum_check": 0.0,
+    "R1_normalised_residual_abs": 2.7755575615628914e-17,
+    "normalised_terms_vs_return_diff_abs": 1.4710455076283324e-15,
+    "trade_vector_vs_records_rel": 5.529727786779404e-17,
+    "days_without_order_exact_zero": 12,
+    "of_which_with_corporate_action_on_a_held_name": 0,
+    "turnover_identity_rel": 6.984919309616089e-17,
+    "non_netting_days": 111,
+    "cost_total_vs_lot_costs_rel": 2.9103830456733702e-18,
+    "buy_orders_checked": 1164,
+    "fill_decision_mismatches": 0,
+    "buy_orders_checked_cap_zero": 1164,
+    "fill_decision_mismatches_cap_zero": 0,
+    "extra_S3_under_cap_zero": 34,
+    "order_summary": {
+     "G": {
+      "S": 478,
+      "n": 278,
+      "buy_nonfill": {
+       "S3": 177,
+       "S2": 17,
+       "S1": 6
+      },
+      "unsubmitted": {
+       "no_ref": 2
+      },
+      "sell_orders": 361,
+      "sell_fills": 264,
+      "sell_nonfill": {
+       "S1": 83,
+       "S2": 14
+      },
+      "stale_cap_fills": 0,
+      "orders_on_xsrc_rows": 0
+     },
+     "B": {
+      "S": 686,
+      "n": 399,
+      "buy_nonfill": {
+       "S3": 243,
+       "S2": 30,
+       "S1": 14
+      },
+      "unsubmitted": {
+       "no_ref": 4
+      },
+      "sell_orders": 544,
+      "sell_fills": 362,
+      "sell_nonfill": {
+       "S2": 21,
+       "S1": 99,
+       "S3": 62
+      },
+      "stale_cap_fills": 0,
+      "orders_on_xsrc_rows": 0
+     }
+    },
+    "order_outcomes": {
+     "buy:S3": 420,
+     "buy:filled": 677,
+     "buy:S2": 47,
+     "sell:filled": 626,
+     "sell:S1": 182,
+     "sell:S2": 35,
+     "buy:S1": 20,
+     "buy:no_ref": 6,
+     "sell:S3": 62
+    },
+    "cash_return_recursion_rel": 3.4924596548080445e-16,
+    "wrong_formula_gap_rel": 1.6932540296576918e-06,
+    "coverage": {
+     "ledger_counts_G": {
+      "S-a": 11,
+      "S-b": 8,
+      "S-c": 1,
+      "S-d": 1,
+      "S-e": 5,
+      "U": 2
+     },
+     "ledger_counts_B": {
+      "S-a": 10,
+      "S-b": 10,
+      "S-c": 1,
+      "S-d": 19,
+      "S-e": 6,
+      "U": 5
+     },
+     "labels": 662,
+     "labels_pending": 15,
+     "label_outcomes": {
+      "value": 656,
+      "U": 5,
+      "M": 1
+     },
+     "label_price_branches": {
+      "P23": 620,
+      "P4": 4,
+      "P1": 28,
+      "P1R": 2,
+      "cash": 2
+     },
+     "K3_closes": 7,
+     "ledger_flags": 17,
+     "open_at_end": 9,
+     "lot_status": {
+      "open": 9,
+      "sold": 641,
+      "cashed_out": 20,
+      "written_off": 7
+     },
+     "ledger_extra_counts_G": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 6,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "ledger_extra_counts_B": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 9,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "lots_by_succession": 11,
+     "lots_by_succession_then_written_off": 3,
+     "deadline_labels": 618,
+     "deadline_certified": 595
+    }
+   }
+  },
+  {
+   "test": "test_seed_23_2015-06-01",
+   "doc": "random market, seed 23, panel from 2015-06-01",
+   "status": "pass",
+   "info": {
+    "seed": 23,
+    "start": "2015-06-01",
+    "lots_G": 255,
+    "lots_B": 383,
+    "naive_vs_ledger_rel": 1.5832483768463135e-15,
+    "naive_variants_rel": {
+     "min_commission_lot_rounding": 1.4551915228366853e-15,
+     "terminal_factor_1": 5.587935447692871e-16,
+     "cap_zero": 1.1175870895385742e-15
+    },
+    "min_commission_binding_orders": 1344,
+    "write_offs_with_value": 6,
+    "naive_variants_max_rel": 1.4551915228366853e-15,
+    "R2_daily_rel": 5.124906799045218e-16,
+    "R2_cum_rel": 2.371962182223797e-16,
+    "R3_days_over_tolerance": 0,
+    "R1_residual_rel": 9.313225746154785e-17,
+    "R1_residual_alt_rel": 4.6566128730773924e-17,
+    "terms_vs_wealth_diff_rel": 3.725290298461914e-16,
+    "return_vector_mismatch": 0.0,
+    "zero_baseline_intervals": {
+     "on": 7,
+     "id": 6
+    },
+    "zero_baseline_without_fallback": 0,
+    "interval_sum_check": 0.0,
+    "R1_normalised_residual_abs": 1.1102230246251565e-16,
+    "normalised_terms_vs_return_diff_abs": 6.106226635438361e-16,
+    "trade_vector_vs_records_rel": 2.473825588822365e-17,
+    "days_without_order_exact_zero": 14,
+    "of_which_with_corporate_action_on_a_held_name": 0,
+    "turnover_identity_rel": 4.6566128730773924e-17,
+    "non_netting_days": 95,
+    "cost_total_vs_lot_costs_rel": 0.0,
+    "buy_orders_checked": 1144,
+    "fill_decision_mismatches": 0,
+    "buy_orders_checked_cap_zero": 1144,
+    "fill_decision_mismatches_cap_zero": 0,
+    "extra_S3_under_cap_zero": 24,
+    "order_summary": {
+     "G": {
+      "S": 468,
+      "n": 255,
+      "buy_nonfill": {
+       "S3": 180,
+       "S2": 25,
+       "S1": 8
+      },
+      "unsubmitted": {
+       "no_ref": 4
+      },
+      "sell_orders": 350,
+      "sell_fills": 238,
+      "sell_nonfill": {
+       "S2": 17,
+       "S1": 57,
+       "S3": 38
+      },
+      "stale_cap_fills": 2,
+      "orders_on_xsrc_rows": 0
+     },
+     "B": {
+      "S": 676,
+      "n": 383,
+      "buy_nonfill": {
+       "S3": 247,
+       "S2": 30,
+       "S1": 16
+      },
+      "unsubmitted": {
+       "no_ref": 8
+      },
+      "sell_orders": 566,
+      "sell_fills": 325,
+      "sell_nonfill": {
+       "S2": 36,
+       "S1": 99,
+       "S3": 106
+      },
+      "stale_cap_fills": 2,
+      "orders_on_xsrc_rows": 0
+     }
+    },
+    "order_outcomes": {
+     "buy:S3": 427,
+     "buy:filled": 638,
+     "buy:S2": 55,
+     "sell:filled": 563,
+     "sell:S2": 53,
+     "buy:S1": 24,
+     "sell:S1": 156,
+     "buy:no_ref": 12,
+     "sell:S3": 144
+    },
+    "cash_return_recursion_rel": 6.75208866596222e-16,
+    "wrong_formula_gap_rel": 1.3483477832283824e-06,
+    "coverage": {
+     "ledger_counts_G": {
+      "S-a": 8,
+      "S-b": 4,
+      "S-c": 1,
+      "S-d": 1,
+      "S-e": 5,
+      "U": 3
+     },
+     "ledger_counts_B": {
+      "S-a": 12,
+      "S-b": 6,
+      "S-c": 1,
+      "S-d": 2,
+      "S-e": 7,
+      "U": 3
+     },
+     "labels": 619,
+     "labels_pending": 19,
+     "label_outcomes": {
+      "value": 610,
+      "U": 4,
+      "M": 5
+     },
+     "label_price_branches": {
+      "P23": 574,
+      "P4": 1,
+      "P1": 30,
+      "P1R": 2,
+      "cash": 3
+     },
+     "K3_closes": 8,
+     "ledger_flags": 26,
+     "open_at_end": 45,
+     "lot_status": {
+      "open": 45,
+      "sold": 584,
+      "cashed_out": 3,
+      "written_off": 6
+     },
+     "ledger_extra_counts_G": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 4,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "ledger_extra_counts_B": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 4,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "lots_by_succession": 12,
+     "lots_by_succession_then_written_off": 4,
+     "deadline_labels": 554,
+     "deadline_certified": 526
+    }
+   }
+  },
+  {
+   "test": "test_seed_37_2020-06-01",
+   "doc": "random market, seed 37, panel from 2020-06-01",
+   "status": "pass",
+   "info": {
+    "seed": 37,
+    "start": "2020-06-01",
+    "lots_G": 230,
+    "lots_B": 342,
+    "naive_vs_ledger_rel": 5.587935447692871e-16,
+    "naive_variants_rel": {
+     "min_commission_lot_rounding": 8.731149137020111e-16,
+     "terminal_factor_1": 4.656612873077392e-16,
+     "cap_zero": 3.725290298461914e-16
+    },
+    "min_commission_binding_orders": 1916,
+    "write_offs_with_value": 0,
+    "naive_variants_max_rel": 8.731149137020111e-16,
+    "R2_daily_rel": 4.51731149857628e-16,
+    "R2_cum_rel": 2.0010020307381636e-16,
+    "R3_days_over_tolerance": 0,
+    "R1_residual_rel": 4.6566128730773924e-17,
+    "R1_residual_alt_rel": 4.6566128730773924e-17,
+    "terms_vs_wealth_diff_rel": 9.313225746154785e-17,
+    "return_vector_mismatch": 0.0,
+    "zero_baseline_intervals": {
+     "on": 7,
+     "id": 6
+    },
+    "zero_baseline_without_fallback": 0,
+    "interval_sum_check": 0.0,
+    "R1_normalised_residual_abs": 1.6653345369377348e-16,
+    "normalised_terms_vs_return_diff_abs": 6.661338147750939e-16,
+    "trade_vector_vs_records_rel": 2.1100277081131936e-17,
+    "days_without_order_exact_zero": 12,
+    "of_which_with_corporate_action_on_a_held_name": 1,
+    "turnover_identity_rel": 4.6566128730773924e-17,
+    "non_netting_days": 90,
+    "cost_total_vs_lot_costs_rel": 0.0,
+    "buy_orders_checked": 1230,
+    "fill_decision_mismatches": 0,
+    "buy_orders_checked_cap_zero": 1230,
+    "fill_decision_mismatches_cap_zero": 0,
+    "extra_S3_under_cap_zero": -13,
+    "order_summary": {
+     "G": {
+      "S": 530,
+      "n": 230,
+      "buy_nonfill": {
+       "S3": 265,
+       "S1": 8,
+       "S2": 27
+      },
+      "unsubmitted": {
+       "no_ref": 2
+      },
+      "sell_orders": 308,
+      "sell_fills": 214,
+      "sell_nonfill": {
+       "S2": 14,
+       "S1": 80
+      },
+      "stale_cap_fills": 0,
+      "orders_on_xsrc_rows": 0
+     },
+     "B": {
+      "S": 700,
+      "n": 342,
+      "buy_nonfill": {
+       "S3": 311,
+       "S1": 13,
+       "S2": 34
+      },
+      "unsubmitted": {
+       "no_ref": 2
+      },
+      "sell_orders": 541,
+      "sell_fills": 271,
+      "sell_nonfill": {
+       "S1": 61,
+       "S2": 30,
+       "S3": 179
+      },
+      "stale_cap_fills": 0,
+      "orders_on_xsrc_rows": 0
+     }
+    },
+    "order_outcomes": {
+     "buy:filled": 572,
+     "buy:S3": 576,
+     "sell:filled": 485,
+     "sell:S2": 44,
+     "sell:S1": 141,
+     "buy:S1": 21,
+     "buy:S2": 61,
+     "buy:no_ref": 4,
+     "sell:S3": 179
+    },
+    "cash_return_recursion_rel": 1.8044374883174896e-16,
+    "wrong_formula_gap_rel": 1.5255286230065393e-06,
+    "coverage": {
+     "ledger_counts_G": {
+      "S-a": 6,
+      "S-b": 10,
+      "S-c": 1,
+      "S-d": 1,
+      "S-e": 1,
+      "U": 0
+     },
+     "ledger_counts_B": {
+      "S-a": 6,
+      "S-b": 25,
+      "S-c": 1,
+      "S-d": 2,
+      "S-e": 3,
+      "U": 0
+     },
+     "labels": 552,
+     "labels_pending": 20,
+     "label_outcomes": {
+      "value": 551,
+      "U": 0,
+      "M": 1
+     },
+     "label_price_branches": {
+      "P23": 523,
+      "P4": 0,
+      "P1": 23,
+      "P1R": 2,
+      "cash": 3
+     },
+     "K3_closes": 5,
+     "ledger_flags": 12,
+     "open_at_end": 73,
+     "lot_status": {
+      "open": 73,
+      "sold": 496,
+      "cashed_out": 3,
+      "written_off": 0
+     },
+     "ledger_extra_counts_G": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 0,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "ledger_extra_counts_B": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 0,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "lots_by_succession": 4,
+     "lots_by_succession_then_written_off": 0,
+     "deadline_labels": 494,
+     "deadline_certified": 454
+    }
+   }
+  },
+  {
+   "test": "test_seed_41_2023-06-01",
+   "doc": "random market, seed 41, panel from 2023-06-01",
+   "status": "pass",
+   "info": {
+    "seed": 41,
+    "start": "2023-06-01",
+    "lots_G": 186,
+    "lots_B": 166,
+    "naive_vs_ledger_rel": 7.450580596923828e-16,
+    "naive_variants_rel": {
+     "min_commission_lot_rounding": 1.1641532182693482e-15,
+     "terminal_factor_1": 7.450580596923828e-16,
+     "cap_zero": 1.1175870895385742e-15
+    },
+    "min_commission_binding_orders": 1725,
+    "write_offs_with_value": 2,
+    "naive_variants_max_rel": 1.1641532182693482e-15,
+    "R2_daily_rel": 4.971518639381402e-16,
+    "R2_cum_rel": 2.2519088815897703e-16,
+    "R3_days_over_tolerance": 0,
+    "R1_residual_rel": 1.862645149230957e-16,
+    "R1_residual_alt_rel": 1.862645149230957e-16,
+    "terms_vs_wealth_diff_rel": 4.656612873077392e-16,
+    "return_vector_mismatch": 0.0,
+    "zero_baseline_intervals": {
+     "on": 7,
+     "id": 6
+    },
+    "zero_baseline_without_fallback": 0,
+    "interval_sum_check": 0.0,
+    "R1_normalised_residual_abs": 3.3306690738754696e-16,
+    "normalised_terms_vs_return_diff_abs": 7.771561172376096e-16,
+    "trade_vector_vs_records_rel": 4.511093720793724e-17,
+    "days_without_order_exact_zero": 21,
+    "of_which_with_corporate_action_on_a_held_name": 0,
+    "turnover_identity_rel": 4.6566128730773924e-17,
+    "non_netting_days": 51,
+    "cost_total_vs_lot_costs_rel": 0.0,
+    "buy_orders_checked": 1216,
+    "fill_decision_mismatches": 0,
+    "buy_orders_checked_cap_zero": 1216,
+    "fill_decision_mismatches_cap_zero": 0,
+    "extra_S3_under_cap_zero": 103,
+    "order_summary": {
+     "G": {
+      "S": 512,
+      "n": 186,
+      "buy_nonfill": {
+       "S3": 297,
+       "S2": 19,
+       "S1": 10
+      },
+      "unsubmitted": {
+       "no_ref": 1
+      },
+      "sell_orders": 363,
+      "sell_fills": 171,
+      "sell_nonfill": {
+       "S3": 106,
+       "S2": 10,
+       "S1": 76
+      },
+      "stale_cap_fills": 0,
+      "orders_on_xsrc_rows": 0
+     },
+     "B": {
+      "S": 704,
+      "n": 166,
+      "buy_nonfill": {
+       "S3": 490,
+       "S2": 34,
+       "S1": 14
+      },
+      "unsubmitted": {
+       "no_ref": 4
+      },
+      "sell_orders": 245,
+      "sell_fills": 156,
+      "sell_nonfill": {
+       "S1": 49,
+       "S2": 6,
+       "S3": 34
+      },
+      "stale_cap_fills": 0,
+      "orders_on_xsrc_rows": 0
+     }
+    },
+    "order_outcomes": {
+     "buy:S3": 787,
+     "buy:filled": 352,
+     "buy:S2": 53,
+     "sell:filled": 327,
+     "sell:S3": 140,
+     "buy:S1": 24,
+     "sell:S2": 16,
+     "sell:S1": 125,
+     "buy:no_ref": 5
+    },
+    "cash_return_recursion_rel": 4.656612873077392e-16,
+    "wrong_formula_gap_rel": 7.89169910363853e-07,
+    "coverage": {
+     "ledger_counts_G": {
+      "S-a": 16,
+      "S-b": 18,
+      "S-c": 0,
+      "S-d": 0,
+      "S-e": 12,
+      "U": 2
+     },
+     "ledger_counts_B": {
+      "S-a": 7,
+      "S-b": 7,
+      "S-c": 0,
+      "S-d": 0,
+      "S-e": 5,
+      "U": 0
+     },
+     "labels": 346,
+     "labels_pending": 6,
+     "label_outcomes": {
+      "value": 338,
+      "U": 6,
+      "M": 2
+     },
+     "label_price_branches": {
+      "P23": 322,
+      "P4": 0,
+      "P1": 16,
+      "P1R": 0,
+      "cash": 0
+     },
+     "K3_closes": 10,
+     "ledger_flags": 13,
+     "open_at_end": 15,
+     "lot_status": {
+      "open": 15,
+      "sold": 335,
+      "cashed_out": 0,
+      "written_off": 2
+     },
+     "ledger_extra_counts_G": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 9,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "ledger_extra_counts_B": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 9,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "lots_by_succession": 17,
+     "lots_by_succession_then_written_off": 0,
+     "deadline_labels": 316,
+     "deadline_certified": 300
+    }
+   }
+  },
+  {
+   "test": "test_seed_53_2017-03-01",
+   "doc": "random market, seed 53, panel from 2017-03-01",
+   "status": "pass",
+   "info": {
+    "seed": 53,
+    "start": "2017-03-01",
+    "lots_G": 191,
+    "lots_B": 260,
+    "naive_vs_ledger_rel": 2.6077032089233397e-15,
+    "naive_variants_rel": {
+     "min_commission_lot_rounding": 1.4551915228366853e-16,
+     "terminal_factor_1": 5.587935447692871e-16,
+     "cap_zero": 1.3038516044616699e-15
+    },
+    "min_commission_binding_orders": 1582,
+    "write_offs_with_value": 0,
+    "naive_variants_max_rel": 1.3038516044616699e-15,
+    "R2_daily_rel": 4.859343195780686e-16,
+    "R2_cum_rel": 3.294871930847876e-16,
+    "R3_days_over_tolerance": 0,
+    "R1_residual_rel": 1.746229827404022e-17,
+    "R1_residual_alt_rel": 5.8207660913467405e-18,
+    "terms_vs_wealth_diff_rel": 5.296897143125534e-16,
+    "return_vector_mismatch": 0.0,
+    "zero_baseline_intervals": {
+     "on": 7,
+     "id": 6
+    },
+    "zero_baseline_without_fallback": 0,
+    "interval_sum_check": 0.0,
+    "R1_normalised_residual_abs": 1.1796119636642288e-16,
+    "normalised_terms_vs_return_diff_abs": 4.649058915617843e-16,
+    "trade_vector_vs_records_rel": 5.2386894822120664e-17,
+    "days_without_order_exact_zero": 15,
+    "of_which_with_corporate_action_on_a_held_name": 1,
+    "turnover_identity_rel": 6.402842700481415e-17,
+    "non_netting_days": 79,
+    "cost_total_vs_lot_costs_rel": 0.0,
+    "buy_orders_checked": 1185,
+    "fill_decision_mismatches": 0,
+    "buy_orders_checked_cap_zero": 1185,
+    "fill_decision_mismatches_cap_zero": 0,
+    "extra_S3_under_cap_zero": 74,
+    "order_summary": {
+     "G": {
+      "S": 489,
+      "n": 191,
+      "buy_nonfill": {
+       "S3": 264,
+       "S1": 11,
+       "S2": 23
+      },
+      "unsubmitted": {
+       "no_ref": 2
+      },
+      "sell_orders": 250,
+      "sell_fills": 185,
+      "sell_nonfill": {
+       "S2": 10,
+       "S1": 54,
+       "S3": 1
+      },
+      "stale_cap_fills": 0,
+      "orders_on_xsrc_rows": 0
+     },
+     "B": {
+      "S": 696,
+      "n": 260,
+      "buy_nonfill": {
+       "S1": 18,
+       "S3": 389,
+       "S2": 29
+      },
+      "unsubmitted": {},
+      "sell_orders": 346,
+      "sell_fills": 214,
+      "sell_nonfill": {
+       "S2": 13,
+       "S1": 38,
+       "S3": 81
+      },
+      "stale_cap_fills": 0,
+      "orders_on_xsrc_rows": 0
+     }
+    },
+    "order_outcomes": {
+     "buy:filled": 451,
+     "buy:S3": 653,
+     "sell:filled": 399,
+     "buy:S1": 29,
+     "buy:S2": 52,
+     "sell:S2": 23,
+     "buy:no_ref": 2,
+     "sell:S1": 92,
+     "sell:S3": 82
+    },
+    "cash_return_recursion_rel": 1.164153218269348e-16,
+    "wrong_formula_gap_rel": 1.2923052349826322e-06,
+    "coverage": {
+     "ledger_counts_G": {
+      "S-a": 3,
+      "S-b": 5,
+      "S-c": 1,
+      "S-d": 1,
+      "S-e": 2,
+      "U": 0
+     },
+     "ledger_counts_B": {
+      "S-a": 11,
+      "S-b": 10,
+      "S-c": 1,
+      "S-d": 1,
+      "S-e": 2,
+      "U": 0
+     },
+     "labels": 436,
+     "labels_pending": 15,
+     "label_outcomes": {
+      "value": 435,
+      "U": 0,
+      "M": 1
+     },
+     "label_price_branches": {
+      "P23": 413,
+      "P4": 2,
+      "P1": 16,
+      "P1R": 2,
+      "cash": 2
+     },
+     "K3_closes": 8,
+     "ledger_flags": 8,
+     "open_at_end": 42,
+     "lot_status": {
+      "open": 42,
+      "sold": 407,
+      "cashed_out": 2,
+      "written_off": 0
+     },
+     "ledger_extra_counts_G": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 0,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "ledger_extra_counts_B": {
+      "unclassifiable_not_booked": 0,
+      "successor_event_on_succession_day": 0,
+      "carry_days": 0,
+      "dist_with_missing_amount": 0,
+      "sell_commission_exceeds_value": 0,
+      "sleeve_days_negative_cash": 0
+     },
+     "lots_by_succession": 4,
+     "lots_by_succession_then_written_off": 0,
+     "deadline_labels": 386,
+     "deadline_certified": 362
+    }
+   }
+  },
+  {
+   "test": "test_succession_coverage_across_seeds",
+   "doc": "Task ENG-11 (c): lots that arrive by succession - at least 5 in each of at least 3 seeds.",
+   "status": "pass",
+   "info": {
+    "lots_by_succession_per_seed": {
+     "11": 11,
+     "23": 12,
+     "37": 4,
+     "41": 17,
+     "53": 4
+    },
+    "of_which_later_written_off_(S-d_of_the_successor)": {
+     "11": 3,
+     "23": 4,
+     "37": 0,
+     "41": 0,
+     "53": 0
+    },
+    "seeds_with_at_least_5": 3
+   }
+  }
+ ]
+}

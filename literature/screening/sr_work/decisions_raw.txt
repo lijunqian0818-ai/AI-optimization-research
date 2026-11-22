@@ -1,0 +1,320 @@
+#A_b001
+1|INC|Bluffing/strategic informed trading game (T1), foundational despite 2008
+2|INC|Game-theoretic multi-trader strategic trading, regret-based equilibria
+3|INC|Equilibrium of competing traders' position building
+4|INC|Strategic trading game, competitive equilibria
+5|UNC|Noisy information on others' strategies in simulated market; game content unclear
+6|INC|Kyle model equilibrium learned with neural networks
+7|INC|Adversarial RL zero-sum opponent model for market making
+8|INC|Opponent modeling in RL trading agents
+9|UNC|Pre-2010 informed manipulation equilibrium; foundational status uncertain
+10|E4|Pure poker opponent-shift calibration, no finance link stated
+11|E4|Pure game algorithm opponent modeling, no finance link
+12|UNC|Momentum risk-taking trading system; poker/risk link unconfirmed
+13|E2|Student questionnaire on investment preferences, no decision method
+14|E4|Statistical physics model of poker skill, no trading link
+15|INC|Trade/no-trade gating and risk control on stock rankers
+16|INC|Calibrated abstention in financial forecasting with trading metrics
+17|INC|Portfolio abstention with theoretical guarantees
+18|INC|Conformal risk gate on RL portfolio
+19|INC|Abstaining cascade for financial prediction and trading
+20|INC|Meta-labeling filters primary signals (T2)
+21|INC|Selective classification for trading, abstain means no position
+22|INC|Abstaining HMM for financial trend prediction
+23|INC|Conformal CVaR risk control, downside risk theory
+24|INC|Conformal calibration for portfolio VaR tail risk
+25|INC|Selective prediction in financial regime classification
+26|INC|Selective conformal risk control theory
+27|INC|Reject option with conformal guarantees, general theory
+28|INC|Conformal prediction for portfolio selection decisions
+29|INC|Conformal risk calibration of decisions
+30|INC|Quote/no-quote abstention action with adversarial RL
+31|INC|Meta-labeling calibration and position sizing
+32|INC|Risk-control threshold calibration, usable for abstention
+33|INC|Distribution-free risk-controlling sets, general theory
+34|INC|Adaptive conformal inference under distribution shift
+35|INC|Learning to abstain, reject option method
+36|INC|Signal-threshold optimal trading, no-trade region style
+37|UNC|LOB model; uncertainty used for trade/sizing, HFT specificity unclear
+38|INC|Conformal prediction tutorial, general theory source
+39|INC|No-trade theorem, foundational game-theoretic trading
+40|INC|Adverse selection by RL market makers, multi-agent
+#B_b001
+1|UNC|Poker-style bluffing trading game, but published 2008; foundational status unclear
+2|INC|Game-theoretic multi-trader strategic trading (T1)
+3|INC|Equilibrium game between competing traders (T1)
+4|INC|Strategic trading game, competitive equilibria (T1)
+5|UNC|Noisy information about others' strategies in markets; T1 plausible, unstated
+6|INC|Kyle model equilibrium learning with informed trader (T1)
+7|INC|Adversarial RL market making as zero-sum game (T1/T3)
+8|INC|Opponent modelling in RL trading agents (T3)
+9|UNC|Informed strategic manipulation, 2004; foundational status unclear
+10|UNC|Poker opponent-shift risk calibration; transferable idea, finance link unstated
+11|UNC|Opponent modelling in imperfect-information games; finance link unstated
+12|UNC|Momentum risk-taking trading system; poker link and decision component unclear
+13|E2|Student questionnaire on investment preferences; no topic condition
+14|E2|Statistical physics model of poker skill; no trading link
+15|INC|Trade/no-trade gating on stock rankers with uncertainty (T2)
+16|INC|Selective financial forecasting with calibrated abstention (T2)
+17|INC|Portfolio learning with abstention and guarantees (T2)
+18|INC|RL portfolio with conformal risk gate (T2/T3)
+19|INC|Abstaining cascade for trading on noisy financial data (T2)
+20|INC|Meta-labeling framework for signal filtering (T2)
+21|INC|Selective classification for trading, abstain means no position (T2)
+22|INC|Selective prediction with abstention on financial trends (T2)
+23|INC|Conformal CVaR risk control, theory tool (T2)
+24|INC|Conformal calibration for portfolio VaR tail risk (T2)
+25|INC|Selective prediction diagnostic in financial regime classification (T2)
+26|INC|Selective conformal risk control theory (T2)
+27|INC|Reject-option classification with conformal guarantees (T2)
+28|INC|Conformal prediction for portfolio selection (T2)
+29|INC|Conformal risk calibration of decisions (T2)
+30|INC|Quote-or-not abstention action, adversarial RL market making (T1/T2)
+31|INC|Meta-labeling calibration and position sizing (T2/T6)
+32|INC|Learn then Test risk-control calibration, general theory (T2)
+33|INC|Distribution-free risk-controlling prediction sets, general theory (T2)
+34|INC|Adaptive conformal inference under shift (T2)
+35|INC|Learning to abstain, portfolio-theory based (T2)
+36|INC|Signal-threshold optimal trading framework (T2)
+37|UNC|Uncertainty used for trade/position decisions, but limit-order-book focus
+38|INC|Conformal prediction tutorial, general theory source (T2)
+39|INC|No-trade theorem revisited, information-based trading theory (T1)
+40|INC|Adverse selection from RL market makers against traders (T1/T5)
+#A_b002
+41|INC|Toxic (informed) flow handling strategy, adverse selection
+42|INC|Kyle model extension, T1
+43|UNC|Dynamic trading with costs; how-much-to-trade rule, abstract not shown
+44|INC|VPIN order flow toxicity, informed trading proxy
+45|INC|PIN informed trading probability, foundational
+46|INC|Foundational no-trade region under transaction costs
+47|INC|Foundational no-trade interval under transaction costs
+48|INC|Foundational no-trade result under rational expectations
+49|INC|No-trade region comparative statics
+50|INC|Game model of trading with the crowd
+51|INC|Foundational no-trade region analysis
+52|INC|Insider trading model, strategic informed trader
+53|UNC|Noise trader risk; foundational relevance to other participants uncertain
+54|INC|Foundational no-trade region with transaction costs
+55|INC|CVaR-constrained RL stock trading, downside risk
+56|INC|RL multi-factor dynamic stock trading
+57|UNC|RL portfolio China; risk modelling not stated
+58|INC|DQN trading with conflict/cooperative game scenarios
+59|INC|CVaR objective direct RL trading
+60|UNC|RL trading library; risk or multi-agent content not stated
+61|UNC|Multi-agent RL dealer market; informed trading not stated
+62|UNC|RL stock selection; risk modelling not stated
+63|INC|Risk-constrained RL with CVaR/percentile criteria
+64|UNC|Multi-agent RL market simulation; trading relevance unclear
+65|E5|HFT multi-agent RL environment, no informed-trading model
+66|UNC|Multi-agent execution environment mentioning Kyle-type models
+67|UNC|Multi-agent RL market making; adverse selection not stated
+68|E5|Order book regulation market quality, HFT-specific
+69|UNC|Multi-agent RL quant trading; details not stated
+70|E5|Market-maker DQN in simulated order book, no adverse selection
+71|UNC|RL in finance survey; may cover risk-aware trading
+72|UNC|RL quantitative trading survey; coverage unclear
+73|INC|RL with dynamic convex risk measures
+74|UNC|Deep RL algorithmic trading review; coverage unclear
+75|UNC|Deep RL trading survey; coverage unclear
+76|INC|Mean-variance risk-aware RL for investment
+77|UNC|Multi-agent RL price formation; decision relevance unclear
+78|UNC|Multi-agent RL stock trading; fairness focus
+79|UNC|Robust deep RL trading; risk modelling not stated
+80|UNC|RL portfolio management; risk or agents not stated
+#B_b002
+41|INC|Toxic flow / informed trader strategy, adverse selection (T1/T5)
+42|INC|Kyle model extension (T1)
+43|UNC|Dynamic trading rule under costs; sizing/no-trade content not stated
+44|INC|VPIN order-flow toxicity, informed-trading proxy (T5)
+45|INC|PIN informed trading probability, foundational (T5/T7)
+46|INC|No-trade region under transaction costs, foundational (T2/T7)
+47|INC|No-trade interval under costs, foundational (T2/T7)
+48|INC|No-trade result under asymmetric information, foundational (T1/T7)
+49|INC|No-trade region comparative statics (T2)
+50|INC|Game model of trading with crowd (T1/T5)
+51|INC|No-trade region analysis, foundational (T2/T7)
+52|INC|Insider trading strategic model, foundational (T1/T7)
+53|UNC|Noise trader risk; link to topic conditions plausible, not certain
+54|INC|Portfolio selection with no-trade region, foundational (T2/T7)
+55|INC|CVaR-constrained RL stock trading (T3)
+56|UNC|RL multi-factor dynamic trading; factor weighting/risk not stated
+57|UNC|RL portfolio on China market; risk modelling not stated
+58|UNC|DQN trading with conflict/cooperation game scenarios; unverified
+59|INC|CVaR-objective RL trading (T3)
+60|UNC|RL stock trading library; risk/multi-agent content not stated
+61|E5|RL market making in dealer market; no informed-trading model
+62|UNC|RL stock selection; risk modelling not stated
+63|UNC|General CVaR-constrained RL theory, not finance-specific; may supply theory
+64|E2|Market simulation with heterogeneous agents; no trading decision layer
+65|E5|HFT multi-agent RL environment engineering
+66|UNC|Multi-agent execution environment; mentions Kyle-type model
+67|E5|Market-making MARL, collusion focus; no adverse selection model
+68|E5|Order book regulation market quality simulation
+69|UNC|Multi-agent RL quant trading; risk/opponent modelling unclear
+70|E5|Market-making DQN in simulated market; HFT-specific
+71|UNC|RL in finance survey; may cover risk-aware trading
+72|UNC|RL quantitative trading survey; may cover risk-aware RL
+73|UNC|RL with dynamic convex risk measures; trading link unstated
+74|UNC|DRL algorithmic trading survey; risk content unstated
+75|UNC|DRL trading critical survey; risk content unstated
+76|UNC|Mean-variance RL for investment; risk-aware, trading link plausible
+77|E2|Price formation simulation, no trading decision/risk layer
+78|UNC|Multi-agent RL stock trading; agent modelling plausible
+79|UNC|Robust DRL trading; risk handling not stated
+80|UNC|RL portfolio management framework; risk not stated
+#A_b003
+81|UNC|RL trading; risk or multi-agent content not stated
+82|UNC|General CVaR risk-sensitive MDP; trading link not stated
+83|INC|Foundational direct RL trading (T7/T3)
+84|INC|RL-based context-aware factor screening (T4)
+85|INC|A-share multi-agent with dynamic weights (T3/T4)
+86|INC|Dynamic time-varying factor combination (T4)
+87|INC|Deep learning factor timing (T4)
+88|INC|Factor timing in Chinese market (T4)
+89|UNC|RL factor generation; dynamic weighting not clearly stated
+90|INC|Factor timing (T4)
+91|UNC|A-share ML factor benchmark; possible baseline, no decision layer stated
+92|INC|Factor timing with deep learning, China (T4)
+93|UNC|Quant platform with A-share baselines; topic fit unclear
+94|UNC|Standard multi-factor ML baseline; no decision component stated
+95|INC|Factor timing (T4)
+96|UNC|A-share factor model benchmark; timing not stated
+97|INC|Factor momentum, factor timing (T4)
+98|INC|Factor momentum, factor timing (T4)
+99|UNC|Chinese stock characteristics; factor relevance unclear from metadata
+100|INC|Capital gains overhang in A-shares (T5)
+101|INC|A-share factor crowding (T5)
+102|INC|Crowding measure from arbitrage activity (T5)
+103|INC|Crowded trades and tail risk (T5)
+104|INC|Equity factor crowding measure (T5)
+105|INC|Chip distribution indicators (T5)
+106|INC|Capital gains overhang grouping (T5)
+107|INC|Disposition effect asset pricing (T5)
+108|UNC|2009 crowding paper; possibly foundational, date borderline
+109|UNC|2006 disposition effect; foundational status unclear
+110|INC|Foundational capital gains overhang, chip-distribution counterpart (T7/T5)
+111|UNC|2005 Chinese disposition evidence; foundational status unclear
+112|UNC|LLM trading agents show disposition effect; relevance to T5 uncertain
+113|INC|Disposition effect in Chinese investors (T5)
+114|UNC|Prospect theory and anomalies; capital gains overhang link not stated
+115|INC|Crowding in risk premia investing (T5)
+116|INC|Disposition effect theory (T5)
+117|INC|Quant crowding and forced unwinding (T5)
+118|UNC|2009 disposition effect; foundational status unclear
+119|INC|Foundational disposition effect work (T7/T5)
+120|INC|Foundational disposition effect work (T7/T5)
+#B_b003
+81|UNC|RL trading; risk or multi-agent content not stated
+82|UNC|General CVaR risk-sensitive MDP; possible T3 foundation, not trading-specific
+83|INC|Foundational direct RL trading (T7/T3)
+84|INC|RL-trained context-aware factor screening (T4)
+85|INC|Dynamic agent weights, China A-share (T4)
+86|INC|Dynamic combination of alpha factors (T4)
+87|INC|Deep learning factor timing (T4)
+88|INC|Factor timing in Chinese stock market (T4)
+89|UNC|RL factor-set generation; dynamic weighting not stated
+90|INC|Factor timing (T4)
+91|UNC|A-share ML factor benchmark; decision component unclear
+92|INC|Deep learning factor timing, China (T4)
+93|UNC|Quant platform with A-share baselines; topic fit unclear
+94|UNC|ML multi-factor baseline; forecasting focus
+95|INC|Factor timing (T4)
+96|E2|Static China size/value factor model, no timing or decision
+97|INC|Factor momentum, timing of factors (T4)
+98|INC|Factor momentum, timing of factors (T4)
+99|E2|Firm characteristics and returns, no T1-T7 topic
+100|INC|Capital gains overhang in A-shares (T5)
+101|INC|Factor crowding in China (T5)
+102|INC|Crowding/arbitrage activity measure (T5)
+103|INC|Crowded trades and tail risk (T5)
+104|INC|Equity factor crowding measure (T5)
+105|INC|Chip distribution stock picking (T5)
+106|INC|Capital gains overhang grouping (T5)
+107|INC|Disposition effect asset pricing (T5)
+108|UNC|2009 crowding paper; pre-2010, possibly foundational
+109|UNC|2006 disposition effect; foundational status uncertain
+110|INC|Capital gains overhang, cost basis; foundational (T5/T7)
+111|UNC|Disposition bias in China accounts; title-level fit only
+112|INC|LLM trading agents show disposition effect (T5)
+113|INC|Disposition effect of Chinese investors (T5)
+114|UNC|Prospect theory anomalies; link to cost-basis unclear
+115|INC|Crowding in risk premia investing (T5)
+116|INC|Realization utility, disposition effect theory (T5)
+117|INC|Quant crowding and unwinding 2007 (T5)
+118|UNC|2009 disposition effect paper; pre-2010, foundational uncertain
+119|INC|Foundational disposition effect work (T7/T5)
+120|INC|Foundational disposition effect work (T7/T5)
+#A_b004
+121|INC|Kelly bet sizing with estimation risk (T6)
+122|INC|Distributionally robust Kelly under uncertainty (T6)
+123|INC|Kelly betting with probability-estimate uncertainty (T6)
+124|INC|Risk-constrained Kelly bet sizing (T6)
+125|INC|Kelly under parameter uncertainty, shrinkage (T6)
+126|INC|Partial Kelly with shrinkage estimators (T6)
+127|INC|Kelly and fractional Kelly properties (T6)
+128|UNC|Kelly in markets, 2008; foundational status unsure
+129|INC|Optimal betting, fractional Kelly discussion (T6)
+130|INC|Kelly criterion framework for stock markets (T6)
+131|INC|Shrinkage estimation of Kelly portfolios (T6)
+132|INC|Kelly betting analysis, bet sizing (T6)
+133|UNC|Kelly portfolios analysis, 2007; foundational status unsure
+134|UNC|Parameter-uncertainty portfolio choice, 2007; possible foundational T6
+135|INC|Conformal risk control, general theory (T2)
+136|INC|Reject-option deep network (T2)
+137|INC|Pluribus, foundational imperfect-information poker (T7)
+138|INC|Libratus, foundational (T7)
+139|INC|DeepStack, foundational (T7)
+140|INC|Selective classification theory (T2)
+141|INC|Learning with rejection theory (T2)
+142|INC|Selective classification foundations (T2)
+143|INC|Original CFR, foundational (T7)
+144|INC|Kyle 1985, foundational (T7)
+145|INC|Glosten-Milgrom 1985, foundational (T7)
+146|INC|Milgrom-Stokey no-trade, foundational (T7)
+147|INC|Chow 1970 reject tradeoff, foundational (T7)
+148|INC|Kelly 1956, foundational (T7)
+149|UNC|Poker GTO survey; finance link and foundational status unclear
+150|INC|Imperfect-information game algorithm, foundational (T7)
+151|INC|ReBeL imperfect-information RL+search, foundational (T7)
+152|INC|Deep CFR, foundational (T7)
+153|INC|NFSP imperfect-information self-play, foundational (T7)
+154|INC|Solved limit hold'em via CFR, foundational (T7)
+155|INC|Reject-option hinge loss theory (T2/T7)
+156|INC|Learning to abstain, finance-motivated selective learning (T2)
+#B_b004
+121|INC|Kelly estimation risk (T6)
+122|INC|Distributionally robust Kelly betting (T6)
+123|INC|Kelly with probability estimate uncertainty (T6)
+124|INC|Risk-constrained Kelly (T6)
+125|INC|Kelly under parameter uncertainty (T6)
+126|INC|Partial Kelly with shrinkage estimators (T6)
+127|INC|Kelly and fractional Kelly properties (T6)
+128|INC|Thorp Kelly in stock market; foundational (T7)
+129|INC|Optimal betting, fractional Kelly (T6)
+130|INC|Kelly criterion for stock markets (T6)
+131|INC|Shrinkage estimation of Kelly portfolios (T6)
+132|INC|Kelly betting sizing analysis (T6)
+133|UNC|2007 Kelly analysis; foundational status unclear
+134|UNC|2007 estimation-error portfolio choice; foundational status unclear
+135|INC|Conformal risk control (T2)
+136|INC|Selective prediction with reject option (T2)
+137|INC|Pluribus, foundational imperfect-information game (T7)
+138|INC|Libratus, foundational (T7)
+139|INC|DeepStack, foundational (T7)
+140|INC|Selective classification theory (T2)
+141|INC|Learning with rejection theory (T2)
+142|INC|Selective classification foundations (T2)
+143|INC|CFR original paper, foundational (T7)
+144|INC|Kyle 1985, foundational (T7)
+145|INC|Glosten-Milgrom 1985, foundational (T7)
+146|INC|Milgrom-Stokey no-trade theorem, foundational (T7)
+147|INC|Chow 1970 reject option, foundational (T7)
+148|INC|Kelly 1956, foundational (T7)
+149|UNC|Poker GTO survey; link to finance or decision theory unstated
+150|INC|Imperfect-information game algorithm, foundational (T7)
+151|INC|ReBeL imperfect-information RL+search, foundational (T7)
+152|INC|Deep CFR, foundational (T7)
+153|INC|NFSP imperfect-information self-play, foundational (T7)
+154|INC|Solved limit hold'em via CFR, foundational (T7)
+155|INC|Reject-option classification theory, foundational (T2/T7)
+156|INC|Learning to abstain, finance-motivated selective learning (T2)

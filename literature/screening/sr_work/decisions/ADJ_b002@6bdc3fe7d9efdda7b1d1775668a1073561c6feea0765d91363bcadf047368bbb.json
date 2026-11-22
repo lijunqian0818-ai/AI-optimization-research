@@ -1,0 +1,29 @@
+{
+ "label": "ADJ:b002@6bdc3fe7d9efdda7b1d1775668a1073561c6feea0765d91363bcadf047368bbb",
+ "decisions": [
+  {
+   "id": "R00061",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL dealer market making; opponent modelling plausible, not clearly HFT-specific"
+  },
+  {
+   "id": "R00064",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL with heterogeneous agents; may model other participants, not stated"
+  },
+  {
+   "id": "R00067",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL market making; competitor modelling plausible, HFT specificity not established"
+  },
+  {
+   "id": "R00077",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL stock market model; opponent/multi-agent modelling plausibly met (T3)"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+Collecting scikit-learn
+  Downloading scikit_learn-1.9.1-cp314-cp314-win_amd64.whl.metadata (9.3 kB)
+Requirement already satisfied: numpy>=1.24.1 in .\experiments\.venv\Lib\site-packages (from scikit-learn) (2.5.4)
+Requirement already satisfied: scipy>=1.10.0 in .\experiments\.venv\Lib\site-packages (from scikit-learn) (1.18.1)
+Collecting joblib>=1.4.0 (from scikit-learn)
+  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting narwhals>=2.0.1 (from scikit-learn)
+  Downloading narwhals-2.28.0-py3-none-any.whl.metadata (15 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit-learn)
+  Downloading threadpoolctl-3.8.0-py3-none-any.whl.metadata (29 kB)
+Collecting cloudpickle>=3.0 (from joblib>=1.4.0->scikit-learn)
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Downloading scikit_learn-1.9.1-cp314-cp314-win_amd64.whl (8.4 MB)
+   ---------------------------------------- 8.4/8.4 MB 34.5 MB/s  0:00:00
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading narwhals-2.28.0-py3-none-any.whl (490 kB)
+Downloading threadpoolctl-3.8.0-py3-none-any.whl (32 kB)
+Installing collected packages: threadpoolctl, narwhals, cloudpickle, joblib, scikit-learn
+
+Successfully installed cloudpickle-3.1.2 joblib-1.6.0 narwhals-2.28.0 scikit-learn-1.9.1 threadpoolctl-3.8.0
+
+[notice] A new release of pip is available: 26.0.1 -> 26.3
+[notice] To update, run: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Scripts\python.exe -m pip install --upgrade pip

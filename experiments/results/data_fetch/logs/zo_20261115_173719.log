@@ -1,0 +1,53 @@
+2026-11-15 17:37:19 [run] id=zo_20261115_173718 stage=zo sources=['lhb_detail', 'lhb_jgmmtj', 'dzjy_mrtj', 'dzjy_mrmx', 'ins_raw'] limit=0 codes_file=- period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\zo_20261115_173719.log
+2026-11-15 17:37:19 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=0, progress_units=20, progress_seconds=300.0, resume=True, retry_empty=False, run_id='zo_20261115_173718')
+2026-11-15 17:37:19 [start] zo: units total=922 already done (verified)=21 to fetch=901
+2026-11-15 17:39:46 [progress] zo: done=41/922 (this run 20: ok=20 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.3s/unit ETA=1.8h requests this run: baostock=0 http=37 pauses=0
+2026-11-15 17:41:49 [progress] zo: done=61/922 (this run 40: ok=40 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.8s/unit ETA=1.6h requests this run: baostock=0 http=68 pauses=0
+2026-11-15 17:44:27 [progress] zo: done=81/922 (this run 60: ok=60 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.1s/unit ETA=1.7h requests this run: baostock=0 http=108 pauses=0
+2026-11-15 17:47:06 [progress] zo: done=101/922 (this run 80: ok=80 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.3s/unit ETA=1.7h requests this run: baostock=0 http=148 pauses=0
+2026-11-15 17:51:29 [progress] zo: done=121/922 (this run 100: ok=100 empty=0 failed=0; resumed-skip=21) success=100.0% mean=8.5s/unit ETA=1.9h requests this run: baostock=0 http=212 pauses=0
+2026-11-15 17:55:23 [progress] zo: done=141/922 (this run 120: ok=120 empty=0 failed=0; resumed-skip=21) success=100.0% mean=9.0s/unit ETA=2.0h requests this run: baostock=0 http=269 pauses=0
+2026-11-15 17:59:41 [progress] zo: done=161/922 (this run 140: ok=140 empty=0 failed=0; resumed-skip=21) success=100.0% mean=9.6s/unit ETA=2.0h requests this run: baostock=0 http=332 pauses=0
+2026-11-15 18:04:22 [progress] zo: done=181/922 (this run 160: ok=160 empty=0 failed=0; resumed-skip=21) success=100.0% mean=10.1s/unit ETA=2.1h requests this run: baostock=0 http=399 pauses=0
+2026-11-15 18:08:53 [progress] zo: done=201/922 (this run 180: ok=180 empty=0 failed=0; resumed-skip=21) success=100.0% mean=10.5s/unit ETA=2.1h requests this run: baostock=0 http=466 pauses=0
+2026-11-15 18:14:01 [progress] zo: done=221/922 (this run 200: ok=200 empty=0 failed=0; resumed-skip=21) success=100.0% mean=11.0s/unit ETA=2.1h requests this run: baostock=0 http=542 pauses=0
+2026-11-15 18:18:27 [progress] zo: done=241/922 (this run 220: ok=220 empty=0 failed=0; resumed-skip=21) success=100.0% mean=11.2s/unit ETA=2.1h requests this run: baostock=0 http=614 pauses=0
+2026-11-15 18:19:41 [progress] zo: done=261/922 (this run 240: ok=240 empty=0 failed=0; resumed-skip=21) success=100.0% mean=10.6s/unit ETA=1.9h requests this run: baostock=0 http=634 pauses=0
+2026-11-15 18:21:00 [progress] zo: done=281/922 (this run 260: ok=260 empty=0 failed=0; resumed-skip=21) success=100.0% mean=10.1s/unit ETA=1.8h requests this run: baostock=0 http=654 pauses=0
+2026-11-15 18:22:18 [progress] zo: done=301/922 (this run 280: ok=280 empty=0 failed=0; resumed-skip=21) success=100.0% mean=9.6s/unit ETA=1.7h requests this run: baostock=0 http=674 pauses=0
+2026-11-15 18:23:45 [progress] zo: done=321/922 (this run 300: ok=300 empty=0 failed=0; resumed-skip=21) success=100.0% mean=9.3s/unit ETA=1.6h requests this run: baostock=0 http=695 pauses=0
+2026-11-15 18:26:15 [progress] zo: done=341/922 (this run 320: ok=320 empty=0 failed=0; resumed-skip=21) success=100.0% mean=9.2s/unit ETA=1.5h requests this run: baostock=0 http=732 pauses=0
+2026-11-15 18:27:36 [progress] zo: done=361/922 (this run 340: ok=340 empty=0 failed=0; resumed-skip=21) success=100.0% mean=8.9s/unit ETA=1.4h requests this run: baostock=0 http=752 pauses=0
+2026-11-15 18:28:55 [progress] zo: done=381/922 (this run 360: ok=360 empty=0 failed=0; resumed-skip=21) success=100.0% mean=8.6s/unit ETA=1.3h requests this run: baostock=0 http=772 pauses=0
+2026-11-15 18:31:18 [progress] zo: done=401/922 (this run 380: ok=380 empty=0 failed=0; resumed-skip=21) success=100.0% mean=8.5s/unit ETA=1.2h requests this run: baostock=0 http=808 pauses=0
+2026-11-15 18:33:52 [progress] zo: done=421/922 (this run 400: ok=400 empty=0 failed=0; resumed-skip=21) success=100.0% mean=8.5s/unit ETA=1.2h requests this run: baostock=0 http=846 pauses=0
+2026-11-15 18:36:34 [progress] zo: done=441/922 (this run 420: ok=420 empty=0 failed=0; resumed-skip=21) success=100.0% mean=8.5s/unit ETA=1.1h requests this run: baostock=0 http=886 pauses=0
+2026-11-15 18:39:08 [progress] zo: done=461/922 (this run 440: ok=440 empty=0 failed=0; resumed-skip=21) success=100.0% mean=8.4s/unit ETA=1.1h requests this run: baostock=0 http=925 pauses=0
+2026-11-15 18:40:16 [progress] zo: done=481/922 (this run 460: ok=460 empty=0 failed=0; resumed-skip=21) success=100.0% mean=8.2s/unit ETA=1.0h requests this run: baostock=0 http=945 pauses=0
+2026-11-15 18:41:28 [progress] zo: done=501/922 (this run 480: ok=480 empty=0 failed=0; resumed-skip=21) success=100.0% mean=8.0s/unit ETA=56.3min requests this run: baostock=0 http=965 pauses=0
+2026-11-15 18:42:46 [progress] zo: done=521/922 (this run 500: ok=500 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.9s/unit ETA=52.5min requests this run: baostock=0 http=985 pauses=0
+2026-11-15 18:44:07 [progress] zo: done=541/922 (this run 520: ok=520 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.7s/unit ETA=48.9min requests this run: baostock=0 http=1005 pauses=0
+2026-11-15 18:45:27 [progress] zo: done=561/922 (this run 540: ok=540 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.6s/unit ETA=45.6min requests this run: baostock=0 http=1025 pauses=0
+2026-11-15 18:46:50 [progress] zo: done=581/922 (this run 560: ok=560 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.4s/unit ETA=42.3min requests this run: baostock=0 http=1045 pauses=0
+2026-11-15 18:48:13 [progress] zo: done=601/922 (this run 580: ok=580 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.3s/unit ETA=39.2min requests this run: baostock=0 http=1065 pauses=0
+2026-11-15 18:49:44 [progress] zo: done=621/922 (this run 600: ok=600 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.2s/unit ETA=36.3min requests this run: baostock=0 http=1085 pauses=0
+2026-11-15 18:51:16 [progress] zo: done=641/922 (this run 620: ok=620 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.2s/unit ETA=33.5min requests this run: baostock=0 http=1105 pauses=0
+2026-11-15 18:52:43 [progress] zo: done=661/922 (this run 640: ok=640 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.1s/unit ETA=30.7min requests this run: baostock=0 http=1125 pauses=0
+2026-11-15 18:54:03 [progress] zo: done=681/922 (this run 660: ok=660 empty=0 failed=0; resumed-skip=21) success=100.0% mean=7.0s/unit ETA=28.0min requests this run: baostock=0 http=1145 pauses=0
+2026-11-15 18:55:18 [progress] zo: done=701/922 (this run 680: ok=680 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.9s/unit ETA=25.3min requests this run: baostock=0 http=1165 pauses=0
+2026-11-15 18:56:36 [progress] zo: done=721/922 (this run 700: ok=700 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.8s/unit ETA=22.8min requests this run: baostock=0 http=1185 pauses=0
+2026-11-15 18:57:59 [progress] zo: done=741/922 (this run 720: ok=720 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.7s/unit ETA=20.3min requests this run: baostock=0 http=1205 pauses=0
+2026-11-15 18:59:30 [progress] zo: done=761/922 (this run 740: ok=740 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.7s/unit ETA=17.9min requests this run: baostock=0 http=1225 pauses=0
+2026-11-15 19:01:04 [progress] zo: done=781/922 (this run 760: ok=760 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.6s/unit ETA=15.5min requests this run: baostock=0 http=1245 pauses=0
+2026-11-15 19:02:38 [progress] zo: done=801/922 (this run 780: ok=780 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.6s/unit ETA=13.2min requests this run: baostock=0 http=1265 pauses=0
+2026-11-15 19:04:10 [progress] zo: done=821/922 (this run 800: ok=800 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.5s/unit ETA=11.0min requests this run: baostock=0 http=1285 pauses=0
+2026-11-15 19:06:09 [progress] zo: done=841/922 (this run 820: ok=820 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.5s/unit ETA=8.8min requests this run: baostock=0 http=1307 pauses=0
+2026-11-15 19:08:04 [progress] zo: done=861/922 (this run 840: ok=840 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.5s/unit ETA=6.6min requests this run: baostock=0 http=1327 pauses=0
+2026-11-15 19:09:50 [progress] zo: done=881/922 (this run 860: ok=860 empty=0 failed=0; resumed-skip=21) success=100.0% mean=6.5s/unit ETA=4.4min requests this run: baostock=0 http=1347 pauses=0
+2026-11-15 19:10:59 [empty] zo/ins_raw/1995: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 19:11:21 [progress] zo: done=901/922 (this run 880: ok=879 empty=1 failed=0; resumed-skip=21) success=100.0% mean=6.4s/unit ETA=2.2min requests this run: baostock=0 http=1367 pauses=0
+2026-11-15 19:16:41 [progress] zo: done=914/922 (this run 893: ok=892 empty=1 failed=0; resumed-skip=21) success=100.0% mean=6.7s/unit ETA=0.9min requests this run: baostock=0 http=1446 pauses=0
+2026-11-15 19:22:37 [progress] zo: done=917/922 (this run 896: ok=895 empty=1 failed=0; resumed-skip=21) success=100.0% mean=7.1s/unit ETA=0.6min requests this run: baostock=0 http=1532 pauses=0
+2026-11-15 19:28:23 [progress] zo: done=921/922 (this run 900: ok=899 empty=1 failed=0; resumed-skip=21) success=100.0% mean=7.4s/unit ETA=0.1min requests this run: baostock=0 http=1617 pauses=0
+2026-11-15 19:29:43 [final] zo: done=922/922 (this run 901: ok=900 empty=1 failed=0; resumed-skip=21) success=100.0% mean=7.5s/unit ETA=0.0min requests this run: baostock=0 http=1637 pauses=0
+2026-11-15 19:29:43 [exit] code=0

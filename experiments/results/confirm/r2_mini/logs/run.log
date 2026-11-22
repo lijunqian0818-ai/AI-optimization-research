@@ -1,0 +1,69 @@
+12:10:54 +      2s run 'smoke' started; data cut-off 2021-12-31; out C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\confirm\r2_mini; T = 1; seeds (0,); gate window y1; criterion V
+12:10:54 +      2s === stage 1_list
+12:10:54 +      2s list: 100 names (frozen list), without bar file 0
+12:10:54 +      2s === stage 1_list done in 0.1 s
+12:10:54 +      2s === stage 2_market
+12:11:07 +     16s === stage 2_market done in 13.7 s
+12:11:07 +     16s === stage 3_panel
+12:11:07 +     16s [panel] provenance check: rebuild
+12:13:42 +    170s === stage 3_panel done in 154.7 s
+12:13:42 +    170s === stage 4_universe
+12:13:42 +    171s === stage 4_universe done in 0.2 s
+12:13:42 +    171s === stage 5_features
+12:13:52 +    181s === stage 5_features done in 10.2 s
+12:13:52 +    181s === stage 6_standard_orders
+12:14:19 +    208s === stage 6_standard_orders done in 26.9 s
+12:14:19 +    208s === stage 7_base
+12:14:31 +    219s [base lgbm] config 1/1 validation criteria computed (10.75 s fit time)
+12:15:06 +    254s [base lgbm] configuration 0, seed 0: deployment fits done
+12:15:07 +    255s [base ridge] config 1/1 validation criteria computed (1.0 s fit time)
+12:15:12 +    260s [base ridge] configuration 0, seed 0: deployment fits done
+12:15:20 +    269s [NET-U15] config 1/1 validation criteria computed (8.61 s fit time)
+12:15:39 +    288s [NET-U15] configuration 0, seed 0: deployment fits done
+12:15:46 +    294s === stage 7_base done in 86.7 s
+12:15:46 +    294s === stage 8_gates
+12:16:05 +    314s [gates lgbm] LOSS-LR(-Z): tuned over 1 configurations
+12:16:27 +    335s [gates lgbm] LOSS(-Z): tuned over 1 configurations
+12:16:29 +    337s [gates lgbm] LOSS(+Z_H): tuned over 1 configurations
+12:16:30 +    338s [gates lgbm] LOSS(+Z_O*): tuned over 1 configurations
+12:16:31 +    339s [gates lgbm] LOSS(+Z_O): tuned over 1 configurations
+12:16:43 +    352s [gates lgbm] LOSS(+Z_H+Z_O*): tuned over 1 configurations
+12:17:00 +    368s [gates lgbm] NET-K(-Z): tuned over 1 configurations
+12:17:02 +    371s [gates lgbm] NET-K(+Z_H): tuned over 1 configurations
+12:17:03 +    371s [gates lgbm] NET-K(+Z_O*): tuned over 1 configurations
+12:17:03 +    371s [gates lgbm] NET-U(-Z): tuned over 1 configurations
+12:17:10 +    379s [gates lgbm] LOSS(-Z)-thr: tuned over 1 configurations
+12:17:28 +    396s [gates lgbm] LOSS(+Z_H)-thr: tuned over 1 configurations
+12:17:30 +    398s [gates lgbm] LOSS(+Z_O)-thr: tuned over 1 configurations
+12:17:30 +    398s [gates ridge] LOSS-LR(-Z): tuned over 1 configurations
+12:17:40 +    408s [gates ridge] LOSS(-Z): tuned over 1 configurations
+12:17:49 +    417s [gates ridge] LOSS(+Z_H): tuned over 1 configurations
+12:17:59 +    428s [gates ridge] LOSS(+Z_O*): tuned over 1 configurations
+12:18:06 +    435s [gates ridge] LOSS(+Z_O): tuned over 1 configurations
+12:18:10 +    438s [gates ridge] LOSS(+Z_H+Z_O*): tuned over 1 configurations
+12:18:11 +    439s [gates ridge] NET-K(-Z): tuned over 1 configurations
+12:18:21 +    449s [gates ridge] NET-K(+Z_H): tuned over 1 configurations
+12:18:32 +    460s [gates ridge] NET-K(+Z_O*): tuned over 1 configurations
+12:18:34 +    462s [gates ridge] NET-U(-Z): tuned over 1 configurations
+12:18:36 +    464s [gates ridge] LOSS(-Z)-thr: tuned over 1 configurations
+12:18:36 +    464s [gates ridge] LOSS(+Z_H)-thr: tuned over 1 configurations
+12:18:44 +    472s [gates ridge] LOSS(+Z_O)-thr: tuned over 1 configurations
+12:19:07 +    496s [follow-up lgbm] perm Z_H: 1 draws x 1 seeds refitted (23.7 s)
+12:19:07 +    496s [follow-up lgbm] noise Z_H: 1 draws x 1 seeds refitted (22.2 s)
+12:19:09 +    498s [follow-up lgbm] perm Z_O*: 1 draws x 1 seeds refitted (25.6 s)
+12:19:09 +    498s [follow-up lgbm] noise Z_O*: 1 draws x 1 seeds refitted (23.2 s)
+12:19:09 +    498s [follow-up ridge] perm Z_H: 1 draws x 1 seeds refitted (24.5 s)
+12:19:23 +    511s [follow-up ridge] noise Z_H: 1 draws x 1 seeds refitted (17.1 s)
+12:19:26 +    514s [follow-up ridge] perm Z_O*: 1 draws x 1 seeds refitted (18.6 s)
+12:19:26 +    514s [follow-up ridge] noise Z_O*: 1 draws x 1 seeds refitted (17.1 s)
+12:19:26 +    514s === stage 8_gates done in 219.7 s
+12:19:28 +    517s decisions dumped: nominations, submissions, decision_days, base_ic, dump_meta
+12:19:28 +    517s === stage 9_backtests
+12:19:39 +    527s main backtests: 46 runs
+12:20:25 +    573s tuning archive written: sha256 3363c12371cf6a5171f4728705fd791c6738473db5793ccf60acf2cbb757b4c1
+12:20:25 +    573s second-stage backtests: 20 runs
+12:21:00 +    608s === stage 9_backtests done in 91.2 s
+12:21:03 +    611s decisions dumped again after stage 9 (all policies)
+12:21:03 +    611s === stage 10_estimands
+12:21:16 +    624s === stage 10_estimands done in 12.7 s
+12:21:16 +    624s run finished: ok

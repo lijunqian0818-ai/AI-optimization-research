@@ -1,0 +1,245 @@
+{
+ "label": "A:b001@6bdc3fe7d9efdda7b1d1775668a1073561c6feea0765d91363bcadf047368bbb",
+ "decisions": [
+  {
+   "id": "R00001",
+   "d": "include",
+   "code": "INC",
+   "why": "Bluffing/strategic informed trading game (T1), foundational despite 2008"
+  },
+  {
+   "id": "R00002",
+   "d": "include",
+   "code": "INC",
+   "why": "Game-theoretic multi-trader strategic trading, regret-based equilibria"
+  },
+  {
+   "id": "R00003",
+   "d": "include",
+   "code": "INC",
+   "why": "Equilibrium of competing traders' position building"
+  },
+  {
+   "id": "R00004",
+   "d": "include",
+   "code": "INC",
+   "why": "Strategic trading game, competitive equilibria"
+  },
+  {
+   "id": "R00005",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Noisy information on others' strategies in simulated market; game content unclear"
+  },
+  {
+   "id": "R00006",
+   "d": "include",
+   "code": "INC",
+   "why": "Kyle model equilibrium learned with neural networks"
+  },
+  {
+   "id": "R00007",
+   "d": "include",
+   "code": "INC",
+   "why": "Adversarial RL zero-sum opponent model for market making"
+  },
+  {
+   "id": "R00008",
+   "d": "include",
+   "code": "INC",
+   "why": "Opponent modeling in RL trading agents"
+  },
+  {
+   "id": "R00009",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Pre-2010 informed manipulation equilibrium; foundational status uncertain"
+  },
+  {
+   "id": "R00010",
+   "d": "exclude",
+   "code": "E4",
+   "why": "Pure poker opponent-shift calibration, no finance link stated"
+  },
+  {
+   "id": "R00011",
+   "d": "exclude",
+   "code": "E4",
+   "why": "Pure game algorithm opponent modeling, no finance link"
+  },
+  {
+   "id": "R00012",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Momentum risk-taking trading system; poker/risk link unconfirmed"
+  },
+  {
+   "id": "R00013",
+   "d": "exclude",
+   "code": "E2",
+   "why": "Student questionnaire on investment preferences, no decision method"
+  },
+  {
+   "id": "R00014",
+   "d": "exclude",
+   "code": "E4",
+   "why": "Statistical physics model of poker skill, no trading link"
+  },
+  {
+   "id": "R00015",
+   "d": "include",
+   "code": "INC",
+   "why": "Trade/no-trade gating and risk control on stock rankers"
+  },
+  {
+   "id": "R00016",
+   "d": "include",
+   "code": "INC",
+   "why": "Calibrated abstention in financial forecasting with trading metrics"
+  },
+  {
+   "id": "R00017",
+   "d": "include",
+   "code": "INC",
+   "why": "Portfolio abstention with theoretical guarantees"
+  },
+  {
+   "id": "R00018",
+   "d": "include",
+   "code": "INC",
+   "why": "Conformal risk gate on RL portfolio"
+  },
+  {
+   "id": "R00019",
+   "d": "include",
+   "code": "INC",
+   "why": "Abstaining cascade for financial prediction and trading"
+  },
+  {
+   "id": "R00020",
+   "d": "include",
+   "code": "INC",
+   "why": "Meta-labeling filters primary signals (T2)"
+  },
+  {
+   "id": "R00021",
+   "d": "include",
+   "code": "INC",
+   "why": "Selective classification for trading, abstain means no position"
+  },
+  {
+   "id": "R00022",
+   "d": "include",
+   "code": "INC",
+   "why": "Abstaining HMM for financial trend prediction"
+  },
+  {
+   "id": "R00023",
+   "d": "include",
+   "code": "INC",
+   "why": "Conformal CVaR risk control, downside risk theory"
+  },
+  {
+   "id": "R00024",
+   "d": "include",
+   "code": "INC",
+   "why": "Conformal calibration for portfolio VaR tail risk"
+  },
+  {
+   "id": "R00025",
+   "d": "include",
+   "code": "INC",
+   "why": "Selective prediction in financial regime classification"
+  },
+  {
+   "id": "R00026",
+   "d": "include",
+   "code": "INC",
+   "why": "Selective conformal risk control theory"
+  },
+  {
+   "id": "R00027",
+   "d": "include",
+   "code": "INC",
+   "why": "Reject option with conformal guarantees, general theory"
+  },
+  {
+   "id": "R00028",
+   "d": "include",
+   "code": "INC",
+   "why": "Conformal prediction for portfolio selection decisions"
+  },
+  {
+   "id": "R00029",
+   "d": "include",
+   "code": "INC",
+   "why": "Conformal risk calibration of decisions"
+  },
+  {
+   "id": "R00030",
+   "d": "include",
+   "code": "INC",
+   "why": "Quote/no-quote abstention action with adversarial RL"
+  },
+  {
+   "id": "R00031",
+   "d": "include",
+   "code": "INC",
+   "why": "Meta-labeling calibration and position sizing"
+  },
+  {
+   "id": "R00032",
+   "d": "include",
+   "code": "INC",
+   "why": "Risk-control threshold calibration, usable for abstention"
+  },
+  {
+   "id": "R00033",
+   "d": "include",
+   "code": "INC",
+   "why": "Distribution-free risk-controlling sets, general theory"
+  },
+  {
+   "id": "R00034",
+   "d": "include",
+   "code": "INC",
+   "why": "Adaptive conformal inference under distribution shift"
+  },
+  {
+   "id": "R00035",
+   "d": "include",
+   "code": "INC",
+   "why": "Learning to abstain, reject option method"
+  },
+  {
+   "id": "R00036",
+   "d": "include",
+   "code": "INC",
+   "why": "Signal-threshold optimal trading, no-trade region style"
+  },
+  {
+   "id": "R00037",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "LOB model; uncertainty used for trade/sizing, HFT specificity unclear"
+  },
+  {
+   "id": "R00038",
+   "d": "include",
+   "code": "INC",
+   "why": "Conformal prediction tutorial, general theory source"
+  },
+  {
+   "id": "R00039",
+   "d": "include",
+   "code": "INC",
+   "why": "No-trade theorem, foundational game-theoretic trading"
+  },
+  {
+   "id": "R00040",
+   "d": "include",
+   "code": "INC",
+   "why": "Adverse selection by RL market makers, multi-agent"
+  }
+ ]
+}

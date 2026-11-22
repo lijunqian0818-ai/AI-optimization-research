@@ -1,0 +1,1684 @@
+﻿TY  - JOUR
+TI  - Microstructure Bluffing with Nested Information
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C001; identifier doi:10.1257/aer.98.2.280] 微观结构“诈唬”：知情内幕者逆信息方向交易以误导跟随者；把扑克式 bluff 形式化为交易博弈均衡
+PY  - 2008
+DO  - 10.1257/aer.98.2.280
+T2  - American Economic Review
+AU  - Archishman Chakraborty
+AU  - Bilge Yilmaz
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00001
+N1  - sr-screener TA [R00001]: INCLUDE (Include) - Bluffing/strategic informed trading game (T1), foundational despite 2008 | A: include/INC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Algorithmic Aspects of Strategic Trading
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C002; identifier arXiv:2502.07606] 把多交易者建仓建模为博弈，用无悔动态计算（粗相关）均衡；博弈论算法用于交易
+PY  - 2025
+T2  - arXiv preprint
+AU  - Michael Kearns
+AU  - Mirah Shi
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00002
+N1  - sr-screener TA [R00002]: INCLUDE (Include) - Game-theoretic multi-trader strategic trading, regret-based equilibria | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Optimal position-building strategies in competition
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C003; identifier arXiv:2409.03586] 竞争环境下的最优建仓策略（交易者间博弈的均衡）
+PY  - 2024
+T2  - arXiv preprint
+AU  - Neil A. Chriss
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00003
+N1  - sr-screener TA [R00003]: INCLUDE (Include) - Equilibrium of competing traders' position building | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Competitive equilibria in trading
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C004; identifier arXiv:2410.13583] 交易中的竞争均衡（多方策略性交易博弈）
+PY  - 2024
+T2  - arXiv preprint
+AU  - Neil A. Chriss
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00004
+N1  - sr-screener TA [R00004]: INCLUDE (Include) - Strategic trading game, competitive equilibria | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Investing in Kyle's Single Period Model
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C006; identifier arXiv:2006.13889] 用神经网络在 Kyle 单期模型中学习内幕交易者与做市商的均衡策略
+PY  - 2020
+T2  - arXiv preprint
+AU  - Paul Friedrich
+AU  - Josef Teichmann
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00006
+N1  - sr-screener TA [R00006]: INCLUDE (Include) - Kyle model equilibrium learned with neural networks | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Robust Market Making via Adversarial Reinforcement Learning
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C007; identifier arXiv:2003.01820] 把做市建模为与对手的零和博弈，用对抗 RL 获得稳健策略
+PY  - 2020
+T2  - IJCAI 2020
+AU  - Thomas Spooner
+AU  - Rahul Savani
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00007
+N1  - sr-screener TA [R00007]: INCLUDE (Include) - Adversarial RL zero-sum opponent model for market making | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - On the Importance of Opponent Modeling in Auction Markets
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C008; identifier arXiv:1911.12816] 拍卖市场中对手建模的重要性（RL 交易智能体）
+PY  - 2019
+T2  - arXiv preprint
+AU  - Mahmoud Mahfouz
+AU  - Angelos Filos
+AU  - Cyrine Chtourou
+AU  - Joshua Lockhart
+AU  - Samuel Assefa
+AU  - Manuela Veloso
+AU  - et al.
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00008
+N1  - sr-screener TA [R00008]: INCLUDE (Include) - Opponent modeling in RL trading agents | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - When Alpha Breaks: Two-Level Uncertainty for Safe Deployment of Cross-Sectional Stock Rankers
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C015; identifier arXiv:2603.13252] 截面选股排序模型的两层不确定性：策略层“是否交易”门控 + 个股层风险控制（DEUP 认知不确定性）；与“弃权层叠加在多因子打分上”高度接近
+PY  - 2026
+T2  - arXiv preprint
+AU  - Ursina Sanderink
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00015
+N1  - sr-screener TA [R00015]: INCLUDE (Include) - Trade/no-trade gating and risk control on stock rankers | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - FinAbstain: Uncertainty-Calibrated Multimodal RAG for Selective Financial Forecasting
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C016; identifier arXiv:2607.24875] LLM 多模态 RAG 做异常收益方向预测，带校准弃权与风险-覆盖率曲线、交易指标评估
+PY  - 2026
+T2  - arXiv preprint
+AU  - Dorothy Torres
+AU  - Wei Cheng
+AU  - Henan Huang
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00016
+N1  - sr-screener TA [R00016]: INCLUDE (Include) - Calibrated abstention in financial forecasting with trading metrics | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Safe Portfolio Learning from Untrusted Predictions: Signed Trust, Abstention, and Cross-Universe Polarity Failure
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C017; identifier arXiv:2611.04826] 组合层面的 Safe/Follow/Reverse 动作 + 证据门控弃权，带切换遗憾界与路径式抵押安全界；“弃权 + 理论保证 + 组合”三者兼具
+PY  - 2026
+T2  - arXiv preprint
+AU  - Amirhossein MohammadpourAzari
+AU  - Mohammad Zarei
+AU  - MohammadAmin Fazli
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00017
+N1  - sr-screener TA [R00017]: INCLUDE (Include) - Portfolio abstention with theoretical guarantees | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Conformal Risk Certificates for Portfolio Optimization Under Uncertainty: A Gated Reinforcement-Learning Approach
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C018; identifier arXiv:2611.14699] RL 组合策略外加 conformal 风险证书门控：下行风险超界则不执行；“RL + 弃权门 + 分布无关保证”
+PY  - 2026
+T2  - arXiv preprint
+AU  - Mohammad Zarei
+AU  - Amirhossein MohammadpourAzari
+AU  - Moslem Habibi
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00018
+N1  - sr-screener TA [R00018]: INCLUDE (Include) - Conformal risk gate on RL portfolio | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Conservative Predictions on Noisy Financial Data
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C019; identifier arXiv:2310.11815] 级联模型在不确定样本上弃权，只对有把握的样本给出涨跌预测并据此交易（高精度低覆盖）
+PY  - 2023
+T2  - ICAIF 2023
+AU  - Omkar Nabar
+AU  - Gautam Shroff
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00019
+N1  - sr-screener TA [R00019]: INCLUDE (Include) - Abstaining cascade for financial prediction and trading | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Meta-Labeling: Theory and Framework
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C020; identifier doi:10.3905/jfds.2022.1.098] Meta-Labeling 理论与框架：二级模型判断一级信号是否值得出手（过滤假阳性）；量化业界版的“弃权层”，必须对比的基线（仅核实题录，未读摘要）
+PY  - 2022
+DO  - 10.3905/jfds.2022.1.098
+T2  - The Journal of Financial Data Science
+AU  - Jacques Francois Joubert
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00020
+N1  - sr-screener TA [R00020]: INCLUDE (Include) - Meta-labeling filters primary signals (T2) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Trading via Selective Classification
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C021; identifier arXiv:2110.14914] 把选择性分类（二分类/三分类+弃权）直接用于交易策略：分类器弃权时不持仓，商品期货回测显示风险调整后收益改善；与“弃权层”最直接重合（DOI 10.1145/3490354.3494379）
+PY  - 2021
+T2  - ICAIF 2021
+AU  - Nestoras Chalkidis
+AU  - Rahul Savani
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00021
+N1  - sr-screener TA [R00021]: INCLUDE (Include) - Selective classification for trading, abstain means no position | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Selective Prediction of Financial Trends with Hidden Markov Models
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C022; identifier https://papers.nips.cc/paper/2011/hash/dd458505749b2941217ddd59394240e8-Abstract.html] 可弃权的 HMM 金融短期趋势预测：比较 Chow 式拒绝与 selective HMM（在低质量隐状态弃权）；最早的“弃权 + 金融预测”工作
+PY  - 2011
+T2  - NeurIPS 2011
+AU  - Dmitry Pidan
+AU  - Ran El-Yaniv
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00022
+N1  - sr-screener TA [R00022]: INCLUDE (Include) - Abstaining HMM for financial trend prediction | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Adversarially Robust Control of Conditional Value-at-Risk via Rockafellar-Uryasev Conformal Inference
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C023; identifier arXiv:2606.00320] 在线、对抗环境下的 CVaR conformal 控制（分布无关），可作下行风险保证的理论工具
+PY  - 2026
+T2  - arXiv preprint
+AU  - Catherine Chen
+AU  - Jingyan Shen
+AU  - Zhun Deng
+AU  - Lihua Lei
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00023
+N1  - sr-screener TA [R00023]: INCLUDE (Include) - Conformal CVaR risk control, downside risk theory | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Taming Tail Risk in Financial Markets: Conformal Calibration for Nonstationary Portfolio VaR
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C024; identifier arXiv:2602.03903] 非平稳下组合 VaR 的 conformal 校准，下行尾部风险控制
+PY  - 2026
+T2  - arXiv preprint
+AU  - Marc Schmitt
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00024
+N1  - sr-screener TA [R00024]: INCLUDE (Include) - Conformal calibration for portfolio VaR tail risk | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Selective Prediction and the Persistence Illusion: A Diagnostic Decomposition of VIX Regime Classification
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C025; identifier doi:10.3390/jrfm19080609] VIX 状态分类上的选择性预测诊断分解（“持续性假象”，对弃权增益的警示；仅核实题录）
+PY  - 2026
+DO  - 10.3390/jrfm19080609
+T2  - Journal of Risk and Financial Management
+AU  - Akshat Gupta
+AU  - Jianguo Liu
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00025
+N1  - sr-screener TA [R00025]: INCLUDE (Include) - Selective prediction in financial regime classification | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Selective Conformal Risk Control
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C026; identifier arXiv:2512.12844] 选择性 conformal 风险控制：把弃权与 CRC 结合，理论工具
+PY  - 2025
+T2  - arXiv preprint
+AU  - Yunpeng Xu
+AU  - Wenge Guo
+AU  - Zhi Wei
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00026
+N1  - sr-screener TA [R00026]: INCLUDE (Include) - Selective conformal risk control theory | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Classification with Reject Option: Distribution-free Error Guarantees via Conformal Prediction
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C027; identifier arXiv:2506.21802] 带拒绝选项的分类：用 conformal 给出分布无关误差保证；可借用于“出手子集的错误率保证”
+PY  - 2025
+T2  - Machine Learning with Applications (2025)
+AU  - Johan Hallberg Szabadváry
+AU  - Tuwe Löfström
+AU  - Ulf Johansson
+AU  - Cecilia Sönströd
+AU  - Ernst Ahlberg
+AU  - Lars Carlsson
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00027
+N1  - sr-screener TA [R00027]: INCLUDE (Include) - Reject option with conformal guarantees, general theory | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Conformal Predictive Portfolio Selection
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C028; identifier arXiv:2410.16333] 用 conformal 预测区间做组合选择（CPPS）
+PY  - 2024
+T2  - arXiv preprint
+AU  - Masahiro Kato
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00028
+N1  - sr-screener TA [R00028]: INCLUDE (Include) - Conformal prediction for portfolio selection decisions | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Conformal Decision Theory: Safe Autonomous Decisions from Imperfect Predictions
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C029; identifier arXiv:2310.05921] Conformal Decision Theory：直接对决策（而非预测集）做风险校准
+PY  - 2023
+T2  - arXiv preprint
+AU  - Jordan Lekeufack
+AU  - Anastasios N. Angelopoulos
+AU  - Andrea Bajcsy
+AU  - Michael I. Jordan
+AU  - Jitendra Malik
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00029
+N1  - sr-screener TA [R00029]: INCLUDE (Include) - Conformal risk calibration of decisions | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Robust Market Making: To Quote, or not To Quote
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C030; identifier arXiv:2508.16588] 稳健做市：把“是否报价”作为动作（to quote or not），对抗 RL；“不出手”选项的博弈化处理
+PY  - 2023
+T2  - ICAIF 2023
+AU  - Ziyi Wang
+AU  - Carmine Ventre
+AU  - Maria Polukarov
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00030
+N1  - sr-screener TA [R00030]: INCLUDE (Include) - Quote/no-quote abstention action with adversarial RL | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Meta-Labeling: Calibration and Position Sizing
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C031; identifier doi:10.3905/jfds.2023.1.119] Meta-Labeling：概率校准与仓位（仅核实题录）
+PY  - 2023
+DO  - 10.3905/jfds.2023.1.119
+T2  - The Journal of Financial Data Science
+AU  - Michael Meyer
+AU  - Illya Barziy
+AU  - Jacques Francois Joubert
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00031
+N1  - sr-screener TA [R00031]: INCLUDE (Include) - Meta-labeling calibration and position sizing | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Learn then Test: Calibrating Predictive Algorithms to Achieve Risk Control
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C032; identifier arXiv:2110.01052] Learn then Test：用多重检验校准阈值以获得有限样本风险控制，可用于弃权阈值选择
+PY  - 2021
+T2  - arXiv preprint
+AU  - Anastasios N. Angelopoulos
+AU  - Stephen Bates
+AU  - Emmanuel J. Candès
+AU  - Michael I. Jordan
+AU  - Lihua Lei
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00032
+N1  - sr-screener TA [R00032]: INCLUDE (Include) - Risk-control threshold calibration, usable for abstention | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Distribution-Free, Risk-Controlling Prediction Sets
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C033; identifier arXiv:2101.02703] RCPS：分布无关的风险控制预测集，弃权阈值保证的理论基础
+PY  - 2021
+T2  - arXiv preprint
+AU  - Stephen Bates
+AU  - Anastasios Angelopoulos
+AU  - Lihua Lei
+AU  - Jitendra Malik
+AU  - Michael I. Jordan
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00033
+N1  - sr-screener TA [R00033]: INCLUDE (Include) - Distribution-free risk-controlling sets, general theory | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Adaptive Conformal Inference Under Distribution Shift
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C034; identifier arXiv:2106.00170] 自适应 conformal 推断（ACI），处理分布漂移；金融非平稳下的校准工具
+PY  - 2021
+T2  - arXiv preprint
+AU  - Isaac Gibbs
+AU  - Emmanuel Candès
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00034
+N1  - sr-screener TA [R00034]: INCLUDE (Include) - Adaptive conformal inference under distribution shift | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Gamblers: Learning to Abstain with Portfolio Theory
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C035; identifier arXiv:1907.00208] 把分类弃权建模为赌博/组合问题（m+1 类），弃权学习的代表方法，可作基线
+PY  - 2019
+T2  - NeurIPS 2019
+AU  - Liu Ziyin
+AU  - Zhikang Wang
+AU  - Paul Pu Liang
+AU  - Ruslan Salakhutdinov
+AU  - Louis-Philippe Morency
+AU  - Masahito Ueda
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00035
+N1  - sr-screener TA [R00035]: INCLUDE (Include) - Learning to abstain, reject option method | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Optimal trading using signals
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C036; identifier arXiv:1811.03718] 以信号阈值为控制变量的最优交易数学框架（随机逼近），与“阈值式出手规则”相关
+PY  - 2018
+T2  - arXiv preprint
+AU  - Hadrien De March
+AU  - Charles-Albert Lehalle
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00036
+N1  - sr-screener TA [R00036]: INCLUDE (Include) - Signal-threshold optimal trading, no-trade region style | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C038; identifier arXiv:2107.07511] conformal prediction 入门综述
+PY  - 2021
+T2  - arXiv preprint
+AU  - Anastasios N. Angelopoulos
+AU  - Stephen Bates
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00038
+N1  - sr-screener TA [R00038]: INCLUDE (Include) - Conformal prediction tutorial, general theory source | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Will AI Trade? A Computational Inversion of the No-Trade Theorem
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C039; identifier arXiv:2512.17952] 从计算有限理性角度重新审视 no-trade 定理
+PY  - 2025
+T2  - WINE 2025
+AU  - Hanyu Li
+AU  - Xiaotie Deng
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00039
+N1  - sr-screener TA [R00039]: INCLUDE (Include) - No-trade theorem, foundational game-theoretic trading | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - When AI Trading Agents Compete: Adverse Selection of Meta-Orders by Reinforcement Learning-Based Market Making
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C040; identifier arXiv:2510.27334] RL 做市商对中频交易者元订单造成的逆向选择
+PY  - 2025
+T2  - arXiv preprint
+AU  - Ali Raza Jafree
+AU  - Konark Jain
+AU  - Nick Firoozye
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00040
+N1  - sr-screener TA [R00040]: INCLUDE (Include) - Adverse selection by RL market makers, multi-agent | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - A Simple Strategy to Deal with Toxic Flow
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C041; identifier arXiv:2503.18005] 应对有毒订单流（知情交易者）的简单策略
+PY  - 2025
+T2  - arXiv preprint
+AU  - Álvaro Cartea
+AU  - Leandro Sánchez-Betancourt
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00041
+N1  - sr-screener TA [R00041]: INCLUDE (Include) - Toxic (informed) flow handling strategy, adverse selection | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Phase Transitions in Kyle's Model with Market Maker Profit Incentives
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C042; identifier arXiv:2103.04481] Kyle 模型中做市商有盈利激励时的相变
+PY  - 2021
+T2  - arXiv preprint
+AU  - Charles-Albert Lehalle
+AU  - Eyal Neuman
+AU  - Segev Shlomov
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00042
+N1  - sr-screener TA [R00042]: INCLUDE (Include) - Kyle model extension, T1 | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Flow Toxicity and Liquidity in a High-frequency World
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C044; identifier doi:10.1093/rfs/hhs053] VPIN：订单流毒性度量（可作“信息劣势”代理变量）
+PY  - 2012
+DO  - 10.1093/rfs/hhs053
+T2  - Review of Financial Studies
+AU  - David Easley
+AU  - Marcos M. López de Prado
+AU  - Maureen O'Hara
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00044
+N1  - sr-screener TA [R00044]: INCLUDE (Include) - VPIN order flow toxicity, informed trading proxy | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Liquidity, Information, and Infrequently Traded Stocks
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C045; identifier doi:10.1111/j.1540-6261.1996.tb04074.x] PIN 模型：知情交易概率的估计
+PY  - 1996
+DO  - 10.1111/j.1540-6261.1996.tb04074.x
+T2  - The Journal of Finance
+AU  - David Easley
+AU  - Nicholas M. Kiefer
+AU  - Maureen O'Hara
+AU  - Joseph B. Paperman
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00045
+N1  - sr-screener TA [R00045]: INCLUDE (Include) - PIN informed trading probability, foundational | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Portfolio Selection with Transaction Costs
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C046; identifier doi:10.1287/moor.15.4.676] Davis-Norman：比例交易成本下的组合选择与无交易区域（奠基）
+PY  - 1990
+DO  - 10.1287/moor.15.4.676
+T2  - Mathematics of Operations Research
+AU  - M. H. A. Davis
+AU  - A. R. Norman
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00046
+N1  - sr-screener TA [R00046]: INCLUDE (Include) - Foundational no-trade region under transaction costs | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Capital Market Equilibrium with Transaction Costs
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C047; identifier doi:10.1086/261410] Constantinides 1986：交易成本下的市场均衡与无交易区间
+PY  - 1986
+DO  - 10.1086/261410
+T2  - Journal of Political Economy
+AU  - George M. Constantinides
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00047
+N1  - sr-screener TA [R00047]: INCLUDE (Include) - Foundational no-trade interval under transaction costs | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - On the Possibility of Speculation under Rational Expectations
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C048; identifier doi:10.2307/1911868] Tirole 1982：理性预期下投机的不可能性（no-trade 结果）
+PY  - 1982
+DO  - 10.2307/1911868
+T2  - Econometrica
+AU  - Jean Tirole
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00048
+N1  - sr-screener TA [R00048]: INCLUDE (Include) - Foundational no-trade result under rational expectations | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Comparative Statics of Trading Boundary in Finite Horizon Portfolio Selection with Proportional Transaction Costs
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C049; identifier arXiv:2412.13669] 比例交易成本下 Merton 问题的买卖边界与无交易区域的比较静态
+PY  - 2024
+T2  - arXiv preprint
+AU  - Jintao Li
+AU  - Shuaijie Qian
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00049
+N1  - sr-screener TA [R00049]: INCLUDE (Include) - No-trade region comparative statics | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Trading with the crowd
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C050; identifier doi:10.1111/mafi.12390] Trading with the crowd：与群体交易的博弈模型
+PY  - 2023
+DO  - 10.1111/mafi.12390
+T2  - Mathematical Finance
+AU  - Eyal Neuman
+AU  - Moritz Voß
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00050
+N1  - sr-screener TA [R00050]: INCLUDE (Include) - Game model of trading with the crowd | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Optimal Investment and Consumption with Transaction Costs
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C051; identifier doi:10.1214/aoap/1177004966] Shreve-Soner 1994：交易成本下最优投资消费（无交易区域的严格分析）
+PY  - 1994
+DO  - 10.1214/aoap/1177004966
+T2  - The Annals of Applied Probability
+AU  - S. E. Shreve
+AU  - H. M. Soner
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00051
+N1  - sr-screener TA [R00051]: INCLUDE (Include) - Foundational no-trade region analysis | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Insider Trading in Continuous Time
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C052; identifier doi:10.1093/rfs/5.3.387] Back 1992：连续时间内幕交易
+PY  - 1992
+DO  - 10.1093/rfs/5.3.387
+T2  - Review of Financial Studies
+AU  - Kerry Back
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00052
+N1  - sr-screener TA [R00052]: INCLUDE (Include) - Insider trading model, strategic informed trader | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Portfolio selection with transactions costs
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C054; identifier doi:10.1016/0022-0531(76)90018-1] Magill-Constantinides 1976：含交易成本的组合选择
+PY  - 1976
+DO  - 10.1016/0022-0531(76)90018-1
+T2  - Journal of Economic Theory
+AU  - Michael J.P Magill
+AU  - George M Constantinides
+KW  - search direction 3
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00054
+N1  - sr-screener TA [R00054]: INCLUDE (Include) - Foundational no-trade region with transaction costs | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - FinRL-DeepSeek: LLM-Infused Risk-Sensitive Reinforcement Learning for Trading Agents
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C055; identifier arXiv:2502.07393] CVaR 约束 PPO（CPPO）+ LLM 信号做股票交易；下行风险约束 RL 基线
+PY  - 2025
+T2  - arXiv preprint
+AU  - Mostapha Benhenda
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00055
+N1  - sr-screener TA [R00055]: INCLUDE (Include) - CVaR-constrained RL stock trading, downside risk | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Reinforcement learning based multi-factor dynamic stock trading strategy design
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C056; identifier doi:10.1145/3800000.3800082] 基于 RL 的多因子动态股票交易策略设计（仅核实题录）
+PY  - 2025
+DO  - 10.1145/3800000.3800082
+T2  - Proceedings of the 2025 6th International Conference on Big Data Economy and Information Management
+AU  - Han Wang
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00056
+N1  - sr-screener TA [R00056]: INCLUDE (Include) - RL multi-factor dynamic stock trading | A: include/INC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Reinforcement Learning for Adaptive Stock Trading
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C058; identifier doi:10.4018/JOEUC.335083] 信息不一致下的 DQN 自适应股票交易（据检索摘要：含冲突/合作博弈情景；未读全文）
+PY  - 2024
+DO  - 10.4018/JOEUC.335083
+T2  - Journal of Organizational and End User Computing
+AU  - Lei Zhao
+AU  - Bowen Deng
+AU  - Liang Wu
+AU  - Chang Liu
+AU  - Min Guo
+AU  - Youjia Guo
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00058
+N1  - sr-screener TA [R00058]: INCLUDE (Include) - DQN trading with conflict/cooperative game scenarios | A: include/INC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Conditional Value-at-Risk for Quantitative Trading: A Direct Reinforcement Learning Approach
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C059; identifier arXiv:2109.14438] 以 CVaR 为目标的直接强化学习交易系统（凸形式）
+PY  - 2021
+T2  - arXiv preprint
+AU  - Ali Al-Ameer
+AU  - Khaled Alshehri
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00059
+N1  - sr-screener TA [R00059]: INCLUDE (Include) - CVaR objective direct RL trading | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Risk-Constrained Reinforcement Learning with Percentile Risk Criteria
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C063; identifier arXiv:1512.01629] 带分位数/CVaR 约束的风险约束 RL（理论 + 算法）
+PY  - 2015
+T2  - arXiv preprint
+AU  - Yinlam Chow
+AU  - Mohammad Ghavamzadeh
+AU  - Lucas Janson
+AU  - Marco Pavone
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00063
+N1  - sr-screener TA [R00063]: INCLUDE (Include) - Risk-constrained RL with CVaR/percentile criteria | A: include/INC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Reinforcement Learning with Dynamic Convex Risk Measures
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C073; identifier arXiv:2112.13414] 动态凸风险测度下的 RL
+PY  - 2021
+T2  - arXiv preprint
+AU  - Anthony Coache
+AU  - Sebastian Jaimungal
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00073
+N1  - sr-screener TA [R00073]: INCLUDE (Include) - RL with dynamic convex risk measures | A: include/INC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Mean-Variance Efficient Reinforcement Learning with Applications to Dynamic Financial Investment
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C076; identifier arXiv:2010.01404] 均值-方差高效 RL 及其在动态投资中的应用
+PY  - 2020
+T2  - arXiv preprint
+AU  - Masahiro Kato
+AU  - Kei Nakagawa
+AU  - Kenshi Abe
+AU  - Tetsuro Morimura
+AU  - Kentaro Baba
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00076
+N1  - sr-screener TA [R00076]: INCLUDE (Include) - Mean-variance risk-aware RL for investment | A: include/INC | B: unclear/UNC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Learning to trade via direct reinforcement
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C083; identifier doi:10.1109/72.935097] Moody-Saffell：直接强化学习交易（奠基）
+PY  - 2001
+DO  - 10.1109/72.935097
+T2  - IEEE Transactions on Neural Networks
+AU  - J. Moody
+AU  - M. Saffell
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00083
+N1  - sr-screener TA [R00083]: INCLUDE (Include) - Foundational direct RL trading (T7/T3) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Alpha-R1: Alpha Screening with LLM Reasoning via Reinforcement Learning
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C084; identifier arXiv:2512.23515] Alpha-R1：RL 训练的 LLM 做情境感知因子筛选
+PY  - 2025
+T2  - arXiv preprint
+AU  - Zuoyou Jiang
+AU  - Li Zhao
+AU  - Rui Sun
+AU  - Ruohan Sun
+AU  - Zhongjian Li
+AU  - Jing Li
+AU  - et al.
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00084
+N1  - sr-screener TA [R00084]: INCLUDE (Include) - RL-based context-aware factor screening (T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Hierarchical AI Multi-Agent Fundamental Investing: Evidence from China's A-Share Market
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C085; identifier arXiv:2510.21147] 分层多智能体基本面投资，学习各智能体的动态权重（A 股）
+PY  - 2025
+T2  - arXiv preprint
+AU  - Chujun He
+AU  - Zhonghao Huang
+AU  - Xiangguo Li
+AU  - Ye Luo
+AU  - Kewei Ma
+AU  - Yuxuan Xiong
+AU  - et al.
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00085
+N1  - sr-screener TA [R00085]: INCLUDE (Include) - A-share multi-agent with dynamic weights (T3/T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - AlphaForge: A Framework to Mine and Dynamically Combine Formulaic Alpha Factors
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C086; identifier arXiv:2406.18394] AlphaForge：挖掘公式化因子并动态组合（时变因子权重）
+PY  - 2024
+T2  - AAAI 2025
+AU  - Hao Shi
+AU  - Weili Song
+AU  - Xinting Zhang
+AU  - Jiahe Shi
+AU  - Cuicui Luo
+AU  - Xiang Ao
+AU  - et al.
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00086
+N1  - sr-screener TA [R00086]: INCLUDE (Include) - Dynamic time-varying factor combination (T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Application of Deep Learning for Factor Timing in Asset Management
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C087; identifier arXiv:2404.18017] 深度学习用于因子择时
+PY  - 2024
+T2  - Journal of Strategic and International Studies, June 2024
+AU  - Prabhu Prasad Panda
+AU  - Maysam Khodayari Gharanchaei
+AU  - Xilin Chen
+AU  - Haoshu Lyu
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00087
+N1  - sr-screener TA [R00087]: INCLUDE (Include) - Deep learning factor timing (T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Factor timing in the Chinese stock market
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C088; identifier doi:10.1002/ise3.86] 中国股市的因子择时可行性（24 个因子）
+PY  - 2024
+DO  - 10.1002/ise3.86
+T2  - International Studies of Economics
+AU  - Yuxiao Wu
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00088
+N1  - sr-screener TA [R00088]: INCLUDE (Include) - Factor timing in Chinese market (T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Timing the Factor Zoo
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C090; identifier doi:10.2139/ssrn.4376898] Timing the Factor Zoo（SSRN 预印本）
+PY  - 2023
+DO  - 10.2139/ssrn.4376898
+T2  - SSRN preprint
+AU  - Andreas Neuhierl
+AU  - Otto Randl
+AU  - Christoph Reschenhofer
+AU  - Josef Zechner
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00090
+N1  - sr-screener TA [R00090]: INCLUDE (Include) - Factor timing (T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Timing the factor zoo via deep learning: Evidence from China
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C092; identifier doi:10.1111/acfi.13033] 用深度学习做因子择时：中国证据
+PY  - 2022
+DO  - 10.1111/acfi.13033
+T2  - Accounting & Finance
+AU  - Tian Ma
+AU  - Cunfei Liao
+AU  - Fuwei Jiang
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00092
+N1  - sr-screener TA [R00092]: INCLUDE (Include) - Factor timing with deep learning, China (T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Factor Timing
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C095; identifier doi:10.1093/rfs/hhaa017] Factor Timing（因子择时代表作）
+PY  - 2020
+DO  - 10.1093/rfs/hhaa017
+T2  - The Review of Financial Studies
+AU  - Valentin Haddad
+AU  - Serhiy Kozak
+AU  - Shrihari Santosh
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00095
+N1  - sr-screener TA [R00095]: INCLUDE (Include) - Factor timing (T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Factor Momentum and the Momentum Factor
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C097; identifier doi:10.1111/jofi.13131] 因子动量与动量因子
+PY  - 2022
+DO  - 10.1111/jofi.13131
+T2  - The Journal of Finance
+AU  - Sina Ehsani
+AU  - Juhani T. Linnainmaa
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00097
+N1  - sr-screener TA [R00097]: INCLUDE (Include) - Factor momentum, factor timing (T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Factor Momentum Everywhere
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C098; identifier doi:10.3905/jpm.2019.45.3.013] 因子动量无处不在
+PY  - 2019
+DO  - 10.3905/jpm.2019.45.3.013
+T2  - The Journal of Portfolio Management
+AU  - Tarun Gupta
+AU  - Bryan Kelly
+KW  - search direction 5
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00098
+N1  - sr-screener TA [R00098]: INCLUDE (Include) - Factor momentum, factor timing (T4) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Replication of Reference-Dependent Preferences and the Risk-Return Trade-Off in the Chinese Market
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C100; identifier arXiv:2505.20608] A 股中以资本利得悬挂（CGO）复现参考依赖偏好与风险-收益关系
+PY  - 2025
+T2  - arXiv preprint
+AU  - Penggan Xu
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00100
+N1  - sr-screener TA [R00100]: INCLUDE (Include) - Capital gains overhang in A-shares (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - PMO factor crowding and returns: evidence from China
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C101; identifier doi:10.1080/13504851.2024.2401517] A 股 PMO 因子拥挤度与收益（基于异常换手率）
+PY  - 2024
+DO  - 10.1080/13504851.2024.2401517
+T2  - Applied Economics Letters
+AU  - Shuai Xing
+AU  - Yi Luo
+AU  - Tieming Li
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00101
+N1  - sr-screener TA [R00101]: INCLUDE (Include) - A-share factor crowding (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Comomentum: Inferring Arbitrage Activity from Return Correlations
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C102; identifier doi:10.1093/rfs/hhab117] Comomentum：从收益相关性推断套利拥挤度
+PY  - 2021
+DO  - 10.1093/rfs/hhab117
+T2  - The Review of Financial Studies
+AU  - Dong Lou
+AU  - Christopher Polk
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00102
+N1  - sr-screener TA [R00102]: INCLUDE (Include) - Crowding measure from arbitrage activity (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Crowded Trades and Tail Risk
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C103; identifier doi:10.1093/rfs/hhab107] 拥挤交易与尾部风险
+PY  - 2021
+DO  - 10.1093/rfs/hhab107
+T2  - The Review of Financial Studies
+AU  - Gregory W Brown
+AU  - Philip Howard
+AU  - Christian T Lundblad
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00103
+N1  - sr-screener TA [R00103]: INCLUDE (Include) - Crowded trades and tail risk (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Zooming In on Equity Factor Crowding
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C104; identifier arXiv:2001.04185] 股票因子拥挤度的微观度量
+PY  - 2020
+T2  - arXiv preprint
+AU  - Valerio Volpati
+AU  - Michael Benzaquen
+AU  - Zoltan Eisler
+AU  - Iacopo Mastromatteo
+AU  - Bence Toth
+AU  - Jean-Philippe Bouchaud
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00104
+N1  - sr-screener TA [R00104]: INCLUDE (Include) - Equity factor crowding measure (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Stock Picking Strategy Based on Exploration of Chip Distribution Indicators
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C105; identifier doi:10.1109/cds49703.2020.00061] 基于筹码分布指标的选股策略（仅核实题录）
+PY  - 2020
+DO  - 10.1109/cds49703.2020.00061
+T2  - 2020 International Conference on Computing and Data Science (CDS)
+AU  - Tong Zhang
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00105
+N1  - sr-screener TA [R00105]: INCLUDE (Include) - Chip distribution indicators (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Reference-dependent preferences and the risk–return trade-off
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C106; identifier doi:10.1016/j.jfineco.2016.09.010] 参考依赖偏好与风险-收益权衡（CGO 分组）
+PY  - 2017
+DO  - 10.1016/j.jfineco.2016.09.010
+T2  - Journal of Financial Economics
+AU  - Huijun Wang
+AU  - Jinghua Yan
+AU  - Jianfeng Yu
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00106
+N1  - sr-screener TA [R00106]: INCLUDE (Include) - Capital gains overhang grouping (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Asset Pricing When Traders Sell Extreme Winners and Losers
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C107; identifier doi:10.1093/rfs/hhv060] 投资者卖出极端盈亏股票时的资产定价（V 形处置效应）
+PY  - 2015
+DO  - 10.1093/rfs/hhv060
+T2  - Review of Financial Studies
+AU  - Li An
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00107
+N1  - sr-screener TA [R00107]: INCLUDE (Include) - Disposition effect asset pricing (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Prospect theory, mental accounting, and momentum
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C110; identifier doi:10.1016/j.jfineco.2004.10.006] Grinblatt-Han：资本利得悬挂（基于换手率估计持仓成本，筹码分布的学术对应物）
+PY  - 2005
+DO  - 10.1016/j.jfineco.2004.10.006
+T2  - Journal of Financial Economics
+AU  - Mark Grinblatt
+AU  - Bing Han
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00110
+N1  - sr-screener TA [R00110]: INCLUDE (Include) - Foundational capital gains overhang, chip-distribution counterpart (T7/T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Dissecting AI Trading: Behavioral Finance and Market Bubbles
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C112; identifier arXiv:2604.18373] LLM 交易智能体表现出处置效应与外推信念
+PY  - 2026
+T2  - arXiv preprint
+AU  - Shumiao Ouyang
+AU  - Pengfei Sui
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00112
+N1  - sr-screener TA [R00112]: INCLUDE (Include) - LLM trading agents show disposition effect (T5) | A: unclear/UNC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Does social media information affect individual investor disposition effect? Evidence from Xueqiu
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C113; identifier arXiv:2605.05814] 雪球社交媒体信息对个人投资者处置效应的影响（中国）
+PY  - 2025
+T2  - PLoS One 20(7): e0328547 (2025)
+AU  - Siliu Chen
+AU  - Fei Ren
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00113
+N1  - sr-screener TA [R00113]: INCLUDE (Include) - Disposition effect in Chinese investors (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - The Impact of Crowding in Alternative Risk Premia Investing
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C115; identifier doi:10.1080/0015198x.2019.1600955] 另类风险溢价投资中拥挤的影响
+PY  - 2019
+DO  - 10.1080/0015198x.2019.1600955
+T2  - Financial Analysts Journal
+AU  - Nick Baltas
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00115
+N1  - sr-screener TA [R00115]: INCLUDE (Include) - Crowding in risk premia investing (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Realization Utility with Reference-Dependent Preferences
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C116; identifier arXiv:1408.2859] 参考依赖偏好下的实现效用模型（处置效应理论）
+PY  - 2014
+T2  - arXiv preprint
+AU  - Jonathan E. Ingersoll
+AU  - Lawrence J. Jin
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00116
+N1  - sr-screener TA [R00116]: INCLUDE (Include) - Disposition effect theory (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - What happened to the quants in August 2007? Evidence from factors and transactions data
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C117; identifier doi:10.1016/j.finmar.2010.07.005] 2007 年 8 月量化危机（拥挤平仓）
+PY  - 2011
+DO  - 10.1016/j.finmar.2010.07.005
+T2  - Journal of Financial Markets
+AU  - Amir E. Khandani
+AU  - Andrew W. Lo
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00117
+N1  - sr-screener TA [R00117]: INCLUDE (Include) - Quant crowding and forced unwinding (T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Are Investors Reluctant to Realize Their Losses?
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C119; identifier doi:10.1111/0022-1082.00072] Odean：投资者不愿实现亏损
+PY  - 1998
+DO  - 10.1111/0022-1082.00072
+T2  - The Journal of Finance
+AU  - Terrance Odean
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00119
+N1  - sr-screener TA [R00119]: INCLUDE (Include) - Foundational disposition effect work (T7/T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - The Disposition to Sell Winners Too Early and Ride Losers Too Long: Theory and Evidence
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C120; identifier doi:10.1111/j.1540-6261.1985.tb05002.x] 处置效应提出（Shefrin-Statman）
+PY  - 1985
+DO  - 10.1111/j.1540-6261.1985.tb05002.x
+T2  - The Journal of Finance
+AU  - Hersh Shefrin
+AU  - Meir Statman
+KW  - search direction 6
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00120
+N1  - sr-screener TA [R00120]: INCLUDE (Include) - Foundational disposition effect work (T7/T5) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Tackling estimation risk in Kelly investing using options
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C121; identifier arXiv:2508.18868] 用期权处理 Kelly 投资中的估计风险
+PY  - 2025
+T2  - arXiv preprint
+AU  - Fabrizio Lillo
+AU  - Piero Mazzarisi
+AU  - Ioanna-Yvonni Tsaknaki
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00121
+N1  - sr-screener TA [R00121]: INCLUDE (Include) - Kelly bet sizing with estimation risk (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Distributional Robust Kelly Gambling: Optimal Strategy under Uncertainty in the Long-Run
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C122; identifier arXiv:1812.10371] 分布鲁棒 Kelly：分布不确定下的长期最优下注
+PY  - 2018
+T2  - arXiv preprint
+AU  - Qingyun Sun
+AU  - Stephen Boyd
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00122
+N1  - sr-screener TA [R00122]: INCLUDE (Include) - Distributionally robust Kelly under uncertainty (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Kelly betting on horse races with uncertainty in probability estimates
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C123; identifier arXiv:1701.02814] 概率估计有不确定性时的 Kelly 下注（多结果）
+PY  - 2017
+T2  - arXiv preprint
+AU  - Michael R. Metel
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00123
+N1  - sr-screener TA [R00123]: INCLUDE (Include) - Kelly betting with probability-estimate uncertainty (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Risk-Constrained Kelly Gambling
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C124; identifier arXiv:1603.06183] 风险约束 Kelly：在回撤风险约束下的凸优化下注
+PY  - 2016
+T2  - arXiv preprint
+AU  - Enzo Busseti
+AU  - Ernest K. Ryu
+AU  - Stephen Boyd
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00124
+N1  - sr-screener TA [R00124]: INCLUDE (Include) - Risk-constrained Kelly bet sizing (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Optimal Betting Under Parameter Uncertainty: Improving the Kelly Criterion
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C125; identifier doi:10.1287/deca.2013.0271] 参数不确定下的最优下注：收缩 Kelly
+PY  - 2013
+DO  - 10.1287/deca.2013.0271
+T2  - Decision Analysis
+AU  - Rose D. Baker
+AU  - Ian G. McHale
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00125
+N1  - sr-screener TA [R00125]: INCLUDE (Include) - Kelly under parameter uncertainty, shrinkage (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Partial Kelly portfolios and shrinkage estimators
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C126; identifier doi:10.1109/isit.2012.6283549] 部分 Kelly 组合与收缩估计
+PY  - 2012
+DO  - 10.1109/isit.2012.6283549
+T2  - 2012 IEEE International Symposium on Information Theory Proceedings
+AU  - Justin K. Rising
+AU  - Abraham J. Wyner
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00126
+N1  - sr-screener TA [R00126]: INCLUDE (Include) - Partial Kelly with shrinkage estimators (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Long-term capital growth: the good and bad properties of the Kelly and fractional Kelly capital growth criteria
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C127; identifier doi:10.1080/14697688.2010.506108] Kelly 与分数 Kelly 的优劣性质
+PY  - 2010
+DO  - 10.1080/14697688.2010.506108
+T2  - Quantitative Finance
+AU  - Leonard C. Maclean
+AU  - Edward O. Thorp
+AU  - William T. Ziemba
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00127
+N1  - sr-screener TA [R00127]: INCLUDE (Include) - Kelly and fractional Kelly properties (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - The kelly criterion in blackjack sports betting, and the stock market
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C128; identifier doi:10.1016/B978-044453248-0.50015-0] Thorp：Kelly 准则在二十一点、体育博彩与股市中的应用
+PY  - 2008
+DO  - 10.1016/B978-044453248-0.50015-0
+T2  - Handbook of Asset and Liability Management
+AU  - Edward O. Thorp
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00128
+N1  - sr-screener TA [R00128]: INCLUDE (Include) - Thorp Kelly in stock market; foundational (T7) | A: unclear/UNC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Optimal Betting: Beyond the Long-Term Growth
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C129; identifier arXiv:2503.17927] 超越长期增长的最优下注（含分数 Kelly 讨论）
+PY  - 2025
+T2  - arXiv preprint
+AU  - Levon Hakobyan
+AU  - Sergey Lototsky
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00129
+N1  - sr-screener TA [R00129]: INCLUDE (Include) - Optimal betting, fractional Kelly discussion (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Generalized framework for applying the Kelly criterion to stock markets
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C130; identifier arXiv:1806.05293] Kelly 准则应用于股票市场的一般框架
+PY  - 2018
+T2  - International Journal of Theoretical and Applied Finance 21, 1850033 (2018)
+AU  - Tim Byrnes
+AU  - Tristan Barnett
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00130
+N1  - sr-screener TA [R00130]: INCLUDE (Include) - Kelly criterion framework for stock markets (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Shrinkage estimation of Kelly portfolios
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C131; identifier doi:10.1080/14697688.2018.1483583] Kelly 组合的收缩估计
+PY  - 2018
+DO  - 10.1080/14697688.2018.1483583
+T2  - Quantitative Finance
+AU  - Yongli Han
+AU  - Philip Leung Ho Yu
+AU  - Thomas Mathew
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00131
+N1  - sr-screener TA [R00131]: INCLUDE (Include) - Shrinkage estimation of Kelly portfolios (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Kelly Betting Can Be Too Conservative
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C132; identifier arXiv:1710.01786] Kelly 下注可能过于保守的情形
+PY  - 2017
+T2  - IEEE CDC 2016
+AU  - Chung-Han Hsieh
+AU  - B. Ross Barmish
+AU  - John A. Gubner
+KW  - search direction 7
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00132
+N1  - sr-screener TA [R00132]: INCLUDE (Include) - Kelly betting analysis, bet sizing (T6) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Conformal Risk Control
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C135; identifier arXiv:2208.02814] Conformal Risk Control（奠基；分布无关期望损失控制）
+PY  - 2022
+T2  - arXiv preprint
+AU  - Anastasios N. Angelopoulos
+AU  - Stephen Bates
+AU  - Adam Fisch
+AU  - Lihua Lei
+AU  - Tal Schuster
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00135
+N1  - sr-screener TA [R00135]: INCLUDE (Include) - Conformal risk control, general theory (T2) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - SelectiveNet: A Deep Neural Network with an Integrated Reject Option
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C136; identifier arXiv:1901.09192] SelectiveNet：内置拒绝选项的深度网络（奠基 / 基线）
+PY  - 2019
+T2  - ICML 2019
+AU  - Yonatan Geifman
+AU  - Ran El-Yaniv
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00136
+N1  - sr-screener TA [R00136]: INCLUDE (Include) - Reject-option deep network (T2) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Superhuman AI for multiplayer poker
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C137; identifier doi:10.1126/science.aay2400] Pluribus 多人扑克（奠基）
+PY  - 2019
+DO  - 10.1126/science.aay2400
+T2  - Science
+AU  - Noam Brown
+AU  - Tuomas Sandholm
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00137
+N1  - sr-screener TA [R00137]: INCLUDE (Include) - Pluribus, foundational imperfect-information poker (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Superhuman AI for heads-up no-limit poker: Libratus beats top professionals
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C138; identifier doi:10.1126/science.aao1733] Libratus（奠基）
+PY  - 2018
+DO  - 10.1126/science.aao1733
+T2  - Science
+AU  - Noam Brown
+AU  - Tuomas Sandholm
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00138
+N1  - sr-screener TA [R00138]: INCLUDE (Include) - Libratus, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - DeepStack: Expert-Level Artificial Intelligence in No-Limit Poker
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C139; identifier arXiv:1701.01724] DeepStack：无限注德扑达到专家水平（奠基；Science DOI 10.1126/science.aam6960）
+PY  - 2017
+T2  - Science (2017)
+AU  - Matej Moravčík
+AU  - Martin Schmid
+AU  - Neil Burch
+AU  - Viliam Lisý
+AU  - Dustin Morrill
+AU  - Nolan Bard
+AU  - et al.
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00139
+N1  - sr-screener TA [R00139]: INCLUDE (Include) - DeepStack, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Selective Classification for Deep Neural Networks
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C140; identifier arXiv:1705.08500] 深度网络的选择性分类（风险-覆盖率保证）（奠基）
+PY  - 2017
+T2  - NeurIPS 2017
+AU  - Yonatan Geifman
+AU  - Ran El-Yaniv
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00140
+N1  - sr-screener TA [R00140]: INCLUDE (Include) - Selective classification theory (T2) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Learning with Rejection
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C141; identifier doi:10.1007/978-3-319-46379-7_5] Learning with Rejection：带拒绝的学习理论（ALT 2016）
+PY  - 2016
+DO  - 10.1007/978-3-319-46379-7_5
+T2  - Lecture Notes in Computer Science
+AU  - Corinna Cortes
+AU  - Giulia DeSalvo
+AU  - Mehryar Mohri
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00141
+N1  - sr-screener TA [R00141]: INCLUDE (Include) - Learning with rejection theory (T2) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - On the Foundations of Noise-free Selective Classification
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C142; identifier https://www.jmlr.org/papers/v11/el-yaniv10a.html] 选择性分类理论奠基（风险-覆盖率权衡）
+PY  - 2010
+T2  - JMLR 11:1605-1641
+AU  - Ran El-Yaniv
+AU  - Yair Wiener
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00142
+N1  - sr-screener TA [R00142]: INCLUDE (Include) - Selective classification foundations (T2) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Regret Minimization in Games with Incomplete Information
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C143; identifier https://papers.nips.cc/paper/2007/hash/08d98638c6fcd194a4b1e6992063e944-Abstract.html] CFR 原始论文（奠基）
+PY  - 2007
+T2  - NeurIPS 2007
+AU  - Martin Zinkevich
+AU  - Michael Johanson
+AU  - Michael Bowling
+AU  - Carmelo Piccione
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00143
+N1  - sr-screener TA [R00143]: INCLUDE (Include) - Original CFR, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Continuous Auctions and Insider Trading
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C144; identifier doi:10.2307/1913210] Kyle 1985：连续拍卖与内幕交易（奠基）
+PY  - 1985
+DO  - 10.2307/1913210
+T2  - Econometrica
+AU  - Albert S. Kyle
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00144
+N1  - sr-screener TA [R00144]: INCLUDE (Include) - Kyle 1985, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Bid, ask and transaction prices in a specialist market with heterogeneously informed traders
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C145; identifier doi:10.1016/0304-405X(85)90044-3] Glosten-Milgrom 1985：异质信息下的买卖价差（奠基）
+PY  - 1985
+DO  - 10.1016/0304-405X(85)90044-3
+T2  - Journal of Financial Economics
+AU  - Lawrence R. Glosten
+AU  - Paul R. Milgrom
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00145
+N1  - sr-screener TA [R00145]: INCLUDE (Include) - Glosten-Milgrom 1985, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Information, trade and common knowledge
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C146; identifier doi:10.1016/0022-0531(82)90046-1] Milgrom-Stokey 1982：no-trade 定理（奠基）
+PY  - 1982
+DO  - 10.1016/0022-0531(82)90046-1
+T2  - Journal of Economic Theory
+AU  - Paul Milgrom
+AU  - Nancy Stokey
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00146
+N1  - sr-screener TA [R00146]: INCLUDE (Include) - Milgrom-Stokey no-trade, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - On optimum recognition error and reject tradeoff
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C147; identifier doi:10.1109/TIT.1970.1054406] Chow 1970：最优错误-拒绝权衡（拒绝选项奠基）
+PY  - 1970
+DO  - 10.1109/TIT.1970.1054406
+T2  - IEEE Transactions on Information Theory
+AU  - C. Chow
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00147
+N1  - sr-screener TA [R00147]: INCLUDE (Include) - Chow 1970 reject tradeoff, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - A New Interpretation of Information Rate
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C148; identifier doi:10.1002/j.1538-7305.1956.tb03809.x] Kelly 1956（奠基）
+PY  - 1956
+DO  - 10.1002/j.1538-7305.1956.tb03809.x
+T2  - Bell System Technical Journal
+AU  - J. L. Kelly
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00148
+N1  - sr-screener TA [R00148]: INCLUDE (Include) - Kelly 1956, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Student of Games: A unified learning algorithm for both perfect and imperfect information games
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C150; identifier arXiv:2112.03178] Student of Games：统一完全/不完全信息博弈的算法
+PY  - 2021
+T2  - Science Advances 9 (2023)
+AU  - Martin Schmid
+AU  - Matej Moravcik
+AU  - Neil Burch
+AU  - Rudolf Kadlec
+AU  - Josh Davidson
+AU  - Kevin Waugh
+AU  - et al.
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00150
+N1  - sr-screener TA [R00150]: INCLUDE (Include) - Imperfect-information game algorithm, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Combining Deep Reinforcement Learning and Search for Imperfect-Information Games
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C151; identifier arXiv:2007.13544] ReBeL：不完全信息博弈中 RL + 搜索（奠基）
+PY  - 2020
+T2  - arXiv preprint
+AU  - Noam Brown
+AU  - Anton Bakhtin
+AU  - Adam Lerer
+AU  - Qucheng Gong
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00151
+N1  - sr-screener TA [R00151]: INCLUDE (Include) - ReBeL imperfect-information RL+search, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Counterfactual Regret Minimization
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C152; identifier arXiv:1811.00164] Deep CFR（奠基）
+PY  - 2018
+T2  - ICML 2019
+AU  - Noam Brown
+AU  - Adam Lerer
+AU  - Sam Gross
+AU  - Tuomas Sandholm
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00152
+N1  - sr-screener TA [R00152]: INCLUDE (Include) - Deep CFR, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Reinforcement Learning from Self-Play in Imperfect-Information Games
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C153; identifier arXiv:1603.01121] NFSP：不完全信息博弈自博弈深度 RL（奠基）
+PY  - 2016
+T2  - arXiv preprint
+AU  - Johannes Heinrich
+AU  - David Silver
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00153
+N1  - sr-screener TA [R00153]: INCLUDE (Include) - NFSP imperfect-information self-play, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Heads-up limit hold’em poker is solved
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C154; identifier doi:10.1126/science.1259433] 限注德扑被解出（奠基）
+PY  - 2015
+DO  - 10.1126/science.1259433
+T2  - Science
+AU  - Michael Bowling
+AU  - Neil Burch
+AU  - Michael Johanson
+AU  - Oskari Tammelin
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00154
+N1  - sr-screener TA [R00154]: INCLUDE (Include) - Solved limit hold'em via CFR, foundational (T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Classification with a Reject Option using a Hinge Loss
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C155; identifier https://www.jmlr.org/papers/v9/bartlett08a.html] 带拒绝选项分类的代理损失理论（奠基）
+PY  - 2008
+T2  - JMLR 9:1823-1840
+AU  - Peter L. Bartlett
+AU  - Marten H. Wegkamp
+KW  - search direction 8
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00155
+N1  - sr-screener TA [R00155]: INCLUDE (Include) - Reject-option hinge loss theory (T2/T7) | A: include/INC | B: include/INC | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Learning to Abstain From Uninformative Data
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C156; identifier arXiv:2309.14240] 以金融等高噪声领域为动机：数据中大量样本无信息，提出受选择性学习理论启发的损失，联合训练预测器与选择器，有近最优保证（组长在 ARS lit-review 中补充，arXiv API 核实）
+PY  - 2023
+T2  - arXiv preprint
+AU  - Yikai Zhang
+AU  - Songzhu Zheng
+AU  - Mina Dalirrooyfard
+AU  - Pengxiang Wu
+AU  - Anderson Schneider
+AU  - Anant Raj
+AU  - Yuriy Nevmyvaka
+AU  - Chao Chen
+KW  - search direction 2
+DB  - candidates_for_screening
+LB  - TA-Include
+ID  - R00156
+N1  - sr-screener TA [R00156]: INCLUDE (Include) - Learning to abstain, finance-motivated selective learning (T2) | A: include/INC | B: include/INC | by A+B
+ER  - 
+

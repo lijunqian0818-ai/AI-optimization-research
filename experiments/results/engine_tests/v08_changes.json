@@ -1,0 +1,97 @@
+{
+ "module": "v08_changes",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ },
+ "n": 12,
+ "passed": 12,
+ "failed": 0,
+ "seconds": 0.63,
+ "results": [
+  {
+   "test": "test_c1a_single_source_confirmed_within_0005_not_beyond",
+   "doc": "(a) one source; previous close 10.00, cash 0.50 -> implied reference price 9.50.  `preclose` 9.497",
+   "status": "pass",
+   "info": {
+    "booked": 1,
+    "pending": 1
+   }
+  },
+  {
+   "test": "test_c1b_disagreement_exactly_one_matching_source",
+   "doc": "(b) EV1 0.50 and EV2 0.40 disagree; the step is to 9.50: EV1 implies 9.50 (match), EV2 9.60 (no) ->",
+   "status": "pass",
+   "info": {
+    "cases": 4
+   }
+  },
+  {
+   "test": "test_c1c_ex_date_inside_suspension_step_at_resumption",
+   "doc": "(c) ex-date (day 5) inside a suspension (days 4-5), the reference-price step on the resumption day",
+   "status": "pass",
+   "info": {
+    "steps_explained_by_event": 1
+   }
+  },
+  {
+   "test": "test_c1d_duplicate_rows_stay_pending",
+   "doc": "(d) two rows of one source on one (code, ex-date) - here identical and matching the step - are",
+   "status": "pass"
+  },
+  {
+   "test": "test_c1e_two_source_events_unchanged_and_rule_2a_switch",
+   "doc": "(e) events confirmed by two sources are as in v0.7 (the expected tuple of the v0.7 test), and the",
+   "status": "pass",
+   "info": {
+    "v08_events": 2,
+    "v07_events": 2
+   }
+  },
+  {
+   "test": "test_c1_production_configuration_in_config",
+   "doc": "H-2: the production configuration is fixed in the engine configuration, and load_market uses it.",
+   "status": "pass"
+  },
+  {
+   "test": "test_c3_cum3_element_and_chinext_boundary",
+   "doc": "RC-18 rows carry cum3: 0.20 under 'deviation', 0.30 under 'change'; ChiNext switches on",
+   "status": "pass"
+  },
+  {
+   "test": "test_c5_sell_commission_exceeds_value_and_no_cash",
+   "doc": "H-14: lot-rounding-free configuration with the 5-yuan minimum.  H = 2, K = 1, three sleeves of 5.5",
+   "status": "pass",
+   "info": {
+    "negative_cash_sleeve_days": 4
+   }
+  },
+  {
+   "test": "test_c8a_rows_after_the_cutoff_never_reach_the_market",
+   "doc": "(a) cut-off 2008-02-29: the panel ends on the last trading day <= the cut-off; no bar row after it is",
+   "status": "pass",
+   "info": {
+    "panel_end": "2008-02-29"
+   }
+  },
+  {
+   "test": "test_c8a_reader_refuses_late_rows_and_null_dates",
+   "doc": "read_parquet_cut filters while reading; a frame that still carries a later row is refused; a file",
+   "status": "pass"
+  },
+  {
+   "test": "test_c8c_result_files_carry_the_cutoff",
+   "doc": "(c) simulate.result_record carries data_cutoff (the market's), write_result refuses a record without it.",
+   "status": "pass"
+  },
+  {
+   "test": "test_c8_factor_directory_never_opened_through_the_cut_reader",
+   "doc": "FC-A4 together with C-8: every raw file the loader opens goes through datacut or _read_parquet;",
+   "status": "pass",
+   "info": {
+    "files_opened": 18
+   }
+  }
+ ]
+}

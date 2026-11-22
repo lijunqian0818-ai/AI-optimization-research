@@ -1,0 +1,39 @@
+09:49:30 +      0s PIT audit run; raw root C:/Users/lijun/AppData/Local/Temp/claude/7dc3241753d402cb/6264ec4d-6267-4fe9-b6c0-5bfd1988cc73/scratchpad/pit/tree_P; data cut-off 2021-12-31; config hash 1376cb95b6aa4325df06254e76fe25fec7817eed82a7a65df7391209820ab50f
+09:49:30 +      0s === stage 1_list
+09:49:30 +      0s list: 100 names, ready 100, skipped 0
+09:49:30 +      0s === stage 1_list done in 0.0 s
+09:49:30 +      0s === stage 2_market
+09:49:38 +      8s === stage 2_market done in 8.0 s
+09:49:38 +      8s === stage 3_panel
+[panel] 100/100 names built, 182s
+09:52:50 +    200s === stage 3_panel done in 191.8 s
+09:52:50 +    200s === stage 4_universe
+09:52:50 +    200s === stage 4_universe done in 0.4 s
+09:52:50 +    200s === stage 5_features
+09:53:05 +    215s === stage 5_features done in 14.8 s
+09:53:05 +    215s === stage 6_base
+09:53:39 +    249s [base lgbm] config 1/2 mean validation RankIC computed
+09:54:46 +    316s [base lgbm] config 2/2 mean validation RankIC computed
+09:57:25 +    475s [base lgbm] seed 0: deployment fits done
+10:00:19 +    649s [base lgbm] seed 1: deployment fits done
+10:00:22 +    652s [base ridge] config 1/2 mean validation RankIC computed
+10:00:24 +    654s [base ridge] config 2/2 mean validation RankIC computed
+10:00:51 +    681s [base ridge] seed 0: deployment fits done
+10:01:19 +    709s === stage 6_base done in 493.9 s
+10:01:19 +    709s === stage 7_standard_orders
+10:01:37 +    727s === stage 7_standard_orders done in 17.9 s
+10:01:37 +    727s === stage 8_gates
+10:02:31 +    780s [gates lgbm] LOSS-LR(-Z): tuned over 2 configurations
+10:05:09 +    939s [gates lgbm] LOSS(-Z): tuned over 2 configurations
+10:05:19 +    949s [gates lgbm] LOSS(+Z_H): tuned over 2 configurations
+10:08:53 +   1163s [gates lgbm] LOSS(+Z_O): tuned over 2 configurations
+10:08:53 +   1163s [gates lgbm] NET-K(-Z): tuned over 2 configurations
+10:12:46 +   1396s [gates lgbm] NET-U(-Z): tuned over 2 configurations
+10:12:46 +   1396s [gates ridge] LOSS-LR(-Z): tuned over 2 configurations
+10:12:46 +   1396s [gates ridge] LOSS(-Z): tuned over 2 configurations
+10:14:15 +   1485s [gates ridge] LOSS(+Z_H): tuned over 2 configurations
+10:14:15 +   1485s [gates ridge] LOSS(+Z_O): tuned over 2 configurations
+10:16:46 +   1636s [gates ridge] NET-K(-Z): tuned over 2 configurations
+10:18:56 +   1766s [gates ridge] NET-U(-Z): tuned over 2 configurations
+10:18:56 +   1766s === stage 8_gates done in 1038.8 s
+10:18:57 +   1767s record written (129 fits, 156 gate-year decisions); 1766.0 s

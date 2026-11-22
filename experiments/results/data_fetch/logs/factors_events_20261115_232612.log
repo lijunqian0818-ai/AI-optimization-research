@@ -1,0 +1,99 @@
+2026-11-15 23:26:12 [run] id=factors_events_20261115_232611 stage=factors_events sources=['bs_factor'] limit=0 codes_file=experiments/data/universe_pilot_v1_codes.txt period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\factors_events_20261115_232612.log
+2026-11-15 23:26:12 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=0, progress_units=20, progress_seconds=300.0, resume=True, retry_empty=False, run_id='factors_events_20261115_232611')
+2026-11-15 23:26:12 [start] factors_events: units total=1000 already done (verified)=20 to fetch=980
+2026-11-15 23:26:12 [baostock] login ok (login #1)
+2026-11-15 23:26:42 [progress] factors_events: done=40/1000 (this run 20: ok=20 empty=0 failed=0; resumed-skip=20) success=100.0% mean=1.5s/unit ETA=24.3min requests this run: baostock=20 http=0 pauses=0
+2026-11-15 23:27:10 [progress] factors_events: done=60/1000 (this run 40: ok=40 empty=0 failed=0; resumed-skip=20) success=100.0% mean=1.5s/unit ETA=22.9min requests this run: baostock=40 http=0 pauses=0
+2026-11-15 23:27:36 [progress] factors_events: done=80/1000 (this run 60: ok=60 empty=0 failed=0; resumed-skip=20) success=100.0% mean=1.4s/unit ETA=21.6min requests this run: baostock=60 http=0 pauses=0
+2026-11-15 23:27:44 [empty] factors_events/bs_factor/sh.600084: no record returned (zero rows)
+2026-11-15 23:28:10 [empty] factors_events/bs_factor/sh.600091: no record returned (zero rows)
+2026-11-15 23:28:20 [progress] factors_events: done=100/1000 (this run 80: ok=78 empty=2 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=24.0min requests this run: baostock=80 http=0 pauses=0
+2026-11-15 23:28:33 [empty] factors_events/bs_factor/sh.600107: no record returned (zero rows)
+2026-11-15 23:28:53 [progress] factors_events: done=120/1000 (this run 100: ok=97 empty=3 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=23.6min requests this run: baostock=100 http=0 pauses=0
+2026-11-15 23:29:03 [empty] factors_events/bs_factor/sh.600127: no record returned (zero rows)
+2026-11-15 23:29:12 [empty] factors_events/bs_factor/sh.600130: no record returned (zero rows)
+2026-11-15 23:29:27 [progress] factors_events: done=140/1000 (this run 120: ok=115 empty=5 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=23.3min requests this run: baostock=120 http=0 pauses=0
+2026-11-15 23:29:30 [empty] factors_events/bs_factor/sh.600146: no record returned (zero rows)
+2026-11-15 23:29:34 [empty] factors_events/bs_factor/sh.600149: no record returned (zero rows)
+2026-11-15 23:29:58 [progress] factors_events: done=160/1000 (this run 140: ok=133 empty=7 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=22.6min requests this run: baostock=140 http=0 pauses=0
+2026-11-15 23:30:32 [progress] factors_events: done=180/1000 (this run 160: ok=153 empty=7 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=22.3min requests this run: baostock=160 http=0 pauses=0
+2026-11-15 23:30:44 [empty] factors_events/bs_factor/sh.600198: no record returned (zero rows)
+2026-11-15 23:30:54 [empty] factors_events/bs_factor/sh.600207: no record returned (zero rows)
+2026-11-15 23:31:04 [empty] factors_events/bs_factor/sh.600212: no record returned (zero rows)
+2026-11-15 23:31:04 [progress] factors_events: done=200/1000 (this run 180: ok=170 empty=10 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=21.6min requests this run: baostock=180 http=0 pauses=0
+2026-11-15 23:31:05 [empty] factors_events/bs_factor/sh.600213: no record returned (zero rows)
+2026-11-15 23:31:24 [empty] factors_events/bs_factor/sh.600228: no record returned (zero rows)
+2026-11-15 23:31:41 [progress] factors_events: done=220/1000 (this run 200: ok=188 empty=12 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=21.4min requests this run: baostock=200 http=0 pauses=0
+2026-11-15 23:31:52 [empty] factors_events/bs_factor/sh.600242: no record returned (zero rows)
+2026-11-15 23:32:12 [progress] factors_events: done=240/1000 (this run 220: ok=207 empty=13 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=20.8min requests this run: baostock=220 http=0 pauses=0
+2026-11-15 23:32:36 [empty] factors_events/bs_factor/sh.600275: no record returned (zero rows)
+2026-11-15 23:32:42 [progress] factors_events: done=260/1000 (this run 240: ok=226 empty=14 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=20.1min requests this run: baostock=240 http=0 pauses=0
+2026-11-15 23:33:13 [progress] factors_events: done=280/1000 (this run 260: ok=246 empty=14 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=19.4min requests this run: baostock=260 http=0 pauses=0
+2026-11-15 23:33:26 [empty] factors_events/bs_factor/sh.600311: no record returned (zero rows)
+2026-11-15 23:33:45 [progress] factors_events: done=300/1000 (this run 280: ok=265 empty=15 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=18.9min requests this run: baostock=280 http=0 pauses=0
+2026-11-15 23:34:15 [progress] factors_events: done=320/1000 (this run 300: ok=285 empty=15 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=18.2min requests this run: baostock=300 http=0 pauses=0
+2026-11-15 23:34:23 [empty] factors_events/bs_factor/sh.600357: no record returned (zero rows)
+2026-11-15 23:34:42 [progress] factors_events: done=340/1000 (this run 320: ok=304 empty=16 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=17.5min requests this run: baostock=320 http=0 pauses=0
+2026-11-15 23:34:58 [empty] factors_events/bs_factor/sh.600385: no record returned (zero rows)
+2026-11-15 23:35:12 [progress] factors_events: done=360/1000 (this run 340: ok=323 empty=17 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=17.0min requests this run: baostock=340 http=0 pauses=0
+2026-11-15 23:35:41 [empty] factors_events/bs_factor/sh.600421: no record returned (zero rows)
+2026-11-15 23:35:44 [progress] factors_events: done=380/1000 (this run 360: ok=342 empty=18 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=16.4min requests this run: baostock=360 http=0 pauses=0
+2026-11-15 23:36:08 [empty] factors_events/bs_factor/sh.600455: no record returned (zero rows)
+2026-11-15 23:36:14 [progress] factors_events: done=400/1000 (this run 380: ok=361 empty=19 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=15.8min requests this run: baostock=380 http=0 pauses=0
+2026-11-15 23:36:46 [progress] factors_events: done=420/1000 (this run 400: ok=381 empty=19 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=15.3min requests this run: baostock=400 http=0 pauses=0
+2026-11-15 23:36:49 [baostock] login ok (login #2)
+2026-11-15 23:37:18 [progress] factors_events: done=440/1000 (this run 420: ok=401 empty=19 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=14.8min requests this run: baostock=420 http=0 pauses=0
+2026-11-15 23:37:31 [empty] factors_events/bs_factor/sh.600520: no record returned (zero rows)
+2026-11-15 23:37:55 [progress] factors_events: done=460/1000 (this run 440: ok=420 empty=20 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=14.4min requests this run: baostock=440 http=0 pauses=0
+2026-11-15 23:37:58 [empty] factors_events/bs_factor/sh.600538: no record returned (zero rows)
+2026-11-15 23:38:20 [progress] factors_events: done=480/1000 (this run 460: ok=439 empty=21 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=13.7min requests this run: baostock=460 http=0 pauses=0
+2026-11-15 23:38:49 [empty] factors_events/bs_factor/sh.600579: no record returned (zero rows)
+2026-11-15 23:38:52 [progress] factors_events: done=500/1000 (this run 480: ok=458 empty=22 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=13.2min requests this run: baostock=480 http=0 pauses=0
+2026-11-15 23:39:05 [empty] factors_events/bs_factor/sh.600591: no record returned (zero rows)
+2026-11-15 23:39:23 [progress] factors_events: done=520/1000 (this run 500: ok=477 empty=23 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=12.7min requests this run: baostock=500 http=0 pauses=0
+2026-11-15 23:39:53 [progress] factors_events: done=540/1000 (this run 520: ok=497 empty=23 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=12.1min requests this run: baostock=520 http=0 pauses=0
+2026-11-15 23:40:00 [empty] factors_events/bs_factor/sh.600627: no record returned (zero rows)
+2026-11-15 23:40:32 [progress] factors_events: done=560/1000 (this run 540: ok=516 empty=24 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=11.7min requests this run: baostock=540 http=0 pauses=0
+2026-11-15 23:41:00 [progress] factors_events: done=580/1000 (this run 560: ok=536 empty=24 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=11.1min requests this run: baostock=560 http=0 pauses=0
+2026-11-15 23:41:07 [empty] factors_events/bs_factor/sh.600671: no record returned (zero rows)
+2026-11-15 23:41:14 [empty] factors_events/bs_factor/sh.600678: no record returned (zero rows)
+2026-11-15 23:41:29 [progress] factors_events: done=600/1000 (this run 580: ok=554 empty=26 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=10.5min requests this run: baostock=580 http=0 pauses=0
+2026-11-15 23:41:43 [empty] factors_events/bs_factor/sh.600695: no record returned (zero rows)
+2026-11-15 23:41:45 [empty] factors_events/bs_factor/sh.600696: no record returned (zero rows)
+2026-11-15 23:41:48 [empty] factors_events/bs_factor/sh.600698: no record returned (zero rows)
+2026-11-15 23:42:03 [progress] factors_events: done=620/1000 (this run 600: ok=571 empty=29 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=10.0min requests this run: baostock=600 http=0 pauses=0
+2026-11-15 23:42:36 [progress] factors_events: done=640/1000 (this run 620: ok=591 empty=29 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=9.5min requests this run: baostock=620 http=0 pauses=0
+2026-11-15 23:42:56 [empty] factors_events/bs_factor/sh.600744: no record returned (zero rows)
+2026-11-15 23:43:00 [empty] factors_events/bs_factor/sh.600747: no record returned (zero rows)
+2026-11-15 23:43:08 [progress] factors_events: done=660/1000 (this run 640: ok=609 empty=31 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=9.0min requests this run: baostock=640 http=0 pauses=0
+2026-11-15 23:43:37 [empty] factors_events/bs_factor/sh.600767: no record returned (zero rows)
+2026-11-15 23:43:40 [empty] factors_events/bs_factor/sh.600769: no record returned (zero rows)
+2026-11-15 23:43:44 [progress] factors_events: done=680/1000 (this run 660: ok=627 empty=33 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=8.5min requests this run: baostock=660 http=0 pauses=0
+2026-11-15 23:44:06 [empty] factors_events/bs_factor/sh.600786: no record returned (zero rows)
+2026-11-15 23:44:15 [progress] factors_events: done=700/1000 (this run 680: ok=646 empty=34 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=8.0min requests this run: baostock=680 http=0 pauses=0
+2026-11-15 23:44:43 [progress] factors_events: done=720/1000 (this run 700: ok=666 empty=34 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=7.4min requests this run: baostock=700 http=0 pauses=0
+2026-11-15 23:45:15 [progress] factors_events: done=740/1000 (this run 720: ok=686 empty=34 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=6.9min requests this run: baostock=720 http=0 pauses=0
+2026-11-15 23:45:21 [empty] factors_events/bs_factor/sh.600840: no record returned (zero rows)
+2026-11-15 23:45:24 [empty] factors_events/bs_factor/sh.600842: no record returned (zero rows)
+2026-11-15 23:45:32 [empty] factors_events/bs_factor/sh.600847: no record returned (zero rows)
+2026-11-15 23:45:45 [progress] factors_events: done=760/1000 (this run 740: ok=703 empty=37 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=6.3min requests this run: baostock=740 http=0 pauses=0
+2026-11-15 23:45:49 [empty] factors_events/bs_factor/sh.600860: no record returned (zero rows)
+2026-11-15 23:46:02 [empty] factors_events/bs_factor/sh.600870: no record returned (zero rows)
+2026-11-15 23:46:10 [empty] factors_events/bs_factor/sh.600876: no record returned (zero rows)
+2026-11-15 23:46:11 [empty] factors_events/bs_factor/sh.600877: no record returned (zero rows)
+2026-11-15 23:46:11 [progress] factors_events: done=780/1000 (this run 760: ok=719 empty=41 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=5.8min requests this run: baostock=760 http=0 pauses=0
+2026-11-15 23:46:30 [empty] factors_events/bs_factor/sh.600890: no record returned (zero rows)
+2026-11-15 23:46:40 [progress] factors_events: done=800/1000 (this run 780: ok=738 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=5.3min requests this run: baostock=780 http=0 pauses=0
+2026-11-15 23:47:06 [progress] factors_events: done=820/1000 (this run 800: ok=758 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=4.7min requests this run: baostock=800 http=0 pauses=0
+2026-11-15 23:47:12 [baostock] login ok (login #3)
+2026-11-15 23:47:41 [progress] factors_events: done=840/1000 (this run 820: ok=778 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=4.2min requests this run: baostock=820 http=0 pauses=0
+2026-11-15 23:48:11 [progress] factors_events: done=860/1000 (this run 840: ok=798 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=3.7min requests this run: baostock=840 http=0 pauses=0
+2026-11-15 23:48:41 [progress] factors_events: done=880/1000 (this run 860: ok=818 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=3.1min requests this run: baostock=860 http=0 pauses=0
+2026-11-15 23:49:22 [progress] factors_events: done=900/1000 (this run 880: ok=838 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=2.6min requests this run: baostock=880 http=0 pauses=0
+2026-11-15 23:49:49 [progress] factors_events: done=920/1000 (this run 900: ok=858 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=2.1min requests this run: baostock=900 http=0 pauses=0
+2026-11-15 23:50:16 [progress] factors_events: done=940/1000 (this run 920: ok=878 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=1.6min requests this run: baostock=920 http=0 pauses=0
+2026-11-15 23:50:42 [progress] factors_events: done=960/1000 (this run 940: ok=898 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=1.0min requests this run: baostock=940 http=0 pauses=0
+2026-11-15 23:51:09 [progress] factors_events: done=980/1000 (this run 960: ok=918 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=0.5min requests this run: baostock=960 http=0 pauses=0
+2026-11-15 23:51:37 [progress] factors_events: done=1000/1000 (this run 980: ok=938 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=0.0min requests this run: baostock=980 http=0 pauses=0
+2026-11-15 23:51:37 [final] factors_events: done=1000/1000 (this run 980: ok=938 empty=42 failed=0; resumed-skip=20) success=100.0% mean=1.6s/unit ETA=0.0min requests this run: baostock=980 http=0 pauses=0
+2026-11-15 23:51:37 [exit] code=0

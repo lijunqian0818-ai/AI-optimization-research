@@ -1,0 +1,286 @@
+{
+ "inner_cutoff": "2019-12-31",
+ "last_day_le_C": "2019-12-31",
+ "first_decision_day_after_C": "2020-01-02",
+ "feature_panel": {
+  "files": 97,
+  "rows_le_first_decision_day_after_C": 245324,
+  "rows_not_identical": 0,
+  "columns_with_mismatch": {},
+  "rows_after": 43133,
+  "rows_after_that_differ": 43133
+ },
+ "frame_rows_le_C_same_keys": true,
+ "frame_rows": {
+  "ref": 138707,
+  "pert": 109428,
+  "le_C": 103084
+ },
+ "gate_tuning_year_orders_resolving_after_C": {
+  "('lgbm', 0)": {
+   "nominations_in_last_gate_tuning_year": 7320,
+   "exit_after_C": 149,
+   "open_at_data_end": 0,
+   "not_filled_rho_0": 66
+  },
+  "('lgbm', 1)": {
+   "nominations_in_last_gate_tuning_year": 7320,
+   "exit_after_C": 152,
+   "open_at_data_end": 0,
+   "not_filled_rho_0": 57
+  },
+  "('ridge', 0)": {
+   "nominations_in_last_gate_tuning_year": 7320,
+   "exit_after_C": 150,
+   "open_at_data_end": 0,
+   "not_filled_rho_0": 66
+  },
+  "('ridge', 1)": {
+   "nominations_in_last_gate_tuning_year": 7320,
+   "exit_after_C": 150,
+   "open_at_data_end": 0,
+   "not_filled_rho_0": 66
+  }
+ },
+ "tests": {
+  "monthly_screen_membership": {
+   "expected_identical": {
+    "n": 144,
+    "identical": 144,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 23,
+    "identical": 0
+   }
+  },
+  "candidate_sets": {
+   "expected_identical": {
+    "n": 1465,
+    "identical": 1465,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 470,
+    "identical": 0
+   }
+  },
+  "ranked_feature_rows_per_day": {
+   "expected_identical": {
+    "n": 1465,
+    "identical": 1465,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 470,
+    "identical": 0
+   }
+  },
+  "feature_panel_files": {
+   "expected_identical": {
+    "n": 97,
+    "identical": 97,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 0,
+    "identical": 0
+   }
+  },
+  "base_tuning_record": {
+   "expected_identical": {
+    "n": 2,
+    "identical": 2,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 0,
+    "identical": 0
+   }
+  },
+  "base_chosen_config": {
+   "expected_identical": {
+    "n": 2,
+    "identical": 2,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 0,
+    "identical": 0
+   }
+  },
+  "base_score_per_day": {
+   "expected_identical": {
+    "n": 5856,
+    "identical": 5856,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 1884,
+    "identical": 4
+   }
+  },
+  "base_rank_per_day": {
+   "expected_identical": {
+    "n": 5856,
+    "identical": 5856,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 1884,
+    "identical": 4
+   }
+  },
+  "nominations_noms": {
+   "expected_identical": {
+    "n": 2924,
+    "identical": 2924,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 1884,
+    "identical": 4
+   }
+  },
+  "nominations_ktr": {
+   "expected_identical": {
+    "n": 2924,
+    "identical": 2924,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 1884,
+    "identical": 4
+   }
+  },
+  "base_tuning_fit_training_set": {
+   "expected_identical": {
+    "n": 6,
+    "identical": 6,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 0,
+    "identical": 0
+   }
+  },
+  "base_deployment_fit_training_set": {
+   "expected_identical": {
+    "n": 12,
+    "identical": 12,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 3,
+    "identical": 0
+   }
+  },
+  "gate_CONF_isotonic_training_set": {
+   "expected_identical": {
+    "n": 8,
+    "identical": 8,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 4,
+    "identical": 0
+   }
+  },
+  "gate_learned_training_set": {
+   "expected_identical": {
+    "n": 96,
+    "identical": 96,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 0,
+    "identical": 0
+   }
+  },
+  "gate_decisions_per_day_all_configs": {
+   "expected_identical": {
+    "n": 16592,
+    "identical": 16592,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 20784,
+    "identical": 111
+   }
+  },
+  "gate_chosen_config": {
+   "expected_identical": {
+    "n": 0,
+    "identical": 0,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 12,
+    "identical": 12
+   }
+  },
+  "gate_tuning_criterion_values": {
+   "expected_identical": {
+    "n": 0,
+    "identical": 0,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 12,
+    "identical": 0
+   }
+  },
+  "standard_orders_decided_le_C": {
+   "expected_identical": {
+    "n": 51984,
+    "identical": 51984,
+    "mismatch_keys": []
+   },
+   "allowed_to_differ": {
+    "n": 713,
+    "identical": 343
+   }
+  }
+ },
+ "violations": {
+  "monthly_screen_membership": 0,
+  "candidate_sets": 0,
+  "ranked_feature_rows_per_day": 0,
+  "feature_panel_files": 0,
+  "base_tuning_record": 0,
+  "base_chosen_config": 0,
+  "base_score_per_day": 0,
+  "base_rank_per_day": 0,
+  "nominations_noms": 0,
+  "nominations_ktr": 0,
+  "base_tuning_fit_training_set": 0,
+  "base_deployment_fit_training_set": 0,
+  "gate_CONF_isotonic_training_set": 0,
+  "gate_learned_training_set": 0,
+  "gate_decisions_per_day_all_configs": 0,
+  "gate_chosen_config": 0,
+  "gate_tuning_criterion_values": 0,
+  "standard_orders_decided_le_C": 0
+ },
+ "pass": true,
+ "non_vacuous": {
+  "monthly_screen_membership": 23,
+  "candidate_sets": 470,
+  "ranked_feature_rows_per_day": 470,
+  "feature_panel_files": 0,
+  "base_tuning_record": 0,
+  "base_chosen_config": 0,
+  "base_score_per_day": 1880,
+  "base_rank_per_day": 1880,
+  "nominations_noms": 1880,
+  "nominations_ktr": 1880,
+  "base_tuning_fit_training_set": 0,
+  "base_deployment_fit_training_set": 3,
+  "gate_CONF_isotonic_training_set": 4,
+  "gate_learned_training_set": 0,
+  "gate_decisions_per_day_all_configs": 20673,
+  "gate_chosen_config": 0,
+  "gate_tuning_criterion_values": 12,
+  "standard_orders_decided_le_C": 370
+ }
+}

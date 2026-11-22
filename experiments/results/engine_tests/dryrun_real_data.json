@@ -1,0 +1,2145 @@
+{
+ "what": "pipeline-only dry run on landed raw files; no performance figure is reported",
+ "config": "EngineConfig defaults (plan placeholders)",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ },
+ "config_hash": "f49583b1f352cf02ba4a70fd894d0cb81800f3f3ef2e655a016dcc1e107dad70",
+ "codes": [
+  "sz.300104",
+  "sh.600485",
+  "sz.002450",
+  "sh.600005",
+  "sh.688111",
+  "sh.688981",
+  "sh.689009",
+  "sz.300750",
+  "sz.300059",
+  "sz.301001",
+  "sz.302132",
+  "sz.000792",
+  "sh.600053",
+  "sh.600519",
+  "sz.000002",
+  "sh.600036",
+  "sh.601318",
+  "sz.001872",
+  "sz.002594",
+  "sh.600000"
+ ],
+ "load": {
+  "n_days": 3407,
+  "first_day": "2008-01-02",
+  "last_day": "2021-12-31",
+  "data_cutoff": "2021-12-31",
+  "codes": {
+   "sz.300104": {
+    "rows": 2415,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 1,
+    "rows_on_or_after_outDate": 1,
+    "first_row": "2010-08-12",
+    "last_row": "2020-07-21",
+    "outDate": "2020-07-21",
+    "ipoDate": "2010-08-12",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 1700,
+    "suspended_flag_days": 715,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.600485": {
+    "rows": 3262,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0",
+     "1"
+    ],
+    "empty_volume_rows": 1,
+    "rows_on_or_after_outDate": 1,
+    "first_row": "2008-01-02",
+    "last_row": "2021-06-01",
+    "outDate": "2021-06-01",
+    "ipoDate": "2003-08-07",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 2222,
+    "suspended_flag_days": 1040,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 506,
+    "rows_filled_from_xsrc": 0
+   },
+   "sz.002450": {
+    "rows": 2642,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0",
+     "1"
+    ],
+    "empty_volume_rows": 1,
+    "rows_on_or_after_outDate": 1,
+    "first_row": "2010-07-16",
+    "last_row": "2021-05-31",
+    "outDate": "2021-05-31",
+    "ipoDate": "2010-07-16",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 1943,
+    "suspended_flag_days": 699,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 538,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.600005": {
+    "rows": 2216,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 1,
+    "rows_on_or_after_outDate": 1,
+    "first_row": "2008-01-02",
+    "last_row": "2017-02-14",
+    "outDate": "2017-02-14",
+    "ipoDate": "1999-08-03",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 2084,
+    "suspended_flag_days": 132,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.688111": {
+    "rows": 518,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2019-11-18",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2019-11-18",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 518,
+    "suspended_flag_days": 0,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.688981": {
+    "rows": 358,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2020-07-16",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2020-07-16",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 358,
+    "suspended_flag_days": 0,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.689009": {
+    "rows": 289,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2020-10-29",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2020-10-29",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 289,
+    "suspended_flag_days": 0,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sz.300750": {
+    "rows": 868,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2018-06-11",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2018-06-11",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 868,
+    "suspended_flag_days": 0,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sz.300059": {
+    "rows": 2868,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2010-03-19",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2010-03-19",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 2803,
+    "suspended_flag_days": 65,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sz.301001": {
+    "rows": 148,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2021-05-28",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2021-05-28",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 148,
+    "suspended_flag_days": 0,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sz.302132": {
+    "rows": 2757,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 79,
+    "first_row": "2010-08-27",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2010-08-27",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [
+     "2012-09-10"
+    ],
+    "traded_days": 2678,
+    "suspended_flag_days": 79,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sz.000792": {
+    "rows": 3407,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0",
+     "1"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2008-01-02",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "1997-09-04",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 2875,
+    "suspended_flag_days": 532,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 555,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.600053": {
+    "rows": 3407,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2008-01-02",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "1997-04-18",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 3079,
+    "suspended_flag_days": 328,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.600519": {
+    "rows": 3407,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2008-01-02",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2001-08-27",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 3399,
+    "suspended_flag_days": 8,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sz.000002": {
+    "rows": 3407,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2008-01-02",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "1991-01-29",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 3248,
+    "suspended_flag_days": 159,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.600036": {
+    "rows": 3407,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2008-01-02",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2002-04-09",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 3380,
+    "suspended_flag_days": 27,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.601318": {
+    "rows": 3407,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2008-01-02",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2007-03-01",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 3342,
+    "suspended_flag_days": 65,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sz.001872": {
+    "rows": 3406,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 293,
+    "first_row": "2008-01-02",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "1993-05-05",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [
+     "2012-09-10"
+    ],
+    "traded_days": 3113,
+    "suspended_flag_days": 293,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sz.002594": {
+    "rows": 2557,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2011-06-30",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "2011-06-30",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 2545,
+    "suspended_flag_days": 12,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   },
+   "sh.600000": {
+    "rows": 3407,
+    "adjustflag_values": [
+     "3"
+    ],
+    "tradestatus_values": [
+     "0",
+     "1"
+    ],
+    "isST_values": [
+     "0"
+    ],
+    "empty_volume_rows": 0,
+    "first_row": "2008-01-02",
+    "last_row": "2021-12-31",
+    "outDate": null,
+    "ipoDate": "1999-11-10",
+    "rows_off_calendar": [],
+    "duplicate_dates": 0,
+    "missing_days_inside_span": [],
+    "traded_days": 3357,
+    "suspended_flag_days": 50,
+    "flag_suspended_with_volume": 0,
+    "flag_trading_zero_volume": 0,
+    "traded_open_missing_or_nonpositive": 0,
+    "traded_close_missing_or_nonpositive": 0,
+    "row_preclose_missing_or_nonpositive": 0,
+    "st_days": 0,
+    "rows_filled_from_xsrc": 0
+   }
+  },
+  "problems": [],
+  "events_mode": "merged",
+  "event_sources": {
+   "EV1_files": 15,
+   "EV2_files": 20,
+   "EV3_files": 20,
+   "rights_files": 5,
+   "EV1_rows": 214,
+   "EV2_rows": 298,
+   "EV3_rows": 42,
+   "rights_rows": 8,
+   "column_names": {
+    "EV2": [
+     "公告日期",
+     "送股",
+     "转增",
+     "派息",
+     "进度",
+     "除权除息日",
+     "股权登记日",
+     "红股上市日"
+    ],
+    "rights": [
+     "公告日期",
+     "配股方案",
+     "配股价格",
+     "基准股本",
+     "除权日",
+     "股权登记日",
+     "缴款起始日",
+     "缴款终止日",
+     "配股上市日",
+     "募集资金合计"
+    ],
+    "EV1": [
+     "报告期",
+     "业绩披露日期",
+     "送转股份-送转总比例",
+     "送转股份-送股比例",
+     "送转股份-转股比例",
+     "现金分红-现金分红比例",
+     "现金分红-现金分红比例描述",
+     "现金分红-股息率",
+     "每股收益",
+     "每股净资产",
+     "每股公积金",
+     "每股未分配利润",
+     "净利润同比增长",
+     "总股本",
+     "预案公告日",
+     "股权登记日",
+     "除权除息日",
+     "方案进度",
+     "最新公告日期"
+    ]
+   },
+   "sources_read": [
+    "EV1",
+    "EV2",
+    "EV3",
+    "rights"
+   ],
+   "event_date_fields_after_cutoff_set_missing": 0
+  },
+  "event_table": {
+   "counts": {
+    "source_rows": 554,
+    "rows_not_implemented_without_ex_date": 43,
+    "rows_empty_amounts": 0,
+    "rows_other_status_with_ex_date": 0,
+    "rows_implemented_without_ex_date": 1,
+    "rows_outside_panel_or_listing": 144,
+    "groups": 175,
+    "confirmed_3_sources": 32,
+    "confirmed_2_sources": 124,
+    "single_source": 18,
+    "disagreement": 0,
+    "duplicate_rows_in_one_source": 1,
+    "confirmed_by_price_single": 18,
+    "confirmed_by_price_disagreement": 0,
+    "rule2a_no_reference_step": 0,
+    "rule2a_no_matching_source": 0,
+    "rule2a_several_matching_sources": 0,
+    "rule2a_record_date_relation": 0,
+    "rule2a_step_at_resumption": 0,
+    "resolved_by_announcement": 0,
+    "rejected": 0,
+    "record_date_violation": 0,
+    "amount_flagged": 7,
+    "amount_hand_check": 1,
+    "no_step_expected": 0,
+    "matched_same_day": 172,
+    "conflict_a_matched": 3,
+    "conflict_b_pairs": 0,
+    "conflict_b_event_date": 0,
+    "conflict_b_step_date": 0,
+    "conflict_b_undecided_or_pending": 0,
+    "conflict_c_not_booked": 0,
+    "conflict_c_confirmed_by_announcement": 0,
+    "booked_dist_events": 173,
+    "forced_U_events": 2,
+    "rights_rows": 8,
+    "rights_in_table": 8,
+    "rights_undated": 0,
+    "rights_missing_record_date": 0,
+    "steps_total": 181,
+    "steps_explained_by_event": 175,
+    "steps_explained_by_rights": 3,
+    "steps_urs": 1,
+    "steps_urs_after_missing_row": 2,
+    "steps_resolved_explained": 0,
+    "code_change_mapping": "not applied (OA9 table does not exist)",
+    "hand_check_items": 14,
+    "pending_policy": "U"
+   },
+   "by_year": {
+    "1991": {
+     "rights:listed": 1
+    },
+    "1997": {
+     "rights:listed": 1
+    },
+    "1999": {
+     "rights:listed": 1
+    },
+    "2000": {
+     "rights:listed": 2
+    },
+    "2008": {
+     "confirmed_2_sources:listed": 8,
+     "confirmed_2_sources:delisted": 1,
+     "booked:listed": 8,
+     "booked:delisted": 1
+    },
+    "2009": {
+     "confirmed_2_sources:listed": 8,
+     "confirmed_2_sources:delisted": 1,
+     "booked:listed": 8,
+     "booked:delisted": 1
+    },
+    "2010": {
+     "rights:listed": 1,
+     "confirmed_2_sources:listed": 9,
+     "confirmed_2_sources:delisted": 1,
+     "booked:listed": 9,
+     "booked:delisted": 1
+    },
+    "2011": {
+     "rights:delisted": 1,
+     "confirmed_2_sources:listed": 10,
+     "confirmed_2_sources:delisted": 1,
+     "confirmed_by_price:delisted": 2,
+     "booked:listed": 10,
+     "booked:delisted": 3
+    },
+    "2012": {
+     "confirmed_2_sources:listed": 10,
+     "confirmed_2_sources:delisted": 1,
+     "confirmed_by_price:delisted": 2,
+     "booked:listed": 10,
+     "booked:delisted": 3,
+     "urs:listed": 2
+    },
+    "2013": {
+     "rights:listed": 1,
+     "confirmed_2_sources:listed": 11,
+     "confirmed_2_sources:delisted": 1,
+     "confirmed_by_price:delisted": 2,
+     "booked:listed": 11,
+     "booked:delisted": 3
+    },
+    "2014": {
+     "confirmed_2_sources:listed": 12,
+     "confirmed_2_sources:delisted": 1,
+     "confirmed_by_price:delisted": 2,
+     "booked:listed": 12,
+     "booked:delisted": 3
+    },
+    "2015": {
+     "confirmed_2_sources:listed": 11,
+     "confirmed_2_sources:delisted": 1,
+     "confirmed_by_price:delisted": 3,
+     "booked:listed": 11,
+     "booked:delisted": 4
+    },
+    "2016": {
+     "confirmed_2_sources:listed": 12,
+     "confirmed_by_price:delisted": 3,
+     "booked:listed": 12,
+     "booked:delisted": 3
+    },
+    "2017": {
+     "confirmed_2_sources:listed": 12,
+     "confirmed_by_price:delisted": 3,
+     "booked:listed": 12,
+     "booked:delisted": 3,
+     "urs:listed": 1
+    },
+    "2018": {
+     "confirmed_2_sources:listed": 10,
+     "confirmed_by_price:delisted": 1,
+     "booked:listed": 9,
+     "forced_U:listed": 1,
+     "pending:amount_vs_reference_price:listed": 1,
+     "booked:delisted": 1
+    },
+    "2019": {
+     "confirmed_3_sources:listed": 11,
+     "confirmed_2_sources:listed": 1,
+     "booked:listed": 12
+    },
+    "2020": {
+     "confirmed_3_sources:listed": 11,
+     "confirmed_2_sources:listed": 1,
+     "booked:listed": 12
+    },
+    "2021": {
+     "confirmed_3_sources:listed": 10,
+     "confirmed_2_sources:listed": 1,
+     "booked:listed": 11,
+     "forced_U:listed": 1,
+     "pending:duplicate_rows_in_one_source:listed": 1
+    }
+   },
+   "hash": "fd5d1baf7ec4e33bfc130cea824baac60dd48280b6b0f609f4ddc08fc0658eeb",
+   "hand_check": [
+    {
+     "code": "sz.000792",
+     "date": "2020-03-25",
+     "kind": "implemented_without_ex_date",
+     "detail": "EV2: status '实施'"
+    },
+    {
+     "code": "sh.600005",
+     "date": "2011-03-25",
+     "kind": "rights_issue",
+     "detail": "every rights issue is hand-checked (A16)"
+    },
+    {
+     "code": "sz.000792",
+     "date": "1999-08-23",
+     "kind": "rights_issue",
+     "detail": "every rights issue is hand-checked (A16)"
+    },
+    {
+     "code": "sh.600053",
+     "date": "2000-04-27",
+     "kind": "rights_issue",
+     "detail": "every rights issue is hand-checked (A16)"
+    },
+    {
+     "code": "sz.000002",
+     "date": "2000-01-07",
+     "kind": "rights_issue",
+     "detail": "every rights issue is hand-checked (A16)"
+    },
+    {
+     "code": "sz.000002",
+     "date": "1997-07-11",
+     "kind": "rights_issue",
+     "detail": "every rights issue is hand-checked (A16)"
+    },
+    {
+     "code": "sz.000002",
+     "date": "1991-05-27",
+     "kind": "rights_issue",
+     "detail": "every rights issue is hand-checked (A16)"
+    },
+    {
+     "code": "sh.600036",
+     "date": "2013-08-27",
+     "kind": "rights_issue",
+     "detail": "every rights issue is hand-checked (A16)"
+    },
+    {
+     "code": "sh.600036",
+     "date": "2010-03-04",
+     "kind": "rights_issue",
+     "detail": "every rights issue is hand-checked (A16)"
+    },
+    {
+     "code": "sh.601318",
+     "date": "2018-06-07",
+     "kind": "amount_inconsistent_with_reference_price",
+     "detail": 0.2
+    },
+    {
+     "code": "sz.002594",
+     "date": "2021-08-06",
+     "kind": "duplicate_rows_in_one_source",
+     "detail": {
+      "EV1": [
+       0.148,
+       0.0,
+       "2021-08-05"
+      ],
+      "EV2": [
+       0.148,
+       0.0,
+       "2021-08-05"
+      ],
+      "EV3": [
+       0.148,
+       0.0,
+       "2021-08-05"
+      ]
+     }
+    },
+    {
+     "code": "sz.302132",
+     "date": "2012-09-11",
+     "kind": "step_after_a_missing_row",
+     "detail": {
+      "prev_row": "2012-09-07"
+     }
+    },
+    {
+     "code": "sz.001872",
+     "date": "2012-09-11",
+     "kind": "step_after_a_missing_row",
+     "detail": {
+      "prev_row": "2012-09-07"
+     }
+    },
+    {
+     "code": "sz.001872",
+     "date": "2017-10-25",
+     "kind": "step_without_event",
+     "detail": {
+      "prev_close": 26.48,
+      "preclose": 26.5
+     }
+    }
+   ],
+   "flags": [
+    {
+     "code": "sh.600053",
+     "date": "2017-07-06",
+     "kind": "amount_vs_reference_price",
+     "diff": 0.005
+    },
+    {
+     "code": "sh.600519",
+     "date": "2020-06-24",
+     "kind": "amount_vs_reference_price",
+     "diff": 0.005
+    },
+    {
+     "code": "sh.601318",
+     "date": "2020-05-08",
+     "kind": "amount_vs_reference_price",
+     "diff": 0.01
+    },
+    {
+     "code": "sh.601318",
+     "date": "2021-04-22",
+     "kind": "amount_vs_reference_price",
+     "diff": 0.01
+    },
+    {
+     "code": "sh.601318",
+     "date": "2021-10-25",
+     "kind": "amount_vs_reference_price",
+     "diff": 0.01
+    },
+    {
+     "code": "sz.300059",
+     "date": "2013-05-17",
+     "kind": "amount_vs_reference_price",
+     "diff": 0.005
+    },
+    {
+     "code": "sz.302132",
+     "date": "2019-05-24",
+     "kind": "amount_vs_reference_price",
+     "diff": 0.005
+    },
+    {
+     "code": "sh.600485",
+     "date": "2015-07-17",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sh.600485",
+     "date": "2016-07-15",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sh.600485",
+     "date": "2017-06-26",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sh.601318",
+     "date": "2010-07-13",
+     "kind": "ex-date inside a suspension; reference-price step at the resumption"
+    },
+    {
+     "code": "sh.601318",
+     "date": "2018-06-07",
+     "kind": "pending rule: amount_vs_reference_price"
+    },
+    {
+     "code": "sz.000792",
+     "date": "2008-07-14",
+     "kind": "ex-date inside a suspension; reference-price step at the resumption"
+    },
+    {
+     "code": "sz.000792",
+     "date": "2009-06-26",
+     "kind": "ex-date inside a suspension; reference-price step at the resumption"
+    },
+    {
+     "code": "sz.002450",
+     "date": "2011-06-10",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.002450",
+     "date": "2012-03-22",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.002450",
+     "date": "2013-04-23",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.002450",
+     "date": "2014-05-21",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.002450",
+     "date": "2015-05-26",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.002450",
+     "date": "2016-06-02",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.002450",
+     "date": "2017-05-25",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.002450",
+     "date": "2018-09-28",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.002594",
+     "date": "2021-08-06",
+     "kind": "pending rule: duplicate_rows_in_one_source"
+    },
+    {
+     "code": "sz.300104",
+     "date": "2011-05-18",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.300104",
+     "date": "2012-06-13",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.300104",
+     "date": "2013-06-05",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.300104",
+     "date": "2014-05-30",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.300104",
+     "date": "2015-05-13",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.300104",
+     "date": "2016-05-03",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    },
+    {
+     "code": "sz.300104",
+     "date": "2017-08-25",
+     "kind": "single source / disagreement, confirmed by the reference price"
+    }
+   ],
+   "urs": [
+    [
+     "sz.001872",
+     "2012-09-11"
+    ],
+    [
+     "sz.001872",
+     "2017-10-25"
+    ],
+    [
+     "sz.302132",
+     "2012-09-11"
+    ]
+   ],
+   "u_spans": {}
+  },
+  "dispositions": {
+   "delisted_names": 4,
+   "no_row": [
+    "sh.600005",
+    "sh.600485",
+    "sz.002450",
+    "sz.300104"
+   ],
+   "terminated": [],
+   "cash": [],
+   "exchange": [],
+   "other": [],
+   "errors": [],
+   "rows_for_names_not_delisted_in_panel": [],
+   "fallback_sentence_required": true,
+   "fallback_sentence": "delistings are written off, including absorptions by share exchange",
+   "table_problems": [
+    "disposition table not found at C:\\Users\\lijun\\Desktop\\AI-Optimization-Research\\experiments\\data\\manual\\delisting_dispositions.csv: every delisting falls back to class U"
+   ]
+  },
+  "event_problems": []
+ },
+ "calendar": {
+  "boards": {
+   "sz.300104": "chinext",
+   "sh.600485": "main",
+   "sz.002450": "main",
+   "sh.600005": "main",
+   "sh.688111": "star",
+   "sh.688981": "star",
+   "sh.689009": "star",
+   "sz.300750": "chinext",
+   "sz.300059": "chinext",
+   "sz.301001": "chinext",
+   "sz.302132": "chinext (prefix classification unverified)",
+   "sz.000792": "main",
+   "sh.600053": "main",
+   "sh.600519": "main",
+   "sz.000002": "main",
+   "sh.600036": "main",
+   "sh.601318": "main",
+   "sz.001872": "main",
+   "sz.002594": "main",
+   "sh.600000": "main"
+  },
+  "unclassifiable_codes": [],
+  "calendar_errors": [],
+  "rows_checked": 48153,
+  "open_above_P_up": [
+   {
+    "code": "sz.300104",
+    "date": "2010-08-12",
+    "open": "49.44",
+    "preclose": "29.2",
+    "band": "0.10"
+   },
+   {
+    "code": "sz.002450",
+    "date": "2010-07-16",
+    "open": "19.01",
+    "preclose": "14.2",
+    "band": "0.10"
+   },
+   {
+    "code": "sh.688111",
+    "date": "2019-11-18",
+    "open": "140.0",
+    "preclose": "45.86",
+    "band": "0.20"
+   },
+   {
+    "code": "sh.688981",
+    "date": "2020-07-16",
+    "open": "95.0",
+    "preclose": "27.46",
+    "band": "0.20"
+   },
+   {
+    "code": "sh.689009",
+    "date": "2020-10-29",
+    "open": "33.0",
+    "preclose": "18.94",
+    "band": "0.20"
+   },
+   {
+    "code": "sz.300750",
+    "date": "2018-06-11",
+    "open": "30.17",
+    "preclose": "25.14",
+    "band": "0.10"
+   },
+   {
+    "code": "sz.300059",
+    "date": "2010-03-19",
+    "open": "61.0",
+    "preclose": "40.58",
+    "band": "0.10"
+   },
+   {
+    "code": "sz.301001",
+    "date": "2021-05-28",
+    "open": "66.88",
+    "preclose": "25.54",
+    "band": "0.20"
+   },
+   {
+    "code": "sz.302132",
+    "date": "2010-08-27",
+    "open": "40.18",
+    "preclose": "25.0",
+    "band": "0.10"
+   },
+   {
+    "code": "sz.000792",
+    "date": "2021-08-10",
+    "open": "39.22",
+    "preclose": "8.84",
+    "band": "0.10"
+   },
+   {
+    "code": "sz.002594",
+    "date": "2011-06-30",
+    "open": "22.0",
+    "preclose": "18.0",
+    "band": "0.10"
+   }
+  ],
+  "open_below_P_down": [],
+  "open_equal_P_up": 140,
+  "open_equal_P_down": 199,
+  "open_not_on_cent_grid": 0,
+  "preclose_not_on_cent_grid": 0,
+  "st_rows_by_board": {
+   "main": 1599
+  }
+ },
+ "event_table_summary": {
+  "hash": "fd5d1baf7ec4e33bfc130cea824baac60dd48280b6b0f609f4ddc08fc0658eeb",
+  "counts": {
+   "source_rows": 554,
+   "rows_not_implemented_without_ex_date": 43,
+   "rows_empty_amounts": 0,
+   "rows_other_status_with_ex_date": 0,
+   "rows_implemented_without_ex_date": 1,
+   "rows_outside_panel_or_listing": 144,
+   "groups": 175,
+   "confirmed_3_sources": 32,
+   "confirmed_2_sources": 124,
+   "single_source": 18,
+   "disagreement": 0,
+   "duplicate_rows_in_one_source": 1,
+   "confirmed_by_price_single": 18,
+   "confirmed_by_price_disagreement": 0,
+   "rule2a_no_reference_step": 0,
+   "rule2a_no_matching_source": 0,
+   "rule2a_several_matching_sources": 0,
+   "rule2a_record_date_relation": 0,
+   "rule2a_step_at_resumption": 0,
+   "resolved_by_announcement": 0,
+   "rejected": 0,
+   "record_date_violation": 0,
+   "amount_flagged": 7,
+   "amount_hand_check": 1,
+   "no_step_expected": 0,
+   "matched_same_day": 172,
+   "conflict_a_matched": 3,
+   "conflict_b_pairs": 0,
+   "conflict_b_event_date": 0,
+   "conflict_b_step_date": 0,
+   "conflict_b_undecided_or_pending": 0,
+   "conflict_c_not_booked": 0,
+   "conflict_c_confirmed_by_announcement": 0,
+   "booked_dist_events": 173,
+   "forced_U_events": 2,
+   "rights_rows": 8,
+   "rights_in_table": 8,
+   "rights_undated": 0,
+   "rights_missing_record_date": 0,
+   "steps_total": 181,
+   "steps_explained_by_event": 175,
+   "steps_explained_by_rights": 3,
+   "steps_urs": 1,
+   "steps_urs_after_missing_row": 2,
+   "steps_resolved_explained": 0,
+   "code_change_mapping": "not applied (OA9 table does not exist)",
+   "hand_check_items": 14,
+   "pending_policy": "U"
+  },
+  "by_year_keys": 18,
+  "hand_check_by_kind": {
+   "implemented_without_ex_date": 1,
+   "rights_issue": 8,
+   "amount_inconsistent_with_reference_price": 1,
+   "duplicate_rows_in_one_source": 1,
+   "step_after_a_missing_row": 2,
+   "step_without_event": 1
+  },
+  "urs": 3,
+  "u_spans": 0
+ },
+ "pipeline": {
+  "candidate_filter": {
+   "decision_days": 2916,
+   "days_without_membership": 0,
+   "members_sum": 37312,
+   "candidates_sum": 35990,
+   "removed_listing_age": 0,
+   "removed_suspended": 1320,
+   "removed_no_row": 2,
+   "removed_st_lookback": 0,
+   "nominations_before_filter": 14580,
+   "nominations": 8987,
+   "screen_days": 167,
+   "ever_members": 20
+  },
+  "days": 2917,
+  "nominations": 8987,
+  "order_outcomes": {
+   "buy:filled": 8885,
+   "sell:filled": 8853,
+   "sell:S1": 2665,
+   "buy:S1": 31,
+   "buy:S3": 62,
+   "sell:S3": 108,
+   "buy:S2": 9,
+   "sell:S2": 96
+  },
+  "order_summary": {
+   "S": 8987,
+   "n": 8885,
+   "buy_nonfill": {
+    "S1": 31,
+    "S3": 62,
+    "S2": 9
+   },
+   "unsubmitted": {},
+   "sell_orders": 11722,
+   "sell_fills": 8853,
+   "sell_nonfill": {
+    "S1": 2665,
+    "S3": 108,
+    "S2": 96
+   },
+   "stale_cap_fills": 20,
+   "orders_on_xsrc_rows": 0
+  },
+  "lots_by_status": {
+   "open": 15,
+   "sold": 8870,
+   "cashed_out": 0,
+   "written_off": 0
+  },
+  "ledger_event_counts": {
+   "S-a": 178,
+   "S-b": 44,
+   "S-c": 3,
+   "S-d": 0,
+   "S-e": 0,
+   "U": 0
+  },
+  "ledger_extra_counts": {
+   "unclassifiable_not_booked": 5,
+   "successor_event_on_succession_day": 0,
+   "carry_days": 0,
+   "dist_with_missing_amount": 0,
+   "sell_commission_exceeds_value": 0,
+   "sleeve_days_negative_cash": 0
+  },
+  "labels": {
+   "frozen": 8866,
+   "pending_at_panel_end": 19,
+   "outcome": {
+    "value": 8862,
+    "U": 4,
+    "M": 0
+   },
+   "price_branch": {
+    "P23": 8761,
+    "P4": 0,
+    "P1": 98,
+    "P1R": 3,
+    "cash": 0
+   },
+   "P1_by_spell": {
+    "<=20": 101,
+    "21-60": 0,
+    ">60": 0
+   },
+   "why_U_or_M": {
+    "unexplained reference-price step on 2012-09-11": 1,
+    "unexplained reference-price step on 2017-10-25": 1,
+    "event that cannot be classified, effective 2018-06-07": 1,
+    "event that cannot be classified, effective 2021-08-06": 1
+   },
+   "on_rows_filled_from_xsrc": 0,
+   "M_from_missing_rows": 0
+  },
+  "deadline_labels": {
+   "frozen": 8830,
+   "pending_at_panel_end": 55,
+   "sold_by_deadline": 8786,
+   "certified": 8782,
+   "bracket_open_(lo0_hi1)": 48,
+   "why_not_certified": {
+    "not liquidated by the deadline": 44,
+    "record incomplete": 4
+   }
+  },
+  "monitor_counts_consistent": true,
+  "ledger_flags": {
+   "n": 7,
+   "by_kind": {
+    "no row (treated as suspended)": 2,
+    "not booked": 5
+   },
+   "first": [
+    [
+     "2012-09-10",
+     "sz.302132",
+     "no row (treated as suspended)"
+    ],
+    [
+     "2012-09-10",
+     "sz.001872",
+     "no row (treated as suspended)"
+    ],
+    [
+     "2012-09-11",
+     "sz.302132",
+     "not booked: unexplained reference-price step on 2012-09-11"
+    ],
+    [
+     "2012-09-11",
+     "sz.001872",
+     "not booked: unexplained reference-price step on 2012-09-11"
+    ],
+    [
+     "2017-10-25",
+     "sz.001872",
+     "not booked: unexplained reference-price step on 2017-10-25"
+    ],
+    [
+     "2018-06-07",
+     "sh.601318",
+     "not booked: event that cannot be classified, effective 2018-06-07"
+    ],
+    [
+     "2021-08-06",
+     "sz.002594",
+     "not booked: event that cannot be classified, effective 2021-08-06"
+    ]
+   ]
+  },
+  "trades_on_flagged_days": 11,
+  "K3_closes": 0,
+  "v07_counts": {
+   "stale_cap_fills": 20,
+   "fills_with_fewer_than_20_traded_days_in_the_cap_window": 0,
+   "sell_orders_not_filled_by_the_cap": 108,
+   "no_ref": 0,
+   "unsubmitted_by_reason": {},
+   "labels_M_from_missing_rows": 0,
+   "orders_on_rows_filled_from_xsrc": 0,
+   "cap_zero_sell_orders_not_filled_by_the_cap": 144,
+   "cap_zero_sell_orders_with_cap_exactly_zero": 20,
+   "cap_zero_naive_vs_ledger_rel": 7.450580596923828e-16,
+   "non_netting_days": 1
+  },
+  "turnover_identity_rel": 1.1641532182693481e-17,
+  "cost_total_vs_lot_costs_rel": 0.0,
+  "naive_vs_ledger_rel": 7.823109626770019e-15,
+  "R2_daily_rel": 1.0704806096944417e-15,
+  "R2_cum_rel": 1.563103069202043e-15,
+  "R3_days_over_tolerance": [],
+  "R2_pass": true,
+  "R3_pass": true,
+  "trade_vector_vs_records_rel": 1.4551915228366851e-18,
+  "days_without_order": 0,
+  "days_without_order_but_nonzero_trade_or_cost": 0,
+  "buy_orders_rechecked": 8987,
+  "fill_decision_mismatches": 0,
+  "mismatch_examples": [],
+  "orders_above_exchange_max_size": 0,
+  "dispositions_affected": {
+   "lots_written_off_without_a_row": 0,
+   "by_name": {}
+  }
+ },
+ "sina_single_source": {
+  "events": {
+   "dist_events": 175,
+   "rights_events": 3,
+   "skipped": [],
+   "not_in_table": [
+    "sz.000792 announced 2020-03-25: status implemented but no ex-date"
+   ]
+  },
+  "event_problems": [],
+  "ev4": {
+   "reference_price_steps": 181,
+   "matched_to_a_sina_event_on_the_same_day": 175,
+   "unmatched": [
+    {
+     "code": "sz.302132",
+     "date": "2012-09-11",
+     "prev_close": 13.58,
+     "preclose": 13.97,
+     "prev_row": "2012-09-07"
+    },
+    {
+     "code": "sz.000792",
+     "date": "2008-12-26",
+     "prev_close": 88.12,
+     "preclose": 86.92,
+     "prev_row": "2008-12-25"
+    },
+    {
+     "code": "sz.000792",
+     "date": "2009-07-27",
+     "prev_close": 56.81,
+     "preclose": 55.14,
+     "prev_row": "2009-07-24"
+    },
+    {
+     "code": "sh.601318",
+     "date": "2010-09-02",
+     "prev_close": 46.81,
+     "preclose": 46.51,
+     "prev_row": "2010-09-01"
+    },
+    {
+     "code": "sz.001872",
+     "date": "2012-09-11",
+     "prev_close": 9.07,
+     "preclose": 9.1,
+     "prev_row": "2012-09-07"
+    },
+    {
+     "code": "sz.001872",
+     "date": "2017-10-25",
+     "prev_close": 26.48,
+     "preclose": 26.5,
+     "prev_row": "2017-10-24"
+    }
+   ],
+   "dist_events_without_a_step": [
+    {
+     "code": "sz.000792",
+     "date": "2008-07-14"
+    },
+    {
+     "code": "sz.000792",
+     "date": "2009-06-26"
+    },
+    {
+     "code": "sh.601318",
+     "date": "2010-07-13"
+    }
+   ]
+  }
+ },
+ "pipeline_sina_single_source": {
+  "candidate_filter": {
+   "decision_days": 2916,
+   "days_without_membership": 0,
+   "members_sum": 37312,
+   "candidates_sum": 35990,
+   "removed_listing_age": 0,
+   "removed_suspended": 1320,
+   "removed_no_row": 2,
+   "removed_st_lookback": 0,
+   "nominations_before_filter": 14580,
+   "nominations": 8987,
+   "screen_days": 167,
+   "ever_members": 20
+  },
+  "days": 2917,
+  "nominations": 8987,
+  "order_outcomes": {
+   "buy:filled": 8885,
+   "sell:filled": 8853,
+   "sell:S1": 2665,
+   "buy:S1": 31,
+   "buy:S3": 62,
+   "sell:S3": 108,
+   "buy:S2": 9,
+   "sell:S2": 96
+  },
+  "order_summary": {
+   "S": 8987,
+   "n": 8885,
+   "buy_nonfill": {
+    "S1": 31,
+    "S3": 62,
+    "S2": 9
+   },
+   "unsubmitted": {},
+   "sell_orders": 11722,
+   "sell_fills": 8853,
+   "sell_nonfill": {
+    "S1": 2665,
+    "S3": 108,
+    "S2": 96
+   },
+   "stale_cap_fills": 20,
+   "orders_on_xsrc_rows": 0
+  },
+  "lots_by_status": {
+   "open": 15,
+   "sold": 8870,
+   "cashed_out": 0,
+   "written_off": 0
+  },
+  "ledger_event_counts": {
+   "S-a": 180,
+   "S-b": 44,
+   "S-c": 3,
+   "S-d": 0,
+   "S-e": 0,
+   "U": 0
+  },
+  "ledger_extra_counts": {
+   "unclassifiable_not_booked": 0,
+   "successor_event_on_succession_day": 0,
+   "carry_days": 0,
+   "dist_with_missing_amount": 0,
+   "sell_commission_exceeds_value": 0,
+   "sleeve_days_negative_cash": 0
+  },
+  "labels": {
+   "frozen": 8866,
+   "pending_at_panel_end": 19,
+   "outcome": {
+    "value": 8866,
+    "U": 0,
+    "M": 0
+   },
+   "price_branch": {
+    "P23": 8765,
+    "P4": 0,
+    "P1": 98,
+    "P1R": 3,
+    "cash": 0
+   },
+   "P1_by_spell": {
+    "<=20": 101,
+    "21-60": 0,
+    ">60": 0
+   },
+   "why_U_or_M": {},
+   "on_rows_filled_from_xsrc": 0,
+   "M_from_missing_rows": 0
+  },
+  "deadline_labels": {
+   "frozen": 8830,
+   "pending_at_panel_end": 55,
+   "sold_by_deadline": 8786,
+   "certified": 8786,
+   "bracket_open_(lo0_hi1)": 44,
+   "why_not_certified": {
+    "not liquidated by the deadline": 44
+   }
+  },
+  "monitor_counts_consistent": true,
+  "ledger_flags": {
+   "n": 2,
+   "by_kind": {
+    "no row (treated as suspended)": 2
+   },
+   "first": [
+    [
+     "2012-09-10",
+     "sz.302132",
+     "no row (treated as suspended)"
+    ],
+    [
+     "2012-09-10",
+     "sz.001872",
+     "no row (treated as suspended)"
+    ]
+   ]
+  },
+  "trades_on_flagged_days": 11,
+  "K3_closes": 0,
+  "v07_counts": {
+   "stale_cap_fills": 20,
+   "fills_with_fewer_than_20_traded_days_in_the_cap_window": 0,
+   "sell_orders_not_filled_by_the_cap": 108,
+   "no_ref": 0,
+   "unsubmitted_by_reason": {},
+   "labels_M_from_missing_rows": 0,
+   "orders_on_rows_filled_from_xsrc": 0,
+   "cap_zero_sell_orders_not_filled_by_the_cap": 144,
+   "cap_zero_sell_orders_with_cap_exactly_zero": 20,
+   "cap_zero_naive_vs_ledger_rel": 2.7939677238464356e-15,
+   "non_netting_days": 1
+  },
+  "turnover_identity_rel": 1.1641532182693481e-17,
+  "cost_total_vs_lot_costs_rel": 0.0,
+  "naive_vs_ledger_rel": 4.656612873077393e-15,
+  "R2_daily_rel": 9.98116176406879e-16,
+  "R2_cum_rel": 2.752813088591211e-16,
+  "R3_days_over_tolerance": [],
+  "R2_pass": true,
+  "R3_pass": true,
+  "trade_vector_vs_records_rel": 1.4551915228366851e-18,
+  "days_without_order": 0,
+  "days_without_order_but_nonzero_trade_or_cost": 0,
+  "buy_orders_rechecked": 8987,
+  "fill_decision_mismatches": 0,
+  "mismatch_examples": [],
+  "orders_above_exchange_max_size": 0
+ },
+ "pipeline_merged_provisional": {
+  "candidate_filter": {
+   "decision_days": 2916,
+   "days_without_membership": 0,
+   "members_sum": 37312,
+   "candidates_sum": 35990,
+   "removed_listing_age": 0,
+   "removed_suspended": 1320,
+   "removed_no_row": 2,
+   "removed_st_lookback": 0,
+   "nominations_before_filter": 14580,
+   "nominations": 8987,
+   "screen_days": 167,
+   "ever_members": 20
+  },
+  "days": 2917,
+  "nominations": 8987,
+  "order_outcomes": {
+   "buy:filled": 8885,
+   "sell:filled": 8853,
+   "sell:S1": 2665,
+   "buy:S1": 31,
+   "buy:S3": 62,
+   "sell:S3": 108,
+   "buy:S2": 9,
+   "sell:S2": 96
+  },
+  "order_summary": {
+   "S": 8987,
+   "n": 8885,
+   "buy_nonfill": {
+    "S1": 31,
+    "S3": 62,
+    "S2": 9
+   },
+   "unsubmitted": {},
+   "sell_orders": 11722,
+   "sell_fills": 8853,
+   "sell_nonfill": {
+    "S1": 2665,
+    "S3": 108,
+    "S2": 96
+   },
+   "stale_cap_fills": 20,
+   "orders_on_xsrc_rows": 0
+  },
+  "lots_by_status": {
+   "open": 15,
+   "sold": 8870,
+   "cashed_out": 0,
+   "written_off": 0
+  },
+  "ledger_event_counts": {
+   "S-a": 180,
+   "S-b": 44,
+   "S-c": 3,
+   "S-d": 0,
+   "S-e": 0,
+   "U": 0
+  },
+  "ledger_extra_counts": {
+   "unclassifiable_not_booked": 3,
+   "successor_event_on_succession_day": 0,
+   "carry_days": 0,
+   "dist_with_missing_amount": 0,
+   "sell_commission_exceeds_value": 0,
+   "sleeve_days_negative_cash": 0
+  },
+  "labels": {
+   "frozen": 8866,
+   "pending_at_panel_end": 19,
+   "outcome": {
+    "value": 8864,
+    "U": 2,
+    "M": 0
+   },
+   "price_branch": {
+    "P23": 8763,
+    "P4": 0,
+    "P1": 98,
+    "P1R": 3,
+    "cash": 0
+   },
+   "P1_by_spell": {
+    "<=20": 101,
+    "21-60": 0,
+    ">60": 0
+   },
+   "why_U_or_M": {
+    "unexplained reference-price step on 2012-09-11": 1,
+    "unexplained reference-price step on 2017-10-25": 1
+   },
+   "on_rows_filled_from_xsrc": 0,
+   "M_from_missing_rows": 0
+  },
+  "deadline_labels": {
+   "frozen": 8830,
+   "pending_at_panel_end": 55,
+   "sold_by_deadline": 8786,
+   "certified": 8784,
+   "bracket_open_(lo0_hi1)": 46,
+   "why_not_certified": {
+    "not liquidated by the deadline": 44,
+    "record incomplete": 2
+   }
+  },
+  "monitor_counts_consistent": true,
+  "ledger_flags": {
+   "n": 5,
+   "by_kind": {
+    "no row (treated as suspended)": 2,
+    "not booked": 3
+   },
+   "first": [
+    [
+     "2012-09-10",
+     "sz.302132",
+     "no row (treated as suspended)"
+    ],
+    [
+     "2012-09-10",
+     "sz.001872",
+     "no row (treated as suspended)"
+    ],
+    [
+     "2012-09-11",
+     "sz.302132",
+     "not booked: unexplained reference-price step on 2012-09-11"
+    ],
+    [
+     "2012-09-11",
+     "sz.001872",
+     "not booked: unexplained reference-price step on 2012-09-11"
+    ],
+    [
+     "2017-10-25",
+     "sz.001872",
+     "not booked: unexplained reference-price step on 2017-10-25"
+    ]
+   ]
+  },
+  "trades_on_flagged_days": 11,
+  "K3_closes": 0,
+  "v07_counts": {
+   "stale_cap_fills": 20,
+   "fills_with_fewer_than_20_traded_days_in_the_cap_window": 0,
+   "sell_orders_not_filled_by_the_cap": 108,
+   "no_ref": 0,
+   "unsubmitted_by_reason": {},
+   "labels_M_from_missing_rows": 0,
+   "orders_on_rows_filled_from_xsrc": 0,
+   "cap_zero_sell_orders_not_filled_by_the_cap": 144,
+   "cap_zero_sell_orders_with_cap_exactly_zero": 20,
+   "cap_zero_naive_vs_ledger_rel": 3.725290298461914e-16,
+   "non_netting_days": 1
+  },
+  "turnover_identity_rel": 1.1641532182693481e-17,
+  "cost_total_vs_lot_costs_rel": 0.0,
+  "naive_vs_ledger_rel": 7.823109626770019e-15,
+  "R2_daily_rel": 1.0704806096944417e-15,
+  "R2_cum_rel": 1.4844260931567987e-15,
+  "R3_days_over_tolerance": [],
+  "R2_pass": true,
+  "R3_pass": true,
+  "trade_vector_vs_records_rel": 1.4551915228366851e-18,
+  "days_without_order": 0,
+  "days_without_order_but_nonzero_trade_or_cost": 0,
+  "buy_orders_rechecked": 8987,
+  "fill_decision_mismatches": 0,
+  "mismatch_examples": [],
+  "orders_above_exchange_max_size": 0
+ },
+ "event_table_provisional_counts": {
+  "source_rows": 554,
+  "rows_not_implemented_without_ex_date": 43,
+  "rows_empty_amounts": 0,
+  "rows_other_status_with_ex_date": 0,
+  "rows_implemented_without_ex_date": 1,
+  "rows_outside_panel_or_listing": 144,
+  "groups": 175,
+  "confirmed_3_sources": 32,
+  "confirmed_2_sources": 124,
+  "single_source": 18,
+  "disagreement": 0,
+  "duplicate_rows_in_one_source": 1,
+  "confirmed_by_price_single": 18,
+  "confirmed_by_price_disagreement": 0,
+  "rule2a_no_reference_step": 0,
+  "rule2a_no_matching_source": 0,
+  "rule2a_several_matching_sources": 0,
+  "rule2a_record_date_relation": 0,
+  "rule2a_step_at_resumption": 0,
+  "resolved_by_announcement": 0,
+  "rejected": 0,
+  "record_date_violation": 0,
+  "amount_flagged": 7,
+  "amount_hand_check": 1,
+  "no_step_expected": 0,
+  "matched_same_day": 172,
+  "conflict_a_matched": 3,
+  "conflict_b_pairs": 0,
+  "conflict_b_event_date": 0,
+  "conflict_b_step_date": 0,
+  "conflict_b_undecided_or_pending": 0,
+  "conflict_c_not_booked": 0,
+  "conflict_c_confirmed_by_announcement": 0,
+  "booked_dist_events": 175,
+  "forced_U_events": 0,
+  "rights_rows": 8,
+  "rights_in_table": 8,
+  "rights_undated": 0,
+  "rights_missing_record_date": 0,
+  "steps_total": 181,
+  "steps_explained_by_event": 175,
+  "steps_explained_by_rights": 3,
+  "steps_urs": 1,
+  "steps_urs_after_missing_row": 2,
+  "steps_resolved_explained": 0,
+  "code_change_mapping": "not applied (OA9 table does not exist)",
+  "hand_check_items": 14,
+  "pending_policy": "provisional"
+ },
+ "all_landed_bars": {
+  "files": {
+   "bar_files_found": 1000,
+   "skipped_recently_modified": [],
+   "fresh_minutes": 15
+  },
+  "load_seconds": 52.8,
+  "load": {
+   "names_loaded": 1000,
+   "problems": [],
+   "n_problems": 0,
+   "rows": 2975754,
+   "traded_days": 2836031,
+   "suspended_flag_days": 139722,
+   "empty_volume_rows": 922,
+   "st_days": 199639,
+   "flag_suspended_with_volume": 0,
+   "flag_trading_zero_volume": 1,
+   "traded_open_missing_or_nonpositive": 0,
+   "traded_close_missing_or_nonpositive": 0,
+   "row_preclose_missing_or_nonpositive": 0,
+   "duplicate_dates": 0,
+   "rows_filled_from_xsrc": 0,
+   "names_with_rows_off_calendar": 0,
+   "names_with_missing_days_inside_span": 2,
+   "missing_days_inside_span": 2,
+   "missing_days_examples": [
+    [
+     "sz.001872",
+     [
+      "2012-09-10"
+     ]
+    ],
+    [
+     "sz.302132",
+     [
+      "2012-09-10"
+     ]
+    ]
+   ],
+   "adjustflag_values": [
+    "3"
+   ],
+   "tradestatus_values": [
+    "0",
+    "1"
+   ],
+   "isST_values": [
+    "0",
+    "1"
+   ],
+   "delisted_names": 46,
+   "names_with_rows_on_or_after_outDate": 46,
+   "names_by_board": {
+    "main": 936,
+    "star": 19,
+    "chinext": 45
+   },
+   "unclassifiable_codes": []
+  },
+  "ev4": {
+   "reference_price_steps": 8045,
+   "of_which_after_a_missing_row": 2
+  },
+  "dispositions": {
+   "delisted_names": 46,
+   "no_row": 46,
+   "errors": 0,
+   "fallback_sentence_required": true,
+   "table_problems": [
+    "disposition table not found at C:\\Users\\lijun\\Desktop\\AI-Optimization-Research\\experiments\\data\\manual\\delisting_dispositions.csv: every delisting falls back to class U"
+   ]
+  },
+  "universe": {
+   "N_U=800": {
+    "screen_days": 167,
+    "months_with_membership": 167,
+    "members_min_median_max": [
+     0,
+     782.0,
+     800
+    ],
+    "eligible_min_median_max": [
+     687,
+     782.5,
+     851
+    ],
+    "ever_members": 956,
+    "first_and_last_screen": [
+     {
+      "screen_day": "2008-01-31",
+      "eligible": 0,
+      "members": 0,
+      "note": "fewer than universe_window panel days before the screen day"
+     },
+     {
+      "screen_day": "2021-11-30",
+      "names_with_a_row": 921,
+      "eligible": 840,
+      "members": 800,
+      "excluded_board": 0,
+      "excluded_listing_age": 9,
+      "excluded_inactive": 1,
+      "excluded_st_or_no_row": 71
+     }
+    ]
+   },
+   "N_U=300": {
+    "screen_days": 167,
+    "months_with_membership": 167,
+    "members_min_median_max": [
+     0,
+     300.0,
+     300
+    ],
+    "eligible_min_median_max": [
+     687,
+     782.5,
+     851
+    ],
+    "ever_members": 874,
+    "first_and_last_screen": [
+     {
+      "screen_day": "2008-01-31",
+      "eligible": 0,
+      "members": 0,
+      "note": "fewer than universe_window panel days before the screen day"
+     },
+     {
+      "screen_day": "2021-11-30",
+      "names_with_a_row": 921,
+      "eligible": 840,
+      "members": 300,
+      "excluded_board": 0,
+      "excluded_listing_age": 9,
+      "excluded_inactive": 1,
+      "excluded_st_or_no_row": 71
+     }
+    ],
+    "candidate_counts_first_day_of_month": {
+     "decision_days_sampled": 167,
+     "members": 48600,
+     "candidates": 47535,
+     "removed_listing_age": 0,
+     "removed_suspended": 992,
+     "removed_no_row": 0,
+     "removed_st_lookback": 73
+    }
+   },
+   "truncation_checks": 3,
+   "truncation_failures": []
+  },
+  "universe_seconds": 2.0,
+  "note": "the landed bar files are a part of the market in work-list order; membership counts describe that part only and are not the universe of the plan"
+ },
+ "seconds": 87.2
+}

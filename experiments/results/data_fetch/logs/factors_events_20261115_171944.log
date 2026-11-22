@@ -1,0 +1,39 @@
+2026-11-15 17:19:44 [run] id=factors_events_20261115_171944 stage=factors_events sources=['bs_factor', 'bs_dividend', 'em_fhps', 'sina_dividend', 'sina_rights'] limit=20 codes_file=experiments/results/data_fetch/trial_codes.txt period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\factors_events_20261115_171944.log
+2026-11-15 17:19:44 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=190, progress_units=20, progress_seconds=300.0, resume=True, retry_empty=False, run_id='factors_events_20261115_171944')
+2026-11-15 17:19:44 [start] factors_events: units total=100 already done (verified)=0 to fetch=100
+2026-11-15 17:19:48 [baostock] login ok (login #1)
+2026-11-15 17:20:53 [progress] factors_events: done=20/100 (this run 20: ok=20 empty=0 failed=0; resumed-skip=0) success=100.0% mean=3.5s/unit ETA=4.6min requests this run: baostock=20 http=0 pauses=0
+2026-11-15 17:21:00 [empty] factors_events/bs_dividend/sz.300104: no record returned (zero rows)
+2026-11-15 17:21:08 [empty] factors_events/bs_dividend/sh.600485: no record returned (zero rows)
+2026-11-15 17:21:14 [empty] factors_events/bs_dividend/sz.002450: no record returned (zero rows)
+2026-11-15 17:21:14 [empty] factors_events/bs_dividend/sh.600005: no record returned (zero rows)
+2026-11-15 17:21:35 [empty] factors_events/bs_dividend/sh.688981: no record returned (zero rows)
+2026-11-15 17:21:48 [empty] factors_events/bs_dividend/sh.689009: no record returned (zero rows)
+2026-11-15 17:22:41 [empty] factors_events/bs_dividend/sz.302132: no record returned (zero rows)
+2026-11-15 17:22:53 [empty] factors_events/bs_dividend/sz.000792: no record returned (zero rows)
+2026-11-15 17:24:30 [progress] factors_events: done=40/100 (this run 40: ok=32 empty=8 failed=0; resumed-skip=0) success=100.0% mean=7.1s/unit ETA=7.1min requests this run: baostock=104 http=0 pauses=0
+2026-11-15 17:24:32 [empty] factors_events/em_fhps/sz.300104: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 17:24:35 [empty] factors_events/em_fhps/sh.600485: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 17:24:38 [empty] factors_events/em_fhps/sz.002450: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 17:24:41 [empty] factors_events/em_fhps/sh.600005: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 17:24:48 [empty] factors_events/em_fhps/sh.688981: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 17:25:34 [progress] factors_events: done=60/100 (this run 60: ok=47 empty=13 failed=0; resumed-skip=0) success=100.0% mean=5.8s/unit ETA=3.9min requests this run: baostock=104 http=20 pauses=0
+2026-11-15 17:25:36 [empty] factors_events/sina_rights/sz.300104: no record returned (zero rows)
+2026-11-15 17:25:40 [empty] factors_events/sina_rights/sh.600485: no record returned (zero rows)
+2026-11-15 17:25:43 [empty] factors_events/sina_rights/sz.002450: no record returned (zero rows)
+2026-11-15 17:25:50 [empty] factors_events/sina_rights/sh.688111: no record returned (zero rows)
+2026-11-15 17:25:53 [empty] factors_events/sina_rights/sh.688981: no record returned (zero rows)
+2026-11-15 17:25:56 [empty] factors_events/sina_rights/sh.689009: no record returned (zero rows)
+2026-11-15 17:26:00 [empty] factors_events/sina_rights/sz.300750: no record returned (zero rows)
+2026-11-15 17:26:03 [empty] factors_events/sina_rights/sz.300059: no record returned (zero rows)
+2026-11-15 17:26:07 [empty] factors_events/sina_rights/sz.301001: no record returned (zero rows)
+2026-11-15 17:26:07 [progress] factors_events: done=80/100 (this run 80: ok=58 empty=22 failed=0; resumed-skip=0) success=100.0% mean=4.8s/unit ETA=1.6min requests this run: baostock=104 http=30 pauses=0
+2026-11-15 17:26:10 [empty] factors_events/sina_rights/sz.302132: no record returned (zero rows)
+2026-11-15 17:26:21 [empty] factors_events/sina_rights/sh.600519: no record returned (zero rows)
+2026-11-15 17:26:31 [empty] factors_events/sina_rights/sh.601318: no record returned (zero rows)
+2026-11-15 17:26:34 [empty] factors_events/sina_rights/sz.001872: no record returned (zero rows)
+2026-11-15 17:26:38 [empty] factors_events/sina_rights/sz.002594: no record returned (zero rows)
+2026-11-15 17:26:41 [empty] factors_events/sina_rights/sh.600000: no record returned (zero rows)
+2026-11-15 17:26:41 [progress] factors_events: done=100/100 (this run 100: ok=72 empty=28 failed=0; resumed-skip=0) success=100.0% mean=4.2s/unit ETA=0.0min requests this run: baostock=104 http=40 pauses=0
+2026-11-15 17:26:41 [final] factors_events: done=100/100 (this run 100: ok=72 empty=28 failed=0; resumed-skip=0) success=100.0% mean=4.2s/unit ETA=0.0min requests this run: baostock=104 http=40 pauses=0
+2026-11-15 17:26:43 [exit] code=0

@@ -1,0 +1,245 @@
+{
+ "label": "A:b002@6bdc3fe7d9efdda7b1d1775668a1073561c6feea0765d91363bcadf047368bbb",
+ "decisions": [
+  {
+   "id": "R00041",
+   "d": "include",
+   "code": "INC",
+   "why": "Toxic (informed) flow handling strategy, adverse selection"
+  },
+  {
+   "id": "R00042",
+   "d": "include",
+   "code": "INC",
+   "why": "Kyle model extension, T1"
+  },
+  {
+   "id": "R00043",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Dynamic trading with costs; how-much-to-trade rule, abstract not shown"
+  },
+  {
+   "id": "R00044",
+   "d": "include",
+   "code": "INC",
+   "why": "VPIN order flow toxicity, informed trading proxy"
+  },
+  {
+   "id": "R00045",
+   "d": "include",
+   "code": "INC",
+   "why": "PIN informed trading probability, foundational"
+  },
+  {
+   "id": "R00046",
+   "d": "include",
+   "code": "INC",
+   "why": "Foundational no-trade region under transaction costs"
+  },
+  {
+   "id": "R00047",
+   "d": "include",
+   "code": "INC",
+   "why": "Foundational no-trade interval under transaction costs"
+  },
+  {
+   "id": "R00048",
+   "d": "include",
+   "code": "INC",
+   "why": "Foundational no-trade result under rational expectations"
+  },
+  {
+   "id": "R00049",
+   "d": "include",
+   "code": "INC",
+   "why": "No-trade region comparative statics"
+  },
+  {
+   "id": "R00050",
+   "d": "include",
+   "code": "INC",
+   "why": "Game model of trading with the crowd"
+  },
+  {
+   "id": "R00051",
+   "d": "include",
+   "code": "INC",
+   "why": "Foundational no-trade region analysis"
+  },
+  {
+   "id": "R00052",
+   "d": "include",
+   "code": "INC",
+   "why": "Insider trading model, strategic informed trader"
+  },
+  {
+   "id": "R00053",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Noise trader risk; foundational relevance to other participants uncertain"
+  },
+  {
+   "id": "R00054",
+   "d": "include",
+   "code": "INC",
+   "why": "Foundational no-trade region with transaction costs"
+  },
+  {
+   "id": "R00055",
+   "d": "include",
+   "code": "INC",
+   "why": "CVaR-constrained RL stock trading, downside risk"
+  },
+  {
+   "id": "R00056",
+   "d": "include",
+   "code": "INC",
+   "why": "RL multi-factor dynamic stock trading"
+  },
+  {
+   "id": "R00057",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "RL portfolio China; risk modelling not stated"
+  },
+  {
+   "id": "R00058",
+   "d": "include",
+   "code": "INC",
+   "why": "DQN trading with conflict/cooperative game scenarios"
+  },
+  {
+   "id": "R00059",
+   "d": "include",
+   "code": "INC",
+   "why": "CVaR objective direct RL trading"
+  },
+  {
+   "id": "R00060",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "RL trading library; risk or multi-agent content not stated"
+  },
+  {
+   "id": "R00061",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL dealer market; informed trading not stated"
+  },
+  {
+   "id": "R00062",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "RL stock selection; risk modelling not stated"
+  },
+  {
+   "id": "R00063",
+   "d": "include",
+   "code": "INC",
+   "why": "Risk-constrained RL with CVaR/percentile criteria"
+  },
+  {
+   "id": "R00064",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL market simulation; trading relevance unclear"
+  },
+  {
+   "id": "R00065",
+   "d": "exclude",
+   "code": "E5",
+   "why": "HFT multi-agent RL environment, no informed-trading model"
+  },
+  {
+   "id": "R00066",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent execution environment mentioning Kyle-type models"
+  },
+  {
+   "id": "R00067",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL market making; adverse selection not stated"
+  },
+  {
+   "id": "R00068",
+   "d": "exclude",
+   "code": "E5",
+   "why": "Order book regulation market quality, HFT-specific"
+  },
+  {
+   "id": "R00069",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL quant trading; details not stated"
+  },
+  {
+   "id": "R00070",
+   "d": "exclude",
+   "code": "E5",
+   "why": "Market-maker DQN in simulated order book, no adverse selection"
+  },
+  {
+   "id": "R00071",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "RL in finance survey; may cover risk-aware trading"
+  },
+  {
+   "id": "R00072",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "RL quantitative trading survey; coverage unclear"
+  },
+  {
+   "id": "R00073",
+   "d": "include",
+   "code": "INC",
+   "why": "RL with dynamic convex risk measures"
+  },
+  {
+   "id": "R00074",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Deep RL algorithmic trading review; coverage unclear"
+  },
+  {
+   "id": "R00075",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Deep RL trading survey; coverage unclear"
+  },
+  {
+   "id": "R00076",
+   "d": "include",
+   "code": "INC",
+   "why": "Mean-variance risk-aware RL for investment"
+  },
+  {
+   "id": "R00077",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL price formation; decision relevance unclear"
+  },
+  {
+   "id": "R00078",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL stock trading; fairness focus"
+  },
+  {
+   "id": "R00079",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Robust deep RL trading; risk modelling not stated"
+  },
+  {
+   "id": "R00080",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "RL portfolio management; risk or agents not stated"
+  }
+ ]
+}

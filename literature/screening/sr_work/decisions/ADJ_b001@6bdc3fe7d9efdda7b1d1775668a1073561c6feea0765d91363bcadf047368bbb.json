@@ -1,0 +1,17 @@
+{
+ "label": "ADJ:b001@6bdc3fe7d9efdda7b1d1775668a1073561c6feea0765d91363bcadf047368bbb",
+ "decisions": [
+  {
+   "id": "R00010",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Poker-only, but risk calibration for when to deviate suggests transferable decision-theory link"
+  },
+  {
+   "id": "R00011",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Opponent modeling in imperfect-information games; general game theory, finance link unstated"
+  }
+ ]
+}

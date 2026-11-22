@@ -1,0 +1,288 @@
+{
+ "A1": {
+  "n_delisted_sampled": 33,
+  "bs_with_history": 33,
+  "bs_history_complete_no_missing_days": 33,
+  "bs_last_row_equals_exchange_delist_date": 28,
+  "bs_last_row_minus_delist_caldays_dist": {
+   "-6.0": 1,
+   "-3.0": 1,
+   "-1.0": 3,
+   "0.0": 28
+  },
+  "em_attempted": 0,
+  "em_with_history": 0,
+  "em_not_fetched": 33,
+  "em_last_equals_bs_last_traded": 0,
+  "sina_attempted": 33,
+  "sina_with_history": 33,
+  "sina_complete_vs_bs_traded_days": 33,
+  "sina_last_equals_bs_last_traded": 32,
+  "sina_missing_days_total": 0,
+  "sina_extra_days_total": 2,
+  "tdays_last_trade_to_delist_dist": {
+   "count": 33.0,
+   "mean": 38.57575757575758,
+   "std": 78.97390008059243,
+   "min": 1.0,
+   "25%": 1.0,
+   "50%": 5.0,
+   "75%": 28.0,
+   "max": 270.0
+  }
+ },
+ "A4": {
+  "bs_vs_em": {
+   "stocks": 1,
+   "stock_days": 4534,
+   "open": {
+    "n": 4534,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 0.0
+   },
+   "high": {
+    "n": 4534,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 0.0
+   },
+   "low": {
+    "n": 4534,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 0.0
+   },
+   "close": {
+    "n": 4534,
+    "share_rel<1e-4": 0.999559,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 0.00228832951945081
+   },
+   "volume": {
+    "n": 4534,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 7.3765432043235895e-06
+   },
+   "amount": {
+    "n": 4534,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 5.905632248720663e-08
+   },
+   "turn": {
+    "n": 4534,
+    "share_rel<1e-4": 0.013674,
+    "share_rel<1e-2": 0.558447,
+    "max_rel": 0.10913140311804012
+   }
+  },
+  "bs_vs_sina": {
+   "stocks": 42,
+   "stock_days": 113449,
+   "open": {
+    "n": 113449,
+    "share_rel<1e-4": 0.999991,
+    "share_rel<1e-2": 0.999991,
+    "max_rel": 0.012096774193548309
+   },
+   "high": {
+    "n": 113449,
+    "share_rel<1e-4": 0.999991,
+    "share_rel<1e-2": 0.999991,
+    "max_rel": 0.045362903225806384
+   },
+   "low": {
+    "n": 113449,
+    "share_rel<1e-4": 0.999991,
+    "share_rel<1e-2": 0.999991,
+    "max_rel": 0.012096774193548309
+   },
+   "close": {
+    "n": 113449,
+    "share_rel<1e-4": 0.999806,
+    "share_rel<1e-2": 0.999991,
+    "max_rel": 0.011088709677419298
+   },
+   "volume": {
+    "n": 113449,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 2.8940031376306922e-05
+   },
+   "amount": {
+    "n": 113449,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 4.0570783287136845e-05
+   }
+  },
+  "bs_vs_tx": {
+   "stocks": 4,
+   "stock_days": 1561,
+   "open": {
+    "n": 1561,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 0.0
+   },
+   "high": {
+    "n": 1561,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 0.0
+   },
+   "low": {
+    "n": 1561,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 0.0
+   },
+   "close": {
+    "n": 1561,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 0.0
+   },
+   "volume": {
+    "n": 1561,
+    "share_rel<1e-4": 1.0,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 2.3825268584294917e-08
+   },
+   "amount": {
+    "n": 1561,
+    "share_rel<1e-4": 0.998078,
+    "share_rel<1e-2": 1.0,
+    "max_rel": 0.00022119000221206095
+   }
+  },
+  "n_price_discrepancy_rows_bs_em": 2
+ },
+ "A8_A12": {
+  "stock_days": 210682,
+  "susp_flag": 13997,
+  "zero_vol": 13996,
+  "flag_and_posvol": 2,
+  "noflag_and_zerovol": 1,
+  "susp_open_eq_preclose": 13996,
+  "susp_ohlc_flat": 13995,
+  "susp_rows": 13997,
+  "blank_volume_rows": 1274,
+  "blank_open_rows": 0,
+  "traded": 196686,
+  "open_outside_low_high": 0,
+  "open_missing_traded": 0,
+  "em_rows_on_bs_susp_days": 0,
+  "bs_susp_days_with_em_fetched": 50,
+  "em_zero_vol_rows": 0,
+  "sina_rows_on_bs_susp_days": 3,
+  "bs_susp_days_with_sina": 12561
+ },
+ "A15": {
+  "n_long_suspensions_gt20d": 120,
+  "n_stocks": 46,
+  "carry_changes_within_suspension": 17,
+  "preclose_after_ne_carried_close": 6
+ },
+ "A6": {
+  "days": 210615,
+  "preclose_eq_prev_close": 209965,
+  "preclose_ne_prev_close": 650,
+  "ne_on_bs_factor_date": 511,
+  "ne_not_on_factor_date": 139
+ },
+ "A7": {
+  "days_checked": 196622,
+  "high_above_up": 3,
+  "low_below_down": 10,
+  "close_eq_up": 3611,
+  "close_eq_down": 3142,
+  "open_eq_up": 903,
+  "open_eq_down": 1362,
+  "excluded_first_days": 64,
+  "excluded_resumption_like": 0,
+  "violation_rows": 13,
+  "violation_share": 6.611671125306426e-05
+ },
+ "A19": {
+  "days": 196686,
+  "turn_gt_100pct": 0,
+  "turn_lt_0": 0,
+  "turn_blank_traded": 0,
+  "max_turn": 92.527064
+ },
+ "A10": {
+  "bs_vs_em": {
+   "n": 4534,
+   "share_rel<1%": 0.5584472871636524,
+   "share_within_rounding_or_1%": 0.998014997794442
+  },
+  "bs_implied_float_vs_sina_outstanding": [
+   {
+    "code": "000792",
+    "sina_n": 4052.0,
+    "bs_implied_shares_over_sina_outstanding_median": 1.00000001309882,
+    "share_within_1pct": 0.9990128331688055,
+    "sina_turn_vs_bs_rel_lt_1pct": 0.9990128331688055
+   },
+   {
+    "code": "000002",
+    "sina_n": 4425.0,
+    "bs_implied_shares_over_sina_outstanding_median": 1.0000000012122492,
+    "share_within_1pct": 1.0,
+    "sina_turn_vs_bs_rel_lt_1pct": 1.0
+   },
+   {
+    "code": "600519",
+    "sina_n": 4576.0,
+    "bs_implied_shares_over_sina_outstanding_median": 0.9999999587843016,
+    "share_within_1pct": 0.9993444055944056,
+    "sina_turn_vs_bs_rel_lt_1pct": 0.9993444055944056
+   },
+   {
+    "code": "000651",
+    "sina_n": 4411.0,
+    "bs_implied_shares_over_sina_outstanding_median": 0.9999999595070241,
+    "share_within_1pct": 0.9854908184085241,
+    "sina_turn_vs_bs_rel_lt_1pct": 0.9854908184085241
+   },
+   {
+    "code": "600036",
+    "sina_n": 4557.0,
+    "bs_implied_shares_over_sina_outstanding_median": 1.0000000258890458,
+    "share_within_1pct": 0.9980250164581962,
+    "sina_turn_vs_bs_rel_lt_1pct": 0.9980250164581962
+   },
+   {
+    "code": "601318",
+    "sina_n": 4519.0,
+    "bs_implied_shares_over_sina_outstanding_median": 0.9999999954854047,
+    "share_within_1pct": 0.998008408940031,
+    "sina_turn_vs_bs_rel_lt_1pct": 0.998008408940031
+   },
+   {
+    "code": "300750",
+    "sina_n": 2045.0,
+    "bs_implied_shares_over_sina_outstanding_median": 0.9999999726685468,
+    "share_within_1pct": 0.9784841075794621,
+    "sina_turn_vs_bs_rel_lt_1pct": 0.9784841075794621
+   },
+   {
+    "code": "688111",
+    "sina_n": 1695.0,
+    "bs_implied_shares_over_sina_outstanding_median": 1.000000408109961,
+    "share_within_1pct": 1.0,
+    "sina_turn_vs_bs_rel_lt_1pct": 1.0
+   },
+   {
+    "code": "001872",
+    "sina_n": 1910.0,
+    "bs_implied_shares_over_sina_outstanding_median": 1.0000612231963353,
+    "share_within_1pct": 0.9989528795811519,
+    "sina_turn_vs_bs_rel_lt_1pct": 0.9989528795811519
+   }
+  ]
+ }
+}

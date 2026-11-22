@@ -1,0 +1,25 @@
+{
+ "tool": "sr-screener 1.0.0",
+ "files": [
+  {
+   "file": "candidates_for_screening.csv",
+   "format": "csv",
+   "records": 156,
+   "databases": {
+    "candidates_for_screening": 156
+   }
+  }
+ ],
+ "by_database": {
+  "candidates_for_screening": 156
+ },
+ "raw_total": 156,
+ "unique_total": 156,
+ "duplicates_removed": 0,
+ "no_abstract": 0,
+ "overlap": {
+  "candidates_for_screening": 156
+ },
+ "batches": 4,
+ "max_record_lines": 7
+}

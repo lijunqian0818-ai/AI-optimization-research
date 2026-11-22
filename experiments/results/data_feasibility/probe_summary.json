@@ -1,0 +1,1519 @@
+[
+ {
+  "id": 1,
+  "class": "a",
+  "function": "stock_restricted_release_queue_em",
+  "kwargs": {
+   "symbol": "600000"
+  },
+  "elapsed_s": 1.25,
+  "ok": true,
+  "rows": 4,
+  "columns": [
+   "序号",
+   "解禁时间",
+   "解禁股东数",
+   "解禁数量",
+   "实际解禁数量",
+   "未解禁数量",
+   "实际解禁数量市值",
+   "占总市值比例",
+   "占流通市值比例",
+   "解禁前一交易日收盘价",
+   "限售股类型",
+   "解禁前20日涨跌幅",
+   "解禁后20日涨跌幅"
+  ],
+  "date_ranges": {
+   "解禁时间": [
+    "2010-09-29",
+    "2020-09-04",
+    4
+   ],
+   "解禁前一交易日收盘价": [
+    "1970-01-01",
+    "1970-01-01",
+    4
+   ],
+   "解禁前20日涨跌幅": [
+    "1969-12-31",
+    "1970-01-01",
+    4
+   ],
+   "解禁后20日涨跌幅": [
+    "1969-12-31",
+    "1970-01-01",
+    4
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 2,
+  "class": "a",
+  "function": "stock_restricted_release_queue_em",
+  "kwargs": {
+   "symbol": "300104"
+  },
+  "elapsed_s": 1.03,
+  "ok": true,
+  "rows": 1,
+  "columns": [
+   "序号",
+   "解禁时间",
+   "解禁股东数",
+   "解禁数量",
+   "实际解禁数量",
+   "未解禁数量",
+   "实际解禁数量市值",
+   "占总市值比例",
+   "占流通市值比例",
+   "解禁前一交易日收盘价",
+   "限售股类型",
+   "解禁前20日涨跌幅",
+   "解禁后20日涨跌幅"
+  ],
+  "date_ranges": {
+   "解禁时间": [
+    "2016-07-01",
+    "2016-07-01",
+    1
+   ],
+   "解禁前一交易日收盘价": [
+    "1970-01-01",
+    "1970-01-01",
+    1
+   ],
+   "解禁前20日涨跌幅": [
+    "1970-01-01",
+    "1970-01-01",
+    1
+   ],
+   "解禁后20日涨跌幅": [
+    "1969-12-31",
+    "1969-12-31",
+    1
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 3,
+  "class": "a",
+  "function": "stock_restricted_release_detail_em",
+  "kwargs": {
+   "start_date": "20120104",
+   "end_date": "20120110"
+  },
+  "elapsed_s": 5.88,
+  "ok": true,
+  "rows": 29,
+  "columns": [
+   "序号",
+   "股票代码",
+   "股票简称",
+   "解禁时间",
+   "限售股类型",
+   "解禁数量",
+   "实际解禁数量",
+   "实际解禁市值",
+   "占解禁前流通市值比例",
+   "解禁前一交易日收盘价",
+   "解禁前20日涨跌幅",
+   "解禁后20日涨跌幅"
+  ],
+  "date_ranges": {
+   "解禁时间": [
+    "2012-01-04",
+    "2012-01-10",
+    29
+   ],
+   "解禁前一交易日收盘价": [
+    "1970-01-01",
+    "1970-01-01",
+    29
+   ],
+   "解禁前20日涨跌幅": [
+    "1969-12-31",
+    "1969-12-31",
+    29
+   ],
+   "解禁后20日涨跌幅": [
+    "1969-12-31",
+    "1970-01-01",
+    29
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 4,
+  "class": "a",
+  "function": "stock_restricted_release_queue_sina",
+  "kwargs": {
+   "symbol": "600000"
+  },
+  "elapsed_s": 4.39,
+  "ok": true,
+  "rows": 8,
+  "columns": [
+   "代码",
+   "名称",
+   "解禁日期",
+   "解禁数量",
+   "解禁股流通市值",
+   "上市批次",
+   "公告日期"
+  ],
+  "date_ranges": {
+   "解禁日期": [
+    "2007-05-14",
+    "2020-09-04",
+    8
+   ],
+   "公告日期": [
+    "2006-05-09",
+    "2017-09-06",
+    8
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 5,
+  "class": "a",
+  "function": "stock_restricted_release_stockholder_em",
+  "kwargs": {
+   "symbol": "600000",
+   "date": "20200904"
+  },
+  "elapsed_s": 1.53,
+  "ok": true,
+  "rows": 2,
+  "columns": [
+   "序号",
+   "股东名称",
+   "解禁数量",
+   "实际解禁数量",
+   "解禁市值",
+   "锁定期",
+   "剩余未解禁数量",
+   "限售股类型",
+   "进度"
+  ],
+  "date_ranges": {},
+  "attrs": {}
+ },
+ {
+  "id": 6,
+  "class": "b",
+  "function": "EM_PROBE",
+  "kwargs": {
+   "report": "RPT_SHARE_HOLDER_INCREASE",
+   "sort_col": "END_DATE",
+   "sort_type": "1"
+  },
+  "elapsed_s": 0.91,
+  "ok": true,
+  "rows": 5,
+  "columns": [
+   "CHANGE_NUM",
+   "NOTICE_DATE",
+   "SECURITY_CODE",
+   "HOLDER_NAME",
+   "AFTER_CHANGE_RATE",
+   "CHANGE_NUM_SYMBOL",
+   "CHANGE_RATE",
+   "END_DATE",
+   "CLOSE_PRICE",
+   "AFTER_HOLDER_NUM",
+   "HOLD_RATIO",
+   "TRADE_AVERAGE_PRICE",
+   "FREE_SHARES_RATIO",
+   "FREE_SHARES",
+   "TRADE_DATE",
+   "SECURITY_NAME_ABBR",
+   "DIRECTION",
+   "EITIME",
+   "CHANGE_FREE_RATIO",
+   "START_DATE",
+   "REAL_PRICE",
+   "NEWEST_PRICE",
+   "CHANGE_RATE_QUOTES",
+   "MARKET"
+  ],
+  "date_ranges": {
+   "NOTICE_DATE": [
+    "1994-08-10",
+    "1996-12-04",
+    5
+   ],
+   "END_DATE": [
+    "1994-08-05",
+    "1996-12-03",
+    5
+   ],
+   "TRADE_DATE": [
+    "1994-08-05",
+    "1996-12-03",
+    5
+   ],
+   "EITIME": [
+    "2019-05-17",
+    "2019-05-17",
+    5
+   ],
+   "START_DATE": [
+    "1996-11-21",
+    "1996-11-29",
+    3
+   ]
+  },
+  "attrs": {
+   "total_count": 147458,
+   "pages": 29492,
+   "message": "ok"
+  }
+ },
+ {
+  "id": 7,
+  "class": "b",
+  "function": "EM_PROBE",
+  "kwargs": {
+   "report": "RPT_SHARE_HOLDER_INCREASE",
+   "sort_col": "END_DATE",
+   "sort_type": "-1"
+  },
+  "elapsed_s": 0.83,
+  "ok": true,
+  "rows": 5,
+  "columns": [
+   "CHANGE_NUM",
+   "NOTICE_DATE",
+   "SECURITY_CODE",
+   "HOLDER_NAME",
+   "AFTER_CHANGE_RATE",
+   "CHANGE_NUM_SYMBOL",
+   "CHANGE_RATE",
+   "END_DATE",
+   "CLOSE_PRICE",
+   "AFTER_HOLDER_NUM",
+   "HOLD_RATIO",
+   "TRADE_AVERAGE_PRICE",
+   "FREE_SHARES_RATIO",
+   "FREE_SHARES",
+   "TRADE_DATE",
+   "SECURITY_NAME_ABBR",
+   "DIRECTION",
+   "EITIME",
+   "CHANGE_FREE_RATIO",
+   "START_DATE",
+   "REAL_PRICE",
+   "NEWEST_PRICE",
+   "CHANGE_RATE_QUOTES",
+   "MARKET"
+  ],
+  "date_ranges": {
+   "NOTICE_DATE": [
+    "2026-11-13",
+    "2026-11-14",
+    5
+   ],
+   "END_DATE": [
+    "2026-11-12",
+    "2026-11-13",
+    5
+   ],
+   "TRADE_DATE": [
+    "2026-11-12",
+    "2026-11-13",
+    5
+   ],
+   "EITIME": [
+    "2026-11-12",
+    "2026-11-13",
+    5
+   ],
+   "START_DATE": [
+    "2026-08-13",
+    "2026-11-12",
+    5
+   ]
+  },
+  "attrs": {
+   "total_count": 147458,
+   "pages": 29492,
+   "message": "ok"
+  }
+ },
+ {
+  "id": 8,
+  "class": "b",
+  "function": "EM_PROBE",
+  "kwargs": {
+   "report": "RPT_EXECUTIVE_HOLD_DETAILS",
+   "sort_col": "CHANGE_DATE",
+   "sort_type": "1"
+  },
+  "elapsed_s": 0.79,
+  "ok": true,
+  "rows": 5,
+  "columns": [
+   "SECURITY_CODE",
+   "DERIVE_SECURITY_CODE",
+   "SECURITY_NAME",
+   "CHANGE_DATE",
+   "PERSON_NAME",
+   "CHANGE_SHARES",
+   "AVERAGE_PRICE",
+   "CHANGE_AMOUNT",
+   "CHANGE_REASON",
+   "CHANGE_RATIO",
+   "CHANGE_AFTER_HOLDNUM",
+   "HOLD_TYPE",
+   "DSE_PERSON_NAME",
+   "POSITION_NAME",
+   "PERSON_DSE_RELATION",
+   "ORG_CODE",
+   "GGEID",
+   "BEGIN_HOLD_NUM",
+   "END_HOLD_NUM"
+  ],
+  "date_ranges": {
+   "CHANGE_DATE": [
+    "2004-11-29",
+    "2006-05-26",
+    5
+   ]
+  },
+  "attrs": {
+   "total_count": 173209,
+   "pages": 34642,
+   "message": "ok"
+  }
+ },
+ {
+  "id": 9,
+  "class": "b",
+  "function": "stock_share_hold_change_sse",
+  "kwargs": {
+   "symbol": "600000"
+  },
+  "elapsed_s": 4.03,
+  "ok": true,
+  "rows": 33,
+  "columns": [
+   "公司代码",
+   "公司名称",
+   "姓名",
+   "职务",
+   "股票种类",
+   "货币种类",
+   "本次变动前持股数",
+   "变动数",
+   "本次变动平均价格",
+   "变动后持股数",
+   "变动原因",
+   "变动日期",
+   "填报日期"
+  ],
+  "date_ranges": {
+   "变动日期": [
+    "2018-07-11",
+    "2026-11-03",
+    33
+   ],
+   "填报日期": [
+    "2018-07-12",
+    "2026-11-04",
+    33
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 10,
+  "class": "b",
+  "function": "stock_share_hold_change_szse",
+  "kwargs": {
+   "symbol": "000001"
+  },
+  "ok": false,
+  "elapsed_s": 10.03,
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.szse.cn', port=443): Max retries exceeded with url: /api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1801_cxda&TABKEY=tab1&PAGENO=1&random=0.7874198771222201&txtDMorJC=000001 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szse.cn', port=443) at 0x26fe4f0ad50>, 'Connection to www.szse.cn timed out. (connect timeout=10)'))"
+ },
+ {
+  "id": 11,
+  "class": "b",
+  "function": "stock_shareholder_change_ths",
+  "kwargs": {
+   "symbol": "600000"
+  },
+  "elapsed_s": 2.2,
+  "ok": true,
+  "rows": 103,
+  "columns": [
+   "公告日期",
+   "变动股东",
+   "变动数量",
+   "交易均价",
+   "剩余股份总数",
+   "变动期间",
+   "变动途径"
+  ],
+  "date_ranges": {
+   "公告日期": [
+    "2012-03-20",
+    "2025-03-05",
+    103
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 12,
+  "class": "b",
+  "function": "stock_notice_report",
+  "kwargs": {
+   "symbol": "持股变动",
+   "date": "20150105"
+  },
+  "elapsed_s": 1.52,
+  "ok": true,
+  "rows": 13,
+  "columns": [
+   "代码",
+   "名称",
+   "公告标题",
+   "公告类型",
+   "公告日期",
+   "网址"
+  ],
+  "date_ranges": {
+   "公告日期": [
+    "2015-01-05",
+    "2015-01-05",
+    13
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 13,
+  "class": "c",
+  "function": "stock_lhb_detail_em",
+  "kwargs": {
+   "start_date": "20120104",
+   "end_date": "20120106"
+  },
+  "elapsed_s": 3.14,
+  "ok": true,
+  "rows": 123,
+  "columns": [
+   "序号",
+   "代码",
+   "名称",
+   "上榜日",
+   "解读",
+   "收盘价",
+   "涨跌幅",
+   "龙虎榜净买额",
+   "龙虎榜买入额",
+   "龙虎榜卖出额",
+   "龙虎榜成交额",
+   "市场总成交额",
+   "净买额占总成交比",
+   "成交额占总成交比",
+   "换手率",
+   "流通市值",
+   "上榜原因",
+   "上榜后1日",
+   "上榜后2日",
+   "上榜后5日",
+   "上榜后10日"
+  ],
+  "date_ranges": {
+   "上榜日": [
+    "2012-01-04",
+    "2012-01-06",
+    123
+   ],
+   "上榜后1日": [
+    "1969-12-31",
+    "1970-01-01",
+    123
+   ],
+   "上榜后2日": [
+    "1969-12-31",
+    "1970-01-01",
+    123
+   ],
+   "上榜后5日": [
+    "1969-12-31",
+    "1970-01-01",
+    123
+   ],
+   "上榜后10日": [
+    "1969-12-31",
+    "1970-01-01",
+    123
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 14,
+  "class": "c",
+  "function": "stock_lhb_detail_em",
+  "kwargs": {
+   "start_date": "20240102",
+   "end_date": "20240102"
+  },
+  "elapsed_s": 2.5,
+  "ok": true,
+  "rows": 72,
+  "columns": [
+   "序号",
+   "代码",
+   "名称",
+   "上榜日",
+   "解读",
+   "收盘价",
+   "涨跌幅",
+   "龙虎榜净买额",
+   "龙虎榜买入额",
+   "龙虎榜卖出额",
+   "龙虎榜成交额",
+   "市场总成交额",
+   "净买额占总成交比",
+   "成交额占总成交比",
+   "换手率",
+   "流通市值",
+   "上榜原因",
+   "上榜后1日",
+   "上榜后2日",
+   "上榜后5日",
+   "上榜后10日"
+  ],
+  "date_ranges": {
+   "上榜日": [
+    "2024-01-02",
+    "2024-01-02",
+    72
+   ],
+   "上榜后1日": [
+    "1969-12-31",
+    "1970-01-01",
+    72
+   ],
+   "上榜后2日": [
+    "1969-12-31",
+    "1970-01-01",
+    72
+   ],
+   "上榜后5日": [
+    "1969-12-31",
+    "1970-01-01",
+    72
+   ],
+   "上榜后10日": [
+    "1969-12-31",
+    "1970-01-01",
+    72
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 15,
+  "class": "c",
+  "function": "stock_lhb_stock_detail_date_em",
+  "kwargs": {
+   "symbol": "300104"
+  },
+  "elapsed_s": 1.04,
+  "ok": true,
+  "rows": 144,
+  "columns": [
+   "序号",
+   "股票代码",
+   "交易日"
+  ],
+  "date_ranges": {
+   "交易日": [
+    "2010-08-12",
+    "2020-07-20",
+    144
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 16,
+  "class": "c",
+  "function": "stock_lhb_stock_detail_em",
+  "kwargs": {
+   "symbol": "000788",
+   "date": "20220315",
+   "flag": "买入"
+  },
+  "elapsed_s": 0.97,
+  "ok": true,
+  "rows": 10,
+  "columns": [
+   "序号",
+   "交易营业部名称",
+   "买入金额",
+   "买入金额-占总成交比例",
+   "卖出金额",
+   "卖出金额-占总成交比例",
+   "净额",
+   "类型"
+  ],
+  "date_ranges": {},
+  "attrs": {}
+ },
+ {
+  "id": 17,
+  "class": "c",
+  "function": "stock_lhb_jgmmtj_em",
+  "kwargs": {
+   "start_date": "20120104",
+   "end_date": "20120110"
+  },
+  "elapsed_s": 5.67,
+  "ok": true,
+  "rows": 62,
+  "columns": [
+   "序号",
+   "代码",
+   "名称",
+   "收盘价",
+   "涨跌幅",
+   "买方机构数",
+   "卖方机构数",
+   "机构买入总额",
+   "机构卖出总额",
+   "机构买入净额",
+   "市场总成交额",
+   "机构净买额占总成交额比",
+   "换手率",
+   "流通市值",
+   "上榜原因",
+   "上榜日期"
+  ],
+  "date_ranges": {
+   "上榜日期": [
+    "2012-01-04",
+    "2012-01-10",
+    62
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 18,
+  "class": "d",
+  "function": "stock_margin_detail_sse",
+  "kwargs": {
+   "date": "20120104"
+  },
+  "elapsed_s": 1.78,
+  "ok": true,
+  "rows": 184,
+  "columns": [
+   "信用交易日期",
+   "标的证券代码",
+   "标的证券简称",
+   "融资余额",
+   "融资买入额",
+   "融资偿还额",
+   "融券余量",
+   "融券卖出量",
+   "融券偿还量"
+  ],
+  "date_ranges": {
+   "信用交易日期": [
+    "2012-01-04",
+    "2012-01-04",
+    184
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 19,
+  "class": "d",
+  "function": "stock_margin_detail_szse",
+  "kwargs": {
+   "date": "20120104"
+  },
+  "ok": false,
+  "elapsed_s": 3.64,
+  "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))"
+ },
+ {
+  "id": 20,
+  "class": "d",
+  "function": "stock_margin_detail_sse",
+  "kwargs": {
+   "date": "20240102"
+  },
+  "elapsed_s": 2.89,
+  "ok": true,
+  "rows": 1771,
+  "columns": [
+   "信用交易日期",
+   "标的证券代码",
+   "标的证券简称",
+   "融资余额",
+   "融资买入额",
+   "融资偿还额",
+   "融券余量",
+   "融券卖出量",
+   "融券偿还量"
+  ],
+  "date_ranges": {
+   "信用交易日期": [
+    "2024-01-02",
+    "2024-01-02",
+    1771
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 21,
+  "class": "d",
+  "function": "stock_margin_detail_szse",
+  "kwargs": {
+   "date": "20240102"
+  },
+  "elapsed_s": 7.82,
+  "ok": true,
+  "rows": 1831,
+  "columns": [
+   "证券代码",
+   "证券简称",
+   "融资买入额",
+   "融资余额",
+   "融券卖出量",
+   "融券余量",
+   "融券余额",
+   "融资融券余额"
+  ],
+  "date_ranges": {},
+  "attrs": {}
+ },
+ {
+  "id": 22,
+  "class": "d",
+  "function": "stock_margin_underlying_info_szse",
+  "kwargs": {
+   "date": "20150105"
+  },
+  "elapsed_s": 1.73,
+  "ok": true,
+  "rows": 405,
+  "columns": [
+   "证券代码",
+   "证券简称",
+   "融资标的",
+   "融券标的",
+   "当日可融资",
+   "当日可融券",
+   "融券卖出价格限制"
+  ],
+  "date_ranges": {},
+  "attrs": {}
+ },
+ {
+  "id": 23,
+  "class": "e",
+  "function": "stock_dzjy_mrmx",
+  "kwargs": {
+   "symbol": "A股",
+   "start_date": "20120104",
+   "end_date": "20120106"
+  },
+  "elapsed_s": 7.32,
+  "ok": true,
+  "rows": 27,
+  "columns": [
+   "序号",
+   "交易日期",
+   "证券代码",
+   "证券简称",
+   "涨跌幅",
+   "收盘价",
+   "成交价",
+   "折溢率",
+   "成交量",
+   "成交额",
+   "成交额/流通市值",
+   "买方营业部",
+   "卖方营业部"
+  ],
+  "date_ranges": {
+   "交易日期": [
+    "2012-01-04",
+    "2012-01-06",
+    27
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 24,
+  "class": "e",
+  "function": "stock_dzjy_mrmx",
+  "kwargs": {
+   "symbol": "A股",
+   "start_date": "20240102",
+   "end_date": "20240102"
+  },
+  "elapsed_s": 2.1,
+  "ok": true,
+  "rows": 103,
+  "columns": [
+   "序号",
+   "交易日期",
+   "证券代码",
+   "证券简称",
+   "涨跌幅",
+   "收盘价",
+   "成交价",
+   "折溢率",
+   "成交量",
+   "成交额",
+   "成交额/流通市值",
+   "买方营业部",
+   "卖方营业部"
+  ],
+  "date_ranges": {
+   "交易日期": [
+    "2024-01-02",
+    "2024-01-02",
+    103
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 25,
+  "class": "e",
+  "function": "stock_dzjy_mrtj",
+  "kwargs": {
+   "start_date": "20120104",
+   "end_date": "20120104"
+  },
+  "elapsed_s": 0.88,
+  "ok": true,
+  "rows": 10,
+  "columns": [
+   "序号",
+   "交易日期",
+   "证券代码",
+   "证券简称",
+   "涨跌幅",
+   "收盘价",
+   "成交价",
+   "折溢率",
+   "成交笔数",
+   "成交总量",
+   "成交总额",
+   "成交总额/流通市值"
+  ],
+  "date_ranges": {
+   "交易日期": [
+    "2012-01-04",
+    "2012-01-04",
+    10
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 26,
+  "class": "f",
+  "function": "stock_zh_a_gdhs_detail_em",
+  "kwargs": {
+   "symbol": "000001"
+  },
+  "elapsed_s": 3.35,
+  "ok": true,
+  "rows": 69,
+  "columns": [
+   "股东户数统计截止日",
+   "区间涨跌幅",
+   "股东户数-本次",
+   "股东户数-上次",
+   "股东户数-增减",
+   "股东户数-增减比例",
+   "户均持股市值",
+   "户均持股数量",
+   "总市值",
+   "总股本",
+   "股本变动",
+   "股本变动原因",
+   "股东户数公告日期",
+   "代码",
+   "名称"
+  ],
+  "date_ranges": {
+   "股东户数统计截止日": [
+    "2013-03-01",
+    "2026-09-30",
+    69
+   ],
+   "股东户数公告日期": [
+    "2013-03-08",
+    "2026-10-24",
+    69
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 27,
+  "class": "f",
+  "function": "stock_zh_a_gdhs_detail_em",
+  "kwargs": {
+   "symbol": "300104"
+  },
+  "ok": false,
+  "elapsed_s": 0.71,
+  "error": "TypeError: 'NoneType' object is not subscriptable"
+ },
+ {
+  "id": 28,
+  "class": "f",
+  "function": "stock_zh_a_gdhs",
+  "kwargs": {
+   "symbol": "20120331"
+  },
+  "ok": false,
+  "elapsed_s": 1.04,
+  "error": "TypeError: 'NoneType' object is not subscriptable"
+ },
+ {
+  "id": 29,
+  "class": "f",
+  "function": "stock_hold_num_cninfo",
+  "kwargs": {
+   "date": "20170331"
+  },
+  "elapsed_s": 4.2,
+  "ok": true,
+  "rows": 2962,
+  "columns": [
+   "证券代码",
+   "证券简称",
+   "变动日期",
+   "本期股东人数",
+   "上期股东人数",
+   "股东人数增幅",
+   "本期人均持股数量",
+   "上期人均持股数量",
+   "人均持股数量增幅"
+  ],
+  "date_ranges": {
+   "变动日期": [
+    "2017-03-31",
+    "2017-03-31",
+    2962
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 30,
+  "class": "g",
+  "function": "stock_hsgt_individual_em",
+  "kwargs": {
+   "symbol": "600519"
+  },
+  "elapsed_s": 8.43,
+  "ok": true,
+  "rows": 1683,
+  "columns": [
+   "持股日期",
+   "当日收盘价",
+   "当日涨跌幅",
+   "持股数量",
+   "持股市值",
+   "持股数量占A股百分比",
+   "今日增持股数",
+   "今日增持资金",
+   "今日持股市值变化"
+  ],
+  "date_ranges": {
+   "持股日期": [
+    "2017-03-16",
+    "2024-08-16",
+    1683
+   ],
+   "当日收盘价": [
+    "1970-01-01",
+    "1970-01-01",
+    1683
+   ],
+   "当日涨跌幅": [
+    "1969-12-31",
+    "1970-01-01",
+    1683
+   ],
+   "今日增持股数": [
+    "1969-12-31",
+    "1970-01-01",
+    1682
+   ],
+   "今日增持资金": [
+    "1969-12-31",
+    "1970-01-01",
+    1682
+   ],
+   "今日持股市值变化": [
+    "1969-12-31",
+    "1970-01-01",
+    1682
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 31,
+  "class": "g",
+  "function": "stock_hsgt_individual_detail_em",
+  "kwargs": {
+   "symbol": "600519",
+   "start_date": "20170103",
+   "end_date": "20170110"
+  },
+  "ok": false,
+  "elapsed_s": 4.91,
+  "error": "TypeError: 'NoneType' object is not subscriptable"
+ },
+ {
+  "id": 32,
+  "class": "g",
+  "function": "stock_hsgt_stock_statistics_em",
+  "kwargs": {
+   "symbol": "北向持股",
+   "start_date": "20170315",
+   "end_date": "20170315"
+  },
+  "ok": false,
+  "elapsed_s": 0.31,
+  "error": "APIError: API Error: 东方财富没有返回 北向持股 在 2017-03-15 至 2017-03-15 的数据（上游提示：服务器繁忙）。北向资金自 2024-08-19 起不再披露每日持股，对应的报表已停止服务；南向持股不受影响 (Status code: None)"
+ },
+ {
+  "id": 33,
+  "class": "g",
+  "function": "stock_hsgt_stock_statistics_em",
+  "kwargs": {
+   "symbol": "北向持股",
+   "start_date": "20261110",
+   "end_date": "20261110"
+  },
+  "ok": false,
+  "elapsed_s": 0.84,
+  "error": "APIError: API Error: 东方财富没有返回 北向持股 在 2026-11-10 至 2026-11-10 的数据（上游提示：服务器繁忙）。北向资金自 2024-08-19 起不再披露每日持股，对应的报表已停止服务；南向持股不受影响 (Status code: None)"
+ },
+ {
+  "id": 34,
+  "class": "g",
+  "function": "stock_hsgt_hist_em",
+  "kwargs": {
+   "symbol": "北向资金"
+  },
+  "elapsed_s": 8.11,
+  "ok": true,
+  "rows": 2789,
+  "columns": [
+   "日期",
+   "当日成交净买额",
+   "买入成交额",
+   "卖出成交额",
+   "历史累计净买额",
+   "当日资金流入",
+   "当日余额",
+   "持股市值",
+   "领涨股",
+   "领涨股-涨跌幅",
+   "沪深300",
+   "沪深300-涨跌幅",
+   "领涨股-代码"
+  ],
+  "date_ranges": {
+   "日期": [
+    "2014-11-17",
+    "2026-11-13",
+    2789
+   ],
+   "当日成交净买额": [
+    "1969-12-31",
+    "1970-01-01",
+    2264
+   ],
+   "当日资金流入": [
+    "1969-12-31",
+    "1970-01-01",
+    2266
+   ],
+   "当日余额": [
+    "1970-01-01",
+    "1970-01-01",
+    2264
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 35,
+  "class": "h",
+  "function": "stock_gpzy_pledge_ratio_em",
+  "kwargs": {
+   "date": "20180105"
+  },
+  "elapsed_s": 13.81,
+  "ok": true,
+  "rows": 3226,
+  "columns": [
+   "序号",
+   "股票代码",
+   "股票简称",
+   "交易日期",
+   "所属行业",
+   "质押比例",
+   "质押股数",
+   "质押市值",
+   "质押笔数",
+   "无限售股质押数",
+   "限售股质押数",
+   "近一年涨跌幅",
+   "所属行业代码"
+  ],
+  "date_ranges": {
+   "交易日期": [
+    "2018-01-05",
+    "2018-01-05",
+    3226
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 36,
+  "class": "h",
+  "function": "stock_gpzy_individual_pledge_ratio_detail_em",
+  "kwargs": {
+   "symbol": "300104"
+  },
+  "ok": false,
+  "elapsed_s": 1.59,
+  "error": "TypeError: 'NoneType' object is not subscriptable"
+ },
+ {
+  "id": 37,
+  "class": "h",
+  "function": "stock_jgdy_tj_em",
+  "kwargs": {
+   "date": "20261101"
+  },
+  "elapsed_s": 11.47,
+  "ok": true,
+  "rows": 1251,
+  "columns": [
+   "序号",
+   "代码",
+   "名称",
+   "最新价",
+   "涨跌幅",
+   "接待机构数量",
+   "接待方式",
+   "接待人员",
+   "接待地点",
+   "接待日期",
+   "公告日期"
+  ],
+  "date_ranges": {
+   "接待日期": [
+    "2026-05-13",
+    "2026-11-13",
+    1251
+   ],
+   "公告日期": [
+    "2026-11-02",
+    "2026-11-14",
+    1251
+   ]
+  },
+  "attrs": {}
+ },
+ {
+  "id": 38,
+  "class": "h",
+  "function": "EM_PROBE",
+  "kwargs": {
+   "report": "RPTA_WEB_GETHGLIST_NEW",
+   "sort_col": "DIM_DATE",
+   "sort_type": "1"
+  },
+  "elapsed_s": 1.22,
+  "ok": true,
+  "rows": 5,
+  "columns": [
+   "REPURAMOUNTLIMIT",
+   "REPURAMOUNTLOWER",
+   "REPURCODE",
+   "REPURENDDATE",
+   "REPURNUMCAP",
+   "REPURNUMLOWER",
+   "REPUROBJECTIVE",
+   "REPURPRICECAP",
+   "REPURPRICELOWER",
+   "REPURPROGRESS",
+   "REPURSTARTDATE",
+   "DIM_SCODE",
+   "SECURITYSHORTNAME",
+   "SHARETYPE",
+   "SHMRSLTNOTICEDATE",
+   "UPDATEDATE",
+   "FINISHDATE",
+   "COMPANYCODE",
+   "DIM_DATE",
+   "REMARK",
+   "REPURADVANCEDATE",
+   "DIM_TRADEDATE",
+   "NEWPRICE",
+   "AGSZBHXS",
+   "ZSZ",
+   "CPRICE",
+   "REPORTDATE",
+   "DIM_SCODE2",
+   "COMPANYCODE2",
+   "DIM_DATE3",
+   "NOTICEDATE",
+   "REMARK2",
+   "REPURAMOUNT",
+   "DIM_UCODE",
+   "REPURNUM",
+   "REPURPRICECAP1",
+   "REPURPRICELOWER1",
+   "ZSZXX",
+   "ZSZSX",
+   "LTSZXX",
+   "LTSZSX",
+   "ZJJG",
+   "ZJSL",
+   "ZJJE",
+   "ZJSZBL",
+   "MARKET",
+   "ZJLTBL",
+   "LBRQ",
+   "SFFHSP",
+   "ZGJ",
+   "ZDJ",
+   "SLSX",
+   "SLXX",
+   "JESX",
+   "JEXX",
+   "EDATE",
+   "UPD",
+   "BZ",
+   "JHJG_VAG",
+   "JHSL_VAG",
+   "JHJE_VAG",
+   "HGJG_VAG",
+   "RCHANGE1DCP",
+   "RCHANGE20DCP_CP",
+   "RCHANGE20DC_CP",
+   "RCHANGE20DC",
+   "RCHANGE20DCP",
+   "SECUCODE"
+  ],
+  "date_ranges": {
+   "REPURENDDATE": [
+    "2011-12-01",
+    "2015-08-15",
+    4
+   ],
+   "REPURSTARTDATE": [
+    "2011-02-15",
+    "2012-02-15",
+    4
+   ],
+   "SHMRSLTNOTICEDATE": [
+    "2005-07-29",
+    "2012-02-16",
+    5
+   ],
+   "UPDATEDATE": [
+    "2006-03-02",
+    "2012-08-16",
+    5
+   ],
+   "FINISHDATE": [
+    "2006-03-02",
+    "2015-08-15",
+    5
+   ],
+   "DIM_DATE": [
+    "2005-06-17",
+    "2012-01-31",
+    5
+   ],
+   "REPURADVANCEDATE": [
+    "2011-11-28",
+    "2011-11-28",
+    1
+   ],
+   "DIM_TRADEDATE": [
+    "2005-06-16",
+    "2012-01-30",
+    5
+   ],
+   "REPORTDATE": [
+    "2011-12-31",
+    "2011-12-31",
+    1
+   ],
+   "DIM_DATE3": [
+    "2005-12-31",
+    "2012-08-14",
+    5
+   ],
+   "NOTICEDATE": [
+    "2006-01-05",
+    "2012-08-16",
+    5
+   ],
+   "EDATE": [
+    "2005-12-31",
+    "2012-08-14",
+    5
+   ]
+  },
+  "attrs": {
+   "total_count": 5768,
+   "pages": 1154,
+   "message": "ok"
+  }
+ },
+ {
+  "id": 39,
+  "class": "h",
+  "function": "EM_PROBE",
+  "kwargs": {
+   "report": "RPTA_WEB_GETHGLIST_NEW",
+   "sort_col": "DIM_DATE",
+   "sort_type": "-1"
+  },
+  "elapsed_s": 1.34,
+  "ok": true,
+  "rows": 5,
+  "columns": [
+   "REPURAMOUNTLIMIT",
+   "REPURAMOUNTLOWER",
+   "REPURCODE",
+   "REPURENDDATE",
+   "REPURNUMCAP",
+   "REPURNUMLOWER",
+   "REPUROBJECTIVE",
+   "REPURPRICECAP",
+   "REPURPRICELOWER",
+   "REPURPROGRESS",
+   "REPURSTARTDATE",
+   "DIM_SCODE",
+   "SECURITYSHORTNAME",
+   "SHARETYPE",
+   "SHMRSLTNOTICEDATE",
+   "UPDATEDATE",
+   "FINISHDATE",
+   "COMPANYCODE",
+   "DIM_DATE",
+   "REMARK",
+   "REPURADVANCEDATE",
+   "DIM_TRADEDATE",
+   "NEWPRICE",
+   "AGSZBHXS",
+   "ZSZ",
+   "CPRICE",
+   "REPORTDATE",
+   "DIM_SCODE2",
+   "COMPANYCODE2",
+   "DIM_DATE3",
+   "NOTICEDATE",
+   "REMARK2",
+   "REPURAMOUNT",
+   "DIM_UCODE",
+   "REPURNUM",
+   "REPURPRICECAP1",
+   "REPURPRICELOWER1",
+   "ZSZXX",
+   "ZSZSX",
+   "LTSZXX",
+   "LTSZSX",
+   "ZJJG",
+   "ZJSL",
+   "ZJJE",
+   "ZJSZBL",
+   "MARKET",
+   "ZJLTBL",
+   "LBRQ",
+   "SFFHSP",
+   "ZGJ",
+   "ZDJ",
+   "SLSX",
+   "SLXX",
+   "JESX",
+   "JEXX",
+   "EDATE",
+   "UPD",
+   "BZ",
+   "JHJG_VAG",
+   "JHSL_VAG",
+   "JHJE_VAG",
+   "HGJG_VAG",
+   "RCHANGE1DCP",
+   "RCHANGE20DCP_CP",
+   "RCHANGE20DC_CP",
+   "RCHANGE20DC",
+   "RCHANGE20DCP",
+   "SECUCODE"
+  ],
+  "date_ranges": {
+   "REPURENDDATE": [
+    "2027-02-13",
+    "2027-11-13",
+    2
+   ],
+   "REPURSTARTDATE": [
+    "2026-11-13",
+    "2026-11-13",
+    2
+   ],
+   "UPDATEDATE": [
+    "2026-11-14",
+    "2026-11-14",
+    5
+   ],
+   "DIM_DATE": [
+    "2026-11-14",
+    "2026-11-14",
+    5
+   ],
+   "DIM_TRADEDATE": [
+    "2026-11-13",
+    "2026-11-13",
+    5
+   ]
+  },
+  "attrs": {
+   "total_count": 5768,
+   "pages": 1154,
+   "message": "ok"
+  }
+ }
+]

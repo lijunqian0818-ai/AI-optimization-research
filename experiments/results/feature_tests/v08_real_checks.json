@@ -1,0 +1,12 @@
+{
+ "data_cutoff": "2021-12-31",
+ "names": 20,
+ "rows": 48139,
+ "columns": [
+  "ro_trig_cum3_cnt_1",
+  "ro_trig_cum3_cnt_5",
+  "ro_trig_cum3_cnt_20"
+ ],
+ "bit_identical": true,
+ "mismatching_names": []
+}

@@ -1,0 +1,87 @@
+23:23:04 +      0s run 'smoke' started; data cut-off 2021-12-31; out C:\Users\lijun\AppData\Local\Temp\claude\7dc3241753d402cb\d5862b53-ca29-4bef-8196-d9ed1a8dc7be\scratchpad\cutoff_trees\run_A
+23:23:04 +      0s === stage 1_list
+23:23:04 +      0s list: 100 names, ready 100, skipped 0
+23:23:04 +      0s === stage 1_list done in 0.0 s
+23:23:04 +      0s === stage 2_market
+23:23:16 +     12s === stage 2_market done in 12.1 s
+23:23:16 +     12s === stage 3_panel
+[panel] 100/100 names built, 81s
+23:24:50 +    106s === stage 3_panel done in 93.9 s
+23:24:50 +    106s === stage 4_universe
+23:24:50 +    106s === stage 4_universe done in 0.2 s
+23:24:50 +    106s === stage 5_features
+23:24:57 +    112s === stage 5_features done in 6.2 s
+23:24:57 +    112s === stage 6_base
+23:25:06 +    122s [base lgbm] config 1/2 mean validation RankIC computed
+23:25:30 +    146s [base lgbm] config 2/2 mean validation RankIC computed
+23:26:23 +    199s [base lgbm] seed 0: deployment fits done
+23:27:17 +    253s [base lgbm] seed 1: deployment fits done
+23:28:09 +    305s [base lgbm] seed 2: deployment fits done
+23:28:10 +    306s [base ridge] config 1/2 mean validation RankIC computed
+23:28:11 +    307s [base ridge] config 2/2 mean validation RankIC computed
+23:28:16 +    312s [base ridge] seed 0: deployment fits done
+23:28:29 +    325s === stage 6_base done in 212.1 s
+23:28:29 +    325s === stage 7_standard_orders
+23:28:37 +    333s === stage 7_standard_orders done in 8.5 s
+23:28:37 +    333s === stage 8_gates
+23:28:51 +    347s [gates lgbm] LOSS-LR(-Z): tuned over 2 configurations
+23:29:27 +    383s [gates lgbm] LOSS(-Z): tuned over 2 configurations
+23:30:18 +    434s [gates lgbm] LOSS(+Z_H): tuned over 2 configurations
+23:31:16 +    492s [gates lgbm] LOSS(+Z_O): tuned over 2 configurations
+23:31:52 +    528s [gates lgbm] LOSS(+Z_H+Z_O): tuned over 2 configurations
+23:32:29 +    564s [gates lgbm] LOSS(+perm Z_H): tuned over 2 configurations
+23:33:07 +    603s [gates lgbm] LOSS(+perm Z_O): tuned over 2 configurations
+23:33:41 +    637s [gates lgbm] NET-K(-Z): tuned over 2 configurations
+23:34:24 +    680s [gates lgbm] NET-K(+Z_H): tuned over 2 configurations
+23:34:54 +    709s [gates lgbm] NET-K(+Z_O): tuned over 2 configurations
+23:35:22 +    738s [gates lgbm] NET-U(-Z): tuned over 2 configurations
+23:35:29 +    745s [gates ridge] LOSS-LR(-Z): tuned over 2 configurations
+23:35:58 +    774s [gates ridge] LOSS(-Z): tuned over 2 configurations
+23:36:45 +    821s [gates ridge] LOSS(+Z_H): tuned over 2 configurations
+23:37:47 +    883s [gates ridge] LOSS(+Z_O): tuned over 2 configurations
+23:38:45 +    941s [gates ridge] LOSS(+Z_H+Z_O): tuned over 2 configurations
+23:41:20 +   1096s [gates ridge] LOSS(+perm Z_H): tuned over 2 configurations
+23:42:39 +   1175s [gates ridge] LOSS(+perm Z_O): tuned over 2 configurations
+23:43:44 +   1240s [gates ridge] NET-K(-Z): tuned over 2 configurations
+23:44:46 +   1301s [gates ridge] NET-K(+Z_H): tuned over 2 configurations
+23:45:35 +   1351s [gates ridge] NET-K(+Z_O): tuned over 2 configurations
+23:46:43 +   1419s [gates ridge] NET-U(-Z): tuned over 2 configurations
+23:46:43 +   1419s === stage 8_gates done in 1085.5 s
+23:46:43 +   1419s === stage 9_backtests
+23:47:14 +   1450s main backtests: 108 runs
+23:48:53 +   1549s second-stage backtests: 84 runs
+23:51:03 +   1679s === stage 9_backtests done in 260.6 s
+23:51:03 +   1679s === stage 10_estimands
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  if th.get("days", 0) == 0:
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  if th.get("days", 0) == 0:
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  if th.get("days", 0) == 0:
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  if th.get("days", 0) == 0:
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  if th.get("days", 0) == 0:
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  if th.get("days", 0) == 0:
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  if th.get("days", 0) == 0:
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  if th.get("days", 0) == 0:
+23:51:14 +   1690s ERROR
+Traceback (most recent call last):
+  File "C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py", line 688, in main
+    kw["bases"] = tuple(a.bases.split(","))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py", line 474, in run
+    for cl in set(cell.values()):
+  File "C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py", line 622, in estimates
+    continue
+         ^^^
+  File "C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\engine\attribution.py", line 139, in lemma3
+    for (kg, ig, hG, xG), (kb, ib, hB, xB) in zip(periods_G, periods_B):
+        ^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 4, got 7)
+
+23:51:15 +   1691s run finished: error
+A exit=1

@@ -1,0 +1,38 @@
+13:45:47 +      9s run 'confirm' started; data cut-off 2021-12-31; out C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\confirm\calibration; T = 2; seeds (0,); gate window y1; criterion V
+13:45:47 +      9s === stage 1_list
+13:45:49 +     11s list: 1000 names (frozen list), without bar file 0
+13:45:49 +     11s === stage 1_list done in 1.8 s
+13:45:49 +     11s === stage 2_market
+13:47:34 +    116s === stage 2_market done in 105.7 s
+13:47:34 +    116s === stage 3_panel
+13:47:34 +    116s [panel] provenance check: rebuild
+[panel] 100/1000 names built, 126s
+[panel] 200/1000 names built, 241s
+[panel] 300/1000 names built, 351s
+[panel] 400/1000 names built, 465s
+[panel] 500/1000 names built, 573s
+[panel] 600/1000 names built, 678s
+[panel] 700/1000 names built, 780s
+[panel] 800/1000 names built, 916s
+[panel] 900/1000 names built, 993s
+[panel] 1000/1000 names built, 1051s
+14:05:14 +   1176s === stage 3_panel done in 1059.9 s
+14:05:14 +   1176s === stage 4_universe
+14:05:16 +   1178s === stage 4_universe done in 1.8 s
+14:05:16 +   1178s === stage 5_features
+14:06:48 +   1270s === stage 5_features done in 91.6 s
+14:06:48 +   1270s === stage 6_standard_orders
+14:09:03 +   1405s === stage 6_standard_orders done in 135.5 s
+14:09:03 +   1405s === stage 7_base
+14:11:50 +   1572s [base lgbm] config 1/2 validation criteria computed (193.27 s fit time)
+14:11:50 +   1572s [base lgbm] config 2/2 validation criteria computed (78.31 s fit time)
+14:33:25 +   2867s [base lgbm] configuration 0, seed 0: deployment fits done
+14:36:02 +   3024s [NET-U15] config 1/2 validation criteria computed (192.86 s fit time)
+14:36:02 +   3024s [NET-U15] config 2/2 validation criteria computed (78.73 s fit time)
+14:54:19 +   4121s [NET-U15] configuration 0, seed 0: deployment fits done
+14:54:32 +   4134s === stage 7_base done in 2729.2 s
+14:54:32 +   4134s === stage 8_gates
+14:59:41 +   4443s [gates lgbm] LOSS(-Z): tuned over 2 configurations
+15:11:21 +   5143s [gates lgbm] NET-U(-Z): tuned over 2 configurations
+15:11:21 +   5143s === stage 8_gates done in 1008.9 s
+15:11:23 +   5146s run finished: ok

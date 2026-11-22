@@ -1,0 +1,9 @@
+2026-11-15 17:11:47 [run] id=zo_20261115_171147 stage=zo sources=['lhb_detail', 'lhb_jgmmtj', 'dzjy_mrtj', 'dzjy_mrmx', 'ins_raw'] limit=4 codes_file=- period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\zo_20261115_171147.log
+2026-11-15 17:11:47 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=110, progress_units=5, progress_seconds=300.0, resume=True, retry_empty=False, run_id='zo_20261115_171147')
+2026-11-15 17:11:47 [start] zo: units total=21 already done (verified)=0 to fetch=21
+2026-11-15 17:13:03 [progress] zo: done=5/21 (this run 5: ok=5 empty=0 failed=0; resumed-skip=0) success=100.0% mean=15.3s/unit ETA=4.1min requests this run: baostock=0 http=19 pauses=0
+2026-11-15 17:13:43 [progress] zo: done=10/21 (this run 10: ok=10 empty=0 failed=0; resumed-skip=0) success=100.0% mean=11.6s/unit ETA=2.1min requests this run: baostock=0 http=29 pauses=0
+2026-11-15 17:14:03 [progress] zo: done=15/21 (this run 15: ok=15 empty=0 failed=0; resumed-skip=0) success=100.0% mean=9.1s/unit ETA=0.9min requests this run: baostock=0 http=34 pauses=0
+2026-11-15 17:15:56 [progress] zo: done=20/21 (this run 20: ok=20 empty=0 failed=0; resumed-skip=0) success=100.0% mean=12.5s/unit ETA=0.2min requests this run: baostock=0 http=62 pauses=0
+2026-11-15 17:16:52 [final] zo: done=21/21 (this run 21: ok=21 empty=0 failed=0; resumed-skip=0) success=100.0% mean=14.5s/unit ETA=0.0min requests this run: baostock=0 http=75 pauses=0
+2026-11-15 17:16:52 [exit] code=0

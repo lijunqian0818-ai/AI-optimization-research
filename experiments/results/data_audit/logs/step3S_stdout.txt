@@ -1,0 +1,3 @@
+login success!
+  0%|          | 0/3 [00:00<?, ?it/s]                                     logout success!
+stage S calls used 384

@@ -1,0 +1,33 @@
+# --- 不上传到 GitHub 的内容（太大，或者只属于这台电脑）---
+
+# Python 虚拟环境：新电脑上重新创建（见 新电脑安装说明.md）
+experiments/.venv/
+__pycache__/
+*.pyc
+
+# 实验数据：raw 是下载的原始数据，derived 可由代码从 raw 重新生成
+experiments/data/raw/
+experiments/data/derived/
+
+# 大体积的二进制结果和模型检查点（GitHub 单个文件上限 100 MB）
+*.parquet
+*.pkl
+*.npz
+*.npy
+*.pt
+*.bin
+*.safetensors
+checkpoints/
+
+# 下载的第三方代码、模型、数据集：按 resources/MANIFEST.md 重新下载
+resources/code/
+resources/hf/
+
+# 面板的活动记录（自动生成）
+.dashboard/
+
+# 只属于本机的 Claude 设置
+.claude/settings.local.json
+
+# 论文全文 PDF：有版权，不放进公开仓库。arXiv 的可用 tools/fetch_resource.py 重新下载
+literature/pdfs/*.pdf

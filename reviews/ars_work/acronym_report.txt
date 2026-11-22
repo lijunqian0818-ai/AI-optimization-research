@@ -1,0 +1,109 @@
+### Acronym check (advisory; no reply needed)
+Coverage: body (partial)
+Not in this input: English abstract, Chinese abstract.
+Not checked:
+- Body, line 76: MIT (the initials before its parentheses do not spell it)
+- Body, line 270: EX (the initials before its parentheses do not spell it)
+- Body, line 366: ROC (the initials before its parentheses do not spell it)
+- Body, line 366: STD (the initials before its parentheses do not spell it)
+- Body, line 434: CGO (the initials before its parentheses do not spell it)
+- Body, line 459: OA6 (the initials before its parentheses do not spell it)
+- Body, line 469: OA3 (the initials before its parentheses do not spell it)
+- Body, line 533: LOSS (the initials before its parentheses do not spell it)
+- Body, line 950: OA1 (the initials before its parentheses do not spell it)
+- Body, line 1053: RV9 (the initials before its parentheses do not spell it)
+
+| Scope | Line | Rule | Acronym | Uses |
+|---|---|---|---|---|
+| Body | 9 | Not defined | RQ | 1 |
+| Body | 18 | Not defined | CSA | 2 |
+| Body | 18 | Not defined | RCPS | 2 |
+| Body | 27 | Not defined | ACM | 1 |
+| Body | 27 | Not defined | ICAIF | 1 |
+| Body | 36 | Not defined | OA9 | 1 |
+| Body | 38 | Not defined | GPT | 6 |
+| Body | 39 | Not defined | CERT | 3 |
+| Body | 42 | Not defined | RV1 | 6 |
+| Body | 42 | Not defined | RV13 | 6 |
+| Body | 43 | Not defined | SF | 29 |
+| Body | 56 | Not defined | HOLD | 2 |
+| Body | 56 | Not defined | ON | 2 |
+| Body | 62 | Not defined | CVaR | 3 |
+| Body | 74 | Not defined | ST | 8 |
+| Body | 78 | Not defined | CSDC | 2 |
+| Body | 79 | Not defined | OA5 | 3 |
+| Body | 79 | Not defined | SSE | 2 |
+| Body | 80 | Not defined | JSON | 1 |
+| Body | 88 | Not defined | CSI | 4 |
+| Body | 89 | Not defined | IPO | 1 |
+| Body | 92 | Not defined | NaN | 4 |
+| Body | 115 | Not defined | CSMAR | 1 |
+| Body | 115 | Not defined | RESSET | 1 |
+| Body | 192 | Not defined | RND | 3 |
+| Body | 198 | Not defined | CONF | 12 |
+| Body | 198 | Not defined | LIQ | 3 |
+| Body | 198 | Not defined | LR | 3 |
+| Body | 198 | Not defined | NET | 10 |
+| Body | 198 | Not defined | PERF | 10 |
+| Body | 198 | Not defined | SCORE | 6 |
+| Body | 198 | Not defined | TREND | 4 |
+| Body | 198 | Not defined | VOL | 3 |
+| Body | 198 | Not defined | VT | 6 |
+| Body | 221 | Not defined | AR | 10 |
+| Body | 223 | Not defined | VWAP | 6 |
+| Body | 227 | Not defined | RV6 | 1 |
+| Body | 228 | Not defined | LP | 7 |
+| Body | 230 | Not defined | OA | 5 |
+| Body | 235 | Not defined | RV4 | 1 |
+| Body | 248 | Not defined | RV2 | 1 |
+| Body | 251 | Not defined | RV7 | 1 |
+| Body | 311 | Not defined | RV11 | 1 |
+| Body | 312 | Not defined | RV3 | 1 |
+| Body | 347 | Not defined | RV8 | 1 |
+| Body | 366 | Not defined | BETA | 1 |
+| Body | 366 | Not defined | CNTP | 1 |
+| Body | 366 | Not defined | CORD | 1 |
+| Body | 366 | Not defined | CORR | 1 |
+| Body | 366 | Not defined | KLEN | 1 |
+| Body | 366 | Not defined | KLOW | 1 |
+| Body | 366 | Not defined | KMID | 1 |
+| Body | 366 | Not defined | KUP | 1 |
+| Body | 366 | Not defined | RESI | 1 |
+| Body | 366 | Not defined | RSQR | 1 |
+| Body | 366 | Not defined | RSV | 1 |
+| Body | 366 | Not defined | SUMP | 1 |
+| Body | 366 | Not defined | VMA | 1 |
+| Body | 366 | Not defined | VSTD | 1 |
+| Body | 366 | Not defined | VSUMP | 1 |
+| Body | 366 | Not defined | WVMA | 1 |
+| Body | 369 | Not defined | PB | 1 |
+| Body | 369 | Not defined | PE | 1 |
+| Body | 373 | Not defined | CPU | 5 |
+| Body | 390 | Not defined | RankIC | 2 |
+| Body | 412 | Not defined | RP | 3 |
+| Body | 414 | Not defined | NOT | 5 |
+| Body | 414 | Not defined | THE | 4 |
+| Body | 421 | Not defined | PR | 1 |
+| Body | 426 | Not defined | ATO | 1 |
+| Body | 459 | Not defined | INS | 3 |
+| Body | 468 | Not defined | BLK | 1 |
+| Body | 468 | Not defined | LHB | 1 |
+| Body | 516 | Not defined | ACI | 1 |
+| Body | 516 | Not defined | CRC | 1 |
+| Body | 516 | Not defined | DEUP | 1 |
+| Body | 516 | Not defined | DQN | 1 |
+| Body | 516 | Not defined | ISA | 1 |
+| Body | 516 | Not defined | PPO | 1 |
+| Body | 516 | Not defined | RL | 1 |
+| Body | 516 | Not defined | SGR | 1 |
+| Body | 576 | Not defined | CAGR | 2 |
+| Body | 576 | Not defined | TW | 2 |
+| Body | 643 | Not defined | TOST | 2 |
+| Body | 684 | Not defined | ANOVA | 1 |
+| Body | 702 | Not defined | SPA | 1 |
+| Body | 725 | Not defined | README | 1 |
+| Body | 859 | Not defined | GPU | 2 |
+| Body | 949 | Not defined | PLAN | 1 |
+| Body | 952 | Not defined | ARS | 1 |
+| Body | 1015 | Not defined | MoF | 1 |
+| Body | 1015 | Not defined | SZSE | 1 |

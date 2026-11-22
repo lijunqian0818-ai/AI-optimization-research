@@ -1,0 +1,12 @@
+Collecting baostock
+  Downloading baostock-0.9.4-py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: pandas>=0.18.0 in .\experiments\.venv\Lib\site-packages (from baostock) (3.1.1)
+Requirement already satisfied: numpy>=2.3.3 in .\experiments\.venv\Lib\site-packages (from pandas>=0.18.0->baostock) (2.5.4)
+Requirement already satisfied: python-dateutil>=2.9.0 in .\experiments\.venv\Lib\site-packages (from pandas>=0.18.0->baostock) (4.0.0)
+Requirement already satisfied: tzdata in .\experiments\.venv\Lib\site-packages (from pandas>=0.18.0->baostock) (2026.6)
+Downloading baostock-0.9.4-py3-none-any.whl (52 kB)
+Installing collected packages: baostock
+Successfully installed baostock-0.9.4
+
+[notice] A new release of pip is available: 26.0.1 -> 26.3
+[notice] To update, run: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Scripts\python.exe -m pip install --upgrade pip

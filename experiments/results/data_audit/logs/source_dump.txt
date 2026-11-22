@@ -1,0 +1,3144 @@
+### stock_zh_a_hist_em(symbol: str = '000001', period: str = 'daily', start_date: str = '19700101', end_date: str = '20500101', adjust: str = '') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_hist_em.py
+urls: ['https://push2his.eastmoney.com/api/qt/stock/kline/get', 'https://quote.eastmoney.com/concept/sh603777.html?from=classic']
+def stock_zh_a_hist_em(
+    symbol: str = "000001",
+    period: str = "daily",
+    start_date: str = "19700101",
+    end_date: str = "20500101",
+    adjust: str = "",
+) -> pd.DataFrame:
+    """
+    东方财富网-行情首页-沪深京 A 股-每日行情
+    https://quote.eastmoney.com/concept/sh603777.html?from=classic
+    :param symbol: 股票代码
+    :type symbol: str
+    :param period: choice of {'daily', 'weekly', 'monthly'}
+    :type period: str
+    :param start_date: 开始日期
+    :type start_date: str
+    :param end_date: 结束日期
+    :type end_date: str
+    :param adjust: choice of {"qfq": "前复权", "hfq": "后复权", "": "不复权"}
+    :type adjust: str
+    :return: 每日行情
+    :rtype: pandas.DataFrame
+    """
+    market_code = 1 if symbol.startswith("6") else 0
+    adjust_dict = {"qfq": "1", "hfq": "2", "": "0"}
+    period_dict = {"daily": "101", "weekly": "102", "monthly": "103"}
+    url = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
+    params = {
+        "fields1": "f1,f2,f3,f4,f5,f6",
+        "fields2": "f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61,f116",
+        "ut": "7eea3edcaed734bea9cbfc24409ed989",
+        "klt": period_dict[period],
+        "fqt": adjust_dict[adjust],
+        "secid": f"{market_code}.{symbol}",
+        "beg": start_date,
+        "end": end_date,
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    if not (data_json["data"] and data_json["data"]["klines"]):
+        return pd.DataFrame()
+    temp_df = pd.DataFrame([item.split(",") for item in data_json["data"]["klines"]])
+    temp_df["股票代码"] = symbol
+    temp_df.columns = [
+        "日期",
+        "开盘",
+        "收盘",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "振幅",
+        "涨跌幅",
+        "涨跌额",
+        "换手率",
+        "股票代码",
+    ]
+    temp_df["日期"] = pd.to_datetime(temp_df["日期"], errors="coerce").dt.date
+    temp_df["开盘"] = pd.to_numeric(temp_df["开盘"], errors="coerce")
+    temp_df["收盘"] = pd.to_numeric(temp_df["收盘"], errors="coerce")
+    temp_df["最高"] = pd.to_numeric(temp_df["最高"], errors="coerce")
+    temp_df["最低"] = pd.to_numeric(temp_df["最低"], errors="coerce")
+    temp_df["成交量"] = pd.to_numeric(temp_df["成交量"], errors="coerce")
+    temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
+    temp_df["振幅"] = pd.to_numeric(temp_df["振幅"], errors="coerce")
+    temp_df["涨跌幅"] = pd.to_numeric(temp_df["涨跌幅"], errors="coerce")
+    temp_df["涨跌额"] = pd.to_numeric(temp_df["涨跌额"], errors="coerce")
+    temp_df["换手率"] = pd.to_numeric(temp_df["换手率"], errors="coerce")
+    temp_df = temp_df[
+        [
+            "日期",
+            "股票代码",
+            "开盘",
+            "收盘",
+            "最高",
+            "最低",
+            "成交量",
+            "成交额",
+            "振幅",
+            "涨跌幅",
+            "涨跌额",
+            "换手率",
+        ]
+    ]
+    return temp_df
+
+
+### stock_zh_a_daily_sina(symbol: str = 'sh603843', start_date: str = '19900101', end_date: str = '21000118', adjust: str = '') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py
+urls: ['https://finance.sina.com.cn/realstock/company/sh603843/nc.shtml']
+def stock_zh_a_daily_sina(
+    symbol: str = "sh603843",
+    start_date: str = "19900101",
+    end_date: str = "21000118",
+    adjust: str = "",
+) -> pd.DataFrame:
+    """
+    新浪财经-A 股-个股的历史行情数据，大量抓取容易封 IP
+    https://finance.sina.com.cn/realstock/company/sh603843/nc.shtml
+    :param symbol: sh600000
+    :type symbol: str
+    :param start_date: 20201103；开始日期
+    :type start_date: str
+    :param end_date: 20201103；结束日期
+    :type end_date: str
+    :param adjust: 默认为空：返回不复权的数据；qfq: 返回前复权后的数据；hfq: 返回后复权后的数据；hfq-factor: 返回后复权因子；qfq-factor: 返回前复权因子
+    :type adjust: str
+    :return: 行情数据
+    :rtype: pandas.DataFrame
+    """
+
+    def _fq_factor(method: str) -> pd.DataFrame:
+        if method == "hfq":
+            r = http.get(zh_sina_a_stock_hfq_url.format(symbol))
+            hfq_factor_df = pd.DataFrame(
+                ast.literal_eval(r.text.split("=")[1].split("\n")[0])["data"]
+            )
+            if hfq_factor_df.shape[0] == 0:
+                raise ValueError("sina hfq factor not available")
+            hfq_factor_df.columns = ["date", "hfq_factor"]
+            hfq_factor_df.index = pd.to_datetime(hfq_factor_df.date)
+            del hfq_factor_df["date"]
+            hfq_factor_df = hfq_factor_df.reset_index()
+            return hfq_factor_df
+        else:
+            r = http.get(zh_sina_a_stock_qfq_url.format(symbol))
+            qfq_factor_df = pd.DataFrame(
+                ast.literal_eval(r.text.split("=")[1].split("\n")[0])["data"]
+            )
+            if qfq_factor_df.shape[0] == 0:
+                raise ValueError("sina hfq factor not available")
+            qfq_factor_df.columns = ["date", "qfq_factor"]
+            qfq_factor_df.index = pd.to_datetime(qfq_factor_df.date)
+            del qfq_factor_df["date"]
+            qfq_factor_df = qfq_factor_df.reset_index()
+            return qfq_factor_df
+
+    if adjust in ("hfq-factor", "qfq-factor"):
+        return _fq_factor(adjust.split("-")[0])
+
+    r = http.get(zh_sina_a_stock_hist_url.format(symbol))
+    if r.status_code == 404:
+        raise InvalidParameterError(
+            f"新浪财经没有 {symbol} 的历史行情，请检查股票代码，格式如 sh600000、sz000001、bj920000"
+        )
+    js_code = py_mini_racer.MiniRacer()
+    js_code.eval(hk_js_decode)
+    dict_list = js_code.call(
+        "d", r.text.split("=")[1].split(";")[0].replace('"', "")
+    )  # 执行js解密代码
+    data_df = pd.DataFrame(dict_list)
+    # 与股本、复权因子表一样用不带时区的 Timestamp 作索引；混用 datetime.date 时 pandas 合并会
+    # 发出 Pandas4Warning，pandas 4 起将报错。上游日期形如 1999-11-10T00:00:00.000Z（UTC 零点），
+    # 去掉时区后日期不变。返回前 reset_index 后再转为 date，结果类型不变
+    data_df.index = pd.to_datetime(data_df["date"], errors="coerce").dt.tz_localize(
+        None
+    )
+    del data_df["date"]
+    try:
+        del data_df["prevclose"]
+    except Exception:
+        pass
+    try:
+        del data_df["postVol"]
+        del data_df["postAmt"]
+    except Exception:
+        pass
+    data_df = data_df.astype("float")
+    # 同一日期只保留一行；不能按开高低收量去重，冷门股不同交易日的价量常常完全相同（#7477）
+    data_df = data_df[~data_df.index.duplicated(keep="first")].sort_index()
+    r = http.get(zh_sina_a_stock_amount_url.format(symbol, symbol))
+    # 已退市的股票有历史行情，但股本接口返回 (null)；此时照常返回行情，股本与换手率留空。
+    # 原先直接解析空文本，报出与原因无关的 JSONDecodeError
+    if "[" in r.text:
+        amount_data_json = jsonish.loads(
+            r.text[r.text.find("[") : r.text.rfind("]") + 1]
+        )
+        price_columns = None
+    else:
+        warnings.warn(
+            f"新浪财经没有 {symbol} 的股本数据（通常是已退市的股票），"
+            "outstanding_share 与 turnover 为空"
+        )
+        amount_data_json = []
+        price_columns = ["open", "high", "low", "close", "volume", "amount"]
+    # 上游每条记录为 {"date": ..., "amount": ...}，amount 为股本（万股）
+    amount_data_df = pd.DataFrame(amount_data_json, columns=["date", "amount"]).rename(
+        columns={"amount": "outstanding_share"}
+    )
+    amount_data_df.index = pd.to_datetime(amount_data_df.date)
+    del amount_data_df["date"]
+    # 股本按变动日期记录，对齐到交易日；不再 outer merge，以免带进非交易日的行
+    temp_df = data_df.join(ffill_to_index(amount_data_df, data_df.index))
+    temp_df = temp_df.astype(float)
+    temp_df["outstanding_share"] = temp_df["outstanding_share"] * 10000
+    temp_df["turnover"] = temp_df["volume"] / temp_df["outstanding_share"]
+    temp_df.columns = [
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "amount",
+        "outstanding_share",
+        "turnover",
+    ]
+    if adjust == "":
+        temp_df = temp_df[start_date:end_date]
+        temp_df["open"] = round(temp_df["open"], 2)
+        temp_df["high"] = round(temp_df["high"], 2)
+        temp_df["low"] = round(temp_df["low"], 2)
+        temp_df["close"] = round(temp_df["close"], 2)
+        temp_df = temp_df.dropna(subset=price_columns)
+        temp_df = temp_df.reset_index()
+        temp_df["date"] = pd.to_datetime(temp_df["date"], errors="coerce").dt.date
+        return temp_df
+    if adjust == "hfq":
+        res = http.get(zh_sina_a_stock_hfq_url.format(symbol))
+        hfq_factor_df = pd.DataFrame(
+            ast.literal_eval(res.text.split("=")[1].split("\n")[0])["data"]
+        )
+        hfq_factor_df.columns = ["date", "hfq_factor"]
+        hfq_factor_df.index = pd.to_datetime(hfq_factor_df.date)
+        del hfq_factor_df["date"]
+        temp_df = temp_df.join(ffill_to_index(hfq_factor_df, temp_df.index))
+        temp_df = temp_df.astype(float)
+        temp_df = temp_df.dropna(
+            subset=None if price_columns is None else price_columns + ["hfq_factor"]
+        )
+        temp_df["open"] = temp_df["open"] * temp_df["hfq_factor"]
+        temp_df["high"] = temp_df["high"] * temp_df["hfq_factor"]
+        temp_df["close"] = temp_df["close"] * temp_df["hfq_factor"]
+        temp_df["low"] = temp_df["low"] * temp_df["hfq_factor"]
+        temp_df = temp_df.iloc[:, :-1]
+        temp_df = temp_df[start_date:end_date]
+        temp_df["open"] = round(temp_df["open"], 2)
+        temp_df["high"] = round(temp_df["high"], 2)
+        temp_df["low"] = round(temp_df["low"], 2)
+        temp_df["close"] = round(temp_df["close"], 2)
+        temp_df = temp_df.dropna(subset=price_columns)
+        temp_df = temp_df.reset_index()
+        temp_df["date"] = pd.to_datetime(temp_df["date"], errors="coerce").dt.date
+        return temp_df
+
+    if adjust == "qfq":
+        res = http.get(zh_sina_a_stock_qfq_url.format(symbol))
+        qfq_factor_df = pd.DataFrame(
+            ast.literal_eval(res.text.split("=")[1].split("\n")[0])["data"]
+        )
+        qfq_factor_df.columns = ["date", "qfq_factor"]
+        qfq_factor_df.index = pd.to_datetime(qfq_factor_df.date)
+        del qfq_factor_df["date"]
+        temp_df = temp_df.join(ffill_to_index(qfq_factor_df, temp_df.index))
+        temp_df = temp_df.astype(float)
+        temp_df = temp_df.dropna(
+            subset=None if price_columns is None else price_columns + ["qfq_factor"]
+        )
+        temp_df["open"] = temp_df["open"] / temp_df["qfq_factor"]
+        temp_df["high"] = temp_df["high"] / temp_df["qfq_factor"]
+        temp_df["close"] = temp_df["close"] / temp_df["qfq_factor"]
+        temp_df["low"] = temp_df["low"] / temp_df["qfq_factor"]
+        temp_df = temp_df.iloc[:, :-1]
+        temp_df = temp_df[start_date:end_date]
+        temp_df["open"] = round(temp_df["open"], 2)
+        temp_df["high"] = round(temp_df["high"], 2)
+        temp_df["low"] = round(temp_df["low"], 2)
+        temp_df["close"] = round(temp_df["close"], 2)
+        temp_df = temp_df.dropna(subset=price_columns)
+        temp_df = temp_df.reset_index()
+        temp_df["date"] = pd.to_datetime(temp_df["date"], errors="coerce").dt.date
+        return temp_df
+    return pd.DataFrame()
+
+
+### stock_zh_a_hist_tx(symbol: str = 'sz000001', start_date: str = '19000101', end_date: str = '20500101', adjust: str = '') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_hist_tx.py
+urls: ['https://gu.qq.com/sh000919/zs', 'https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get']
+def stock_zh_a_hist_tx(
+    symbol: str = "sz000001",
+    start_date: str = "19000101",
+    end_date: str = "20500101",
+    adjust: str = "",
+) -> pd.DataFrame:
+    """
+    腾讯证券-日频-股票历史数据
+    https://gu.qq.com/sh000919/zs
+    :param symbol: 带市场标识的股票或者指数代码
+    :type symbol: str
+    :param start_date: 开始日期，格式 YYYYMMDD 或 YYYY-MM-DD
+    :type start_date: str
+    :param end_date: 结束日期，格式 YYYYMMDD 或 YYYY-MM-DD
+    :type end_date: str
+    :param adjust: choice of {"qfq": "前复权", "hfq": "后复权", "": "不复权"}
+    :type adjust: str
+    :return: 历史行情数据，其中 volume 统一为股，amount 统一为元
+    :rtype: pandas.DataFrame
+    """
+    symbol = _normalize_tx_symbol(symbol=symbol)
+    start = _parse_tx_date(value=start_date, name="start_date")
+    end = _parse_tx_date(value=end_date, name="end_date")
+    if start > end:
+        raise InvalidParameterError(
+            f"start_date（{start_date}）不能晚于 end_date（{end_date}）"
+        )
+    init_start = _parse_tx_date(
+        value=get_tx_start_year(symbol=symbol), name="get_tx_start_year"
+    )
+    start = max(start, init_start)
+    url = "https://proxy.finance.qq.com/ifzqgtimg/appstock/app/newfqkline/get"
+    # 每次请求覆盖两个自然年（约 490 个交易日，低于单次 640 条的上限），按两年步进
+    range_end = min(end.year, datetime.date.today().year) + 1
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for year in tqdm(range(start.year, range_end, _TX_YEARS_PER_REQUEST), leave=False):
+        params = {
+            "_var": f"kline_day{adjust}{year}",
+            "param": f"{symbol},day,{year}-01-01,{year + 1}-12-31,640,{adjust}",
+            "r": "0.8205512681390605",
+        }
+        r = http.get(url, params=params)
+        data_text = r.text
+        data_json = jsonish.loads(data_text[data_text.find("={") + 1 :])["data"][symbol]
+        if "day" in data_json.keys():
+            temp_df = pd.DataFrame(data_json["day"])
+        elif "hfqday" in data_json.keys():
+            temp_df = pd.DataFrame(data_json["hfqday"])
+        else:
+            temp_df = pd.DataFrame(data_json["qfqday"])
+        big_df = pd.concat([big_df, temp_df], ignore_index=True)
+    if big_df.empty:
+        return pd.DataFrame(columns=_TX_COLUMNS)
+    big_df = big_df.iloc[:, _TX_KLINE_FIELDS]
+    big_df.columns = _TX_COLUMNS
+    big_df["date"] = pd.to_datetime(big_df["date"], errors="coerce").dt.date
+    big_df["open"] = pd.to_numeric(big_df["open"], errors="coerce")
+    big_df["close"] = pd.to_numeric(big_df["close"], errors="coerce")
+    big_df["high"] = pd.to_numeric(big_df["high"], errors="coerce")
+    big_df["low"] = pd.to_numeric(big_df["low"], errors="coerce")
+    big_df["volume"] = pd.to_numeric(big_df["volume"], errors="coerce")
+    big_df["turnover"] = pd.to_numeric(big_df["turnover"], errors="coerce")
+    big_df["amount"] = pd.to_numeric(big_df["amount"], errors="coerce")
+    big_df["volume"] = big_df["volume"] * _tx_volume_multiplier(symbol)
+    big_df["turnover"] = big_df["turnover"] / 100
+    big_df["amount"] = big_df["amount"] * 10000
+    big_df = big_df.drop_duplicates(ignore_index=True)
+    big_df.index = pd.to_datetime(big_df["date"], errors="coerce")
+    big_df = big_df.sort_index()
+    big_df = big_df[pd.Timestamp(start) : pd.Timestamp(end)]
+    big_df = big_df.reset_index(drop=True)
+    return big_df
+
+
+### stock_info_sh_delist(symbol: str = '全部') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_info.py
+urls: ['https://query.sse.com.cn/commonQuery.do', 'https://www.sse.com.cn/', 'https://www.sse.com.cn/assortment/stock/list/delisting/']
+def stock_info_sh_delist(symbol: str = "全部") -> pd.DataFrame:
+    """
+    上海证券交易所-终止上市公司
+    https://www.sse.com.cn/assortment/stock/list/delisting/
+    :param symbol: choice of {"全部", "沪市", "科创板"}
+    :type symbol: str
+    :return: 终止上市公司
+    :rtype: pandas.DataFrame
+    """
+    symbol_map = {
+        "全部": "1,2,8",
+        "沪市": "1,2",
+        "科创板": "8",
+    }
+    url = "https://query.sse.com.cn/commonQuery.do"
+    headers = {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Cache-Control": "no-cache",
+        "Connection": "keep-alive",
+        "Host": "query.sse.com.cn",
+        "Pragma": "no-cache",
+        "Referer": "https://www.sse.com.cn/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/97.0.4692.71 Safari/537.36",
+    }
+    params = {
+        "sqlId": "COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L",
+        "isPagination": "true",
+        "STOCK_CODE": "",
+        "CSRC_CODE": "",
+        "REG_PROVINCE": "",
+        "STOCK_TYPE": symbol_map[symbol],
+        "COMPANY_STATUS": "3",
+        "type": "inParams",
+        "pageHelp.cacheSize": "1",
+        "pageHelp.beginPage": "1",
+        "pageHelp.pageSize": "500",
+        "pageHelp.pageNo": "1",
+        "pageHelp.endPage": "1",
+    }
+    r = http.get(url, params=params, headers=headers)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["result"])
+    temp_df = temp_df.rename(
+        columns={
+            "COMPANY_ABBR": "公司简称",
+            "DELIST_DATE": "暂停上市日期",
+            "LIST_DATE": "上市日期",
+            "COMPANY_CODE": "公司代码",
+        },
+    )
+    temp_df = temp_df[
+        [
+            "公司代码",
+            "公司简称",
+            "上市日期",
+            "暂停上市日期",
+        ]
+    ]
+    temp_df["上市日期"] = pd.to_datetime(temp_df["上市日期"], errors="coerce").dt.date
+    temp_df["暂停上市日期"] = pd.to_datetime(
+        temp_df["暂停上市日期"], errors="coerce"
+    ).dt.date
+    return temp_df
+
+
+### stock_info_sz_delist(symbol: str = '终止上市公司') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_info.py
+urls: ['https://www.szse.cn/api/report/ShowReport', 'https://www.szse.cn/market/stock/suspend/index.html']
+def stock_info_sz_delist(symbol: str = "终止上市公司") -> pd.DataFrame:
+    """
+    深圳证券交易所-暂停上市公司-终止上市公司
+    https://www.szse.cn/market/stock/suspend/index.html
+    :param symbol: choice of {"暂停上市公司", "终止上市公司"}
+    :type symbol: str
+    :return: 暂停上市公司 or 终止上市公司 的数据
+    :rtype: pandas.DataFrame
+    """
+    indicator_map = {"暂停上市公司": "tab1", "终止上市公司": "tab2"}
+    url = "https://www.szse.cn/api/report/ShowReport"
+    params = {
+        "SHOWTYPE": "xlsx",
+        "CATALOGID": "1793_ssgs",
+        "TABKEY": indicator_map[symbol],
+        "random": "0.6935816432433362",
+    }
+    r = http.get(url, params=params)
+    with warnings.catch_warnings(record=True):
+        warnings.simplefilter("always")
+        temp_df = pd.read_excel(BytesIO(r.content))
+        if temp_df.empty:
+            return pd.DataFrame()
+        temp_df["证券代码"] = temp_df["证券代码"].astype("str").str.zfill(6)
+        temp_df["上市日期"] = pd.to_datetime(temp_df["上市日期"]).dt.date
+        temp_df["终止上市日期"] = pd.to_datetime(temp_df["终止上市日期"]).dt.date
+        return temp_df
+
+
+### stock_zh_a_stop_em() -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_special.py
+urls: ['https://40.push2.eastmoney.com/api/qt/clist/get', 'https://quote.eastmoney.com/center/gridlist.html#staq_net_board']
+def stock_zh_a_stop_em() -> pd.DataFrame:
+    """
+    东方财富网-行情中心-沪深个股-两网及退市
+    https://quote.eastmoney.com/center/gridlist.html#staq_net_board
+    :return: 两网及退市
+    :rtype: pandas.DataFrame
+    """
+    url = "https://40.push2.eastmoney.com/api/qt/clist/get"
+    params = {
+        "pn": "1",
+        "pz": "100",
+        "po": "1",
+        "np": "1",
+        "ut": "bd1d9ddb04089700cf9c27f6f7426281",
+        "fltt": "2",
+        "invt": "2",
+        "fid": "f3",
+        "fs": "m:0 s:3",
+        "fields": "f2,f3,f4,f5,f6,f7,f8,f9,f10,f12,f13,f14,f15,f16,f17,"
+        "f18,f20,f21,f23,f24,f25,f22,f11,f62,f128,f136,f115,f152",
+    }
+    temp_df = fetch_paginated_data(url, params)
+    temp_df.columns = [
+        "序号",
+        "最新价",
+        "涨跌幅",
+        "涨跌额",
+        "成交量",
+        "成交额",
+        "振幅",
+        "换手率",
+        "市盈率-动态",
+        "量比",
+        "_",
+        "代码",
+        "_",
+        "名称",
+        "最高",
+        "最低",
+        "今开",
+        "昨收",
+        "_",
+        "_",
+        "_",
+        "市净率",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+    ]
+    temp_df = temp_df[
+        [
+            "序号",
+            "代码",
+            "名称",
+            "最新价",
+            "涨跌幅",
+            "涨跌额",
+            "成交量",
+            "成交额",
+            "振幅",
+            "最高",
+            "最低",
+            "今开",
+            "昨收",
+            "量比",
+            "换手率",
+            "市盈率-动态",
+            "市净率",
+        ]
+    ]
+    temp_df["最新价"] = pd.to_numeric(temp_df["最新价"], errors="coerce")
+    temp_df["涨跌幅"] = pd.to_numeric(temp_df["涨跌幅"], errors="coerce")
+    temp_df["涨跌额"] = pd.to_numeric(temp_df["涨跌额"], errors="coerce")
+    temp_df["成交量"] = pd.to_numeric(temp_df["成交量"], errors="coerce")
+    temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
+    temp_df["振幅"] = pd.to_numeric(temp_df["振幅"], errors="coerce")
+    temp_df["最高"] = pd.to_numeric(temp_df["最高"], errors="coerce")
+    temp_df["最低"] = pd.to_numeric(temp_df["最低"], errors="coerce")
+    temp_df["今开"] = pd.to_numeric(temp_df["今开"], errors="coerce")
+    temp_df["量比"] = pd.to_numeric(temp_df["量比"], errors="coerce")
+    temp_df["换手率"] = pd.to_numeric(temp_df["换手率"], errors="coerce")
+    return temp_df
+
+
+### stock_zh_a_st_em() -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_special.py
+urls: ['https://40.push2.eastmoney.com/api/qt/clist/get', 'https://quote.eastmoney.com/center/gridlist.html#st_board']
+def stock_zh_a_st_em() -> pd.DataFrame:
+    """
+    东方财富网-行情中心-沪深个股-风险警示板
+    https://quote.eastmoney.com/center/gridlist.html#st_board
+    :return: 风险警示板
+    :rtype: pandas.DataFrame
+    """
+    url = "https://40.push2.eastmoney.com/api/qt/clist/get"
+    params = {
+        "pn": "1",
+        "pz": "100",
+        "po": "1",
+        "np": "1",
+        "ut": "bd1d9ddb04089700cf9c27f6f7426281",
+        "fltt": "2",
+        "invt": "2",
+        "fid": "f3",
+        "fs": "m:0 f:4,m:1 f:4",
+        "fields": "f2,f3,f4,f5,f6,f7,f8,f9,f10,f12,f13,f14,f15,f16,f17,f18,f20,"
+        "f21,f23,f24,f25,f22,f11,f62,f128,f136,f115,f152",
+    }
+    temp_df = fetch_paginated_data(url, params)
+    temp_df.columns = [
+        "序号",
+        "最新价",
+        "涨跌幅",
+        "涨跌额",
+        "成交量",
+        "成交额",
+        "振幅",
+        "换手率",
+        "市盈率-动态",
+        "量比",
+        "_",
+        "代码",
+        "_",
+        "名称",
+        "最高",
+        "最低",
+        "今开",
+        "昨收",
+        "_",
+        "_",
+        "_",
+        "市净率",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+    ]
+    temp_df = temp_df[
+        [
+            "序号",
+            "代码",
+            "名称",
+            "最新价",
+            "涨跌幅",
+            "涨跌额",
+            "成交量",
+            "成交额",
+            "振幅",
+            "最高",
+            "最低",
+            "今开",
+            "昨收",
+            "量比",
+            "换手率",
+            "市盈率-动态",
+            "市净率",
+        ]
+    ]
+    temp_df["最新价"] = pd.to_numeric(temp_df["最新价"], errors="coerce")
+    temp_df["涨跌幅"] = pd.to_numeric(temp_df["涨跌幅"], errors="coerce")
+    temp_df["涨跌额"] = pd.to_numeric(temp_df["涨跌额"], errors="coerce")
+    temp_df["成交量"] = pd.to_numeric(temp_df["成交量"], errors="coerce")
+    temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
+    temp_df["振幅"] = pd.to_numeric(temp_df["振幅"], errors="coerce")
+    temp_df["最高"] = pd.to_numeric(temp_df["最高"], errors="coerce")
+    temp_df["最低"] = pd.to_numeric(temp_df["最低"], errors="coerce")
+    temp_df["今开"] = pd.to_numeric(temp_df["今开"], errors="coerce")
+    temp_df["量比"] = pd.to_numeric(temp_df["量比"], errors="coerce")
+    temp_df["换手率"] = pd.to_numeric(temp_df["换手率"], errors="coerce")
+    return temp_df
+
+
+### stock_tfp_em(date: str = '20240426') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_tfp_em.py
+urls: ['https://data.eastmoney.com/tfpxx/', 'https://datacenter-web.eastmoney.com/api/data/v1/get']
+def stock_tfp_em(date: str = "20240426") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-特色数据-停复牌信息
+    https://data.eastmoney.com/tfpxx/
+    :param date: 查询参数 "20240426"
+    :type date: str
+    :return: 停复牌信息表
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "SUSPEND_START_DATE",
+        "sortTypes": "-1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_CUSTOM_SUSPEND_DATA_INTERFACE",
+        "columns": "ALL",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"""(MARKET="全部")(DATETIME='{"-".join([date[:4], date[4:6], date[6:]])}')""",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    for page in range(1, total_page + 1):
+        params.update({"pageNumber": page})
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+
+    big_df = big_df.reset_index()
+    big_df.columns = [
+        "序号",
+        "代码",
+        "名称",
+        "停牌时间",
+        "停牌截止时间",
+        "停牌期限",
+        "停牌原因",
+        "所属市场",
+        "停牌开始日期",
+        "预计复牌时间",
+        "-",
+        "-",
+        "-",
+    ]
+    big_df = big_df[
+        [
+            "序号",
+            "代码",
+            "名称",
+            "停牌时间",
+            "停牌截止时间",
+            "停牌期限",
+            "停牌原因",
+            "所属市场",
+            "预计复牌时间",
+        ]
+    ]
+    big_df["停牌时间"] = pd.to_datetime(big_df["停牌时间"], errors="coerce").dt.date
+    big_df["停牌截止时间"] = pd.to_datetime(
+        big_df["停牌截止时间"], errors="coerce"
+    ).dt.date
+    big_df["预计复牌时间"] = pd.to_datetime(
+        big_df["预计复牌时间"], errors="coerce"
+    ).dt.date
+    return big_df
+
+
+### index_stock_cons(symbol: str = '399639') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\index\index_cons.py
+urls: ['https://vip.stock.finance.sina.com.cn/corp/go.php/vII_NewestComponent/indexid/{symbol}.phtml', 'https://vip.stock.finance.sina.com.cn/corp/view/vII_NewestComponent.php?page=1&indexid=399639', 'https://vip.stock.finance.sina.com.cn/corp/view/vII_NewestComponent.php?page={page}&indexid={symbol}']
+def index_stock_cons(symbol: str = "399639") -> pd.DataFrame:
+    """
+    最新股票指数的成份股目录
+    https://vip.stock.finance.sina.com.cn/corp/view/vII_NewestComponent.php?page=1&indexid=399639
+    :param symbol: 指数代码，可以通过 ak.index_stock_info() 函数获取
+    :type symbol: str
+    :return: 最新股票指数的成份股目录
+    :rtype: pandas.DataFrame
+    """
+    url = f"https://vip.stock.finance.sina.com.cn/corp/go.php/vII_NewestComponent/indexid/{symbol}.phtml"
+    r = http.get(url)
+    r.encoding = "gb2312"
+    soup = BeautifulSoup(r.text, "lxml")
+    page_num = (
+        soup.find(attrs={"class": "table2"})
+        .find("td")
+        .find_all("a")[-1]["href"]
+        .split("page=")[-1]
+        .split("&")[0]
+    )
+    if page_num == "#":
+        temp_df = pd.read_html(StringIO(r.text), header=0, skiprows=1)[3].iloc[:, :3]
+        temp_df["品种代码"] = temp_df["品种代码"].astype(str).str.zfill(6)
+        return temp_df
+
+    temp_df = pd.DataFrame()
+    for page in range(1, int(page_num) + 1):
+        url = f"https://vip.stock.finance.sina.com.cn/corp/view/vII_NewestComponent.php?page={page}&indexid={symbol}"
+        r = http.get(url)
+        r.encoding = "gb2312"
+        temp_df = pd.concat(
+            objs=[temp_df, pd.read_html(StringIO(r.text), header=1)[3]],
+            ignore_index=True,
+        )
+    temp_df = temp_df.iloc[:, :3]
+    temp_df["品种代码"] = temp_df["品种代码"].astype(str).str.zfill(6)
+    return temp_df
+
+
+### index_stock_cons_csindex(symbol: str = '000300') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\index\index_cons.py
+urls: ['https://oss-ch.csindex.com.cn/static/', 'https://www.csindex.com.cn/zh-CN/indices/index-detail/000300']
+def index_stock_cons_csindex(symbol: str = "000300") -> pd.DataFrame:
+    """
+    中证指数网站-成份股目录
+    https://www.csindex.com.cn/zh-CN/indices/index-detail/000300
+    :param symbol: 指数代码，可以通过 ak.index_stock_info() 函数获取
+    :type symbol: str
+    :return: 最新指数的成份股
+    :rtype: pandas.DataFrame
+    """
+    url = (
+        f"https://oss-ch.csindex.com.cn/static/"
+        f"html/csindex/public/uploads/file/autofile/cons/{symbol}cons.xls"
+    )
+    r = http.get(url)
+    temp_df = pd.read_excel(BytesIO(r.content))
+    temp_df.columns = [
+        "日期",
+        "指数代码",
+        "指数名称",
+        "指数英文名称",
+        "成分券代码",
+        "成分券名称",
+        "成分券英文名称",
+        "交易所",
+        "交易所英文名称",
+    ]
+    temp_df["日期"] = pd.to_datetime(
+        temp_df["日期"], format="%Y%m%d", errors="coerce"
+    ).dt.date
+    temp_df["指数代码"] = temp_df["指数代码"].astype(str).str.zfill(6)
+    temp_df["成分券代码"] = temp_df["成分券代码"].astype(str).str.zfill(6)
+    return temp_df
+
+
+### index_stock_cons_sina(symbol: str = '000300') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\index\index_cons.py
+urls: ['https://vip.stock.finance.sina.com.cn/mkt/#zhishu_000040', 'https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php', 'https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/Market_Center.getHQNodeData', 'https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/Market_Center.getHQNodeDataSimple']
+def index_stock_cons_sina(symbol: str = "000300") -> pd.DataFrame:
+    """
+    新浪新版股票指数成份页面，目前该接口可获取指数数量较少
+    https://vip.stock.finance.sina.com.cn/mkt/#zhishu_000040
+    :param symbol: 指数代码
+    :type symbol: str
+    :return: 指数的成份股
+    :rtype: pandas.DataFrame
+    """
+    if symbol == "000300":
+        symbol = "hs300"
+        url = (
+            "https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php"
+            "/Market_Center.getHQNodeStockCountSimple"
+        )
+        params = {"node": f"{symbol}"}
+        r = http.get(url, params=params)
+        page_num = math.ceil(int(r.json()) / 80) + 1
+        temp_df = pd.DataFrame()
+        for page in range(1, page_num):
+            url = "https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/Market_Center.getHQNodeData"
+            params = {
+                "page": str(page),
+                "num": "80",
+                "sort": "symbol",
+                "asc": "1",
+                "node": "hs300",
+                "symbol": "",
+                "_s_r_a": "init",
+            }
+            r = http.get(url, params=params)
+            temp_df = pd.concat(
+                objs=[temp_df, pd.DataFrame(jsonish.loads(r.text))], ignore_index=True
+            )
+        return temp_df
+
+    url = "https://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/Market_Center.getHQNodeDataSimple"
+    params = {
+        "page": 1,
+        "num": "3000",
+        "sort": "symbol",
+        "asc": "1",
+        "node": f"zhishu_{symbol}",
+        "_s_r_a": "setlen",
+    }
+    r = http.get(url, params=params)
+    temp = pd.DataFrame(jsonish.loads(r.text))
+    return temp
+
+
+### index_stock_cons_weight_csindex(symbol: str = '000300') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\index\index_cons.py
+urls: ['https://oss-ch.csindex.com.cn/static/html/csindex/', 'https://www.csindex.com.cn/zh-CN/indices/index-detail/000300']
+def index_stock_cons_weight_csindex(symbol: str = "000300") -> pd.DataFrame:
+    """
+    中证指数网站-样本权重
+    https://www.csindex.com.cn/zh-CN/indices/index-detail/000300
+    :param symbol: 指数代码，可以通过 ak.index_stock_info() 接口获取
+    :type symbol: str
+    :return: 最新指数的成份股权重
+    :rtype: pandas.DataFrame
+    """
+    url = (
+        f"https://oss-ch.csindex.com.cn/static/html/csindex/"
+        f"public/uploads/file/autofile/closeweight/{symbol}closeweight.xls"
+    )
+    r = http.get(url)
+    temp_df = pd.read_excel(BytesIO(r.content))
+    temp_df.columns = [
+        "日期",
+        "指数代码",
+        "指数名称",
+        "指数英文名称",
+        "成分券代码",
+        "成分券名称",
+        "成分券英文名称",
+        "交易所",
+        "交易所英文名称",
+        "权重",
+    ]
+    temp_df["日期"] = pd.to_datetime(
+        temp_df["日期"], format="%Y%m%d", errors="coerce"
+    ).dt.date
+    temp_df["指数代码"] = temp_df["指数代码"].astype(str).str.zfill(6)
+    temp_df["成分券代码"] = temp_df["成分券代码"].astype(str).str.zfill(6)
+    temp_df["权重"] = pd.to_numeric(temp_df["权重"], errors="coerce")
+    return temp_df
+
+
+### index_stock_info() -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\index\index_cons.py
+urls: ['https://www.joinquant.com/data/dict/indexData']
+def index_stock_info() -> pd.DataFrame:
+    """
+    聚宽-指数数据-指数列表
+    https://www.joinquant.com/data/dict/indexData
+    :return: 指数信息的数据框
+    :rtype: pandas.DataFrame
+    """
+    url = "https://www.joinquant.com/data/dict/indexData"
+    r = http.get(url)
+    r.encoding = "utf-8"
+    index_df = pd.read_html(StringIO(r.text))[0]
+    index_df["指数代码"] = index_df["指数代码"].str.split(".", expand=True)[0]
+    index_df.columns = ["index_code", "display_name", "publish_date", "-", "-"]
+    temp_df = index_df[["index_code", "display_name", "publish_date"]].copy()
+    return temp_df
+
+
+### index_detail_hist_cni(symbol: str = '399001') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\index\index_cni.py
+urls: ['https://www.cnindex.com.cn/module/index-detail.html?act_menu=1&indexCode=399001', 'https://www.cnindex.com.cn/sample-detail/download-history']
+def index_detail_hist_cni(symbol: str = "399001") -> pd.DataFrame:
+    """
+    国证指数-样本详情-历史样本
+    https://www.cnindex.com.cn/module/index-detail.html?act_menu=1&indexCode=399001
+    :param symbol: 指数代码；"399001"
+    :type symbol: str
+    :return: 历史样本
+    :rtype: pandas.DataFrame
+    """
+    url = "https://www.cnindex.com.cn/sample-detail/download-history"
+    params = {"indexcode": symbol}
+    r = http.get(url, params=params)
+    temp_df = pd.read_excel(BytesIO(r.content))
+    temp_df["样本代码"] = temp_df["样本代码"].astype(str).str.zfill(6)
+    temp_df = temp_df.rename(
+        columns={
+            "总市值(亿元)": "总市值",
+            "权重（%）": "权重",
+        }
+    )
+    temp_df = temp_df[["日期", "样本代码", "样本简称", "所属行业", "总市值", "权重"]]
+    temp_df["总市值"] = pd.to_numeric(temp_df["总市值"])
+    temp_df["权重"] = pd.to_numeric(temp_df["权重"])
+    return temp_df
+
+
+### index_detail_cni(symbol: str = '399001') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\index\index_cni.py
+urls: ['https://www.cnindex.com.cn/module/index-detail.html?act_menu=1&indexCode=399001', 'https://www.cnindex.com.cn/sample-detail/download-history']
+def index_detail_cni(symbol: str = "399001") -> pd.DataFrame:
+    """
+    国证指数-样本详情-指定日期的样本成份
+    https://www.cnindex.com.cn/module/index-detail.html?act_menu=1&indexCode=399001
+    :param symbol: 指数代码
+    :type symbol: str
+    :return: 指定日期的样本成份
+    :rtype: pandas.DataFrame
+    """
+    import warnings
+
+    warnings.simplefilter(action="ignore", category=UserWarning)
+    url = "https://www.cnindex.com.cn/sample-detail/download-history"
+    params = {"indexcode": symbol}
+    r = http.get(url, params=params)
+    temp_df = pd.read_excel(BytesIO(r.content))
+    temp_df["样本代码"] = temp_df["样本代码"].astype(str).str.zfill(6)
+    temp_df = temp_df.rename(
+        columns={
+            "总市值(亿元)": "总市值",
+            "权重（%）": "权重",
+        }
+    )
+    temp_df = temp_df[["日期", "样本代码", "样本简称", "所属行业", "总市值", "权重"]]
+    temp_df["总市值"] = pd.to_numeric(temp_df["总市值"], errors="coerce")
+    temp_df["权重"] = pd.to_numeric(temp_df["权重"], errors="coerce")
+    return temp_df
+
+
+### stock_fhps_detail_em(symbol: str = '300073') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_fhps_em.py
+urls: ['https://data.eastmoney.com/yjfp/detail/300073.html', 'https://datacenter-web.eastmoney.com/api/data/v1/get']
+def stock_fhps_detail_em(symbol: str = "300073") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-分红送配-分红送配详情
+    https://data.eastmoney.com/yjfp/detail/300073.html
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 分红送配详情
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "REPORT_DATE",
+        "sortTypes": "-1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_SHAREBONUS_DET",
+        "columns": "ALL",
+        "quoteColumns": "",
+        "js": '{"data":(x),"pages":(tp)}',
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"""(SECURITY_CODE="{symbol}")""",
+    }
+
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_pages = int(data_json["result"]["pages"])
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, total_pages + 1), leave=False):
+        params.update({"pageNumber": page})
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+
+    big_df.columns = [
+        "_",
+        "-",
+        "_",
+        "_",
+        "-",
+        "送转股份-送转总比例",
+        "送转股份-送股比例",
+        "送转股份-转股比例",
+        "现金分红-现金分红比例",
+        "业绩披露日期",
+        "股权登记日",
+        "除权除息日",
+        "报告期",
+        "方案进度",
+        "现金分红-现金分红比例描述",
+        "最新公告日期",
+        "-",
+        "-",
+        "-",
+        "每股收益",
+        "每股净资产",
+        "每股公积金",
+        "每股未分配利润",
+        "净利润同比增长",
+        "总股本",
+        "预案公告日",
+        "现金分红-股息率",
+        "-",
+        "-",
+        "-",
+    ]
+    big_df = big_df[
+        [
+            "报告期",
+            "业绩披露日期",
+            "送转股份-送转总比例",
+            "送转股份-送股比例",
+            "送转股份-转股比例",
+            "现金分红-现金分红比例",
+            "现金分红-现金分红比例描述",
+            "现金分红-股息率",
+            "每股收益",
+            "每股净资产",
+            "每股公积金",
+            "每股未分配利润",
+            "净利润同比增长",
+            "总股本",
+            "预案公告日",
+            "股权登记日",
+            "除权除息日",
+            "方案进度",
+            "最新公告日期",
+        ]
+    ]
+    big_df["报告期"] = pd.to_datetime(big_df["报告期"], errors="coerce").dt.date
+    big_df["业绩披露日期"] = pd.to_datetime(
+        big_df["业绩披露日期"], errors="coerce"
+    ).dt.date
+    big_df["预案公告日"] = pd.to_datetime(big_df["预案公告日"], errors="coerce").dt.date
+    big_df["股权登记日"] = pd.to_datetime(big_df["股权登记日"], errors="coerce").dt.date
+    big_df["除权除息日"] = pd.to_datetime(big_df["除权除息日"], errors="coerce").dt.date
+    big_df["最新公告日期"] = pd.to_datetime(
+        big_df["最新公告日期"], errors="coerce"
+    ).dt.date
+
+    big_df["送转股份-送转总比例"] = pd.to_numeric(
+        big_df["送转股份-送转总比例"], errors="coerce"
+    )
+    big_df["送转股份-送股比例"] = pd.to_numeric(
+        big_df["送转股份-送股比例"], errors="coerce"
+    )
+    big_df["送转股份-转股比例"] = pd.to_numeric(
+        big_df["送转股份-转股比例"], errors="coerce"
+    )
+    big_df["现金分红-现金分红比例"] = pd.to_numeric(
+        big_df["现金分红-现金分红比例"], errors="coerce"
+    )
+    big_df["现金分红-股息率"] = pd.to_numeric(
+        big_df["现金分红-股息率"], errors="coerce"
+    )
+    big_df["每股收益"] = pd.to_numeric(big_df["每股收益"], errors="coerce")
+    big_df["每股净资产"] = pd.to_numeric(big_df["每股净资产"], errors="coerce")
+    big_df["每股公积金"] = pd.to_numeric(big_df["每股公积金"], errors="coerce")
+    big_df["每股未分配利润"] = pd.to_numeric(big_df["每股未分配利润"], errors="coerce")
+    big_df["净利润同比增长"] = pd.to_numeric(big_df["净利润同比增长"], errors="coerce")
+    big_df["总股本"] = pd.to_numeric(big_df["总股本"], errors="coerce")
+    big_df = big_df.sort_values(["报告期"], ignore_index=True)
+    return big_df
+
+
+### stock_fhps_em(date: str = '20231231') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_fhps_em.py
+urls: ['https://data.eastmoney.com/yjfp/', 'https://datacenter-web.eastmoney.com/api/data/v1/get']
+def stock_fhps_em(date: str = "20231231") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-年报季报-分红送配
+    https://data.eastmoney.com/yjfp/
+    :param date: 分红送配报告期
+    :type date: str
+    :return: 分红送配
+    :rtype: pandas.DataFrame
+    """
+    import warnings
+
+    warnings.simplefilter(action="ignore", category=FutureWarning)
+
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "PLAN_NOTICE_DATE",
+        "sortTypes": "-1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_SHAREBONUS_DET",
+        "columns": "ALL",
+        "quoteColumns": "",
+        "js": '{"data":(x),"pages":(tp)}',
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"""(REPORT_DATE='{"-".join([date[:4], date[4:6], date[6:]])}')""",
+    }
+
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_pages = int(data_json["result"]["pages"])
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, total_pages + 1), leave=False):
+        params.update({"pageNumber": page})
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+
+    big_df.columns = [
+        "_",
+        "名称",
+        "_",
+        "_",
+        "代码",
+        "送转股份-送转总比例",
+        "送转股份-送转比例",
+        "送转股份-转股比例",
+        "现金分红-现金分红比例",
+        "预案公告日",
+        "股权登记日",
+        "除权除息日",
+        "_",
+        "方案进度",
+        "_",
+        "最新公告日期",
+        "_",
+        "_",
+        "_",
+        "每股收益",
+        "每股净资产",
+        "每股公积金",
+        "每股未分配利润",
+        "净利润同比增长",
+        "总股本",
+        "_",
+        "现金分红-股息率",
+        "-",
+        "-",
+        "-",
+    ]
+    big_df = big_df[
+        [
+            "代码",
+            "名称",
+            "送转股份-送转总比例",
+            "送转股份-送转比例",
+            "送转股份-转股比例",
+            "现金分红-现金分红比例",
+            "现金分红-股息率",
+            "每股收益",
+            "每股净资产",
+            "每股公积金",
+            "每股未分配利润",
+            "净利润同比增长",
+            "总股本",
+            "预案公告日",
+            "股权登记日",
+            "除权除息日",
+            "方案进度",
+            "最新公告日期",
+        ]
+    ]
+    big_df["送转股份-送转总比例"] = pd.to_numeric(
+        big_df["送转股份-送转总比例"], errors="coerce"
+    )
+    big_df["送转股份-送转比例"] = pd.to_numeric(
+        big_df["送转股份-送转比例"], errors="coerce"
+    )
+    big_df["送转股份-转股比例"] = pd.to_numeric(
+        big_df["送转股份-转股比例"], errors="coerce"
+    )
+    big_df["现金分红-现金分红比例"] = pd.to_numeric(
+        big_df["现金分红-现金分红比例"], errors="coerce"
+    )
+    big_df["现金分红-股息率"] = pd.to_numeric(
+        big_df["现金分红-股息率"], errors="coerce"
+    )
+    big_df["每股收益"] = pd.to_numeric(big_df["每股收益"], errors="coerce")
+    big_df["每股净资产"] = pd.to_numeric(big_df["每股净资产"], errors="coerce")
+    big_df["每股公积金"] = pd.to_numeric(big_df["每股公积金"], errors="coerce")
+    big_df["每股未分配利润"] = pd.to_numeric(big_df["每股未分配利润"], errors="coerce")
+    big_df["净利润同比增长"] = pd.to_numeric(big_df["净利润同比增长"], errors="coerce")
+    big_df["总股本"] = pd.to_numeric(big_df["总股本"], errors="coerce")
+
+    big_df["预案公告日"] = pd.to_datetime(big_df["预案公告日"], errors="coerce").dt.date
+    big_df["股权登记日"] = pd.to_datetime(big_df["股权登记日"], errors="coerce").dt.date
+    big_df["除权除息日"] = pd.to_datetime(big_df["除权除息日"], errors="coerce").dt.date
+    big_df["最新公告日期"] = pd.to_datetime(
+        big_df["最新公告日期"], errors="coerce"
+    ).dt.date
+    big_df = big_df.sort_values(["最新公告日期"], ignore_index=True)
+    return big_df
+
+
+### stock_history_dividend_detail(symbol: str = '000002', indicator: str = '分红', date: str = '') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_finance_sina.py
+urls: ['https://vip.stock.finance.sina.com.cn/corp/go.php/vISSUE_ShareBonus/stockid/300670.phtml', 'https://vip.stock.finance.sina.com.cn/corp/go.php/vISSUE_ShareBonus/stockid/{symbol}.phtml', 'https://vip.stock.finance.sina.com.cn/corp/view/vISSUE_ShareBonusDetail.php']
+def stock_history_dividend_detail(
+    symbol: str = "000002", indicator: str = "分红", date: str = ""
+) -> pd.DataFrame:
+    """
+    新浪财经-发行与分配-分红配股详情
+    https://vip.stock.finance.sina.com.cn/corp/go.php/vISSUE_ShareBonus/stockid/300670.phtml
+    :param indicator: choice of {"分红", "配股"}
+    :type indicator: str
+    :param symbol: 股票代码
+    :type symbol: str
+    :param date: 分红配股的具体日期，e.g., "1994-12-24"
+    :type date: str
+    :return: 指定 indicator, stock, date 的数据
+    :rtype: pandas.DataFrame
+    """
+    if indicator == "分红":
+        url = f"https://vip.stock.finance.sina.com.cn/corp/go.php/vISSUE_ShareBonus/stockid/{symbol}.phtml"
+        r = http.get(url)
+        temp_df = pd.read_html(StringIO(r.text))[12]
+        temp_df.columns = [item[2] for item in temp_df.columns.tolist()]
+        temp_df = temp_df.rename(
+            columns={
+                "送股(股)": "送股",
+                "转增(股)": "转增",
+                "派息(税前)(元)": "派息",
+            }
+        )
+        temp_df = temp_df[
+            [
+                "公告日期",
+                "送股",
+                "转增",
+                "派息",
+                "进度",
+                "除权除息日",
+                "股权登记日",
+                "红股上市日",
+                "查看详细",
+            ]
+        ]
+        del temp_df["查看详细"]
+        if temp_df.iloc[0, 0] == "暂时没有数据！":
+            return pd.DataFrame()
+        temp_df["公告日期"] = pd.to_datetime(
+            temp_df["公告日期"], errors="coerce"
+        ).dt.date
+        temp_df["送股"] = pd.to_numeric(temp_df["送股"], errors="coerce")
+        temp_df["转增"] = pd.to_numeric(temp_df["转增"], errors="coerce")
+        temp_df["派息"] = pd.to_numeric(temp_df["派息"], errors="coerce")
+        temp_df["除权除息日"] = pd.to_datetime(
+            temp_df["除权除息日"], format="%Y-%m-%d", errors="coerce"
+        ).dt.date
+        temp_df["股权登记日"] = pd.to_datetime(
+            temp_df["股权登记日"], format="%Y-%m-%d", errors="coerce"
+        ).dt.date
+        temp_df["红股上市日"] = pd.to_datetime(
+            temp_df["红股上市日"], format="%Y-%m-%d", errors="coerce"
+        ).dt.date
+        if date:
+            url = "https://vip.stock.finance.sina.com.cn/corp/view/vISSUE_ShareBonusDetail.php"
+            params = {
+                "stockid": symbol,
+                "type": "1",
+                "end_date": date,
+            }
+            r = http.get(url, params=params)
+            temp_df = pd.read_html(StringIO(r.text))[12]
+            temp_df.columns = ["item", "value"]
+            return temp_df
+        else:
+            return temp_df
+    else:
+        url = f"https://vip.stock.finance.sina.com.cn/corp/go.php/vISSUE_ShareBonus/stockid/{symbol}.phtml"
+        r = http.get(url)
+        temp_df = pd.read_html(StringIO(r.text))[13]
+        temp_df.columns = [item[1] for item in temp_df.columns.tolist()]
+        temp_df = temp_df.rename(
+            columns={
+                "配股方案(每10股配股股数)": "配股方案",
+                "配股价格(元)": "配股价格",
+                "基准股本(股)": "基准股本",
+                "募集资金合计(元)": "募集资金合计",
+            }
+        )
+        temp_df = temp_df[
+            [
+                "公告日期",
+                "配股方案",
+                "配股价格",
+                "基准股本",
+                "除权日",
+                "股权登记日",
+                "缴款起始日",
+                "缴款终止日",
+                "配股上市日",
+                "募集资金合计",
+                "查看详细",
+            ]
+        ]
+        del temp_df["查看详细"]
+        if temp_df.iloc[0, 0] == "暂时没有数据！":
+            return pd.DataFrame()
+        temp_df["公告日期"] = pd.to_datetime(
+            temp_df["公告日期"], errors="coerce"
+        ).dt.date
+        temp_df["配股方案"] = pd.to_numeric(temp_df["配股方案"], errors="coerce")
+        temp_df["配股价格"] = pd.to_numeric(temp_df["配股价格"], errors="coerce")
+        temp_df["基准股本"] = pd.to_numeric(temp_df["基准股本"], errors="coerce")
+        temp_df["募集资金合计"] = pd.to_numeric(
+            temp_df["募集资金合计"], errors="coerce"
+        )
+        temp_df["除权日"] = pd.to_datetime(
+            temp_df["除权日"], format="%Y-%m-%d", errors="coerce"
+        ).dt.date
+        temp_df["股权登记日"] = pd.to_datetime(
+            temp_df["股权登记日"], format="%Y-%m-%d", errors="coerce"
+        ).dt.date
+        temp_df["缴款起始日"] = pd.to_datetime(
+            temp_df["缴款起始日"], format="%Y-%m-%d", errors="coerce"
+        ).dt.date
+        temp_df["缴款终止日"] = pd.to_datetime(
+            temp_df["缴款终止日"], format="%Y-%m-%d", errors="coerce"
+        ).dt.date
+        temp_df["配股上市日"] = pd.to_datetime(
+            temp_df["配股上市日"], format="%Y-%m-%d", errors="coerce"
+        ).dt.date
+
+        if date:
+            url = "https://vip.stock.finance.sina.com.cn/corp/view/vISSUE_ShareBonusDetail.php"
+            params = {
+                "stockid": symbol,
+                "type": "1",
+                "end_date": date,
+            }
+            r = http.get(url, params=params)
+            temp_df = pd.read_html(StringIO(r.text))[12]
+            temp_df.columns = ["item", "value"]
+            return temp_df
+        else:
+            return temp_df
+
+
+### stock_history_dividend() -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_finance_sina.py
+urls: ['https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lsfh/index.phtml']
+def stock_history_dividend() -> pd.DataFrame:
+    """
+    新浪财经-发行与分配-历史分红
+    https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lsfh/index.phtml
+    :return: 所有股票的历史分红数据
+    :rtype: pandas.DataFrame
+    """
+    url = "https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lsfh/index.phtml"
+    params = {"p": "1", "num": "50000"}
+    r = http.get(url, params=params)
+    temp_df = pd.read_html(StringIO(r.text))[0]
+    temp_df["代码"] = temp_df["代码"].astype(str).str.zfill(6)
+    temp_df = temp_df.rename(
+        columns={
+            "累计股息(%)": "累计股息",
+            "年均股息(%)": "年均股息",
+            "融资总额(亿)": "融资总额",
+        }
+    )
+    temp_df = temp_df[
+        [
+            "代码",
+            "名称",
+            "上市日期",
+            "累计股息",
+            "年均股息",
+            "分红次数",
+            "融资总额",
+            "融资次数",
+            "详细",
+        ]
+    ]
+    temp_df["上市日期"] = pd.to_datetime(temp_df["上市日期"], errors="coerce").dt.date
+    temp_df["累计股息"] = pd.to_numeric(temp_df["累计股息"], errors="coerce")
+    temp_df["年均股息"] = pd.to_numeric(temp_df["年均股息"], errors="coerce")
+    temp_df["分红次数"] = pd.to_numeric(temp_df["分红次数"], errors="coerce")
+    temp_df["融资总额"] = pd.to_numeric(temp_df["融资总额"], errors="coerce")
+    temp_df["融资次数"] = pd.to_numeric(temp_df["融资次数"], errors="coerce")
+    del temp_df["详细"]
+    return temp_df
+
+
+### stock_dividend_cninfo(symbol: str = '600009') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_dividend_cninfo.py
+urls: ['http://webapi.cninfo.com.cn', 'http://webapi.cninfo.com.cn/', 'https://webapi.cninfo.com.cn/#/company?companyid=600009', 'https://webapi.cninfo.com.cn/api/sysapi/p_sysapi1139']
+def stock_dividend_cninfo(symbol: str = "600009") -> pd.DataFrame:
+    """
+    巨潮资讯-个股-历史分红
+    https://webapi.cninfo.com.cn/#/company?companyid=600009
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 历史分红
+    :rtype: pandas.DataFrame
+    """
+    url = "https://webapi.cninfo.com.cn/api/sysapi/p_sysapi1139"
+    params = {"scode": symbol}
+    js_code = py_mini_racer.MiniRacer()
+    js_content = _get_file_content_ths("cninfo.js")
+    js_code.eval(js_content)
+    mcode = js_code.call("getResCode1")
+    headers = {
+        "Accept": "*/*",
+        "Accept-Enckey": mcode,
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Cache-Control": "no-cache",
+        "Content-Length": "0",
+        "Host": "webapi.cninfo.com.cn",
+        "Origin": "http://webapi.cninfo.com.cn",
+        "Pragma": "no-cache",
+        "Proxy-Connection": "keep-alive",
+        "Referer": "http://webapi.cninfo.com.cn/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/93.0.4577.63 Safari/537.36",
+        "X-Requested-With": "XMLHttpRequest",
+    }
+    r = http.post(url, params=params, headers=headers)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["records"])
+    temp_df = temp_df.rename(
+        columns={
+            "F006D": "实施方案公告日期",
+            "F044V": "分红类型",
+            "F011N": "转增比例",
+            "F010N": "送股比例",
+            "F012N": "派息比例",
+            "F018D": "股权登记日",
+            "F020D": "除权日",
+            "F023D": "派息日",
+            "F025D": "股份到账日",
+            "F007V": "实施方案分红说明",
+            "F001V": "报告时间",
+        },
+    )
+
+    temp_df["实施方案公告日期"] = pd.to_datetime(
+        temp_df["实施方案公告日期"], errors="coerce"
+    ).dt.date
+    temp_df["送股比例"] = pd.to_numeric(temp_df["送股比例"], errors="coerce")
+    temp_df["转增比例"] = pd.to_numeric(temp_df["转增比例"], errors="coerce")
+    temp_df["派息比例"] = pd.to_numeric(temp_df["派息比例"], errors="coerce")
+    temp_df["股权登记日"] = pd.to_datetime(
+        temp_df["股权登记日"], errors="coerce"
+    ).dt.date
+    temp_df["除权日"] = pd.to_datetime(temp_df["除权日"], errors="coerce").dt.date
+    temp_df["派息日"] = pd.to_datetime(temp_df["派息日"], errors="coerce").dt.date
+    temp_df = temp_df.sort_values(by="实施方案公告日期", ignore_index=True)
+    temp_df = temp_df[
+        [
+            "实施方案公告日期",
+            "分红类型",
+            "送股比例",
+            "转增比例",
+            "派息比例",
+            "股权登记日",
+            "除权日",
+            "派息日",
+            "股份到账日",
+            "实施方案分红说明",
+            "报告时间",
+        ]
+    ]
+    return temp_df
+
+
+### stock_info_change_name(symbol: str = '000503') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_info.py
+urls: ['https://vip.stock.finance.sina.com.cn/corp/go.php/vCI_CorpInfo/stockid/300378.phtml', 'https://vip.stock.finance.sina.com.cn/corp/go.php/vCI_CorpInfo/stockid/{symbol}.phtml']
+def stock_info_change_name(symbol: str = "000503") -> pd.DataFrame:
+    """
+    新浪财经-股票曾用名
+    https://vip.stock.finance.sina.com.cn/corp/go.php/vCI_CorpInfo/stockid/300378.phtml
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 股票曾用名
+    :rtype: list
+    """
+    url = f"https://vip.stock.finance.sina.com.cn/corp/go.php/vCI_CorpInfo/stockid/{symbol}.phtml"
+    r = http.get(url)
+    temp_df = pd.read_html(StringIO(r.text))[3].iloc[:, :2]
+    temp_df = temp_df.dropna()
+    temp_df.columns = ["item", "value"]
+    temp_df["item"] = temp_df["item"].str.split("：", expand=True)[0]
+    try:
+        name_list = (
+            temp_df[temp_df["item"] == "证券简称更名历史"].value.tolist()[0].split(" ")
+        )
+        big_df = pd.DataFrame(name_list)
+        big_df = big_df.reset_index()
+        big_df["index"] = big_df.index + 1
+        big_df.columns = ["index", "name"]
+        return big_df
+    except IndexError:
+        return pd.DataFrame()
+
+
+### stock_info_sz_change_name(symbol: str = '全称变更') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_info.py
+urls: ['https://www.szse.cn/api/report/ShowReport', 'https://www.szse.cn/www/market/stock/changename/index.html']
+def stock_info_sz_change_name(symbol: str = "全称变更") -> pd.DataFrame:
+    """
+    深圳证券交易所-市场数据-股票数据-名称变更
+    https://www.szse.cn/www/market/stock/changename/index.html
+    :param symbol: choice of {"全称变更": "tab1", "简称变更": "tab2"}
+    :type symbol: str
+    :return: 名称变更数据
+    :rtype: pandas.DataFrame
+    """
+    indicator_map = {"全称变更": "tab1", "简称变更": "tab2"}
+    url = "https://www.szse.cn/api/report/ShowReport"
+    params = {
+        "SHOWTYPE": "xlsx",
+        "CATALOGID": "SSGSGMXX",
+        "TABKEY": indicator_map[symbol],
+        "random": "0.6935816432433362",
+    }
+    r = http.get(url, params=params)
+    with warnings.catch_warnings(record=True):
+        warnings.simplefilter("always")
+        temp_df = pd.read_excel(BytesIO(r.content))
+        temp_df["证券代码"] = temp_df["证券代码"].astype("str").str.zfill(6)
+        temp_df["变更日期"] = pd.to_datetime(temp_df["变更日期"]).dt.date
+        temp_df = temp_df.sort_values(["变更日期"], ignore_index=True)
+        return temp_df
+
+
+### stock_individual_info_em(symbol: str = '603777') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_info_em.py
+urls: ['https://push2.eastmoney.com/api/qt/stock/get', 'https://quote.eastmoney.com/concept/sh603777.html?from=classic']
+def stock_individual_info_em(symbol: str = "603777") -> pd.DataFrame:
+    """
+    东方财富-个股-股票信息
+    https://quote.eastmoney.com/concept/sh603777.html?from=classic
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 股票信息
+    :rtype: pandas.DataFrame
+    """
+    url = "https://push2.eastmoney.com/api/qt/stock/get"
+    market_code = 1 if symbol.startswith("6") else 0
+    params = {
+        "fltt": "2",
+        "invt": "2",
+        "fields": "f120,f121,f122,f174,f175,f59,f163,f43,f57,f58,f169,f170,f46,f44,f51,f168,f47,"
+        "f164,f116,f60,f45,f52,f50,f48,f167,f117,f71,f161,f49,f530,f135,f136,f137,f138,"
+        "f139,f141,f142,f144,f145,f147,f148,f140,f143,f146,f149,f55,f62,f162,f92,f173,f104,"
+        "f105,f84,f85,f183,f184,f185,f186,f187,f188,f189,f190,f191,f192,f107,f111,f86,f177,f78,"
+        "f110,f262,f263,f264,f267,f268,f255,f256,f257,f258,f127,f199,f128,f198,f259,f260,f261,"
+        "f171,f277,f278,f279,f288,f152,f250,f251,f252,f253,f254,f269,f270,f271,f272,f273,f274,"
+        "f275,f276,f265,f266,f289,f290,f286,f285,f292,f293,f294,f295,f43",
+        "secid": f"{market_code}.{symbol}",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json)
+    temp_df = temp_df.reset_index()
+    del temp_df["rc"]
+    del temp_df["rt"]
+    del temp_df["svr"]
+    del temp_df["lt"]
+    del temp_df["full"]
+    code_name_map = {
+        "f57": "股票代码",
+        "f58": "股票简称",
+        "f84": "总股本",
+        "f85": "流通股",
+        "f127": "行业",
+        "f116": "总市值",
+        "f117": "流通市值",
+        "f189": "上市时间",
+        "f43": "最新",
+    }
+    temp_df["index"] = temp_df["index"].map(code_name_map)
+    temp_df = temp_df[pd.notna(temp_df["index"])]
+    # Eastmoney occasionally injects extra top-level metadata fields such as
+    # ``dlmkts`` or ``dsc``. Keep only the mapped key and nested ``data`` value.
+    temp_df = temp_df[["index", "data"]]
+    temp_df.columns = ["item", "value"]
+    temp_df = temp_df.reset_index(drop=True)
+    return temp_df
+
+
+### stock_zh_a_gbjg_em(symbol: str = '603392.SH') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\finance\stock_gbjg_em.py
+urls: ['https://datacenter.eastmoney.com/securities/api/data/v1/get', 'https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html#/gbjg']
+def stock_zh_a_gbjg_em(symbol: str = "603392.SH") -> pd.DataFrame:
+    """
+    东方财富-A股数据-股本结构
+    https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html#/gbjg
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 股本结构
+    :rtype: pandas.DataFrame
+    """
+    symbol = _normalize_em_secu_code(symbol)
+    url = "https://datacenter.eastmoney.com/securities/api/data/v1/get"
+    params = {
+        "reportName": "RPT_F10_EH_EQUITY",
+        "columns": "SECUCODE,SECURITY_CODE,END_DATE,TOTAL_SHARES,LIMITED_SHARES,LIMITED_OTHARS,"
+        "LIMITED_DOMESTIC_NATURAL,LIMITED_STATE_LEGAL,LIMITED_OVERSEAS_NOSTATE,LIMITED_OVERSEAS_NATURAL,"
+        "UNLIMITED_SHARES,LISTED_A_SHARES,B_FREE_SHARE,H_FREE_SHARE,FREE_SHARES,LIMITED_A_SHARES,"
+        "NON_FREE_SHARES,LIMITED_B_SHARES,OTHER_FREE_SHARES,LIMITED_STATE_SHARES,"
+        "LIMITED_DOMESTIC_NOSTATE,LOCK_SHARES,LIMITED_FOREIGN_SHARES,LIMITED_H_SHARES,"
+        "SPONSOR_SHARES,STATE_SPONSOR_SHARES,SPONSOR_SOCIAL_SHARES,RAISE_SHARES,"
+        "RAISE_STATE_SHARES,RAISE_DOMESTIC_SHARES,RAISE_OVERSEAS_SHARES,CHANGE_REASON",
+        "quoteColumns": "",
+        "filter": f'(SECUCODE="{symbol}")',
+        "pageNumber": "1",
+        "pageSize": "500",
+        "sortTypes": "-1",
+        "sortColumns": "END_DATE",
+        "source": "HSF10",
+        "client": "PC",
+        "v": "047483522105257925",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    result = data_json.get("result") or {}
+    data_list = result.get("data") or []
+    if not data_list:
+        return _empty_stock_zh_a_gbjg_em_df()
+
+    total_pages = int(result.get("pages") or 1)
+    big_df = pd.DataFrame(data_list)
+    # 逐页拉取，避免老股票较长的股本结构历史被静默截断。
+    for page in range(2, total_pages + 1):
+        params.update({"pageNumber": str(page)})
+        r = http.get(url, params=params)
+        page_json = r.json()
+        page_result = page_json.get("result") or {}
+        page_data = page_result.get("data") or []
+        if not page_data:
+            continue
+        page_df = pd.DataFrame(page_data)
+        big_df = pd.concat([big_df, page_df], ignore_index=True)
+
+    temp_df = big_df
+    temp_df = temp_df.rename(
+        columns={
+            "END_DATE": "变更日期",
+            "TOTAL_SHARES": "总股本",
+            "LISTED_A_SHARES": "已上市流通A股",
+            "FREE_SHARES": "已流通股份",
+            "CHANGE_REASON": "变动原因",
+            "LIMITED_A_SHARES": "流通受限股份",
+            "LIMITED_OTHARS": "其他内资持股(受限)",
+            "LIMITED_DOMESTIC_NOSTATE": "境内法人持股(受限)",
+            "LIMITED_DOMESTIC_NATURAL": "境内自然人持股(受限)",
+        },
+    )
+    temp_df = temp_df[
+        [
+            "变更日期",
+            "总股本",
+            "流通受限股份",
+            "其他内资持股(受限)",
+            "境内法人持股(受限)",
+            "境内自然人持股(受限)",
+            "已流通股份",
+            "已上市流通A股",
+            "变动原因",
+        ]
+    ]
+    temp_df["变更日期"] = pd.to_datetime(temp_df["变更日期"], errors="coerce").dt.date
+    temp_df["总股本"] = pd.to_numeric(temp_df["总股本"], errors="coerce")
+    temp_df["流通受限股份"] = pd.to_numeric(temp_df["流通受限股份"], errors="coerce")
+    temp_df["其他内资持股(受限)"] = pd.to_numeric(
+        temp_df["其他内资持股(受限)"], errors="coerce"
+    )
+    temp_df["境内法人持股(受限)"] = pd.to_numeric(
+        temp_df["境内法人持股(受限)"], errors="coerce"
+    )
+    temp_df["境内自然人持股(受限)"] = pd.to_numeric(
+        temp_df["境内自然人持股(受限)"], errors="coerce"
+    )
+    temp_df["已流通股份"] = pd.to_numeric(temp_df["已流通股份"], errors="coerce")
+    temp_df["已上市流通A股"] = pd.to_numeric(temp_df["已上市流通A股"], errors="coerce")
+    return temp_df
+
+
+### stock_share_change_cninfo(symbol: str = '002594', start_date: str = '20091227', end_date: str = '20241021') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\finance\stock_share_changes_cninfo.py
+urls: ['https://webapi.cninfo.com.cn', 'https://webapi.cninfo.com.cn/', 'https://webapi.cninfo.com.cn/#/apiDoc', 'https://webapi.cninfo.com.cn/api/stock/p_stock2215']
+def stock_share_change_cninfo(
+    symbol: str = "002594",
+    start_date: str = "20091227",
+    end_date: str = "20241021",
+) -> pd.DataFrame:
+    """
+    巨潮资讯-股本股东-公司股本变动
+    https://webapi.cninfo.com.cn/#/apiDoc
+    查询 p_stock2215 接口
+    :param symbol: 股票代码
+    :type symbol: str
+    :param start_date: 开始变动日期
+    :type start_date: str
+    :param end_date: 结束变动日期
+    :type end_date: str
+    :return: 公司股本变动
+    :rtype: pandas.DataFrame
+    """
+    url = "https://webapi.cninfo.com.cn/api/stock/p_stock2215"
+    params = {
+        "scode": symbol,
+        "sdate": "-".join([start_date[:4], start_date[4:6], start_date[6:]]),
+        "edate": "-".join([end_date[:4], end_date[4:6], end_date[6:]]),
+    }
+    js_code = py_mini_racer.MiniRacer()
+    js_content = _get_file_content_cninfo("cninfo.js")
+    js_code.eval(js_content)
+    mcode = js_code.call("getResCode1")
+    headers = {
+        "Accept": "*/*",
+        "Accept-Enckey": mcode,
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Cache-Control": "no-cache",
+        "Content-Length": "0",
+        "Host": "webapi.cninfo.com.cn",
+        "Origin": "https://webapi.cninfo.com.cn",
+        "Pragma": "no-cache",
+        "Proxy-Connection": "keep-alive",
+        "Referer": "https://webapi.cninfo.com.cn/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/93.0.4577.63 Safari/537.36",
+        "X-Requested-With": "XMLHttpRequest",
+    }
+    r = http.post(url, params=params, headers=headers)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["records"])
+    cols_map = {
+        "SECCODE": "证券代码",
+        "SECNAME": "证券简称",
+        "ORGNAME": "机构名称",
+        "DECLAREDATE": "公告日期",
+        "VARYDATE": "变动日期",
+        "F001V": "变动原因编码",
+        "F002V": "变动原因",
+        "F003N": "总股本",
+        "F004N": "未流通股份",
+        "F005N": "发起人股份",
+        "F006N": "国家持股",
+        "F007N": "国有法人持股",
+        "F008N": "境内法人持股",
+        "F009N": "境外法人持股",
+        "F010N": "自然人持股",
+        "F011N": "募集法人股",
+        "F012N": "内部职工股",
+        "F013N": "转配股",
+        "F014N": "其他流通受限股份",
+        "F015N": "优先股",
+        "F016N": "其他未流通股",
+        "F021N": "已流通股份",
+        "F022N": "人民币普通股",
+        "F023N": "境内上市外资股-B股",
+        "F024N": "境外上市外资股-H股",
+        "F025N": "高管股",
+        "F026N": "其他流通股",
+        "F028N": "流通受限股份",
+        "F017N": "配售法人股",
+        "F018N": "战略投资者持股",
+        "F019N": "证券投资基金持股",
+        "F020N": "一般法人持股",
+        "F029N": "国家持股-受限",
+        "F030N": "国有法人持股-受限",
+        "F031N": "其他内资持股-受限",
+        "F032N": "其中：境内法人持股",
+        "F033N": "其中：境内自然人持股",
+        "F034N": "外资持股-受限",
+        "F035N": "其中：境外法人持股",
+        "F036N": "其中：境外自然人持股",
+        "F037N": "其中：限售高管股",
+        "F038N": "其中：限售B股",
+        "F040N": "其中：限售H股",
+        "F027C": "最新记录标识",
+        "F049N": "其他",
+        "F050N": "控股股东、实际控制人",
+    }
+    ignore_cols = ["最新记录标识", "其他"]
+    temp_df = temp_df.rename(columns=cols_map)
+    pd.set_option("future.no_silent_downcasting", True)
+    temp_df = temp_df.fillna(np.nan)
+    temp_df["公告日期"] = pd.to_datetime(temp_df["公告日期"], errors="coerce").dt.date
+    temp_df["变动日期"] = pd.to_datetime(temp_df["变动日期"], errors="coerce").dt.date
+    data_df = temp_df[[c for c in temp_df.columns if c not in ignore_cols]]
+    return data_df
+
+
+### stock_info_a_code_name() -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_info.py
+urls: []
+@lru_cache()
+def stock_info_a_code_name() -> pd.DataFrame:
+    """
+    沪深京 A 股列表
+    :return: 沪深京 A 股数据
+    :rtype: pandas.DataFrame
+    """
+    big_df = pd.DataFrame()
+    stock_sh = stock_info_sh_name_code(symbol="主板A股")
+    stock_sh = stock_sh[["证券代码", "证券简称"]]
+
+    stock_sz = stock_info_sz_name_code(symbol="A股列表")
+    stock_sz["A股代码"] = stock_sz["A股代码"].astype(str).str.zfill(6)
+    big_df = pd.concat(
+        objs=[big_df, stock_sz[["A股代码", "A股简称"]]], ignore_index=True
+    )
+    big_df = big_df.rename(columns={"A股代码": "证券代码", "A股简称": "证券简称"})
+    big_df = big_df[["证券代码", "证券简称"]]
+
+    stock_kcb = stock_info_sh_name_code(symbol="科创板")
+    stock_kcb = stock_kcb[["证券代码", "证券简称"]]
+
+    stock_bse = stock_info_bj_name_code()
+    stock_bse = stock_bse[["证券代码", "证券简称"]]
+
+    big_df = pd.concat(objs=[big_df, stock_sh], ignore_index=True)
+    big_df = pd.concat(objs=[big_df, stock_kcb], ignore_index=True)
+    big_df = pd.concat(objs=[big_df, stock_bse], ignore_index=True)
+    big_df = big_df.rename(columns={"证券代码": "code", "证券简称": "name"})
+    big_df = big_df[["code", "name"]]
+    return big_df
+
+
+### stock_info_sh_name_code(symbol: str = '主板A股') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_info.py
+urls: ['https://query.sse.com.cn/sseQuery/commonQuery.do', 'https://www.sse.com.cn/assortment/stock/list/share/']
+@lru_cache()
+def stock_info_sh_name_code(symbol: str = "主板A股") -> pd.DataFrame:
+    """
+    上海证券交易所-股票列表
+    https://www.sse.com.cn/assortment/stock/list/share/
+    :param symbol: choice of {"主板A股": "1", "主板B股": "2", "科创板": "8"}
+    :type symbol: str
+    :return: 指定 indicator 的数据
+    :rtype: pandas.DataFrame
+    """
+    indicator_map = {"主板A股": "1", "主板B股": "2", "科创板": "8"}
+    url = "https://query.sse.com.cn/sseQuery/commonQuery.do"
+    headers = {
+        "Host": "query.sse.com.cn",
+        "Pragma": "no-cache",
+        "Referer": "https://www.sse.com.cn/assortment/stock/list/share/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/81.0.4044.138 Safari/537.36",
+    }
+    params = {
+        "STOCK_TYPE": indicator_map[symbol],
+        "REG_PROVINCE": "",
+        "CSRC_CODE": "",
+        "STOCK_CODE": "",
+        "sqlId": "COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L",
+        "COMPANY_STATUS": "2,4,5,7,8",
+        "type": "inParams",
+        "isPagination": "true",
+        "pageHelp.cacheSize": "1",
+        "pageHelp.beginPage": "1",
+        "pageHelp.pageSize": "10000",
+        "pageHelp.pageNo": "1",
+        "pageHelp.endPage": "1",
+    }
+    r = http.get(url, params=params, headers=headers)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["result"])
+    col_stock_code = "B_STOCK_CODE" if symbol == "主板B股" else "A_STOCK_CODE"
+    temp_df = temp_df.rename(
+        columns={
+            col_stock_code: "证券代码",
+            "SEC_NAME_CN": "证券简称",
+            "SEC_NAME_FULL": "证券全称",
+            "COMPANY_ABBR": "公司简称",
+            "FULL_NAME": "公司全称",
+            "LIST_DATE": "上市日期",
+        },
+    )
+    temp_df = temp_df[
+        [
+            "证券代码",
+            "证券简称",
+            "证券全称",
+            "公司简称",
+            "公司全称",
+            "上市日期",
+        ]
+    ]
+    temp_df["上市日期"] = pd.to_datetime(temp_df["上市日期"], errors="coerce").dt.date
+    return temp_df
+
+
+### stock_info_sz_name_code(symbol: str = 'A股列表') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\issue\stock_info.py
+urls: ['https://www.szse.cn/api/report/ShowReport', 'https://www.szse.cn/market/product/stock/list/index.html']
+@lru_cache()
+def stock_info_sz_name_code(symbol: str = "A股列表") -> pd.DataFrame:
+    """
+    深圳证券交易所-股票列表
+    https://www.szse.cn/market/product/stock/list/index.html
+    :param symbol: choice of {"A股列表", "B股列表", "CDR列表", "AB股列表"}
+    :type symbol: str
+    :return: 指定 indicator 的数据
+    :rtype: pandas.DataFrame
+    """
+    url = "https://www.szse.cn/api/report/ShowReport"
+    indicator_map = {
+        "A股列表": "tab1",
+        "B股列表": "tab2",
+        "CDR列表": "tab3",
+        "AB股列表": "tab4",
+    }
+    params = {
+        "SHOWTYPE": "xlsx",
+        "CATALOGID": "1110",
+        "TABKEY": indicator_map[symbol],
+        "random": "0.6935816432433362",
+    }
+    r = http.get(url, params=params)
+    with warnings.catch_warnings(record=True):
+        warnings.simplefilter("always")
+        temp_df = pd.read_excel(BytesIO(r.content))
+    if len(temp_df) > 10:
+        if symbol == "A股列表":
+            temp_df["A股代码"] = (
+                temp_df["A股代码"]
+                .astype(str)
+                .str.split(".", expand=True)
+                .iloc[:, 0]
+                .str.zfill(6)
+                .str.replace("000nan", "")
+            )
+            temp_df = temp_df[
+                [
+                    "板块",
+                    "A股代码",
+                    "A股简称",
+                    "A股上市日期",
+                    "A股总股本",
+                    "A股流通股本",
+                    "所属行业",
+                ]
+            ]
+        elif symbol == "B股列表":
+            temp_df["B股代码"] = (
+                temp_df["B股代码"]
+                .astype(str)
+                .str.split(".", expand=True)
+                .iloc[:, 0]
+                .str.zfill(6)
+                .str.replace("000nan", "")
+            )
+            temp_df = temp_df[
+                [
+                    "板块",
+                    "B股代码",
+                    "B股简称",
+                    "B股上市日期",
+                    "B股总股本",
+                    "B股流通股本",
+                    "所属行业",
+                ]
+            ]
+        elif symbol == "AB股列表":
+            temp_df["A股代码"] = (
+                temp_df["A股代码"]
+                .astype(str)
+                .str.split(".", expand=True)
+                .iloc[:, 0]
+                .str.zfill(6)
+                .str.replace("000nan", "")
+            )
+            temp_df["B股代码"] = (
+                temp_df["B股代码"]
+                .astype(str)
+                .str.split(".", expand=True)
+                .iloc[:, 0]
+                .str.zfill(6)
+                .str.replace("000nan", "")
+            )
+            temp_df = temp_df[
+                [
+                    "板块",
+                    "A股代码",
+                    "A股简称",
+                    "A股上市日期",
+                    "B股代码",
+                    "B股简称",
+                    "B股上市日期",
+                    "所属行业",
+                ]
+            ]
+        return temp_df
+    else:
+        return temp_df
+
+
+### stock_lhb_detail_em(start_date: str = '20230403', end_date: str = '20230417') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\flow\stock_lhb_em.py
+urls: ['https://data.eastmoney.com/stock/tradedetail.html', 'https://datacenter-web.eastmoney.com/api/data/v1/get']
+def stock_lhb_detail_em(
+    start_date: str = "20230403", end_date: str = "20230417"
+) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-龙虎榜单-龙虎榜详情
+    https://data.eastmoney.com/stock/tradedetail.html
+    :param start_date: 开始日期
+    :type start_date: str
+    :param end_date: 结束日期
+    :type end_date: str
+    :return: 龙虎榜详情
+    :rtype: pandas.DataFrame
+    """
+    start_date = "-".join([start_date[:4], start_date[4:6], start_date[6:]])
+    end_date = "-".join([end_date[:4], end_date[4:6], end_date[6:]])
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "SECURITY_CODE,TRADE_DATE",
+        "sortTypes": "1,-1",
+        "pageSize": "5000",
+        "pageNumber": "1",
+        "reportName": "RPT_DAILYBILLBOARD_DETAILSNEW",
+        "columns": "SECURITY_CODE,SECUCODE,SECURITY_NAME_ABBR,TRADE_DATE,EXPLAIN,CLOSE_PRICE,CHANGE_RATE,"
+        "BILLBOARD_NET_AMT,BILLBOARD_BUY_AMT,BILLBOARD_SELL_AMT,BILLBOARD_DEAL_AMT,ACCUM_AMOUNT,"
+        "DEAL_NET_RATIO,DEAL_AMOUNT_RATIO,TURNOVERRATE,FREE_MARKET_CAP,EXPLANATION,D1_CLOSE_ADJCHRATE,"
+        "D2_CLOSE_ADJCHRATE,D5_CLOSE_ADJCHRATE,D10_CLOSE_ADJCHRATE,SECURITY_TYPE_CODE",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"(TRADE_DATE<='{end_date}')(TRADE_DATE>='{start_date}')",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page_num = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, total_page_num + 1), leave=False):
+        params.update(
+            {
+                "pageNumber": page,
+            }
+        )
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat([big_df, temp_df], ignore_index=True)
+    big_df = big_df.reset_index()
+    big_df["index"] = big_df.index + 1
+    big_df = big_df.rename(
+        columns={
+            "index": "序号",
+            "SECURITY_CODE": "代码",
+            "SECUCODE": "-",
+            "SECURITY_NAME_ABBR": "名称",
+            "TRADE_DATE": "上榜日",
+            "EXPLAIN": "解读",
+            "CLOSE_PRICE": "收盘价",
+            "CHANGE_RATE": "涨跌幅",
+            "BILLBOARD_NET_AMT": "龙虎榜净买额",
+            "BILLBOARD_BUY_AMT": "龙虎榜买入额",
+            "BILLBOARD_SELL_AMT": "龙虎榜卖出额",
+            "BILLBOARD_DEAL_AMT": "龙虎榜成交额",
+            "ACCUM_AMOUNT": "市场总成交额",
+            "DEAL_NET_RATIO": "净买额占总成交比",
+            "DEAL_AMOUNT_RATIO": "成交额占总成交比",
+            "TURNOVERRATE": "换手率",
+            "FREE_MARKET_CAP": "流通市值",
+            "EXPLANATION": "上榜原因",
+            "D1_CLOSE_ADJCHRATE": "上榜后1日",
+            "D2_CLOSE_ADJCHRATE": "上榜后2日",
+            "D5_CLOSE_ADJCHRATE": "上榜后5日",
+            "D10_CLOSE_ADJCHRATE": "上榜后10日",
+        },
+    )
+
+    big_df = big_df[
+        [
+            "序号",
+            "代码",
+            "名称",
+            "上榜日",
+            "解读",
+            "收盘价",
+            "涨跌幅",
+            "龙虎榜净买额",
+            "龙虎榜买入额",
+            "龙虎榜卖出额",
+            "龙虎榜成交额",
+            "市场总成交额",
+            "净买额占总成交比",
+            "成交额占总成交比",
+            "换手率",
+            "流通市值",
+            "上榜原因",
+            "上榜后1日",
+            "上榜后2日",
+            "上榜后5日",
+            "上榜后10日",
+        ]
+    ]
+    big_df["上榜日"] = pd.to_datetime(big_df["上榜日"], errors="coerce").dt.date
+    big_df["收盘价"] = pd.to_numeric(big_df["收盘价"], errors="coerce")
+    big_df["涨跌幅"] = pd.to_numeric(big_df["涨跌幅"], errors="coerce")
+    big_df["龙虎榜净买额"] = pd.to_numeric(big_df["龙虎榜净买额"], errors="coerce")
+    big_df["龙虎榜买入额"] = pd.to_numeric(big_df["龙虎榜买入额"], errors="coerce")
+    big_df["龙虎榜卖出额"] = pd.to_numeric(big_df["龙虎榜卖出额"], errors="coerce")
+    big_df["龙虎榜成交额"] = pd.to_numeric(big_df["龙虎榜成交额"], errors="coerce")
+    big_df["市场总成交额"] = pd.to_numeric(big_df["市场总成交额"], errors="coerce")
+    big_df["净买额占总成交比"] = pd.to_numeric(
+        big_df["净买额占总成交比"], errors="coerce"
+    )
+    big_df["成交额占总成交比"] = pd.to_numeric(
+        big_df["成交额占总成交比"], errors="coerce"
+    )
+    big_df["换手率"] = pd.to_numeric(big_df["换手率"], errors="coerce")
+    big_df["流通市值"] = pd.to_numeric(big_df["流通市值"], errors="coerce")
+    big_df["上榜后1日"] = pd.to_numeric(big_df["上榜后1日"], errors="coerce")
+    big_df["上榜后2日"] = pd.to_numeric(big_df["上榜后2日"], errors="coerce")
+    big_df["上榜后5日"] = pd.to_numeric(big_df["上榜后5日"], errors="coerce")
+    big_df["上榜后10日"] = pd.to_numeric(big_df["上榜后10日"], errors="coerce")
+    return big_df
+
+
+### stock_lhb_jgmmtj_em(start_date: str = '20240417', end_date: str = '20240430') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\flow\stock_lhb_em.py
+urls: ['https://data.eastmoney.com/stock/jgmmtj.html', 'https://datacenter-web.eastmoney.com/api/data/v1/get']
+def stock_lhb_jgmmtj_em(
+    start_date: str = "20240417", end_date: str = "20240430"
+) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-龙虎榜单-机构买卖每日统计
+    https://data.eastmoney.com/stock/jgmmtj.html
+    :param start_date: 开始日期
+    :type start_date: str
+    :param end_date: 结束日期
+    :type end_date: str
+    :return: 机构买卖每日统计
+    :rtype: pandas.DataFrame
+    """
+    start_date = "-".join([start_date[:4], start_date[4:6], start_date[6:]])
+    end_date = "-".join([end_date[:4], end_date[4:6], end_date[6:]])
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "NET_BUY_AMT,TRADE_DATE,SECURITY_CODE",
+        "sortTypes": "-1,-1,1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_ORGANIZATION_TRADE_DETAILS",
+        "columns": "ALL",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"(TRADE_DATE>='{start_date}')(TRADE_DATE<='{end_date}')",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, total_page + 1), leave=False):
+        params.update(
+            {
+                "pageNumber": page,
+            }
+        )
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+    big_df = big_df.reset_index()
+    big_df["index"] = big_df.index + 1
+    big_df = big_df.rename(
+        columns={
+            "index": "序号",
+            "SECURITY_NAME_ABBR": "名称",
+            "SECURITY_CODE": "代码",
+            "TRADE_DATE": "上榜日期",
+            "CLOSE_PRICE": "收盘价",
+            "CHANGE_RATE": "涨跌幅",
+            "BUY_TIMES": "买方机构数",
+            "SELL_TIMES": "卖方机构数",
+            "BUY_AMT": "机构买入总额",
+            "SELL_AMT": "机构卖出总额",
+            "NET_BUY_AMT": "机构买入净额",
+            "ACCUM_AMOUNT": "市场总成交额",
+            "RATIO": "机构净买额占总成交额比",
+            "TURNOVERRATE": "换手率",
+            "FREECAP": "流通市值",
+            "EXPLANATION": "上榜原因",
+        }
+    )
+    big_df = big_df[
+        [
+            "序号",
+            "代码",
+            "名称",
+            "收盘价",
+            "涨跌幅",
+            "买方机构数",
+            "卖方机构数",
+            "机构买入总额",
+            "机构卖出总额",
+            "机构买入净额",
+            "市场总成交额",
+            "机构净买额占总成交额比",
+            "换手率",
+            "流通市值",
+            "上榜原因",
+            "上榜日期",
+        ]
+    ]
+    big_df["上榜日期"] = pd.to_datetime(big_df["上榜日期"], errors="coerce").dt.date
+    big_df["收盘价"] = pd.to_numeric(big_df["收盘价"], errors="coerce")
+    big_df["涨跌幅"] = pd.to_numeric(big_df["涨跌幅"], errors="coerce")
+    big_df["买方机构数"] = pd.to_numeric(big_df["买方机构数"], errors="coerce")
+    big_df["卖方机构数"] = pd.to_numeric(big_df["卖方机构数"], errors="coerce")
+    big_df["机构买入总额"] = pd.to_numeric(big_df["机构买入总额"], errors="coerce")
+    big_df["机构卖出总额"] = pd.to_numeric(big_df["机构卖出总额"], errors="coerce")
+    big_df["机构买入净额"] = pd.to_numeric(big_df["机构买入净额"], errors="coerce")
+    big_df["市场总成交额"] = pd.to_numeric(big_df["市场总成交额"], errors="coerce")
+    big_df["机构净买额占总成交额比"] = pd.to_numeric(
+        big_df["机构净买额占总成交额比"], errors="coerce"
+    )
+    big_df["换手率"] = pd.to_numeric(big_df["换手率"], errors="coerce")
+    big_df["流通市值"] = pd.to_numeric(big_df["流通市值"], errors="coerce")
+    return big_df
+
+
+### stock_dzjy_mrmx(symbol: str = '基金', start_date: str = '20261113', end_date: str = '20261113') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\flow\stock_dzjy_em.py
+urls: ['https://data.eastmoney.com/dzjy/dzjy_mrmx.html', 'https://datacenter-web.eastmoney.com/api/data/v1/get']
+def stock_dzjy_mrmx(
+    symbol: str = "基金", start_date: str = "20261113", end_date: str = "20261113"
+) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-大宗交易-每日明细
+    https://data.eastmoney.com/dzjy/dzjy_mrmx.html
+    :param symbol: choice of {'A股', 'B股', '基金', '债券'}
+    :type symbol: str
+    :param start_date: 开始日期
+    :type start_date: str
+    :param end_date: 结束日期
+    :type end_date: str
+    :return: 每日明细
+    :rtype: pandas.DataFrame
+    """
+    symbol_map = {
+        "A股": "1",
+        "B股": "2",
+        "基金": "3",
+        "债券": "4",
+    }
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "SECURITY_CODE",
+        "sortTypes": "1",
+        "pageSize": "5000",
+        "pageNumber": "1",
+        "reportName": "RPT_DATA_BLOCKTRADE",
+        "columns": "TRADE_DATE,SECURITY_CODE,SECUCODE,SECURITY_NAME_ABBR,CHANGE_RATE,CLOSE_PRICE,"
+        "DEAL_PRICE,PREMIUM_RATIO,DEAL_VOLUME,DEAL_AMT,TURNOVER_RATE,BUYER_NAME,SELLER_NAME,"
+        "CHANGE_RATE_1DAYS,CHANGE_RATE_5DAYS,CHANGE_RATE_10DAYS,CHANGE_RATE_20DAYS,BUYER_CODE,SELLER_CODE",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"""(SECURITY_TYPE_WEB={symbol_map[symbol]})(TRADE_DATE>=
+        '{"-".join([start_date[:4], start_date[4:6], start_date[6:]])}')(TRADE_DATE<=
+        '{"-".join([end_date[:4], end_date[4:6], end_date[6:]])}')""",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    if not data_json["result"]["data"]:
+        return pd.DataFrame()
+    temp_df = pd.DataFrame(data_json["result"]["data"])
+    temp_df = temp_df.reset_index()
+    temp_df["index"] = temp_df.index + 1
+    if symbol in {"A股"}:
+        temp_df.columns = [
+            "序号",
+            "交易日期",
+            "证券代码",
+            "-",
+            "证券简称",
+            "涨跌幅",
+            "收盘价",
+            "成交价",
+            "折溢率",
+            "成交量",
+            "成交额",
+            "成交额/流通市值",
+            "买方营业部",
+            "卖方营业部",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+        ]
+        temp_df["交易日期"] = pd.to_datetime(
+            temp_df["交易日期"], errors="coerce"
+        ).dt.date
+        temp_df = temp_df[
+            [
+                "序号",
+                "交易日期",
+                "证券代码",
+                "证券简称",
+                "涨跌幅",
+                "收盘价",
+                "成交价",
+                "折溢率",
+                "成交量",
+                "成交额",
+                "成交额/流通市值",
+                "买方营业部",
+                "卖方营业部",
+            ]
+        ]
+        temp_df["涨跌幅"] = pd.to_numeric(temp_df["涨跌幅"], errors="coerce")
+        temp_df["收盘价"] = pd.to_numeric(temp_df["收盘价"], errors="coerce")
+        temp_df["成交价"] = pd.to_numeric(temp_df["成交价"], errors="coerce")
+        temp_df["折溢率"] = pd.to_numeric(temp_df["折溢率"], errors="coerce")
+        temp_df["成交量"] = pd.to_numeric(temp_df["成交量"], errors="coerce")
+        temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
+        temp_df["成交额/流通市值"] = pd.to_numeric(
+            temp_df["成交额/流通市值"], errors="coerce"
+        )
+    if symbol in {"B股", "基金", "债券"}:
+        temp_df = temp_df.rename(
+            columns={
+                "index": "序号",
+                "TRADE_DATE": "交易日期",
+                "SECURITY_CODE": "证券代码",
+                "SECURITY_NAME_ABBR": "证券简称",
+                "DEAL_PRICE": "成交价",
+                "DEAL_VOLUME": "成交量",
+                "DEAL_AMT": "成交额",
+                "BUYER_NAME": "买方营业部",
+                "SELLER_NAME": "卖方营业部",
+            }
+        )
+        temp_df = temp_df[
+            [
+                "序号",
+                "交易日期",
+                "证券代码",
+                "证券简称",
+                "成交价",
+                "成交量",
+                "成交额",
+                "买方营业部",
+                "卖方营业部",
+            ]
+        ]
+        temp_df["交易日期"] = pd.to_datetime(
+            temp_df["交易日期"], errors="coerce"
+        ).dt.date
+        temp_df = temp_df[
+            [
+                "序号",
+                "交易日期",
+                "证券代码",
+                "证券简称",
+                "成交价",
+                "成交量",
+                "成交额",
+                "买方营业部",
+                "卖方营业部",
+            ]
+        ]
+        temp_df["成交价"] = pd.to_numeric(temp_df["成交价"], errors="coerce")
+        temp_df["成交量"] = pd.to_numeric(temp_df["成交量"], errors="coerce")
+        temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
+    return temp_df
+
+
+### stock_dzjy_mrtj(start_date: str = '20261113', end_date: str = '20261113') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\flow\stock_dzjy_em.py
+urls: ['https://data.eastmoney.com/dzjy/dzjy_mrtj.html', 'https://datacenter-web.eastmoney.com/api/data/v1/get']
+def stock_dzjy_mrtj(
+    start_date: str = "20261113", end_date: str = "20261113"
+) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-大宗交易-每日统计
+    https://data.eastmoney.com/dzjy/dzjy_mrtj.html
+    :param start_date: 开始日期
+    :type start_date: str
+    :param end_date: 结束日期
+    :type end_date: str
+    :return: 每日统计
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "TURNOVERRATE",
+        "sortTypes": "-1",
+        "pageSize": "5000",
+        "pageNumber": "1",
+        "reportName": "RPT_BLOCKTRADE_STA",
+        "columns": "TRADE_DATE,SECURITY_CODE,SECUCODE,SECURITY_NAME_ABBR,CHANGE_RATE,"
+        "CLOSE_PRICE,AVERAGE_PRICE,PREMIUM_RATIO,DEAL_NUM,VOLUME,DEAL_AMT,"
+        "TURNOVERRATE,D1_CLOSE_ADJCHRATE,D5_CLOSE_ADJCHRATE,D10_CLOSE_ADJCHRATE,D20_CLOSE_ADJCHRATE",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"(TRADE_DATE>='{'-'.join([start_date[:4], start_date[4:6], start_date[6:]])}')(TRADE_DATE<="
+        f"'{'-'.join([end_date[:4], end_date[4:6], end_date[6:]])}')",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["result"]["data"])
+    temp_df = temp_df.reset_index()
+    temp_df["index"] = temp_df.index + 1
+    temp_df = temp_df.rename(
+        columns={
+            "index": "序号",
+            "TRADE_DATE": "交易日期",
+            "SECURITY_CODE": "证券代码",
+            "SECURITY_NAME_ABBR": "证券简称",
+            "CHANGE_RATE": "涨跌幅",
+            "CLOSE_PRICE": "收盘价",
+            "AVERAGE_PRICE": "成交价",
+            "PREMIUM_RATIO": "折溢率",
+            "DEAL_NUM": "成交笔数",
+            "VOLUME": "成交总量",
+            "DEAL_AMT": "成交总额",
+            "TURNOVERRATE": "成交总额/流通市值",
+        }
+    )
+    temp_df = temp_df[
+        [
+            "序号",
+            "交易日期",
+            "证券代码",
+            "证券简称",
+            "涨跌幅",
+            "收盘价",
+            "成交价",
+            "折溢率",
+            "成交笔数",
+            "成交总量",
+            "成交总额",
+            "成交总额/流通市值",
+        ]
+    ]
+    temp_df["交易日期"] = pd.to_datetime(temp_df["交易日期"], errors="coerce").dt.date
+    temp_df = temp_df[
+        [
+            "序号",
+            "交易日期",
+            "证券代码",
+            "证券简称",
+            "涨跌幅",
+            "收盘价",
+            "成交价",
+            "折溢率",
+            "成交笔数",
+            "成交总量",
+            "成交总额",
+            "成交总额/流通市值",
+        ]
+    ]
+    temp_df["涨跌幅"] = pd.to_numeric(temp_df["涨跌幅"], errors="coerce")
+    temp_df["收盘价"] = pd.to_numeric(temp_df["收盘价"], errors="coerce")
+    temp_df["成交价"] = pd.to_numeric(temp_df["成交价"], errors="coerce")
+    temp_df["折溢率"] = pd.to_numeric(temp_df["折溢率"], errors="coerce")
+    temp_df["成交笔数"] = pd.to_numeric(temp_df["成交笔数"], errors="coerce")
+    temp_df["成交总量"] = pd.to_numeric(temp_df["成交总量"], errors="coerce")
+    temp_df["成交总额"] = pd.to_numeric(temp_df["成交总额"], errors="coerce")
+    temp_df["成交总额/流通市值"] = pd.to_numeric(
+        temp_df["成交总额/流通市值"], errors="coerce"
+    )
+    return temp_df
+
+
+### stock_ggcg_em(symbol: str = '全部') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\holder\stock_gdzjc_em.py
+urls: ['https://data.eastmoney.com/executive/gdzjc.html', 'https://datacenter-web.eastmoney.com/api/data/v1/get']
+def stock_ggcg_em(symbol: str = "全部") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-特色数据-高管持股
+    https://data.eastmoney.com/executive/gdzjc.html
+    :param symbol: choice of {"全部", "股东增持", "股东减持"}
+    :type symbol: str
+    :return: 高管持股
+    :rtype: pandas.DataFrame
+    """
+    symbol_map = {
+        "全部": "",
+        "股东增持": '(DIRECTION="增持")',
+        "股东减持": '(DIRECTION="减持")',
+    }
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "END_DATE,SECURITY_CODE,EITIME",
+        "sortTypes": "-1,-1,-1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_SHARE_HOLDER_INCREASE",
+        "quoteColumns": "f2~01~SECURITY_CODE~NEWEST_PRICE,f3~01~SECURITY_CODE~CHANGE_RATE_QUOTES",
+        "quoteType": "0",
+        "columns": "ALL",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": symbol_map[symbol],
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, total_page + 1), leave=False):
+        params.update(
+            {
+                "pageNumber": page,
+            }
+        )
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+
+    big_df.columns = [
+        "持股变动信息-变动数量",
+        "公告日",
+        "代码",
+        "股东名称",
+        "持股变动信息-占总股本比例",
+        "_",
+        "-",
+        "变动截止日",
+        "-",
+        "变动后持股情况-持股总数",
+        "变动后持股情况-占总股本比例",
+        "_",
+        "变动后持股情况-占流通股比例",
+        "变动后持股情况-持流通股数",
+        "_",
+        "名称",
+        "持股变动信息-增减",
+        "_",
+        "持股变动信息-占流通股比例",
+        "变动开始日",
+        "_",
+        "最新价",
+        "涨跌幅",
+        "_",
+    ]
+    big_df = big_df[
+        [
+            "代码",
+            "名称",
+            "最新价",
+            "涨跌幅",
+            "股东名称",
+            "持股变动信息-增减",
+            "持股变动信息-变动数量",
+            "持股变动信息-占总股本比例",
+            "持股变动信息-占流通股比例",
+            "变动后持股情况-持股总数",
+            "变动后持股情况-占总股本比例",
+            "变动后持股情况-持流通股数",
+            "变动后持股情况-占流通股比例",
+            "变动开始日",
+            "变动截止日",
+            "公告日",
+        ]
+    ]
+
+    big_df["最新价"] = pd.to_numeric(big_df["最新价"], errors="coerce")
+    big_df["涨跌幅"] = pd.to_numeric(big_df["涨跌幅"], errors="coerce")
+    big_df["持股变动信息-变动数量"] = pd.to_numeric(big_df["持股变动信息-变动数量"])
+    big_df["持股变动信息-占总股本比例"] = pd.to_numeric(
+        big_df["持股变动信息-占总股本比例"]
+    )
+    big_df["持股变动信息-占流通股比例"] = pd.to_numeric(
+        big_df["持股变动信息-占流通股比例"]
+    )
+    big_df["变动后持股情况-持股总数"] = pd.to_numeric(big_df["变动后持股情况-持股总数"])
+    big_df["变动后持股情况-占总股本比例"] = pd.to_numeric(
+        big_df["变动后持股情况-占总股本比例"]
+    )
+    big_df["变动后持股情况-持流通股数"] = pd.to_numeric(
+        big_df["变动后持股情况-持流通股数"]
+    )
+    big_df["变动后持股情况-占流通股比例"] = pd.to_numeric(
+        big_df["变动后持股情况-占流通股比例"]
+    )
+    big_df["变动开始日"] = pd.to_datetime(big_df["变动开始日"]).dt.date
+    big_df["变动截止日"] = pd.to_datetime(big_df["变动截止日"]).dt.date
+    big_df["公告日"] = pd.to_datetime(big_df["公告日"]).dt.date
+    return big_df
+
+
+### stock_notice_report(symbol: str = '全部', date: str = '20261113') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\research\stock_notice.py
+urls: ['https://data.eastmoney.com/notices/hsa/5.html']
+def stock_notice_report(symbol: str = "全部", date: str = "20261113") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-公告大全-沪深京 A 股公告
+    https://data.eastmoney.com/notices/hsa/5.html
+    :param symbol: 报告类型；choice of {"全部", "重大事项", "财务报告", "融资公告", "风险提示", "资产重组", "信息变更", "持股变动"}
+    :type symbol: str
+    :param date: 制定日期
+    :type date: str
+    :return: 沪深京 A 股公告
+    :rtype: pandas.DataFrame
+    """
+    return _stock_notice_report(
+        symbol=symbol,
+        begin_date="-".join([date[:4], date[4:6], date[6:]]),
+        end_date="-".join([date[:4], date[4:6], date[6:]]),
+    )
+
+
+### stock_share_hold_change_sse(symbol: str = '600000') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\research\stock_share_hold.py
+urls: ['https://query.sse.com.cn/commonQuery.do', 'https://www.sse.com.cn/', 'https://www.sse.com.cn/disclosure/credibility/supervision/change/']
+def stock_share_hold_change_sse(symbol: str = "600000") -> pd.DataFrame:
+    """
+    上海证券交易所-披露-监管信息公开-公司监管-董董监高人员股份变动
+    https://www.sse.com.cn/disclosure/credibility/supervision/change/
+    :param symbol: choice of {"全部", "具体股票代码"}
+    :type symbol: str
+    :return: 董监高人员股份变动
+    :rtype: pandas.DataFrame
+    """
+    url = "https://query.sse.com.cn/commonQuery.do"
+    params = {
+        "isPagination": "true",
+        "pageHelp.pageSize": "100",
+        "pageHelp.pageNo": "1",
+        "pageHelp.beginPage": "1",
+        "pageHelp.cacheSize": "1",
+        "pageHelp.endPage": "1",
+        "sqlId": "COMMON_SSE_XXPL_CXJL_SSGSGFBDQK_S",
+        "COMPANY_CODE": "",
+        "NAME": "",
+        "BEGIN_DATE": "1990-01-01",
+        "END_DATE": "2050-01-01",
+        "BOARDTYPE": "",
+    }
+    params if symbol == "全部" else params.update({"COMPANY_CODE": symbol})
+    headers = {
+        "Host": "query.sse.com.cn",
+        "Referer": "https://www.sse.com.cn/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/93.0.4577.63 Safari/537.36",
+    }
+    r = http.get(url, headers=headers, params=params)
+    data_json = r.json()
+    total_page = data_json["pageHelp"]["pageCount"]
+    big_df = pd.DataFrame()
+    for page in tqdm(range(1, total_page + 1), leave=False):
+        params.update(
+            {
+                "pageHelp.pageNo": page,
+                "pageHelp.beginPage": page,
+                "pageHelp.endPage": page,
+            }
+        )
+        r = http.get(url, headers=headers, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"])
+        big_df = pd.concat(objs=[big_df, temp_df], axis=0, ignore_index=True)
+    big_df = big_df.rename(
+        columns={
+            "STOCK_TYPE": "股票种类",
+            "COMPANY_ABBR": "公司名称",
+            "NUM": "-",
+            "CURRENT_AVG_PRICE": "本次变动平均价格",
+            "CHANGE_DATE": "变动日期",
+            "HOLDSTOCK_NUM": "变动后持股数",
+            "NAME": "姓名",
+            "CHANGE_REASON": "变动原因",
+            "DUTY": "职务",
+            "CURRENCY_TYPE": "货币种类",
+            "COMPANY_CODE": "公司代码",
+            "FORM_DATE": "填报日期",
+            "CHANGE_NUM": "变动数",
+            "CURRENT_NUM": "本次变动前持股数",
+        },
+    )
+    big_df = big_df[
+        [
+            "公司代码",
+            "公司名称",
+            "姓名",
+            "职务",
+            "股票种类",
+            "货币种类",
+            "本次变动前持股数",
+            "变动数",
+            "本次变动平均价格",
+            "变动后持股数",
+            "变动原因",
+            "变动日期",
+            "填报日期",
+        ]
+    ]
+    big_df["变动日期"] = pd.to_datetime(big_df["变动日期"], errors="coerce").dt.date
+    big_df["填报日期"] = pd.to_datetime(big_df["填报日期"], errors="coerce").dt.date
+
+    big_df["本次变动前持股数"] = pd.to_numeric(
+        big_df["本次变动前持股数"], errors="coerce"
+    )
+    big_df["变动数"] = pd.to_numeric(big_df["变动数"], errors="coerce")
+    big_df["本次变动平均价格"] = pd.to_numeric(
+        big_df["本次变动平均价格"], errors="coerce"
+    )
+    big_df["变动后持股数"] = pd.to_numeric(big_df["变动后持股数"], errors="coerce")
+    return big_df
+
+
+### stock_share_hold_change_szse(symbol: str = '全部') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\research\stock_share_hold.py
+urls: ['https://www.szse.cn/api/report/ShowReport/data', 'https://www.szse.cn/disclosure/supervision/change/index.html']
+def stock_share_hold_change_szse(symbol: str = "全部") -> pd.DataFrame:
+    """
+    深圳证券交易所-信息披露-监管信息公开-董监高人员股份变动
+    https://www.szse.cn/disclosure/supervision/change/index.html
+    :param symbol: choice of {"全部", "具体股票代码"}
+    :type symbol: str
+    :return: 董监高人员股份变动
+    :rtype: pandas.DataFrame
+    """
+    url = "https://www.szse.cn/api/report/ShowReport/data"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/93.0.4577.63 Safari/537.36",
+    }
+    params = {
+        "SHOWTYPE": "JSON",
+        "CATALOGID": "1801_cxda",
+        "TABKEY": "tab1",
+        "PAGENO": "1",
+        "random": "0.7874198771222201",
+    }
+    params if symbol == "全部" else params.update({"txtDMorJC": symbol})
+    r = http.get(url, headers=headers, params=params)
+    data_json = r.json()
+    total_page = data_json[0]["metadata"]["pagecount"]
+    big_df = pd.DataFrame()
+    for page in tqdm(range(1, total_page + 1), leave=False):
+        params.update(
+            {
+                "PAGENO": page,
+            }
+        )
+        r = http.get(url, headers=headers, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json[0]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], axis=0, ignore_index=True)
+    big_df = big_df.rename(
+        columns={
+            "zqdm": "证券代码",
+            "zqjc": "证券简称",
+            "ggxm": "董监高姓名",
+            "jyrq": "变动日期",
+            "bdgs": "变动股份数量",
+            "bdjj": "成交均价",
+            "bdyy": "变动原因",
+            "cgbdbl": "变动比例",
+            "cgzs": "当日结存股数",
+            "gdxm": "股份变动人姓名",
+            "zw": "职务",
+            "gxlb": "变动人与董监高的关系",
+        },
+    )
+    big_df = big_df[
+        [
+            "证券代码",
+            "证券简称",
+            "董监高姓名",
+            "变动日期",
+            "变动股份数量",
+            "成交均价",
+            "变动原因",
+            "变动比例",
+            "当日结存股数",
+            "股份变动人姓名",
+            "职务",
+            "变动人与董监高的关系",
+        ]
+    ]
+    big_df["变动日期"] = pd.to_datetime(big_df["变动日期"], errors="coerce").dt.date
+    big_df["变动股份数量"] = pd.to_numeric(big_df["变动股份数量"], errors="coerce")
+    big_df["成交均价"] = pd.to_numeric(big_df["成交均价"], errors="coerce")
+    big_df["变动比例"] = pd.to_numeric(big_df["变动比例"], errors="coerce")
+    big_df["当日结存股数"] = big_df["当日结存股数"].str.replace(",", "")
+    big_df["当日结存股数"] = pd.to_numeric(big_df["当日结存股数"], errors="coerce")
+    return big_df
+
+
+### stock_shareholder_change_ths(symbol: str = '688981') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\finance\stock_finance_ths.py
+urls: ['https://basic.10jqka.com.cn/new/688981/event.html', 'https://basic.10jqka.com.cn/new/{symbol}/event.html']
+def stock_shareholder_change_ths(symbol: str = "688981") -> pd.DataFrame:
+    """
+    同花顺-公司大事-股东持股变动
+    https://basic.10jqka.com.cn/new/688981/event.html
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 同花顺-公司大事-股东持股变动
+    :rtype: pandas.DataFrame
+    """
+    url = f"https://basic.10jqka.com.cn/new/{symbol}/event.html"
+    r = http.get(url, headers=headers)
+    r.encoding = "gb2312"
+    soup = BeautifulSoup(r.text, features="lxml")
+    soup_find = soup.find(name="table", attrs={"class": "m_table data_table_1 m_hl"})
+    if soup_find is not None:
+        content_list = [item.text.strip() for item in soup_find]
+        column_names = content_list[1].split("\n")
+        row = (
+            content_list[3]
+            .replace("\t", "")
+            .replace("\n\n", "")
+            .replace("   ", "\n")
+            .replace(" ", "")
+            .replace("\n\n", "\n")
+            .split("\n")
+        )
+        row = [item for item in row if item != ""]
+        new_rows = []
+        step = len(column_names)
+        for i in range(0, len(row), step):
+            new_rows.append(row[i : i + step])
+        temp_df = pd.DataFrame(new_rows, columns=column_names)
+        temp_df = temp_df.sort_values(by="公告日期", ignore_index=True)
+        temp_df["公告日期"] = pd.to_datetime(
+            temp_df["公告日期"], errors="coerce"
+        ).dt.date
+        temp_df = temp_df.rename(
+            columns={
+                "变动数量(股)": "变动数量",
+                "交易均价(元)": "交易均价",
+                "剩余股份总数(股)": "剩余股份总数",
+            },
+        )
+        return temp_df
+    return pd.DataFrame()
+
+
+### stock_lhb_detail_daily_sina(date: str = '20240222') -> pandas.DataFrame
+file: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\flow\stock_lhb_sina.py
+urls: ['https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lhb/index.phtml']
+def stock_lhb_detail_daily_sina(date: str = "20240222") -> pd.DataFrame:
+    """
+    龙虎榜-每日详情
+    https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lhb/index.phtml
+    :param date: 交易日
+    :type date: str
+    :return: 龙虎榜-每日详情
+    :rtype: pandas.DataFrame
+    """
+    date = "-".join([date[:4], date[4:6], date[6:]])
+    url = "https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lhb/index.phtml"
+    params = {"tradedate": date}
+    r = http.get(url, params=params)
+    soup = BeautifulSoup(r.text, features="lxml")
+    selected_html = soup.find(name="div", attrs={"class": "list"}).find_all(
+        name="table", attrs={"class": "list_table"}
+    )
+    big_df = pd.DataFrame()
+    for table in selected_html:
+        temp_df = pd.read_html(StringIO(table.prettify()), header=0, skiprows=1)[0]
+        temp_symbol = pd.read_html(StringIO(table.prettify()))[0].iat[0, 0]
+        temp_df["指标"] = temp_symbol
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+    big_df["股票代码"] = big_df["股票代码"].astype(str).str.zfill(6)
+    del big_df["查看详情"]
+    big_df.columns = [
+        "序号",
+        "股票代码",
+        "股票名称",
+        "收盘价",
+        "对应值",
+        "成交量",
+        "成交额",
+        "指标",
+    ]
+    big_df["收盘价"] = pd.to_numeric(big_df["收盘价"], errors="coerce")
+    big_df["对应值"] = pd.to_numeric(big_df["对应值"], errors="coerce")
+    big_df["成交量"] = pd.to_numeric(big_df["成交量"], errors="coerce")
+    big_df["成交额"] = pd.to_numeric(big_df["成交额"], errors="coerce")
+    return big_df
+
+
+### stock_zh_index_daily: NOT PRESENT
+
+### tool_trade_date_hist_sina: NOT PRESENT
+
+### stock_zh_a_hist: NOT PRESENT
+
+
+
+##### BAOSTOCK
+### query_adjust_factor(code, start_date=None, end_date=None)
+### query_all_stock(day=None)
+### query_balance_data(code, year=None, quarter=None)
+### query_cash_flow_data(code, year=None, quarter=None)
+### query_daily_adjust_factor(date=None)
+### query_daily_history_k_AStock(date='')
+### query_daily_history_k_ETF(date='')
+### query_deposit_rate_data(start_date='', end_date='')
+### query_dividend_data(code, year=None, yearType='report')
+### query_dupont_data(code, year=None, quarter=None)
+### query_forecast_report(code, start_date=None, end_date=None)
+### query_growth_data(code, year=None, quarter=None)
+### query_history_k_data_plus(code, fields, start_date=None, end_date=None, frequency='d', adjustflag='3')
+### query_hs300_stocks(date='')
+### query_loan_rate_data(start_date='', end_date='')
+### query_money_supply_data_month(start_date='', end_date='')
+### query_money_supply_data_year(start_date='', end_date='')
+### query_operation_data(code, year=None, quarter=None)
+### query_performance_express_report(code, start_date=None, end_date=None)
+### query_profit_data(code, year=None, quarter=None)
+### query_required_reserve_ratio_data(start_date='', end_date='', yearType='0')
+### query_stock_basic(code='', code_name='')
+### query_stock_industry(code='', date='')
+### query_sz50_stocks(date='')
+### query_trade_dates(start_date=None, end_date=None)
+### query_zz500_stocks(date='')
+# -*- coding:utf-8 -*-
+"""
+常量类
+@author: baostock.com
+@group : baostock.com
+@contact: baostock@163.com
+"""
+# 版本信息
+BAOSTOCK_CLIENT_VERSION = "00.9.40"
+BAOSTOCK_AUTHOR = "baostock.com"
+BAOSTOCK_SERVER_IP = "public-api.baostock.com"   # localhost 127.0.0.1 public-api.baostock.com
+BAOSTOCK_VIP_SERVER_IP = "vip-api.baostock.com"  # localhost 127.0.0.1 vip-api.baostock.com
+BAOSTOCK_SERVER_PORT = 10030
+
+
+STOCK_CODE_LENGTH = 9  # 证券代码的长度
+MESSAGE_SPLIT = "\1"  # 消息内部的分隔符
+
+DELIMITER = "\n"  # 分隔符号,消息与消息之间的分隔符
+
+# 参数各属性间的分隔符，如queryHistoryKData中的fields
+ATTRIBUTE_SPLIT = ","
+# 消息头中，消息体长度，占的位数
+MESSAGE_HEADER_BODYLENGTH = 10
+# message头长度
+MESSAGE_HEADER_LENGTH = 21
+
+
+# 以下为消息请求类型
+MESSAGE_TYPE_LOGIN_REQUEST = "00"  # 登陆请求
+MESSAGE_TYPE_LOGIN_RESPONSE = "01"  # 登陆响应
+MESSAGE_TYPE_LOGOUT_REQUEST = "02"  # 登出请求
+MESSAGE_TYPE_LOGOUT_RESPONSE = "03"  # 登出响应
+MESSAGE_TYPE_EXCEPTIONS = "04"  # 错误信息
+MESSAGE_TYPE_QUERYDIVIDENDDATA_REQUEST = "13"  # 估值指标（季频）,股息分红 请求
+MESSAGE_TYPE_QUERYDIVIDENDDATA_RESPONSE = "14"  # 估值指标（季频）,股息分红 响应
+MESSAGE_TYPE_ADJUSTFACTOR_REQUEST = "15"  # 复权因子数据 请求
+MESSAGE_TYPE_ADJUSTFACTOR_RESPONSE = "16"  # 复权因子数据 响应
+MESSAGE_TYPE_PROFITDATA_REQUEST = "17"  # 季频估值指标盈利能力 请求
+MESSAGE_TYPE_PROFITDATA_RESPONSE = "18"  # 季频估值指标盈利能力 响应
+MESSAGE_TYPE_OPERATIONDATA_REQUEST = "19"  # 获取季频估值指标营运能力 请求
+MESSAGE_TYPE_OPERATIONDATA_RESPONSE = "20"  # 获取季频估值指标营运能力 响应
+MESSAGE_TYPE_QUERYGROWTHDATA_REQUEST = "21"  # 季频估值指标成长能力 请求
+MESSAGE_TYPE_QUERYGROWTHDATA_RESPONSE = "22"  # 季频估值指标成长能力 响应
+MESSAGE_TYPE_QUERYDUPONTDATA_REQUEST = "23"  # 获取季频估值指标杜邦指数  请求
+MESSAGE_TYPE_QUERYDUPONTDATA_RESPONSE = "24"  # 获取季频估值指标杜邦指数  响应
+MESSAGE_TYPE_QUERYBALANCEDATA_REQUEST = "25"  # 获取季频估值指标偿债能力  请求
+MESSAGE_TYPE_QUERYBALANCEDATA_RESPONSE = "26"  # 获取季频估值指标偿债能力  响应
+MESSAGE_TYPE_QUERYCASHFLOWDATA_REQUEST = "27"  # 获取季频估值指标现金流量   请求
+MESSAGE_TYPE_QUERYCASHFLOWDATA_RESPONSE = "28"  # 获取季频估值指标现金流量   响应
+MESSAGE_TYPE_QUERYPERFORMANCEEXPRESSREPORT_REQUEST = "29"  # 公司公告,公司业绩报告 请求
+MESSAGE_TYPE_QUERYPERFORMANCEEXPRESSREPORT_RESPONSE = "30"  # 公司公告,公司业绩报告 响应
+MESSAGE_TYPE_QUERYFORECASTREPORT_REQUEST = "31"  # 公司公告,公司业绩预告 请求
+MESSAGE_TYPE_QUERYFORECASTREPORT_RESPONSE = "32"  # 公司公告,公司业绩预告 响应
+MESSAGE_TYPE_QUERYTRADEDATES_REQUEST = "33"  # 查询出给定范围的交易日信息 请求
+MESSAGE_TYPE_QUERYTRADEDATES_RESPONSE = "34"  # 查询出给定范围的交易日信息 响应
+MESSAGE_TYPE_QUERYALLSTOCK_REQUEST = "35"  # 询给定日期的所有证券信息 请求
+MESSAGE_TYPE_QUERYALLSTOCK_RESPONSE = "36"  # 询给定日期的所有证券信息 响应
+
+
+
+MESSAGE_TYPE_QUERYSTOCKBASIC_REQUEST = "45"  # 获取证券基本资料请求
+MESSAGE_TYPE_QUERYSTOCKBASIC_RESPONSE = "46"  # 获取证券基本资料响应
+MESSAGE_TYPE_QUERYDEPOSITRATEDATA_REQUEST = "47"  # 获取存款利率请求
+MESSAGE_TYPE_QUERYDEPOSITRATEDATA_RESPONSE = "48"  # 获取存款利率响应
+MESSAGE_TYPE_QUERYLOANRATEDATA_REQUEST = "49"  # 获取贷款利率请求
+MESSAGE_TYPE_QUERYLOANRATEDATA_RESPONSE = "50"  # 获取贷款利率响应
+MESSAGE_TYPE_QUREYREQUIREDRESERVERATIODATA_REQUEST = "51"  # 获取存款准备金率请求
+MESSAGE_TYPE_QUREYREQUIREDRESERVERATIODATA_RESPONSE = "52"  # 获取存款准备金率响应
+MESSAGE_TYPE_QUERYMONEYSUPPLYDATAMONTH_REQUEST = "53"  # 获取货币供应量请求
+MESSAGE_TYPE_QUERYMONEYSUPPLYDATAMONTH_RESPONSE = "54"  # 获取货币供应量响应
+MESSAGE_TYPE_QUERYMONEYSUPPLYDATAYEAR_REQUEST = "55"  # 获取货币供应量（年底余额）请求
+MESSAGE_TYPE_QUERYMONEYSUPPLYDATAYEAR_RESPONSE = "56"  # 获取货币供应量（年底余额）响应
+MESSAGE_TYPE_QUERYSHIBORDATA_REQUEST = "57"  # 获取银行间同业拆放利率请求
+MESSAGE_TYPE_QUERYSHIBORDATA_RESPONSE = "58"  # 获取银行间同业拆放利率响应
+MESSAGE_TYPE_QUERYSTOCKINDUSTRY_REQUEST = "59"  # 获取行业类别请求
+MESSAGE_TYPE_QUERYSTOCKINDUSTRY_RESPONSE = "60"  # 获取行业类别响应
+MESSAGE_TYPE_QUERYHS300STOCKS_REQUEST = "61"  # 获取沪深300成分股请求
+MESSAGE_TYPE_QUERYHS300STOCKS_RESPONSE = "62"  # 获取沪深300成分股响应
+MESSAGE_TYPE_QUERYSZ50STOCKS_REQUEST = "63"  # 获取上证50成分股请求
+MESSAGE_TYPE_QUERYSZ50STOCKS_RESPONSE = "64"  # 获取上证50成分股响应
+MESSAGE_TYPE_QUERYZZ500STOCKS_REQUEST = "65"  # 获取中证500成分股请求
+MESSAGE_TYPE_QUERYZZ500STOCKS_RESPONSE = "66"  # 获取中证500成分股响应
+MESSAGE_TYPE_QUERYTERMINATEDSTOCKS_REQUEST = "67"  # 获取终止上市股票请求
+MESSAGE_TYPE_QUERYTERMINATEDSTOCKS_RESPONSE = "68"  # 获取终止上市股票响应
+MESSAGE_TYPE_QUERYSUSPENDEDSTOCKS_REQUEST = "69"   # 获取暂停上市股票列表请求
+MESSAGE_TYPE_QUERYSUSPENDEDSTOCKS_RESPONSE = "70"  # 获取暂停上市股票列表响应
+MESSAGE_TYPE_QUERYSTSTOCKS_REQUEST = "71"  # 获取ST股票列表请求
+MESSAGE_TYPE_QUERYSTSTOCKS_RESPONSE = "72"  # 获取ST股票列表响应
+MESSAGE_TYPE_QUERYSTARSTSTOCKS_REQUEST = "73"  # 获取*ST股票列表请求
+MESSAGE_TYPE_QUERYSTARSTSTOCKS_RESPONSE = "74"  # 获取*ST股票列表响应
+MESSAGE_TYPE_QUERYCPIDATA_REQUEST = "75"  # 获取居民价格消费指数请求
+MESSAGE_TYPE_QUERYCPIDATA_RESPONSE = "76"  # 获取居民价格消费指数响应
+MESSAGE_TYPE_QUERYPPIDATA_REQUEST = "77"    # 获取工业品出厂价格指数请求
+MESSAGE_TYPE_QUERYPPIDATA_RESPONST = "78"    # 获取工业品出厂价格指数响应
+MESSAGE_TYPE_QUERYPMIDATA_REQUEST = "79"    # 获取采购经理人指数请求
+MESSAGE_TYPE_QUERYPMIDATA_RESPONST = "80"    # 获取采购经理人指数响应
+MESSAGE_TYPE_QUERYSTOCKCONCEPT_REQUEST = "81"    # 获取概念分类请求
+MESSAGE_TYPE_QUERYSTOCKCONCEPT_RESPONST = "82"    # 获取概念分类响应
+MESSAGE_TYPE_QUERYSTOCKAREA_REQUEST = "83"    # 获取地域分类请求
+MESSAGE_TYPE_QUERYSTOCKAREA_RESPONST = "84"    # 获取地域分类响应
+MESSAGE_TYPE_QUERYAMESTOCK_REQUEST = "85"    # 获取中小板分类请求
+MESSAGE_TYPE_QUERYAMESTOCK_RESPONST = "86"    # 获取中小板分类响应
+MESSAGE_TYPE_QUERYGEMSTOCK_REQUEST = "87"    # 获取创业板分类请求
+MESSAGE_TYPE_QUERYGEMSTOCK_RESPONST = "88"    # 获取创业板分类响应
+MESSAGE_TYPE_QUERYSHHKSTOCK_REQUEST = "89"    # 获取沪港通请求
+MESSAGE_TYPE_QUERYSHHKSTOCK_RESPONST = "90"    # 获取沪港通响应
+MESSAGE_TYPE_QUERYSZHKSTOCK_REQUEST = "91"    # 获取深港通请求
+MESSAGE_TYPE_QUERYSZHKSTOCK_RESPONST = "92"    # 获取深港通响应
+MESSAGE_TYPE_QUERYSTOCKINRISK_REQUEST = "93"    # 获取风险警示板分类请求
+MESSAGE_TYPE_QUERYSTOCKINRISK_RESPONST = "94"    # 获取风险警示板分类响应
+MESSAGE_TYPE_GETKDATAPLUS_REQUEST = "95"   # 获取历史K线数据Plus的请求，行情压缩
+MESSAGE_TYPE_GETKDATAPLUS_RESPONSE = "96"  # 获取历史K线数据Plus的响应，行情压缩
+MESSAGE_TYPE_GETKDaily_D_AStock_REQUEST = "98"   # 获取某日所有股票日K线数据的请求
+MESSAGE_TYPE_GETKDaily_D_AStock_RESPONSE = "99"  # 获取某日所有股票日K线数据的响应
+MESSAGE_TYPE_GETKDaily_D_ETF_REQUEST = "9A"   # 获取某日所有ETF日K线数据的请求
+MESSAGE_TYPE_GETKDaily_D_ETF_RESPONSE = "9B"  # 获取某日所有ETF日K线数据的响应
+MESSAGE_TYPE_GETKDaily_ADJUSTFACTOR_REQUEST = "9C"   # 获取某日复权因子信息数据的请求
+MESSAGE_TYPE_GETKDaily_ADJUSTFACTOR_RESPONSE = "9D"  # 获取某日复权因子信息数据的响应
+
+# 以上为消息请求类型
+
+
+DEFAULT_START_DATE = "2015-01-01"  # 默认开始时间
+
+# 方法名及包名的对应关系
+MESSAGE_PACKAGE_MAPPING = {
+    "__query_history_k_data_page": "baostock.security.history"
+
+}
+
+
+# 返回消息体进行压缩的响应代码
+# 目前消息体进行压缩的有：获取历史K线数据响应
+COMPRESSED_MESSAGE_TYPE_TUPLE = (MESSAGE_TYPE_GETKDATAPLUS_RESPONSE
+                                 ,MESSAGE_TYPE_GETKDaily_D_AStock_RESPONSE
+                                 ,MESSAGE_TYPE_GETKDaily_D_ETF_RESPONSE
+                                 ,MESSAGE_TYPE_GETKDaily_ADJUSTFACTOR_RESPONSE )
+
+# 以下是错误代码
+
+BSERR_SUCCESS = "0"  # 正确返回值
+BSERR_NO_LOGIN = "10001001"  # 用户未登陆
+BSERR_USERNAMEORPASSWORD_ERR = "10001002"  # 用户名或密码错误
+BSERR_GETUSERINFO_FAIL = "10001003"  # 获取用户信息失败
+BSERR_CLIENT_VESION_EXPIRE = "10001004"  # 客户端版本号过期
+BSERR_LOGIN_COUNT_LIMIT = "10001005"  # 账号登陆数达到上限
+BSERR_ACCESS_INSUFFICIENCE = "10001006"  # 用户权限不足
+BSERR_NEED_ACTIVATE = "10001007"  # 需要登录激活
+BSERR_USERNAME_EMPTY = "10001008"  # 用户名为空
+BSERR_PASSWORD_EMPTY = "10001009"  # 密码为空
+BSERR_LOGOUT_FAIL = "10001010"  # 用户登出失败
+BSERR_BLACKLIST_USER = "10001011"  # 黑名单用户
+BSERR_APIKey_FORMAT_INCORRECT = "10001012"  #APIKey格式不正确
+BSERR_SOCKET_ERR = "10002001"  # 网络错误
+BSERR_CONNECT_FAIL = "10002002"  # 网络连接失败
+BSERR_CONNECT_TIMEOUT = "10002003"  # 网络连接超时
+BSERR_RECVCONNECTION_CLOSED = "10002004"  # 网络接收时连接断开
+BSERR_SENDSOCK_FAIL = "10002005"  # 网络发送失败
+BSERR_SENDSOCK_TIMEOUT = "10002006"  # 网络发送超时
+BSERR_RECVSOCK_FAIL = "10002007"  # 网络接收错误
+BSERR_RECVSOCK_TIMEOUT = "10002008"  # 网络接收超时
+BSERR_PARSE_DATA_ERR = "10004001"  # 解析数据错误
+BSERR_UNGZIP_DATA_FAIL = "10004002"  # gzip 解压失败
+BSERR_UNKNOWN_ERR = "10004003"  # 客户端未知错误
+BSERR_OUTOF_BOUNDS = "10004004"  # 数组越界
+BSERR_INPARAM_EMPTY = "10004005"  # 传入参数为空
+BSERR_PARAM_ERR = "10004006"  # 参数错误
+BSERR_START_DATE_ERR = "10004007"  # 起始日期格式不正确
+BSERR_END_DATE_ERR = "10004008"  # 截止日期格式不正确
+BSERR_START_BIGTHAN_END = "10004009"  # 起始日期大于终止日期
+BSERR_DATE_ERR = "10004010"  # 日期格式不正确
+BSERR_CODE_INVALIED = "10004011"  # 无效的证券代码
+BSERR_INDICATOR_INVALIED = "10004012"  # 无效的指标
+BSERR_BEYOND_DATE_SUPPORT = "10004013"  # 超出日期支持范围
+BSERR_MIXED_CODES_MARKET = "10004014"  # 不支持的混合证券品种
+BSERR_NO_SUPPORT_CODES_MARKET = "10004015"  # 不支持的证券代码品种
+BSERR_ORDER_TO_UPPER_LIMIT = "10004016"  # 交易条数超过上限
+BSERR_NO_SUPPORT_ORDERINFO = "10004017"  # 不支持的交易信息
+BSERR_INDICATOR_REPEAT = "10004018"  # 指标重复
+BSERR_MESSAGE_ERROR = "10004019"  # 消息格式不正确
+BSERR_MESSAGE_CODE_ERROR = "10004020"  # 错误的消息类型
+BSERR_SYSTEM_ERROR = "10005001"  # 系统级别错误
+
+# 以上是错误代码
+
+CLIENT_ERROR_PARAM = "参数错误，请检查。"  # 客户端参数错误
+
+BAOSTOCK_PER_PAGE_COUNT = 2000  # 默认每页查询条数

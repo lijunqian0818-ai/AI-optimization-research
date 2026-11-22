@@ -1,0 +1,25 @@
+[
+ {
+  "context": {
+   "review_id": "8c47780a-4b0c-429b-8db1-d0752499dc2a",
+   "dataset": "06f59767418c9281c39388f372baff0155e81e864df4a22ebb257e0af042c2f2",
+   "stage": "ta",
+   "protocol_hash": "2062c7ca2bd2ad7b7323936a8e66c07d9a4cd97d9aea9170edfc388323efb581",
+   "config_hash": "8181e460c7ad9d0a2c1355c24cc25c44b4c34ddd30d804b12b6be824b2f83b71",
+   "content_id": "428c9c73a8919f77b426c89a0819b5ee55c150eed4532f20fabc1388ebed6e22",
+   "config_scope": "stage-v1",
+   "revision": 1,
+   "protocol_path": "C:\\Users\\lijun\\Desktop\\AI-Optimization-Research\\literature\\screening\\screening_protocol.md",
+   "context_id": "3cc462c7252047d6c18cccf178e2e5951bc28368d7999fed8ff9d2ef600b5a84"
+  },
+  "state": {
+   "decisions.json": null,
+   "decisions_meta.json": null,
+   "pending.json": null,
+   "agreement.json": null,
+   "qc_batches.json": null,
+   "qc_reasons.json": null,
+   "qc_candidates.json": null
+  }
+ }
+]

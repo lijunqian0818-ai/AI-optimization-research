@@ -1,0 +1,59 @@
+{
+ "runs": [
+  "experiments/results/confirm/smoke_r2",
+  "experiments/results/confirm/ci_run_A",
+  "experiments/results/confirm/ci_run_B"
+ ],
+ "results_hash": [
+  "75e783902c40fceaec2831f0d1e99828162ebd6145b3679d70c718d1653418ce",
+  "75e783902c40fceaec2831f0d1e99828162ebd6145b3679d70c718d1653418ce",
+  "75e783902c40fceaec2831f0d1e99828162ebd6145b3679d70c718d1653418ce"
+ ],
+ "standard_orders_hash": [
+  "a48c37082bee10e0a70b7f09e95b8e7c71d1af950da30614ff477b6e9fd95917",
+  "a48c37082bee10e0a70b7f09e95b8e7c71d1af950da30614ff477b6e9fd95917",
+  "a48c37082bee10e0a70b7f09e95b8e7c71d1af950da30614ff477b6e9fd95917"
+ ],
+ "dump": {
+  "nominations": [
+   "eeeed23ddad8de705206bade6c327b8e15622ce460bd23fc9db7574b8e2ed456",
+   "eeeed23ddad8de705206bade6c327b8e15622ce460bd23fc9db7574b8e2ed456",
+   "eeeed23ddad8de705206bade6c327b8e15622ce460bd23fc9db7574b8e2ed456"
+  ],
+  "submissions": [
+   "ae810710dbab19d07a04ebfaf93e84dcb351bd10e918457ee8747c352dc08d20",
+   "ae810710dbab19d07a04ebfaf93e84dcb351bd10e918457ee8747c352dc08d20",
+   "ae810710dbab19d07a04ebfaf93e84dcb351bd10e918457ee8747c352dc08d20"
+  ],
+  "decision_days": [
+   "b1d6b2cff8dd9dbae5c8cde13e8d84c63957577499359f545bf6e85413386170",
+   "b1d6b2cff8dd9dbae5c8cde13e8d84c63957577499359f545bf6e85413386170",
+   "b1d6b2cff8dd9dbae5c8cde13e8d84c63957577499359f545bf6e85413386170"
+  ],
+  "base_ic": [
+   "cafc13cf62270d5d65095c24286f29968b4641ffee5ccb9e4eb043dc905a8738",
+   "cafc13cf62270d5d65095c24286f29968b4641ffee5ccb9e4eb043dc905a8738",
+   "cafc13cf62270d5d65095c24286f29968b4641ffee5ccb9e4eb043dc905a8738"
+  ]
+ },
+ "archive_entries_hash": [
+  "7202f5f7ef441cdfa3f5329dcfe012e7b5fd74cbc94f844fad5ec19ef43a3fa2",
+  "7202f5f7ef441cdfa3f5329dcfe012e7b5fd74cbc94f844fad5ec19ef43a3fa2",
+  "7202f5f7ef441cdfa3f5329dcfe012e7b5fd74cbc94f844fad5ec19ef43a3fa2"
+ ],
+ "feature_files": {
+  "compared": 97,
+  "identical_in_all_runs": 97,
+  "differing": []
+ },
+ "results_identical": true,
+ "standard_orders_identical": true,
+ "dump_identical": {
+  "nominations": true,
+  "submissions": true,
+  "decision_days": true,
+  "base_ic": true
+ },
+ "archive_identical": true,
+ "pass": true
+}

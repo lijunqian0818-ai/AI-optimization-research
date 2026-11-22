@@ -1,0 +1,21 @@
+{
+ "source": "C:\\Users\\lijun\\AppData\\Local\\Temp\\claude\\7dc3241753d402cb\\d5862b53-ca29-4bef-8196-d9ed1a8dc7be\\scratchpad\\cutoff_trees\\tree_A",
+ "inner_cutoff": "2019-12-31",
+ "data_cutoff": "2021-12-31",
+ "seed": 20261117,
+ "counts": {
+  "listing_outDate_set_in_(C,2021]": 30,
+  "bar_rows_perturbed": 43224,
+  "bar_rows_deleted": 842,
+  "event_rows_perturbed": 298,
+  "event_rows_fabricated": 218,
+  "zo_lhb_detail_rows_perturbed": 34834,
+  "zo_lhb_detail_rows_fabricated": 2400,
+  "zo_lhb_jgmmtj_rows_perturbed": 14979,
+  "zo_lhb_jgmmtj_rows_fabricated": 2400,
+  "zo_dzjy_mrmx_rows_perturbed": 62606,
+  "zo_dzjy_mrmx_rows_fabricated": 2400,
+  "zo_ins_raw_rows_perturbed": 30004,
+  "zo_ins_raw_rows_fabricated": 200
+ }
+}

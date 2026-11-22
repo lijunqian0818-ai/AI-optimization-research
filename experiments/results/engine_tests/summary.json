@@ -1,0 +1,191 @@
+{
+ "run_at": "2026-11-16T00:09:40",
+ "python": "3.14.4",
+ "data_cutoff_of_dry_run": "2021-12-31",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ },
+ "modules": {
+  "rule_calendar": {
+   "n": 15,
+   "passed": 15,
+   "failed": 0
+  },
+  "fills": {
+   "n": 30,
+   "passed": 30,
+   "failed": 0
+  },
+  "ledger_r4": {
+   "n": 20,
+   "passed": 20,
+   "failed": 0
+  },
+  "v07_rules": {
+   "n": 20,
+   "passed": 20,
+   "failed": 0
+  },
+  "v07_components": {
+   "n": 15,
+   "passed": 15,
+   "failed": 0
+  },
+  "reconcile_random": {
+   "n": 6,
+   "passed": 6,
+   "failed": 0
+  },
+  "v08_changes": {
+   "n": 12,
+   "passed": 12,
+   "failed": 0
+  }
+ },
+ "failed_tests": [],
+ "max_residuals_random": {
+  "naive_vs_ledger_rel": 2.6077032089233397e-15,
+  "naive_variants_max_rel": 2.4214386940002442e-15,
+  "R2_daily_rel": 5.124906799045218e-16,
+  "R2_cum_rel": 3.294871930847876e-16,
+  "R1_residual_rel": 1.862645149230957e-16,
+  "R1_residual_alt_rel": 1.862645149230957e-16,
+  "terms_vs_wealth_diff_rel": 5.296897143125534e-16,
+  "R1_normalised_residual_abs": 3.3306690738754696e-16,
+  "normalised_terms_vs_return_diff_abs": 1.4710455076283324e-15,
+  "trade_vector_vs_records_rel": 5.529727786779404e-17,
+  "cash_return_recursion_rel": 6.75208866596222e-16,
+  "turnover_identity_rel": 6.984919309616089e-17,
+  "cost_total_vs_lot_costs_rel": 2.9103830456733702e-18
+ },
+ "seeds": [
+  [
+   11,
+   "2012-10-08"
+  ],
+  [
+   23,
+   "2015-06-01"
+  ],
+  [
+   37,
+   "2020-06-01"
+  ],
+  [
+   41,
+   "2023-06-01"
+  ],
+  [
+   53,
+   "2017-03-01"
+  ]
+ ],
+ "random_counts": {
+  "buy_orders_checked": 5939,
+  "fill_decision_mismatches": 0,
+  "buy_orders_checked_cap_zero": 5939,
+  "fill_decision_mismatches_cap_zero": 0,
+  "lots": 2690,
+  "lots_by_succession_per_seed": {
+   "11": 11,
+   "23": 12,
+   "37": 4,
+   "41": 17,
+   "53": 4
+  },
+  "R3_days_over_tolerance": 0,
+  "non_netting_days": 426
+ },
+ "dryrun": {
+  "load_error": false,
+  "pipeline_error": false,
+  "part_b_error": false,
+  "seconds": 87.2,
+  "pipeline": {
+   "naive_vs_ledger_rel": 7.823109626770019e-15,
+   "R2_daily_rel": 1.0704806096944417e-15,
+   "R2_cum_rel": 1.563103069202043e-15,
+   "trade_vector_vs_records_rel": 1.4551915228366851e-18,
+   "turnover_identity_rel": 1.1641532182693481e-17,
+   "cost_total_vs_lot_costs_rel": 0.0,
+   "fill_decision_mismatches": 0,
+   "buy_orders_rechecked": 8987,
+   "R2_pass": true,
+   "R3_pass": true,
+   "v07_counts": {
+    "stale_cap_fills": 20,
+    "fills_with_fewer_than_20_traded_days_in_the_cap_window": 0,
+    "sell_orders_not_filled_by_the_cap": 108,
+    "no_ref": 0,
+    "unsubmitted_by_reason": {},
+    "labels_M_from_missing_rows": 0,
+    "orders_on_rows_filled_from_xsrc": 0,
+    "cap_zero_sell_orders_not_filled_by_the_cap": 144,
+    "cap_zero_sell_orders_with_cap_exactly_zero": 20,
+    "cap_zero_naive_vs_ledger_rel": 7.450580596923828e-16,
+    "non_netting_days": 1
+   }
+  },
+  "pipeline_sina_single_source": {
+   "naive_vs_ledger_rel": 4.656612873077393e-15,
+   "R2_daily_rel": 9.98116176406879e-16,
+   "R2_cum_rel": 2.752813088591211e-16,
+   "trade_vector_vs_records_rel": 1.4551915228366851e-18,
+   "turnover_identity_rel": 1.1641532182693481e-17,
+   "cost_total_vs_lot_costs_rel": 0.0,
+   "fill_decision_mismatches": 0,
+   "buy_orders_rechecked": 8987,
+   "R2_pass": true,
+   "R3_pass": true,
+   "v07_counts": {
+    "stale_cap_fills": 20,
+    "fills_with_fewer_than_20_traded_days_in_the_cap_window": 0,
+    "sell_orders_not_filled_by_the_cap": 108,
+    "no_ref": 0,
+    "unsubmitted_by_reason": {},
+    "labels_M_from_missing_rows": 0,
+    "orders_on_rows_filled_from_xsrc": 0,
+    "cap_zero_sell_orders_not_filled_by_the_cap": 144,
+    "cap_zero_sell_orders_with_cap_exactly_zero": 20,
+    "cap_zero_naive_vs_ledger_rel": 2.7939677238464356e-15,
+    "non_netting_days": 1
+   }
+  },
+  "pipeline_merged_provisional": {
+   "naive_vs_ledger_rel": 7.823109626770019e-15,
+   "R2_daily_rel": 1.0704806096944417e-15,
+   "R2_cum_rel": 1.4844260931567987e-15,
+   "trade_vector_vs_records_rel": 1.4551915228366851e-18,
+   "turnover_identity_rel": 1.1641532182693481e-17,
+   "cost_total_vs_lot_costs_rel": 0.0,
+   "fill_decision_mismatches": 0,
+   "buy_orders_rechecked": 8987,
+   "R2_pass": true,
+   "R3_pass": true,
+   "v07_counts": {
+    "stale_cap_fills": 20,
+    "fills_with_fewer_than_20_traded_days_in_the_cap_window": 0,
+    "sell_orders_not_filled_by_the_cap": 108,
+    "no_ref": 0,
+    "unsubmitted_by_reason": {},
+    "labels_M_from_missing_rows": 0,
+    "orders_on_rows_filled_from_xsrc": 0,
+    "cap_zero_sell_orders_not_filled_by_the_cap": 144,
+    "cap_zero_sell_orders_with_cap_exactly_zero": 20,
+    "cap_zero_naive_vs_ledger_rel": 3.725290298461914e-16,
+    "non_netting_days": 1
+   }
+  },
+  "all_landed_bars": {
+   "names_loaded": 1000,
+   "rows": 2975754,
+   "n_problems": 0,
+   "skipped_recently_modified": 0,
+   "truncation_failures": []
+  }
+ },
+ "total_tests": 118,
+ "total_passed": 118
+}

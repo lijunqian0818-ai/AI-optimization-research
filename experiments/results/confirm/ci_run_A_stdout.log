@@ -1,0 +1,82 @@
+12:48:24 +     17s run 'smoke' started; data cut-off 2021-12-31; out C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\confirm\ci_run_A; T = 4; seeds (0, 1); gate window y1; criterion V
+12:48:24 +     17s === stage 1_list
+12:48:24 +     17s list: 100 names (frozen list), without bar file 0
+12:48:24 +     17s === stage 1_list done in 0.1 s
+12:48:24 +     17s === stage 2_market
+12:48:37 +     30s === stage 2_market done in 13.6 s
+12:48:37 +     30s === stage 3_panel
+12:48:38 +     30s [panel] provenance check: rebuild
+[panel] 100/100 names built, 299s
+12:53:46 +    339s === stage 3_panel done in 308.4 s
+12:53:46 +    339s === stage 4_universe
+12:53:46 +    339s === stage 4_universe done in 0.3 s
+12:53:46 +    339s === stage 5_features
+12:53:57 +    350s === stage 5_features done in 11.0 s
+12:53:57 +    350s === stage 6_standard_orders
+12:54:25 +    378s === stage 6_standard_orders done in 27.8 s
+12:54:25 +    378s === stage 7_base
+12:55:16 +    429s [base lgbm] config 1/4 validation criteria computed (24.67 s fit time)
+12:55:16 +    429s [base lgbm] config 2/4 validation criteria computed (12.59 s fit time)
+12:55:16 +    429s [base lgbm] config 3/4 validation criteria computed (27.59 s fit time)
+12:55:16 +    429s [base lgbm] config 4/4 validation criteria computed (34.07 s fit time)
+12:56:30 +    503s [base lgbm] configuration 2, seed 0: deployment fits done
+12:56:30 +    503s [base lgbm] configuration 2, seed 1: deployment fits done
+12:56:35 +    508s [base ridge] config 1/4 validation criteria computed (0.78 s fit time)
+12:56:35 +    508s [base ridge] config 2/4 validation criteria computed (0.78 s fit time)
+12:56:35 +    508s [base ridge] config 3/4 validation criteria computed (0.59 s fit time)
+12:56:35 +    508s [base ridge] config 4/4 validation criteria computed (3.81 s fit time)
+12:56:38 +    511s [base ridge] configuration 0, seed 0: deployment fits done
+12:56:41 +    514s [base ridge] configuration 1, seed 0: deployment fits done
+12:57:07 +    540s [NET-U15] config 1/4 validation criteria computed (9.2 s fit time)
+12:57:07 +    540s [NET-U15] config 2/4 validation criteria computed (7.34 s fit time)
+12:57:07 +    540s [NET-U15] config 3/4 validation criteria computed (15.58 s fit time)
+12:57:07 +    540s [NET-U15] config 4/4 validation criteria computed (20.29 s fit time)
+12:57:58 +    591s [NET-U15] configuration 3, seed 0: deployment fits done
+12:57:58 +    591s [NET-U15] configuration 3, seed 1: deployment fits done
+12:58:03 +    596s === stage 7_base done in 217.9 s
+12:58:03 +    596s === stage 8_gates
+12:58:47 +    640s [gates lgbm] LOSS-LR(-Z): tuned over 4 configurations
+12:59:31 +    684s [gates lgbm] LOSS(-Z): tuned over 4 configurations
+13:00:23 +    736s [gates lgbm] LOSS(+Z_H): tuned over 4 configurations
+13:00:55 +    768s [gates lgbm] LOSS(+Z_O*): tuned over 4 configurations
+13:01:58 +    831s [gates lgbm] LOSS(+Z_O): tuned over 4 configurations
+13:02:39 +    871s [gates lgbm] LOSS(+Z_H+Z_O*): tuned over 4 configurations
+13:03:09 +    902s [gates lgbm] NET-K(-Z): tuned over 4 configurations
+13:03:54 +    947s [gates lgbm] NET-K(+Z_H): tuned over 4 configurations
+13:04:50 +   1003s [gates lgbm] NET-K(+Z_O*): tuned over 4 configurations
+13:05:10 +   1023s [gates lgbm] NET-U(-Z): tuned over 4 configurations
+13:05:52 +   1064s [gates lgbm] LOSS(-Z)-thr: tuned over 4 configurations
+13:06:09 +   1082s [gates lgbm] LOSS(+Z_H)-thr: tuned over 4 configurations
+13:06:54 +   1127s [gates lgbm] LOSS(+Z_O)-thr: tuned over 4 configurations
+13:06:54 +   1127s [gates ridge] LOSS-LR(-Z): tuned over 4 configurations
+13:08:22 +   1215s [gates ridge] LOSS(-Z): tuned over 4 configurations
+13:08:26 +   1219s [gates ridge] LOSS(+Z_H): tuned over 4 configurations
+13:09:42 +   1295s [gates ridge] LOSS(+Z_O*): tuned over 4 configurations
+13:09:52 +   1304s [gates ridge] LOSS(+Z_O): tuned over 4 configurations
+13:11:03 +   1376s [gates ridge] LOSS(+Z_H+Z_O*): tuned over 4 configurations
+13:11:19 +   1392s [gates ridge] NET-K(-Z): tuned over 4 configurations
+13:12:08 +   1441s [gates ridge] NET-K(+Z_H): tuned over 4 configurations
+13:12:23 +   1455s [gates ridge] NET-K(+Z_O*): tuned over 4 configurations
+13:13:01 +   1494s [gates ridge] NET-U(-Z): tuned over 4 configurations
+13:13:10 +   1503s [gates ridge] LOSS(-Z)-thr: tuned over 4 configurations
+13:14:02 +   1555s [gates ridge] LOSS(+Z_H)-thr: tuned over 4 configurations
+13:14:08 +   1560s [gates ridge] LOSS(+Z_O)-thr: tuned over 4 configurations
+13:15:11 +   1624s [follow-up lgbm] perm Z_H: 2 draws x 2 seeds refitted (63.3 s)
+13:15:13 +   1626s [follow-up lgbm] noise Z_H: 2 draws x 2 seeds refitted (65.3 s)
+13:15:42 +   1655s [follow-up lgbm] perm Z_O*: 2 draws x 2 seeds refitted (30.8 s)
+13:15:45 +   1658s [follow-up lgbm] noise Z_O*: 2 draws x 2 seeds refitted (31.9 s)
+13:16:31 +   1704s [follow-up ridge] perm Z_H: 2 draws x 2 seeds refitted (49.6 s)
+13:16:35 +   1708s [follow-up ridge] noise Z_H: 2 draws x 2 seeds refitted (50.6 s)
+13:16:56 +   1729s [follow-up ridge] perm Z_O*: 2 draws x 2 seeds refitted (24.7 s)
+13:16:59 +   1732s [follow-up ridge] noise Z_O*: 2 draws x 2 seeds refitted (23.5 s)
+13:16:59 +   1732s === stage 8_gates done in 1136.2 s
+13:17:02 +   1734s decisions dumped: nominations, submissions, decision_days, base_ic, dump_meta
+13:17:02 +   1734s === stage 9_backtests
+13:17:21 +   1754s main backtests: 92 runs
+13:18:35 +   1828s tuning archive written: sha256 4c1c3c6e25bd14507b78b583778f38250aff14453ca200a5ac3736e1d53a513d
+13:18:35 +   1828s second-stage backtests: 56 runs
+13:19:31 +   1883s === stage 9_backtests done in 149.0 s
+13:19:33 +   1886s decisions dumped again after stage 9 (all policies)
+13:19:33 +   1886s === stage 10_estimands
+13:19:41 +   1894s === stage 10_estimands done in 7.8 s
+13:19:41 +   1894s run finished: ok

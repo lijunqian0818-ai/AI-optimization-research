@@ -1,0 +1,56 @@
+09:55:38 +      0s run 'smoke' started; data cut-off 2021-12-31; out C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\confirm\smoke_pilotcompat; T = 2; seeds (0, 1, 2); gate window y2; criterion theta_sel
+09:55:38 +      0s === stage 1_list
+09:55:38 +      0s list: 100 names, ready 100, skipped 0
+09:55:38 +      0s === stage 1_list done in 0.2 s
+09:55:38 +      0s === stage 2_market
+09:55:58 +     20s === stage 2_market done in 19.5 s
+09:55:58 +     20s === stage 3_panel
+09:56:22 +     45s === stage 3_panel done in 24.8 s
+09:56:22 +     45s === stage 4_universe
+09:56:23 +     45s === stage 4_universe done in 0.4 s
+09:56:23 +     45s === stage 5_features
+09:56:37 +     59s === stage 5_features done in 13.7 s
+09:56:37 +     59s === stage 6_standard_orders
+09:56:56 +     78s === stage 6_standard_orders done in 19.7 s
+09:56:56 +     78s === stage 7_base
+09:57:46 +    128s [base lgbm] config 1/2 validation criteria computed (49.6 s)
+09:58:05 +    148s [base lgbm] config 2/2 validation criteria computed (19.16 s)
+09:59:51 +    253s [base lgbm] seed 0: deployment fits done
+10:01:37 +    359s [base lgbm] seed 1: deployment fits done
+10:03:47 +    489s [base lgbm] seed 2: deployment fits done
+10:03:48 +    490s [base ridge] config 1/2 validation criteria computed (1.85 s)
+10:03:50 +    492s [base ridge] config 2/2 validation criteria computed (1.69 s)
+10:04:06 +    508s [base ridge] seed 0: deployment fits done
+10:04:55 +    557s === stage 7_base done in 479.0 s
+10:04:55 +    557s === stage 8_gates
+10:05:59 +    621s [gates lgbm] LOSS-LR(-Z): tuned over 2 configurations
+10:15:21 +   1183s [gates lgbm] LOSS(-Z): tuned over 2 configurations
+10:15:21 +   1183s [gates lgbm] LOSS(+Z_H): tuned over 2 configurations
+10:16:36 +   1258s [gates lgbm] LOSS(+Z_O): tuned over 2 configurations
+10:19:58 +   1460s [gates lgbm] LOSS(+Z_H+Z_O): tuned over 2 configurations
+10:19:58 +   1460s [gates lgbm] LOSS(+perm Z_H): tuned over 2 configurations
+10:21:21 +   1543s [gates lgbm] LOSS(+perm Z_O): tuned over 2 configurations
+10:22:23 +   1605s [gates lgbm] NET-K(-Z): tuned over 2 configurations
+10:23:05 +   1647s [gates lgbm] NET-K(+Z_H): tuned over 2 configurations
+10:24:20 +   1722s [gates lgbm] NET-K(+Z_O): tuned over 2 configurations
+10:25:15 +   1778s [gates lgbm] NET-U(-Z): tuned over 2 configurations
+10:25:15 +   1778s [gates ridge] LOSS-LR(-Z): tuned over 2 configurations
+10:27:16 +   1898s [gates ridge] LOSS(-Z): tuned over 2 configurations
+10:27:50 +   1932s [gates ridge] LOSS(+Z_H): tuned over 2 configurations
+10:29:57 +   2059s [gates ridge] LOSS(+Z_O): tuned over 2 configurations
+10:30:31 +   2093s [gates ridge] LOSS(+Z_H+Z_O): tuned over 2 configurations
+10:34:01 +   2303s [gates ridge] LOSS(+perm Z_H): tuned over 2 configurations
+10:34:42 +   2345s [gates ridge] LOSS(+perm Z_O): tuned over 2 configurations
+10:37:01 +   2483s [gates ridge] NET-K(-Z): tuned over 2 configurations
+10:37:49 +   2531s [gates ridge] NET-K(+Z_H): tuned over 2 configurations
+10:40:08 +   2670s [gates ridge] NET-K(+Z_O): tuned over 2 configurations
+10:41:12 +   2734s [gates ridge] NET-U(-Z): tuned over 2 configurations
+10:41:12 +   2734s === stage 8_gates done in 2176.5 s
+10:41:24 +   2746s decisions dumped: nominations, submissions, decision_days, base_ic, dump_meta
+10:41:24 +   2746s === stage 9_backtests
+10:42:27 +   2809s main backtests: 108 runs
+10:47:47 +   3129s second-stage backtests: 84 runs
+10:52:09 +   3391s === stage 9_backtests done in 644.8 s
+10:52:09 +   3391s === stage 10_estimands
+10:52:52 +   3434s === stage 10_estimands done in 42.9 s
+10:52:56 +   3438s run finished: ok

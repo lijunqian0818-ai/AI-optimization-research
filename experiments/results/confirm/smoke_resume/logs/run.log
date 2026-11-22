@@ -1,0 +1,48 @@
+11:23:58 +      0s run 'smoke' started; data cut-off 2021-12-31; out C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\confirm\smoke_resume; T = 4; seeds (0, 1); gate window y1; criterion V
+11:23:58 +      0s === stage 1_list
+11:23:58 +      0s list: 100 names, ready 100, skipped 0
+11:23:58 +      0s === stage 1_list done in 0.2 s
+11:23:58 +      0s === stage 2_market
+11:24:15 +     17s === stage 2_market done in 16.4 s
+11:24:15 +     17s === stage 3_panel
+11:24:38 +     40s === stage 3_panel done in 23.4 s
+11:24:38 +     40s === stage 4_universe
+11:24:38 +     40s === stage 4_universe done in 0.3 s
+11:24:38 +     40s === stage 5_features
+11:24:52 +     54s === stage 5_features done in 13.1 s
+11:24:52 +     54s === stage 6_standard_orders
+11:24:53 +     55s === stage 6_standard_orders done in 1.8 s
+11:24:53 +     55s === stage 7_base
+11:24:54 +     56s [base lgbm] loaded from checkpoint
+11:24:54 +     56s [base ridge] loaded from checkpoint
+11:25:10 +     72s === stage 7_base done in 16.4 s
+11:25:10 +     72s === stage 8_gates
+11:25:20 +     82s [gates lgbm] LOSS-LR(-Z): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] LOSS(-Z): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] LOSS(+Z_H): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] LOSS(+Z_O*): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] LOSS(+Z_O): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] LOSS(+Z_H+Z_O*): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] LOSS(+perm Z_H): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] LOSS(+perm Z_O*): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] NET-K(-Z): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] NET-K(+Z_H): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] NET-K(+Z_O*): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] NET-U(-Z): tuned over 4 configurations
+11:25:20 +     82s [gates lgbm] NET-U15(-Z): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] LOSS-LR(-Z): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] LOSS(-Z): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] LOSS(+Z_H): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] LOSS(+Z_O*): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] LOSS(+Z_O): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] LOSS(+Z_H+Z_O*): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] LOSS(+perm Z_H): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] LOSS(+perm Z_O*): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] NET-K(-Z): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] NET-K(+Z_H): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] NET-K(+Z_O*): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] NET-U(-Z): tuned over 4 configurations
+11:25:20 +     82s [gates ridge] NET-U15(-Z): tuned over 4 configurations
+11:25:20 +     82s === stage 8_gates done in 10.1 s
+11:25:25 +     87s decisions dumped: nominations, submissions, decision_days, base_ic, dump_meta
+11:25:28 +     90s run finished: ok

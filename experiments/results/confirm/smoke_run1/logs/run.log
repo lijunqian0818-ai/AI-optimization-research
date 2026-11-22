@@ -1,0 +1,64 @@
+10:53:12 +      0s run 'smoke' started; data cut-off 2021-12-31; out C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\confirm\smoke; T = 4; seeds (0, 1); gate window y1; criterion V
+10:53:12 +      0s === stage 1_list
+10:53:12 +      0s list: 100 names, ready 100, skipped 0
+10:53:12 +      0s === stage 1_list done in 0.2 s
+10:53:12 +      0s === stage 2_market
+10:53:33 +     21s === stage 2_market done in 21.1 s
+10:53:33 +     21s === stage 3_panel
+10:53:55 +     43s === stage 3_panel done in 21.4 s
+10:53:55 +     43s === stage 4_universe
+10:53:55 +     43s === stage 4_universe done in 0.3 s
+10:53:55 +     43s === stage 5_features
+10:54:09 +     57s === stage 5_features done in 14.0 s
+10:54:09 +     57s === stage 6_standard_orders
+10:54:30 +     78s === stage 6_standard_orders done in 20.9 s
+10:54:30 +     78s === stage 7_base
+10:54:55 +    103s [base lgbm] config 1/4 validation criteria computed (24.41 s)
+10:55:11 +    119s [base lgbm] config 2/4 validation criteria computed (15.85 s)
+10:55:44 +    152s [base lgbm] config 3/4 validation criteria computed (33.27 s)
+10:56:26 +    194s [base lgbm] config 4/4 validation criteria computed (41.74 s)
+10:57:32 +    261s [base lgbm] seed 0: deployment fits done
+10:58:37 +    325s [base lgbm] seed 1: deployment fits done
+10:58:39 +    327s [base ridge] config 1/4 validation criteria computed (1.65 s)
+10:58:40 +    328s [base ridge] config 2/4 validation criteria computed (1.23 s)
+10:58:41 +    330s [base ridge] config 3/4 validation criteria computed (1.16 s)
+10:58:51 +    339s [base ridge] config 4/4 validation criteria computed (9.25 s)
+10:59:03 +    351s [base ridge] seed 0: deployment fits done
+10:59:15 +    363s [BASE-V ridge] seed 0: deployment fits done
+10:59:33 +    381s === stage 7_base done in 303.0 s
+10:59:33 +    381s === stage 8_gates
+11:01:31 +    499s [gates lgbm] LOSS-LR(-Z): tuned over 4 configurations
+11:05:45 +    753s [gates lgbm] LOSS(-Z): tuned over 4 configurations
+11:05:48 +    756s [gates lgbm] LOSS(+Z_H): tuned over 4 configurations
+11:05:54 +    762s [gates lgbm] LOSS(+Z_O*): tuned over 4 configurations
+11:05:54 +    762s [gates lgbm] LOSS(+Z_O): tuned over 4 configurations
+11:06:54 +    822s [gates lgbm] LOSS(+Z_H+Z_O*): tuned over 4 configurations
+11:08:48 +    936s [gates lgbm] LOSS(+perm Z_H): tuned over 4 configurations
+11:09:32 +    980s [gates lgbm] LOSS(+perm Z_O*): tuned over 4 configurations
+11:09:32 +    980s [gates lgbm] NET-K(-Z): tuned over 4 configurations
+11:09:32 +    980s [gates lgbm] NET-K(+Z_H): tuned over 4 configurations
+11:09:49 +    998s [gates lgbm] NET-K(+Z_O*): tuned over 4 configurations
+11:11:48 +   1116s [gates lgbm] NET-U(-Z): tuned over 4 configurations
+11:11:59 +   1127s [gates lgbm] NET-U15(-Z): tuned over 4 configurations
+11:11:59 +   1127s [gates ridge] LOSS-LR(-Z): tuned over 4 configurations
+11:12:27 +   1155s [gates ridge] LOSS(-Z): tuned over 4 configurations
+11:12:57 +   1185s [gates ridge] LOSS(+Z_H): tuned over 4 configurations
+11:14:30 +   1278s [gates ridge] LOSS(+Z_O*): tuned over 4 configurations
+11:15:47 +   1355s [gates ridge] LOSS(+Z_O): tuned over 4 configurations
+11:15:47 +   1355s [gates ridge] LOSS(+Z_H+Z_O*): tuned over 4 configurations
+11:15:47 +   1355s [gates ridge] LOSS(+perm Z_H): tuned over 4 configurations
+11:16:41 +   1409s [gates ridge] LOSS(+perm Z_O*): tuned over 4 configurations
+11:18:00 +   1488s [gates ridge] NET-K(-Z): tuned over 4 configurations
+11:19:01 +   1549s [gates ridge] NET-K(+Z_H): tuned over 4 configurations
+11:19:01 +   1549s [gates ridge] NET-K(+Z_O*): tuned over 4 configurations
+11:19:01 +   1549s [gates ridge] NET-U(-Z): tuned over 4 configurations
+11:19:46 +   1594s [gates ridge] NET-U15(-Z): tuned over 4 configurations
+11:19:46 +   1594s === stage 8_gates done in 1212.8 s
+11:19:51 +   1599s decisions dumped: nominations, submissions, decision_days, base_ic, dump_meta
+11:19:51 +   1599s === stage 9_backtests
+11:20:25 +   1633s main backtests: 88 runs
+11:21:56 +   1724s second-stage backtests: 56 runs
+11:23:10 +   1798s === stage 9_backtests done in 198.7 s
+11:23:10 +   1798s === stage 10_estimands
+11:23:36 +   1825s === stage 10_estimands done in 26.5 s
+11:23:40 +   1828s run finished: ok

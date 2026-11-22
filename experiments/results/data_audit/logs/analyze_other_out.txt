@@ -1,0 +1,833 @@
+             calls  ok  empty  err_net  err_parse  http  mean_s  median_s   max_s
+group                                                                            
+ak_index         5   5      0        0          0  26.0    9.52      2.46   24.53
+bs_allstock      6   6      0        0          0   0.0   16.82     15.03   26.98
+bs_div           6   6      0        0          0   0.0    1.04      1.11    1.41
+bs_factor       46  46      0        0          0   0.0    1.06      0.60   16.34
+bs_hfq          12  12      0        0          0   0.0   18.78     21.31   29.43
+bs_index        41  41      0        0          0   0.0    2.01      1.98    3.50
+bs_raw          67  67      0        0          0   0.0   25.51     23.07   74.09
+em_fhps         60  32      0        0         28  92.0    1.38      1.37    2.28
+em_raw           8   0      0        8          0   8.0    1.71      1.73    3.00
+em_st            4   0      0        4          0   5.0    3.29      2.04    7.17
+em_tfp           6   6      0        0          0  45.0   18.21     19.66   25.48
+lists            5   4      0        1          0   3.0   33.80      2.05  146.24
+orig            14  12      0        0          2  15.0    1.74      1.31    5.41
+probe            1   1      0        0          0   1.0    1.59      1.59    1.59
+sina_div        13  13      0        0          0  13.0    2.05      2.10    2.27
+sina_factor     12  12      0        0          0  12.0    1.40      1.43    1.99
+sina_names       5   5      0        0          0   5.0    2.15      2.09    2.40
+sina_raw        42  42      0        0          0  84.0    3.50      3.46    4.61
+szse_names       1   1      0        0          0   1.0    6.45      6.45    6.45
+tx_raw           4   4      0        0          0   8.0    3.42      3.63    3.70
+zo_blk           9   9      0        0          0   9.0    2.04      1.96    2.38
+zo_count        27  27      0        0          0  27.0    1.57      1.62    1.76
+zo_delisted      8   8      0        0          0   8.0    2.19      2.17    2.67
+zo_ins          10  10      0        0          0  10.0    1.98      1.94    2.38
+zo_ins_sse       3   3      0        0          0   7.0    5.22      4.56    6.82
+zo_ins_szse      3   2      0        1          0  10.0    7.20      6.90   10.09
+zo_ins_ths       3   3      0        0          0   3.0    3.00      3.06    3.14
+zo_lhb           9   9      0        0          0  19.0    4.84      4.71    7.90
+zo_lhb_sina      2   2      0        0          0   2.0    4.09      4.09    4.80
+{
+ "logical_calls_incl_retries": 432,
+ "distinct_requests": 410,
+ "http_requests": 413,
+ "first_attempt_ok_or_empty": 386,
+ "first_attempt_net_error": 9,
+ "first_attempt_parse_error": 15,
+ "push2_attempts": 9,
+ "push2_ok": 1
+}
+    index  query_date    n  updateDate  changed_vs_prev_query
+0   hs300  2010-01-04  300  2010-01-04                    NaN
+2   hs300  2011-07-01  300  2011-06-27                   41.0
+4   hs300  2013-01-04  300  2012-12-31                   57.0
+6   hs300  2014-12-12  300  2014-12-08                   71.0
+8   hs300  2014-12-15  300  2014-12-15                   22.0
+10  hs300  2016-06-08  300  2016-06-06                   42.0
+12  hs300  2016-06-13  300  2016-06-13                   24.0
+14  hs300  2018-06-11  300  2018-06-11                   81.0
+16  hs300  2019-12-16  300  2019-12-16                   53.0
+18  hs300  2021-06-11  300  2021-06-07                   47.0
+20  hs300  2021-06-15  300  2021-06-14                    0.0
+32  hs300  2021-06-21  300  2021-06-14                    0.0
+33  hs300  2021-06-28  300  2021-06-14                    0.0
+34  hs300  2022-06-10  300  2022-03-21                   52.0
+35  hs300  2022-06-13  300  2022-06-13                   28.0
+36  hs300  2022-07-25  300  2022-06-13                    0.0
+37  hs300  2022-08-08  300  2022-08-01                    0.0
+22  hs300  2022-12-12  300  2022-08-01                    0.0
+38  hs300  2022-12-19  300  2022-08-01                    0.0
+39  hs300  2023-01-03  300  2022-08-01                    0.0
+40  hs300  2023-06-12  300  2023-06-12                   24.0
+24  hs300  2024-12-13  300  2024-12-09                   26.0
+26  hs300  2024-12-16  300  2024-12-16                   16.0
+28  hs300  2025-06-16  300  2025-06-16                    8.0
+30  hs300  2026-06-30  300  2026-06-29                   30.0
+1   zz500  2010-01-04  500  2010-01-04                    NaN
+3   zz500  2011-07-01  500  2011-06-27                   94.0
+5   zz500  2013-01-04  500  2012-12-31                  135.0
+7   zz500  2014-12-12  500  2014-12-08                  167.0
+9   zz500  2014-12-15  500  2014-12-15                   50.0
+11  zz500  2016-06-08  500  2016-06-06                   92.0
+13  zz500  2016-06-13  500  2016-06-13                   50.0
+15  zz500  2018-06-11  500  2018-06-11                  160.0
+17  zz500  2019-12-16  500  2019-12-16                  133.0
+19  zz500  2021-06-11  500  2021-06-07                  100.0
+21  zz500  2021-06-15  500  2021-06-14                    0.0
+23  zz500  2022-12-12  500  2022-08-01                  133.0
+25  zz500  2024-12-13  500  2024-12-09                  174.0
+27  zz500  2024-12-16  500  2024-12-16                   50.0
+29  zz500  2025-06-16  500  2025-06-16                   50.0
+31  zz500  2026-06-30  500  2026-06-29                   99.0
+## index_stock_cons_csindex ['000300'] 300 ['日期', '指数代码', '指数名称', '指数英文名称', '成分券代码', '成分券名称', '成分券英文名称', '交易所', '交易所英文名称']
+           日期    指数代码   指数名称   指数英文名称   成分券代码 成分券名称                 成分券英文名称      交易所                  交易所英文名称
+0  2026-11-11  000300  沪深300  CSI 300  000001  平安银行  Ping An Bank Co., Ltd.  深圳证券交易所  Shenzhen Stock Exchange
+1  2026-11-11  000300  沪深300  CSI 300  000002   万科A      China Vanke Co Ltd  深圳证券交易所  Shenzhen Stock Exchange
+2  2026-11-11  000300  沪深300  CSI 300  000063  中兴通讯         ZTE Corporation  深圳证券交易所  Shenzhen Stock Exchange
+## index_stock_cons_csindex ['000905'] 500 ['日期', '指数代码', '指数名称', '指数英文名称', '成分券代码', '成分券名称', '成分券英文名称', '交易所', '交易所英文名称']
+           日期    指数代码   指数名称   指数英文名称   成分券代码 成分券名称                              成分券英文名称      交易所                  交易所英文名称
+0  2026-11-11  000905  中证500  CSI 500  000009  中国宝安           China Baoan Group Co.,Ltd.  深圳证券交易所  Shenzhen Stock Exchange
+1  2026-11-11  000905  中证500  CSI 500  000021   深科技  Shenzhen Kaifa Technology Co., Ltd.  深圳证券交易所  Shenzhen Stock Exchange
+2  2026-11-11  000905  中证500  CSI 500  000027  深圳能源         Shenzhen Energy Group Co Ltd  深圳证券交易所  Shenzhen Stock Exchange
+## index_stock_cons_weight_csindex ['000300'] 300 ['日期', '指数代码', '指数名称', '指数英文名称', '成分券代码', '成分券名称', '成分券英文名称', '交易所', '交易所英文名称', '权重']
+           日期    指数代码   指数名称   指数英文名称   成分券代码 成分券名称                 成分券英文名称      交易所                  交易所英文名称     权重
+0  2026-10-30  000300  沪深300  CSI 300  000001  平安银行  Ping An Bank Co., Ltd.  深圳证券交易所  Shenzhen Stock Exchange  0.498
+1  2026-10-30  000300  沪深300  CSI 300  000002   万科A      China Vanke Co Ltd  深圳证券交易所  Shenzhen Stock Exchange  0.096
+2  2026-10-30  000300  沪深300  CSI 300  000063  中兴通讯         ZTE Corporation  深圳证券交易所  Shenzhen Stock Exchange  0.389
+## index_stock_cons ['000300'] 300 ['品种代码', '品种名称', '纳入日期']
+     品种代码  品种名称        纳入日期
+0  002294   信立泰  2026-10-19
+1  600221  海航控股  2026-06-15
+2  002532  天山铝业  2026-06-15
+## index_stock_cons ['000905'] 500 ['品种代码', '品种名称', '纳入日期']
+     品种代码  品种名称        纳入日期
+0  603083  剑桥科技  2026-10-19
+1  301297   富乐德  2026-10-12
+2  600350  山东高速  2026-06-15
+{
+ "queries": 41,
+ "count_exact": 41,
+ "counts": {
+  "min": {
+   "hs300": 300,
+   "zz500": 500
+  },
+  "max": {
+   "hs300": 300,
+   "zz500": 500
+  }
+ },
+ "distinct_updateDates": [
+  "2010-01-04",
+  "2011-06-27",
+  "2012-12-31",
+  "2014-12-08",
+  "2014-12-15",
+  "2016-06-06",
+  "2016-06-13",
+  "2018-06-11",
+  "2019-12-16",
+  "2021-06-07",
+  "2021-06-14",
+  "2022-03-21",
+  "2022-06-13",
+  "2022-08-01",
+  "2023-06-12",
+  "2024-12-09",
+  "2024-12-16",
+  "2025-06-16",
+  "2026-06-29"
+ ],
+ "sampled_dates_union_members": 1845,
+ "delisted_sample_names_seen_as_members": [
+  "000594",
+  "000616",
+  "000861",
+  "002013",
+  "002359",
+  "002450",
+  "002477",
+  "300104",
+  "600005",
+  "600074",
+  "600485",
+  "600607",
+  "600614",
+  "600677",
+  "600804",
+  "600832"
+ ],
+ "members_missing_in_bs_basic": [],
+ "members_now_delisted_per_bs_basic": 130,
+ "member_on_date_outside_listing_span": [],
+ "index_stock_cons_csindex(000300)": {
+  "rows": 300,
+  "columns": [
+   "日期",
+   "指数代码",
+   "指数名称",
+   "指数英文名称",
+   "成分券代码",
+   "成分券名称",
+   "成分券英文名称",
+   "交易所",
+   "交易所英文名称"
+  ],
+  "日期": [
+   "2026-11-11",
+   "2026-11-11",
+   1
+  ],
+  "overlap_with_bs_2026-06-30": 299
+ },
+ "index_stock_cons_csindex(000905)": {
+  "rows": 500,
+  "columns": [
+   "日期",
+   "指数代码",
+   "指数名称",
+   "指数英文名称",
+   "成分券代码",
+   "成分券名称",
+   "成分券英文名称",
+   "交易所",
+   "交易所英文名称"
+  ],
+  "日期": [
+   "2026-11-11",
+   "2026-11-11",
+   1
+  ],
+  "overlap_with_bs_2026-06-30": 498
+ },
+ "index_stock_cons_weight_csindex(000300)": {
+  "rows": 300,
+  "columns": [
+   "日期",
+   "指数代码",
+   "指数名称",
+   "指数英文名称",
+   "成分券代码",
+   "成分券名称",
+   "成分券英文名称",
+   "交易所",
+   "交易所英文名称",
+   "权重"
+  ],
+  "日期": [
+   "2026-10-30",
+   "2026-10-30",
+   1
+  ]
+ },
+ "index_stock_cons(000300)": {
+  "rows": 300,
+  "columns": [
+   "品种代码",
+   "品种名称",
+   "纳入日期"
+  ],
+  "纳入日期": [
+   "2005-04-08",
+   "2026-10-19",
+   59
+  ],
+  "overlap_with_bs_2026-06-30": 288
+ },
+ "index_stock_cons(000905)": {
+  "rows": 500,
+  "columns": [
+   "品种代码",
+   "品种名称",
+   "纳入日期"
+  ],
+  "纳入日期": [
+   "2007-01-15",
+   "2026-10-19",
+   42
+  ],
+  "overlap_with_bs_2026-06-30": 423
+ }
+}
+       date  em_tfp_rows  bs_all_rows em_tfp_start_min em_tfp_start_max  em_tfp_active_on_date                                               em_tfp_period_values  em_active_A  bs_stocks  bs_suspended  both  em_only  bs_only
+0  20100104         4311         1983       2012-02-22       2026-11-16                      0  {'连续停牌': 2253, '盘中停牌': 1045, '停牌一天': 996, '停牌半天': 12, '停牌一小时': 5}            0       1699            66     0        0       66
+1  20150708         4020         3466       2015-04-02       2026-11-16                    153               {'连续停牌': 2136, '盘中停牌': 1020, '停牌一天': 857, '停牌半天': 7}          147       2784          1317   145        2     1172
+2  20160104         3731         3514       2015-06-29       2026-11-16                     18               {'连续停牌': 1864, '盘中停牌': 1014, '停牌一天': 847, '停牌半天': 6}           17       2811           262    17        0      245
+3  20180620         2522         4279       2016-09-14       2026-11-16                     44                {'连续停牌': 1015, '盘中停牌': 782, '停牌一天': 720, '停牌半天': 5}           42       3530           241    41        1      200
+4  20200203         2084         4598       2016-09-14       2026-11-16                      3                 {'连续停牌': 851, '盘中停牌': 631, '停牌一天': 601, '停牌半天': 1}            2       3776            15     2        0       13
+5  20240102          962         6529       2023-12-21       2026-11-16                      3                             {'连续停牌': 520, '停牌一天': 348, '盘中停牌': 94}            3       5097             7     3        0        4
+   序号      代码    名称        停牌时间      停牌截止时间  停牌期限       停牌原因    所属市场      预计复牌时间
+0   0  605255  天普股份  2026-11-16        None  连续停牌     刊登重要公告   上交所主板        None
+1   1  000635   英力特  2026-11-13  2026-11-19  连续停牌  拟筹划重大资产重组   深交所主板  2026-11-20
+2   2  600185  珠免集团  2026-11-12        None  连续停牌  拟筹划重大资产重组   上交所主板        None
+3   3  688798  艾为电子  2026-11-10        None  连续停牌  拟筹划重大资产重组  上交所科创板        None
+4   4  688053   思科瑞  2026-11-10  2026-11-10  停牌一天     刊登重要公告  上交所科创板  2026-11-11
+        序号      代码    名称        停牌时间      停牌截止时间  停牌期限    停牌原因    所属市场      预计复牌时间
+4308  4308  600456  宝钛股份  2012-03-20  2012-03-20  停牌一天  召开股东大会   上交所主板  2012-03-21
+4309  4309  300258  精锻科技  2012-02-22  2012-02-22  停牌一天  召开股东大会  深交所创业板  2012-02-23
+4310  4310  002561   徐家汇  2012-02-22  2012-02-22  停牌一天  召开股东大会   深交所主板  2012-02-23
+        code tradeStatus code_name
+0  sh.000001           1    上证综合指数
+1  sh.000002           1    上证A股指数
+2  sh.000003           1    上证B股指数
+SZSE name-change table: (7505, 5) ['变更日期', '证券代码', '证券简称', '变更前简称', '变更后简称']
+         变更日期    证券代码  证券简称 变更前简称 变更后简称
+0  1994-01-03  000005  ST星源  深原野Ａ  深星源Ａ
+1  1994-11-01  000503  国新健康   琼化纤   琼海虹
+2  1995-05-22  000503  国新健康   琼海虹  琼海虹Ａ
+      code   szse_date     old    new bs_flag_date  flag_minus_szse_tdays
+0   000725  2008-04-18  *ST东方A   京东方Ａ   2008-04-18                      0
+1   000602  2011-02-18    金马集团  *ST金马   2011-02-18                      0
+2   000602  2012-04-16   *ST金马   金马集团   2012-04-16                      0
+3   000594  2013-05-02    国恒铁路  *ST国恒   2013-05-02                      0
+4   000018  2014-03-13  *ST中冠A    中冠A   2014-03-13                      0
+5   000594  2015-05-29   *ST国恒    国恒退   2015-05-29                      0
+6   002450  2019-01-23     康得新  ST康得新   2019-01-23                      0
+7   002477  2019-04-26    雏鹰农牧  *ST雏鹰   2019-04-26                      0
+8   002499  2019-04-26    科林环保  *ST科林   2019-04-26                      0
+9   000792  2019-04-30    盐湖股份  *ST盐湖   2019-04-30                      0
+10  000018  2019-05-06    神州长城  *ST神城   2019-05-06                      0
+11  002359  2019-05-06    北讯集团  *ST北讯   2019-05-06                      0
+12  002477  2019-08-27   *ST雏鹰    雏鹰退   2019-08-27                      0
+13  000018  2019-11-25   *ST神城   神城A退   2019-11-25                      0
+14  002502  2020-04-30    鼎龙文化  *ST鼎龙   2020-04-30                      0
+15  300064  2020-11-04    豫金刚石   ST金刚   2020-11-04                      0
+16  002450  2021-04-14   *ST康得    康得退   2021-04-14                      0
+17  000616  2021-05-06    海航投资   ST海投   2021-05-06                      0
+18  002502  2021-05-25   *ST鼎龙   鼎龙文化   2021-05-25                      0
+19  002359  2021-06-10   *ST北讯    北讯退   2021-06-10                      0
+20  000792  2021-08-10   *ST盐湖   盐湖股份   2021-08-10                      0
+21  300064  2022-06-06   *ST金刚    金刚退   2022-06-06                      0
+22  002433  2022-09-28     太安堂   ST太安   2022-09-28                      0
+23  002499  2023-03-27   *ST科林    科林退   2023-03-27                      0
+24  002502  2023-05-05    鼎龙文化   ST鼎龙   2023-05-05                      0
+25  002435  2024-05-06    长江健康   ST长康   2024-05-06                      0
+26  002433  2024-06-14   *ST太安    太安退   2024-06-14                      0
+sina names ['000792'] ['G钾肥', '盐湖钾肥', '盐湖股份', '*ST盐湖', '盐湖股份']
+sina names ['600485'] ['G中创', '中创信测', '信威集团', '*ST信威', 'R信威1']
+sina names ['300104'] ['乐视退']
+sina names ['600710'] ['G常林', '常林股份', '*ST常林', 'ST常林', '苏美达']
+sina names ['001872'] ['G深赤湾', '深赤湾A', '招商港口（招港B）']
+{
+ "bs_isST_changes_in_sample": 71,
+ "stocks_with_changes": 28,
+ "stock_days_isST1": 20360,
+ "szse_name_changes_rows": 7505,
+ "szse_name_change_dates": [
+  "1994-01-03",
+  "2026-11-12"
+ ],
+ "szse_events_in_sample": 27,
+ "exact_same_day": 27,
+ "within_1_tday": 27,
+ "flag_earlier_than_szse_date": 0,
+ "flag_later": 0,
+ "no_flag_change_found": 0
+}
+class    blk    ins    lhb
+year                      
+2005      94    112    346
+2008    1131   2018   8698
+2009    2542   3471   6579
+2010    2962   2674   6359
+2011    5314   3057   7440
+2012    6375   2874   8672
+2016   17893   5777  12849
+2021   34750  13974  16877
+2025   33746   9633  19541
+     code  rows  notice_min  notice_max  notice_missing  notice_before_end  notice_minus_end_days_median  entry_before_notice(-1d)  entry_same_day  entry_1_to_7d  entry_gt_30d_after            entry_min
+0  300104    28  2015-12-11  2019-04-19               0                  0                         136.5                         0              23              5                   0  2015-12-11 21:24:18
+1  600485    46  2007-08-22  2019-11-05               0                  0                           2.0                         9               0              0                  37  2012-12-15 11:32:40
+2  002450    49  2011-07-21  2021-05-28               0                  0                           3.0                        34               8              1                   5  2012-12-15 11:32:32
+3  600074    15  2014-07-01  2015-05-15               0                  0                           4.0                        13               2              0                   0  2014-07-01 15:03:01
+4  000002   158  2006-06-14  2024-07-16               0                  0                           5.0                        27               0              1                 130  2019-05-17 15:22:06
+5  300059   109  2011-04-08  2017-01-10               0                  0                          48.0                         0               0              0                 109  2019-05-17 15:22:06
+6  600519    13  2010-05-08  2025-12-30               0                  0                           2.0                         7               0              0                   6  2019-05-17 15:22:06
+7  000651    44  2007-04-10  2026-06-05               0                  0                           1.0                        10               0              0                  34  2019-05-17 15:22:06
+8  002594    47  2011-06-30  2025-09-11               0                  0                           8.0                        34               0              0                  13  2019-05-17 15:22:06
+9  688111    53  2020-12-08  2023-07-21               0                  0                           3.0                        44               0              0                   0  2020-12-07 19:17:36
+{
+ "yearly_counts": {
+  "2005": {
+   "blk": 94,
+   "ins": 112,
+   "lhb": 346
+  },
+  "2008": {
+   "blk": 1131,
+   "ins": 2018,
+   "lhb": 8698
+  },
+  "2009": {
+   "blk": 2542,
+   "ins": 3471,
+   "lhb": 6579
+  },
+  "2010": {
+   "blk": 2962,
+   "ins": 2674,
+   "lhb": 6359
+  },
+  "2011": {
+   "blk": 5314,
+   "ins": 3057,
+   "lhb": 7440
+  },
+  "2012": {
+   "blk": 6375,
+   "ins": 2874,
+   "lhb": 8672
+  },
+  "2016": {
+   "blk": 17893,
+   "ins": 5777,
+   "lhb": 12849
+  },
+  "2021": {
+   "blk": 34750,
+   "ins": 13974,
+   "lhb": 16877
+  },
+  "2025": {
+   "blk": 33746,
+   "ins": 9633,
+   "lhb": 19541
+  }
+ },
+ "columns": {
+  "stock_lhb_detail_em": [
+   "序号",
+   "代码",
+   "名称",
+   "上榜日",
+   "解读",
+   "收盘价",
+   "涨跌幅",
+   "龙虎榜净买额",
+   "龙虎榜买入额",
+   "龙虎榜卖出额",
+   "龙虎榜成交额",
+   "市场总成交额",
+   "净买额占总成交比",
+   "成交额占总成交比",
+   "换手率",
+   "流通市值",
+   "上榜原因",
+   "上榜后1日",
+   "上榜后2日",
+   "上榜后5日",
+   "上榜后10日"
+  ],
+  "stock_dzjy_mrmx": [
+   "序号",
+   "交易日期",
+   "证券代码",
+   "证券简称",
+   "涨跌幅",
+   "收盘价",
+   "成交价",
+   "折溢率",
+   "成交量",
+   "成交额",
+   "成交额/流通市值",
+   "买方营业部",
+   "卖方营业部"
+  ],
+  "stock_lhb_jgmmtj_em": [
+   "序号",
+   "代码",
+   "名称",
+   "收盘价",
+   "涨跌幅",
+   "买方机构数",
+   "卖方机构数",
+   "机构买入总额",
+   "机构卖出总额",
+   "机构买入净额",
+   "市场总成交额",
+   "机构净买额占总成交额比",
+   "换手率",
+   "流通市值",
+   "上榜原因",
+   "上榜日期"
+  ],
+  "stock_dzjy_mrtj": [
+   "序号",
+   "交易日期",
+   "证券代码",
+   "证券简称",
+   "涨跌幅",
+   "收盘价",
+   "成交价",
+   "折溢率",
+   "成交笔数",
+   "成交总量",
+   "成交总额",
+   "成交总额/流通市值"
+  ],
+  "stock_lhb_detail_daily_sina": [
+   "序号",
+   "股票代码",
+   "股票名称",
+   "收盘价",
+   "对应值",
+   "成交量",
+   "成交额",
+   "指标"
+  ],
+  "em_ins_by_code": [
+   "CHANGE_NUM",
+   "NOTICE_DATE",
+   "SECURITY_CODE",
+   "HOLDER_NAME",
+   "AFTER_CHANGE_RATE",
+   "CHANGE_NUM_SYMBOL",
+   "CHANGE_RATE",
+   "END_DATE",
+   "CLOSE_PRICE",
+   "AFTER_HOLDER_NUM",
+   "HOLD_RATIO",
+   "TRADE_AVERAGE_PRICE",
+   "FREE_SHARES_RATIO",
+   "FREE_SHARES",
+   "TRADE_DATE",
+   "SECURITY_NAME_ABBR",
+   "DIRECTION",
+   "EITIME",
+   "CHANGE_FREE_RATIO",
+   "START_DATE",
+   "REAL_PRICE",
+   "NEWEST_PRICE",
+   "CHANGE_RATE_QUOTES",
+   "MARKET",
+   "_count"
+  ],
+  "em_lhb_by_code": [
+   "TRADE_DATE",
+   "DEAL_AMOUNT_RATIO",
+   "BILLBOARD_DEAL_AMT",
+   "FREE_MARKET_CAP",
+   "EXPLAIN",
+   "SECUCODE",
+   "SECURITY_CODE",
+   "CLOSE_PRICE",
+   "CHANGE_RATE",
+   "TURNOVERRATE",
+   "D1_CLOSE_ADJCHRATE",
+   "D2_CLOSE_ADJCHRATE",
+   "D5_CLOSE_ADJCHRATE",
+   "D10_CLOSE_ADJCHRATE",
+   "SECURITY_NAME_ABBR",
+   "EXPLANATION",
+   "BILLBOARD_SELL_AMT",
+   "BILLBOARD_BUY_AMT",
+   "SECURITY_INNER_CODE",
+   "BILLBOARD_NET_AMT",
+   "DEAL_NET_RATIO",
+   "ACCUM_AMOUNT",
+   "MARKET",
+   "CHANGE_TYPE",
+   "TRADE_ID",
+   "BUY_SEAT",
+   "SELL_SEAT",
+   "BUY_RATIO",
+   "SELL_RATIO",
+   "TRADE_MARKET",
+   "D30_CLOSE_ADJCHRATE",
+   "D20_CLOSE_ADJCHRATE",
+   "TRADE_MARKET_CODE",
+   "BUY_SEAT_NEW",
+   "SELL_SEAT_NEW",
+   "SECURITY_TYPE_CODE",
+   "SUM_BUY_AMT",
+   "SUM_SELL_AMT",
+   "NET_BS_AMT",
+   "_count"
+  ],
+  "em_blk_by_code": [
+   "SECUCODE",
+   "SECURITY_INNER_CODE",
+   "SECURITY_CODE",
+   "SECURITY_NAME_ABBR",
+   "SECURITY_TYPE",
+   "TRADE_DATE",
+   "DEAL_PRICE",
+   "PREMIUM_RATIO",
+   "DEAL_VOLUME",
+   "DEAL_AMT",
+   "BUYER_NAME",
+   "SELLER_NAME",
+   "SECURITY_TYPE_CODE",
+   "DAILY_RANK",
+   "CLOSE_PRICE",
+   "TRADE_UNIT",
+   "TURNOVER_RATE",
+   "CHANGE_RATE",
+   "CHANGE_RATE_1DAYS",
+   "CHANGE_RATE_5DAYS",
+   "BUYER_CODE",
+   "SELLER_CODE",
+   "PREMIUM_TURNOVER",
+   "DISCOUNT_TURNOVER",
+   "UNLIMITED_A_SHARES",
+   "TRADE_MARKET_OLD",
+   "SECURITY_TYPE_WEB",
+   "CHANGE_RATE_10DAYS",
+   "CHANGE_RATE_20DAYS",
+   "TRADE_MARKET_CODE",
+   "IS_SYSDATE",
+   "FREE_SHARES_RATIO",
+   "TOTAL_SHARES_RATIO",
+   "INDEX_CLOSE",
+   "PRE_CLOSE_PRICE",
+   "TOTAL_SHARES",
+   "DISCOUNT_RATIO",
+   "QUOTES_CODE",
+   "_count"
+  ],
+  "stock_share_hold_change_sse": [
+   "公司代码",
+   "公司名称",
+   "姓名",
+   "职务",
+   "股票种类",
+   "货币种类",
+   "本次变动前持股数",
+   "变动数",
+   "本次变动平均价格",
+   "变动后持股数",
+   "变动原因",
+   "变动日期",
+   "填报日期"
+  ],
+  "stock_share_hold_change_szse": [
+   "证券代码",
+   "证券简称",
+   "董监高姓名",
+   "变动日期",
+   "变动股份数量",
+   "成交均价",
+   "变动原因",
+   "变动比例",
+   "当日结存股数",
+   "股份变动人姓名",
+   "职务",
+   "变动人与董监高的关系"
+  ],
+  "stock_shareholder_change_ths": [
+   "公告日期",
+   "变动股东",
+   "变动数量",
+   "交易均价",
+   "剩余股份总数",
+   "变动期间",
+   "变动途径"
+  ]
+ },
+ "lhb_cross_check": {
+  "20150706": {
+   "em_codes": 504,
+   "sina_codes": 137,
+   "em_and_sina": 137,
+   "em_only": 367,
+   "sina_only": 0,
+   "szse_main_orig_codes": 15,
+   "em_szse_main_codes(000/001)": 16,
+   "orig_in_em": 15,
+   "orig_not_in_em": [],
+   "em_main_not_in_orig": [
+    "000594"
+   ],
+   "szse_file_last_modified": "Mon, 06 Jul 2015 08:22:36 GMT",
+   "sse_orig_codes": 114,
+   "em_sse_codes": 421,
+   "sse_orig_in_em": 113,
+   "sse_orig_not_in_em": [
+    "600213"
+   ],
+   "em_sse_not_in_orig": [
+    "600005",
+    "600008",
+    "600026",
+    "600027",
+    "600052",
+    "600054",
+    "600056",
+    "600057",
+    "600059",
+    "600072"
+   ]
+  },
+  "20240102": {
+   "em_codes": 56,
+   "sina_codes": 56,
+   "em_and_sina": 56,
+   "em_only": 0,
+   "sina_only": 0,
+   "szse_main_orig_codes": 18,
+   "em_szse_main_codes(000/001)": 5,
+   "orig_in_em": 18,
+   "orig_not_in_em": [],
+   "em_main_not_in_orig": [],
+   "szse_file_last_modified": "Tue, 02 Jan 2024 08:21:00 GMT",
+   "sse_orig_codes": 18,
+   "em_sse_codes": 20,
+   "sse_orig_in_em": 18,
+   "sse_orig_not_in_em": [],
+   "em_sse_not_in_orig": [
+    "688496",
+    "688525"
+   ]
+  }
+ },
+ "szse_lhb_file_last_modified": {
+  "jy150706": "Mon, 06 Jul 2015 08:22:36 GMT",
+  "jy100104": "Mon, 04 Jan 2010 09:04:52 GMT",
+  "jy240102": "Tue, 02 Jan 2024 08:21:00 GMT"
+ },
+ "blk_cross_check_sse": {
+  "2015-07-06": {
+   "sse_orig_rows_returned": 12,
+   "sse_orig_total": 12,
+   "em_sse_rows": 8,
+   "em_distinct_keys": 8,
+   "orig_distinct_keys(6xxxxx)": 8,
+   "matched_keys": 8,
+   "orig_not_in_em": [],
+   "em_not_in_orig": []
+  },
+  "2010-01-05": {
+   "sse_orig_rows_returned": 3,
+   "sse_orig_total": 3,
+   "em_sse_rows": 3,
+   "em_distinct_keys": 3,
+   "orig_distinct_keys(6xxxxx)": 3,
+   "matched_keys": 3,
+   "orig_not_in_em": [],
+   "em_not_in_orig": []
+  }
+ },
+ "ins_by_code": [
+  {
+   "code": "300104",
+   "rows": 28,
+   "notice_min": "2015-12-11",
+   "notice_max": "2019-04-19",
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "notice_minus_end_days_median": 136.5,
+   "entry_before_notice(-1d)": 0,
+   "entry_same_day": 23,
+   "entry_1_to_7d": 5,
+   "entry_gt_30d_after": 0,
+   "entry_min": "2015-12-11 21:24:18"
+  },
+  {
+   "code": "600485",
+   "rows": 46,
+   "notice_min": "2007-08-22",
+   "notice_max": "2019-11-05",
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "notice_minus_end_days_median": 2.0,
+   "entry_before_notice(-1d)": 9,
+   "entry_same_day": 0,
+   "entry_1_to_7d": 0,
+   "entry_gt_30d_after": 37,
+   "entry_min": "2012-12-15 11:32:40"
+  },
+  {
+   "code": "002450",
+   "rows": 49,
+   "notice_min": "2011-07-21",
+   "notice_max": "2021-05-28",
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "notice_minus_end_days_median": 3.0,
+   "entry_before_notice(-1d)": 34,
+   "entry_same_day": 8,
+   "entry_1_to_7d": 1,
+   "entry_gt_30d_after": 5,
+   "entry_min": "2012-12-15 11:32:32"
+  },
+  {
+   "code": "600074",
+   "rows": 15,
+   "notice_min": "2014-07-01",
+   "notice_max": "2015-05-15",
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "notice_minus_end_days_median": 4.0,
+   "entry_before_notice(-1d)": 13,
+   "entry_same_day": 2,
+   "entry_1_to_7d": 0,
+   "entry_gt_30d_after": 0,
+   "entry_min": "2014-07-01 15:03:01"
+  },
+  {
+   "code": "000002",
+   "rows": 158,
+   "notice_min": "2006-06-14",
+   "notice_max": "2024-07-16",
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "notice_minus_end_days_median": 5.0,
+   "entry_before_notice(-1d)": 27,
+   "entry_same_day": 0,
+   "entry_1_to_7d": 1,
+   "entry_gt_30d_after": 130,
+   "entry_min": "2019-05-17 15:22:06"
+  },
+  {
+   "code": "300059",
+   "rows": 109,
+   "notice_min": "2011-04-08",
+   "notice_max": "2017-01-10",
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "notice_minus_end_days_median": 48.0,
+   "entry_before_notice(-1d)": 0,
+   "entry_same_day": 0,
+   "entry_1_to_7d": 0,
+   "entry_gt_30d_after": 109,
+   "entry_min": "2019-05-17 15:22:06"
+  },
+  {
+   "code": "600519",
+   "rows": 13,
+   "notice_min": "2010-05-08",
+   "notice_max": "2025-12-30",
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "notice_minus_end_days_median": 2.0,
+   "entry_before_notice(-1d)": 7,
+   "entry_same_day": 0,
+   "entry_1_to_7d": 0,
+   "entry_gt_30d_after": 6,
+   "entry_min": "2019-05-17 15:22:06"
+  },
+  {
+   "code": "000651",
+   "rows": 44,
+   "notice_min": "2007-04-10",
+   "notice_max": "2026-06-05",
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "notice_minus_end_days_median": 1.0,
+   "entry_before_notice(-1d)": 10,
+   "entry_same_day": 0,
+   "entry_1_to_7d": 0,
+   "entry_gt_30d_after": 34,
+   "entry_min": "2019-05-17 15:22:06"
+  },
+  {
+   "code": "002594",
+   "rows": 47,
+   "notice_min": "2011-06-30",
+   "notice_max": "2025-09-11",
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "notice_minus
+written analysis_other.json

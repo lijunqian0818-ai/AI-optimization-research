@@ -1,0 +1,2409 @@
+EXTRA NAME MATCHES:
+- fund_hold_structure_em() -> pandas.DataFrame | 天天基金网-基金数据-规模份额-持有人结构 / https://fund.eastmoney.com/data/cyrjglist.html
+- stock_balance_sheet_by_report_delisted_em(symbol: str = 'SZ000013') -> pandas.DataFrame | 东方财富-股票-财务分析-资产负债表-已退市股票-按报告期 / https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html?type=web&code=SZ000013#/cwfx/zcfzb
+- stock_cash_flow_sheet_by_report_delisted_em(symbol: str = 'SZ000013') -> pandas.DataFrame | 东方财富-股票-财务分析-现金流量表-已退市股票-按报告期 / https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html?type=web&code=SZ000013#/cwfx/xjllb
+- stock_circulate_stock_holder(symbol: str = '600000') -> pandas.DataFrame | 新浪财经-股东股本-流通股东 / P.S. 特定股票特定时间只有前 5 个；e.g., 000002
+- stock_gdfx_free_holding_analyse_em(date: str = '20230930') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东持股分析-十大流通股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_free_holding_change_em(date: str = '20260930') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东持股变动统计-十大流通股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_free_holding_detail_em(date: str = '20260930') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东持股明细-十大流通股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_free_holding_statistics_em(date: str = '20260930') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东持股统计-十大流通股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_free_holding_teamwork_em(symbol: str = '社保') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东协同-十大流通股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_free_top_10_em(symbol: str = 'sh688686', date: str = '20240930') -> pandas.DataFrame | 东方财富网-个股-十大流通股东 / https://emweb.securities.eastmoney.com/PC_HSF10/ShareholderResearch/Index?type=web&code=SH688686#sdltgd-0
+- stock_gdfx_holding_analyse_em(date: str = '20230331') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东持股分析-十大股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_holding_change_em(date: str = '20260930') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东持股变动统计-十大股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_holding_detail_em(date: str = '20230331', indicator: str = '个人', symbol: str = '新进') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东持股明细-十大股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_holding_statistics_em(date: str = '20260930') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东持股统计-十大股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_holding_teamwork_em(symbol: str = '社保') -> pandas.DataFrame | 东方财富网-数据中心-股东分析-股东协同-十大股东 / https://data.eastmoney.com/gdfx/HoldingAnalyse.html
+- stock_gdfx_top_10_em(symbol: str = 'sh688686', date: str = '20260930') -> pandas.DataFrame | 东方财富网-个股-十大股东 / https://emweb.securities.eastmoney.com/PC_HSF10/ShareholderResearch/Index?type=web&code=SH688686#sdgd-0
+- stock_hold_control_cninfo(symbol: str = '全部') -> pandas.DataFrame | 巨潮资讯-数据中心-专题统计-股东股本-实际控制人持股变动 / https://webapi.cninfo.com.cn/#/thematicStatistics
+- stock_hsgt_fund_flow_summary_em() -> pandas.DataFrame | 东方财富网-数据中心-资金流向-沪深港通资金流向 / https://data.eastmoney.com/hsgt/index.html#lssj
+- stock_hsgt_fund_min_em(symbol: str = '北向资金') -> pandas.DataFrame | 东方财富-数据中心-沪深港通-市场概括-分时数据 / https://data.eastmoney.com/hsgt/hsgtDetail/scgk.html
+- stock_hsgt_hist_em(symbol: str = '北向资金') -> pandas.DataFrame | 东方财富网-数据中心-资金流向-沪深港通资金流向-沪深港通历史数据 / https://data.eastmoney.com/hsgt/index.html
+- stock_hsgt_individual_detail_em(symbol: str = '002008', start_date: str = '20220130', end_date: str = '20220330') -> pandas.DataFrame | 东方财富-数据中心-沪深港通-沪深港通持股-具体股票详情 / https://data.eastmoney.com/hsgtcg/StockHdStatistics/002008.html
+- stock_hsgt_individual_em(symbol: str = '002008') -> pandas.DataFrame | 东方财富-数据中心-沪深港通-沪深港通持股-具体股票 / https://data.eastmoney.com/hsgt/StockHdDetail/002008.html
+- stock_hsgt_institution_statistics_em(market: str = '北向持股', start_date: str = '20220601', end_date: str = '20220609') | 东方财富网-数据中心-沪深港通-沪深港通持股-每日机构统计 / https://data.eastmoney.com/hsgtcg/InstitutionStatistics.aspx
+- stock_hsgt_sh_hk_spot_em() -> pandas.DataFrame | 东方财富网-行情中心-沪深港通-港股通（沪>港）-股票 / https://quote.eastmoney.com/center/gridlist.html#hk_sh_stocks
+- stock_hsgt_stock_statistics_em(symbol: str = '南向持股', start_date: str = '20240110', end_date: str = '20240110') | 东方财富网-数据中心-沪深港通-沪深港通持股-每日个股统计 / https://data.eastmoney.com/hsgtcg/StockStatistics.aspx
+- stock_individual_notice_report(symbol: str = '300237', indicator: str = '全部', start_date: str = None, end_date: str = None) -> pandas.DataFrame | 东方财富网-数据中心-公告大全-个股 / https://data.eastmoney.com/notices/stock/300237.html
+- stock_info_sh_delist(symbol: str = '全部') -> pandas.DataFrame | 上海证券交易所-终止上市公司 / https://www.sse.com.cn/assortment/stock/list/delisting/
+- stock_info_sz_delist(symbol: str = '终止上市公司') -> pandas.DataFrame | 深圳证券交易所-暂停上市公司-终止上市公司 / https://www.szse.cn/market/stock/suspend/index.html
+- stock_institute_hold(symbol: str = '20051') -> pandas.DataFrame | 新浪财经-股票-机构持股一览表 / https://vip.stock.finance.sina.com.cn/q/go.php/vComStockHold/kind/jgcg/index.phtml
+- stock_institute_hold_detail(symbol: str = '600433', quarter: str = '20201') -> pandas.DataFrame | 新浪财经-股票-机构持股详情 / https://vip.stock.finance.sina.com.cn/q/go.php/vComStockHold/kind/jgcg/index.phtml
+- stock_news_cjzc_em() -> pandas.DataFrame | 东方财富-财经早餐 / https://stock.eastmoney.com/a/czpnc.html
+- stock_notice_report(symbol: str = '全部', date: str = '20261113') -> pandas.DataFrame | 东方财富网-数据中心-公告大全-沪深京 A 股公告 / https://data.eastmoney.com/notices/hsa/5.html
+- stock_profit_sheet_by_report_delisted_em(symbol: str = 'SZ000013') -> pandas.DataFrame | 东方财富-股票-财务分析-利润表-已退市股票-按报告期 / https://emweb.securities.eastmoney.com/pc_hsf10/pages/index.html?type=web&code=SZ000013#/cwfx/lrb
+- stock_report_disclosure(market: str = '沪深京', period: str = '2021年报') -> pandas.DataFrame | 巨潮资讯-首页-数据-预约披露 / http://www.cninfo.com.cn/new/commonUrl?url=data/yypl
+- stock_report_fund_hold(symbol: str = '基金持仓', date: str = '20260930') -> pandas.DataFrame | 东方财富网-数据中心-主力数据-基金持仓 / http://data.eastmoney.com/zlsj/2020-12-31-1-2.html
+- stock_report_fund_hold_detail(symbol: str = '008286', date: str = '20260930') -> pandas.DataFrame | 东方财富网-数据中心-主力数据-基金持仓-明细 / http://data.eastmoney.com/zlsj/ccjj/2020-12-31-008286.html
+- stock_share_change_all_cninfo(symbol: str = '全部') -> pandas.DataFrame | 巨潮资讯-数据中心-专题统计-股东股本-股本变动 / https://webapi.cninfo.com.cn/#/thematicStatistics
+- stock_share_change_cninfo(symbol: str = '002594', start_date: str = '20091227', end_date: str = '20241021') -> pandas.DataFrame | 巨潮资讯-股本股东-公司股本变动 / https://webapi.cninfo.com.cn/#/apiDoc
+- stock_share_hold_change_bse(symbol: str = '430489') -> pandas.DataFrame | 北京证券交易所-信息披露-监管信息-董监高及相关人员持股变动 / https://www.bse.cn/disclosure/djg_sharehold_change.html
+- stock_share_hold_change_sse(symbol: str = '600000') -> pandas.DataFrame | 上海证券交易所-披露-监管信息公开-公司监管-董董监高人员股份变动 / https://www.sse.com.cn/disclosure/credibility/supervision/change/
+- stock_share_hold_change_szse(symbol: str = '全部') -> pandas.DataFrame | 深圳证券交易所-信息披露-监管信息公开-董监高人员股份变动 / https://www.szse.cn/disclosure/supervision/change/index.html
+- stock_sy_em(date: str = '20251231') -> pandas.DataFrame | 东方财富网-数据中心-特色数据-商誉-个股商誉明细 / https://data.eastmoney.com/sy/list.html
+- stock_sy_hy_em(date: str = '20251231') -> pandas.DataFrame | 东方财富网-数据中心-特色数据-商誉-行业商誉 / https://data.eastmoney.com/sy/hylist.html
+- stock_sy_jz_em(date: str = '20251231') -> pandas.DataFrame | 东方财富网-数据中心-特色数据-商誉-个股商誉减值明细 / https://data.eastmoney.com/sy/jzlist.html
+- stock_sy_profile_em() -> pandas.DataFrame | 东方财富网-数据中心-特色数据-商誉-A股商誉市场概况 / https://data.eastmoney.com/sy/scgk.html
+- stock_sy_yq_em(date: str = '20251231') -> pandas.DataFrame | 东方财富网-数据中心-特色数据-商誉-商誉减值预期明细 / https://data.eastmoney.com/sy/yqlist.html
+- stock_zh_a_stop_em() -> pandas.DataFrame | 东方财富网-行情中心-沪深个股-两网及退市 / https://quote.eastmoney.com/center/gridlist.html#staq_net_board
+
+############################## stock_lhb_detail_em
+def stock_lhb_detail_em(
+    start_date: str = "20230403", end_date: str = "20230417"
+) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-龙虎榜单-龙虎榜详情
+    https://data.eastmoney.com/stock/tradedetail.html
+    :param start_date: 开始日期
+    :type start_date: str
+    :param end_date: 结束日期
+    :type end_date: str
+    :return: 龙虎榜详情
+    :rtype: pandas.DataFrame
+    """
+    start_date = "-".join([start_date[:4], start_date[4:6], start_date[6:]])
+    end_date = "-".join([end_date[:4], end_date[4:6], end_date[6:]])
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "SECURITY_CODE,TRADE_DATE",
+        "sortTypes": "1,-1",
+        "pageSize": "5000",
+        "pageNumber": "1",
+        "reportName": "RPT_DAILYBILLBOARD_DETAILSNEW",
+        "columns": "SECURITY_CODE,SECUCODE,SECURITY_NAME_ABBR,TRADE_DATE,EXPLAIN,CLOSE_PRICE,CHANGE_RATE,"
+        "BILLBOARD_NET_AMT,BILLBOARD_BUY_AMT,BILLBOARD_SELL_AMT,BILLBOARD_DEAL_AMT,ACCUM_AMOUNT,"
+        "DEAL_NET_RATIO,DEAL_AMOUNT_RATIO,TURNOVERRATE,FREE_MARKET_CAP,EXPLANATION,D1_CLOSE_ADJCHRATE,"
+        "D2_CLOSE_ADJCHRATE,D5_CLOSE_ADJCHRATE,D10_CLOSE_ADJCHRATE,SECURITY_TYPE_CODE",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"(TRADE_DATE<='{end_date}')(TRADE_DATE>='{start_date}')",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page_num = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, total_page_num + 1), leave=False):
+        params.update(
+            {
+                "pageNumber": page,
+            }
+        )
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat([big_df, temp_df], ignore_index=True)
+    big_df = big_df.reset_index()
+    big_df["index"] = big_df.index + 1
+    big_df = big_df.rename(
+        columns={
+            "index": "序号",
+            "SECURITY_CODE": "代码",
+            "SECUCODE": "-",
+            "SECURITY_NAME_ABBR": "名称",
+            "TRADE_DATE": "上榜日",
+            "EXPLAIN": "解读",
+            "CLOSE_PRICE": "收盘价",
+            "CHANGE_RATE": "涨跌幅",
+            "BILLBOARD_NET_AMT": "龙虎榜净买额",
+            "BILLBOARD_BUY_AMT": "龙虎榜买入额",
+            "BILLBOARD_SELL_AMT": "龙虎榜卖出额",
+            "BILLBOARD_DEAL_AMT": "龙虎榜成交额",
+            "ACCUM_AMOUNT": "市场总成交额",
+            "DEAL_NET_RATIO": "净买额占总成交比",
+            "DEAL_AMOUNT_RATIO": "成交额占总成交比",
+            "TURNOVERRATE": "换手率",
+            "FREE_MARKET_CAP": "流通市值",
+            "EXPLANATION": "上榜原因",
+            "D1_CLOSE_ADJCHRATE": "上榜后1日",
+            "D2_CLOSE_ADJCHRATE": "上榜后2日",
+            "D5_CLOSE_ADJCHRATE": "上榜后5日",
+            "D10_CLOSE_ADJCHRATE": "上榜后10日",
+        },
+    )
+
+    big_df = big_df[
+        [
+            "序号",
+            "代码",
+            "名称",
+            "上榜日",
+            "解读",
+            "收盘价",
+            "涨跌幅",
+            "龙虎榜净买额",
+            "龙虎榜买入额",
+            "龙虎榜卖出额",
+            "龙虎榜成交额",
+            "市场总成交额",
+            "净买额占总成交比",
+            "成交额占总成交比",
+            "换手率",
+            "流通市值",
+            "上榜原因",
+            "上榜后1日",
+            "上榜后2日",
+            "上榜后5日",
+            "上榜后10日",
+        ]
+    ]
+    big_df["上榜日"] = pd.to_datetime(big_df["上榜日"], errors="coerce").dt.date
+    big_df["收盘价"] = pd.to_numeric(big_df["收盘价"], errors="coerce")
+    big_df["涨跌幅"] = pd.to_numeric(big_df["涨跌幅"], errors="coerce")
+    big_df["龙虎榜净买额"] = pd.to_numeric(big_df["龙虎榜净买额"], errors="coerce")
+    big_df["龙虎榜买入额"] = pd.to_numeric(big_df["龙虎榜买入额"], errors="coerce")
+    big_df["龙虎榜卖出额"] = pd.to_numeric(big_df["龙虎榜卖出额"], errors="coerce")
+    big_df["龙虎榜成交额"] = pd.to_numeric(big_df["龙虎榜成交额"], errors="coerce")
+    big_df["市场总成交额"] = pd.to_numeric(big_df["市场总成交额"], errors="coerce")
+    big_df["净买额占总成交比"] = pd.to_numeric(
+        big_df["净买额占总成交比"], errors="coerce"
+    )
+    big_df["成交额占总成交比"] = pd.to_numeric(
+        big_df["成交额占总成交比"], errors="coerce"
+    )
+    big_df["换手率"] = pd.to_numeric(big_df["换手率"], errors="coerce")
+    big_df["流通市值"] = pd.to_numeric(big_df["流通市值"], errors="coerce")
+    big_df["上榜后1日"] = pd.to_numeric(big_df["上榜后1日"], errors="coerce")
+    big_df["上榜后2日"] = pd.to_numeric(big_df["上榜后2日"], errors="coerce")
+    big_df["上榜后5日"] = pd.to_numeric(big_df["上榜后5日"], errors="coerce")
+    big_df["上榜后10日"] = pd.to_numeric(big_df["上榜后10日"], errors="coerce")
+    return big_df
+
+
+############################## stock_lhb_stock_detail_em
+def stock_lhb_stock_detail_em(
+    symbol: str = "000788", date: str = "20220315", flag: str = "卖出"
+) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-龙虎榜单-个股龙虎榜详情
+    https://data.eastmoney.com/stock/lhb/600077.html
+    :param symbol: 股票代码
+    :type symbol: str
+    :param date: 查询日期；需要通过 ak.stock_lhb_stock_detail_date_em(symbol="600077") 接口获取相应股票的有龙虎榜详情数据的日期
+    :type date: str
+    :param flag: choice of {"买入", "卖出"}
+    :type flag: str
+    :return: 个股龙虎榜详情
+    :rtype: pandas.DataFrame
+    """
+    flag_map = {
+        "买入": "BUY",
+        "卖出": "SELL",
+    }
+    report_map = {
+        "买入": "RPT_BILLBOARD_DAILYDETAILSBUY",
+        "卖出": "RPT_BILLBOARD_DAILYDETAILSSELL",
+    }
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "reportName": report_map[flag],
+        "columns": "ALL",
+        "filter": f"""(TRADE_DATE='{"-".join([date[:4], date[4:6], date[6:]])}')(SECURITY_CODE="{symbol}")""",
+        "pageNumber": "1",
+        "pageSize": "500",
+        "sortTypes": "-1",
+        "sortColumns": flag_map[flag],
+        "source": "WEB",
+        "client": "WEB",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["result"]["data"])
+    temp_df = temp_df.reset_index()
+    temp_df["index"] = temp_df.index + 1
+
+    if flag == "买入":
+        temp_df = temp_df.rename(
+            columns={
+                "index": "序号",
+                "OPERATEDEPT_NAME": "交易营业部名称",
+                "EXPLANATION": "类型",
+                "BUY": "买入金额",
+                "SELL": "卖出金额",
+                "NET": "净额",
+                "TOTAL_BUYRIO": "买入金额-占总成交比例",
+                "TOTAL_SELLRIO": "卖出金额-占总成交比例",
+            }
+        )
+        temp_df = temp_df[
+            [
+                "序号",
+                "交易营业部名称",
+                "买入金额",
+                "买入金额-占总成交比例",
+                "卖出金额",
+                "卖出金额-占总成交比例",
+                "净额",
+                "类型",
+            ]
+        ]
+        temp_df["买入金额"] = pd.to_numeric(temp_df["买入金额"], errors="coerce")
+        temp_df["买入金额-占总成交比例"] = pd.to_numeric(
+            temp_df["买入金额-占总成交比例"], errors="coerce"
+        )
+        temp_df["卖出金额"] = pd.to_numeric(temp_df["卖出金额"], errors="coerce")
+        temp_df["卖出金额-占总成交比例"] = pd.to_numeric(
+            temp_df["卖出金额-占总成交比例"], errors="coerce"
+        )
+        temp_df = temp_df.sort_values("类型", ignore_index=True)
+        temp_df = temp_df.reset_index(drop=True)
+        temp_df["序号"] = range(1, len(temp_df["序号"]) + 1)
+    else:
+        temp_df.columns = [
+            "序号",
+            "-",
+            "-",
+            "-",
+            "-",
+            "交易营业部名称",
+            "类型",
+            "-",
+            "-",
+            "-",
+            "-",
+            "买入金额",
+            "卖出金额",
+            "净额",
+            "-",
+            "-",
+            "-",
+            "-",
+            "买入金额-占总成交比例",
+            "卖出金额-占总成交比例",
+            "-",
+        ]
+        temp_df = temp_df[
+            [
+                "序号",
+                "交易营业部名称",
+                "买入金额",
+                "买入金额-占总成交比例",
+                "卖出金额",
+                "卖出金额-占总成交比例",
+                "净额",
+                "类型",
+            ]
+        ]
+        temp_df["买入金额"] = pd.to_numeric(temp_df["买入金额"], errors="coerce")
+        temp_df["买入金额-占总成交比例"] = pd.to_numeric(
+            temp_df["买入金额-占总成交比例"], errors="coerce"
+        )
+        temp_df["卖出金额"] = pd.to_numeric(temp_df["卖出金额"], errors="coerce")
+        temp_df["卖出金额-占总成交比例"] = pd.to_numeric(
+            temp_df["卖出金额-占总成交比例"], errors="coerce"
+        )
+        temp_df = temp_df.sort_values("类型", ignore_index=True)
+        temp_df = temp_df.reset_index(drop=True)
+        temp_df["序号"] = range(1, len(temp_df["序号"]) + 1)
+    return temp_df
+
+
+############################## stock_lhb_stock_detail_date_em
+def stock_lhb_stock_detail_date_em(symbol: str = "600077") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-龙虎榜单-个股龙虎榜详情-日期
+    https://data.eastmoney.com/stock/tradedetail.html
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 个股龙虎榜详情-日期
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "reportName": "RPT_LHB_BOARDDATE",
+        "columns": "SECURITY_CODE,TRADE_DATE,TR_DATE",
+        "filter": f'(SECURITY_CODE="{symbol}")',
+        "pageNumber": "1",
+        "pageSize": "1000",
+        "sortTypes": "-1",
+        "sortColumns": "TRADE_DATE",
+        "source": "WEB",
+        "client": "WEB",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["result"]["data"])
+    temp_df = temp_df.reset_index()
+    temp_df["index"] = temp_df.index + 1
+    temp_df = temp_df.rename(
+        columns={"index": "序号", "SECURITY_CODE": "股票代码", "TRADE_DATE": "交易日"}
+    )
+    temp_df = temp_df[
+        [
+            "序号",
+            "股票代码",
+            "交易日",
+        ]
+    ]
+    temp_df["交易日"] = pd.to_datetime(temp_df["交易日"]).dt.date
+    return temp_df
+
+
+############################## stock_lhb_jgmmtj_em
+def stock_lhb_jgmmtj_em(
+    start_date: str = "20240417", end_date: str = "20240430"
+) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-龙虎榜单-机构买卖每日统计
+    https://data.eastmoney.com/stock/jgmmtj.html
+    :param start_date: 开始日期
+    :type start_date: str
+    :param end_date: 结束日期
+    :type end_date: str
+    :return: 机构买卖每日统计
+    :rtype: pandas.DataFrame
+    """
+    start_date = "-".join([start_date[:4], start_date[4:6], start_date[6:]])
+    end_date = "-".join([end_date[:4], end_date[4:6], end_date[6:]])
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "NET_BUY_AMT,TRADE_DATE,SECURITY_CODE",
+        "sortTypes": "-1,-1,1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_ORGANIZATION_TRADE_DETAILS",
+        "columns": "ALL",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"(TRADE_DATE>='{start_date}')(TRADE_DATE<='{end_date}')",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, total_page + 1), leave=False):
+        params.update(
+            {
+                "pageNumber": page,
+            }
+        )
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+    big_df = big_df.reset_index()
+    big_df["index"] = big_df.index + 1
+    big_df = big_df.rename(
+        columns={
+            "index": "序号",
+            "SECURITY_NAME_ABBR": "名称",
+            "SECURITY_CODE": "代码",
+            "TRADE_DATE": "上榜日期",
+            "CLOSE_PRICE": "收盘价",
+            "CHANGE_RATE": "涨跌幅",
+            "BUY_TIMES": "买方机构数",
+            "SELL_TIMES": "卖方机构数",
+            "BUY_AMT": "机构买入总额",
+            "SELL_AMT": "机构卖出总额",
+            "NET_BUY_AMT": "机构买入净额",
+            "ACCUM_AMOUNT": "市场总成交额",
+            "RATIO": "机构净买额占总成交额比",
+            "TURNOVERRATE": "换手率",
+            "FREECAP": "流通市值",
+            "EXPLANATION": "上榜原因",
+        }
+    )
+    big_df = big_df[
+        [
+            "序号",
+            "代码",
+            "名称",
+            "收盘价",
+            "涨跌幅",
+            "买方机构数",
+            "卖方机构数",
+            "机构买入总额",
+            "机构卖出总额",
+            "机构买入净额",
+            "市场总成交额",
+            "机构净买额占总成交额比",
+            "换手率",
+            "流通市值",
+            "上榜原因",
+            "上榜日期",
+        ]
+    ]
+    big_df["上榜日期"] = pd.to_datetime(big_df["上榜日期"], errors="coerce").dt.date
+    big_df["收盘价"] = pd.to_numeric(big_df["收盘价"], errors="coerce")
+    big_df["涨跌幅"] = pd.to_numeric(big_df["涨跌幅"], errors="coerce")
+    big_df["买方机构数"] = pd.to_numeric(big_df["买方机构数"], errors="coerce")
+    big_df["卖方机构数"] = pd.to_numeric(big_df["卖方机构数"], errors="coerce")
+    big_df["机构买入总额"] = pd.to_numeric(big_df["机构买入总额"], errors="coerce")
+    big_df["机构卖出总额"] = pd.to_numeric(big_df["机构卖出总额"], errors="coerce")
+    big_df["机构买入净额"] = pd.to_numeric(big_df["机构买入净额"], errors="coerce")
+    big_df["市场总成交额"] = pd.to_numeric(big_df["市场总成交额"], errors="coerce")
+    big_df["机构净买额占总成交额比"] = pd.to_numeric(
+        big_df["机构净买额占总成交额比"], errors="coerce"
+    )
+    big_df["换手率"] = pd.to_numeric(big_df["换手率"], errors="coerce")
+    big_df["流通市值"] = pd.to_numeric(big_df["流通市值"], errors="coerce")
+    return big_df
+
+
+############################## stock_lhb_detail_daily_sina
+def stock_lhb_detail_daily_sina(date: str = "20240222") -> pd.DataFrame:
+    """
+    龙虎榜-每日详情
+    https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lhb/index.phtml
+    :param date: 交易日
+    :type date: str
+    :return: 龙虎榜-每日详情
+    :rtype: pandas.DataFrame
+    """
+    date = "-".join([date[:4], date[4:6], date[6:]])
+    url = "https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lhb/index.phtml"
+    params = {"tradedate": date}
+    r = http.get(url, params=params)
+    soup = BeautifulSoup(r.text, features="lxml")
+    selected_html = soup.find(name="div", attrs={"class": "list"}).find_all(
+        name="table", attrs={"class": "list_table"}
+    )
+    big_df = pd.DataFrame()
+    for table in selected_html:
+        temp_df = pd.read_html(StringIO(table.prettify()), header=0, skiprows=1)[0]
+        temp_symbol = pd.read_html(StringIO(table.prettify()))[0].iat[0, 0]
+        temp_df["指标"] = temp_symbol
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+    big_df["股票代码"] = big_df["股票代码"].astype(str).str.zfill(6)
+    del big_df["查看详情"]
+    big_df.columns = [
+        "序号",
+        "股票代码",
+        "股票名称",
+        "收盘价",
+        "对应值",
+        "成交量",
+        "成交额",
+        "指标",
+    ]
+    big_df["收盘价"] = pd.to_numeric(big_df["收盘价"], errors="coerce")
+    big_df["对应值"] = pd.to_numeric(big_df["对应值"], errors="coerce")
+    big_df["成交量"] = pd.to_numeric(big_df["成交量"], errors="coerce")
+    big_df["成交额"] = pd.to_numeric(big_df["成交额"], errors="coerce")
+    return big_df
+
+
+############################## stock_margin_detail_sse
+def stock_margin_detail_sse(date: str = "20230922") -> pd.DataFrame:
+    """
+    上海证券交易所-融资融券数据-融资融券明细
+    https://www.sse.com.cn/market/othersdata/margin/detail/
+    :param date: 交易日期
+    :type date: str
+    :return: 融资融券明细
+    :rtype: pandas.DataFrame
+    """
+    url = "https://query.sse.com.cn/marketdata/tradedata/queryMargin.do"
+    params = {
+        "isPagination": "true",
+        "tabType": "mxtype",
+        "detailsDate": date,
+        "stockCode": "",
+        "beginDate": "",
+        "endDate": "",
+        "pageHelp.pageSize": "5000",
+        "pageHelp.pageCount": "50",
+        "pageHelp.pageNo": "1",
+        "pageHelp.beginPage": "1",
+        "pageHelp.cacheSize": "1",
+        "pageHelp.endPage": "21",
+    }
+    headers = {
+        "Referer": "https://www.sse.com.cn/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/88.0.4324.150 Safari/537.36",
+    }
+    r = http.get(url, params=params, headers=headers)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["result"])
+    temp_df.columns = [
+        "_",
+        "信用交易日期",
+        "融券偿还量",
+        "融券卖出量",
+        "融券余量",
+        "_",
+        "_",
+        "融资偿还额",
+        "融资买入额",
+        "_",
+        "融资余额",
+        "标的证券简称",
+        "标的证券代码",
+    ]
+    temp_df = temp_df[
+        [
+            "信用交易日期",
+            "标的证券代码",
+            "标的证券简称",
+            "融资余额",
+            "融资买入额",
+            "融资偿还额",
+            "融券余量",
+            "融券卖出量",
+            "融券偿还量",
+        ]
+    ]
+    temp_df["融资余额"] = pd.to_numeric(temp_df["融资余额"], errors="coerce")
+    temp_df["融资买入额"] = pd.to_numeric(temp_df["融资买入额"], errors="coerce")
+    temp_df["融资偿还额"] = pd.to_numeric(temp_df["融资偿还额"], errors="coerce")
+    temp_df["融券余量"] = pd.to_numeric(temp_df["融券余量"], errors="coerce")
+    temp_df["融券卖出量"] = pd.to_numeric(temp_df["融券卖出量"], errors="coerce")
+    temp_df["融券偿还量"] = pd.to_numeric(temp_df["融券偿还量"], errors="coerce")
+    return temp_df
+
+
+############################## stock_margin_detail_szse
+def stock_margin_detail_szse(date: str = "20230925") -> pd.DataFrame:
+    """
+    深圳证券交易所-融资融券数据-融资融券交易明细
+    https://www.szse.cn/disclosure/margin/margin/index.html
+    :param date: 交易日期
+    :type date: str
+    :return: 融资融券明细
+    :rtype: pandas.DataFrame
+    """
+    url = "https://www.szse.cn/api/report/ShowReport"
+    params = {
+        "SHOWTYPE": "xlsx",
+        "CATALOGID": "1837_xxpl",
+        "txtDate": "-".join([date[:4], date[4:6], date[6:]]),
+        "tab2PAGENO": "1",
+        "random": "0.24279342734085696",
+        "TABKEY": "tab2",
+    }
+    headers = {
+        "Referer": "https://www.szse.cn/disclosure/margin/margin/index.html",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/88.0.4324.150 Safari/537.36",
+    }
+    r = http.get(url, params=params, headers=headers)
+    with warnings.catch_warnings(record=True):
+        warnings.simplefilter("always")
+        temp_df = pd.read_excel(
+            BytesIO(r.content), engine="openpyxl", dtype={"证券代码": str}
+        )
+    temp_df.columns = [
+        "证券代码",
+        "证券简称",
+        "融资买入额",
+        "融资余额",
+        "融券卖出量",
+        "融券余量",
+        "融券余额",
+        "融资融券余额",
+    ]
+    temp_df["证券简称"] = temp_df["证券简称"].str.replace("&nbsp;", "")
+    temp_df["融资买入额"] = temp_df["融资买入额"].str.replace(",", "")
+    temp_df["融资买入额"] = pd.to_numeric(temp_df["融资买入额"], errors="coerce")
+    temp_df["融资余额"] = temp_df["融资余额"].str.replace(",", "")
+    temp_df["融资余额"] = pd.to_numeric(temp_df["融资余额"], errors="coerce")
+    temp_df["融券卖出量"] = temp_df["融券卖出量"].astype(str).str.replace(",", "")
+    temp_df["融券卖出量"] = pd.to_numeric(temp_df["融券卖出量"], errors="coerce")
+    temp_df["融券余量"] = temp_df["融券余量"].str.replace(",", "")
+    temp_df["融券余量"] = pd.to_numeric(temp_df["融券余量"], errors="coerce")
+    temp_df["融券余额"] = temp_df["融券余额"].str.replace(",", "")
+    temp_df["融券余额"] = pd.to_numeric(temp_df["融券余额"], errors="coerce")
+    temp_df["融资融券余额"] = temp_df["融资融券余额"].str.replace(",", "")
+    temp_df["融资融券余额"] = pd.to_numeric(temp_df["融资融券余额"], errors="coerce")
+    return temp_df
+
+
+############################## stock_margin_underlying_info_szse
+def stock_margin_underlying_info_szse(date: str = "20261113") -> pd.DataFrame:
+    """
+    深圳证券交易所-融资融券数据-标的证券信息
+    https://www.szse.cn/disclosure/margin/object/index.html
+    :param date: 交易日
+    :type date: str
+    :return: 标的证券信息
+    :rtype: pandas.DataFrame
+    """
+    url = "https://www.szse.cn/api/report/ShowReport"
+    params = {
+        "SHOWTYPE": "xlsx",
+        "CATALOGID": "1834_xxpl",
+        "txtDate": "-".join([date[:4], date[4:6], date[6:]]),
+        "tab1PAGENO": "1",
+        "random": "0.7425245522795993",
+        "TABKEY": "tab1",
+    }
+    headers = {
+        "Referer": "https://www.szse.cn/disclosure/margin/object/index.html",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/88.0.4324.150 Safari/537.36",
+    }
+    r = http.get(url, params=params, headers=headers)
+    with warnings.catch_warnings(record=True):
+        warnings.simplefilter("always")
+        temp_df = pd.read_excel(
+            BytesIO(r.content), engine="openpyxl", dtype={"证券代码": str}
+        )
+    return temp_df
+
+
+############################## stock_dzjy_mrmx
+def stock_dzjy_mrmx(
+    symbol: str = "基金", start_date: str = "20261113", end_date: str = "20261113"
+) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-大宗交易-每日明细
+    https://data.eastmoney.com/dzjy/dzjy_mrmx.html
+    :param symbol: choice of {'A股', 'B股', '基金', '债券'}
+    :type symbol: str
+    :param start_date: 开始日期
+    :type start_date: str
+    :param end_date: 结束日期
+    :type end_date: str
+    :return: 每日明细
+    :rtype: pandas.DataFrame
+    """
+    symbol_map = {
+        "A股": "1",
+        "B股": "2",
+        "基金": "3",
+        "债券": "4",
+    }
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "SECURITY_CODE",
+        "sortTypes": "1",
+        "pageSize": "5000",
+        "pageNumber": "1",
+        "reportName": "RPT_DATA_BLOCKTRADE",
+        "columns": "TRADE_DATE,SECURITY_CODE,SECUCODE,SECURITY_NAME_ABBR,CHANGE_RATE,CLOSE_PRICE,"
+        "DEAL_PRICE,PREMIUM_RATIO,DEAL_VOLUME,DEAL_AMT,TURNOVER_RATE,BUYER_NAME,SELLER_NAME,"
+        "CHANGE_RATE_1DAYS,CHANGE_RATE_5DAYS,CHANGE_RATE_10DAYS,CHANGE_RATE_20DAYS,BUYER_CODE,SELLER_CODE",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"""(SECURITY_TYPE_WEB={symbol_map[symbol]})(TRADE_DATE>=
+        '{"-".join([start_date[:4], start_date[4:6], start_date[6:]])}')(TRADE_DATE<=
+        '{"-".join([end_date[:4], end_date[4:6], end_date[6:]])}')""",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    if not data_json["result"]["data"]:
+        return pd.DataFrame()
+    temp_df = pd.DataFrame(data_json["result"]["data"])
+    temp_df = temp_df.reset_index()
+    temp_df["index"] = temp_df.index + 1
+    if symbol in {"A股"}:
+        temp_df.columns = [
+            "序号",
+            "交易日期",
+            "证券代码",
+            "-",
+            "证券简称",
+            "涨跌幅",
+            "收盘价",
+            "成交价",
+            "折溢率",
+            "成交量",
+            "成交额",
+            "成交额/流通市值",
+            "买方营业部",
+            "卖方营业部",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+            "_",
+        ]
+        temp_df["交易日期"] = pd.to_datetime(
+            temp_df["交易日期"], errors="coerce"
+        ).dt.date
+        temp_df = temp_df[
+            [
+                "序号",
+                "交易日期",
+                "证券代码",
+                "证券简称",
+                "涨跌幅",
+                "收盘价",
+                "成交价",
+                "折溢率",
+                "成交量",
+                "成交额",
+                "成交额/流通市值",
+                "买方营业部",
+                "卖方营业部",
+            ]
+        ]
+        temp_df["涨跌幅"] = pd.to_numeric(temp_df["涨跌幅"], errors="coerce")
+        temp_df["收盘价"] = pd.to_numeric(temp_df["收盘价"], errors="coerce")
+        temp_df["成交价"] = pd.to_numeric(temp_df["成交价"], errors="coerce")
+        temp_df["折溢率"] = pd.to_numeric(temp_df["折溢率"], errors="coerce")
+        temp_df["成交量"] = pd.to_numeric(temp_df["成交量"], errors="coerce")
+        temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
+        temp_df["成交额/流通市值"] = pd.to_numeric(
+            temp_df["成交额/流通市值"], errors="coerce"
+        )
+    if symbol in {"B股", "基金", "债券"}:
+        temp_df = temp_df.rename(
+            columns={
+                "index": "序号",
+                "TRADE_DATE": "交易日期",
+                "SECURITY_CODE": "证券代码",
+                "SECURITY_NAME_ABBR": "证券简称",
+                "DEAL_PRICE": "成交价",
+                "DEAL_VOLUME": "成交量",
+                "DEAL_AMT": "成交额",
+                "BUYER_NAME": "买方营业部",
+                "SELLER_NAME": "卖方营业部",
+            }
+        )
+        temp_df = temp_df[
+            [
+                "序号",
+                "交易日期",
+                "证券代码",
+                "证券简称",
+                "成交价",
+                "成交量",
+                "成交额",
+                "买方营业部",
+                "卖方营业部",
+            ]
+        ]
+        temp_df["交易日期"] = pd.to_datetime(
+            temp_df["交易日期"], errors="coerce"
+        ).dt.date
+        temp_df = temp_df[
+            [
+                "序号",
+                "交易日期",
+                "证券代码",
+                "证券简称",
+                "成交价",
+                "成交量",
+                "成交额",
+                "买方营业部",
+                "卖方营业部",
+            ]
+        ]
+        temp_df["成交价"] = pd.to_numeric(temp_df["成交价"], errors="coerce")
+        temp_df["成交量"] = pd.to_numeric(temp_df["成交量"], errors="coerce")
+        temp_df["成交额"] = pd.to_numeric(temp_df["成交额"], errors="coerce")
+    return temp_df
+
+
+############################## stock_dzjy_mrtj
+def stock_dzjy_mrtj(
+    start_date: str = "20261113", end_date: str = "20261113"
+) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-大宗交易-每日统计
+    https://data.eastmoney.com/dzjy/dzjy_mrtj.html
+    :param start_date: 开始日期
+    :type start_date: str
+    :param end_date: 结束日期
+    :type end_date: str
+    :return: 每日统计
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "TURNOVERRATE",
+        "sortTypes": "-1",
+        "pageSize": "5000",
+        "pageNumber": "1",
+        "reportName": "RPT_BLOCKTRADE_STA",
+        "columns": "TRADE_DATE,SECURITY_CODE,SECUCODE,SECURITY_NAME_ABBR,CHANGE_RATE,"
+        "CLOSE_PRICE,AVERAGE_PRICE,PREMIUM_RATIO,DEAL_NUM,VOLUME,DEAL_AMT,"
+        "TURNOVERRATE,D1_CLOSE_ADJCHRATE,D5_CLOSE_ADJCHRATE,D10_CLOSE_ADJCHRATE,D20_CLOSE_ADJCHRATE",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"(TRADE_DATE>='{'-'.join([start_date[:4], start_date[4:6], start_date[6:]])}')(TRADE_DATE<="
+        f"'{'-'.join([end_date[:4], end_date[4:6], end_date[6:]])}')",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["result"]["data"])
+    temp_df = temp_df.reset_index()
+    temp_df["index"] = temp_df.index + 1
+    temp_df = temp_df.rename(
+        columns={
+            "index": "序号",
+            "TRADE_DATE": "交易日期",
+            "SECURITY_CODE": "证券代码",
+            "SECURITY_NAME_ABBR": "证券简称",
+            "CHANGE_RATE": "涨跌幅",
+            "CLOSE_PRICE": "收盘价",
+            "AVERAGE_PRICE": "成交价",
+            "PREMIUM_RATIO": "折溢率",
+            "DEAL_NUM": "成交笔数",
+            "VOLUME": "成交总量",
+            "DEAL_AMT": "成交总额",
+            "TURNOVERRATE": "成交总额/流通市值",
+        }
+    )
+    temp_df = temp_df[
+        [
+            "序号",
+            "交易日期",
+            "证券代码",
+            "证券简称",
+            "涨跌幅",
+            "收盘价",
+            "成交价",
+            "折溢率",
+            "成交笔数",
+            "成交总量",
+            "成交总额",
+            "成交总额/流通市值",
+        ]
+    ]
+    temp_df["交易日期"] = pd.to_datetime(temp_df["交易日期"], errors="coerce").dt.date
+    temp_df = temp_df[
+        [
+            "序号",
+            "交易日期",
+            "证券代码",
+            "证券简称",
+            "涨跌幅",
+            "收盘价",
+            "成交价",
+            "折溢率",
+            "成交笔数",
+            "成交总量",
+            "成交总额",
+            "成交总额/流通市值",
+        ]
+    ]
+    temp_df["涨跌幅"] = pd.to_numeric(temp_df["涨跌幅"], errors="coerce")
+    temp_df["收盘价"] = pd.to_numeric(temp_df["收盘价"], errors="coerce")
+    temp_df["成交价"] = pd.to_numeric(temp_df["成交价"], errors="coerce")
+    temp_df["折溢率"] = pd.to_numeric(temp_df["折溢率"], errors="coerce")
+    temp_df["成交笔数"] = pd.to_numeric(temp_df["成交笔数"], errors="coerce")
+    temp_df["成交总量"] = pd.to_numeric(temp_df["成交总量"], errors="coerce")
+    temp_df["成交总额"] = pd.to_numeric(temp_df["成交总额"], errors="coerce")
+    temp_df["成交总额/流通市值"] = pd.to_numeric(
+        temp_df["成交总额/流通市值"], errors="coerce"
+    )
+    return temp_df
+
+
+############################## stock_zh_a_gdhs
+def stock_zh_a_gdhs(symbol: str = "20230930") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-特色数据-股东户数
+    https://data.eastmoney.com/gdhs/
+    :param symbol: choice of {"最新", "每个季度末"}，其中 每个季度末需要写成 `20230930` 格式
+    :type symbol: str
+    :return: 股东户数
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    if symbol == "最新":
+        params = {
+            "sortColumns": "HOLD_NOTICE_DATE,SECURITY_CODE",
+            "sortTypes": "-1,-1",
+            "pageSize": "500",
+            "pageNumber": "1",
+            "reportName": "RPT_HOLDERNUMLATEST",
+            "columns": "SECURITY_CODE,SECURITY_NAME_ABBR,END_DATE,INTERVAL_CHRATE,AVG_MARKET_CAP,AVG_HOLD_NUM,"
+            "TOTAL_MARKET_CAP,TOTAL_A_SHARES,HOLD_NOTICE_DATE,HOLDER_NUM,PRE_HOLDER_NUM,"
+            "HOLDER_NUM_CHANGE,HOLDER_NUM_RATIO,END_DATE,PRE_END_DATE",
+            "quoteColumns": "f2,f3",
+            "source": "WEB",
+            "client": "WEB",
+        }
+    else:
+        params = {
+            "sortColumns": "HOLD_NOTICE_DATE,SECURITY_CODE",
+            "sortTypes": "-1,-1",
+            "pageSize": "500",
+            "pageNumber": "1",
+            "reportName": "RPT_HOLDERNUM_DET",
+            "columns": "SECURITY_CODE,SECURITY_NAME_ABBR,END_DATE,INTERVAL_CHRATE,AVG_MARKET_CAP,"
+            "AVG_HOLD_NUM,TOTAL_MARKET_CAP,TOTAL_A_SHARES,HOLD_NOTICE_DATE,HOLDER_NUM,"
+            "PRE_HOLDER_NUM,HOLDER_NUM_CHANGE,HOLDER_NUM_RATIO,END_DATE,PRE_END_DATE",
+            "quoteColumns": "f2,f3",
+            "source": "WEB",
+            "client": "WEB",
+            "filter": f"(END_DATE='{symbol[:4] + '-' + symbol[4:6] + '-' + symbol[6:]}')",
+        }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page_num = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page_num in tqdm(range(1, total_page_num + 1), leave=False):
+        params.update(
+            {
+                "pageNumber": page_num,
+            }
+        )
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+    big_df.columns = [
+        "代码",
+        "名称",
+        "股东户数统计截止日-本次",
+        "区间涨跌幅",
+        "户均持股市值",
+        "户均持股数量",
+        "总市值",
+        "总股本",
+        "公告日期",
+        "股东户数-本次",
+        "股东户数-上次",
+        "股东户数-增减",
+        "股东户数-增减比例",
+        "股东户数统计截止日-上次",
+        "最新价",
+        "涨跌幅",
+    ]
+    big_df = big_df[
+        [
+            "代码",
+            "名称",
+            "最新价",
+            "涨跌幅",
+            "股东户数-本次",
+            "股东户数-上次",
+            "股东户数-增减",
+            "股东户数-增减比例",
+            "区间涨跌幅",
+            "股东户数统计截止日-本次",
+            "股东户数统计截止日-上次",
+            "户均持股市值",
+            "户均持股数量",
+            "总市值",
+            "总股本",
+            "公告日期",
+        ]
+    ]
+    big_df["最新价"] = pd.to_numeric(big_df["最新价"], errors="coerce")
+    big_df["涨跌幅"] = pd.to_numeric(big_df["涨跌幅"], errors="coerce")
+    big_df["股东户数-本次"] = pd.to_numeric(big_df["股东户数-本次"], errors="coerce")
+    big_df["股东户数-上次"] = pd.to_numeric(big_df["股东户数-上次"], errors="coerce")
+    big_df["股东户数-增减"] = pd.to_numeric(big_df["股东户数-增减"], errors="coerce")
+    big_df["股东户数-增减比例"] = pd.to_numeric(
+        big_df["股东户数-增减比例"], errors="coerce"
+    )
+    big_df["区间涨跌幅"] = pd.to_numeric(big_df["区间涨跌幅"], errors="coerce")
+    big_df["股东户数统计截止日-本次"] = pd.to_datetime(
+        big_df["股东户数统计截止日-本次"], errors="coerce"
+    ).dt.date
+    big_df["股东户数统计截止日-上次"] = pd.to_datetime(
+        big_df["股东户数统计截止日-上次"], errors="coerce"
+    ).dt.date
+    big_df["户均持股市值"] = pd.to_numeric(big_df["户均持股市值"], errors="coerce")
+    big_df["户均持股数量"] = pd.to_numeric(big_df["户均持股数量"], errors="coerce")
+    big_df["总市值"] = pd.to_numeric(big_df["总市值"], errors="coerce")
+    big_df["总股本"] = pd.to_numeric(big_df["总股本"], errors="coerce")
+    big_df["公告日期"] = pd.to_datetime(big_df["公告日期"], errors="coerce").dt.date
+    return big_df
+
+
+############################## stock_zh_a_gdhs_detail_em
+def stock_zh_a_gdhs_detail_em(symbol: str = "000001") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-特色数据-股东户数详情
+    https://data.eastmoney.com/gdhs/detail/000002.html
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 股东户数
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "END_DATE",
+        "sortTypes": "-1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_HOLDERNUM_DET",
+        "columns": "SECURITY_CODE,SECURITY_NAME_ABBR,CHANGE_SHARES,CHANGE_REASON,END_DATE,INTERVAL_CHRATE,"
+        "AVG_MARKET_CAP,AVG_HOLD_NUM,TOTAL_MARKET_CAP,TOTAL_A_SHARES,HOLD_NOTICE_DATE,HOLDER_NUM,"
+        "PRE_HOLDER_NUM,HOLDER_NUM_CHANGE,HOLDER_NUM_RATIO,END_DATE,PRE_END_DATE",
+        "quoteColumns": "f2,f3",
+        "filter": f'(SECURITY_CODE="{symbol}")',
+        "source": "WEB",
+        "client": "WEB",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page_num = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page_num in tqdm(range(1, total_page_num + 1), leave=False):
+        params.update(
+            {
+                "pageNumber": page_num,
+            }
+        )
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+    big_df.columns = [
+        "代码",
+        "名称",
+        "股本变动",
+        "股本变动原因",
+        "股东户数统计截止日",
+        "区间涨跌幅",
+        "户均持股市值",
+        "户均持股数量",
+        "总市值",
+        "总股本",
+        "股东户数公告日期",
+        "股东户数-本次",
+        "股东户数-上次",
+        "股东户数-增减",
+        "股东户数-增减比例",
+        "-",
+        "-",
+        "-",
+    ]
+    big_df = big_df[
+        [
+            "股东户数统计截止日",
+            "区间涨跌幅",
+            "股东户数-本次",
+            "股东户数-上次",
+            "股东户数-增减",
+            "股东户数-增减比例",
+            "户均持股市值",
+            "户均持股数量",
+            "总市值",
+            "总股本",
+            "股本变动",
+            "股本变动原因",
+            "股东户数公告日期",
+            "代码",
+            "名称",
+        ]
+    ]
+    big_df["区间涨跌幅"] = pd.to_numeric(big_df["区间涨跌幅"], errors="coerce")
+    big_df["股东户数-本次"] = pd.to_numeric(big_df["股东户数-本次"], errors="coerce")
+    big_df["股东户数-上次"] = pd.to_numeric(big_df["股东户数-上次"], errors="coerce")
+    big_df["股东户数-增减"] = pd.to_numeric(big_df["股东户数-增减"], errors="coerce")
+    big_df["股东户数-增减比例"] = pd.to_numeric(
+        big_df["股东户数-增减比例"], errors="coerce"
+    )
+    big_df["户均持股市值"] = pd.to_numeric(big_df["户均持股市值"], errors="coerce")
+    big_df["户均持股数量"] = pd.to_numeric(big_df["户均持股数量"], errors="coerce")
+    big_df["总市值"] = pd.to_numeric(big_df["总市值"], errors="coerce")
+    big_df["总股本"] = pd.to_numeric(big_df["总股本"], errors="coerce")
+    big_df["股本变动"] = pd.to_numeric(big_df["股本变动"], errors="coerce")
+    big_df["股东户数统计截止日"] = pd.to_datetime(
+        big_df["股东户数统计截止日"], errors="coerce"
+    ).dt.date
+    big_df["股东户数公告日期"] = pd.to_datetime(
+        big_df["股东户数公告日期"], errors="coerce"
+    ).dt.date
+    big_df = big_df.sort_values(by=["股东户数统计截止日"], ignore_index=True)
+    return big_df
+
+
+############################## stock_hold_num_cninfo
+def stock_hold_num_cninfo(date: str = "20260930") -> pd.DataFrame:
+    """
+    巨潮资讯-数据中心-专题统计-股东股本-股东人数及持股集中度
+    https://webapi.cninfo.com.cn/#/thematicStatistics
+    :param date: choice of {"XXXX0331", "XXXX0630", "XXXX0930", "XXXX1231"}；从 20170331 开始
+    :type date: str
+    :return: 股东人数及持股集中度
+    :rtype: pandas.DataFrame
+    """
+    url = "https://webapi.cninfo.com.cn/api/sysapi/p_sysapi1034"
+    js_code = py_mini_racer.MiniRacer()
+    js_content = _get_file_content_ths("cninfo.js")
+    js_code.eval(js_content)
+    mcode = js_code.call("getResCode1")
+    headers = {
+        "Accept": "*/*",
+        "Accept-Enckey": mcode,
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Cache-Control": "no-cache",
+        "Content-Length": "0",
+        "Host": "webapi.cninfo.com.cn",
+        "Origin": "https://webapi.cninfo.com.cn",
+        "Pragma": "no-cache",
+        "Proxy-Connection": "keep-alive",
+        "Referer": "https://webapi.cninfo.com.cn/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/93.0.4577.63 Safari/537.36",
+        "X-Requested-With": "XMLHttpRequest",
+    }
+    params = {
+        "rdate": date,
+    }
+    r = http.post(url, headers=headers, params=params)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["records"])
+    temp_df.columns = [
+        "本期人均持股数量",
+        "股东人数增幅",
+        "上期股东人数",
+        "本期股东人数",
+        "证券简称",
+        "证券代码",
+        "人均持股数量增幅",
+        "变动日期",
+        "上期人均持股数量",
+    ]
+    temp_df = temp_df[
+        [
+            "证券代码",
+            "证券简称",
+            "变动日期",
+            "本期股东人数",
+            "上期股东人数",
+            "股东人数增幅",
+            "本期人均持股数量",
+            "上期人均持股数量",
+            "人均持股数量增幅",
+        ]
+    ]
+    temp_df["变动日期"] = pd.to_datetime(temp_df["变动日期"], errors="coerce").dt.date
+    temp_df["本期人均持股数量"] = pd.to_numeric(
+        temp_df["本期人均持股数量"], errors="coerce"
+    )
+    temp_df["股东人数增幅"] = pd.to_numeric(temp_df["股东人数增幅"], errors="coerce")
+    temp_df["上期股东人数"] = pd.to_numeric(temp_df["上期股东人数"], errors="coerce")
+    temp_df["本期股东人数"] = pd.to_numeric(temp_df["本期股东人数"], errors="coerce")
+    temp_df["人均持股数量增幅"] = pd.to_numeric(
+        temp_df["人均持股数量增幅"], errors="coerce"
+    )
+    temp_df["上期人均持股数量"] = pd.to_numeric(
+        temp_df["上期人均持股数量"], errors="coerce"
+    )
+    return temp_df
+
+
+############################## stock_hsgt_individual_em
+def stock_hsgt_individual_em(symbol: str = "002008") -> pd.DataFrame:
+    """
+    东方财富-数据中心-沪深港通-沪深港通持股-具体股票
+    https://data.eastmoney.com/hsgt/StockHdDetail/002008.html
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 具体股票-沪深港通持股
+    :rtype: pandas.DataFrame
+    """
+    if len(symbol) == 6:
+        return __stock_hsgt_individual_zh_a_em(symbol=symbol)
+    else:
+        return __stock_hsgt_individual_zh_hk_em(symbol=symbol)
+
+
+############################## stock_hsgt_individual_detail_em
+def stock_hsgt_individual_detail_em(
+    symbol: str = "002008",
+    start_date: str = "20220130",
+    end_date: str = "20220330",
+) -> pd.DataFrame:
+    """
+    东方财富-数据中心-沪深港通-沪深港通持股-具体股票详情
+    https://data.eastmoney.com/hsgtcg/StockHdStatistics/002008.html
+    :param symbol: 股票代码
+    :type symbol: str
+    :param start_date: 开始时间
+    :type start_date: str
+    :param end_date: 结束时间
+    :type end_date: str
+    :return: 沪深港通持股-具体股票详情
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "HOLD_DATE",
+        "sortTypes": "-1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_MUTUAL_HOLD_DET",
+        "columns": "ALL",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"""(SECURITY_CODE="{symbol}")(MARKET_CODE="003")(HOLD_DATE
+        >='{"-".join([start_date[:4], start_date[4:6], start_date[6:]])}')(HOLD_DATE
+        <='{"-".join([end_date[:4], end_date[4:6], end_date[6:]])}')""",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    try:
+        data_json["result"]["pages"]
+    except TypeError:
+        params.update(
+            {
+                "filter": f"""(SECURITY_CODE="{symbol}")(MARKET_CODE="001")(HOLD_DATE
+                >='{"-".join([start_date[:4], start_date[4:6], start_date[6:]])}')(HOLD_DATE
+                <='{"-".join([end_date[:4], end_date[4:6], end_date[6:]])}')""",
+            }
+        )
+        r = http.get(url, params=params)
+        data_json = r.json()
+    total_page = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, int(total_page) + 1), leave=False):
+        params.update({"pageNumber": page})
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+    big_df = big_df.rename(
+        columns={
+            "SECUCODE": "-",
+            "SECURITY_CODE": "-",
+            "SECURITY_INNER_CODE": "-",
+            "SECURITY_NAME_ABBR": "-",
+            "HOLD_DATE": "持股日期",
+            "ORG_CODE": "-",
+            "ORG_NAME": "机构名称",
+            "HOLD_NUM": "持股数量",
+            "MARKET_CODE": "-",
+            "HOLD_SHARES_RATIO": "持股数量占A股百分比",
+            "HOLD_MARKET_CAP": "持股市值",
+            "CLOSE_PRICE": "当日收盘价",
+            "CHANGE_RATE": "当日涨跌幅",
+            "HOLD_MARKET_CAPONE": "持股市值变化-1日",
+            "HOLD_MARKET_CAPFIVE": "持股市值变化-5日",
+            "HOLD_MARKET_CAPTEN": "持股市值变化-10日",
+            "PARTICIPANT_CODE": "-",
+        },
+    )
+    big_df = big_df[
+        [
+            "持股日期",
+            "当日收盘价",
+            "当日涨跌幅",
+            "机构名称",
+            "持股数量",
+            "持股市值",
+            "持股数量占A股百分比",
+            "持股市值变化-1日",
+            "持股市值变化-5日",
+            "持股市值变化-10日",
+        ]
+    ]
+    big_df["持股日期"] = pd.to_datetime(big_df["持股日期"], errors="coerce").dt.date
+    big_df["当日收盘价"] = pd.to_numeric(big_df["当日收盘价"], errors="coerce")
+    big_df["当日涨跌幅"] = pd.to_numeric(big_df["当日涨跌幅"], errors="coerce")
+    big_df["持股数量"] = pd.to_numeric(big_df["持股数量"], errors="coerce")
+    big_df["持股市值"] = pd.to_numeric(big_df["持股市值"], errors="coerce")
+    big_df["持股数量占A股百分比"] = pd.to_numeric(
+        big_df["持股数量占A股百分比"], errors="coerce"
+    )
+    big_df["持股市值变化-1日"] = pd.to_numeric(
+        big_df["持股市值变化-1日"], errors="coerce"
+    )
+    big_df["持股市值变化-5日"] = pd.to_numeric(
+        big_df["持股市值变化-5日"], errors="coerce"
+    )
+    big_df["持股市值变化-10日"] = pd.to_numeric(
+        big_df["持股市值变化-10日"], errors="coerce"
+    )
+    return big_df
+
+
+############################## stock_hsgt_stock_statistics_em
+def stock_hsgt_stock_statistics_em(
+    symbol: str = "南向持股",
+    start_date: str = "20240110",
+    end_date: str = "20240110",
+):
+    """
+    东方财富网-数据中心-沪深港通-沪深港通持股-每日个股统计
+    https://data.eastmoney.com/hsgtcg/StockStatistics.aspx
+    market=001，沪股通持股
+    market=003，深股通持股
+    :param symbol: choice of {"北向持股", "南向持股"}
+    :type symbol: str
+    :param start_date: 指定数据获取开始的时间，e.g., "20200713"
+    :type start_date: str
+    :param end_date: 指定数据获取结束的时间，e.g., "20200715"
+    :type end_date:str
+    :return: 指定市场和指定时间段的每日个股统计数据
+    :rtype: pandas.DataFrame
+    """
+    start_date = "-".join([start_date[:4], start_date[4:6], start_date[6:]])
+    end_date = "-".join([end_date[:4], end_date[4:6], end_date[6:]])
+    big_df = pd.DataFrame()
+    if symbol == "南向持股":
+        params = {
+            "sortColumns": "TRADE_DATE",
+            "sortTypes": "-1",
+            "pageSize": "1000",
+            "pageNumber": "1",
+            "columns": "ALL",
+            "source": "WEB",
+            "client": "WEB",
+            "filter": f"""(INTERVAL_TYPE="1")(RN=1)(TRADE_DATE>='{start_date}')(TRADE_DATE<='{end_date}')""",
+            "rt": "53160469",
+            "reportName": "RPT_MUTUAL_STOCK_HOLDRANKS",
+        }
+        if start_date == end_date:
+            params.update(
+                {"filter": f"""(INTERVAL_TYPE="1")(RN=1)(TRADE_DATE='{start_date}')"""}
+            )
+        url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+        r = http.get(url, params=params)
+        data_json = r.json()
+        if not data_json.get("result"):
+            raise APIError(
+                f"东方财富没有返回 {symbol} 在 {start_date} 至 {end_date} 的数据"
+                f"（上游提示：{data_json.get('message')}）。北向资金自 2024-08-19 起"
+                "不再披露每日持股，对应的报表已停止服务；南向持股不受影响"
+            )
+        total_page = data_json["result"]["pages"]
+        big_df = pd.DataFrame()
+        tqdm = get_tqdm()
+        for page in tqdm(range(1, int(total_page) + 1), leave=False):
+            params.update({"pageNumber": page})
+            r = http.get(url, params=params)
+            data_json = r.json()
+            temp_df = pd.DataFrame(data_json["result"]["data"])
+            big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+
+        big_df.columns = [
+            "-",
+            "持股日期",
+            "-",
+            "-",
+            "股票简称",
+            "股票代码",
+            "-",
+            "-",
+            "-",
+            "-",
+            "持股市值",
+            "持股数量",
+            "-",
+            "-",
+            "-",
+            "-",
+            "当日收盘价",
+            "当日涨跌幅",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "持股数量占发行股百分比",
+            "-",
+            "持股市值变化-1日",
+            "持股市值变化-5日",
+            "持股市值变化-10日",
+            "-",
+        ]
+        big_df = big_df[
+            [
+                "持股日期",
+                "股票代码",
+                "股票简称",
+                "当日收盘价",
+                "当日涨跌幅",
+                "持股数量",
+                "持股市值",
+                "持股数量占发行股百分比",
+                "持股市值变化-1日",
+                "持股市值变化-5日",
+                "持股市值变化-10日",
+            ]
+        ]
+        big_df["持股日期"] = pd.to_datetime(big_df["持股日期"], errors="coerce").dt.date
+        big_df["当日收盘价"] = pd.to_numeric(big_df["当日收盘价"], errors="coerce")
+        big_df["当日涨跌幅"] = pd.to_numeric(big_df["当日涨跌幅"], errors="coerce")
+        big_df["持股数量"] = pd.to_numeric(big_df["持股数量"], errors="coerce")
+        big_df["持股市值"] = pd.to_numeric(big_df["持股市值"], errors="coerce")
+        big_df["持股数量占发行股百分比"] = pd.to_numeric(
+            big_df["持股数量占发行股百分比"], errors="coerce"
+        )
+        big_df["持股市值变化-1日"] = pd.to_numeric(
+            big_df["持股市值变化-1日"], errors="coerce"
+        )
+        big_df["持股市值变化-5日"] = pd.to_numeric(
+            big_df["持股市值变化-5日"], errors="coerce"
+        )
+        big_df["持股市值变化-10日"] = pd.to_numeric(
+            big_df["持股市值变化-10日"], errors="coerce"
+        )
+    elif symbol == "北向持股":
+        params = {
+            "sortColumns": "TRADE_DATE",
+            "sortTypes": "-1",
+            "pageSize": "1000",
+            "pageNumber": "1",
+            "columns": "ALL",
+            "source": "WEB",
+            "client": "WEB",
+            "filter": f"""(INTERVAL_TYPE="1")(MUTUAL_TYPE in ("001","003"))(TRADE_DATE>='{start_date}')(TRADE_DATE<='{end_date}')""",
+            "rt": "53160469",
+            "reportName": "RPT_MUTUAL_STOCK_NORTHSTA",
+        }
+        if start_date == end_date:
+            params.update(
+                {
+                    "filter": f"""(INTERVAL_TYPE="1")(MUTUAL_TYPE in ("001","003"))(TRADE_DATE='{start_date}')"""
+                }
+            )
+        url = "http://datacenter-web.eastmoney.com/api/data/v1/get"
+        r = http.get(url, params=params)
+        data_json = r.json()
+        if not data_json.get("result"):
+            raise APIError(
+                f"东方财富没有返回 {symbol} 在 {start_date} 至 {end_date} 的数据"
+                f"（上游提示：{data_json.get('message')}）。北向资金自 2024-08-19 起"
+                "不再披露每日持股，对应的报表已停止服务；南向持股不受影响"
+            )
+        total_page = data_json["result"]["pages"]
+        big_df = pd.DataFrame()
+        tqdm = get_tqdm()
+        for page in tqdm(range(1, int(total_page) + 1), leave=False):
+            params.update({"pageNumber": page})
+            r = http.get(url, params=params)
+            data_json = r.json()
+            temp_df = pd.DataFrame(data_json["result"]["data"])
+            big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+
+        big_df.columns = [
+            "-",
+            "-",
+            "持股日期",
+            "-",
+            "股票简称",
+            "-",
+            "-",
+            "股票代码",
+            "-",
+            "-",
+            "-",
+            "-",
+            "持股数量",
+            "持股市值",
+            "-",
+            "持股数量占发行股百分比",
+            "当日收盘价",
+            "当日涨跌幅",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "持股市值变化-1日",
+            "持股市值变化-5日",
+            "持股市值变化-10日",
+            "-",
+            "-",
+            "-",
+        ]
+        big_df = big_df[
+            [
+                "持股日期",
+                "股票代码",
+                "股票简称",
+                "当日收盘价",
+                "当日涨跌幅",
+                "持股数量",
+                "持股市值",
+                "持股数量占发行股百分比",
+                "持股市值变化-1日",
+                "持股市值变化-5日",
+                "持股市值变化-10日",
+            ]
+        ]
+        big_df["持股日期"] = pd.to_datetime(big_df["持股日期"], errors="coerce").dt.date
+        big_df["当日收盘价"] = pd.to_numeric(big_df["当日收盘价"], errors="coerce")
+        big_df["当日涨跌幅"] = pd.to_numeric(big_df["当日涨跌幅"], errors="coerce")
+        big_df["持股数量"] = pd.to_numeric(big_df["持股数量"], errors="coerce")
+        big_df["持股市值"] = pd.to_numeric(big_df["持股市值"], errors="coerce")
+        big_df["持股数量占发行股百分比"] = pd.to_numeric(
+            big_df["持股数量占发行股百分比"], errors="coerce"
+        )
+        big_df["持股市值变化-1日"] = pd.to_numeric(
+            big_df["持股市值变化-1日"], errors="coerce"
+        )
+        big_df["持股市值变化-5日"] = pd.to_numeric(
+            big_df["持股市值变化-5日"], errors="coerce"
+        )
+        big_df["持股市值变化-10日"] = pd.to_numeric(
+            big_df["持股市值变化-10日"], errors="coerce"
+        )
+    elif symbol == "沪股通持股":
+        params = {
+            "sortColumns": "TRADE_DATE",
+            "sortTypes": "-1",
+            "pageSize": "1000",
+            "pageNumber": "1",
+            "columns": "ALL",
+            "source": "WEB",
+            "client": "WEB",
+            "filter": f"""(INTERVAL_TYPE="1")(MUTUAL_TYPE="001")(TRADE_DATE>='{start_date}')(TRADE_DATE<='{end_date}')""",
+            "reportName": "RPT_MUTUAL_STOCK_NORTHSTA",
+        }
+        if start_date == end_date:
+            params.update(
+                {
+                    "filter": f"""(INTERVAL_TYPE="1")(MUTUAL_TYPE="001")(TRADE_DATE='{start_date}')"""
+                }
+            )
+        url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+        r = http.get(url, params=params)
+        data_json = r.json()
+        if not data_json.get("result"):
+            raise APIError(
+                f"东方财富没有返回 {symbol} 在 {start_date} 至 {end_date} 的数据"
+                f"（上游提示：{data_json.get('message')}）。北向资金自 2024-08-19 起"
+                "不再披露每日持股，对应的报表已停止服务；南向持股不受影响"
+            )
+        total_page = data_json["result"]["pages"]
+        big_df = pd.DataFrame()
+        tqdm = get_tqdm()
+        for page in tqdm(range(1, int(total_page) + 1), leave=False):
+            params.update({"pageNumber": page})
+            r = http.get(url, params=params)
+            data_json = r.json()
+            temp_df = pd.DataFrame(data_json["result"]["data"])
+            big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+        big_df.columns = [
+            "-",
+            "-",
+            "持股日期",
+            "-",
+            "股票简称",
+            "-",
+            "-",
+            "股票代码",
+            "-",
+            "-",
+            "-",
+            "-",
+            "持股数量",
+            "持股市值",
+            "-",
+            "持股数量占发行股百分比",
+            "当日收盘价",
+            "当日涨跌幅",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "持股市值变化-1日",
+            "持股市值变化-5日",
+            "持股市值变化-10日",
+            "-",
+            "-",
+            "-",
+        ]
+        big_df = big_df[
+            [
+                "持股日期",
+                "股票代码",
+                "股票简称",
+                "当日收盘价",
+                "当日涨跌幅",
+                "持股数量",
+                "持股市值",
+                "持股数量占发行股百分比",
+                "持股市值变化-1日",
+                "持股市值变化-5日",
+                "持股市值变化-10日",
+            ]
+        ]
+        big_df["持股日期"] = pd.to_datetime(big_df["持股日期"], errors="coerce").dt.date
+        big_df["当日收盘价"] = pd.to_numeric(big_df["当日收盘价"], errors="coerce")
+        big_df["当日涨跌幅"] = pd.to_numeric(big_df["当日涨跌幅"], errors="coerce")
+        big_df["持股数量"] = pd.to_numeric(big_df["持股数量"], errors="coerce")
+        big_df["持股市值"] = pd.to_numeric(big_df["持股市值"], errors="coerce")
+        big_df["持股数量占发行股百分比"] = pd.to_numeric(
+            big_df["持股数量占发行股百分比"], errors="coerce"
+        )
+        big_df["持股市值变化-1日"] = pd.to_numeric(
+            big_df["持股市值变化-1日"], errors="coerce"
+        )
+        big_df["持股市值变化-5日"] = pd.to_numeric(
+            big_df["持股市值变化-5日"], errors="coerce"
+        )
+        big_df["持股市值变化-10日"] = pd.to_numeric(
+            big_df["持股市值变化-10日"], errors="coerce"
+        )
+    elif symbol == "深股通持股":
+        params = {
+            "sortColumns": "TRADE_DATE",
+            "sortTypes": "-1",
+            "pageSize": "1000",
+            "pageNumber": "1",
+            "columns": "ALL",
+            "source": "WEB",
+            "client": "WEB",
+            "filter": f"""(INTERVAL_TYPE="1")(MUTUAL_TYPE="003")(TRADE_DATE
+            >='{start_date}')(TRADE_DATE<='{end_date}')""",
+            "reportName": "RPT_MUTUAL_STOCK_NORTHSTA",
+        }
+        if start_date == end_date:
+            params.update(
+                {
+                    "filter": f"""(INTERVAL_TYPE="1")(MUTUAL_TYPE="003")(TRADE_DATE='{start_date}')"""
+                }
+            )
+        url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+        r = http.get(url, params=params)
+        data_json = r.json()
+        if not data_json.get("result"):
+            raise APIError(
+                f"东方财富没有返回 {symbol} 在 {start_date} 至 {end_date} 的数据"
+                f"（上游提示：{data_json.get('message')}）。北向资金自 2024-08-19 起"
+                "不再披露每日持股，对应的报表已停止服务；南向持股不受影响"
+            )
+        total_page = data_json["result"]["pages"]
+        big_df = pd.DataFrame()
+        tqdm = get_tqdm()
+        for page in tqdm(range(1, int(total_page) + 1), leave=False):
+            params.update({"pageNumber": page})
+            r = http.get(url, params=params)
+            data_json = r.json()
+            temp_df = pd.DataFrame(data_json["result"]["data"])
+            big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+        big_df.columns = [
+            "-",
+            "-",
+            "持股日期",
+            "-",
+            "股票简称",
+            "-",
+            "-",
+            "股票代码",
+            "-",
+            "-",
+            "-",
+            "-",
+            "持股数量",
+            "持股市值",
+            "-",
+            "持股数量占发行股百分比",
+            "当日收盘价",
+            "当日涨跌幅",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "持股市值变化-1日",
+            "持股市值变化-5日",
+            "持股市值变化-10日",
+            "-",
+            "-",
+            "-",
+        ]
+        big_df = big_df[
+            [
+                "持股日期",
+                "股票代码",
+                "股票简称",
+                "当日收盘价",
+                "当日涨跌幅",
+                "持股数量",
+                "持股市值",
+                "持股数量占发行股百分比",
+                "持股市值变化-1日",
+                "持股市值变化-5日",
+                "持股市值变化-10日",
+            ]
+        ]
+        big_df["持股日期"] = pd.to_datetime(big_df["持股日期"], errors="coerce").dt.date
+        big_df["当日收盘价"] = pd.to_numeric(big_df["当日收盘价"], errors="coerce")
+        big_df["当日涨跌幅"] = pd.to_numeric(big_df["当日涨跌幅"], errors="coerce")
+        big_df["持股数量"] = pd.to_numeric(big_df["持股数量"], errors="coerce")
+        big_df["持股市值"] = pd.to_numeric(big_df["持股市值"], errors="coerce")
+        big_df["持股数量占发行股百分比"] = pd.to_numeric(
+            big_df["持股数量占发行股百分比"], errors="coerce"
+        )
+        big_df["持股市值变化-1日"] = pd.to_numeric(
+            big_df["持股市值变化-1日"], errors="coerce"
+        )
+        big_df["持股市值变化-5日"] = pd.to_numeric(
+            big_df["持股市值变化-5日"], errors="coerce"
+        )
+        big_df["持股市值变化-10日"] = pd.to_numeric(
+            big_df["持股市值变化-10日"], errors="coerce"
+        )
+    return big_df
+
+
+############################## stock_hsgt_hist_em
+def stock_hsgt_hist_em(symbol: str = "北向资金") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-资金流向-沪深港通资金流向-沪深港通历史数据
+    https://data.eastmoney.com/hsgt/index.html
+    :param symbol: choice of {"北向资金", "沪股通", "深股通", "南向资金", "港股通沪", "港股通深"}
+    :type symbol: str
+    :return: 沪深港通历史数据
+    :rtype: pandas.DataFrame
+    """
+    import warnings
+
+    warnings.filterwarnings(action="ignore", category=FutureWarning)
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    symbol_map = {
+        "北向资金": "5",
+        "沪股通": "1",
+        "深股通": "3",
+        "南向资金": "6",
+        "港股通沪": "2",
+        "港股通深": "4",
+    }
+    params = {
+        "sortColumns": "TRADE_DATE",
+        "sortTypes": "-1",
+        "pageSize": "1000",
+        "pageNumber": "1",
+        "reportName": "RPT_MUTUAL_DEAL_HISTORY",
+        "columns": "ALL",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f'(MUTUAL_TYPE="00{symbol_map[symbol]}")',
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page = data_json["result"]["pages"]
+    temp_list = []
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, int(total_page) + 1), leave=False):
+        params.update({"pageNumber": page})
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        temp_list.append(temp_df)
+
+    big_df = pd.concat(objs=temp_list, ignore_index=True)
+    if symbol == "北向资金":
+        index_name = "沪深300"
+    elif symbol == "沪股通":
+        index_name = "上证指数"
+    elif symbol == "深股通":
+        index_name = "深证指数"
+    elif symbol == "南向资金":
+        index_name = "沪深300"
+    else:
+        index_name = "恒生指数"
+
+    big_df = big_df.rename(
+        columns={
+            "MUTUAL_TYPE": "-",
+            "TRADE_DATE": "日期",
+            "FUND_INFLOW": "当日资金流入",
+            "NET_DEAL_AMT": "当日成交净买额",
+            "QUOTA_BALANCE": "当日余额",
+            "ACCUM_DEAL_AMT": "历史累计净买额",
+            "BUY_AMT": "买入成交额",
+            "SELL_AMT": "卖出成交额",
+            "LEAD_STOCKS_CODE": "领涨股-代码",
+            "LEAD_STOCKS_NAME": "领涨股",
+            "LS_CHANGE_RATE": "领涨股-涨跌幅",
+            "INDEX_CLOSE_PRICE": index_name,
+            "INDEX_CHANGE_RATE": f"{index_name}-涨跌幅",
+            "HOLD_MARKET_CAP": "持股市值",
+        },
+    )
+    big_df = big_df[
+        [
+            "日期",
+            "当日成交净买额",
+            "买入成交额",
+            "卖出成交额",
+            "历史累计净买额",
+            "当日资金流入",
+            "当日余额",
+            "持股市值",
+            "领涨股",
+            "领涨股-涨跌幅",
+            index_name,
+            f"{index_name}-涨跌幅",
+            "领涨股-代码",
+        ]
+    ]
+    big_df["日期"] = pd.to_datetime(big_df["日期"], errors="coerce").dt.date
+    big_df = big_df.sort_values(["日期"], ignore_index=True)
+    big_df["当日资金流入"] = (
+        pd.to_numeric(big_df["当日资金流入"], errors="coerce") / 100
+    )
+    big_df["当日余额"] = pd.to_numeric(big_df["当日余额"], errors="coerce") / 100
+    if symbol == "沪股通" or symbol == "深股通":
+        big_df["历史累计净买额"] = (
+            pd.to_numeric(big_df["历史累计净买额"], errors="coerce") / 100
+        )
+    else:
+        big_df["历史累计净买额"] = (
+            pd.to_numeric(big_df["历史累计净买额"], errors="coerce") / 100 / 10000
+        )
+    big_df["当日成交净买额"] = (
+        pd.to_numeric(big_df["当日成交净买额"], errors="coerce") / 100
+    )
+    big_df["买入成交额"] = pd.to_numeric(big_df["买入成交额"], errors="coerce") / 100
+    big_df["卖出成交额"] = pd.to_numeric(big_df["卖出成交额"], errors="coerce") / 100
+    big_df["领涨股-涨跌幅"] = pd.to_numeric(big_df["领涨股-涨跌幅"], errors="coerce")
+    big_df[index_name] = pd.to_numeric(big_df[index_name], errors="coerce")
+    big_df[f"{index_name}-涨跌幅"] = pd.to_numeric(
+        big_df[f"{index_name}-涨跌幅"], errors="coerce"
+    )
+    big_df["持股市值"] = pd.to_numeric(big_df["持股市值"], errors="coerce")
+    return big_df
+
+
+############################## stock_gpzy_pledge_ratio_em
+def stock_gpzy_pledge_ratio_em(date: str = "20240906") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-特色数据-股权质押-上市公司质押比例
+    https://data.eastmoney.com/gpzy/pledgeRatio.aspx
+    :param date: 指定交易日，访问 https://data.eastmoney.com/gpzy/pledgeRatio.aspx 查询
+    :type date: str
+    :return: 上市公司质押比例
+    :rtype: pandas.DataFrame
+    """
+    trade_date = "-".join([date[:4], date[4:6], date[6:]])
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "PLEDGE_RATIO",
+        "sortTypes": "-1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_CSDC_LIST",
+        "columns": "ALL",
+        "quoteColumns": "",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"(TRADE_DATE='{trade_date}')",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    tqdm = get_tqdm()
+    for page in tqdm(range(1, total_page + 1), leave=False):
+        params.update({"pageNumber": page})
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat(objs=[big_df, temp_df], ignore_index=True)
+
+    big_df = big_df.reset_index()
+    big_df["index"] = big_df.index + 1
+    big_df = big_df.rename(
+        columns={
+            "index": "序号",
+            "SECURITY_CODE": "股票代码",
+            "SECURITY_NAME_ABBR": "股票简称",
+            "TRADE_DATE": "交易日期",
+            "PLEDGE_RATIO": "质押比例",
+            "REPURCHASE_BALANCE": "质押股数",
+            "PLEDGE_DEAL_NUM": "质押笔数",
+            "REPURCHASE_UNLIMITED_BALANCE": "无限售股质押数",
+            "REPURCHASE_LIMITED_BALANCE": "限售股质押数",
+            "PLEDGE_MARKET_CAP": "质押市值",
+            "INDUSTRY": "所属行业",
+            "Y1_CLOSE_ADJCHRATE": "近一年涨跌幅",
+            "INDUSTRY_CODE": "所属行业代码",
+        }
+    )
+    big_df = big_df[
+        [
+            "序号",
+            "股票代码",
+            "股票简称",
+            "交易日期",
+            "所属行业",
+            "质押比例",
+            "质押股数",
+            "质押市值",
+            "质押笔数",
+            "无限售股质押数",
+            "限售股质押数",
+            "近一年涨跌幅",
+            "所属行业代码",
+        ]
+    ]
+    big_df["质押比例"] = pd.to_numeric(big_df["质押比例"], errors="coerce")
+    big_df["质押股数"] = pd.to_numeric(big_df["质押股数"], errors="coerce")
+    big_df["质押市值"] = pd.to_numeric(big_df["质押市值"], errors="coerce")
+    big_df["质押笔数"] = pd.to_numeric(big_df["质押笔数"], errors="coerce")
+    big_df["无限售股质押数"] = pd.to_numeric(big_df["无限售股质押数"], errors="coerce")
+    big_df["限售股质押数"] = pd.to_numeric(big_df["限售股质押数"], errors="coerce")
+    big_df["近一年涨跌幅"] = pd.to_numeric(big_df["近一年涨跌幅"], errors="coerce")
+    big_df["交易日期"] = pd.to_datetime(big_df["交易日期"], errors="coerce").dt.date
+    return big_df
+
+
+############################## stock_gpzy_pledge_ratio_detail_em
+def stock_gpzy_pledge_ratio_detail_em() -> pd.DataFrame:
+    """
+    东方财富网-数据中心-特色数据-股权质押-重要股东股权质押明细
+    https://data.eastmoney.com/gpzy/pledgeDetail.aspx
+    :return: 重要股东股权质押明细
+    :rtype: pandas.DataFrame
+    """
+    return _stock_gpzy_pledge_ratio_detail_em()
+
+
+############################## stock_gpzy_individual_pledge_ratio_detail_em
+def stock_gpzy_individual_pledge_ratio_detail_em(symbol: str) -> pd.DataFrame:
+    """
+    东方财富网-数据中心-特色数据-股权质押-指定股票的重要股东股权质押明细
+    https://data.eastmoney.com/gpzy/pledgeDetail.aspx
+    :param symbol: 股票代码，如 603132
+    :type symbol: str
+    :return: 指定股票的重要股东股权质押明细
+    :rtype: pandas.DataFrame
+    """
+    return _stock_gpzy_pledge_ratio_detail_em(filter=f'(SECURITY_CODE="{symbol}")')
+
+
+############################## stock_jgdy_tj_em
+def stock_jgdy_tj_em(date: str = "20261101") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-特色数据-机构调研-机构调研统计
+    https://data.eastmoney.com/jgdy/tj.html
+    :param date: 开始时间
+    :type date: str
+    :return: 机构调研统计
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "NOTICE_DATE,SUM,RECEIVE_START_DATE,SECURITY_CODE",
+        "sortTypes": "-1,-1,-1,1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPT_ORG_SURVEYNEW",
+        "columns": "ALL",
+        "quoteColumns": "f2~01~SECURITY_CODE~CLOSE_PRICE,f3~01~SECURITY_CODE~CHANGE_RATE",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"""(NUMBERNEW="1")(IS_SOURCE="1")(NOTICE_DATE>'{"-".join([date[:4], date[4:6], date[6:]])}')""",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    if not data_json.get("result"):
+        raise InvalidParameterError(
+            f"东方财富没有 {date} 以来的机构调研数据（上游提示：{data_json.get('message')}），"
+            "上游只保留近期的数据，请改用更近的日期"
+        )
+    total_page = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    for page in tqdm(range(1, total_page + 1), leave=False):
+        params.update({"pageNumber": page})
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat([big_df, temp_df])
+    big_df = big_df.reset_index()
+    big_df["index"] = list(range(1, len(big_df) + 1))
+    big_df.columns = [
+        "序号",
+        "_",
+        "代码",
+        "名称",
+        "_",
+        "公告日期",
+        "接待日期",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "接待地点",
+        "_",
+        "接待方式",
+        "_",
+        "接待人员",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "接待机构数量",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "_",
+        "最新价",
+        "涨跌幅",
+    ]
+    big_df = big_df[
+        [
+            "序号",
+            "代码",
+            "名称",
+            "最新价",
+            "涨跌幅",
+            "接待机构数量",
+            "接待方式",
+            "接待人员",
+            "接待地点",
+            "接待日期",
+            "公告日期",
+        ]
+    ]
+    big_df["最新价"] = pd.to_numeric(big_df["最新价"], errors="coerce")
+    big_df["涨跌幅"] = pd.to_numeric(big_df["涨跌幅"], errors="coerce")
+    big_df["接待机构数量"] = pd.to_numeric(big_df["接待机构数量"], errors="coerce")
+    big_df["接待日期"] = pd.to_datetime(big_df["接待日期"], errors="coerce").dt.date
+    big_df["公告日期"] = pd.to_datetime(big_df["公告日期"], errors="coerce").dt.date
+    return big_df
+
+
+############################## stock_jgdy_detail_em
+def stock_jgdy_detail_em(date: str = "20261112") -> pd.DataFrame:
+    """
+    东方财富网-数据中心-特色数据-机构调研-机构调研详细
+    https://data.eastmoney.com/jgdy/xx.html
+    :param date: 开始时间
+    :type date: str
+    :return: 机构调研详细
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "NOTICE_DATE,RECEIVE_START_DATE,SECURITY_CODE,NUMBERNEW",
+        "sortTypes": "-1,-1,1,-1",
+        "pageSize": "50",
+        "pageNumber": "1",
+        "reportName": "RPT_ORG_SURVEY",
+        "columns": "SECUCODE,SECURITY_CODE,SECURITY_NAME_ABBR,NOTICE_DATE,RECEIVE_START_DATE,"
+        "RECEIVE_OBJECT,RECEIVE_PLACE,RECEIVE_WAY_EXPLAIN,INVESTIGATORS,RECEPTIONIST,ORG_TYPE",
+        "quoteColumns": "f2~01~SECURITY_CODE~CLOSE_PRICE,f3~01~SECURITY_CODE~CHANGE_RATE",
+        "quoteType": "0",
+        "source": "WEB",
+        "client": "WEB",
+        "filter": f"""(IS_SOURCE="1")(RECEIVE_START_DATE>'{"-".join([date[:4], date[4:6], date[6:]])}')""",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    if not data_json.get("result"):
+        raise InvalidParameterError(
+            f"东方财富没有 {date} 以来的机构调研数据（上游提示：{data_json.get('message')}），"
+            "上游只保留近期的数据，请改用更近的日期"
+        )
+    total_page = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    for page in tqdm(range(1, total_page + 1), leave=False):
+        params.update({"pageNumber": page})
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat([big_df, temp_df])
+    big_df = big_df.reset_index()
+    big_df["index"] = list(range(1, len(big_df) + 1))
+    big_df.columns = [
+        "序号",
+        "_",
+        "代码",
+        "名称",
+        "公告日期",
+        "调研日期",
+        "调研机构",
+        "接待地点",
+        "接待方式",
+        "调研人员",
+        "接待人员",
+        "机构类型",
+        "最新价",
+        "涨跌幅",
+    ]
+    big_df = big_df[
+        [
+            "序号",
+            "代码",
+            "名称",
+            "最新价",
+            "涨跌幅",
+            "调研机构",
+            "机构类型",
+            "调研人员",
+            "接待方式",
+            "接待人员",
+            "接待地点",
+            "调研日期",
+            "公告日期",
+        ]
+    ]
+    big_df["最新价"] = pd.to_numeric(big_df["最新价"], errors="coerce")
+    big_df["涨跌幅"] = pd.to_numeric(big_df["涨跌幅"], errors="coerce")
+    big_df["调研日期"] = pd.to_datetime(big_df["调研日期"], errors="coerce").dt.date
+    big_df["公告日期"] = pd.to_datetime(big_df["公告日期"], errors="coerce").dt.date
+    return big_df
+
+
+############################## stock_repurchase_em
+def stock_repurchase_em() -> pd.DataFrame:
+    """
+    东方财富网-数据中心-股票回购-股票回购数据
+    https://data.eastmoney.com/gphg/hglist.html
+    :return: 股票回购数据
+    :rtype: pandas.DataFrame
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "UPD,DIM_DATE,DIM_SCODE",
+        "sortTypes": "-1,-1,-1",
+        "pageSize": "500",
+        "pageNumber": "1",
+        "reportName": "RPTA_WEB_GETHGLIST_NEW",
+        "columns": "ALL",
+        "source": "WEB",
+    }
+    r = http.get(url, params=params)
+    data_json = r.json()
+    total_page = data_json["result"]["pages"]
+    big_df = pd.DataFrame()
+    for page in tqdm(range(1, int(total_page) + 1), leave=False):
+        params.update({"pageNumber": page})
+        r = http.get(url, params=params)
+        data_json = r.json()
+        temp_df = pd.DataFrame(data_json["result"]["data"])
+        big_df = pd.concat([big_df, temp_df], ignore_index=True)
+    big_df = big_df.rename(
+        {
+            "DIM_SCODE": "股票代码",
+            "SECURITYSHORTNAME": "股票简称",
+            "NEWPRICE": "最新价",
+            "REPURPRICECAP": "计划回购价格区间",
+            "REPURNUMLOWER": "计划回购数量区间-下限",
+            "REPURNUMCAP": "计划回购数量区间-上限",
+            "ZSZXX": "占公告前一日总股本比例-下限",
+            "ZSZSX": "占公告前一日总股本比例-上限",
+            "JEXX": "计划回购金额区间-下限",
+            "JESX": "计划回购金额区间-上限",
+            "DIM_TRADEDATE": "回购起始时间",
+            "REPURPROGRESS": "实施进度",
+            "REPURPRICELOWER1": "已回购股份价格区间-下限",
+            "REPURPRICECAP1": "已回购股份价格区间-上限",
+            "REPURNUM": "已回购股份数量",
+            "REPURAMOUNT": "已回购金额",
+            "UPDATEDATE": "最新公告日期",
+        },
+        axis="columns",
+    )
+    big_df = big_df[
+        [
+            "股票代码",
+            "股票简称",
+            "最新价",
+            "计划回购价格区间",
+            "计划回购数量区间-下限",
+            "计划回购数量区间-上限",
+            "占公告前一日总股本比例-下限",
+            "占公告前一日总股本比例-上限",
+            "计划回购金额区间-下限",
+            "计划回购金额区间-上限",
+            "回购起始时间",
+            "实施进度",
+            "已回购股份价格区间-下限",
+            "已回购股份价格区间-上限",
+            "已回购股份数量",
+            "已回购金额",
+            "最新公告日期",
+        ]
+    ]
+    big_df = big_df.reset_index()
+    big_df = big_df.rename(
+        {
+            "index": "序号",
+        },
+        axis="columns",
+    )
+    big_df["序号"] = big_df.index + 1
+    process_map = {
+        "001": "董事会预案",
+        "002": "股东大会通过",
+        "003": "股东大会否决",
+        "004": "实施中",
+        "005": "停止实施",
+        "006": "完成实施",
+    }
+    big_df["实施进度"] = big_df["实施进度"].map(process_map)
+    big_df["回购起始时间"] = pd.to_datetime(big_df["回购起始时间"]).dt.date
+    big_df["最新公告日期"] = pd.to_datetime(big_df["最新公告日期"]).dt.date
+    big_df["最新价"] = pd.to_numeric(big_df["最新价"])
+    big_df["计划回购价格区间"] = pd.to_numeric(big_df["计划回购价格区间"])
+    big_df["计划回购数量区间-下限"] = pd.to_numeric(big_df["计划回购数量区间-下限"])
+    big_df["计划回购数量区间-上限"] = pd.to_numeric(big_df["计划回购数量区间-上限"])
+    big_df["占公告前一日总股本比例-上限"] = pd.to_numeric(
+        big_df["占公告前一日总股本比例-上限"]
+    )
+    big_df["占公告前一日总股本比例-下限"] = pd.to_numeric(
+        big_df["占公告前一日总股本比例-下限"]
+    )
+    big_df["计划回购金额区间-上限"] = pd.to_numeric(big_df["计划回购金额区间-上限"])
+    big_df["计划回购金额区间-下限"] = pd.to_numeric(big_df["计划回购金额区间-下限"])
+    big_df["已回购股份价格区间-下限"] = pd.to_numeric(big_df["已回购股份价格区间-下限"])
+    big_df["已回购股份价格区间-上限"] = pd.to_numeric(big_df["已回购股份价格区间-上限"])
+    big_df["已回购股份数量"] = pd.to_numeric(big_df["已回购股份数量"])
+    big_df["已回购金额"] = pd.to_numeric(big_df["已回购金额"])
+    return big_df
+
+
+############################## stock_management_change_ths
+def stock_management_change_ths(symbol: str = "688981") -> pd.DataFrame:
+    """
+    同花顺-公司大事-高管持股变动
+    https://basic.10jqka.com.cn/new/688981/event.html
+    :param symbol: 股票代码
+    :type symbol: str
+    :return: 同花顺-公司大事-高管持股变动
+    :rtype: pandas.DataFrame
+    """
+    url = f"https://basic.10jqka.com.cn/new/{symbol}/event.html"
+    r = http.get(url, headers=headers)
+    r.encoding = "gb2312"
+    soup = BeautifulSoup(r.text, features="lxml")
+    soup_find = soup.find(name="table", attrs={"class": "data_table_1 m_table m_hl"})
+    if soup_find is not None:
+        content_list = [item.text.strip() for item in soup_find]
+        column_names = content_list[1].split("\n")
+        row = (
+            content_list[3]
+            .replace(" ", "")
+            .replace("\t", "")
+            .replace("\n\n", "")
+            .replace("   ", "\n")
+            .replace("\n\n", "\n")
+            .split("\n")
+        )
+        row = [item for item in row if item != ""]
+        new_rows = []
+        step = len(column_names)
+        for i in range(0, len(row), step):
+            new_rows.append(row[i : i + step])
+        temp_df = pd.DataFrame(new_rows, columns=column_names)
+        temp_df = temp_df.sort_values(by="变动日期", ignore_index=True)
+        temp_df["变动日期"] = pd.to_datetime(
+            temp_df["变动日期"], errors="coerce"
+        ).dt.date
+        temp_df = temp_df.rename(
+            columns={
+                "变动数量（股）": "变动数量",
+                "交易均价（元）": "交易均价",
+                "剩余股数（股）": "剩余股数",
+            },
+        )
+        return temp_df
+    return pd.DataFrame()
+
+
+############################## stock_hold_control_cninfo
+def stock_hold_control_cninfo(symbol: str = "全部") -> pd.DataFrame:
+    """
+    巨潮资讯-数据中心-专题统计-股东股本-实际控制人持股变动
+    https://webapi.cninfo.com.cn/#/thematicStatistics
+    :param symbol: choice of {"单独控制", "实际控制人", "一致行动人", "家族控制", "全部"}；从 2010 开始
+    :type symbol: str
+    :return: 实际控制人持股变动
+    :rtype: pandas.DataFrame
+    """
+    symbol_map = {
+        "单独控制": "069001",
+        "实际控制人": "069002",
+        "一致行动人": "069003",
+        "家族控制": "069004",
+        "全部": "",
+    }
+    url = "https://webapi.cninfo.com.cn/api/sysapi/p_sysapi1033"
+    js_code = py_mini_racer.MiniRacer()
+    js_content = _get_file_content_cninfo("cninfo.js")
+    js_code.eval(js_content)
+    mcode = js_code.call("getResCode1")
+    headers = {
+        "Accept": "*/*",
+        "Accept-Enckey": mcode,
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Cache-Control": "no-cache",
+        "Content-Length": "0",
+        "Host": "webapi.cninfo.com.cn",
+        "Origin": "https://webapi.cninfo.com.cn",
+        "Pragma": "no-cache",
+        "Proxy-Connection": "keep-alive",
+        "Referer": "https://webapi.cninfo.com.cn/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/93.0.4577.63 Safari/537.36",
+        "X-Requested-With": "XMLHttpRequest",
+    }
+    params = {
+        "ctype": symbol_map[symbol],
+    }
+    r = http.get(url, headers=headers, params=params)
+    data_json = r.json()
+    temp_df = pd.DataFrame(data_json["records"])
+    temp_df.columns = [
+        "控股比例",
+        "控股数量",
+        "证券简称",
+        "实际控制人名称",
+        "直接控制人名称",
+        "控制类型",
+        "证券代码",
+        "变动日期",
+    ]
+    temp_df = temp_df[
+        [
+            "证券代码",
+            "证券简称",
+            "变动日期",
+            "实际控制人名称",
+            "控股数量",
+            "控股比例",
+            "直接控制人名称",
+            "控制类型",
+        ]
+    ]
+    temp_df["变动日期"] = pd.to_datetime(temp_df["变动日期"], errors="coerce").dt.date
+    temp_df["控股数量"] = pd.to_numeric(temp_df["控股数量"], errors="coerce")
+    temp_df["控股比例"] = pd.to_numeric(temp_df["控股比例"], errors="coerce")
+    return temp_df
+

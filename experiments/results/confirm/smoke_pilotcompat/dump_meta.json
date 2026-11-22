@@ -1,0 +1,97 @@
+{
+ "gate_tune_years": [
+  2020
+ ],
+ "eval_years": [
+  2021
+ ],
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "bases": [
+  "lgbm",
+  "ridge"
+ ],
+ "year_first_last_i": {
+  "2020": [
+   2921,
+   3163
+  ],
+  "2021": [
+   3164,
+   3406
+  ]
+ },
+ "last_decision_i": 3391,
+ "primary_contrasts": [
+  [
+   "P1",
+   "LOSS(-Z)",
+   "SCORE"
+  ],
+  [
+   "P2",
+   "LOSS(+Z_H)",
+   "LOSS(-Z)"
+  ],
+  [
+   "P3",
+   "LOSS(+Z_O*)",
+   "LOSS(-Z)"
+  ],
+  [
+   "P4",
+   "NET-K(-Z)",
+   "SCORE"
+  ],
+  [
+   "P5",
+   "LOSS(-Z)",
+   "BASE-V"
+  ],
+  [
+   "P6",
+   "NET-K(-Z)",
+   "BASE-V"
+  ]
+ ],
+ "secondary_contrasts": [
+  [
+   "S-BASEV",
+   "BASE-V",
+   "SCORE"
+  ],
+  [
+   "S-NETU15",
+   "NET-U15(-Z)",
+   "BASE-V"
+  ],
+  [
+   "S-NETU15-SCORE",
+   "NET-U15(-Z)",
+   "SCORE"
+  ],
+  [
+   "S-RERANK",
+   "BASEV-RERANK",
+   "SCORE"
+  ],
+  [
+   "S-OBJ",
+   "NET-K(-Z)",
+   "LOSS(-Z)"
+  ],
+  [
+   "S-HO",
+   "LOSS(+Z_H+Z_O*)",
+   "LOSS(-Z)"
+  ],
+  [
+   "S-INS",
+   "LOSS(+Z_O)",
+   "LOSS(-Z)"
+  ]
+ ]
+}

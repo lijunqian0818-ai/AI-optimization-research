@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>研究团队面板</title>
+<style>
+  :root {
+    --bg: #f6f5f1; --surface: #ffffff; --surface-2: #f0eee8; --line: #e2dfd6;
+    --text: #1f1e1b; --text-2: #5c5a53; --text-3: #8a877e;
+    --accent: #2f5fb3;
+    --run-bg: #e3ecfb; --run: #1f4f9e;
+    --ok-bg: #e2f1e6; --ok: #1e6b3a;
+    --warn-bg: #fbeed3; --warn: #8a5a00;
+    --bad-bg: #fbe3e0; --bad: #a12a1e;
+    --idle-bg: #eceae4; --idle: #5c5a53;
+    --radius: 10px;
+    --font: -apple-system, "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+    --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17171a; --surface: #202024; --surface-2: #29292e; --line: #34343a;
+      --text: #ecebe7; --text-2: #b3b1aa; --text-3: #86847d;
+      --accent: #8fb4f5;
+      --run-bg: #1d2c47; --run: #a9c6f7;
+      --ok-bg: #1a3324; --ok: #8fd3a5;
+      --warn-bg: #3a2f14; --warn: #edc679;
+      --bad-bg: #40201c; --bad: #f2a69c;
+      --idle-bg: #2b2b30; --idle: #b3b1aa;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.55 var(--font); }
+  main { max-width: 1180px; margin: 0 auto; padding: 20px 16px 48px; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 16px; }
+  h1 { font-size: 20px; margin: 0; font-weight: 650; }
+  h2 { font-size: 13px; margin: 0 0 10px; font-weight: 600; color: var(--text-2); letter-spacing: .02em; }
+  .sub { color: var(--text-3); font-size: 12.5px; }
+  .spacer { flex: 1; }
+  section { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 14px; }
+  .chip { display: inline-flex; align-items: center; gap: 5px; padding: 1px 9px 1px 7px; border-radius: 999px;
+          font-size: 12px; font-weight: 600; white-space: nowrap; background: var(--idle-bg); color: var(--idle); }
+  .chip .ico { font-size: 11px; width: 12px; text-align: center; }
+  .chip.run { background: var(--run-bg); color: var(--run); }
+  .chip.ok { background: var(--ok-bg); color: var(--ok); }
+  .chip.warn { background: var(--warn-bg); color: var(--warn); }
+  .chip.bad { background: var(--bad-bg); color: var(--bad); }
+  .pulse { width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+  @media (prefers-reduced-motion: reduce) { .pulse { animation: none; } }
+
+  /* things waiting for the user */
+  #todo { border-color: var(--warn); background: var(--warn-bg); }
+  #todo h2 { color: var(--warn); }
+  #todo ul { margin: 0; padding-left: 18px; color: var(--text); }
+  #todo li { margin: 2px 0; }
+
+  /* stage stepper */
+  .stages { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+  .stage { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: var(--surface-2); min-width: 0; }
+  .stage .n { font-size: 11.5px; color: var(--text-3); }
+  .stage .name { font-weight: 600; font-size: 13px; margin: 1px 0 6px; overflow-wrap: anywhere; }
+  .stage .gate { font-size: 11.5px; color: var(--text-3); margin-top: 5px; }
+  .stage.active { border-color: var(--run); background: var(--surface); }
+  .stage.gate-wait { border-color: var(--warn); background: var(--surface); }
+  .current { margin: 0 0 12px; color: var(--text-2); }
+  .current b { color: var(--text); font-weight: 600; }
+  @media (max-width: 860px) { .stages { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  /* team */
+  .team { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+  .card { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: var(--surface-2); min-width: 0; }
+  .card.busy { background: var(--surface); border-color: var(--run); }
+  .card .top { display: flex; align-items: center; gap: 8px; }
+  .card .name { font-weight: 600; }
+  .card .role { color: var(--text-3); font-size: 12px; margin-bottom: 6px; }
+  .card .job { font-size: 13px; margin-top: 6px; overflow-wrap: anywhere; }
+  .card .job + .job { border-top: 1px dashed var(--line); padding-top: 6px; }
+  .meta { color: var(--text-3); font-size: 12px; overflow-wrap: anywhere; }
+  code, .path { font-family: var(--mono); font-size: 12px; }
+
+  /* log + files */
+  .cols { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 14px; }
+  .cols section { margin-bottom: 14px; }
+  @media (max-width: 860px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-weight: 600; color: var(--text-3); font-size: 12px; padding: 4px 8px 6px 0; border-bottom: 1px solid var(--line); }
+  td { padding: 7px 8px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+  tr:last-child td { border-bottom: 0; }
+  td.t, td.d { white-space: nowrap; color: var(--text-2); font-variant-numeric: tabular-nums; }
+  .tablewrap { overflow-x: auto; }
+  details summary { cursor: pointer; }
+  details p { margin: 6px 0 0; color: var(--text-2); font-size: 12.5px; white-space: pre-wrap; }
+  .files { list-style: none; margin: 0; padding: 0; }
+  .files li { display: flex; gap: 10px; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid var(--line); }
+  .files li:last-child { border-bottom: 0; }
+  .files .path { overflow-wrap: anywhere; }
+  .files .when { color: var(--text-3); font-size: 12px; white-space: nowrap; }
+  .empty { color: var(--text-3); padding: 6px 0; }
+
+  /* idea editor */
+  .ideabar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 8px; }
+  textarea { width: 100%; min-height: 380px; resize: vertical; padding: 12px 14px; border-radius: 8px;
+             border: 1px solid var(--line); background: var(--bg); color: var(--text);
+             font: 14px/1.65 var(--font); tab-size: 2; }
+  textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  button { font: inherit; font-weight: 600; padding: 6px 14px; border-radius: 7px; border: 1px solid var(--line);
+           background: var(--surface-2); color: var(--text); cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  @media (prefers-color-scheme: dark) { button.primary { color: #10131a; } }
+  button:disabled { opacity: .45; cursor: default; }
+  button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  #conflict { display: none; margin-bottom: 8px; padding: 8px 12px; border-radius: 8px; background: var(--warn-bg); color: var(--text); }
+  #conflict button { margin-left: 8px; }
+  #offline { display: none; padding: 8px 12px; border-radius: 8px; background: var(--bad-bg); color: var(--text); margin-bottom: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>研究团队面板</h1>
+    <span class="sub" id="project"></span>
+    <span class="spacer"></span>
+    <span class="sub" id="tracking"></span>
+  </header>
+
+  <div id="offline">面板服务没有响应。请重新运行 <code>python tools/dashboard.py</code>（或双击"启动面板.bat"）。</div>
+
+  <section id="todo" hidden>
+    <h2>需要你处理</h2>
+    <ul id="todolist"></ul>
+  </section>
+
+  <section>
+    <h2>研究进度</h2>
+    <p class="current" id="current"></p>
+    <div class="stages" id="stages"></div>
+  </section>
+
+  <section>
+    <h2>团队成员</h2>
+    <div class="team" id="team"></div>
+  </section>
+
+  <div class="cols">
+    <section>
+      <h2>任务记录（最近 30 条）</h2>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>开始</th><th>成员</th><th>任务</th><th>状态</th><th>用时</th></tr></thead>
+          <tbody id="log"></tbody>
+        </table>
+      </div>
+      <div class="empty" id="logempty" hidden>还没有任务记录。团队开始工作后，这里会列出每个子 agent、ARS 和外部审稿人的任务。</div>
+    </section>
+    <section>
+      <h2>最近改动的文件</h2>
+      <ul class="files" id="files"></ul>
+    </section>
+  </div>
+
+  <section>
+    <div class="ideabar">
+      <h2 style="margin:0">我的想法 <span class="path">00_idea/idea.md</span></h2>
+      <span class="spacer"></span>
+      <span class="sub" id="ideastate"></span>
+      <button id="reload">放弃修改</button>
+      <button class="primary" id="save">保存 (Ctrl+S)</button>
+    </div>
+    <div id="conflict">
+      这个文件刚刚在磁盘上被改过（可能是 Claude 或你在别处改的），和你这里的修改冲突。
+      <button id="takeDisk">用磁盘上的版本</button><button id="keepMine">保留我的并覆盖</button>
+    </div>
+    <textarea id="idea" spellcheck="false" aria-label="idea.md 的内容"></textarea>
+    <p class="sub" style="margin:8px 0 0">保存后直接写入文件，团队下次读取时就是新内容。研究已经开始后再改想法，请在 Claude 里说一声"我改了 idea"，否则已完成的阶段不会自动重做。</p>
+  </section>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+const STATUS = {
+  running:    ["run",  '<span class="pulse"></span>', "运行中"],
+  done:       ["ok",   '<span class="ico">✓</span>', "已完成"],
+  failed:     ["bad",  '<span class="ico">✕</span>', "失败"],
+  stale:      ["warn", '<span class="ico">?</span>', "可能已中断"],
+  manual:     ["warn", '<span class="ico">✎</span>', "需手动粘贴"],
+  idle:       ["",     '<span class="ico">–</span>', "空闲"],
+};
+const LEAD = {
+  working:    ["run",  '<span class="pulse"></span>', "工作中"],
+  delegating: ["run",  '<span class="pulse"></span>', "等队员完成"],
+  waiting:    ["warn", '<span class="ico">⏸</span>', "等你的指示"],
+  stale:      ["warn", '<span class="ico">?</span>', "可能已中断"],
+  unknown:    ["",     '<span class="ico">–</span>', "还没有记录"],
+};
+const STAGE = {
+  done:   ["ok",   '<span class="ico">✓</span>', "已完成"],
+  active: ["run",  '<span class="pulse"></span>', "进行中"],
+  gate:   ["warn", '<span class="ico">⏸</span>', "等你决定"],
+  rework: ["warn", '<span class="ico">↺</span>', "返工中"],
+  todo:   ["",     '<span class="ico">○</span>', "未开始"],
+};
+const TOOL = { Read: "读取", Write: "写入", Edit: "修改", Bash: "运行", PowerShell: "运行", Grep: "搜索", Glob: "查找文件",
+               WebSearch: "网上搜索", WebFetch: "读网页", Agent: "派任务", Task: "派任务", Skill: "调用 skill",
+               SubagentHandback: "提交结果" };
+const chip = ([cls, ico, label]) => `<span class="chip ${cls}">${ico}${esc(label)}</span>`;
+
+function dur(s) {
+  s = Math.max(0, Math.round(s));
+  if (s < 60) return s + " 秒";
+  if (s < 3600) return Math.floor(s / 60) + " 分 " + (s % 60) + " 秒";
+  return Math.floor(s / 3600) + " 小时 " + Math.floor((s % 3600) / 60) + " 分";
+}
+function ago(ts, now) {
+  const s = now - ts;
+  if (s < 5) return "刚刚";
+  if (s < 60) return Math.round(s) + " 秒前";
+  if (s < 3600) return Math.round(s / 60) + " 分钟前";
+  if (s < 86400) return Math.round(s / 3600) + " 小时前";
+  return Math.round(s / 86400) + " 天前";
+}
+const clock = ts => new Date(ts * 1000).toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit", hour12: false });
+const day = ts => { const d = new Date(ts * 1000), n = new Date(); return d.toDateString() === n.toDateString() ? "" : (d.getMonth() + 1) + "/" + d.getDate() + " "; };
+const toolName = t => TOOL[t] || (String(t).startsWith("mcp__") ? "使用" + String(t).split("__")[1].replace(/_/g, " ") + "工具" : t);
+const action = (a, now) => a ? `${esc(toolName(a.tool))}${a.target ? " " + `<span class="path">${esc(a.target)}</span>` : ""} · ${ago(a.ts, now)}` : "";
+
+let memberLabels = {};
+
+function render(s) {
+  const now = s.now;
+  $("project").textContent = s.project;
+  $("tracking").textContent = s.tracking.has_events
+    ? "最近一次活动：" + ago(s.tracking.last_event, now)
+    : "还没有收到活动记录（团队开始工作后才会有；新加的记录功能需要新开一个 Claude 会话才生效）";
+
+  $("todo").hidden = !s.todo.length;
+  $("todolist").innerHTML = s.todo.map(t => `<li>${esc(t.text)}</li>`).join("");
+
+  $("current").innerHTML = s.status.current ? `当前：<b>${esc(s.status.current)}</b>` : "";
+  $("stages").innerHTML = s.status.stages.map(st => `
+    <div class="stage ${st.state === "active" ? "active" : st.state === "gate" ? "gate-wait" : ""}">
+      <div class="n">阶段 ${st.n}</div>
+      <div class="name">${esc(st.name)}</div>
+      ${chip(STAGE[st.state] || STAGE.todo)}
+      ${st.gate ? `<div class="gate">之后是${esc(st.gate)}</div>` : ""}
+    </div>`).join("") || '<div class="empty">读不到 STATUS.md 里的阶段表。</div>';
+
+  memberLabels = Object.fromEntries(s.members.map(m => [m.key, m.label]));
+  $("team").innerHTML = s.members.map(m => {
+    if (m.key === "lead") {
+      const st = LEAD[s.lead.state] || LEAD.unknown;
+      const busy = s.lead.state === "working" || s.lead.state === "delegating";
+      return `<div class="card ${busy ? "busy" : ""}">
+        <div class="top"><span class="name">${esc(m.label)}</span><span class="spacer"></span>${chip(st)}</div>
+        <div class="role">${esc(m.role)}</div>
+        ${s.lead.since ? `<div class="meta">这个状态已持续 ${dur(now - s.lead.since)}</div>` : ""}
+        ${s.lead.last_action ? `<div class="meta">最近动作：${action(s.lead.last_action, now)}</div>` : ""}
+      </div>`;
+    }
+    const n = m.running.length;
+    const st = n ? [STATUS.running[0], STATUS.running[1], n > 1 ? `运行中 × ${n}` : "运行中"]
+             : m.stale.length ? STATUS.stale : STATUS.idle;
+    const jobs = [...m.running, ...m.stale].map(t => `
+      <div class="job"><div>${esc(t.description)}</div>
+        <div class="meta">已用 ${dur(t.duration)}${t.last_action ? " · " + action(t.last_action, now) : ""}</div></div>`).join("");
+    const last = !n && m.last
+      ? `<div class="meta">上一个任务：${esc(m.last.description)} · ${esc((STATUS[m.last.status] || STATUS.idle)[2])} · ${ago(m.last.ended || m.last.started, now)}</div>` : "";
+    return `<div class="card ${n ? "busy" : ""}">
+      <div class="top"><span class="name">${esc(m.label)}</span><span class="spacer"></span>${chip(st)}</div>
+      <div class="role">${esc(m.role)}${m.count_done ? ` · 已完成 ${m.count_done} 个任务` : ""}</div>
+      ${jobs}${last}
+    </div>`;
+  }).join("");
+
+  const rows = s.items.slice(0, 30);
+  $("logempty").hidden = rows.length > 0;
+  $("log").innerHTML = rows.map(t => {
+    const detail = [t.task ? "任务：" + t.task : "", t.result ? "结果：" + t.result : ""].filter(Boolean).join("\n\n");
+    const what = detail
+      ? `<details><summary>${esc(t.description)}</summary><p>${esc(detail)}</p></details>` : esc(t.description);
+    return `<tr><td class="t">${day(t.started)}${clock(t.started)}</td><td>${esc(memberLabels[t.member] || t.member)}</td>
+      <td>${what}</td><td>${chip(STATUS[t.status] || STATUS.idle)}</td><td class="d">${dur(t.duration)}</td></tr>`;
+  }).join("");
+
+  $("files").innerHTML = s.files.map(f =>
+    `<li><span class="path">${esc(f.path)}</span><span class="when">${ago(f.mtime, now)}</span></li>`).join("")
+    || '<li class="empty">还没有文件。</li>';
+}
+
+// keep <details> open across refreshes by not re-rendering while one is open
+async function tick() {
+  try {
+    const r = await fetch("/api/state", { cache: "no-store" });
+    const s = await r.json();
+    $("offline").style.display = "none";
+    if (!document.querySelector("#log details[open]")) render(s);
+  } catch (e) {
+    $("offline").style.display = "block";
+  }
+}
+
+// ---- idea editor ----
+const box = $("idea");
+let saved = "", baseMtime = 0, loaded = false;
+const dirty = () => loaded && box.value !== saved;
+
+function ideaState(msg) {
+  $("ideastate").textContent = msg || (dirty() ? "有未保存的修改" : "已保存，和文件一致");
+  $("save").disabled = !dirty();
+  $("reload").disabled = !dirty();
+}
+function adopt(d, msg) {
+  box.value = saved = d.content; baseMtime = d.mtime; loaded = true;
+  $("conflict").style.display = "none";
+  ideaState(msg);
+}
+async function loadIdea(msg) {
+  const r = await fetch("/api/idea", { cache: "no-store" });
+  adopt(await r.json(), msg);
+}
+async function watchIdea() {
+  if (!loaded) return;
+  try {
+    const d = await (await fetch("/api/idea", { cache: "no-store" })).json();
+    if (Math.abs(d.mtime - baseMtime) < 0.001) return;
+    if (!dirty()) adopt(d, "文件在磁盘上有更新，已同步到这里");
+    else if (d.content !== box.value) { $("conflict").style.display = "block"; pendingDisk = d; }
+    else { saved = d.content; baseMtime = d.mtime; ideaState(); }
+  } catch (e) {}
+}
+let pendingDisk = null;
+async function saveIdea(force) {
+  if (!dirty() && !force) return;
+  ideaState("正在保存…");
+  const r = await fetch("/api/idea", {
+    method: "POST", headers: { "Content-Type": "application/json", "X-Dashboard": "1" },
+    body: JSON.stringify({ content: box.value, base_mtime: baseMtime, force: !!force }),
+  });
+  const d = await r.json();
+  if (r.status === 409) { pendingDisk = d; $("conflict").style.display = "block"; ideaState("没有保存：文件在磁盘上被改过"); return; }
+  if (!r.ok) { ideaState("保存失败：" + (d.error || r.status)); return; }
+  saved = box.value; baseMtime = d.mtime; $("conflict").style.display = "none";
+  ideaState("已保存 " + new Date().toLocaleTimeString("zh-CN", { hour12: false }));
+}
+box.addEventListener("input", () => ideaState());
+$("save").addEventListener("click", () => saveIdea(false));
+$("reload").addEventListener("click", () => { if (confirm("放弃这里未保存的修改，重新读取文件？")) loadIdea("已重新读取文件"); });
+$("takeDisk").addEventListener("click", () => pendingDisk ? adopt(pendingDisk, "已换成磁盘上的版本") : loadIdea());
+$("keepMine").addEventListener("click", () => saveIdea(true));
+document.addEventListener("keydown", e => {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s") { e.preventDefault(); saveIdea(false); }
+});
+window.addEventListener("beforeunload", e => { if (dirty()) { e.preventDefault(); e.returnValue = ""; } });
+
+loadIdea().catch(() => ideaState("读不到 idea.md"));
+tick();
+setInterval(tick, 2000);
+setInterval(watchIdea, 4000);
+</script>
+</body>
+</html>

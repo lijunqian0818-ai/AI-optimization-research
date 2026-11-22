@@ -1,0 +1,221 @@
+{
+ "label": "B:b004@6bdc3fe7d9efdda7b1d1775668a1073561c6feea0765d91363bcadf047368bbb",
+ "decisions": [
+  {
+   "id": "R00121",
+   "d": "include",
+   "code": "INC",
+   "why": "Kelly estimation risk (T6)"
+  },
+  {
+   "id": "R00122",
+   "d": "include",
+   "code": "INC",
+   "why": "Distributionally robust Kelly betting (T6)"
+  },
+  {
+   "id": "R00123",
+   "d": "include",
+   "code": "INC",
+   "why": "Kelly with probability estimate uncertainty (T6)"
+  },
+  {
+   "id": "R00124",
+   "d": "include",
+   "code": "INC",
+   "why": "Risk-constrained Kelly (T6)"
+  },
+  {
+   "id": "R00125",
+   "d": "include",
+   "code": "INC",
+   "why": "Kelly under parameter uncertainty (T6)"
+  },
+  {
+   "id": "R00126",
+   "d": "include",
+   "code": "INC",
+   "why": "Partial Kelly with shrinkage estimators (T6)"
+  },
+  {
+   "id": "R00127",
+   "d": "include",
+   "code": "INC",
+   "why": "Kelly and fractional Kelly properties (T6)"
+  },
+  {
+   "id": "R00128",
+   "d": "include",
+   "code": "INC",
+   "why": "Thorp Kelly in stock market; foundational (T7)"
+  },
+  {
+   "id": "R00129",
+   "d": "include",
+   "code": "INC",
+   "why": "Optimal betting, fractional Kelly (T6)"
+  },
+  {
+   "id": "R00130",
+   "d": "include",
+   "code": "INC",
+   "why": "Kelly criterion for stock markets (T6)"
+  },
+  {
+   "id": "R00131",
+   "d": "include",
+   "code": "INC",
+   "why": "Shrinkage estimation of Kelly portfolios (T6)"
+  },
+  {
+   "id": "R00132",
+   "d": "include",
+   "code": "INC",
+   "why": "Kelly betting sizing analysis (T6)"
+  },
+  {
+   "id": "R00133",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "2007 Kelly analysis; foundational status unclear"
+  },
+  {
+   "id": "R00134",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "2007 estimation-error portfolio choice; foundational status unclear"
+  },
+  {
+   "id": "R00135",
+   "d": "include",
+   "code": "INC",
+   "why": "Conformal risk control (T2)"
+  },
+  {
+   "id": "R00136",
+   "d": "include",
+   "code": "INC",
+   "why": "Selective prediction with reject option (T2)"
+  },
+  {
+   "id": "R00137",
+   "d": "include",
+   "code": "INC",
+   "why": "Pluribus, foundational imperfect-information game (T7)"
+  },
+  {
+   "id": "R00138",
+   "d": "include",
+   "code": "INC",
+   "why": "Libratus, foundational (T7)"
+  },
+  {
+   "id": "R00139",
+   "d": "include",
+   "code": "INC",
+   "why": "DeepStack, foundational (T7)"
+  },
+  {
+   "id": "R00140",
+   "d": "include",
+   "code": "INC",
+   "why": "Selective classification theory (T2)"
+  },
+  {
+   "id": "R00141",
+   "d": "include",
+   "code": "INC",
+   "why": "Learning with rejection theory (T2)"
+  },
+  {
+   "id": "R00142",
+   "d": "include",
+   "code": "INC",
+   "why": "Selective classification foundations (T2)"
+  },
+  {
+   "id": "R00143",
+   "d": "include",
+   "code": "INC",
+   "why": "CFR original paper, foundational (T7)"
+  },
+  {
+   "id": "R00144",
+   "d": "include",
+   "code": "INC",
+   "why": "Kyle 1985, foundational (T7)"
+  },
+  {
+   "id": "R00145",
+   "d": "include",
+   "code": "INC",
+   "why": "Glosten-Milgrom 1985, foundational (T7)"
+  },
+  {
+   "id": "R00146",
+   "d": "include",
+   "code": "INC",
+   "why": "Milgrom-Stokey no-trade theorem, foundational (T7)"
+  },
+  {
+   "id": "R00147",
+   "d": "include",
+   "code": "INC",
+   "why": "Chow 1970 reject option, foundational (T7)"
+  },
+  {
+   "id": "R00148",
+   "d": "include",
+   "code": "INC",
+   "why": "Kelly 1956, foundational (T7)"
+  },
+  {
+   "id": "R00149",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Poker GTO survey; link to finance or decision theory unstated"
+  },
+  {
+   "id": "R00150",
+   "d": "include",
+   "code": "INC",
+   "why": "Imperfect-information game algorithm, foundational (T7)"
+  },
+  {
+   "id": "R00151",
+   "d": "include",
+   "code": "INC",
+   "why": "ReBeL imperfect-information RL+search, foundational (T7)"
+  },
+  {
+   "id": "R00152",
+   "d": "include",
+   "code": "INC",
+   "why": "Deep CFR, foundational (T7)"
+  },
+  {
+   "id": "R00153",
+   "d": "include",
+   "code": "INC",
+   "why": "NFSP imperfect-information self-play, foundational (T7)"
+  },
+  {
+   "id": "R00154",
+   "d": "include",
+   "code": "INC",
+   "why": "Solved limit hold'em via CFR, foundational (T7)"
+  },
+  {
+   "id": "R00155",
+   "d": "include",
+   "code": "INC",
+   "why": "Reject-option classification theory, foundational (T2/T7)"
+  },
+  {
+   "id": "R00156",
+   "d": "include",
+   "code": "INC",
+   "why": "Learning to abstain, finance-motivated selective learning (T2)"
+  }
+ ]
+}

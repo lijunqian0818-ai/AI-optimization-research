@@ -1,0 +1,516 @@
+akshare 1.20.63 python 3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]
+
+====  a_restricted_release restricted_release|_xsjj|jiejin
+- stock_restricted_release_detail_em(start_date: str = '20221202', end_date: str = '20241202') -> pandas.DataFrame  [\stock\issue\stock_restricted_em.py]
+      东方财富网-数据中心-限售股解禁-解禁详情一览
+      https://data.eastmoney.com/dxf/detail.html
+      :param start_date: 开始时间
+      :type start_date: str
+      :param end_date: 结束时间
+      :type end_date: str
+      :return: 解禁详情一览
+      :rtype: pandas.DataFrame
+- stock_restricted_release_queue_em(symbol: str = '600000') -> pandas.DataFrame  [\stock\issue\stock_restricted_em.py]
+      东方财富网-数据中心-个股限售解禁-解禁批次
+      https://data.eastmoney.com/dxf/q/600000.html
+      :param symbol: 股票代码
+      :type symbol: str
+      :return: 个股限售解禁
+      :rtype: pandas.DataFrame
+- stock_restricted_release_queue_sina(symbol: str = '600000') -> pandas.DataFrame  [\stock\issue\stock_finance_sina.py]
+      新浪财经-发行分配-限售解禁
+      https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/xsjj/index.phtml?symbol=sh600000
+      :param symbol: 股票代码
+      :type symbol: str
+      :return: 返回限售解禁数据
+      :rtype: pandas.DataFrame
+- stock_restricted_release_stockholder_em(symbol: str = '600000', date: str = '20200904') -> pandas.DataFrame  [\stock\issue\stock_restricted_em.py]
+      东方财富网-数据中心-个股限售解禁-解禁股东
+      https://data.eastmoney.com/dxf/q/600000.html
+      :param symbol: 股票代码
+      :type symbol: str
+      :param date: 日期；通过 ak.stock_restricted_release_queue_em(symbol="600000") 获取
+      :type date: str
+      :return: 个股限售解禁
+      :rtype: pandas.DataFrame
+- stock_restricted_release_summary_em(symbol: str = '全部股票', start_date: str = '20261006', end_date: str = '20261113') -> pandas.DataFrame  [\stock\issue\stock_restricted_em.py]
+      东方财富网-数据中心-特色数据-限售股解禁
+      https://data.eastmoney.com/dxf/marketStatistics.html?type=day&startdate=2022-11-08&enddate=2022-12-19
+      :param symbol: 标的市场；choice of {"全部股票", "沪市A股", "科创板", "深市A股", "创业板", "京市A股"}
+      :type symbol: str
+      :param start_date: 开始时间
+      :type start_date: str
+      :param end_date: 结束时间
+      :type end_date: str
+
+====  b_insider_holder_trades ggcg|_hold_management|share_hold_change|hold_change|_zjc|inner_trade|management_change|shareholder_change
+- stock_ggcg_em(symbol: str = '全部') -> pandas.DataFrame  [\stock\holder\stock_gdzjc_em.py]
+      东方财富网-数据中心-特色数据-高管持股
+      https://data.eastmoney.com/executive/gdzjc.html
+      :param symbol: choice of {"全部", "股东增持", "股东减持"}
+      :type symbol: str
+      :return: 高管持股
+      :rtype: pandas.DataFrame
+- stock_hold_management_detail_cninfo(symbol: str = '增持') -> pandas.DataFrame  [\stock\research\stock_hold_control_cninfo.py]
+      巨潮资讯-数据中心-专题统计-股东股本-高管持股变动明细
+      https://webapi.cninfo.com.cn/#/thematicStatistics
+      :param symbol: choice of {"增持", "减持"}
+      :type symbol: str
+      :return: 高管持股变动明细
+      :rtype: pandas.DataFrame
+- stock_hold_management_detail_em() -> pandas.DataFrame  [\stock\research\stock_hold_control_em.py]
+      东方财富网-数据中心-特色数据-高管持股-董监高及相关人员持股变动明细
+      https://data.eastmoney.com/executive/list.html
+      :return: 董监高及相关人员持股变动明细
+      :rtype: pandas.DataFrame
+- stock_hold_management_person_em(symbol: str = '001308', name: str = '吴远') -> pandas.DataFrame  [\stock\research\stock_hold_control_em.py]
+      东方财富网-数据中心-特色数据-高管持股-人员增减持股变动明细
+      https://data.eastmoney.com/executive/personinfo.html?name=%E5%90%B4%E8%BF%9C&code=001308
+      :param symbol: 股票代码
+      :type name: str
+      :param name: 高管名称
+      :type symbol: str
+      :return: 人员增减持股变动明细
+      :rtype: pandas.DataFrame
+- stock_inner_trade_xq() -> pandas.DataFrame  [\stock\board\stock_inner_trade_xq.py]
+      雪球-行情中心-沪深股市-内部交易
+      https://xueqiu.com/hq/insider
+      :return: 内部交易
+      :rtype: pandas.DataFrame
+- stock_management_change_ths(symbol: str = '688981') -> pandas.DataFrame  [\stock\finance\stock_finance_ths.py]
+      同花顺-公司大事-高管持股变动
+      https://basic.10jqka.com.cn/new/688981/event.html
+      :param symbol: 股票代码
+      :type symbol: str
+      :return: 同花顺-公司大事-高管持股变动
+      :rtype: pandas.DataFrame
+- stock_share_hold_change_bse(symbol: str = '430489') -> pandas.DataFrame  [\stock\research\stock_share_hold.py]
+      北京证券交易所-信息披露-监管信息-董监高及相关人员持股变动
+      https://www.bse.cn/disclosure/djg_sharehold_change.html
+      :param symbol: choice of {"全部", "具体股票代码"}
+      :type symbol: str
+      :return: 董监高及相关人员持股变动
+      :rtype: pandas.DataFrame
+- stock_share_hold_change_sse(symbol: str = '600000') -> pandas.DataFrame  [\stock\research\stock_share_hold.py]
+      上海证券交易所-披露-监管信息公开-公司监管-董董监高人员股份变动
+      https://www.sse.com.cn/disclosure/credibility/supervision/change/
+      :param symbol: choice of {"全部", "具体股票代码"}
+      :type symbol: str
+      :return: 董监高人员股份变动
+      :rtype: pandas.DataFrame
+- stock_share_hold_change_szse(symbol: str = '全部') -> pandas.DataFrame  [\stock\research\stock_share_hold.py]
+      深圳证券交易所-信息披露-监管信息公开-董监高人员股份变动
+      https://www.szse.cn/disclosure/supervision/change/index.html
+      :param symbol: choice of {"全部", "具体股票代码"}
+      :type symbol: str
+      :return: 董监高人员股份变动
+      :rtype: pandas.DataFrame
+- stock_shareholder_change_ths(symbol: str = '688981') -> pandas.DataFrame  [\stock\finance\stock_finance_ths.py]
+      同花顺-公司大事-股东持股变动
+      https://basic.10jqka.com.cn/new/688981/event.html
+      :param symbol: 股票代码
+      :type symbol: str
+      :return: 同花顺-公司大事-股东持股变动
+      :rtype: pandas.DataFrame
+
+====  c_lhb lhb
+- option_lhb_em(symbol: str = '510050', indicator: str = '期权交易情况-认沽交易量', date: str = '20220121') -> pandas.DataFrame  [\option\option_lhb_em.py]
+      东方财富网-数据中心-期货期权-期权龙虎榜单
+      https://data.eastmoney.com/other/qqlhb.html
+      :param symbol: 期权代码；choice of {"510050", "510300", "159919"}
+      :type symbol: str
+      :param indicator: 需要获取的指标；choice of {"期权交易情况-认沽交易量","期权持仓情况-认沽持仓量", "期权交易情况-认购交易量", "期权持仓情况-认购持仓量"}
+      :type indicator: str
+      :param date: 交易日期
+      :type date: str
+- stock_lhb_detail_daily_sina(date: str = '20240222') -> pandas.DataFrame  [\stock\flow\stock_lhb_sina.py]
+      龙虎榜-每日详情
+      https://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/lhb/index.phtml
+      :param date: 交易日
+      :type date: str
+      :return: 龙虎榜-每日详情
+      :rtype: pandas.DataFrame
+- stock_lhb_detail_em(start_date: str = '20230403', end_date: str = '20230417') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-龙虎榜详情
+      https://data.eastmoney.com/stock/tradedetail.html
+      :param start_date: 开始日期
+      :type start_date: str
+      :param end_date: 结束日期
+      :type end_date: str
+      :return: 龙虎榜详情
+      :rtype: pandas.DataFrame
+- stock_lhb_ggtj_sina(symbol: str = '5') -> pandas.DataFrame  [\stock\flow\stock_lhb_sina.py]
+      龙虎榜-个股上榜统计
+      https://vip.stock.finance.sina.com.cn/q/go.php/vLHBData/kind/ggtj/index.phtml
+      :param symbol: choice of {"5": 最近 5 天；"10": 最近 10 天；"30": 最近 30 天；"60": 最近 60 天；}
+      :type symbol: str
+      :return: 龙虎榜-个股上榜统计
+      :rtype: pandas.DataFrame
+- stock_lhb_hyyyb_em(start_date: str = '20261113', end_date: str = '20261113') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-每日活跃营业部
+      https://data.eastmoney.com/stock/hyyyb.html
+      :param start_date: 开始日期
+      :type start_date: str
+      :param end_date: 结束日期
+      :type end_date: str
+      :return: 每日活跃营业部
+      :rtype: pandas.DataFrame
+- stock_lhb_jgmmtj_em(start_date: str = '20240417', end_date: str = '20240430') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-机构买卖每日统计
+      https://data.eastmoney.com/stock/jgmmtj.html
+      :param start_date: 开始日期
+      :type start_date: str
+      :param end_date: 结束日期
+      :type end_date: str
+      :return: 机构买卖每日统计
+      :rtype: pandas.DataFrame
+- stock_lhb_jgmx_sina() -> pandas.DataFrame  [\stock\flow\stock_lhb_sina.py]
+      龙虎榜-机构席位成交明细
+      https://vip.stock.finance.sina.com.cn/q/go.php/vLHBData/kind/jgmx/index.phtml
+      :return: 龙虎榜-机构席位成交明细
+      :rtype: pandas.DataFrame
+- stock_lhb_jgstatistic_em(symbol: str = '近一月') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-机构席位追踪
+      https://data.eastmoney.com/stock/jgstatistic.html
+      :param symbol: choice of {"近一月", "近三月", "近六月", "近一年"}
+      :type symbol: str
+      :return: 机构席位追踪
+      :rtype: pandas.DataFrame
+- stock_lhb_jgzz_sina(symbol: str = '5') -> pandas.DataFrame  [\stock\flow\stock_lhb_sina.py]
+      龙虎榜-机构席位追踪
+      https://vip.stock.finance.sina.com.cn/q/go.php/vLHBData/kind/jgzz/index.phtml
+      :param symbol: choice of {"5": 最近 5 天；"10": 最近 10 天；"30": 最近 30 天；"60": 最近 60 天；}
+      :type symbol: str
+      :return: 龙虎榜-机构席位追踪
+      :rtype: pandas.DataFrame
+- stock_lhb_stock_detail_date_em(symbol: str = '600077') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-个股龙虎榜详情-日期
+      https://data.eastmoney.com/stock/tradedetail.html
+      :param symbol: 股票代码
+      :type symbol: str
+      :return: 个股龙虎榜详情-日期
+      :rtype: pandas.DataFrame
+- stock_lhb_stock_detail_em(symbol: str = '000788', date: str = '20220315', flag: str = '卖出') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-个股龙虎榜详情
+      https://data.eastmoney.com/stock/lhb/600077.html
+      :param symbol: 股票代码
+      :type symbol: str
+      :param date: 查询日期；需要通过 ak.stock_lhb_stock_detail_date_em(symbol="600077") 接口获取相应股票的有龙虎榜详情数据的日期
+      :type date: str
+      :param flag: choice of {"买入", "卖出"}
+      :type flag: str
+- stock_lhb_stock_statistic_em(symbol: str = '近一月') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-个股上榜统计
+      https://data.eastmoney.com/stock/tradedetail.html
+      :param symbol: choice of {"近一月", "近三月", "近六月", "近一年"}
+      :type symbol: str
+      :return: 个股上榜统计
+      :rtype: pandas.DataFrame
+- stock_lhb_traderstatistic_em(symbol: str = '近一月') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-营业部统计
+      https://data.eastmoney.com/stock/traderstatistic.html
+      :param symbol: choice of {"近一月", "近三月", "近六月", "近一年"}
+      :type symbol: str
+      :return: 营业部统计
+      :rtype: pandas.DataFrame
+- stock_lhb_yyb_detail_em(symbol: str = '10188715') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-营业部历史交易明细-营业部交易明细
+      https://data.eastmoney.com/stock/lhb/yyb/10188715.html
+      :param symbol: 营业部代码，如 "10188715"，通过 ak.stock_lhb_hyyyb_em() 接口获取
+      :type symbol: str
+      :return: 营业部交易明细数据
+      :rtype: pandas.DataFrame
+- stock_lhb_yybph_em(symbol: str = '近一月') -> pandas.DataFrame  [\stock\flow\stock_lhb_em.py]
+      东方财富网-数据中心-龙虎榜单-营业部排行
+      https://data.eastmoney.com/stock/yybph.html
+      :param symbol: choice of {"近一月", "近三月", "近六月", "近一年"}
+      :type symbol: str
+      :return: 营业部排行
+      :rtype: pandas.DataFrame
+- stock_lhb_yytj_sina(symbol: str = '5') -> pandas.DataFrame  [\stock\flow\stock_lhb_sina.py]
+      龙虎榜-营业部上榜统计
+      https://vip.stock.finance.sina.com.cn/q/go.php/vLHBData/kind/yytj/index.phtml
+      :param symbol: choice of {"5": 最近 5 天；"10": 最近 10 天；"30": 最近 30 天；"60": 最近 60 天；}
+      :type symbol: str
+      :return: 龙虎榜-营业部上榜统计
+      :rtype: pandas.DataFrame
+
+====  d_margin margin|rzrq
+- option_margin(symbol: str = '原油期权') -> pandas.DataFrame  [\option\option_margin.py]
+      获取商品期权保证金
+      :param symbol: 商品期权品种名称，如 "原油期权"，可以通过 ak.option_margin_symbol() 获取所有商品期权品种代码和名称
+      :type symbol: str
+      :return: 商品期权保证金
+      :rtype: pandas.DataFrame
+- option_margin_symbol() -> pandas.DataFrame  [?]
+      获取商品期权品种代码和名称
+      :return: 商品期权品种代码和名称
+      :rtype: pandas.DataFrame
+- stock_margin_account_info() -> pandas.DataFrame  [\stock\flow\stock_margin_em.py]
+      东方财富网-数据中心-融资融券-融资融券账户统计-两融账户信息
+      https://data.eastmoney.com/rzrq/zhtjday.html
+      :return: 融资融券账户统计
+      :rtype: pandas.DataFrame
+- stock_margin_bse(date: str = '20260721') -> pandas.DataFrame  [\stock\flow\stock_margin_bse.py]
+      北京证券交易所-融资融券数据-融资融券汇总。
+      
+      :param date: 交易日
+      :type date: str
+      :return: 融资融券汇总
+      :rtype: pandas.DataFrame
+- stock_margin_detail_bse(date: str = '20260721') -> pandas.DataFrame  [\stock\flow\stock_margin_bse.py]
+      北京证券交易所-融资融券数据-融资融券交易明细。
+      
+      :param date: 交易日
+      :type date: str
+      :return: 融资融券明细
+      :rtype: pandas.DataFrame
+- stock_margin_detail_sse(date: str = '20230922') -> pandas.DataFrame  [\stock\flow\stock_margin_sse.py]
+      上海证券交易所-融资融券数据-融资融券明细
+      https://www.sse.com.cn/market/othersdata/margin/detail/
+      :param date: 交易日期
+      :type date: str
+      :return: 融资融券明细
+      :rtype: pandas.DataFrame
+- stock_margin_detail_szse(date: str = '20230925') -> pandas.DataFrame  [\stock\flow\stock_margin_szse.py]
+      深圳证券交易所-融资融券数据-融资融券交易明细
+      https://www.szse.cn/disclosure/margin/margin/index.html
+      :param date: 交易日期
+      :type date: str
+      :return: 融资融券明细
+      :rtype: pandas.DataFrame
+- stock_margin_ratio_pa(symbol: str = '深市', date: str = '20260113') -> pandas.DataFrame  [\stock\flow\stock_margin_sse.py]
+      融资融券-标的证券名单及保证金比例查询
+      https://stock.pingan.com/static/webinfo/margin/business.html?businessType=0
+      :param symbol: choice of {"深市", "沪市", "北交所"}
+      :type symbol: str
+      :param date: 交易日期
+      :type date: str
+      :return: 标的证券名单及保证金比例查询
+      :rtype: pandas.DataFrame
+- stock_margin_sse(start_date: str = '20010106', end_date: str = '20230922') -> pandas.DataFrame  [\stock\flow\stock_margin_sse.py]
+      上海证券交易所-融资融券数据-融资融券汇总
+      https://www.sse.com.cn/market/othersdata/margin/sum/
+      :param start_date: 交易开始日期
+      :type start_date: str
+      :param end_date: 交易结束日期
+      :type end_date: str
+      :return: 融资融券汇总
+      :rtype: pandas.DataFrame
+- stock_margin_sse_js() -> pandas.DataFrame  [\stock\flow\stock_margin_js.py]
+      上海融资融券报告，数据区间从 20100331-至今
+      https://datacenter.jin10.com/reportType/dc_market_margin_sse
+      :return: pandas.DataFrame
+- stock_margin_szse(date: str = '20240411') -> pandas.DataFrame  [\stock\flow\stock_margin_szse.py]
+      深圳证券交易所-融资融券数据-融资融券汇总
+      https://www.szse.cn/disclosure/margin/margin/index.html
+      :param date: 交易日
+      :type date: str
+      :return: 融资融券汇总
+      :rtype: pandas.DataFrame
+- stock_margin_szse_js() -> pandas.DataFrame  [\stock\flow\stock_margin_js.py]
+      深圳融资融券报告，数据区间从20100331-至今
+      https://datacenter.jin10.com/reportType/dc_market_margin_sz
+      :return: pandas.DataFrame
+- stock_margin_underlying_info_bse(date: str = '20260722') -> pandas.DataFrame  [\stock\flow\stock_margin_bse.py]
+      北京证券交易所-融资融券数据-标的证券信息。
+      
+      :param date: 交易日
+      :type date: str
+      :return: 标的证券信息
+      :rtype: pandas.DataFrame
+- stock_margin_underlying_info_szse(date: str = '20261113') -> pandas.DataFrame  [\stock\flow\stock_margin_szse.py]
+      深圳证券交易所-融资融券数据-标的证券信息
+      https://www.szse.cn/disclosure/margin/object/index.html
+      :param date: 交易日
+      :type date: str
+      :return: 标的证券信息
+      :rtype: pandas.DataFrame
+
+====  e_block_trade dzjy
+- stock_dzjy_hygtj(symbol: str = '近三月') -> pandas.DataFrame  [\stock\flow\stock_dzjy_em.py]
+      东方财富网-数据中心-大宗交易-活跃 A 股统计
+      https://data.eastmoney.com/dzjy/dzjy_hygtj.html
+      :param symbol: choice of {'近一月', '近三月', '近六月', '近一年'}
+      :type symbol: str
+      :return: 活跃 A 股统计
+      :rtype: pandas.DataFrame
+- stock_dzjy_hyyybtj(symbol: str = '近3日') -> pandas.DataFrame  [\stock\flow\stock_dzjy_em.py]
+      东方财富网-数据中心-大宗交易-活跃营业部统计
+      https://data.eastmoney.com/dzjy/dzjy_hyyybtj.html
+      :param symbol: choice of {'当前交易日', '近3日', '近5日', '近10日', '近30日'}
+      :type symbol: str
+      :return: 活跃营业部统计
+      :rtype: pandas.DataFrame
+- stock_dzjy_mrmx(symbol: str = '基金', start_date: str = '20261113', end_date: str = '20261113') -> pandas.DataFrame  [\stock\flow\stock_dzjy_em.py]
+      东方财富网-数据中心-大宗交易-每日明细
+      https://data.eastmoney.com/dzjy/dzjy_mrmx.html
+      :param symbol: choice of {'A股', 'B股', '基金', '债券'}
+      :type symbol: str
+      :param start_date: 开始日期
+      :type start_date: str
+      :param end_date: 结束日期
+      :type end_date: str
+- stock_dzjy_mrtj(start_date: str = '20261113', end_date: str = '20261113') -> pandas.DataFrame  [\stock\flow\stock_dzjy_em.py]
+      东方财富网-数据中心-大宗交易-每日统计
+      https://data.eastmoney.com/dzjy/dzjy_mrtj.html
+      :param start_date: 开始日期
+      :type start_date: str
+      :param end_date: 结束日期
+      :type end_date: str
+      :return: 每日统计
+      :rtype: pandas.DataFrame
+- stock_dzjy_sctj() -> pandas.DataFrame  [\stock\flow\stock_dzjy_em.py]
+      东方财富网-数据中心-大宗交易-市场统计
+      https://data.eastmoney.com/dzjy/dzjy_sctj.html
+      :return: 市场统计表
+      :rtype: pandas.DataFrame
+- stock_dzjy_yybph(symbol: str = '近三月') -> pandas.DataFrame  [\stock\flow\stock_dzjy_em.py]
+      东方财富网-数据中心-大宗交易-营业部排行
+      https://data.eastmoney.com/dzjy/dzjy_yybph.html
+      :param symbol: choice of {'近一月', '近三月', '近六月', '近一年'}
+      :type symbol: str
+      :return: 营业部排行
+      :rtype: pandas.DataFrame
+
+====  f_holder_number gdhs|holder_number|hold_num
+- stock_hold_num_cninfo(date: str = '20260930') -> pandas.DataFrame  [\stock\research\stock_hold_num_cninfo.py]
+      巨潮资讯-数据中心-专题统计-股东股本-股东人数及持股集中度
+      https://webapi.cninfo.com.cn/#/thematicStatistics
+      :param date: choice of {"XXXX0331", "XXXX0630", "XXXX0930", "XXXX1231"}；从 20170331 开始
+      :type date: str
+      :return: 股东人数及持股集中度
+      :rtype: pandas.DataFrame
+- stock_zh_a_gdhs(symbol: str = '20230930') -> pandas.DataFrame  [\stock\holder\stock_gdhs.py]
+      东方财富网-数据中心-特色数据-股东户数
+      https://data.eastmoney.com/gdhs/
+      :param symbol: choice of {"最新", "每个季度末"}，其中 每个季度末需要写成 `20230930` 格式
+      :type symbol: str
+      :return: 股东户数
+      :rtype: pandas.DataFrame
+- stock_zh_a_gdhs_detail_em(symbol: str = '000001') -> pandas.DataFrame  [\stock\holder\stock_gdhs.py]
+      东方财富网-数据中心-特色数据-股东户数详情
+      https://data.eastmoney.com/gdhs/detail/000002.html
+      :param symbol: 股票代码
+      :type symbol: str
+      :return: 股东户数
+      :rtype: pandas.DataFrame
+
+====  g_northbound hsgt
+- stock_hsgt_fund_flow_summary_em() -> pandas.DataFrame  [\stock\flow\stock_hsgt_em.py]
+      东方财富网-数据中心-资金流向-沪深港通资金流向
+      https://data.eastmoney.com/hsgt/index.html#lssj
+      :return: 沪深港通资金流向
+      :rtype: pandas.DataFrame
+- stock_hsgt_fund_min_em(symbol: str = '北向资金') -> pandas.DataFrame  [\stock\flow\stock_hsgt_min_em.py]
+      东方财富-数据中心-沪深港通-市场概括-分时数据
+      https://data.eastmoney.com/hsgt/hsgtDetail/scgk.html
+      :param symbol: 北向资金；choice of {"北向资金", "南向资金"}
+      :type symbol: str
+      :return: 沪深港通持股-分时数据
+      :rtype: pandas.DataFrame
+- stock_hsgt_hist_em(symbol: str = '北向资金') -> pandas.DataFrame  [\stock\flow\stock_hsgt_em.py]
+      东方财富网-数据中心-资金流向-沪深港通资金流向-沪深港通历史数据
+      https://data.eastmoney.com/hsgt/index.html
+      :param symbol: choice of {"北向资金", "沪股通", "深股通", "南向资金", "港股通沪", "港股通深"}
+      :type symbol: str
+      :return: 沪深港通历史数据
+      :rtype: pandas.DataFrame
+- stock_hsgt_individual_detail_em(symbol: str = '002008', start_date: str = '20220130', end_date: str = '20220330') -> pandas.DataFrame  [\stock\flow\stock_hsgt_em.py]
+      东方财富-数据中心-沪深港通-沪深港通持股-具体股票详情
+      https://data.eastmoney.com/hsgtcg/StockHdStatistics/002008.html
+      :param symbol: 股票代码
+      :type symbol: str
+      :param start_date: 开始时间
+      :type start_date: str
+      :param end_date: 结束时间
+      :type end_date: str
+- stock_hsgt_individual_em(symbol: str = '002008') -> pandas.DataFrame  [\stock\flow\stock_hsgt_em.py]
+      东方财富-数据中心-沪深港通-沪深港通持股-具体股票
+      https://data.eastmoney.com/hsgt/StockHdDetail/002008.html
+      :param symbol: 股票代码
+      :type symbol: str
+      :return: 具体股票-沪深港通持股
+      :rtype: pandas.DataFrame
+- stock_hsgt_institution_statistics_em(market: str = '北向持股', start_date: str = '20220601', end_date: str = '20220609')  [\stock\flow\stock_hsgt_em.py]
+      东方财富网-数据中心-沪深港通-沪深港通持股-每日机构统计
+      https://data.eastmoney.com/hsgtcg/InstitutionStatistics.aspx
+      :param market: choice of {"北向持股", "南向持股", "沪股通持股", "深股通持股"}
+      :type market: str
+      :param start_date: 指定数据获取开始的时间，e.g., "20200713"
+      :type start_date: str
+      :param end_date: 指定数据获取结束的时间，e.g., "20200715"
+      :type end_date:str
+- stock_hsgt_sh_hk_spot_em() -> pandas.DataFrame  [\stock\quote\stock_hsgt_spot_em.py]
+      东方财富网-行情中心-沪深港通-港股通（沪>港）-股票
+      https://quote.eastmoney.com/center/gridlist.html#hk_sh_stocks
+      :return: 东方财富网-行情中心-沪深港通-港股通（沪>港）-股票
+      :rtype: pandas.DataFrame
+- stock_hsgt_stock_statistics_em(symbol: str = '南向持股', start_date: str = '20240110', end_date: str = '20240110')  [\stock\flow\stock_hsgt_em.py]
+      东方财富网-数据中心-沪深港通-沪深港通持股-每日个股统计
+      https://data.eastmoney.com/hsgtcg/StockStatistics.aspx
+      market=001，沪股通持股
+      market=003，深股通持股
+      :param symbol: choice of {"北向持股", "南向持股"}
+      :type symbol: str
+      :param start_date: 指定数据获取开始的时间，e.g., "20200713"
+      :type start_date: str
+
+====  h_repurchase_pledge_survey repurchase|gpzy|pledge|jgdy|_hg_
+- stock_gpzy_distribute_statistics_bank_em() -> pandas.DataFrame  [\stock\holder\stock_gpzy_em.py]
+      东方财富网-数据中心-特色数据-股权质押-质押机构分布统计-银行
+      https://data.eastmoney.com/gpzy/distributeStatistics.aspx
+      :return: 质押机构分布统计-银行
+      :rtype: pandas.DataFrame
+- stock_gpzy_distribute_statistics_company_em() -> pandas.DataFrame  [\stock\holder\stock_gpzy_em.py]
+      东方财富网-数据中心-特色数据-股权质押-质押机构分布统计-证券公司
+      https://data.eastmoney.com/gpzy/distributeStatistics.aspx
+      :return: 质押机构分布统计-证券公司
+      :rtype: pandas.DataFrame
+- stock_gpzy_individual_pledge_ratio_detail_em(symbol: str) -> pandas.DataFrame  [\stock\holder\stock_gpzy_em.py]
+      东方财富网-数据中心-特色数据-股权质押-指定股票的重要股东股权质押明细
+      https://data.eastmoney.com/gpzy/pledgeDetail.aspx
+      :param symbol: 股票代码，如 603132
+      :type symbol: str
+      :return: 指定股票的重要股东股权质押明细
+      :rtype: pandas.DataFrame
+- stock_gpzy_industry_data_em() -> pandas.DataFrame  [\stock\holder\stock_gpzy_em.py]
+      东方财富网-数据中心-特色数据-股权质押-上市公司质押比例-行业数据
+      https://data.eastmoney.com/gpzy/industryData.aspx
+      :return: pandas.DataFrame
+- stock_gpzy_pledge_ratio_detail_em() -> pandas.DataFrame  [\stock\holder\stock_gpzy_em.py]
+      东方财富网-数据中心-特色数据-股权质押-重要股东股权质押明细
+      https://data.eastmoney.com/gpzy/pledgeDetail.aspx
+      :return: 重要股东股权质押明细
+      :rtype: pandas.DataFrame
+- stock_gpzy_pledge_ratio_em(date: str = '20240906') -> pandas.DataFrame  [\stock\holder\stock_gpzy_em.py]
+      东方财富网-数据中心-特色数据-股权质押-上市公司质押比例
+      https://data.eastmoney.com/gpzy/pledgeRatio.aspx
+      :param date: 指定交易日，访问 https://data.eastmoney.com/gpzy/pledgeRatio.aspx 查询
+      :type date: str
+      :return: 上市公司质押比例
+      :rtype: pandas.DataFrame
+- stock_gpzy_profile_em() -> pandas.DataFrame  [\stock\holder\stock_gpzy_em.py]
+      东方财富网-数据中心-特色数据-股权质押-股权质押市场概况
+      https://data.eastmoney.com/gpzy/marketProfile.aspx
+      :return: 股权质押市场概况
+      :rtype: pandas.DataFrame
+- stock_jgdy_detail_em(date: str = '20261112') -> pandas.DataFrame  [\stock\holder\stock_jgdy_em.py]
+      东方财富网-数据中心-特色数据-机构调研-机构调研详细
+      https://data.eastmoney.com/jgdy/xx.html
+      :param date: 开始时间
+      :type date: str
+      :return: 机构调研详细
+      :rtype: pandas.DataFrame
+- stock_jgdy_tj_em(date: str = '20261101') -> pandas.DataFrame  [\stock\holder\stock_jgdy_em.py]
+      东方财富网-数据中心-特色数据-机构调研-机构调研统计
+      https://data.eastmoney.com/jgdy/tj.html
+      :param date: 开始时间
+      :type date: str
+      :return: 机构调研统计
+      :rtype: pandas.DataFrame
+- stock_repurchase_em() -> pandas.DataFrame  [\stock\issue\stock_repurchase_em.py]
+      东方财富网-数据中心-股票回购-股票回购数据
+      https://data.eastmoney.com/gphg/hglist.html
+      :return: 股票回购数据
+      :rtype: pandas.DataFrame

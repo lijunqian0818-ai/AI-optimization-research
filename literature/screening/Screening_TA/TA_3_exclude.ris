@@ -1,0 +1,44 @@
+﻿TY  - JOUR
+TI  - The preferences in capital allocation among economics students in Poland. Investments on the Warsaw Stock Exchange and forex in comparison to a poker game
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C013; identifier doi:10.22367/jem.2019.38.04] 问卷研究：经济系学生的股票/外汇投资与扑克对比
+PY  - 2019
+DO  - 10.22367/jem.2019.38.04
+T2  - journal of Economics and Management
+AU  - Bożena Frączek
+AU  - Piotr Dąbrowski
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Exclude-E2
+ID  - R00013
+N1  - sr-screener TA [R00013]: EXCLUDE (E2 Meets none of the topic conditions T1-T7) - Student questionnaire on investment preferences, no decision method | A: exclude/E2 | B: exclude/E2 | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Poker as a skill game: rational versus irrational behaviors
+AB  - [Search-agent note, not the paper's abstract; read level: metadata; source id C014; identifier doi:10.1088/1742-5468/2015/03/p03018] 扑克作为技巧游戏：理性与非理性行为的统计物理模型（arXiv:1409.6843）
+PY  - 2015
+DO  - 10.1088/1742-5468/2015/03/p03018
+T2  - Journal of Statistical Mechanics: Theory and Experiment
+AU  - Marco Alberto Javarone
+KW  - search direction 1
+DB  - candidates_for_screening
+LB  - TA-Exclude-E2
+ID  - R00014
+N1  - sr-screener TA [R00014]: EXCLUDE (E2 Meets none of the topic conditions T1-T7) - Statistical physics model of poker skill; no trading link | A: exclude/E4 | B: exclude/E2 | by A+B
+ER  - 
+
+TY  - JOUR
+TI  - Deep Q-Learning Market Makers in a Multi-Agent Simulated Stock Market
+AB  - [Search-agent note, not the paper's abstract; read level: abstract; source id C070; identifier arXiv:2112.04494] 多智能体模拟股市中的深度 Q 学习做市商
+PY  - 2021
+T2  - ICAIF 2021 workshop (per arXiv comment)
+AU  - Oscar Fernández Vicente
+AU  - Fernando Fernández Rebollo
+AU  - Francisco Javier García Polo
+KW  - search direction 4
+DB  - candidates_for_screening
+LB  - TA-Exclude-E5
+ID  - R00070
+N1  - sr-screener TA [R00070]: EXCLUDE (E5 High-frequency order-book / market-making engineering without an informed-trading model) - Market-maker DQN in simulated order book, no adverse selection | A: exclude/E5 | B: exclude/E5 | by A+B
+ER  - 
+

@@ -1,0 +1,218 @@
+{
+ "A5": {
+  "n_events_union": 570,
+  "n_with_em_record": 467,
+  "n_pure_cash": 395,
+  "n_with_bonus_or_transfer": 72,
+  "bs_preclose_vs_formula_ref_cent": {
+   "n": 467,
+   "match": 438,
+   "share": 0.9379
+  },
+  "baostock_factor": {
+   "events_with_factor_step": 508,
+   "vs_exchange_ref (prev_close/preclose), all events": {
+    "n": 508,
+    "match": 503,
+    "share": 0.9902
+   },
+   "vs_formula_incl_cash, pure-cash events": {
+    "n": 375,
+    "match": 366,
+    "share": 0.976
+   },
+   "equals_1 (no step), pure-cash events": {
+    "n": 375,
+    "match": 2,
+    "share": 0.0053
+   },
+   "vs_formula_incl_cash, share events": {
+    "n": 63,
+    "match": 61,
+    "share": 0.9683
+   },
+   "vs_formula_excl_cash, share events": {
+    "n": 63,
+    "match": 4,
+    "share": 0.0635
+   },
+   "pure-cash events without any factor step": 20
+  },
+  "sina_hfq_factor": {
+   "events_with_factor_step": 191,
+   "vs_exchange_ref (prev_close/preclose), all events": {
+    "n": 191,
+    "match": 185,
+    "share": 0.9686
+   },
+   "vs_formula_incl_cash, pure-cash events": {
+    "n": 152,
+    "match": 146,
+    "share": 0.9605
+   },
+   "equals_1 (no step), pure-cash events": {
+    "n": 152,
+    "match": 0,
+    "share": 0.0
+   },
+   "vs_formula_incl_cash, share events": {
+    "n": 12,
+    "match": 12,
+    "share": 1.0
+   },
+   "vs_formula_excl_cash, share events": {
+    "n": 12,
+    "match": 0,
+    "share": 0.0
+   },
+   "pure-cash events without any factor step": 243
+  },
+  "eastmoney_hfq_price": "not available"
+ },
+ "dividend_records": {
+  "price_implied_ex_dates (preclose != prev close)": 524,
+  "of which in Eastmoney fhps": 462,
+  "of which in BaoStock factor table": 511,
+  "price-implied, in neither record source": 2,
+  "Eastmoney events without price-implied ex-date": 5,
+  "SUB: Eastmoney events": 164,
+  "SUB: Sina events": 185,
+  "SUB: in both": 164,
+  "SUB: both, cash equal (1e-3 per 10 sh)": 163,
+  "SUB: both, shares equal": 164,
+  "SUB: both, record date equal": 164,
+  "delisted core names": 12,
+  "delisted with Eastmoney fhps table": 0,
+  "delisted with BaoStock factor rows": 12,
+  "delisted in SUB with Sina dividend table": {
+   "300104": true,
+   "600485": true,
+   "600005": true
+  },
+  "delisted: price-implied ex-dates": 48,
+  "delisted: price-implied ex-dates with BaoStock factor": 48,
+  "record date == trading day before ex-date (Eastmoney)": {
+   "n": 467,
+   "match": 467
+  },
+  "Eastmoney events with ex-date but no record date": 0
+ },
+ "bs_dividend_fields": [
+  "code",
+  "dividPreNoticeDate",
+  "dividAgmPumDate",
+  "dividPlanAnnounceDate",
+  "dividPlanDate",
+  "dividRegistDate",
+  "dividOperateDate",
+  "dividPayDate",
+  "dividStockMarketDate",
+  "dividCashPsBeforeTax",
+  "dividCashPsAfterTax",
+  "dividStocksPs",
+  "dividCashStock",
+  "dividReserveToStockPs"
+ ],
+ "bs_dividend_rows": 7,
+ "em_hfq_shape": {
+  "stocks": 0
+ },
+ "bs_hfq_consistency": [
+  {
+   "code": "600519",
+   "n": 4584,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 0.9762216404886562,
+   "max_rel": 0.7516892579779759,
+   "first_factor_date": "2008-06-16",
+   "n_factor_rows": 24
+  },
+  {
+   "code": "000651",
+   "n": 4584,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 0.9718586387434555,
+   "max_rel": 0.9187020886002524,
+   "first_factor_date": "2008-07-14",
+   "n_factor_rows": 26
+  },
+  {
+   "code": "600036",
+   "n": 4584,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 0.9696771378708552,
+   "max_rel": 0.5213430730444831,
+   "first_factor_date": "2008-07-28",
+   "n_factor_rows": 22
+  },
+  {
+   "code": "601318",
+   "n": 4584,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 0.9794938917975567,
+   "max_rel": 0.0049295788662965245,
+   "first_factor_date": "2008-05-23",
+   "n_factor_rows": 37
+  },
+  {
+   "code": "000002",
+   "n": 4584,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 0.9762216404886562,
+   "max_rel": 0.980357799958885,
+   "first_factor_date": "2008-06-16",
+   "n_factor_rows": 21
+  },
+  {
+   "code": "300750",
+   "n": 2045,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 1.0,
+   "max_rel": 3.3306690738754696e-16,
+   "first_factor_date": "2018-06-11",
+   "n_factor_rows": 12
+  },
+  {
+   "code": "688111",
+   "n": 1695,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 1.0,
+   "max_rel": 2.220446049250313e-16,
+   "first_factor_date": "2019-11-18",
+   "n_factor_rows": 8
+  },
+  {
+   "code": "000792",
+   "n": 4584,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 0.9472076788830716,
+   "max_rel": 0.7376057416062045,
+   "first_factor_date": "2008-12-26",
+   "n_factor_rows": 9
+  },
+  {
+   "code": "300104",
+   "n": 2415,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 1.0,
+   "max_rel": 2.220446049250313e-16,
+   "first_factor_date": "2010-08-12",
+   "n_factor_rows": 9
+  },
+  {
+   "code": "600485",
+   "n": 3262,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 0.43807480073574495,
+   "max_rel": 0.5038759689922482,
+   "first_factor_date": "2015-07-17",
+   "n_factor_rows": 3
+  },
+  {
+   "code": "600005",
+   "n": 2216,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 0.9485559566787004,
+   "max_rel": 0.7128492220080397,
+   "first_factor_date": "2008-06-23",
+   "n_factor_rows": 9
+  },
+  {
+   "code": "001872",
+   "n": 4583,
+   "raw_x_factor_vs_hfq_rel_lt_1e-4": 1.0,
+   "max_rel": 2.220446049250313e-16,
+   "first_factor_date": "2018-12-26",
+   "n_factor_rows": 11
+  }
+ ]
+}

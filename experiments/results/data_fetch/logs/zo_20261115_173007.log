@@ -1,0 +1,5 @@
+2026-11-15 17:30:07 [run] id=zo_20261115_173007 stage=zo sources=['lhb_detail', 'dzjy_mrmx'] limit=2 codes_file=- period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\zo_20261115_173007.log
+2026-11-15 17:30:07 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=15, progress_units=20, progress_seconds=300.0, resume=False, retry_empty=False, run_id='zo_20261115_173007')
+2026-11-15 17:30:07 [start] zo: units total=4 already done (verified)=0 to fetch=4
+2026-11-15 17:30:45 [final] zo: done=4/4 (this run 4: ok=4 empty=0 failed=0; resumed-skip=0) success=100.0% mean=9.3s/unit ETA=0.0min requests this run: baostock=0 http=9 pauses=0
+2026-11-15 17:30:45 [exit] code=0

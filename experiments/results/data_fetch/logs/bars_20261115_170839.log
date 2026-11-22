@@ -1,0 +1,24 @@
+2026-11-15 17:08:39 [run] id=bars_20261115_170839 stage=bars sources=['bs_daily'] limit=20 codes_file=experiments/results/data_fetch/trial_codes.txt period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\bars_20261115_170839.log
+2026-11-15 17:08:39 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=7, progress_units=5, progress_seconds=300.0, resume=True, retry_empty=False, run_id='bars_20261115_170839')
+2026-11-15 17:08:39 [start] bars: units total=20 already done (verified)=0 to fetch=20
+2026-11-15 17:08:40 [baostock] login ok (login #1)
+2026-11-15 17:08:41 [error] bars/bs_daily/sz.trial attempt 0: ConnectionError: baostock query_history_k_data_plus error 10004006: 股票代码应为9位，请检查。格式示例：sh.600000。
+2026-11-15 17:08:48 [baostock] login ok (login #2)
+2026-11-15 17:08:48 [error] bars/bs_daily/sz.trial attempt 1: ConnectionError: baostock query_history_k_data_plus error 10004006: 股票代码应为9位，请检查。格式示例：sh.600000。
+2026-11-15 17:09:09 [baostock] login ok (login #3)
+2026-11-15 17:09:09 [error] bars/bs_daily/sz.trial attempt 2: ConnectionError: baostock query_history_k_data_plus error 10004006: 股票代码应为9位，请检查。格式示例：sh.600000。
+2026-11-15 17:10:12 [baostock] login ok (login #4)
+2026-11-15 17:10:13 [error] bars/bs_daily/sz.trial attempt 3: ConnectionError: baostock query_history_k_data_plus error 10004006: 股票代码应为9位，请检查。格式示例：sh.600000。
+2026-11-15 17:10:13 [failed] bars/bs_daily/sz.trial after 4 attempt(s); consecutive failures=1
+2026-11-15 17:10:13 [baostock] login ok (login #5)
+2026-11-15 17:10:14 [error] bars/bs_daily/sz.list attempt 0: ConnectionError: baostock query_history_k_data_plus error 10004006: 股票代码应为9位，请检查。格式示例：sh.600000。
+2026-11-15 17:10:20 [baostock] login ok (login #6)
+2026-11-15 17:10:21 [error] bars/bs_daily/sz.list attempt 1: ConnectionError: baostock query_history_k_data_plus error 10004006: 股票代码应为9位，请检查。格式示例：sh.600000。
+2026-11-15 17:10:44 [baostock] login ok (login #7)
+2026-11-15 17:10:49 [error] bars/bs_daily/sz.list attempt 2: ConnectionError: baostock query_history_k_data_plus error 10004006: 股票代码应为9位，请检查。格式示例：sh.600000。
+2026-11-15 17:11:52 [baostock] login ok (login #8)
+2026-11-15 17:11:54 [error] bars/bs_daily/sz.list attempt 3: ConnectionError: baostock query_history_k_data_plus error 10004006: 股票代码应为9位，请检查。格式示例：sh.600000。
+2026-11-15 17:11:54 [failed] bars/bs_daily/sz.list after 4 attempt(s); consecutive failures=2
+2026-11-15 17:11:54 [final] bars: done=2/20 (this run 2: ok=0 empty=0 failed=2; resumed-skip=0) success=0.0% mean=97.4s/unit ETA=29.2min requests this run: baostock=8 http=0 pauses=0
+2026-11-15 17:11:54 [stop] --max-requests 7 reached
+2026-11-15 17:11:54 [exit] code=3

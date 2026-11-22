@@ -1,0 +1,11 @@
+2026-11-15 22:30:41 [run] id=factors_events_20261115_223041 stage=factors_events sources=['em_fhps'] limit=0 codes_file=experiments/data/universe_sample_v1_codes.txt period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\factors_events_20261115_223041.log
+2026-11-15 22:30:41 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=0, progress_units=20, progress_seconds=300.0, resume=True, retry_empty=False, run_id='factors_events_20261115_223041')
+2026-11-15 22:30:42 [start] factors_events: units total=1000 already done (verified)=3 to fetch=997
+2026-11-15 22:31:02 [empty] factors_events/em_fhps/sh.600086: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 22:31:04 [empty] factors_events/em_fhps/sh.600091: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 22:31:06 [empty] factors_events/em_fhps/sh.600102: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 22:31:28 [progress] factors_events: done=23/1000 (this run 20: ok=17 empty=3 failed=0; resumed-skip=3) success=100.0% mean=2.3s/unit ETA=37.8min requests this run: baostock=0 http=20 pauses=0
+2026-11-15 22:32:12 [empty] factors_events/em_fhps/sh.600220: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 22:32:14 [progress] factors_events: done=43/1000 (this run 40: ok=36 empty=4 failed=0; resumed-skip=3) success=100.0% mean=2.3s/unit ETA=37.0min requests this run: baostock=0 http=40 pauses=0
+2026-11-15 22:32:33 [empty] factors_events/em_fhps/sh.600277: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})
+2026-11-15 22:32:40 [empty] factors_events/em_fhps/sh.600290: no record returned (upstream empty-result answer: {"version":null,"result":null,"success":false,"message":"返回数据为空","code":9201})

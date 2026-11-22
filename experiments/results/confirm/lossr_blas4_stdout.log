@@ -1,0 +1,27 @@
+13:35:59 +      1s run 'smoke' started; data cut-off 2021-12-31; out C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\confirm\lossr_blas4; T = 2; seeds (0, 1, 2); gate window y2; criterion theta_sel
+13:35:59 +      1s === stage 1_list
+13:35:59 +      1s list: 100 names (frozen list), without bar file 0
+13:35:59 +      1s === stage 1_list done in 0.1 s
+13:35:59 +      1s === stage 2_market
+13:36:11 +     13s === stage 2_market done in 11.3 s
+13:36:11 +     13s === stage 3_panel
+13:36:11 +     13s [panel] provenance check: resume
+13:36:25 +     27s === stage 3_panel done in 14.3 s
+13:36:25 +     27s === stage 4_universe
+13:36:25 +     27s === stage 4_universe done in 0.2 s
+13:36:25 +     27s === stage 5_features
+13:36:33 +     35s === stage 5_features done in 8.0 s
+13:36:33 +     35s === stage 6_standard_orders
+13:36:47 +     49s === stage 6_standard_orders done in 14.1 s
+13:36:47 +     49s === stage 7_base
+13:37:23 +     86s [base lgbm] config 1/2 validation criteria computed (49.5 s fit time)
+13:37:23 +     86s [base lgbm] config 2/2 validation criteria computed (18.43 s fit time)
+13:40:16 +    258s [base lgbm] configuration 0, seed 0: deployment fits done
+13:40:16 +    258s [base lgbm] configuration 0, seed 1: deployment fits done
+13:40:16 +    258s [base lgbm] configuration 0, seed 2: deployment fits done
+13:40:24 +    266s === stage 7_base done in 216.5 s
+13:40:24 +    266s === stage 8_gates
+13:40:44 +    286s [gates lgbm] LOSS-LR(-Z): tuned over 2 configurations
+13:40:44 +    286s === stage 8_gates done in 20.5 s
+13:40:46 +    288s decisions dumped: nominations, submissions, decision_days, base_ic, dump_meta
+13:40:46 +    288s run finished: ok

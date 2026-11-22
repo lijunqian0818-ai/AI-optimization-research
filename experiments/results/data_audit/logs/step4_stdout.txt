@@ -1,0 +1,61 @@
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz002450 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600074 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600656 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600680 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600766 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600614 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600677 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600462 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh603133 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600832 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600146 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600804 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600607 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600003 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600701 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sh600781 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz300064 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz002433 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz000594 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz002435 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz000616 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz002477 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz000861 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz002502 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz000018 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz000602 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz300186 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz002013 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz002499 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Lib\site-packages\akshare\stock\quote\stock_zh_a_sina.py:223: UserWarning: 新浪财经没有 sz002359 的股本数据（通常是已退市的股票），outstanding_share 与 turnover 为空
+  warnings.warn(
+step4 calls used 390

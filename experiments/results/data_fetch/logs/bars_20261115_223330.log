@@ -1,0 +1,18 @@
+2026-11-15 22:33:30 [run] id=bars_20261115_223330 stage=bars sources=['bs_daily'] limit=0 codes_file=experiments/data/universe_pilot_v1_codes.txt period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\bars_20261115_223330.log
+2026-11-15 22:33:30 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=0, progress_units=20, progress_seconds=300.0, resume=True, retry_empty=False, run_id='bars_20261115_223330')
+2026-11-15 22:33:31 [start] bars: units total=1000 already done (verified)=889 to fetch=111
+2026-11-15 22:33:31 [baostock] login ok (login #1)
+2026-11-15 22:38:34 [progress] bars: done=902/1000 (this run 13: ok=13 empty=0 failed=0; resumed-skip=889) success=100.0% mean=23.4s/unit ETA=38.2min requests this run: baostock=13 http=0 pauses=0
+2026-11-15 22:43:37 [progress] bars: done=914/1000 (this run 25: ok=25 empty=0 failed=0; resumed-skip=889) success=100.0% mean=24.3s/unit ETA=34.8min requests this run: baostock=25 http=0 pauses=0
+2026-11-15 22:50:09 [progress] bars: done=929/1000 (this run 40: ok=40 empty=0 failed=0; resumed-skip=889) success=100.0% mean=25.0s/unit ETA=29.5min requests this run: baostock=40 http=0 pauses=0
+2026-11-15 22:55:45 [progress] bars: done=936/1000 (this run 47: ok=47 empty=0 failed=0; resumed-skip=889) success=100.0% mean=28.4s/unit ETA=30.3min requests this run: baostock=47 http=0 pauses=0
+2026-11-15 22:58:35 [baostock] login ok (login #2)
+2026-11-15 23:01:28 [progress] bars: done=946/1000 (this run 57: ok=57 empty=0 failed=0; resumed-skip=889) success=100.0% mean=29.4s/unit ETA=26.5min requests this run: baostock=57 http=0 pauses=0
+2026-11-15 23:06:36 [progress] bars: done=953/1000 (this run 64: ok=64 empty=0 failed=0; resumed-skip=889) success=100.0% mean=31.0s/unit ETA=24.3min requests this run: baostock=64 http=0 pauses=0
+2026-11-15 23:11:49 [progress] bars: done=963/1000 (this run 74: ok=74 empty=0 failed=0; resumed-skip=889) success=100.0% mean=31.1s/unit ETA=19.2min requests this run: baostock=74 http=0 pauses=0
+2026-11-15 23:17:09 [progress] bars: done=970/1000 (this run 81: ok=81 empty=0 failed=0; resumed-skip=889) success=100.0% mean=32.3s/unit ETA=16.2min requests this run: baostock=81 http=0 pauses=0
+2026-11-15 23:22:13 [progress] bars: done=978/1000 (this run 89: ok=89 empty=0 failed=0; resumed-skip=889) success=100.0% mean=32.8s/unit ETA=12.0min requests this run: baostock=89 http=0 pauses=0
+2026-11-15 23:23:44 [baostock] login ok (login #3)
+2026-11-15 23:25:57 [progress] bars: done=998/1000 (this run 109: ok=109 empty=0 failed=0; resumed-skip=889) success=100.0% mean=28.9s/unit ETA=1.0min requests this run: baostock=109 http=0 pauses=0
+2026-11-15 23:26:08 [final] bars: done=1000/1000 (this run 111: ok=111 empty=0 failed=0; resumed-skip=889) success=100.0% mean=28.4s/unit ETA=0.0min requests this run: baostock=111 http=0 pauses=0
+2026-11-15 23:26:09 [exit] code=0

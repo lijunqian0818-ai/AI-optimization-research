@@ -1,0 +1,74 @@
+2026-11-15 17:37:18 [run] id=bars_20261115_173718 stage=bars sources=['bs_daily'] limit=0 codes_file=- period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\bars_20261115_173718.log
+2026-11-15 17:37:18 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=0, progress_units=20, progress_seconds=300.0, resume=True, retry_empty=False, run_id='bars_20261115_173718')
+2026-11-15 17:37:18 [start] bars: units total=5478 already done (verified)=20 to fetch=5458
+2026-11-15 17:37:19 [baostock] login ok (login #1)
+2026-11-15 17:39:15 [progress] bars: done=40/5478 (this run 20: ok=20 empty=0 failed=0; resumed-skip=20) success=100.0% mean=5.8s/unit ETA=8.8h requests this run: baostock=20 http=0 pauses=0
+2026-11-15 17:42:23 [progress] bars: done=60/5478 (this run 40: ok=40 empty=0 failed=0; resumed-skip=20) success=100.0% mean=7.6s/unit ETA=11.5h requests this run: baostock=40 http=0 pauses=0
+2026-11-15 17:44:51 [progress] bars: done=80/5478 (this run 60: ok=60 empty=0 failed=0; resumed-skip=20) success=100.0% mean=7.5s/unit ETA=11.3h requests this run: baostock=60 http=0 pauses=0
+2026-11-15 17:48:17 [progress] bars: done=100/5478 (this run 80: ok=80 empty=0 failed=0; resumed-skip=20) success=100.0% mean=8.2s/unit ETA=12.3h requests this run: baostock=80 http=0 pauses=0
+2026-11-15 17:51:50 [progress] bars: done=120/5478 (this run 100: ok=100 empty=0 failed=0; resumed-skip=20) success=100.0% mean=8.7s/unit ETA=13.0h requests this run: baostock=100 http=0 pauses=0
+2026-11-15 17:53:20 [progress] bars: done=140/5478 (this run 120: ok=120 empty=0 failed=0; resumed-skip=20) success=100.0% mean=8.0s/unit ETA=11.9h requests this run: baostock=120 http=0 pauses=0
+2026-11-15 17:55:00 [progress] bars: done=160/5478 (this run 140: ok=140 empty=0 failed=0; resumed-skip=20) success=100.0% mean=7.6s/unit ETA=11.2h requests this run: baostock=140 http=0 pauses=0
+2026-11-15 17:56:49 [progress] bars: done=180/5478 (this run 160: ok=160 empty=0 failed=0; resumed-skip=20) success=100.0% mean=7.3s/unit ETA=10.8h requests this run: baostock=160 http=0 pauses=0
+2026-11-15 17:59:21 [progress] bars: done=200/5478 (this run 180: ok=180 empty=0 failed=0; resumed-skip=20) success=100.0% mean=7.4s/unit ETA=10.8h requests this run: baostock=180 http=0 pauses=0
+2026-11-15 18:02:03 [progress] bars: done=220/5478 (this run 200: ok=200 empty=0 failed=0; resumed-skip=20) success=100.0% mean=7.4s/unit ETA=10.8h requests this run: baostock=200 http=0 pauses=0
+2026-11-15 18:02:41 [baostock] login ok (login #2)
+2026-11-15 18:06:41 [progress] bars: done=240/5478 (this run 220: ok=220 empty=0 failed=0; resumed-skip=20) success=100.0% mean=8.0s/unit ETA=11.7h requests this run: baostock=220 http=0 pauses=0
+2026-11-15 18:10:21 [progress] bars: done=260/5478 (this run 240: ok=240 empty=0 failed=0; resumed-skip=20) success=100.0% mean=8.3s/unit ETA=12.0h requests this run: baostock=240 http=0 pauses=0
+2026-11-15 18:13:17 [progress] bars: done=280/5478 (this run 260: ok=260 empty=0 failed=0; resumed-skip=20) success=100.0% mean=8.3s/unit ETA=12.0h requests this run: baostock=260 http=0 pauses=0
+2026-11-15 18:17:43 [progress] bars: done=300/5478 (this run 280: ok=280 empty=0 failed=0; resumed-skip=20) success=100.0% mean=8.7s/unit ETA=12.5h requests this run: baostock=280 http=0 pauses=0
+2026-11-15 18:22:46 [progress] bars: done=320/5478 (this run 300: ok=300 empty=0 failed=0; resumed-skip=20) success=100.0% mean=9.1s/unit ETA=13.0h requests this run: baostock=300 http=0 pauses=0
+2026-11-15 18:28:06 [progress] bars: done=340/5478 (this run 320: ok=320 empty=0 failed=0; resumed-skip=20) success=100.0% mean=9.5s/unit ETA=13.6h requests this run: baostock=320 http=0 pauses=0
+2026-11-15 18:28:07 [baostock] login ok (login #3)
+2026-11-15 18:33:09 [progress] bars: done=355/5478 (this run 335: ok=335 empty=0 failed=0; resumed-skip=20) success=100.0% mean=10.0s/unit ETA=14.2h requests this run: baostock=335 http=0 pauses=0
+2026-11-15 18:38:00 [progress] bars: done=375/5478 (this run 355: ok=355 empty=0 failed=0; resumed-skip=20) success=100.0% mean=10.3s/unit ETA=14.5h requests this run: baostock=355 http=0 pauses=0
+2026-11-15 18:41:16 [progress] bars: done=395/5478 (this run 375: ok=375 empty=0 failed=0; resumed-skip=20) success=100.0% mean=10.2s/unit ETA=14.4h requests this run: baostock=375 http=0 pauses=0
+2026-11-15 18:45:03 [progress] bars: done=415/5478 (this run 395: ok=395 empty=0 failed=0; resumed-skip=20) success=100.0% mean=10.3s/unit ETA=14.5h requests this run: baostock=395 http=0 pauses=0
+2026-11-15 18:50:15 [progress] bars: done=433/5478 (this run 413: ok=413 empty=0 failed=0; resumed-skip=20) success=100.0% mean=10.6s/unit ETA=14.9h requests this run: baostock=413 http=0 pauses=0
+2026-11-15 18:53:13 [baostock] login ok (login #4)
+2026-11-15 18:55:42 [progress] bars: done=446/5478 (this run 426: ok=426 empty=0 failed=0; resumed-skip=20) success=100.0% mean=11.0s/unit ETA=15.4h requests this run: baostock=426 http=0 pauses=0
+2026-11-15 18:59:37 [progress] bars: done=466/5478 (this run 446: ok=446 empty=0 failed=0; resumed-skip=20) success=100.0% mean=11.1s/unit ETA=15.4h requests this run: baostock=446 http=0 pauses=0
+2026-11-15 19:04:42 [progress] bars: done=477/5478 (this run 457: ok=457 empty=0 failed=0; resumed-skip=20) success=100.0% mean=11.5s/unit ETA=15.9h requests this run: baostock=457 http=0 pauses=0
+2026-11-15 19:09:55 [progress] bars: done=490/5478 (this run 470: ok=470 empty=0 failed=0; resumed-skip=20) success=100.0% mean=11.8s/unit ETA=16.4h requests this run: baostock=470 http=0 pauses=0
+2026-11-15 19:14:08 [progress] bars: done=510/5478 (this run 490: ok=490 empty=0 failed=0; resumed-skip=20) success=100.0% mean=11.9s/unit ETA=16.4h requests this run: baostock=490 http=0 pauses=0
+2026-11-15 19:17:03 [progress] bars: done=530/5478 (this run 510: ok=510 empty=0 failed=0; resumed-skip=20) success=100.0% mean=11.7s/unit ETA=16.1h requests this run: baostock=510 http=0 pauses=0
+2026-11-15 19:18:18 [baostock] login ok (login #5)
+2026-11-15 19:19:11 [progress] bars: done=550/5478 (this run 530: ok=530 empty=0 failed=0; resumed-skip=20) success=100.0% mean=11.5s/unit ETA=15.8h requests this run: baostock=530 http=0 pauses=0
+2026-11-15 19:24:04 [progress] bars: done=570/5478 (this run 550: ok=550 empty=0 failed=0; resumed-skip=20) success=100.0% mean=11.6s/unit ETA=15.9h requests this run: baostock=550 http=0 pauses=0
+2026-11-15 19:29:17 [progress] bars: done=586/5478 (this run 566: ok=566 empty=0 failed=0; resumed-skip=20) success=100.0% mean=11.9s/unit ETA=16.1h requests this run: baostock=566 http=0 pauses=0
+2026-11-15 19:34:34 [progress] bars: done=598/5478 (this run 578: ok=578 empty=0 failed=0; resumed-skip=20) success=100.0% mean=12.2s/unit ETA=16.5h requests this run: baostock=578 http=0 pauses=0
+2026-11-15 19:39:35 [progress] bars: done=610/5478 (this run 590: ok=590 empty=0 failed=0; resumed-skip=20) success=100.0% mean=12.4s/unit ETA=16.8h requests this run: baostock=590 http=0 pauses=0
+2026-11-15 20:00:44 [progress] bars: done=614/5478 (this run 594: ok=594 empty=0 failed=0; resumed-skip=20) success=100.0% mean=14.5s/unit ETA=19.6h requests this run: baostock=594 http=0 pauses=0
+2026-11-15 20:00:46 [baostock] login ok (login #6)
+2026-11-15 20:05:59 [progress] bars: done=630/5478 (this run 610: ok=610 empty=0 failed=0; resumed-skip=20) success=100.0% mean=14.6s/unit ETA=19.7h requests this run: baostock=610 http=0 pauses=0
+2026-11-15 20:11:04 [progress] bars: done=643/5478 (this run 623: ok=623 empty=0 failed=0; resumed-skip=20) success=100.0% mean=14.8s/unit ETA=19.9h requests this run: baostock=623 http=0 pauses=0
+2026-11-15 20:16:10 [progress] bars: done=657/5478 (this run 637: ok=637 empty=0 failed=0; resumed-skip=20) success=100.0% mean=15.0s/unit ETA=20.0h requests this run: baostock=637 http=0 pauses=0
+2026-11-15 20:21:24 [progress] bars: done=668/5478 (this run 648: ok=648 empty=0 failed=0; resumed-skip=20) success=100.0% mean=15.2s/unit ETA=20.3h requests this run: baostock=648 http=0 pauses=0
+2026-11-15 20:26:04 [baostock] login ok (login #7)
+2026-11-15 20:26:45 [progress] bars: done=679/5478 (this run 659: ok=659 empty=0 failed=0; resumed-skip=20) success=100.0% mean=15.4s/unit ETA=20.6h requests this run: baostock=659 http=0 pauses=0
+2026-11-15 20:33:27 [progress] bars: done=687/5478 (this run 667: ok=667 empty=0 failed=0; resumed-skip=20) success=100.0% mean=15.8s/unit ETA=21.1h requests this run: baostock=667 http=0 pauses=0
+2026-11-15 20:38:32 [progress] bars: done=696/5478 (this run 676: ok=676 empty=0 failed=0; resumed-skip=20) success=100.0% mean=16.1s/unit ETA=21.4h requests this run: baostock=676 http=0 pauses=0
+2026-11-15 20:45:58 [progress] bars: done=701/5478 (this run 681: ok=681 empty=0 failed=0; resumed-skip=20) success=100.0% mean=16.6s/unit ETA=22.1h requests this run: baostock=681 http=0 pauses=0
+2026-11-15 20:51:25 [progress] bars: done=710/5478 (this run 690: ok=690 empty=0 failed=0; resumed-skip=20) success=100.0% mean=16.9s/unit ETA=22.4h requests this run: baostock=690 http=0 pauses=0
+2026-11-15 20:51:26 [baostock] login ok (login #8)
+2026-11-15 20:56:28 [progress] bars: done=719/5478 (this run 699: ok=699 empty=0 failed=0; resumed-skip=20) success=100.0% mean=17.1s/unit ETA=22.6h requests this run: baostock=699 http=0 pauses=0
+2026-11-15 21:02:06 [progress] bars: done=729/5478 (this run 709: ok=709 empty=0 failed=0; resumed-skip=20) success=100.0% mean=17.3s/unit ETA=22.9h requests this run: baostock=709 http=0 pauses=0
+2026-11-15 21:08:06 [progress] bars: done=738/5478 (this run 718: ok=718 empty=0 failed=0; resumed-skip=20) success=100.0% mean=17.6s/unit ETA=23.2h requests this run: baostock=718 http=0 pauses=0
+2026-11-15 21:13:28 [progress] bars: done=747/5478 (this run 727: ok=727 empty=0 failed=0; resumed-skip=20) success=100.0% mean=17.8s/unit ETA=23.4h requests this run: baostock=727 http=0 pauses=0
+2026-11-15 21:17:56 [baostock] login ok (login #9)
+2026-11-15 21:18:31 [progress] bars: done=753/5478 (this run 733: ok=733 empty=0 failed=0; resumed-skip=20) success=100.0% mean=18.1s/unit ETA=23.8h requests this run: baostock=733 http=0 pauses=0
+2026-11-15 21:24:13 [progress] bars: done=762/5478 (this run 742: ok=742 empty=0 failed=0; resumed-skip=20) success=100.0% mean=18.3s/unit ETA=24.0h requests this run: baostock=742 http=0 pauses=0
+2026-11-15 21:30:01 [progress] bars: done=768/5478 (this run 748: ok=748 empty=0 failed=0; resumed-skip=20) success=100.0% mean=18.7s/unit ETA=24.4h requests this run: baostock=748 http=0 pauses=0
+2026-11-15 21:35:19 [progress] bars: done=777/5478 (this run 757: ok=757 empty=0 failed=0; resumed-skip=20) success=100.0% mean=18.9s/unit ETA=24.6h requests this run: baostock=757 http=0 pauses=0
+2026-11-15 21:40:48 [progress] bars: done=786/5478 (this run 766: ok=766 empty=0 failed=0; resumed-skip=20) success=100.0% mean=19.1s/unit ETA=24.9h requests this run: baostock=766 http=0 pauses=0
+2026-11-15 21:43:31 [baostock] login ok (login #10)
+2026-11-15 21:46:05 [progress] bars: done=794/5478 (this run 774: ok=774 empty=0 failed=0; resumed-skip=20) success=100.0% mean=19.3s/unit ETA=25.1h requests this run: baostock=774 http=0 pauses=0
+2026-11-15 21:51:12 [progress] bars: done=807/5478 (this run 787: ok=787 empty=0 failed=0; resumed-skip=20) success=100.0% mean=19.4s/unit ETA=25.1h requests this run: baostock=787 http=0 pauses=0
+2026-11-15 21:56:13 [progress] bars: done=826/5478 (this run 806: ok=806 empty=0 failed=0; resumed-skip=20) success=100.0% mean=19.3s/unit ETA=24.9h requests this run: baostock=806 http=0 pauses=0
+2026-11-15 22:01:19 [progress] bars: done=835/5478 (this run 815: ok=815 empty=0 failed=0; resumed-skip=20) success=100.0% mean=19.4s/unit ETA=25.1h requests this run: baostock=815 http=0 pauses=0
+2026-11-15 22:06:57 [progress] bars: done=844/5478 (this run 824: ok=824 empty=0 failed=0; resumed-skip=20) success=100.0% mean=19.6s/unit ETA=25.3h requests this run: baostock=824 http=0 pauses=0
+2026-11-15 22:08:55 [baostock] login ok (login #11)
+2026-11-15 22:12:37 [progress] bars: done=853/5478 (this run 833: ok=833 empty=0 failed=0; resumed-skip=20) success=100.0% mean=19.8s/unit ETA=25.5h requests this run: baostock=833 http=0 pauses=0
+2026-11-15 22:18:07 [progress] bars: done=864/5478 (this run 844: ok=844 empty=0 failed=0; resumed-skip=20) success=100.0% mean=20.0s/unit ETA=25.6h requests this run: baostock=844 http=0 pauses=0
+2026-11-15 22:24:04 [progress] bars: done=873/5478 (this run 853: ok=853 empty=0 failed=0; resumed-skip=20) success=100.0% mean=20.2s/unit ETA=25.8h requests this run: baostock=853 http=0 pauses=0
+2026-11-15 22:29:37 [progress] bars: done=884/5478 (this run 864: ok=864 empty=0 failed=0; resumed-skip=20) success=100.0% mean=20.3s/unit ETA=25.9h requests this run: baostock=864 http=0 pauses=0

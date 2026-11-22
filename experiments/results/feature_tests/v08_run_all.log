@@ -1,0 +1,161 @@
+unit tests: run=147 failures=0 errors=0 skipped=0
+synthetic look-ahead: 330 checks on 30 stock-days, 330 bit-identical; non-NaN columns compared per row: 184-369 of 370
+[sz.300104] rows=2415 build=0.8s lookahead 30 checks (30 equal) in 17s
+[sh.600485] rows=3262 build=1.1s lookahead 30 checks (30 equal) in 19s
+[sz.002450] rows=2642 build=0.9s lookahead 30 checks (30 equal) in 20s
+[sh.600005] rows=2216 build=0.9s lookahead 30 checks (30 equal) in 23s
+[sh.688111] rows=517 build=0.2s lookahead 30 checks (30 equal) in 5s
+[sh.688981] rows=357 build=0.1s lookahead 24 checks (24 equal) in 3s
+[sh.689009] rows=288 build=0.1s lookahead 30 checks (30 equal) in 4s
+[sz.300750] rows=867 build=0.5s lookahead 30 checks (30 equal) in 16s
+[sz.300059] rows=2867 build=3.5s lookahead 30 checks (30 equal) in 55s
+[sz.301001] rows=147 build=0.1s lookahead 18 checks (18 equal) in 4s
+[sz.302132] rows=2757 build=2.9s lookahead 30 checks (30 equal) in 52s
+[sz.000792] rows=3406 build=2.7s lookahead 30 checks (30 equal) in 69s
+[sh.600053] rows=3406 build=3.4s lookahead 30 checks (30 equal) in 50s
+[sh.600519] rows=3406 build=3.5s lookahead 30 checks (30 equal) in 62s
+[sz.000002] rows=3406 build=4.3s lookahead 30 checks (30 equal) in 59s
+[sh.600036] rows=3406 build=3.2s lookahead 30 checks (30 equal) in 68s
+[sh.601318] rows=3406 build=3.4s lookahead 30 checks (30 equal) in 88s
+[sz.001872] rows=3406 build=4.7s lookahead 30 checks (30 equal) in 72s
+[sz.002594] rows=2556 build=3.9s lookahead 30 checks (30 equal) in 63s
+[sh.600000] rows=3406 build=5.0s lookahead 30 checks (30 equal) in 78s
+{
+ "lookahead": {
+  "n_checks": 582,
+  "n_equal": 582,
+  "n_stocks": 20,
+  "n_stock_days": 97,
+  "min_nonnan_cols_compared": 75,
+  "by_check": {
+   "drop/availability": {
+    "n": 97,
+    "equal": 97
+   },
+   "inject/availability": {
+    "n": 97,
+    "equal": 97
+   },
+   "nan/availability": {
+    "n": 97,
+    "equal": 97
+   },
+   "noise/availability": {
+    "n": 97,
+    "equal": 97
+   },
+   "shuffle/availability": {
+    "n": 97,
+    "equal": 97
+   },
+   "truncate": {
+    "n": 97,
+    "equal": 97
+   }
+  },
+  "failures": []
+ },
+ "lookahead_event_days_by_class": {
+  "lhb": 19,
+  "blk": 19,
+  "ins": 19
+ },
+ "bounds": {
+  "n_feature_stock_checks": 3500,
+  "total_violations": 0,
+  "violating": {}
+ },
+ "n_inf_total": 0,
+ "build_seconds_total": 45.44,
+ "rows_total": 48139,
+ "nan_share_from_2010_by_group": {
+  "B0": {
+   "median": 0.09780572961224537,
+   "max": 0.32030798399963006
+  },
+  "DIAG": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "R_H-hist": {
+   "median": 0.06677611043029896,
+   "max": 0.13216490554694907
+  },
+  "R_H-sum": {
+   "median": 0.016416564544844966,
+   "max": 0.08189784734907166
+  },
+  "R_O": {
+   "median": 0.0014798030012254618,
+   "max": 0.1566278989109575
+  },
+  "Z_H": {
+   "median": 0.1065689380101274,
+   "max": 0.4050498277416819
+  },
+  "Z_O": {
+   "median": 0.0,
+   "max": 0.00046243843788295686
+  }
+ },
+ "nan_share_from_2010_prev_day_traded_by_group": {
+  "B0": {
+   "median": 0.005733360513709102,
+   "max": 0.2509428192844766
+  },
+  "DIAG": {
+   "median": 0.0,
+   "max": 0.0
+  },
+  "R_H-hist": {
+   "median": 0.07127204158597493,
+   "max": 0.10378656609927632
+  },
+  "R_H-sum": {
+   "median": 0.0178880848027724,
+   "max": 0.07127204158597493
+  },
+  "R_O": {
+   "median": 0.001528896136989094,
+   "max": 0.16733768219345632
+  },
+  "Z_H": {
+   "median": 0.07392212822342269,
+   "max": 0.43099582101722556
+  },
+  "Z_O": {
+   "median": 0.0,
+   "max": 0.0005096320456630313
+  }
+ },
+ "warmup_first_valid_row_minus_declared": {
+  "min": 0.0,
+  "n_earlier_than_declared": 0
+ },
+ "panel_trial": {
+  "n_names_requested": 20,
+  "n_names_ok": 20,
+  "n_names_error": 0,
+  "n_names_no_bar_file": 0,
+  "errors": [],
+  "rows_total": 48139,
+  "n_columns": 370,
+  "n_inf_total": 0,
+  "n_features_never_computed": 0,
+  "features_never_computed": [],
+  "names_with_missing_rows": 2,
+  "missing_rows_total": 2,
+  "names_with_rows_filled_from_xsrc": 0,
+  "rows_filled_from_xsrc_total": 0,
+  "stock_days_V_gt_1": 0,
+  "lhb_unclassified_rows": 68,
+  "lhb_stock_days_multi_only": 72,
+  "build_seconds_total": 70.15,
+  "warmup_n_feature_name_pairs_earlier_than_declared": 73,
+  "stored_files_bit_identical_to_direct_build": 20,
+  "bytes_on_disk": 108788053
+ }
+}
+{"adv_vs_engine": {"engine_flag_adv_counts_nontraded_days_as_zero": false, "engine_adv_window": 20, "stock_days_compared": 48139, "stock_days_both_without_adv": 0, "stock_days_only_one_has_adv": 0, "max_abs_relative_diff": 0.0, "within_1e-9": true}}
+ALL PASSED
+run_all exit=0

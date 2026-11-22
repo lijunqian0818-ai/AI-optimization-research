@@ -1,0 +1,1092 @@
+\documentclass[11pt]{article}
+% Generic article skeleton. The target venue is undecided; replace with the venue's official
+% template once it is chosen. This draft has NOT been compiled locally (no LaTeX on the machine).
+%
+% DRAFT STATE (2026-11-15): only the result-independent parts are written.
+% No empirical result exists yet; every place that will carry a result is marked \todo{...}.
+% Every claim in this file is listed in paper/claims.md with its source.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+
+% --- theorem-like environments -------------------------------------------------------------
+% IMPORTANT (project rule 3): no result may be called "Theorem" until both external reviewers
+% have reviewed the final text with no open issue. Everything is a Proposition / Lemma / Remark.
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{conjecture}[proposition]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+% --- macros ----------------------------------------------------------------------------------
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\rentry}{r_T^{\mathrm{entry}}}
+\newcommand{\thetasel}{\theta_{\mathrm{sel}}}
+\newcommand{\ZH}{Z_H}
+\newcommand{\ZO}{Z_O}
+\newcommand{\Fsyn}{\cF_t^{\mathrm{syn}}}
+
+\title{What Does a Trade/Abstain Gate Add?\\
+A Pre-Specified Evaluation of Selective Trading on A-Share Daily Data\\
+under Retrospective Synthetic Fills}
+\author{Anonymous}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A trade/abstain gate placed on top of a predictive signal trades less often, and trading less
+often by itself changes market exposure and trading costs. An improvement observed after adding a
+gate is therefore hard to read as evidence that the gate selects better trades. We study this
+question in a long-only, daily, T+1 backtest of Chinese A-shares with transaction costs, in which
+all fills are \emph{retrospective synthetic fills} constructed from daily bars. We pre-specify
+(i) an estimand for within-batch selection value, the net return per order of a gate in excess of
+the exact expectation of a stratified random choice from the same nominated list at matched order
+opportunities; (ii) tests of whether two feature groups change that quantity when added to the
+gate, namely holder-state variables and observable actions of other identifiable participants;
+and (iii) a descriptive, additive split of the profit-and-loss difference between a gated and an
+ungated strategy into exposure-schedule, composition and cost terms. As a methodological
+complement we define the entry-time loss probability of executed entries, adapt time-uniform
+confidence sequences to labels that mature with a delay under arbitrary same-day dependence, and
+give a worst-case lower bound on the width of any honest interval. The full inference pipeline is
+checked by complete-null simulations before the hold-out period is opened.
+\todo{results: outcomes of the pre-specified tests C1--C4, descriptive attribution, monitoring
+interval on the synthetic fill stream.}
+\end{abstract}
+
+% =============================================================================================
+\section{Introduction}
+\label{sec:intro}
+% =============================================================================================
+
+\paragraph{Motivation.}
+A poker player who judges that the hand is weak relative to what the table has revealed folds
+and waits. Computer programs that play imperfect-information poker at a superhuman level have
+made this style of reasoning prominent \citep{brown2018libratus,brown2019pluribus}. The trading
+analogue is immediate: a trader who holds a predictive signal but doubts it on a given day can
+decline to act. We use the analogy only as motivation. This paper does not model a game, does not
+solve for an equilibrium, and makes no game-theoretic claim.
+
+\paragraph{What existing work already does.}
+Declining to act is an established design in quantitative trading. Selective classifiers have
+been turned into trading strategies that stay flat when the classifier abstains
+\citep{pidan2011selective,chalkidis2021trading,nabar2023conservative}; a strategy-level gate has
+been placed on a cross-sectional equity ranker \citep{sanderink2026alpha}; and practitioners use
+a secondary model that filters the signals of a primary strategy under the name meta-labeling
+\citep{joubert2022metalabeling,meyer2023metalabeling}. The statistical tools for controlling the
+error rate on the accepted cases are also available, both for independent or exchangeable data
+\citep{geifman2017selective,bates2021rcps,angelopoulos2022crc} and in sequential, anytime-valid
+form \citep{howard2021timeuniform,ramdas2023savi,xu2024arcps,khosravi2026csa}. We therefore do
+not present the gate architecture, or the idea of abstaining, as a contribution.
+
+\paragraph{Why an improvement from abstention is hard to read.}
+A gated strategy differs from its ungated base in three ways at once: how much capital is in the
+market on each day, which names are held with that capital, and how much is paid in trading
+costs. The difference in additive profit and loss between the two strategies splits exactly into
+these three parts (Lemma~\ref{lem:attribution}), and only the second part can reflect better
+selection; even that part also contains sector, size and liquidity tilts and the changed mix of
+overlapping entry cohorts. A comparison of a gated strategy with its ungated base consequently
+does not say whether the gate chose better trades. A second difficulty is statistical: trade
+outcomes on the same day are dependent, positions overlap, and outcomes are known only after the
+holding period, so the number of trades overstates the amount of evidence
+(Proposition~\ref{prop:lower}).
+
+\paragraph{Questions.}
+We work in a long-only, daily, T+1 backtest of A-shares with transaction costs, built from free
+daily-bar data without opening-auction timestamps. All fills are retrospective synthetic fills
+(Section~\ref{sec:ashare}), and every empirical statement in this paper is restricted to that
+setting.
+\begin{itemize}
+\item \textbf{RQ-1 (pre-specified).} Does a trade/abstain gate placed on a multi-factor base
+signal add economically non-negligible selection value \emph{within the same nominated batch},
+relative to a stratified random choice at matched order opportunities?
+\item \textbf{RQ-2 (pre-specified).} Does adding a feature group to the gate change that
+within-batch selection value? We examine two groups separately: holder-state variables $\ZH$
+(capital-gains overhang, chip-distribution statistics, abnormal turnover) and observable actions
+of other identifiable participants $\ZO$ (Dragon--Tiger list disclosures, block trades, executed
+insider and large-shareholder share changes; free data only). Neither group is treated as a
+measure of anyone's private information.
+\item \textbf{RQ-3 (descriptive).} How does the additive profit-and-loss difference between a
+gated strategy and the ungated base portfolio split into exposure-schedule, composition and cost
+terms, and what are terminal wealth and drawdown at the level of the deployed strategy? No
+confirmatory claim is attached to this question.
+\end{itemize}
+
+\paragraph{Contributions.}
+The contributions below do not depend on how the tests turn out.
+\begin{enumerate}
+\item \textbf{An evaluation protocol.} A point-in-time, reproducible protocol for evaluating
+selective trading on A-share daily data: an explicit definition of synthetic fills and of the
+information set they imply, benchmark-price accounting with ledger reconciliation, a random
+comparator at matched order opportunities whose expectation is computed exactly, a frozen annual
+deployment algorithm, and a complete-null simulation of the whole pipeline that must pass before
+the hold-out period is opened (Section~\ref{sec:design}).
+\item \textbf{An estimand for selected-trade risk, with a monitoring interval and a lower bound.}
+We define the entry-time conditional loss probability of executed entries, state what it is not,
+and give a time-uniform interval for it when labels mature with a bounded delay and same-day
+outcomes are arbitrarily dependent, together with a worst-case lower bound on the width of any
+honest interval (Section~\ref{sec:theory}). The interval is an adaptation of existing tools,
+time-uniform confidence sequences \citep{howard2021timeuniform} combined with sub-sampling for
+delayed feedback; we do not claim a new type of guarantee. Proofs are in the appendix.
+\item \textbf{A complete report of pre-specified tests.} The tests of the two feature groups
+$\ZH$ and $\ZO$ in the gate, and of the within-batch selection value of two reference gates, are
+specified before any outcome is seen and are reported in full, including negative and
+inconclusive outcomes (Section~\ref{sec:design}).
+\end{enumerate}
+\todo{results: one paragraph summarising the outcomes of C1--C4 and the descriptive findings,
+using only the wording fixed in Section~\ref{sec:wording}.}
+
+% =============================================================================================
+\section{Related Work}
+\label{sec:related}
+% =============================================================================================
+
+\paragraph{Abstention as a trading decision.}
+The idea that a predictive model may decline to act, and that declining corresponds to holding
+no position, has a history in finance. \citet{pidan2011selective} study selective prediction of
+financial trends with hidden Markov models. \citet{chalkidis2021trading} turn binary and ternary
+selective classifiers into trading strategies that stay flat whenever the classifier abstains;
+they construct the selection function with the procedure of \citet{geifman2017selective},
+evaluate on 30-minute bars of five CME metal futures with an anchored walk-forward scheme, and
+report that abstention raises accuracy on the traded subset in every configuration while most
+configurations are unprofitable at 0.3 ticks of slippage. Their guarantee is the one stated for
+independent and identically distributed samples; temporal dependence is not discussed.
+\citet{nabar2023conservative} train a cascade of models and take no trade when the cascade
+refuses to predict, with experiments on the Indian equity market.
+
+More recent work places the abstention decision on top of an existing signal.
+\citet{sanderink2026alpha} separates two decisions for a gradient-boosted cross-sectional equity
+ranker: a strategy-level gate, built mainly from the trailing realised rank information
+coefficient of matured predictions, that decides whether to trade at all on a given date, and a
+position-level cap that reduces exposure for the names with the highest predicted rank
+displacement. The study uses a universe of up to 100 U.S.\ stocks, reports that the gate predicts
+model failure better than volatility-based regime proxies, and provides no formal guarantee.
+For the CSI~300 index, \citet{fang2026volatility} report that naive predictive strategies fail
+after costs whereas designs with low-volatility gating and threshold calibration improve
+defensive performance. Selective prediction has also been applied to cryptocurrency event
+contracts \citep{hao2026coverage}, to limit-order-book forecasting \citep{manoharan2026uqlob} and
+to retrieval-augmented financial forecasting \citep{torres2026finabstain}. At the strategy
+level, \citet{guo2026whennot} studies when a machine-learning strategy for factor and sector
+rotation should refuse to trade; according to its abstract, the signal is deployed only when its
+validation improvement over a fallback benchmark exceeds a calibrated threshold, and the paper
+gives a return and mean--variance utility decomposition and a validation-error deployment bound.
+\todo{read the full text of Guo (2026); its decomposition may overlap with
+Lemma~\ref{lem:attribution}, in which case the lemma must be presented as following that paper.}
+
+In quantitative-finance practice the same architecture is known as meta-labeling
+\citep{joubert2022metalabeling}, and the calibration of the secondary model for position sizing
+has been studied by \citet{meyer2023metalabeling}.
+\todo{verify the chapter of L\'opez de Prado (2018) that introduces meta-labeling before citing
+it as the origin of the term.}
+The gates in this paper are, structurally, instances of this line of work. What we add is not a
+gate but a way of asking what a gate contributes.
+
+\paragraph{Selective classification and risk control.}
+The reject option goes back to \citet{chow1970optimum}, and a learning theory for rejection is
+developed by \citet{cortes2016learning}. \citet{geifman2017selective} select a confidence
+threshold with a guarantee on the risk of the accepted set, and \citet{geifman2019selectivenet}
+integrate the reject option into the network. \citet{ziyin2019deepgamblers} recast selective
+classification as a betting problem in which abstaining corresponds to reserving part of the
+stake; their theorems characterise the optimal betting solution. \citet{zhang2023abstain},
+motivated by finance, posit a data-generating process in which part of the samples is
+uninformative and analyse the recovery of the informative region under independent and
+identically distributed sampling, without a trading evaluation.
+
+A parallel literature calibrates a threshold after training so that a user-specified risk is
+controlled: risk-controlling prediction sets \citep{bates2021rcps}, Learn-then-Test
+\citep{angelopoulos2021ltt} and conformal risk control \citep{angelopoulos2022crc}, with
+extensions that control risk on the selected cases \citep{xu2025scrc,bai2026score}. For data that
+are not exchangeable, adaptive conformal inference addresses distribution shift
+\citep{gibbs2021aci}; time-uniform confidence sequences \citep{howard2021timeuniform} and
+anytime-valid inference \citep{ramdas2023savi} give guarantees that hold at arbitrary stopping
+times; and anytime-valid constructions have been used for risk control on sequentially collected
+data \citep{xu2024arcps,hultberg2026anytime} and for selective acting in the deployment of
+language models \citep{khosravi2026csa}. Online conformal risk control with delayed feedback is
+studied by \citet{wang2026caocrc}, online selective classification with limited feedback by
+\citet{gangrade2021online}, and selective classification under distribution shift by
+\citet{liang2024selective}.
+
+These results supply the machinery used in Section~\ref{sec:theory}. Our monitoring proposition
+should be read as an adaptation of time-uniform confidence sequences to a stream of trades with
+delayed labels, overlapping positions and dependent same-day outcomes, not as a new type of
+guarantee.
+\todo{compare with recent work on anytime-valid inference under delayed outcomes and staggered
+entry (not yet read, not yet in the bibliography) before the positioning of
+Proposition~\ref{prop:monitor} is final.}
+
+\paragraph{Guarantees at the portfolio level.}
+A neighbouring literature attaches guarantees to portfolio-level decisions.
+\citet{mohammadpourazari2026safe} let a controller choose among a prediction-independent safe
+portfolio and two signal-following overlays, with an evidence gate that moves unsupported
+directional mass to the safe portfolio; their statements are a tracking-regret bound under
+delayed feedback and a pathwise safety bound, not a statement about the loss probability of
+selected trades.
+\citet{zarei2026conformal} gate the proposals of a reinforcement-learning allocator with a
+conformally calibrated risk budget. Conformal methods have further been used for portfolio
+selection \citep{kato2024conformal}, stock selection \citep{kaya2025conformal}, position sizing
+\citep{ryan2026conformalkelly} and the calibration of portfolio tail-risk measures
+\citep{schmitt2026taming,chen2026cvar}; anytime-valid tests have been used to decide when to
+promote a trading rule \citep{benhamou2026promote}. The quantity we monitor is different from
+all of these: the entry-time loss probability of executed entries. We make no statement about
+drawdown or portfolio tail risk, which depend on position sizing and on the dependence between
+overlapping positions.
+
+\paragraph{Information asymmetry and the decision not to trade.}
+Why a less informed party might hesitate to trade is a classical topic in economic theory and
+market microstructure, including trade under common knowledge \citep{milgrom1982information},
+trading against informed counterparties \citep{kyle1985continuous,glosten1985bid}, the pricing of
+new issues \citep{rock1986new} and portfolio choice and non-participation under ambiguity
+\citep{dow1992uncertainty,easley2009ambiguity}. Whether information risk is priced is itself an
+empirical question \citep{easley2002information}. \citet{choi2013informed}, using account-level
+holdings data from the Shanghai Stock Exchange, report that stocks whose prior institutional
+ownership is more volatile, their predictor of institutional information advantage, earn a
+higher four-factor alpha, while the raw return difference is not statistically significant and
+the effect is absent among small stocks. This is a caution for any abstention rule: declining
+trades in which one suspects a disadvantage may forgo return, which is why our design reports
+the return of the orders a gate did not submit (Section~\ref{sec:design}).
+\citet{chakraborty2008bluffing} show, in a two-period model with an insider, rational followers
+and competitive market makers, that the insider bluffs in every equilibrium; the result concerns
+the informed party and does not characterise when the less informed should refrain from trading.
+Disclosure of insider trades as a strategic signal is analysed by \citet{huddart2001disclosure}.
+Related work on execution and market making treats position building as a game of incomplete
+information \citep{chriss2025position} and studies the detection of toxic order flow by brokers
+\citep{cartea2026toxic,cartea2025simple}.
+
+\paragraph{The two feature groups.}
+The ``chip distribution'' displayed by Chinese retail trading software estimates the
+distribution of holders' purchase prices from the history of prices and turnover. Its academic
+counterpart is the capital-gains overhang, a reference price weighted by past turnover, which
+the literature associates with \citet{grinblatt2005prospect} and with the study of
+reference-dependent preferences and the risk--return trade-off by \citet{wang2017reference}.
+\todo{both papers are verified at the bibliographic level only; confirm the definition of
+capital-gains overhang from the full texts.}
+\citet{xu2025replication} replicates the latter study on Chinese data and examines the
+interaction between capital-gains overhang and risk proxies, and \citet{pan2025overreaction}
+examine capital gains and returns for A-shares. These variables describe the state of current
+holders; we call them holder-state variables. The second group consists of publicly disclosed
+actions of identifiable participants. Such disclosures have been studied in relation to prices
+and returns in the Chinese market: Dragon--Tiger list disclosures \citep{hong2025dragontiger},
+block trades \citep{fan2012block} and insider sales \citep{du2024fastsales}; for the U.S.\
+market, \citet{lakonishok2001insider} ask whether insider trades are informative. Any
+predictive content of these variables is thus not a finding of this paper. We examine only whether adding each group to a gate changes
+within-batch selection value, under controls for the price and volume history from which the
+variables are built and for the events that trigger disclosure. Machine-learning return
+prediction is studied for the Chinese stock market by \citet{leippold2022machine} and in
+empirical asset pricing more broadly by \citet{gu2020empirical}; market-specific trading rules have been incorporated into learned
+trading systems by \citet{zhang2022t1}, and the predictability of price-limit hits is studied by
+\citet{liang2024pricelimit}.
+\todo{Chinese-language literature (CNKI, broker research reports) has not been searched; no
+statement of the form ``no prior work evaluates these variables in an abstention layer'' is made
+until that search and a fact-check are complete.}
+
+% =============================================================================================
+\section{Problem Setup}
+\label{sec:setup}
+% =============================================================================================
+
+This section states the abstract setting on which the statements of Section~\ref{sec:theory}
+depend. It contains no market rule, execution model or data source. How A-share trading is mapped
+onto it is a separate set of modelling assumptions, summarised in Section~\ref{sec:ashare}.
+
+\subsection{Objects and information times}
+
+Time is indexed by integers $t=1,2,\dots$ (``days''). All random objects live on one probability
+space $(\Omega,\mathcal{A},\Prob)$. Each day has two information times. The pre-submission
+information $\cG_t$ is what is known when the orders of day $t$ are submitted, before their
+fills are known. The post-fill information $\cF_t$ contains $\cG_t$ together with the outcome of
+the day-$t$ fills, and $\cG_t\subseteq\cF_t\subseteq\cF_{t+1}$. Orders are chosen with $\cG_t$;
+which of them become executed entries is known with $\cF_t$.
+
+On day $t$ there is a finite random candidate set $C_t$. For $i\in C_t$, $O_{ti}\in\{0,1\}$
+indicates that an order is submitted and $A_{ti}\in\{0,1\}$ that candidate $i$ is an executed
+entry. The number of entries is $n_t=\sum_{i\in C_t}A_{ti}$ and $N_T=\sum_{t\le T}n_t$. Every
+executed entry carries a loss label $L_{ti}\in\{0,1\}$; the number of losing entries of day $t$
+is $X_t=\sum_{i\in C_t}A_{ti}L_{ti}$, and
+\[
+\mu_t=\E[X_t\mid\cF_t]
+\]
+is the entry-time conditional expected number of losses.
+
+\subsection{Assumptions}
+
+\paragraph{A1 (decision information).}
+$(\cF_t)_{t\ge1}$ is an increasing family of $\sigma$-fields. For every $t$, the set $C_t$, the
+indicators $A_{ti}$ and $n_t$ are $\cF_t$-measurable, and $n_t\le M$ for a known integer
+$M\ge1$. Any randomisation used is $\cF_t$-measurable.
+
+\paragraph{A1-G (pre-submission measurability).}
+There are $\sigma$-fields $\cG_t\subseteq\cF_t$ and $\cG_t$-measurable order indicators
+$O_{ti}$ with $\sum_iO_{ti}\le M$ such that the complete specification of every submitted order
+is $\cG_t$-measurable and $A_{ti}\le O_{ti}$. A1-G is used in no proof. It is required in order
+to read the results as statements about an implementable strategy: A1 alone would allow a rule
+that decides which orders ``participated'' after seeing their fills.
+
+\paragraph{A2 (fixed, frozen label).}
+(a) Every executed entry $(t,i)$ has a label $L_{ti}\in\{0,1\}$ defined on all of $\Omega$ by a
+convention (execution, valuation, exit and missing-data rules) fixed before any data are
+examined. (b) Wherever the convention refers to what data are available, it does so at a
+deterministic label-finalisation lag $d_{\mathrm{label}}\ge1$ that is part of the convention,
+and the value so obtained is final; in particular the label is not a function of the monitoring
+lag $d$ of A3 and is never revised. (c) Nothing is assumed about the joint law of the labels: no
+independence or conditional independence within a day, no stationarity, no mixing, and no
+restriction on how $\mu_t$ evolves.
+
+\paragraph{A3 (bounded revelation lag).}
+There is a known deterministic integer $d\ge1$, fixed before any data are examined, such that
+$X_t$ is $\cF_{t+d}$-measurable for all $t\ge1$.
+
+\paragraph{A4 (observable accounting).}
+At monitoring time $T$ the monitor knows, for every executed entry $(t,i)$ with $t\le T$,
+whether its label has been revealed, and the value of every revealed label, where ``revealed''
+means that the final value of the label itself is known. $K_T$ counts the revealed labels equal
+to $1$, and $P_T$ is $N_T$ minus the number of revealed labels. No condition is placed on the
+revelation mechanism; which labels are revealed early may depend on the labels.
+
+\paragraph{A5 (individual revelation by the lag; optional).}
+Every label of every entry of day $t$ is revealed at all monitoring times $T\ge t+d$. Then
+$P_T\le dM$. A3 does not imply A5.
+
+\medskip
+Each assumption has to be supported in an application by a data audit or a written convention.
+A3, in particular, is a substantive assumption about the data pipeline and does not follow from
+a holding horizon.
+
+\paragraph{Two lags.}
+The label-finalisation lag $d_{\mathrm{label}}$ belongs to the label; the monitoring lag $d$
+belongs to the monitoring procedure. Because the labels are frozen by A2(b), a larger
+pre-specified monitoring lag leaves $X_t$, $\mu_t$ and the target unchanged. The interval radius
+of Proposition~\ref{prop:monitor} is not monotone in $d$, so $d$ must be fixed before the data
+are seen; a lag chosen after looking at interval widths is not covered.
+
+\subsection{The target, and what it is not}
+\label{sec:target}
+
+The target is
+\[
+\rentry=\frac{\sum_{t\le T}\mu_t}{N_T},\qquad N_T>0,
+\]
+the average, over executed entries through $T$, of the loss probability that each day's batch
+had given $\cF_t$. It is a random and in general unobservable quantity. It is \emph{not}:
+\begin{enumerate}
+\item the realised loss fraction $R_T=\sum_{t\le T}X_t/N_T$;
+\item the expectation of $R_T$ given the information at time $T$, which would condition old
+entries on new information;
+\item a statement about the next entry or batch: $\mu_{T+1}$ can be anything given the past;
+\item a population parameter: the model contains no stationary ``true loss probability'';
+\item independent of the filtration: a different declared $(\cF_t)$ that satisfies A1--A3 gives
+a different, also validly monitored, target, so any statement about $\rentry$ must name $\cF_t$;
+\item a measure of economic performance: a low loss probability is compatible with rare large
+losses.
+\end{enumerate}
+Monitoring $\rentry$ is inference about the past entry stream. It is not control of future risk.
+
+\subsection{A-share instantiation: modelling assumptions}
+\label{sec:ashare}
+
+The mapping of A-share trading onto the abstract objects is a set of modelling assumptions and
+conventions. It is not part of any statement in Section~\ref{sec:theory}, and the conclusions of
+that section apply to an A-share trade stream only to the extent that these assumptions hold for
+it. The statements about exchange rules on which the mapping relies have not yet been checked
+against the official rule texts.
+\todo{replace this sentence by the outcome of the rule audit once the official texts have been
+checked.}
+The full specification is in Appendix~\ref{app:exp}; we summarise the parts needed to read the
+rest of the paper.
+
+\paragraph{Days, orders and entries.}
+A day is a market trading day. Orders are buy orders intended for the opening call auction of
+day $t$, at most one per name and at most $M$ per day, generated by code that reads only data
+dated up to day $t-1$ and the public pre-open information of day $t$; this is $\cG_t$.
+
+\paragraph{Retrospective synthetic fills.}
+Our data are daily bars. A daily bar is produced after the close and does not record whether the
+opening auction produced a match or what volume it matched. An entry indicator built from a
+daily bar is therefore not measurable with respect to the information available at the auction.
+We adopt the following rule and call its output by its name. A buy order for stock $i$ on day
+$t$ is recorded as a \emph{synthetic fill}, in full and at the daily open of day $t$, if (S1) the
+daily bar of day $t$ exists, has positive volume and is not flagged as a whole-day suspension;
+(S2) the daily open is not the upper price limit computed from the reference price; and (S3) the
+order size does not exceed a capacity cap computed from $\cG_t$. Otherwise the order is recorded
+as not filled and is cancelled. Of the day-$t$ bar the rule reads only the traded flag, the
+suspension flag and the open. The declared post-fill information is
+\[
+\Fsyn=\text{all data dated }\le t-1,\ \text{the pre-open public information of day }t,\
+\text{and the day-}t\text{ open, traded flag and suspension flag of all names.}
+\]
+This is an artificial information set: on a day on which a name had no auction match it contains
+facts that became known only later that day. A real order may not have filled where the rule
+records a fill, or may have filled at a different price, and the size of this discrepancy cannot
+be estimated from daily bars. Accordingly, every monitoring quantity in this paper refers to the
+synthetic fill stream with filtration $(\Fsyn)$, and no result is a statement about an
+executable strategy.
+
+\paragraph{Label and lags.}
+The primary label marks a net loss at the scheduled exit, the opening auction of day $t+H$, with
+$H\ge1$ under the T+1 rule. It is a valuation computed by a written decision tree that assigns a
+value to every entry, including entries affected by corporate events, suspensions or missing
+inputs; unsupported events and missing inputs are recorded as losses and counted. The label is
+computed once from the data snapshot of day $t+d_{\mathrm{label}}$ and never revised. Because
+the tree uses facts known only at the close of day $t+H$, we fix
+$d_{\mathrm{label}}=d=H+1$ before any data are examined. Whether every input is available by
+then is an availability assumption to be audited, not an established fact; with a single
+downloaded file it can hold only as a function of that file.
+
+\paragraph{Accounting.}
+Holdings, returns, cost bases and marks of all strategies use the same benchmark price at each
+instant, the daily open. Explicit charges and modelled execution shortfall enter only through
+the cost term, each exactly once (Lemma~\ref{lem:attribution}).
+
+% =============================================================================================
+\section{Monitoring, Limits of Evidence, and Attribution}
+\label{sec:theory}
+% =============================================================================================
+
+\paragraph{Review status and attribution.}
+The statements of this section have been examined in three rounds by two external model
+reviewers, which reported no error in the proofs or constants of
+Propositions~\ref{prop:monitor}--\ref{prop:lower} or in the identity of
+Lemma~\ref{lem:attribution}; the revisions made after the last round have not been re-reviewed.
+Pending that confirmation we label the results propositions.
+\todo{update after the confirmatory review; rename only if both reviewers report no open issue.}
+Proposition~\ref{prop:monitor} combines two existing ingredients, a stitched time-uniform
+boundary of the kind developed by \citet{howard2021timeuniform} and the reduction of delayed
+feedback to interleaved sub-sequences known from online learning with delays
+\todo{cite the delayed-feedback sub-sampling reduction (Weinberger--Ordentlich 2002; Joulani et
+al.\ 2013) once the entries are verified and added to the bibliography.}
+We do not claim it as a new type of result. Proofs are deferred to Appendix~\ref{app:proofs}.
+
+\subsection{A time-uniform interval under delayed labels}
+
+Fix $\delta\in(0,1)$ and a deterministic integer $d\ge1$ for which A3 holds; both are fixed
+before any data are examined. Let $c_0=\pi^2/6$ and, for integers $k\ge0$ and real $q\ge0$,
+\[
+L_k=\log\frac{2dc_0(k+1)^2}{\delta},\qquad
+g_k(q)=\tfrac12\sqrt{2^kL_k}\,\Bigl(1+\frac{q}{2^{k+1}}\Bigr).
+\]
+Days are partitioned into $d$ lanes by the residue of the day index modulo $d$. For lane
+$j\in\{0,\dots,d-1\}$ let
+\[
+Q_{j,T}=\sum_{\substack{t\le T\\ t\equiv j\ (\mathrm{mod}\ d)}}n_t^2 ,
+\]
+a non-negative integer. For integer arguments define $b(0)=b^*(0)=0$ and, for $q\ge1$,
+\[
+b(q)=\sqrt{2^{k(q)}L_{k(q)}},\quad k(q)=\lfloor\log_2q\rfloor,\qquad
+b^*(q)=\min_{k\ge0}g_k(q),
+\]
+and set $B_T=\sum_{j=0}^{d-1}b(Q_{j,T})$ and $B_T^*=\sum_{j=0}^{d-1}b^*(Q_{j,T})$.
+
+\begin{proposition}[Delayed monitoring under arbitrary within-day dependence]
+\label{prop:monitor}
+Assume A1--A3. There is an event $E_\delta$ with $\Prob(E_\delta)\ge1-\delta$ on which,
+simultaneously for all lanes $j$ and all $T\ge1$,
+\begin{equation}
+\Bigl|\sum_{\substack{t\le T\\ t\equiv j\ (\mathrm{mod}\ d)}}(\mu_t-X_t)\Bigr|
+\le b^*(Q_{j,T})\le b(Q_{j,T}).
+\label{eq:lane}
+\end{equation}
+Consequently, under A4 in addition (so that $K_T$ and $P_T$ are computable), on $E_\delta$ and
+simultaneously for all $T$ with $N_T>0$:
+\begin{enumerate}
+\item[(a)] $\displaystyle\max\Bigl\{0,\frac{K_T-B_T}{N_T}\Bigr\}\le\rentry\le
+\min\Bigl\{1,\frac{K_T+P_T+B_T}{N_T}\Bigr\}$;
+\item[(b)] $\displaystyle\max\Bigl\{0,\frac{K_T-B_T^*}{N_T}\Bigr\}\le\rentry\le
+\min\Bigl\{1,\frac{K_T+P_T+B_T^*}{N_T}\Bigr\}$, and $B_T^*\le B_T$;
+\item[(c)] $E_\delta=E_\delta^{\mathrm{up}}\cap E_\delta^{\mathrm{low}}$ with
+$\Prob(E_\delta^{\mathrm{up}})\ge1-\delta/2$ and $\Prob(E_\delta^{\mathrm{low}})\ge1-\delta/2$;
+the upper bounds in (a) and (b) hold on $E_\delta^{\mathrm{up}}$ and the lower bounds on
+$E_\delta^{\mathrm{low}}$.
+\end{enumerate}
+When $N_T=0$ the target is undefined and no claim is made. The interval is valid for any
+revelation pattern consistent with A3--A4, including revelation times that depend on the labels.
+\end{proposition}
+% STATUS: Theorem 1(a)(b)(c) of theory/theorems.md. `GPT 审过`（半独立）、`Gemini 审过`（Flash）.
+% 三轮均未被判错；第 3 轮后的修改未复审。审计认为基本是已知工具的推论，放附录；
+% 在日线合成成交下只对合成成交流成立。 Author's own label in theorems.md: `自查通过`.
+% (c): no separate numerical check of the one-sided levels.
+% NOT to be called a theorem until the confirmatory review reports no open issue.
+
+The cap $M$ of A1 does not enter the radii; it makes $X_t$ bounded, so that $\mu_t$ is an
+ordinary conditional expectation. The proposition is a statement for each pair $(\delta,d)$
+fixed in advance and does not cover a lag selected after looking at the data. It is a
+Hoeffding-type bound with a predictable range clock, $\sum n_t^2$, and dyadic stitching, applied
+on $d$ interleaved sub-sequences. It is not sharper than known confidence sequences and has no
+empirical-variance adaptation.
+
+The idea is the following. Within one lane, the outcome of every day is known before the next
+day of that lane is traded, so the difference between expected and realised loss counts behaves
+like a fair game inside the lane and cannot drift far; summing the $d$ lanes gives a band around
+the observed loss count. Entries whose label is not yet revealed are counted both ways, as no
+loss in the lower endpoint and as a loss in the upper endpoint.
+
+\begin{proposition}[Rate of the sampling-error term; total width]
+\label{prop:rate}
+Let $\ell_T=\log(2dc_0/\delta)+2\log\bigl(1+\log_2(MN_T)\bigr)$.
+\begin{enumerate}
+\item[(a)] Under A1--A3, for every $T$ with $N_T>0$, deterministically,
+\[
+B_T^*\le B_T\le\sqrt{d\,\ell_T\sum_{t\le T}n_t^2}\le\sqrt{dMN_T\,\ell_T}.
+\]
+Under A4 in addition, the total width of each interval in
+Proposition~\ref{prop:monitor}(a),(b) is at most
+$\min\bigl\{1,\ P_T/N_T+2\sqrt{dM\ell_T/N_T}\bigr\}$.
+\item[(b)] If A5 also holds, then $P_T\le dM$ and the total width is at most
+\[
+\min\Bigl\{1,\ \frac{dM}{N_T}+2\sqrt{\frac{dM\ell_T}{N_T}}\Bigr\}\le3\sqrt{\frac{dM\ell_T}{N_T}}.
+\]
+\end{enumerate}
+\end{proposition}
+% STATUS: Corollary 1.1 of theory/theorems.md. 同 Theorem 1：`GPT 审过`（半独立）、`Gemini 审过`（Flash）；
+% 第 3 轮后的修改未复审。非贡献。 Author's label: `自查通过`. Part (b): no dedicated numerical check.
+
+Under A1--A4 alone nothing is said about $P_T/N_T$, because A3 concerns the daily loss count and
+not the disclosure of individual labels. The total width is therefore not claimed to be of order
+$\sqrt{dM/N_T}$ without A5; it tends to zero only if both $dM\ell_T/N_T\to0$ and
+$P_T/N_T\to0$.
+
+\begin{proposition}[Realised loss fraction]
+\label{prop:realised}
+For all $T$ with $N_T>0$, under A4 alone and without any probabilistic assumption,
+\[
+\frac{K_T}{N_T}\le R_T\le\frac{K_T+P_T}{N_T}.
+\]
+Under A1--A3, on the event $E_\delta$ of Proposition~\ref{prop:monitor},
+$|\rentry-R_T|\le B_T^*/N_T$ for all such $T$.
+\end{proposition}
+% STATUS: Corollary 1.2 of theory/theorems.md. 同 Theorem 1：`GPT 审过`（半独立）、`Gemini 审过`（Flash）；
+% 第 3 轮后的修改未复审。非贡献。 Author's label: `自查通过`.
+
+All rates above use the common denominator $N_T$, the number of executed entries. The
+``matured-only'' rate $K_T/(N_T-P_T)$ has a different denominator and a composition selected by
+maturity; it is covered by no statement here and can be biased. For example, with two entries
+whose labels are $0$ and $1$, of which only the losing one is revealed, $R_T=1/2$ and the
+bracket is $[1/2,1]$, while the matured-only rate equals $1$.
+
+% ---------------------------------------------------------------------------------------------
+% DRAFT, NOT REVIEWED -- not part of the paper's statements.
+% Corollary 1.3 of theory/theorems.md (interval for a target label with unbounded resolution
+% time, e.g. executable liquidation, via certified bracket labels; assumptions A1, A2(a), CERT,
+% A3 for the two bracket labels with lag d_D, A4-D).
+% STATUS: `草稿`. 第 3 轮 Gemini 判正确、GPT 给出反例；已改用认证指示并新增假设 CERT，未复审。
+% If it survives review it may be stated as a Proposition; until then it may at most appear as a
+% Conjecture, and no empirical statement may rely on it unconditionally.
+% ---------------------------------------------------------------------------------------------
+An extension to labels whose resolution time has no deterministic bound, such as a label based
+on executable liquidation, is in draft and has not passed review; it is not stated here and
+Proposition~\ref{prop:monitor} is not applied to such labels.
+
+\subsection{How much evidence a trade stream can carry}
+
+The sampling-error term of Proposition~\ref{prop:rate} shrinks like $\sqrt{dM/N}$ rather than
+$\sqrt{1/N}$. The next statement shows that, in the worst case over environments satisfying the
+assumptions, this dependence cannot be improved.
+
+\paragraph{Block environment.}
+Let $d,M,B\ge1$ be integers, $T=Bd$ and $N=MBd$. Days $1,\dots,T$ are grouped into $B$ blocks of
+$d$ consecutive days, every day has exactly $M$ entries, and there are no entries after $T$. Let
+$Z_1,\dots,Z_B$ be independent Bernoulli($p$) variables; every label of every day in block $b$
+equals $Z_b$. For $t\le T$, $\cF_t$ is generated by the $Z$'s of the blocks before that of day
+$t$ and by an independent uniform variable $U$ available for randomisation. Call the law
+$\Prob_p$. Under $\Prob_p$, A1--A5 hold with lag $d$, $\mu_t=Mp$ for $t\le T$, and $\rentry=p$.
+A pair of measurable functions $\ell\le u$ of $(Z_1,\dots,Z_B,U)$, that is, of everything that
+is ever observable in this environment, is called a $(1-\delta)$-honest interval at time $T$
+over a family of laws if $\Prob(\ell\le\rentry\le u)\ge1-\delta$ for every law in the family.
+
+\begin{proposition}[Worst-case effective sample size]
+\label{prop:lower}
+Let $\delta\in(0,1/2)$ and $h=\frac{\sqrt3}{8}(1-2\delta)\sqrt{Md/N}$. If $(\ell,u)$ is
+$(1-\delta)$-honest at time $T$ over the two-point family
+$\{\Prob_{1/2-h},\Prob_{1/2+h}\}$, then for each $p\in\{1/2-h,\,1/2+h\}$,
+\[
+\Prob_p\Bigl(u-\ell\ge\tfrac{\sqrt3}{4}(1-2\delta)\sqrt{Md/N}\Bigr)\ge\frac{1-2\delta}{2},
+\qquad\text{hence}\qquad
+\E_p[u-\ell]\ge\tfrac{\sqrt3}{8}(1-2\delta)^2\sqrt{Md/N}.
+\]
+Moreover, in this environment
+$\operatorname{Var}\bigl(\sum_{t\le T}(X_t-\mu_t)\bigr)=p(1-p)\,MdN$, against $p(1-p)N$ for
+independent labels.
+\end{proposition}
+% STATUS: Proposition 2 of theory/theorems.md. `GPT 审过`（半独立）、`Gemini 审过`（Flash）.
+% 三轮均未被判错；**新颖性未验证**（须先读 Weinberger–Ordentlich 2002）. Author's label: `自查通过`.
+% Round-3 revisions not re-reviewed.
+
+Any procedure that is honest over all environments satisfying A1--A4 with parameters $(d,M)$ is
+honest over this two-point family, and the interval of Proposition~\ref{prop:monitor} at a fixed
+$T$ is one such procedure. Since A5 holds in the block environment,
+Proposition~\ref{prop:rate}(b) bounds the width of that interval by
+$3\sqrt{dM\ell_T/N}$. Over the class of environments satisfying A1--A5, the dependence of the
+width on $dM/N$ therefore cannot be improved in the worst case beyond the factor
+$\sqrt{\ell_T}$ and constants: in the block environment $N$ entries carry the information of
+$N/(Md)$ independent ones. The argument is a standard two-point comparison, and the construction
+with outcomes constant on blocks of length $d$ resembles lower-bound constructions for online
+learning with delayed feedback.
+\todo{verify novelty against Weinberger--Ordentlich 2002}
+We make no claim about whether this bound was previously known.
+
+The proposition has clear limits. It says nothing about the logarithmic factors or about
+$\delta\to0$. It is a worst case over the class and does not say that a given market resembles
+the block environment; on a restricted class, for example with bounded cross-sectional
+dependence, narrower honest intervals may exist, but that restriction would be an additional
+assumption that data on one path cannot certify. It is stated only for $N$ a multiple of $Md$,
+its constants are not optimised, and it concerns $\rentry$, not the realised fraction $R_T$,
+which is bracketed deterministically by Proposition~\ref{prop:realised}.
+
+\subsection{An additive attribution identity}
+
+Let periods be $t=1,\dots,T$. For $a\in\{G,B\}$ (gated, baseline) let $h_t^a\in\mathbb{R}^m$ be
+the vector of risky-asset holdings in currency units carried through period $t$,
+$x_t\in\mathbb{R}^m$ the vector of asset returns over period $t$ in excess of the common cash
+return, $C^a\in\mathbb{R}$ the total trading cost, and define the additive performance quantity
+\[
+\Pi^a=\sum_t(h_t^a)^\top x_t-C^a .
+\]
+Let $e_t^a\ge0$ and $w_t^a\in\mathbb{R}^m$ be any numbers and vectors with
+$h_t^a=e_t^aw_t^a$; for a long-only strategy, $e_t^a$ is the invested capital and $w_t^a$ the
+portfolio weights.
+
+\begin{lemma}[Additive attribution identity]
+\label{lem:attribution}
+With the above definitions,
+\begin{equation}
+\Pi^G-\Pi^B
+=\underbrace{\sum_t(e_t^G-e_t^B)(w_t^B)^\top x_t}_{\text{exposure-schedule term}}
++\underbrace{\sum_te_t^G(w_t^G-w_t^B)^\top x_t}_{\text{composition term}}
+-\underbrace{(C^G-C^B)}_{\text{cost term}} .
+\label{eq:attribution}
+\end{equation}
+Moreover, for the exposure-schedule reference $h_t^E=e_t^Gw_t^B$ with any assigned cost $C^E$
+and $\Pi^E=\sum_t(h_t^E)^\top x_t-C^E$, the gross difference
+$\sum_t(h_t^G-h_t^E)^\top x_t$ equals the composition term,
+$\Pi^G-\Pi^E$ equals the composition term minus $(C^G-C^E)$, and $\Pi^E-\Pi^B$ equals the
+exposure-schedule term minus $(C^E-C^B)$.
+\end{lemma}
+% STATUS: Lemma 3 of theory/theorems.md. `GPT 审过`（半独立）、`Gemini 审过`（Flash）.
+% 恒等式两方确认；记账解释经三轮修改，末轮未复审；不主张新颖性；与 Guo 2026 的分解是否重合未知。
+% Author's label: `自查通过` (algebra; numerically exact to rounding).
+
+The identity is pathwise algebra and needs no assumption. It is an accounting definition of the
+same kind as textbook performance attribution into allocation, selection and interaction,
+applied over time to exposure; we claim no novelty for it.
+\todo{cite a verified source for classical performance attribution (believed to be Brinson, Hood
+and Beebower 1986; not yet opened or in the bibliography).}
+Several qualifications govern its use.
+\begin{enumerate}
+\item \emph{Composition is not stock picking.} The composition term contains every difference
+between $w^G$ and $w^B$: sector, size and liquidity tilts and the mix of overlapping entry
+cohorts as well as selection. This is why the pre-specified tests of Section~\ref{sec:design}
+use a different, within-batch quantity.
+\item \emph{Conventions.} When $e_t^B=0$ the weights $w_t^B$ are not determined by $h_t^B$, and
+the split between the first two terms depends on a convention that must be fixed in advance. The
+decomposition is not unique: with the reference $e_t^Bw_t^G$ the two components change by the
+interaction term $\sum_t(e_t^G-e_t^B)(w_t^G-w_t^B)^\top x_t$, which \eqref{eq:attribution} books
+under composition.
+\item \emph{The reference need not be feasible.} $h^E$ may violate trading constraints. It is an
+attribution reference and is not an admissible comparator for the value of a deployed strategy.
+\item \emph{Costs.} The identity requires one return vector $x_t$ for all strategies. We
+therefore record all strategies at a common benchmark price at each instant and book explicit
+charges and execution shortfall in $C^a$, so that every economic cost is counted exactly once.
+\item \emph{Wealth.} $\Pi^a$ equals the change in wealth of strategy $a$ under sufficient
+accounting conditions (self-financing, total returns measured consistently with holdings, all
+costs counted once, zero cash return); otherwise it is reported as additive excess profit and
+loss as defined.
+\item \emph{Scope.} Sharpe ratio, maximum drawdown, expected shortfall and compounded return are
+not linear in the profit-and-loss path and do not inherit \eqref{eq:attribution}. The identity
+attributes realised numbers; it does not identify a causal effect of timing or selection.
+\end{enumerate}
+
+\subsection{Monitoring is not control}
+
+\begin{remark}[No guarantee of successful trading in every environment]
+\label{rem:nocontrol}
+Call an environment in which every candidate label equals $1$ almost surely the all-loss
+environment, and let $\alpha<1$ and $T\ge1$. In the all-loss environment, for every policy,
+$R_T=\rentry=1$ on $\{N_T>0\}$. Hence no policy can guarantee, in every environment satisfying
+A1--A4, a positive probability of trading with risk at most $\alpha$, in either sense
+$\rentry\le\alpha$ or $R_T\le\alpha$; and any policy that guarantees risk at most $\alpha$
+almost surely on $\{N_T>0\}$ in every such environment must abstain almost surely in the
+all-loss environment.
+\end{remark}
+% STATUS: Remark 4 of theory/theorems.md. `GPT 审过`（半独立）、`Gemini 审过`（Flash）.
+% 陈述在第 1 轮后改弱。第 3 轮后的修改未复审。 Author's label: `自查通过`. Elementary; no novelty claimed.
+
+The remark does not say that the only universally safe policy is never to trade, nor that
+entry-time information cannot be informative. Its content is that a guarantee of the form ``risk
+at most $\alpha$ together with a positive probability of trading'' requires restrictions on the
+environment or a feasibility assumption. For this reason the statements of this section concern
+monitoring of the past entry stream and never a promise about future losses.
+
+% =============================================================================================
+\section{Experimental Design}
+\label{sec:design}
+% =============================================================================================
+
+This section describes the design only. Nothing in it is a result. All parameter values quoted
+are those of the pre-specified plan.
+\todo{replace planned values by the frozen values and give the hash of the frozen conventions
+file.}
+All fills are retrospective synthetic fills under the rule of Section~\ref{sec:ashare}, and
+every table, figure and sentence that reports an outcome carries that qualifier.
+
+\subsection{Data, universe and timeline}
+
+The backtest uses free daily-bar data for A-shares.
+\todo{data source, access date, licence, and the outcome of the data audit (point-in-time
+constituents, delisted names, corporate actions, tradability flags).}
+The planned universe is the point-in-time union of the constituents of the CSI~300 and CSI~500
+indices. The planned development segment ends on 2021-12-31 and is used for tuning and for all
+design-stage calculations; the planned hold-out period, 2022-01 to 2026-06, is frozen and opened
+once.
+\todo{confirm universe and periods after the data audit.}
+Models, calibration maps and thresholds are refitted once a year by a frozen deployment
+algorithm that uses only earlier data, with a purge gap of $H+1$ trading days between training
+labels and deployment.
+
+\subsection{Base signal, order opportunities and the standard order}
+
+A multi-factor base predictor built from price and volume features ranks the candidate set each
+day, and its top $K$ names form the \emph{nominated list}. In all pre-specified tests the
+nominated list comes from the base predictor without either feature group, so that all gates
+choose from the same lists. A gate decides, from $\cG_t$, which nominated names to submit.
+
+For every nominated name $i$ on day $t$ let $\rho_{ti}$ be the net profit and loss, per unit of
+slot cash, of one \emph{standard order}: a pre-determined quantity from $\cG_t$, a synthetic
+fill under the rule of Section~\ref{sec:ashare}, a scheduled exit at the open of day $t+H$ with
+re-submission after exits recorded as not filled, benchmark-price accounting with the full cost
+model, and $\rho_{ti}=0$ if the order is recorded as not filled. $\rho_{ti}$ depends on the name
+and the day only, not on the gate.
+
+\subsection{Estimands}
+\label{sec:estimands}
+
+\paragraph{Within-batch selection value.}
+The nominated list of each day is divided into strata by liquidity and volatility terciles
+computed from data through day $t-1$. For gate $g$ let $\mathrm{Sub}_t^g$ be the names it
+submits, $S_t^g=|\mathrm{Sub}_t^g|$, $S_{t,s}^g$ its count in stratum $s$, and
+$\bar\rho_{t,s}$ the mean of $\rho$ over all nominated names of stratum $s$. Define
+\[
+u_t^g=\sum_{i\in\mathrm{Sub}_t^g}\rho_{ti}-\sum_sS_{t,s}^g\,\bar\rho_{t,s},
+\qquad
+\thetasel^g=\frac{\sum_tu_t^g}{\sum_tS_t^g}.
+\]
+The second sum in $u_t^g$ is the exact expectation of the first under a uniformly random choice
+of $S_{t,s}^g$ names from each stratum, so no Monte-Carlo comparator is needed. $\thetasel^g$ is
+the order-weighted mean net return of the gate's orders in excess of a stratified random choice
+from the same nominated list, at matched order opportunities: the same number of orders, the
+same cash per order and the same per-stratum counts on each day. It does not match the invested
+exposure of deployed strategies. By construction it gives no credit for avoiding whole days:
+$u_t^g=0$ on days on which the gate submits all or none of the list. Because cells from which no
+different choice of the same size was possible contribute zero, we report beside every
+$\thetasel^g$ the share of orders that come from cells with a real choice and the range that
+the statistic could attain given the gate's own per-cell counts.
+
+\paragraph{Feature-group increments.}
+For the holder-state group, $\psi_H=\thetasel^{\mathrm{LOSS}(+\ZH)}-\thetasel^{\mathrm{LOSS}(-Z)}$,
+and for the group of observable actions of other identifiable participants,
+$\psi_O=\thetasel^{\mathrm{LOSS}(+\ZO)}-\thetasel^{\mathrm{LOSS}(-Z)}$, where the gates are those
+of Table~\ref{tab:methods} and choose from the same nominated lists.
+
+\paragraph{Descriptive quantities.}
+The value of deployed strategies is described by the annualised arithmetic return, terminal
+wealth, drawdown, trade-level loss magnitude, turnover, and the return of orders that a gate did
+not submit. Comparisons of deployed strategies use feasible strategies only, with the same
+initial capital, execution rules, cost model and dates. The difference in additive return
+between a gated strategy and the ungated base is split by Lemma~\ref{lem:attribution} into
+exposure-schedule, composition and cost terms. The interval of Proposition~\ref{prop:monitor} is
+reported over time for the synthetic fill stream with filtration $(\Fsyn)$; it describes how
+much evidence the stream can carry and is never used to compare methods.
+
+\subsection{Gates, baselines and feature groups}
+
+\begin{table}[t]
+\centering
+\caption{Methods of the first round. ``Within-batch'' means that the method can choose a strict
+subset of the nominated list, so that $\thetasel$ is informative for it. All methods use the
+same information cut-offs, deployment algorithm, tuning budget and selection criterion.}
+\label{tab:methods}
+\small
+\begin{tabular}{@{}llp{0.52\linewidth}l@{}}
+\toprule
+Name & Type & Definition & Within-batch \\
+\midrule
+G0 & reference & submit all $K$ nominated orders & no \\
+SCORE & gate & submit the top $\lceil cK\rceil$ names by base score & yes \\
+CONF & gate & submit if the calibrated probability of a positive net return exceeds a global
+threshold & yes \\
+LOSS($-Z$) & gate & gradient-boosted classifier of the loss label on base and control features;
+submit if the predicted loss probability is below a threshold & yes \\
+LOSS($+\ZH$), LOSS($+\ZO$) & gate & the same class, grid and budget with one feature group
+added & yes \\
+LOSS-LR($-Z$) & gate & regularised logistic version of LOSS($-Z$) & yes \\
+NET-K, NET-U & gate & regression of the standard order's net return, on the nominated list
+(NET-K) or on the full candidate set (NET-U) & yes \\
+VOL, LIQ & filter & drop names with high volatility or low traded amount & yes \\
+TREND & filter & submit the full list or nothing according to a market-trend rule & no \\
+PERF & gate & submit the full list or nothing according to the matured rank information
+coefficient of the base score, after \citet{sanderink2026alpha} & no \\
+VT & scaling & volatility-targeted scaling of all orders, never above one & no \\
+E-const & scaling & constant scaling of G0 to a gate's mean invested fraction, in a feasible
+version (previous year) and an ex-post reference version & no \\
+E-sched & reference & exposure-schedule reference $h^E=e^Gw^B$ of
+Lemma~\ref{lem:attribution}; need not be feasible & --- \\
+RND & comparator & stratified random selection at matched order opportunities, simulated only
+for path-dependent descriptive metrics & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:methods} lists the methods. CONF and LOSS($-Z$) are in-house implementations in
+one pipeline; statements about them are not statements about existing abstention methods as a
+class. Published selective-prediction methods
+\citep{geifman2017selective,geifman2019selectivenet,ziyin2019deepgamblers,zhang2023abstain,khosravi2026csa,xu2024arcps}
+are left to an optional second round. Equal numbers of tuning trials are not equal optimisation
+effort, and we report the search space, the number of distinct configurations and the tuning
+cost of every method.
+
+\paragraph{Feature groups.}
+$\ZH$, the holder-state variables, comprises capital-gains overhang
+(Section~\ref{sec:related}), chip-distribution statistics computed by a turnover-decay method,
+and abnormal turnover. $\ZO$, the
+observable actions of other identifiable participants, comprises stock-day aggregates of public
+disclosure events: Dragon--Tiger list disclosures, block trades and executed insider and
+large-shareholder share changes. No participant identity enters any feature. Each group is
+always accompanied by control features: the price and turnover history over the windows from
+which $\ZH$ is constructed, and the price, range and turnover conditions that trigger the
+disclosures in $\ZO$. A class of $\ZO$ enters the analysis only if it passes a data audit,
+including an audit of announcement dates, before any modelling.
+
+\paragraph{Factorial structure.}
+The pre-specified contrasts add one group to the gate while the base predictor, and hence the
+nominated lists, are fixed. Cells in which a group enters the base predictor, both groups enter
+the gate, or the group's information is routed to the gate through a score are exploratory. A
+capacity-matched control gate receives the columns of a group after a within-day permutation
+across names, so that the number of features and their marginal distributions are preserved
+while stock-specific content is removed.
+
+\subsection{Pre-specified tests C1--C4}
+\label{sec:tests}
+
+All four tests are evaluated once, on the hold-out period, under the primary parameter values
+($H=5$ trading days, target coverage $c=0.5$, series averaged over five seeds).
+\todo{confirm $K$, $c$, $H$ and the cost parameters as frozen.}
+\begin{itemize}
+\item \textbf{C1.} $\thetasel^{\mathrm{CONF}}$ lies within the equivalence bound
+$\pm\Delta_{\mathrm{ord}}$. Equivalence test with null
+$|\thetasel^{\mathrm{CONF}}|\ge\Delta_{\mathrm{ord}}$.
+\item \textbf{C2.} The same for $\thetasel^{\mathrm{LOSS}(-Z)}$.
+\item \textbf{C3.} $\psi_H=0$ against a two-sided alternative.
+\item \textbf{C4.} $\psi_O=0$ against a two-sided alternative. C4 is included only if at least
+one class of $\ZO$ passes the data audit.
+\end{itemize}
+
+\paragraph{Equivalence bound.}
+The bound is anchored to capital: $\Delta_{\mathrm{ord}}=\Delta_{\mathrm{cap}}(H+1)/(Ac)$, where
+$\Delta_{\mathrm{cap}}$ is an additive annual return difference per unit of capital fixed in
+advance and $A=242$ is the annualisation constant. The adopted value
+$\Delta_{\mathrm{cap}}=1\%$ per year corresponds to about 5 basis points per order at $H=5$ and
+$c=0.5$. The bound is fixed before any data are loaded and is never changed afterwards.
+
+\paragraph{Status of C1 and C2.}
+Whether C1 and C2 are run as confirmatory equivalence tests or reported as pre-declared
+estimation targets is decided by a mechanical rule from a design-stage variance calculation that
+uses no output of any gate: they are confirmatory only if the bound is at least the smallest
+bound with 80\% power under a reference model of a selector without skill, evaluated for the
+most persistent reference selector considered. As estimation targets they keep the same
+estimand, comparator and bootstrap, the point estimate and intervals are reported, and no
+verdict is issued. The status is recorded before any gate is fitted on the development
+evaluation years and is not revisited.
+\todo{state the recorded status of C1 and C2 and the resulting family size.}
+
+\paragraph{Multiple comparisons.}
+The confirmatory tests form one family, adjusted by the Holm step-down procedure at family-wise
+level 5\%.
+\todo{cite verified references for the Holm procedure, the two one-sided tests procedure and the
+stationary bootstrap; none is in the bibliography yet.}
+The family has between one and four members, depending on the status of C1 and C2 and on
+whether C4 is included; its size is fixed before any gate outcome is seen. Everything else,
+including all comparisons of deployed strategies, all attribution terms, all other gates and all
+monitoring quantities, is exploratory or descriptive and is reported with unadjusted intervals.
+
+\paragraph{Inference.}
+The unit of resampling is the trading date, so that within-day dependence is preserved. We use a
+paired stationary block bootstrap over dates applied jointly to all strategies, with ratio
+statistics recomputed as ratios of resampled sums and a mean block length proportional to
+$H+1$. Seed variation is reported separately and is never merged with a bootstrap interval. The
+block bootstrap assumes approximate stationarity and weak dependence beyond the block length,
+which regime shifts and rule changes violate; whether the procedure attains its nominal error
+rates on data of this kind is not assumed but checked, as described next.
+
+\subsection{Complete-null simulation of the pipeline}
+
+Before the hold-out period is opened, the entire pipeline, comprising tuning, calibration,
+thresholding, the matched-opportunity statistic, the bootstrap and the Holm step, is re-run
+inside each replication of simulated null worlds built from the development years, with the
+nominated lists held fixed.
+\begin{itemize}
+\item \emph{Outcome permutation.} Outcomes are permuted among names within cells defined by day,
+nomination status and stratum. This sets $\thetasel$, $\psi_H$ and $\psi_O$ to zero in
+expectation but breaks the dependence between a name's outcomes on neighbouring days.
+\item \emph{Feature swap.} For each calendar year an independent random bijection of names is
+drawn, and the whole feature row that a gate sees, including the base score as a gate input, is
+replaced by that of the partner name, while the real base score still determines the nominated
+lists. Outcomes and their dependence are untouched.
+\item \emph{Group permutation.} Only the columns of one feature group are permuted across names
+within each day, so that the reference gate remains informative. In this world the increment is
+not zero by construction, because a gate with additional columns is a different fitted model;
+the check is centred on the mean over replications.
+\item \emph{Boundary versions.} The bound $\Delta_{\mathrm{ord}}$ is added to the return of
+every submitted order, which places $\thetasel$ on the boundary of the equivalence nulls.
+\end{itemize}
+The pass criterion, fixed in advance, limits the number of replications with a false rejection
+by an exact binomial count, and a failure triggers a fixed ladder of at most three
+progressively more conservative inference procedures, each evaluated on fresh replications and
+all reported. The arguments that the first two worlds have zero selection value by construction
+are our own and have not been independently reviewed; the simulation includes a direct check of
+them. Passing the criterion does not establish that error rates are at most nominal; it fails to
+find rates clearly above nominal. The replications share one realised price history.
+
+\subsection{Sensitivity analyses and wording}
+\label{sec:wording}
+
+Two alternative fill determinations, one stricter and one looser than the primary rule, are
+applied to the frozen models and orders. They bound the dependence of the outcomes on
+conditions (S2) and (S3); all three rules are retrospective, so they do not measure the gap
+between synthetic and real fills. Further pre-specified analyses, all exploratory, vary the
+holding period, the coverage target, the cost parameters and the tuning budget.
+
+The wording of outcomes is fixed in advance. ``Economically negligible (within
+$\pm\Delta_{\mathrm{ord}}$)'' is used only when an equivalence null is rejected after
+adjustment; ``a difference was detected'' only when a difference null is rejected after
+adjustment; in every other case the outcome is ``no detectable difference; inconclusive''. An
+estimate outside the bound is reported descriptively and is not a verdict. A detected increment
+of a feature group is described as a change in within-batch selection in this pipeline given the
+controls, not as evidence about private information or about a game. Every verdict sentence
+names the gate as implemented here, the universe and period, and the synthetic execution model.
+
+\subsection{Results}
+
+\todo{results: data audit and fill rates by reason.}
+
+\todo{results: design-stage variance calculation; recorded status of C1 and C2; family size.}
+
+\todo{results: complete-null simulation, all attempts with counts.}
+
+\todo{results: C1--C4 on the hold-out period, with choice share, attainable range, fill
+sensitivity, and the gate-based power report.}
+
+\todo{results: descriptive outcomes of deployed strategies and the three attribution terms;
+return of orders not submitted.}
+
+\todo{results: monitoring interval of Proposition~\ref{prop:monitor} on the synthetic fill
+stream; dependence diagnostics.}
+
+\todo{results: exploratory factorial cells and robustness analyses; negative and anomalous
+results.}
+
+% =============================================================================================
+\section{Limitations}
+\label{sec:limitations}
+% =============================================================================================
+
+\paragraph{Synthetic fills.}
+All fills are retrospective synthetic fills constructed from daily bars. The declared
+information set is artificial, a real order may not have filled where a fill is recorded, and
+the difference between synthetic and real opening-auction fills cannot be estimated without
+auction data, which we do not have. No result of this paper is a statement about an executable
+strategy, and the fill sensitivity analysis does not close this gap.
+
+\paragraph{One market, one history, free data.}
+The study covers one market, one universe and one period, with one base signal, long-only, at
+daily frequency. All resampling and all null simulations are conditional on a single realised
+price history. The data are free vendor data; a downloaded file is a snapshot as of the download
+date, so point-in-time properties hold at most as a function of that file, and the completeness
+of the vendor's corporate-event calendar is an audit question.
+\todo{report which audit items passed and which did not.}
+The group $\ZO$ is restricted to disclosures available in free data; scheduled share unlocks and
+pre-announced selling plans are outside the scope.
+
+\paragraph{Unverified operational assumptions.}
+The mapping of A-share trading to the abstract setting, comprising the execution model, the
+valuation rule, the lags and the treatment of distributions, consists of modelling assumptions.
+The exchange rules on which it relies have not yet been checked against the official rule texts.
+The propositions apply to the trade stream only to the extent that these assumptions hold.
+
+\paragraph{Status of the theoretical statements.}
+The statements of Section~\ref{sec:theory} have been reviewed by two external models, one of
+which took part in the design discussions and one of which is not that provider's strongest
+model; the revisions after the last round have not been re-reviewed, and we therefore call the
+results propositions. The extension to labels with unbounded resolution time is a draft on which
+the reviewers disagreed, and it is not stated. Proposition~\ref{prop:monitor} is an adaptation
+of known tools. The novelty of Proposition~\ref{prop:lower} has not been verified, and recent
+work on anytime-valid inference with delayed outcomes has not yet been compared with our
+setting.
+\todo{update after the confirmatory review and the remaining literature checks.}
+
+\paragraph{What the monitored quantity does not give.}
+The interval concerns the past entry stream of the synthetic fills and a target that depends on
+the declared filtration. It is not a guarantee about future trades, about drawdown or about
+portfolio tail risk, and a low loss probability is compatible with rare large losses. The
+interval is wide: by Proposition~\ref{prop:lower} its sampling-error term cannot shrink faster
+than $\sqrt{dM/N}$ in the worst case, and a design-stage evaluation of the formulas, made before
+any data were seen, puts its half-width at the end of the planned hold-out period at roughly
+$0.17$--$0.22$. It is therefore unsuitable for comparing methods and is not used for that
+purpose.
+\todo{replace the design-stage estimate by the realised width.}
+
+\paragraph{Limits of the estimands and of the inference.}
+$\thetasel$ gives no credit for avoiding whole days, so the value of market timing can appear
+only in the descriptive quantities. The composition term of Lemma~\ref{lem:attribution} is not
+stock picking, the split between exposure and composition depends on stated conventions, and the
+attribution is not causal. The tests of C1 and C2 concern two in-house gates and do not
+generalise to abstention methods as a class. The equivalence bound may exceed what the design
+can resolve, in which case C1 and C2 are reported as estimates without a verdict; inconclusive
+outcomes are possible for every test and are reported as such. The block bootstrap relies on
+approximate stationarity, and the null simulation checks the inference procedure on one history
+only.
+
+\paragraph{Literature coverage.}
+Chinese-language sources and broker research have not been searched, several cited works were
+read at the level of the abstract only, and the full text of one closely related preprint
+\citep{guo2026whennot}, whose decomposition may overlap with Lemma~\ref{lem:attribution}, has
+not been read. We therefore make no claim of priority for any component of this paper.
+\todo{update after the supplementary search and the citation check.}
+
+\paragraph{Unfavourable results.}
+\todo{results: list every setting in which a gate or a feature group performed worse than its
+comparator, and every anomalous or failed run.}
+
+% =============================================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+% =============================================================================================
+
+\todo{results: conclusion, written after the hold-out analysis, using the wording rules of
+Section~\ref{sec:wording}.}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+
+\section{Proofs}
+\label{app:proofs}
+% Written by the researcher in a separate file; not edited here.
+\IfFileExists{appendix_proofs.tex}{\input{appendix_proofs}}{\todo{appendix\_proofs.tex (complete
+proofs of Propositions~\ref{prop:monitor}--\ref{prop:lower}, Lemma~\ref{lem:attribution} and
+Remark~\ref{rem:nocontrol}) is not yet available.}}
+
+\section{A-Share Instantiation and Experimental Details}
+\label{app:exp}
+% Written by the researcher in a separate file; not edited here.
+\IfFileExists{appendix_experiments.tex}{\input{appendix_experiments}}{\todo{appendix\_experiments.tex
+(A-share modelling assumptions, valuation decision tree, cost model, tuning details, licences of
+data and software) is not yet available.}}
+
+\end{document}

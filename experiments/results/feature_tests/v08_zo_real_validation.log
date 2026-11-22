@@ -1,0 +1,66 @@
+{
+ "strict_coverage": true,
+ "rows": {
+  "lhb_detail": 168648,
+  "lhb_jgmmtj": 61141,
+  "dzjy_mrmx": 176537,
+  "ins_raw": 103321
+ },
+ "run_length": {
+  "lhb": 0,
+  "blk": 15,
+  "ins": 1
+ },
+ "ins_cleaning": {
+  "rows": 103321,
+  "dropped_no_notice_date": 0,
+  "dropped_direction": 0,
+  "dropped_notice_before_end": 0,
+  "kept": 103321,
+  "share_entered_gt30d_after_notice": 0.5726909340792288
+ },
+ "ins_backfilled_share": 0.5726909340792288,
+ "ins_notice_non_trading_share": 0.14973722670125145,
+ "ins_rows_by_regime": {
+  "pre_20150708": {
+   "减持": 18500,
+   "增持": 5418
+  },
+  "ban_20150708": {
+   "减持": 3067,
+   "增持": 5317
+  },
+  "predisc_20160109": {
+   "减持": 3961,
+   "增持": 3355
+  },
+  "predisc_ext_20170527": {
+   "减持": 49076,
+   "增持": 11776
+  }
+ },
+ "timing": {
+  "lhb": {
+   "indicator_days_expected": 558,
+   "indicator_days_matched": 558
+  },
+  "blk": {
+   "indicator_days_expected": 3112,
+   "indicator_days_matched": 3112
+  },
+  "ins_buy": {
+   "indicator_days_expected": 108,
+   "indicator_days_matched": 108
+  },
+  "ins_sell": {
+   "indicator_days_expected": 145,
+   "indicator_days_matched": 145
+  }
+ },
+ "timing_mismatches": 0,
+ "eitime_invariance": [
+  19,
+  19
+ ]
+}
+zo_real exit=0

@@ -1,0 +1,1022 @@
+{
+ "calls": {
+  "logical_calls_incl_retries": 432,
+  "distinct_requests": 410,
+  "http_requests": 413,
+  "first_attempt_ok_or_empty": 386,
+  "first_attempt_net_error": 9,
+  "first_attempt_parse_error": 15,
+  "push2_attempts": 9,
+  "push2_ok": 1
+ },
+ "A2": {
+  "queries": 41,
+  "count_exact": 41,
+  "counts": {
+   "min": {
+    "hs300": 300,
+    "zz500": 500
+   },
+   "max": {
+    "hs300": 300,
+    "zz500": 500
+   }
+  },
+  "distinct_updateDates": [
+   "2010-01-04",
+   "2011-06-27",
+   "2012-12-31",
+   "2014-12-08",
+   "2014-12-15",
+   "2016-06-06",
+   "2016-06-13",
+   "2018-06-11",
+   "2019-12-16",
+   "2021-06-07",
+   "2021-06-14",
+   "2022-03-21",
+   "2022-06-13",
+   "2022-08-01",
+   "2023-06-12",
+   "2024-12-09",
+   "2024-12-16",
+   "2025-06-16",
+   "2026-06-29"
+  ],
+  "sampled_dates_union_members": 1845,
+  "delisted_sample_names_seen_as_members": [
+   "000594",
+   "000616",
+   "000861",
+   "002013",
+   "002359",
+   "002450",
+   "002477",
+   "300104",
+   "600005",
+   "600074",
+   "600485",
+   "600607",
+   "600614",
+   "600677",
+   "600804",
+   "600832"
+  ],
+  "members_missing_in_bs_basic": [],
+  "members_now_delisted_per_bs_basic": 130,
+  "member_on_date_outside_listing_span": [],
+  "index_stock_cons_csindex(000300)": {
+   "rows": 300,
+   "columns": [
+    "日期",
+    "指数代码",
+    "指数名称",
+    "指数英文名称",
+    "成分券代码",
+    "成分券名称",
+    "成分券英文名称",
+    "交易所",
+    "交易所英文名称"
+   ],
+   "日期": [
+    "2026-11-11",
+    "2026-11-11",
+    1
+   ],
+   "overlap_with_bs_2026-06-30": 299
+  },
+  "index_stock_cons_csindex(000905)": {
+   "rows": 500,
+   "columns": [
+    "日期",
+    "指数代码",
+    "指数名称",
+    "指数英文名称",
+    "成分券代码",
+    "成分券名称",
+    "成分券英文名称",
+    "交易所",
+    "交易所英文名称"
+   ],
+   "日期": [
+    "2026-11-11",
+    "2026-11-11",
+    1
+   ],
+   "overlap_with_bs_2026-06-30": 498
+  },
+  "index_stock_cons_weight_csindex(000300)": {
+   "rows": 300,
+   "columns": [
+    "日期",
+    "指数代码",
+    "指数名称",
+    "指数英文名称",
+    "成分券代码",
+    "成分券名称",
+    "成分券英文名称",
+    "交易所",
+    "交易所英文名称",
+    "权重"
+   ],
+   "日期": [
+    "2026-10-30",
+    "2026-10-30",
+    1
+   ]
+  },
+  "index_stock_cons(000300)": {
+   "rows": 300,
+   "columns": [
+    "品种代码",
+    "品种名称",
+    "纳入日期"
+   ],
+   "纳入日期": [
+    "2005-04-08",
+    "2026-10-19",
+    59
+   ],
+   "overlap_with_bs_2026-06-30": 288
+  },
+  "index_stock_cons(000905)": {
+   "rows": 500,
+   "columns": [
+    "品种代码",
+    "品种名称",
+    "纳入日期"
+   ],
+   "纳入日期": [
+    "2007-01-15",
+    "2026-10-19",
+    42
+   ],
+   "overlap_with_bs_2026-06-30": 423
+  }
+ },
+ "A8_tfp": [
+  {
+   "date": "20100104",
+   "em_tfp_rows": 4311,
+   "bs_all_rows": 1983,
+   "em_tfp_start_min": "2012-02-22",
+   "em_tfp_start_max": "2026-11-16",
+   "em_tfp_active_on_date": 0,
+   "em_tfp_period_values": {
+    "连续停牌": "2253",
+    "盘中停牌": "1045",
+    "停牌一天": "996",
+    "停牌半天": "12",
+    "停牌一小时": "5"
+   },
+   "em_active_A": 0,
+   "bs_stocks": 1699,
+   "bs_suspended": 66,
+   "both": 0,
+   "em_only": 0,
+   "bs_only": 66
+  },
+  {
+   "date": "20150708",
+   "em_tfp_rows": 4020,
+   "bs_all_rows": 3466,
+   "em_tfp_start_min": "2015-04-02",
+   "em_tfp_start_max": "2026-11-16",
+   "em_tfp_active_on_date": 153,
+   "em_tfp_period_values": {
+    "连续停牌": "2136",
+    "盘中停牌": "1020",
+    "停牌一天": "857",
+    "停牌半天": "7"
+   },
+   "em_active_A": 147,
+   "bs_stocks": 2784,
+   "bs_suspended": 1317,
+   "both": 145,
+   "em_only": 2,
+   "bs_only": 1172
+  },
+  {
+   "date": "20160104",
+   "em_tfp_rows": 3731,
+   "bs_all_rows": 3514,
+   "em_tfp_start_min": "2015-06-29",
+   "em_tfp_start_max": "2026-11-16",
+   "em_tfp_active_on_date": 18,
+   "em_tfp_period_values": {
+    "连续停牌": "1864",
+    "盘中停牌": "1014",
+    "停牌一天": "847",
+    "停牌半天": "6"
+   },
+   "em_active_A": 17,
+   "bs_stocks": 2811,
+   "bs_suspended": 262,
+   "both": 17,
+   "em_only": 0,
+   "bs_only": 245
+  },
+  {
+   "date": "20180620",
+   "em_tfp_rows": 2522,
+   "bs_all_rows": 4279,
+   "em_tfp_start_min": "2016-09-14",
+   "em_tfp_start_max": "2026-11-16",
+   "em_tfp_active_on_date": 44,
+   "em_tfp_period_values": {
+    "连续停牌": "1015",
+    "盘中停牌": "782",
+    "停牌一天": "720",
+    "停牌半天": "5"
+   },
+   "em_active_A": 42,
+   "bs_stocks": 3530,
+   "bs_suspended": 241,
+   "both": 41,
+   "em_only": 1,
+   "bs_only": 200
+  },
+  {
+   "date": "20200203",
+   "em_tfp_rows": 2084,
+   "bs_all_rows": 4598,
+   "em_tfp_start_min": "2016-09-14",
+   "em_tfp_start_max": "2026-11-16",
+   "em_tfp_active_on_date": 3,
+   "em_tfp_period_values": {
+    "连续停牌": "851",
+    "盘中停牌": "631",
+    "停牌一天": "601",
+    "停牌半天": "1"
+   },
+   "em_active_A": 2,
+   "bs_stocks": 3776,
+   "bs_suspended": 15,
+   "both": 2,
+   "em_only": 0,
+   "bs_only": 13
+  },
+  {
+   "date": "20240102",
+   "em_tfp_rows": 962,
+   "bs_all_rows": 6529,
+   "em_tfp_start_min": "2023-12-21",
+   "em_tfp_start_max": "2026-11-16",
+   "em_tfp_active_on_date": 3,
+   "em_tfp_period_values": {
+    "连续停牌": "520",
+    "停牌一天": "348",
+    "盘中停牌": "94"
+   },
+   "em_active_A": 3,
+   "bs_stocks": 5097,
+   "bs_suspended": 7,
+   "both": 3,
+   "em_only": 0,
+   "bs_only": 4
+  }
+ ],
+ "A9": {
+  "bs_isST_changes_in_sample": 71,
+  "stocks_with_changes": 28,
+  "stock_days_isST1": 20360,
+  "szse_name_changes_rows": 7505,
+  "szse_name_change_dates": [
+   "1994-01-03",
+   "2026-11-12"
+  ],
+  "szse_events_in_sample": 27,
+  "exact_same_day": 27,
+  "within_1_tday": 27,
+  "flag_earlier_than_szse_date": 0,
+  "flag_later": 0,
+  "no_flag_change_found": 0
+ },
+ "ZO": {
+  "yearly_counts": {
+   "2005": {
+    "blk": 94,
+    "ins": 112,
+    "lhb": 346
+   },
+   "2008": {
+    "blk": 1131,
+    "ins": 2018,
+    "lhb": 8698
+   },
+   "2009": {
+    "blk": 2542,
+    "ins": 3471,
+    "lhb": 6579
+   },
+   "2010": {
+    "blk": 2962,
+    "ins": 2674,
+    "lhb": 6359
+   },
+   "2011": {
+    "blk": 5314,
+    "ins": 3057,
+    "lhb": 7440
+   },
+   "2012": {
+    "blk": 6375,
+    "ins": 2874,
+    "lhb": 8672
+   },
+   "2016": {
+    "blk": 17893,
+    "ins": 5777,
+    "lhb": 12849
+   },
+   "2021": {
+    "blk": 34750,
+    "ins": 13974,
+    "lhb": 16877
+   },
+   "2025": {
+    "blk": 33746,
+    "ins": 9633,
+    "lhb": 19541
+   }
+  },
+  "columns": {
+   "stock_lhb_detail_em": [
+    "序号",
+    "代码",
+    "名称",
+    "上榜日",
+    "解读",
+    "收盘价",
+    "涨跌幅",
+    "龙虎榜净买额",
+    "龙虎榜买入额",
+    "龙虎榜卖出额",
+    "龙虎榜成交额",
+    "市场总成交额",
+    "净买额占总成交比",
+    "成交额占总成交比",
+    "换手率",
+    "流通市值",
+    "上榜原因",
+    "上榜后1日",
+    "上榜后2日",
+    "上榜后5日",
+    "上榜后10日"
+   ],
+   "stock_dzjy_mrmx": [
+    "序号",
+    "交易日期",
+    "证券代码",
+    "证券简称",
+    "涨跌幅",
+    "收盘价",
+    "成交价",
+    "折溢率",
+    "成交量",
+    "成交额",
+    "成交额/流通市值",
+    "买方营业部",
+    "卖方营业部"
+   ],
+   "stock_lhb_jgmmtj_em": [
+    "序号",
+    "代码",
+    "名称",
+    "收盘价",
+    "涨跌幅",
+    "买方机构数",
+    "卖方机构数",
+    "机构买入总额",
+    "机构卖出总额",
+    "机构买入净额",
+    "市场总成交额",
+    "机构净买额占总成交额比",
+    "换手率",
+    "流通市值",
+    "上榜原因",
+    "上榜日期"
+   ],
+   "stock_dzjy_mrtj": [
+    "序号",
+    "交易日期",
+    "证券代码",
+    "证券简称",
+    "涨跌幅",
+    "收盘价",
+    "成交价",
+    "折溢率",
+    "成交笔数",
+    "成交总量",
+    "成交总额",
+    "成交总额/流通市值"
+   ],
+   "stock_lhb_detail_daily_sina": [
+    "序号",
+    "股票代码",
+    "股票名称",
+    "收盘价",
+    "对应值",
+    "成交量",
+    "成交额",
+    "指标"
+   ],
+   "em_ins_by_code": [
+    "CHANGE_NUM",
+    "NOTICE_DATE",
+    "SECURITY_CODE",
+    "HOLDER_NAME",
+    "AFTER_CHANGE_RATE",
+    "CHANGE_NUM_SYMBOL",
+    "CHANGE_RATE",
+    "END_DATE",
+    "CLOSE_PRICE",
+    "AFTER_HOLDER_NUM",
+    "HOLD_RATIO",
+    "TRADE_AVERAGE_PRICE",
+    "FREE_SHARES_RATIO",
+    "FREE_SHARES",
+    "TRADE_DATE",
+    "SECURITY_NAME_ABBR",
+    "DIRECTION",
+    "EITIME",
+    "CHANGE_FREE_RATIO",
+    "START_DATE",
+    "REAL_PRICE",
+    "NEWEST_PRICE",
+    "CHANGE_RATE_QUOTES",
+    "MARKET",
+    "_count"
+   ],
+   "em_lhb_by_code": [
+    "TRADE_DATE",
+    "DEAL_AMOUNT_RATIO",
+    "BILLBOARD_DEAL_AMT",
+    "FREE_MARKET_CAP",
+    "EXPLAIN",
+    "SECUCODE",
+    "SECURITY_CODE",
+    "CLOSE_PRICE",
+    "CHANGE_RATE",
+    "TURNOVERRATE",
+    "D1_CLOSE_ADJCHRATE",
+    "D2_CLOSE_ADJCHRATE",
+    "D5_CLOSE_ADJCHRATE",
+    "D10_CLOSE_ADJCHRATE",
+    "SECURITY_NAME_ABBR",
+    "EXPLANATION",
+    "BILLBOARD_SELL_AMT",
+    "BILLBOARD_BUY_AMT",
+    "SECURITY_INNER_CODE",
+    "BILLBOARD_NET_AMT",
+    "DEAL_NET_RATIO",
+    "ACCUM_AMOUNT",
+    "MARKET",
+    "CHANGE_TYPE",
+    "TRADE_ID",
+    "BUY_SEAT",
+    "SELL_SEAT",
+    "BUY_RATIO",
+    "SELL_RATIO",
+    "TRADE_MARKET",
+    "D30_CLOSE_ADJCHRATE",
+    "D20_CLOSE_ADJCHRATE",
+    "TRADE_MARKET_CODE",
+    "BUY_SEAT_NEW",
+    "SELL_SEAT_NEW",
+    "SECURITY_TYPE_CODE",
+    "SUM_BUY_AMT",
+    "SUM_SELL_AMT",
+    "NET_BS_AMT",
+    "_count"
+   ],
+   "em_blk_by_code": [
+    "SECUCODE",
+    "SECURITY_INNER_CODE",
+    "SECURITY_CODE",
+    "SECURITY_NAME_ABBR",
+    "SECURITY_TYPE",
+    "TRADE_DATE",
+    "DEAL_PRICE",
+    "PREMIUM_RATIO",
+    "DEAL_VOLUME",
+    "DEAL_AMT",
+    "BUYER_NAME",
+    "SELLER_NAME",
+    "SECURITY_TYPE_CODE",
+    "DAILY_RANK",
+    "CLOSE_PRICE",
+    "TRADE_UNIT",
+    "TURNOVER_RATE",
+    "CHANGE_RATE",
+    "CHANGE_RATE_1DAYS",
+    "CHANGE_RATE_5DAYS",
+    "BUYER_CODE",
+    "SELLER_CODE",
+    "PREMIUM_TURNOVER",
+    "DISCOUNT_TURNOVER",
+    "UNLIMITED_A_SHARES",
+    "TRADE_MARKET_OLD",
+    "SECURITY_TYPE_WEB",
+    "CHANGE_RATE_10DAYS",
+    "CHANGE_RATE_20DAYS",
+    "TRADE_MARKET_CODE",
+    "IS_SYSDATE",
+    "FREE_SHARES_RATIO",
+    "TOTAL_SHARES_RATIO",
+    "INDEX_CLOSE",
+    "PRE_CLOSE_PRICE",
+    "TOTAL_SHARES",
+    "DISCOUNT_RATIO",
+    "QUOTES_CODE",
+    "_count"
+   ],
+   "stock_share_hold_change_sse": [
+    "公司代码",
+    "公司名称",
+    "姓名",
+    "职务",
+    "股票种类",
+    "货币种类",
+    "本次变动前持股数",
+    "变动数",
+    "本次变动平均价格",
+    "变动后持股数",
+    "变动原因",
+    "变动日期",
+    "填报日期"
+   ],
+   "stock_share_hold_change_szse": [
+    "证券代码",
+    "证券简称",
+    "董监高姓名",
+    "变动日期",
+    "变动股份数量",
+    "成交均价",
+    "变动原因",
+    "变动比例",
+    "当日结存股数",
+    "股份变动人姓名",
+    "职务",
+    "变动人与董监高的关系"
+   ],
+   "stock_shareholder_change_ths": [
+    "公告日期",
+    "变动股东",
+    "变动数量",
+    "交易均价",
+    "剩余股份总数",
+    "变动期间",
+    "变动途径"
+   ]
+  },
+  "lhb_cross_check": {
+   "20150706": {
+    "em_codes": 504,
+    "sina_codes": 137,
+    "em_and_sina": 137,
+    "em_only": 367,
+    "sina_only": 0,
+    "szse_main_orig_codes": 15,
+    "em_szse_main_codes(000/001)": 16,
+    "orig_in_em": 15,
+    "orig_not_in_em": [],
+    "em_main_not_in_orig": [
+     "000594"
+    ],
+    "szse_file_last_modified": "Mon, 06 Jul 2015 08:22:36 GMT",
+    "sse_orig_codes": 114,
+    "em_sse_codes": 421,
+    "sse_orig_in_em": 113,
+    "sse_orig_not_in_em": [
+     "600213"
+    ],
+    "em_sse_not_in_orig": [
+     "600005",
+     "600008",
+     "600026",
+     "600027",
+     "600052",
+     "600054",
+     "600056",
+     "600057",
+     "600059",
+     "600072"
+    ]
+   },
+   "20240102": {
+    "em_codes": 56,
+    "sina_codes": 56,
+    "em_and_sina": 56,
+    "em_only": 0,
+    "sina_only": 0,
+    "szse_main_orig_codes": 18,
+    "em_szse_main_codes(000/001)": 5,
+    "orig_in_em": 18,
+    "orig_not_in_em": [],
+    "em_main_not_in_orig": [],
+    "szse_file_last_modified": "Tue, 02 Jan 2024 08:21:00 GMT",
+    "sse_orig_codes": 18,
+    "em_sse_codes": 20,
+    "sse_orig_in_em": 18,
+    "sse_orig_not_in_em": [],
+    "em_sse_not_in_orig": [
+     "688496",
+     "688525"
+    ]
+   }
+  },
+  "szse_lhb_file_last_modified": {
+   "jy150706": "Mon, 06 Jul 2015 08:22:36 GMT",
+   "jy100104": "Mon, 04 Jan 2010 09:04:52 GMT",
+   "jy240102": "Tue, 02 Jan 2024 08:21:00 GMT"
+  },
+  "blk_cross_check_sse": {
+   "2015-07-06": {
+    "sse_orig_rows_returned": 12,
+    "sse_orig_total": 12,
+    "em_sse_rows": 8,
+    "em_distinct_keys": 8,
+    "orig_distinct_keys(6xxxxx)": 8,
+    "matched_keys": 8,
+    "orig_not_in_em": [],
+    "em_not_in_orig": []
+   },
+   "2010-01-05": {
+    "sse_orig_rows_returned": 3,
+    "sse_orig_total": 3,
+    "em_sse_rows": 3,
+    "em_distinct_keys": 3,
+    "orig_distinct_keys(6xxxxx)": 3,
+    "matched_keys": 3,
+    "orig_not_in_em": [],
+    "em_not_in_orig": []
+   }
+  },
+  "ins_by_code": [
+   {
+    "code": "300104",
+    "rows": 28,
+    "notice_min": "2015-12-11",
+    "notice_max": "2019-04-19",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 136.5,
+    "entry_before_notice(-1d)": 0,
+    "entry_same_day": 23,
+    "entry_1_to_7d": 5,
+    "entry_gt_30d_after": 0,
+    "entry_min": "2015-12-11 21:24:18"
+   },
+   {
+    "code": "600485",
+    "rows": 46,
+    "notice_min": "2007-08-22",
+    "notice_max": "2019-11-05",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 2.0,
+    "entry_before_notice(-1d)": 9,
+    "entry_same_day": 0,
+    "entry_1_to_7d": 0,
+    "entry_gt_30d_after": 37,
+    "entry_min": "2012-12-15 11:32:40"
+   },
+   {
+    "code": "002450",
+    "rows": 49,
+    "notice_min": "2011-07-21",
+    "notice_max": "2021-05-28",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 3.0,
+    "entry_before_notice(-1d)": 34,
+    "entry_same_day": 8,
+    "entry_1_to_7d": 1,
+    "entry_gt_30d_after": 5,
+    "entry_min": "2012-12-15 11:32:32"
+   },
+   {
+    "code": "600074",
+    "rows": 15,
+    "notice_min": "2014-07-01",
+    "notice_max": "2015-05-15",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 4.0,
+    "entry_before_notice(-1d)": 13,
+    "entry_same_day": 2,
+    "entry_1_to_7d": 0,
+    "entry_gt_30d_after": 0,
+    "entry_min": "2014-07-01 15:03:01"
+   },
+   {
+    "code": "000002",
+    "rows": 158,
+    "notice_min": "2006-06-14",
+    "notice_max": "2024-07-16",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 5.0,
+    "entry_before_notice(-1d)": 27,
+    "entry_same_day": 0,
+    "entry_1_to_7d": 1,
+    "entry_gt_30d_after": 130,
+    "entry_min": "2019-05-17 15:22:06"
+   },
+   {
+    "code": "300059",
+    "rows": 109,
+    "notice_min": "2011-04-08",
+    "notice_max": "2017-01-10",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 48.0,
+    "entry_before_notice(-1d)": 0,
+    "entry_same_day": 0,
+    "entry_1_to_7d": 0,
+    "entry_gt_30d_after": 109,
+    "entry_min": "2019-05-17 15:22:06"
+   },
+   {
+    "code": "600519",
+    "rows": 13,
+    "notice_min": "2010-05-08",
+    "notice_max": "2025-12-30",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 2.0,
+    "entry_before_notice(-1d)": 7,
+    "entry_same_day": 0,
+    "entry_1_to_7d": 0,
+    "entry_gt_30d_after": 6,
+    "entry_min": "2019-05-17 15:22:06"
+   },
+   {
+    "code": "000651",
+    "rows": 44,
+    "notice_min": "2007-04-10",
+    "notice_max": "2026-06-05",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 1.0,
+    "entry_before_notice(-1d)": 10,
+    "entry_same_day": 0,
+    "entry_1_to_7d": 0,
+    "entry_gt_30d_after": 34,
+    "entry_min": "2019-05-17 15:22:06"
+   },
+   {
+    "code": "002594",
+    "rows": 47,
+    "notice_min": "2011-06-30",
+    "notice_max": "2025-09-11",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 8.0,
+    "entry_before_notice(-1d)": 34,
+    "entry_same_day": 0,
+    "entry_1_to_7d": 0,
+    "entry_gt_30d_after": 13,
+    "entry_min": "2019-05-17 15:22:06"
+   },
+   {
+    "code": "688111",
+    "rows": 53,
+    "notice_min": "2020-12-08",
+    "notice_max": "2023-07-21",
+    "notice_missing": 0,
+    "notice_before_end": 0,
+    "notice_minus_end_days_median": 3.0,
+    "entry_before_notice(-1d)": 44,
+    "entry_same_day": 0,
+    "entry_1_to_7d": 0,
+    "entry_gt_30d_after": 0,
+    "entry_min": "2020-12-07 19:17:36"
+   }
+  ],
+  "ins_totals": {
+   "rows": 562,
+   "notice_missing": 0,
+   "notice_before_end": 0,
+   "entry_gt_30d_after_notice": 334,
+   "entry_day_before_notice": 178
+  },
+  "ins_em_vs_ths": [
+   {
+    "code": "600519",
+    "ths_rows": 14,
+    "em_rows": 13,
+    "ths_end_dates": 12,
+    "em_end_dates": 11,
+    "common_end_dates": 9,
+    "notice_equal": 9,
+    "em_earlier": 0,
+    "em_later": 0
+   },
+   {
+    "code": "000002",
+    "ths_rows": 130,
+    "em_rows": 158,
+    "ths_end_dates": 71,
+    "em_end_dates": 104,
+    "common_end_dates": 66,
+    "notice_equal": 63,
+    "em_earlier": 1,
+    "em_later": 2
+   },
+   {
+    "code": "300104",
+    "ths_rows": 69,
+    "em_rows": 28,
+    "ths_end_dates": 44,
+    "em_end_dates": 28,
+    "common_end_dates": 25,
+    "notice_equal": 24,
+    "em_earlier": 0,
+    "em_later": 1
+   }
+  ],
+  "ins_exchange_tables": [
+   {
+    "name": "stock_share_hold_change_sse",
+    "code": "600519",
+    "rows": 2,
+    "date_cols": [
+     "变动日期",
+     "填报日期"
+    ],
+    "range": [
+     "2017-12-28",
+     "2018-09-26"
+    ]
+   },
+   {
+    "name": "stock_share_hold_change_sse",
+    "code": "600036",
+    "rows": 130,
+    "date_cols": [
+     "变动日期",
+     "填报日期"
+    ],
+    "range": [
+     "2012-12-31",
+     "2023-12-08"
+    ]
+   },
+   {
+    "name": "stock_share_hold_change_sse",
+    "code": "600485",
+    "rows": 48,
+    "date_cols": [
+     "变动日期",
+     "填报日期"
+    ],
+    "range": [
+     "2007-04-06",
+     "2018-07-02"
+    ]
+   },
+   {
+    "name": "stock_share_hold_change_szse",
+    "code": "000002",
+    "rows": 67,
+    "date_cols": [
+     "变动日期"
+    ],
+    "range": [
+     "2007-05-09",
+     "2022-09-26"
+    ]
+   },
+   {
+    "name": "stock_share_hold_change_szse",
+    "code": "300104",
+    "rows": 59,
+    "date_cols": [
+     "变动日期"
+    ],
+    "range": [
+     "2012-12-12",
+     "2016-09-06"
+    ]
+   }
+  ],
+  "delisted_in_lhb_blk": [
+   {
+    "table": "em_lhb_by_code",
+    "code": "300104",
+    "rows": 161,
+    "first": "2010-08-12",
+    "last": "2020-07-20"
+   },
+   {
+    "table": "em_blk_by_code",
+    "code": "300104",
+    "rows": 69,
+    "first": "2011-10-10",
+    "last": "2018-01-25"
+   },
+   {
+    "table": "em_lhb_by_code",
+    "code": "600485",
+    "rows": 54,
+    "first": "2006-09-26",
+    "last": "2020-02-06"
+   },
+   {
+    "table": "em_blk_by_code",
+    "code": "600485",
+    "rows": 77,
+    "first": "2009-12-04",
+    "last": "2019-07-24"
+   },
+   {
+    "table": "em_lhb_by_code",
+    "code": "002450",
+    "rows": 67,
+    "first": "2010-07-16",
+    "last": "2021-05-28"
+   },
+   {
+    "table": "em_blk_by_code",
+    "code": "002450",
+    "rows": 338,
+    "first": "2011-07-18",
+    "last": "2021-04-16"
+   },
+   {
+    "table": "em_lhb_by_code",
+    "code": "600074",
+    "rows": 121,
+    "first": "2007-06-01",
+    "last": "2020-05-26"
+   },
+   {
+    "table": "em_blk_by_code",
+    "code": "600074",
+    "rows": 39,
+    "first": "2015-10-12",
+    "last": "2018-08-22"
+   }
+  ],
+  "cninfo_samples": [
+   {
+    "code": "000002",
+    "title": "关于公司董事计划增持公司A股股份的公告",
+    "time_cst": "2015-07-09 07:38:29+08:00",
+    "has_clock_time": true,
+    "url": "http://static.cninfo.com.cn/finalpage/2015-07-09/1201264832.PDF"
+   },
+   {
+    "code": "600519",
+    "title": "贵州维拓律师事务所关于中国贵州茅台酒厂（集团）有限责任公司增持贵州茅台酒股份有限",
+    "time_cst": "2014-03-04 00:00:01+08:00",
+    "has_clock_time": false,
+    "url": "http://static.cninfo.com.cn/finalpage/2014-03-04/63633111.PDF"
+   },
+   {
+    "code": "600519",
+    "title": "关于控股股东增持公司股份计划实施情况的公告",
+    "time_cst": "2014-03-04 00:00:01+08:00",
+    "has_clock_time": false,
+    "url": "http://static.cninfo.com.cn/finalpage/2014-03-04/63633110.PDF"
+   },
+   {
+    "code": "600519",
+    "title": "关于控股股东增持公司股份的公告",
+    "time_cst": "2013-09-04 00:00:03+08:00",
+    "has_clock_time": true,
+    "url": "http://static.cninfo.com.cn/finalpage/2013-09-04/63046743.PDF"
+   },
+   {
+    "code": "600519",
+    "title": "贵州维拓律师事务所关于中国贵州茅台酒厂（集团）有限责任公司增持贵州茅台酒股份有限",
+    "time_cst": "2013-06-15 00:00:01+08:00",
+    "has_clock_time": false,
+    "url": "http://static.cninfo.com.cn/finalpage/2013-06-15/62583742.PDF"
+   },
+   {
+    "code": "600519",
+    "title": "关于控股股东增持本公司股份计划实施情况的公告",
+    "time_cst": "2013-06-15 00:00:01+08:00",
+    "has_clock_time": false,
+    "url": "http://static.cninfo.com.cn/finalpage/2013-06-15/62583741.PDF"
+   },
+   {
+    "code": "600519",
+    "title": "关于控股股东增持本公司股份的公告",
+    "time_cst": "2012-12-12 06:33:00+08:00",
+    "has_clock_time": true,
+    "url": "http://static.cninfo.com.cn/finalpage/2012-12-12/61898407.PDF"
+   },
+   {
+    "code": "600519",
+    "title": "股东中国贵州茅台酒厂有限责任公司增持公司股份专项核查意见的法律意见书",
+    "time_cst": "2012-04-11 06:31:00+08:00",
+    "has_clock_time": true,
+    "url": "http://static.cninfo.com.cn/finalpage/2012-04-11/60812022.PDF"
+   }
+  ]
+ }
+}

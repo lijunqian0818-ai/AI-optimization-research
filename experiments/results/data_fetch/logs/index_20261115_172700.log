@@ -1,0 +1,8 @@
+2026-11-15 17:27:00 [run] id=index_20261115_172700 stage=index sources=['bs_index_daily', 'bs_hs300', 'bs_zz500'] limit=8 codes_file=- period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\index_20261115_172700.log
+2026-11-15 17:27:00 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=30, progress_units=4, progress_seconds=300.0, resume=True, retry_empty=False, run_id='index_20261115_172700')
+2026-11-15 17:27:00 [start] index: units total=24 already done (verified)=0 to fetch=24
+2026-11-15 17:27:04 [baostock] login ok (login #1)
+2026-11-15 17:27:59 [progress] index: done=4/24 (this run 4: ok=4 empty=0 failed=0; resumed-skip=0) success=100.0% mean=14.8s/unit ETA=4.9min requests this run: baostock=4 http=0 pauses=0
+2026-11-15 17:28:02 [empty] index/bs_index_daily/sh.000985: no record returned (zero rows)
+2026-11-15 17:28:43 [progress] index: done=8/24 (this run 8: ok=7 empty=1 failed=0; resumed-skip=0) success=100.0% mean=12.8s/unit ETA=3.4min requests this run: baostock=8 http=0 pauses=0
+2026-11-15 17:28:59 [progress] index: done=12/24 (this run 12: ok=11 empty=1 failed=0; resumed-skip=0) success=100.0% mean=9.9s/unit ETA=2.0min requests this run: baostock=12 http=0 pauses=0

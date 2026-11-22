@@ -1,0 +1,9 @@
+Collecting pyarrow
+  Downloading pyarrow-26.0.1-cp314-cp314-win_amd64.whl.metadata (3.0 kB)
+Downloading pyarrow-26.0.1-cp314-cp314-win_amd64.whl (29.8 MB)
+   ---------------------------------------- 29.8/29.8 MB 38.0 MB/s  0:00:00
+Installing collected packages: pyarrow
+Successfully installed pyarrow-26.0.1
+
+[notice] A new release of pip is available: 26.0.1 -> 26.3
+[notice] To update, run: C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\.venv\Scripts\python.exe -m pip install --upgrade pip

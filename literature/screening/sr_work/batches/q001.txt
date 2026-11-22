@@ -1,0 +1,31 @@
+BATCH q001 -- 5 records for QC recheck: R00013 .. R00070
+
+### R00013 | 2019 | Journal article | Lang: n/a
+TI: The preferences in capital allocation among economics students in Poland. Investments on the Warsaw Stock Exchange and forex in comparison to a
+    poker game
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C013; identifier doi:10.22367/jem.2019.38.04]
+    问卷研究：经济系学生的股票/外汇投资与扑克对比
+KW: search direction 1
+
+### R00014 | 2015 | Journal article | Lang: n/a
+TI: Poker as a skill game: rational versus irrational behaviors
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C014; identifier doi:10.1088/1742-5468/2015/03/p03018]
+    扑克作为技巧游戏：理性与非理性行为的统计物理模型（arXiv:1409.6843）
+KW: search direction 1
+
+### R00065 | 2025 | Journal article | Lang: n/a
+TI: JaxMARL-HFT: GPU-Accelerated Large-Scale Multi-Agent Reinforcement Learning for High-Frequency Trading
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C065; identifier arXiv:2511.02136] 高频交易多智能体 RL 环境
+KW: search direction 4
+
+### R00068 | 2023 | Journal article | Lang: n/a
+TI: Order book regulatory impact on stock market quality: a multi-agent reinforcement learning perspective
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C068; identifier arXiv:2302.04184] 多智能体 RL 视角下订单簿监管对市场质量的影响
+KW: search direction 4
+
+### R00070 | 2021 | Journal article | Lang: n/a
+TI: Deep Q-Learning Market Makers in a Multi-Agent Simulated Stock Market
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C070; identifier arXiv:2112.04494] 多智能体模拟股市中的深度 Q 学习做市商
+KW: search direction 4
+
+=== END OF BATCH q001 (5 records) ===

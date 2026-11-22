@@ -1,0 +1,55 @@
+=== Part A: coverage of r^liq by the Corollary 1.3 interval ===
+delta=0.1, M=10, H=1, D=5, d_D=6, T=1500, paths per seed=400, seeds=[101, 202, 303]
+miss = fraction of paths on which the bound fails at SOME T with N_T > 0
+stuck     dep        seed  miss_any  miss_up  miss_low | x0.25: any  x0: any | naive(K^lo both sides): any | ordering viol  min(width-(Khi-Klo)/N) | at T: N_T   r_lo   r_liq  r_hi   lower  upper  (Khi-Klo)/N  P/N    B*/N
+moderate  shared     101   0.0000    0.0000   0.0000   |        0.0000   0.4975 |                      0.0000 | 0              +3.29e-01              |          8475 0.4119 0.5046 0.5190 0.2417 0.6894 0.1069       0.0028 0.1690
+moderate  shared     202   0.0000    0.0000   0.0000   |        0.0000   0.4550 |                      0.0000 | 0              +3.35e-01              |          8433 0.4121 0.5051 0.5195 0.2426 0.6908 0.1072       0.0028 0.1691
+moderate  shared     303   0.0000    0.0000   0.0000   |        0.0000   0.4900 |                      0.0000 | 0              +3.34e-01              |          8486 0.4117 0.5041 0.5185 0.2414 0.6886 0.1064       0.0027 0.1691
+moderate  identical  101   0.0000    0.0000   0.0000   |        0.0000   0.9225 |                      0.0000 | 0              +3.32e-01              |          8520 0.4139 0.5090 0.5236 0.2453 0.6948 0.1084       0.0028 0.1692
+moderate  identical  202   0.0000    0.0000   0.0000   |        0.0050   0.8900 |                      0.0000 | 0              +3.29e-01              |          8555 0.4137 0.5084 0.5230 0.2436 0.6944 0.1097       0.0028 0.1691
+moderate  identical  303   0.0000    0.0000   0.0000   |        0.0125   0.9225 |                      0.0000 | 0              +3.35e-01              |          8561 0.4136 0.5083 0.5229 0.2445 0.6942 0.1086       0.0028 0.1691
+heavy     shared     101   0.0000    0.0000   0.0000   |        0.0000   0.0250 |                      1.0000 | 0              +3.03e-01              |          5529 0.2589 0.5818 0.6780 0.1044 0.8321 0.4176       0.0032 0.1535
+heavy     shared     202   0.0000    0.0000   0.0000   |        0.0000   0.0225 |                      1.0000 | 0              +3.04e-01              |          5518 0.2589 0.5824 0.6785 0.1052 0.8335 0.4185       0.0032 0.1533
+heavy     shared     303   0.0000    0.0000   0.0000   |        0.0000   0.0250 |                      1.0000 | 0              +3.03e-01              |          5528 0.2588 0.5813 0.6776 0.1045 0.8317 0.4170       0.0032 0.1535
+heavy     identical  101   0.0000    0.0000   0.0000   |        0.0000   0.3025 |                      1.0000 | 0              +2.64e-01              |          6056 0.2589 0.5816 0.6778 0.0972 0.8394 0.4157       0.0032 0.1616
+heavy     identical  202   0.0000    0.0000   0.0000   |        0.0000   0.2850 |                      1.0000 | 0              +2.56e-01              |          6045 0.2588 0.5808 0.6771 0.0963 0.8395 0.4170       0.0032 0.1615
+heavy     identical  303   0.0000    0.0000   0.0000   |        0.0025   0.3000 |                      1.0000 | 0              +2.42e-01              |          6039 0.2588 0.5809 0.6772 0.0978 0.8408 0.4170       0.0032 0.1613
+TOTAL over 4800 paths: any-miss 0, upper-miss 0, lower-miss 0 (allowed by the corollary: 10% of paths per cell; 5% per side)
+
+=== Part B: only the first entry misses its deadline (finitely many misses) ===
+one entry per day, pairs revealed at lag d=6, delta=0.1; no sold entry is a loss (K^lo = 0)
+T         N_T       K^hi-K^lo  (K^hi-K^lo)/N_T  P_T/N_T    B*_T/N_T   lower  upper     width
+100       100       1          0.010000         0.060000   0.491766   0.000  0.561766  0.561766
+1000      1000      1          0.001000         0.006000   0.167372   0.000  0.174372  0.174372
+10000     10000     1          0.000100         0.000600   0.055286   0.000  0.055986  0.055986
+100000    100000    1          0.000010         0.000060   0.017802   0.000  0.017872  0.017872
+1000000   1000000   1          0.000001         0.000006   0.005773   0.000  0.005780  0.005780
+
+=== Part C: every 5th entry misses its deadline (rho = 0.2) ===
+one entry per day, pairs revealed at lag d=6, delta=0.1; no sold entry is a loss (K^lo = 0)
+T         N_T       K^hi-K^lo  (K^hi-K^lo)/N_T  P_T/N_T    B*_T/N_T   lower  upper     width
+100       100       18         0.180000         0.060000   0.491766   0.000  0.731766  0.731766
+1000      1000      198        0.198000         0.006000   0.167372   0.000  0.371372  0.371372
+10000     10000     1998       0.199800         0.000600   0.055286   0.000  0.255686  0.255686
+100000    100000    19998      0.199980         0.000060   0.017802   0.000  0.217842  0.217842
+1000000   1000000   199998     0.199998         0.000006   0.005773   0.000  0.205777  0.205777
+
+=== Part D: pointwise ordering of the bracket labels when records can be missing (round 3, X7) ===
+S  complete  sale_loss  Lliq_if_unsold | L^liq | certified: V lo hi  ok        | 'missing => loss' fallback: lo hi  ok
+0  0         0          0              |   0   |            0  0  1  ok        |                             1  1  VIOLATION
+0  0         0          1              |   1   |            0  0  1  ok        |                             1  1  ok
+0  0         1          0              |   0   |            0  0  1  ok        |                             1  1  VIOLATION
+0  0         1          1              |   1   |            0  0  1  ok        |                             1  1  ok
+0  1         0          0              |   0   |            0  0  1  ok        |                             0  1  ok
+0  1         0          1              |   1   |            0  0  1  ok        |                             0  1  ok
+0  1         1          0              |   0   |            0  0  1  ok        |                             0  1  ok
+0  1         1          1              |   1   |            0  0  1  ok        |                             0  1  ok
+1  0         0          0              |   0   |            0  0  1  ok        |                             1  1  VIOLATION
+1  0         0          1              |   0   |            0  0  1  ok        |                             1  1  VIOLATION
+1  0         1          0              |   1   |            0  0  1  ok        |                             1  1  ok
+1  0         1          1              |   1   |            0  0  1  ok        |                             1  1  ok
+1  1         0          0              |   0   |            1  0  0  ok        |                             0  0  ok
+1  1         0          1              |   0   |            1  0  0  ok        |                             0  0  ok
+1  1         1          0              |   1   |            1  1  1  ok        |                             1  1  ok
+1  1         1          1              |   1   |            1  1  1  ok        |                             1  1  ok
+states: 16; ordering violations: certified labels 0, fallback labels 4; states with L^hi - L^lo != 1 - V (certified): 0

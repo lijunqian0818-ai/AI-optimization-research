@@ -1,0 +1,245 @@
+{
+ "label": "B:b003@6bdc3fe7d9efdda7b1d1775668a1073561c6feea0765d91363bcadf047368bbb",
+ "decisions": [
+  {
+   "id": "R00081",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "RL trading; risk or multi-agent content not stated"
+  },
+  {
+   "id": "R00082",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "General CVaR risk-sensitive MDP; possible T3 foundation, not trading-specific"
+  },
+  {
+   "id": "R00083",
+   "d": "include",
+   "code": "INC",
+   "why": "Foundational direct RL trading (T7/T3)"
+  },
+  {
+   "id": "R00084",
+   "d": "include",
+   "code": "INC",
+   "why": "RL-trained context-aware factor screening (T4)"
+  },
+  {
+   "id": "R00085",
+   "d": "include",
+   "code": "INC",
+   "why": "Dynamic agent weights, China A-share (T4)"
+  },
+  {
+   "id": "R00086",
+   "d": "include",
+   "code": "INC",
+   "why": "Dynamic combination of alpha factors (T4)"
+  },
+  {
+   "id": "R00087",
+   "d": "include",
+   "code": "INC",
+   "why": "Deep learning factor timing (T4)"
+  },
+  {
+   "id": "R00088",
+   "d": "include",
+   "code": "INC",
+   "why": "Factor timing in Chinese stock market (T4)"
+  },
+  {
+   "id": "R00089",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "RL factor-set generation; dynamic weighting not stated"
+  },
+  {
+   "id": "R00090",
+   "d": "include",
+   "code": "INC",
+   "why": "Factor timing (T4)"
+  },
+  {
+   "id": "R00091",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "A-share ML factor benchmark; decision component unclear"
+  },
+  {
+   "id": "R00092",
+   "d": "include",
+   "code": "INC",
+   "why": "Deep learning factor timing, China (T4)"
+  },
+  {
+   "id": "R00093",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Quant platform with A-share baselines; topic fit unclear"
+  },
+  {
+   "id": "R00094",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "ML multi-factor baseline; forecasting focus"
+  },
+  {
+   "id": "R00095",
+   "d": "include",
+   "code": "INC",
+   "why": "Factor timing (T4)"
+  },
+  {
+   "id": "R00096",
+   "d": "exclude",
+   "code": "E2",
+   "why": "Static China size/value factor model, no timing or decision"
+  },
+  {
+   "id": "R00097",
+   "d": "include",
+   "code": "INC",
+   "why": "Factor momentum, timing of factors (T4)"
+  },
+  {
+   "id": "R00098",
+   "d": "include",
+   "code": "INC",
+   "why": "Factor momentum, timing of factors (T4)"
+  },
+  {
+   "id": "R00099",
+   "d": "exclude",
+   "code": "E2",
+   "why": "Firm characteristics and returns, no T1-T7 topic"
+  },
+  {
+   "id": "R00100",
+   "d": "include",
+   "code": "INC",
+   "why": "Capital gains overhang in A-shares (T5)"
+  },
+  {
+   "id": "R00101",
+   "d": "include",
+   "code": "INC",
+   "why": "Factor crowding in China (T5)"
+  },
+  {
+   "id": "R00102",
+   "d": "include",
+   "code": "INC",
+   "why": "Crowding/arbitrage activity measure (T5)"
+  },
+  {
+   "id": "R00103",
+   "d": "include",
+   "code": "INC",
+   "why": "Crowded trades and tail risk (T5)"
+  },
+  {
+   "id": "R00104",
+   "d": "include",
+   "code": "INC",
+   "why": "Equity factor crowding measure (T5)"
+  },
+  {
+   "id": "R00105",
+   "d": "include",
+   "code": "INC",
+   "why": "Chip distribution stock picking (T5)"
+  },
+  {
+   "id": "R00106",
+   "d": "include",
+   "code": "INC",
+   "why": "Capital gains overhang grouping (T5)"
+  },
+  {
+   "id": "R00107",
+   "d": "include",
+   "code": "INC",
+   "why": "Disposition effect asset pricing (T5)"
+  },
+  {
+   "id": "R00108",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "2009 crowding paper; pre-2010, possibly foundational"
+  },
+  {
+   "id": "R00109",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "2006 disposition effect; foundational status uncertain"
+  },
+  {
+   "id": "R00110",
+   "d": "include",
+   "code": "INC",
+   "why": "Capital gains overhang, cost basis; foundational (T5/T7)"
+  },
+  {
+   "id": "R00111",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Disposition bias in China accounts; title-level fit only"
+  },
+  {
+   "id": "R00112",
+   "d": "include",
+   "code": "INC",
+   "why": "LLM trading agents show disposition effect (T5)"
+  },
+  {
+   "id": "R00113",
+   "d": "include",
+   "code": "INC",
+   "why": "Disposition effect of Chinese investors (T5)"
+  },
+  {
+   "id": "R00114",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Prospect theory anomalies; link to cost-basis unclear"
+  },
+  {
+   "id": "R00115",
+   "d": "include",
+   "code": "INC",
+   "why": "Crowding in risk premia investing (T5)"
+  },
+  {
+   "id": "R00116",
+   "d": "include",
+   "code": "INC",
+   "why": "Realization utility, disposition effect theory (T5)"
+  },
+  {
+   "id": "R00117",
+   "d": "include",
+   "code": "INC",
+   "why": "Quant crowding and unwinding 2007 (T5)"
+  },
+  {
+   "id": "R00118",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "2009 disposition effect paper; pre-2010, foundational uncertain"
+  },
+  {
+   "id": "R00119",
+   "d": "include",
+   "code": "INC",
+   "why": "Foundational disposition effect work (T7/T5)"
+  },
+  {
+   "id": "R00120",
+   "d": "include",
+   "code": "INC",
+   "why": "Foundational disposition effect work (T7/T5)"
+  }
+ ]
+}

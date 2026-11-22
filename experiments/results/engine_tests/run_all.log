@@ -1,0 +1,245 @@
+[pass] rule_calendar.test_stamp_duty_boundaries
+[pass] rule_calendar.test_transfer_fee_boundaries
+[pass] rule_calendar.test_dividend_tax_boundaries
+[pass] rule_calendar.test_price_bands
+[pass] rule_calendar.test_limit_price_rounding
+[pass] rule_calendar.test_limit_price_full_grid_vs_integer_arithmetic
+[pass] rule_calendar.test_limit_prices_for_code_and_date
+[pass] rule_calendar.test_boards_and_exchanges
+[pass] rule_calendar.test_lot_rounding
+[pass] rule_calendar.test_window_and_unique_coverage
+[pass] rule_calendar.test_every_boundary_changes_value
+[pass] rule_calendar.test_source_status_transcription
+[pass] rule_calendar.test_flagged_days_and_info_rows
+[pass] rule_calendar.test_disclosure_regimes_group_e
+[pass] rule_calendar.test_dividend_tax_boundary_day_two_readings
+== rule_calendar: 15/15 passed (0.77 s) -> C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\engine_tests\rule_calendar.json
+[pass] fills.test_buy_inside_band_filled_by_all
+[pass] fills.test_buy_open_at_limit_up
+[pass] fills.test_buy_strict_band_threshold
+[pass] fills.test_buy_open_above_computed_limit
+[pass] fills.test_s1_cases
+[pass] fills.test_capacity_cap
+[pass] fills.test_adv_window_uses_days_before_t_only
+[pass] fills.test_adv_window_with_suspended_days_inside
+[pass] fills.test_adv_fewer_than_20_traded_days_and_none
+[pass] fills.test_sell_order_value_uses_day_t_preclose_on_ex_date
+[pass] fills.test_stale_cap_fill_is_counted
+[pass] fills.test_sf_strict_fills_are_a_subset_of_sf_fills
+[pass] fills.test_sf_strict_reference_price_below_ten_cents
+[pass] fills.test_no_ref_is_not_part_of_S_t
+[pass] fills.test_min_commission_binding_and_not_binding
+[pass] fills.test_min_commission_slot_too_small
+[pass] fills.test_min_commission_merged_sell_charged_once_pro_rata
+[pass] fills.test_min_commission_cash_never_negative_with_lot_rounding
+[pass] fills.test_non_netting_unequal_buy_and_sell
+[pass] fills.test_sell_side_mirror
+[pass] fills.test_rounding_boundary_in_fill
+[pass] fills.test_bands_by_board_date_status
+[pass] fills.test_only_three_fields_of_day_t_bar_are_read
+[pass] fills.test_unfilled_buy_is_cancelled_not_retried
+[pass] fills.test_limit_down_sequence_exit_is_retried
+[pass] fills.test_two_lots_due_same_day_one_order_cap_on_total
+[pass] fills.test_buy_and_sell_same_name_same_day_not_netted
+[pass] fills.test_quantity_predetermined_and_affordable
+[pass] fills.test_lot_rounding_by_board
+[pass] fills.test_circuit_breaker_days_flagged_in_trade_ledger
+== fills: 30/30 passed (2.43 s) -> C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\engine_tests\fills.json
+[pass] ledger_r4.test_dividend_no_trade_three_tax_regimes
+[pass] ledger_r4.test_dividend_pay_date_after_ex_date
+[pass] ledger_r4.test_split_two_for_one_no_trade
+[pass] ledger_r4.test_pure_price_move_no_trade
+[pass] ledger_r4.test_every_cost_once
+[pass] ledger_r4.test_cash_return_cost_debited_at_trade
+[pass] ledger_r4.test_transfer_fee_sse_per_share_vs_szse
+[pass] ledger_r4.test_stamp_duty_2023_08_25_vs_28
+[pass] ledger_r4.test_K2_no_trade_day_and_K3_missing_close
+[pass] ledger_r4.test_split_effective_on_a_suspended_day
+[pass] ledger_r4.test_cv_is_immaterial_for_open_to_open_position
+[pass] ledger_r4.test_rights_issue_P1R_ledger_and_label
+[pass] ledger_r4.test_P1_restatement_uses_gross_dividend
+[pass] ledger_r4.test_label_values_by_hand
+[pass] ledger_r4.test_label_branches_P4_U_M_Sd_Se
+[pass] ledger_r4.test_ledger_delisting_U_cashout_exchange
+[pass] ledger_r4.test_suspension_spanning_exit_and_long_spell
+[pass] ledger_r4.test_label_frozen_and_reads_nothing_after_mark_day
+[pass] ledger_r4.test_two_strategies_same_name_entry_exit_same_day_and_zero_baseline
+[pass] ledger_r4.test_reference_path_no_trade_on_dividend_and_split
+== ledger_r4: 20/20 passed (0.02 s) -> C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\engine_tests\ledger_r4.json
+[pass] v07_rules.test_reference_cost_close_instant_component
+[pass] v07_rules.test_record_date_2015_09_08_two_readings
+[pass] v07_rules.test_forced_class_U_event_label_U_ledger_as_URS
+[pass] v07_rules.test_same_day_dividend_and_rights_record_date_in_suspension
+[pass] v07_rules.test_cash_exit_no_sell_charge_liability_debited
+[pass] v07_rules.test_sell_charges_exclude_cash_part
+[pass] v07_rules.test_successor_event_on_succession_day_is_U
+[pass] v07_rules.test_successor_event_after_succession_day_applies
+[pass] v07_rules.test_lot_by_succession_and_direct_lot_then_cash_out_of_successor
+[pass] v07_rules.test_rights_issue_with_missing_record_date
+[pass] v07_rules.test_missing_row_inside_P1_carry_gives_M
+[pass] v07_rules.test_filled_from_xsrc_flag_is_carried_through
+[pass] v07_rules.test_disposition_table_absent_falls_back_to_write_off
+[pass] v07_rules.test_disposition_share_exchange_with_carry
+[pass] v07_rules.test_disposition_cash_other_terminated_and_errors
+[pass] v07_rules.test_cash_return_overnight_only_intraday_zero
+[pass] v07_rules.test_conventions_hash_in_result_records
+[pass] v07_rules.test_deadline_labels_missing_record_gives_lower_0_upper_1
+[pass] v07_rules.test_monitor_counts_and_truncation
+[pass] v07_rules.test_R3_days_over_tolerance_are_listed_and_traced
+== v07_rules: 20/20 passed (0.05 s) -> C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\engine_tests\v07_rules.json
+[pass] v07_components.test_event_two_and_three_source_confirmation
+[pass] v07_components.test_event_single_source_and_disagreement_go_to_hand_check
+[pass] v07_components.test_event_status_filter_implemented_only
+[pass] v07_components.test_event_step_without_event_goes_to_URS
+[pass] v07_components.test_event_ex_date_inside_suspension_step_at_resumption
+[pass] v07_components.test_event_date_conflict_decidable_and_undecidable
+[pass] v07_components.test_event_without_any_step
+[pass] v07_components.test_event_record_date_rule_and_amount_consistency
+[pass] v07_components.test_event_rights_rows
+[pass] v07_components.test_loader_status_filter_delisting_and_flags
+[pass] v07_components.test_FC_A4_no_factor_or_adjusted_price_is_read
+[pass] v07_components.test_universe_screen_by_hand
+[pass] v07_components.test_screen_days_and_membership_validity
+[pass] v07_components.test_candidate_filters_by_hand
+[pass] v07_components.test_universe_and_candidates_depend_on_past_data_only
+== v07_components: 15/15 passed (1.65 s) -> C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\engine_tests\v07_components.json
+[pass] reconcile_random.test_seed_11_2012-10-08
+[pass] reconcile_random.test_seed_23_2015-06-01
+[pass] reconcile_random.test_seed_37_2020-06-01
+[pass] reconcile_random.test_seed_41_2023-06-01
+[pass] reconcile_random.test_seed_53_2017-03-01
+[pass] reconcile_random.test_succession_coverage_across_seeds
+== reconcile_random: 6/6 passed (6.64 s) -> C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\engine_tests\reconcile_random.json
+[pass] v08_changes.test_c1a_single_source_confirmed_within_0005_not_beyond
+[pass] v08_changes.test_c1b_disagreement_exactly_one_matching_source
+[pass] v08_changes.test_c1c_ex_date_inside_suspension_step_at_resumption
+[pass] v08_changes.test_c1d_duplicate_rows_stay_pending
+[pass] v08_changes.test_c1e_two_source_events_unchanged_and_rule_2a_switch
+[pass] v08_changes.test_c1_production_configuration_in_config
+[pass] v08_changes.test_c3_cum3_element_and_chinext_boundary
+[pass] v08_changes.test_c5_sell_commission_exceeds_value_and_no_cash
+[pass] v08_changes.test_c8a_rows_after_the_cutoff_never_reach_the_market
+[pass] v08_changes.test_c8a_reader_refuses_late_rows_and_null_dates
+[pass] v08_changes.test_c8c_result_files_carry_the_cutoff
+[pass] v08_changes.test_c8_factor_directory_never_opened_through_the_cut_reader
+== v08_changes: 12/12 passed (0.63 s) -> C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\engine_tests\v08_changes.json
+TOTAL 118/118 tests passed; dry run errors: load=False pipeline=False part_b=False
+{
+ "naive_vs_ledger_rel": 2.6077032089233397e-15,
+ "naive_variants_max_rel": 2.4214386940002442e-15,
+ "R2_daily_rel": 5.124906799045218e-16,
+ "R2_cum_rel": 3.294871930847876e-16,
+ "R1_residual_rel": 1.862645149230957e-16,
+ "R1_residual_alt_rel": 1.862645149230957e-16,
+ "terms_vs_wealth_diff_rel": 5.296897143125534e-16,
+ "R1_normalised_residual_abs": 3.3306690738754696e-16,
+ "normalised_terms_vs_return_diff_abs": 1.4710455076283324e-15,
+ "trade_vector_vs_records_rel": 5.529727786779404e-17,
+ "cash_return_recursion_rel": 6.75208866596222e-16,
+ "turnover_identity_rel": 6.984919309616089e-17,
+ "cost_total_vs_lot_costs_rel": 2.9103830456733702e-18
+}
+{
+ "buy_orders_checked": 5939,
+ "fill_decision_mismatches": 0,
+ "buy_orders_checked_cap_zero": 5939,
+ "fill_decision_mismatches_cap_zero": 0,
+ "lots": 2690,
+ "lots_by_succession_per_seed": {
+  "11": 11,
+  "23": 12,
+  "37": 4,
+  "41": 17,
+  "53": 4
+ },
+ "R3_days_over_tolerance": 0,
+ "non_netting_days": 426
+}
+{
+ "load_error": false,
+ "pipeline_error": false,
+ "part_b_error": false,
+ "seconds": 87.2,
+ "pipeline": {
+  "naive_vs_ledger_rel": 7.823109626770019e-15,
+  "R2_daily_rel": 1.0704806096944417e-15,
+  "R2_cum_rel": 1.563103069202043e-15,
+  "trade_vector_vs_records_rel": 1.4551915228366851e-18,
+  "turnover_identity_rel": 1.1641532182693481e-17,
+  "cost_total_vs_lot_costs_rel": 0.0,
+  "fill_decision_mismatches": 0,
+  "buy_orders_rechecked": 8987,
+  "R2_pass": true,
+  "R3_pass": true,
+  "v07_counts": {
+   "stale_cap_fills": 20,
+   "fills_with_fewer_than_20_traded_days_in_the_cap_window": 0,
+   "sell_orders_not_filled_by_the_cap": 108,
+   "no_ref": 0,
+   "unsubmitted_by_reason": {},
+   "labels_M_from_missing_rows": 0,
+   "orders_on_rows_filled_from_xsrc": 0,
+   "cap_zero_sell_orders_not_filled_by_the_cap": 144,
+   "cap_zero_sell_orders_with_cap_exactly_zero": 20,
+   "cap_zero_naive_vs_ledger_rel": 7.450580596923828e-16,
+   "non_netting_days": 1
+  }
+ },
+ "pipeline_sina_single_source": {
+  "naive_vs_ledger_rel": 4.656612873077393e-15,
+  "R2_daily_rel": 9.98116176406879e-16,
+  "R2_cum_rel": 2.752813088591211e-16,
+  "trade_vector_vs_records_rel": 1.4551915228366851e-18,
+  "turnover_identity_rel": 1.1641532182693481e-17,
+  "cost_total_vs_lot_costs_rel": 0.0,
+  "fill_decision_mismatches": 0,
+  "buy_orders_rechecked": 8987,
+  "R2_pass": true,
+  "R3_pass": true,
+  "v07_counts": {
+   "stale_cap_fills": 20,
+   "fills_with_fewer_than_20_traded_days_in_the_cap_window": 0,
+   "sell_orders_not_filled_by_the_cap": 108,
+   "no_ref": 0,
+   "unsubmitted_by_reason": {},
+   "labels_M_from_missing_rows": 0,
+   "orders_on_rows_filled_from_xsrc": 0,
+   "cap_zero_sell_orders_not_filled_by_the_cap": 144,
+   "cap_zero_sell_orders_with_cap_exactly_zero": 20,
+   "cap_zero_naive_vs_ledger_rel": 2.7939677238464356e-15,
+   "non_netting_days": 1
+  }
+ },
+ "pipeline_merged_provisional": {
+  "naive_vs_ledger_rel": 7.823109626770019e-15,
+  "R2_daily_rel": 1.0704806096944417e-15,
+  "R2_cum_rel": 1.4844260931567987e-15,
+  "trade_vector_vs_records_rel": 1.4551915228366851e-18,
+  "turnover_identity_rel": 1.1641532182693481e-17,
+  "cost_total_vs_lot_costs_rel": 0.0,
+  "fill_decision_mismatches": 0,
+  "buy_orders_rechecked": 8987,
+  "R2_pass": true,
+  "R3_pass": true,
+  "v07_counts": {
+   "stale_cap_fills": 20,
+   "fills_with_fewer_than_20_traded_days_in_the_cap_window": 0,
+   "sell_orders_not_filled_by_the_cap": 108,
+   "no_ref": 0,
+   "unsubmitted_by_reason": {},
+   "labels_M_from_missing_rows": 0,
+   "orders_on_rows_filled_from_xsrc": 0,
+   "cap_zero_sell_orders_not_filled_by_the_cap": 144,
+   "cap_zero_sell_orders_with_cap_exactly_zero": 20,
+   "cap_zero_naive_vs_ledger_rel": 3.725290298461914e-16,
+   "non_netting_days": 1
+  }
+ },
+ "all_landed_bars": {
+  "names_loaded": 1000,
+  "rows": 2975754,
+  "n_problems": 0,
+  "skipped_recently_modified": 0,
+  "truncation_failures": []
+ }
+}

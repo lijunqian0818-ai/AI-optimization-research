@@ -1,0 +1,16 @@
+{
+ "n": 156,
+ "both_advance": 143,
+ "both_exclude": 5,
+ "a_only_advance": 6,
+ "b_only_advance": 2,
+ "observed_agreement": 0.9487,
+ "kappa": 0.53,
+ "pabak": 0.897,
+ "conflicts": 8,
+ "resolved_by": {
+  "A+B": 146,
+  "ADJ": 8,
+  "QC": 2
+ }
+}

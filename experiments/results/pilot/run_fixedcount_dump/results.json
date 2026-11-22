@@ -1,0 +1,1757 @@
+{
+ "config": {
+  "data_cutoff": "2021-12-31",
+  "name": "pilot",
+  "universe_csv": "experiments/data/universe_pilot_v1.csv",
+  "universe_sha256": "10abefede7b7c6facebf3f3f9adf71e757f3abd02860f037ee30855bade28fdd",
+  "codes_subset": [],
+  "N_U": 300,
+  "K": 30,
+  "H": 5,
+  "c": 0.5,
+  "gate_rule": "fixed_count",
+  "K_tr_mult": 3,
+  "W0": 10000000.0,
+  "base_tune_years": [
+   2011,
+   2012
+  ],
+  "base_deploy_start": 2013,
+  "gate_tune_years": [
+   2015,
+   2016
+  ],
+  "eval_years": [
+   2017,
+   2018,
+   2019,
+   2020,
+   2021
+  ],
+  "first_feature_year": 2009,
+  "bases": [
+   "lgbm",
+   "ridge"
+  ],
+  "methods": [
+   "G0",
+   "SCORE",
+   "CONF",
+   "LOSS-LR(-Z)",
+   "LOSS(-Z)",
+   "LOSS(+Z_H)",
+   "LOSS(+Z_O)",
+   "LOSS(+Z_H+Z_O)",
+   "LOSS(+perm Z_H)",
+   "LOSS(+perm Z_O)",
+   "NET-K(-Z)",
+   "NET-K(+Z_H)",
+   "NET-K(+Z_O)",
+   "NET-U(-Z)",
+   "VOL",
+   "LIQ",
+   "TREND",
+   "PERF",
+   "VT"
+  ],
+  "e_const_dev_for": [
+   "SCORE",
+   "CONF",
+   "LOSS(-Z)",
+   "LOSS(+Z_H)",
+   "LOSS(+Z_O)"
+  ],
+  "rnd_for": [
+   "CONF",
+   "LOSS(-Z)",
+   "LOSS(+Z_H)",
+   "LOSS(+Z_O)"
+  ],
+  "n_configs": 4,
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "rnd_reps": 5,
+  "bootstrap_B": 2000,
+  "block_mean": 24,
+  "delta_mon": 0.1,
+  "n_jobs": 6,
+  "lgbm_threads": 4,
+  "out_dir": "experiments/results/pilot/run_fixedcount_dump",
+  "panel_dir": "experiments/data/derived/feature_panel",
+  "decision_cutoff": ""
+ },
+ "pilot_reductions": {
+  "n_configs": "T reduced from 30 to n_configs random-search configurations for every learned method (base LightGBM, base ridge, LOSS, LOSS-LR, NET-K, NET-U); grid methods (TREND, PERF, VT) searched over at most n_configs grid points",
+  "seeds": "seeds {0,1,2} instead of {0,...,4} for every stochastic component",
+  "rnd_reps": "RND Monte-Carlo repetitions reduced from 200",
+  "bootstrap_B": "bootstrap resamples reduced from 10,000"
+ },
+ "list": {
+  "list_file": "C:\\Users\\lijun\\Desktop\\AI-Optimization-Research\\experiments\\data\\universe_pilot_v1.csv",
+  "list_sha256": "10abefede7b7c6facebf3f3f9adf71e757f3abd02860f037ee30855bade28fdd",
+  "n_list": 1000,
+  "n_used": 1000,
+  "board_counts": {
+   "SH_main": 898,
+   "ChiNext": 45,
+   "SZ_main": 38,
+   "STAR": 19
+  }
+ },
+ "readiness": {
+  "n_ready": 1000,
+  "n_skipped": 0,
+  "skipped": []
+ },
+ "market": {
+  "n_days": 3407,
+  "first_day": "2008-01-02",
+  "last_day": "2021-12-31",
+  "data_cutoff": "2021-12-31",
+  "n_problems": 0,
+  "problems": [],
+  "event_table_counts": {
+   "source_rows": 30427,
+   "rows_not_implemented_without_ex_date": 5642,
+   "rows_empty_amounts": 24,
+   "rows_other_status_with_ex_date": 0,
+   "rows_implemented_without_ex_date": 82,
+   "rows_outside_panel_or_listing": 9153,
+   "groups": 8017,
+   "confirmed_3_sources": 0,
+   "confirmed_2_sources": 7504,
+   "single_source": 508,
+   "disagreement": 5,
+   "duplicate_rows_in_one_source": 0,
+   "confirmed_by_price_single": 462,
+   "confirmed_by_price_disagreement": 0,
+   "rule2a_no_reference_step": 12,
+   "rule2a_no_matching_source": 33,
+   "rule2a_several_matching_sources": 3,
+   "rule2a_record_date_relation": 3,
+   "rule2a_step_at_resumption": 6,
+   "resolved_by_announcement": 0,
+   "rejected": 0,
+   "record_date_violation": 0,
+   "amount_flagged": 261,
+   "amount_hand_check": 35,
+   "no_step_expected": 40,
+   "matched_same_day": 7920,
+   "conflict_a_matched": 25,
+   "conflict_b_pairs": 0,
+   "conflict_b_event_date": 0,
+   "conflict_b_step_date": 0,
+   "conflict_b_undecided_or_pending": 0,
+   "conflict_c_not_booked": 7,
+   "conflict_c_confirmed_by_announcement": 0,
+   "booked_dist_events": 7936,
+   "forced_U_events": 81,
+   "rights_rows": 626,
+   "rights_in_table": 626,
+   "rights_undated": 0,
+   "rights_missing_record_date": 0,
+   "steps_total": 8045,
+   "steps_explained_by_event": 7951,
+   "steps_explained_by_rights": 65,
+   "steps_urs": 27,
+   "steps_urs_after_missing_row": 2,
+   "steps_resolved_explained": 0,
+   "code_change_mapping": "not applied (OA9 table does not exist)",
+   "hand_check_items": 830,
+   "pending_policy": "U"
+  },
+  "event_table_by_year": {
+   "1991": {
+    "rights:listed": 1
+   },
+   "1992": {
+    "rights:listed": 3
+   },
+   "1993": {
+    "rights:listed": 38,
+    "rights:delisted": 5
+   },
+   "1994": {
+    "rights:listed": 34,
+    "rights:delisted": 4
+   },
+   "1995": {
+    "rights:delisted": 4,
+    "rights:listed": 36
+   },
+   "1996": {
+    "rights:listed": 26,
+    "rights:delisted": 1
+   },
+   "1997": {
+    "rights:listed": 60,
+    "rights:delisted": 5
+   },
+   "1998": {
+    "rights:listed": 74,
+    "rights:delisted": 9
+   },
+   "1999": {
+    "rights:listed": 58,
+    "rights:delisted": 4
+   },
+   "2000": {
+    "rights:delisted": 5,
+    "rights:listed": 92
+   },
+   "2001": {
+    "rights:listed": 57,
+    "rights:delisted": 3
+   },
+   "2002": {
+    "rights:listed": 9,
+    "rights:delisted": 1
+   },
+   "2003": {
+    "rights:listed": 14
+   },
+   "2004": {
+    "rights:listed": 9
+   },
+   "2005": {
+    "rights:listed": 1
+   },
+   "2006": {
+    "rights:listed": 3
+   },
+   "2007": {
+    "rights:listed": 5
+   },
+   "2008": {
+    "rights:listed": 6,
+    "confirmed_2_sources:listed": 463,
+    "confirmed_by_price:delisted": 19,
+    "confirmed_by_price:listed": 18,
+    "booked:listed": 480,
+    "booked:delisted": 19,
+    "forced_U:listed": 7,
+    "pending:amount_vs_reference_price:listed": 1,
+    "pending:single_source:listed": 4,
+    "forced_U:delisted": 1,
+    "pending:single_source:delisted": 1,
+    "pending:single_source+amount_vs_reference_price:listed": 1,
+    "pending:disagreement:listed": 1,
+    "urs:listed": 2,
+    "urs:delisted": 2
+   },
+   "2009": {
+    "rights:delisted": 1,
+    "rights:listed": 4,
+    "confirmed_2_sources:listed": 416,
+    "confirmed_by_price:delisted": 16,
+    "confirmed_by_price:listed": 18,
+    "booked:listed": 433,
+    "booked:delisted": 16,
+    "forced_U:listed": 3,
+    "pending:single_source+amount_vs_reference_price:listed": 1,
+    "pending:single_source:listed": 1,
+    "forced_U:delisted": 1,
+    "pending:single_source:delisted": 1,
+    "pending:amount_vs_reference_price:listed": 1,
+    "urs:listed": 1
+   },
+   "2010": {
+    "rights:listed": 12,
+    "confirmed_2_sources:listed": 455,
+    "confirmed_by_price:delisted": 15,
+    "confirmed_by_price:listed": 14,
+    "booked:listed": 468,
+    "booked:delisted": 15,
+    "forced_U:listed": 4,
+    "pending:single_source:listed": 3,
+    "pending:amount_vs_reference_price:listed": 1,
+    "urs:listed": 4
+   },
+   "2011": {
+    "rights:delisted": 1,
+    "rights:listed": 3,
+    "confirmed_2_sources:listed": 460,
+    "confirmed_by_price:delisted": 14,
+    "confirmed_by_price:listed": 14,
+    "booked:listed": 474,
+    "booked:delisted": 14,
+    "forced_U:listed": 2,
+    "pending:disagreement:listed": 1,
+    "pending:single_source+amount_vs_reference_price:listed": 1,
+    "forced_U:delisted": 1,
+    "pending:single_source:delisted": 1,
+    "urs:listed": 1,
+    "urs:delisted": 1
+   },
+   "2012": {
+    "rights:listed": 4,
+    "confirmed_2_sources:listed": 501,
+    "confirmed_by_price:delisted": 16,
+    "confirmed_by_price:listed": 16,
+    "booked:listed": 517,
+    "booked:delisted": 16,
+    "forced_U:listed": 2,
+    "pending:disagreement:listed": 1,
+    "pending:single_source:listed": 1,
+    "urs:listed": 4
+   },
+   "2013": {
+    "rights:listed": 8,
+    "confirmed_2_sources:listed": 538,
+    "confirmed_by_price:delisted": 17,
+    "confirmed_by_price:listed": 25,
+    "booked:listed": 563,
+    "booked:delisted": 17,
+    "forced_U:listed": 4,
+    "pending:single_source:listed": 3,
+    "pending:single_source+amount_vs_reference_price:listed": 1,
+    "urs:listed": 6
+   },
+   "2014": {
+    "rights:listed": 4,
+    "rights:delisted": 1,
+    "confirmed_2_sources:listed": 558,
+    "confirmed_by_price:delisted": 16,
+    "confirmed_by_price:listed": 27,
+    "booked:listed": 585,
+    "booked:delisted": 16,
+    "forced_U:delisted": 3,
+    "pending:single_source:delisted": 2,
+    "forced_U:listed": 4,
+    "pending:single_source:listed": 4,
+    "pending:single_source+amount_vs_reference_price:delisted": 1,
+    "urs:listed": 1,
+    "urs:delisted": 1
+   },
+   "2015": {
+    "confirmed_2_sources:listed": 569,
+    "confirmed_by_price:delisted": 19,
+    "confirmed_by_price:listed": 31,
+    "booked:listed": 598,
+    "booked:delisted": 19,
+    "forced_U:listed": 3,
+    "pending:single_source:listed": 1,
+    "pending:amount_vs_reference_price:listed": 1,
+    "pending:no_step:listed": 1
+   },
+   "2016": {
+    "rights:listed": 2,
+    "confirmed_2_sources:listed": 538,
+    "confirmed_by_price:delisted": 13,
+    "confirmed_by_price:listed": 28,
+    "booked:listed": 566,
+    "booked:delisted": 13,
+    "forced_U:listed": 5,
+    "pending:single_source:listed": 4,
+    "forced_U:delisted": 2,
+    "pending:single_source:delisted": 2,
+    "pending:disagreement+amount_vs_reference_price:listed": 1,
+    "urs:listed": 2
+   },
+   "2017": {
+    "rights:listed": 3,
+    "confirmed_2_sources:listed": 580,
+    "confirmed_by_price:delisted": 16,
+    "confirmed_by_price:listed": 21,
+    "booked:listed": 599,
+    "booked:delisted": 16,
+    "forced_U:listed": 4,
+    "pending:no_step:listed": 2,
+    "pending:single_source:listed": 2,
+    "forced_U:delisted": 1,
+    "pending:single_source:delisted": 1,
+    "urs:listed": 1
+   },
+   "2018": {
+    "rights:listed": 4,
+    "confirmed_2_sources:listed": 634,
+    "confirmed_by_price:delisted": 10,
+    "confirmed_by_price:listed": 28,
+    "booked:listed": 660,
+    "booked:delisted": 10,
+    "forced_U:listed": 3,
+    "pending:single_source+amount_vs_reference_price:listed": 1,
+    "pending:amount_vs_reference_price:listed": 1,
+    "pending:no_step:listed": 1
+   },
+   "2019": {
+    "rights:listed": 5,
+    "confirmed_2_sources:listed": 595,
+    "confirmed_by_price:delisted": 5,
+    "confirmed_by_price:listed": 17,
+    "booked:listed": 605,
+    "forced_U:listed": 8,
+    "pending:amount_vs_reference_price:listed": 6,
+    "booked:delisted": 5,
+    "pending:single_source+amount_vs_reference_price:listed": 1,
+    "pending:no_step:listed": 1,
+    "urs:listed": 2
+   },
+   "2020": {
+    "rights:listed": 4,
+    "confirmed_2_sources:listed": 594,
+    "confirmed_by_price:delisted": 3,
+    "confirmed_by_price:listed": 13,
+    "booked:listed": 600,
+    "forced_U:listed": 10,
+    "pending:amount_vs_reference_price:listed": 6,
+    "booked:delisted": 3,
+    "pending:single_source:listed": 1,
+    "pending:single_source+amount_vs_reference_price:listed": 2,
+    "pending:no_step:listed": 1,
+    "urs:listed": 1
+   },
+   "2021": {
+    "rights:listed": 3,
+    "confirmed_2_sources:listed": 603,
+    "confirmed_by_price:delisted": 1,
+    "confirmed_by_price:listed": 12,
+    "booked:listed": 608,
+    "booked:delisted": 1,
+    "forced_U:listed": 13,
+    "pending:amount_vs_reference_price:listed": 6,
+    "pending:single_source:listed": 3,
+    "pending:single_source+amount_vs_reference_price:listed": 2,
+    "pending:disagreement:listed": 1,
+    "pending:no_step:listed": 1
+   }
+  },
+  "event_table_hash": "5fd5696ec9f4efac447018f701ef3b83010b604813ee53bee913c003de2b1703",
+  "hand_check_items_diagnostic": 830,
+  "urs": 29,
+  "event_sources": {
+   "EV1_files": 888,
+   "EV2_files": 1000,
+   "EV3_files": 0,
+   "rights_files": 376,
+   "EV1_rows": 11818,
+   "EV2_rows": 18609,
+   "EV3_rows": 0,
+   "rights_rows": 626,
+   "sources_read": [
+    "EV1",
+    "EV2",
+    "rights"
+   ],
+   "event_date_fields_after_cutoff_set_missing": 0
+  },
+  "dispositions": {
+   "no_row": [
+    "sh.600001",
+    "sh.600003",
+    "sh.600005",
+    "sh.600068",
+    "sh.600069",
+    "sh.600074",
+    "sh.600086",
+    "sh.600087",
+    "sh.600102",
+    "sh.600175",
+    "sh.600240",
+    "sh.600247",
+    "sh.600253",
+    "sh.600263",
+    "sh.600270",
+    "sh.600317",
+    "sh.600357",
+    "sh.600401",
+    "sh.600432",
+    "sh.600485",
+    "sh.600553",
+    "sh.600591",
+    "sh.600607",
+    "sh.600614",
+    "sh.600627",
+    "sh.600631",
+    "sh.600634",
+    "sh.600656",
+    "sh.600677",
+    "sh.600680",
+    "sh.600687",
+    "sh.600701",
+    "sh.600723",
+    "sh.600747",
+    "sh.600786",
+    "sh.600806",
+    "sh.600832",
+    "sh.600840",
+    "sh.600842",
+    "sh.600849",
+    "sh.600891",
+    "sh.600978",
+    "sh.600991",
+    "sz.002071",
+    "sz.002450",
+    "sz.300104"
+   ],
+   "fallback_sentence_required": true
+  }
+ },
+ "panel": {
+  "dir": "C:\\Users\\lijun\\Desktop\\AI-Optimization-Research\\experiments\\data\\derived\\feature_panel",
+  "n_ok": 969,
+  "n_error": 31,
+  "errors": [
+   {
+    "code": "sh.600925",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.600930",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.600938",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.600941",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.601022",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.601026",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.601033",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.601096",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.603061",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.603102",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.603107",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.603207",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.688048",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.688209",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.688375",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.688429",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.688627",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.688657",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.688785",
+    "error": "ValueError: empty bar file"
+   },
+   {
+    "code": "sh.688811",
+    "error": "ValueError: empty bar file"
+   }
+  ],
+  "blk_trades": 40732,
+  "blk_implausible": 8
+ },
+ "universe": {
+  "screens": 167,
+  "members_per_screen": [
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300,
+   300
+  ],
+  "eligible_per_screen_min_med_max": [
+   0,
+   782,
+   851
+  ],
+  "candidates_per_day_min_med_max": [
+   201,
+   294,
+   300
+  ],
+  "days_with_fewer_than_K_candidates": 0,
+  "removed": {
+   "removed_listing_age": 0,
+   "removed_suspended": 21202,
+   "removed_no_row": 44,
+   "removed_st_lookback": 1614
+  },
+  "last_decision_day": "2021-12-10"
+ },
+ "features": {
+  "rows": 920940,
+  "columns": {
+   "-Z": 315,
+   "Z_H": 8,
+   "Z_O": 41
+  },
+  "candidate_rows_without_feature_row": 0
+ },
+ "base": {
+  "lgbm": {
+   "chosen": {
+    "num_leaves": 31,
+    "learning_rate": 0.05,
+    "n_estimators": 200,
+    "min_child_frac": 0.002,
+    "feature_fraction": 0.5,
+    "lambda_l2": 10.0
+   },
+   "tuning": [
+    {
+     "config": {
+      "num_leaves": 15,
+      "learning_rate": 0.05,
+      "n_estimators": 100,
+      "min_child_frac": 0.01,
+      "feature_fraction": 0.5,
+      "lambda_l2": 1.0
+     },
+     "mean_rank_ic": 0.10452083122062827,
+     "values": [
+      0.06866817160774427,
+      0.13683557224707912,
+      0.0736338276885732,
+      0.1401873862379628,
+      0.07537145027676029,
+      0.13242857926565002
+     ]
+    },
+    {
+     "config": {
+      "num_leaves": 15,
+      "learning_rate": 0.1,
+      "n_estimators": 400,
+      "min_child_frac": 0.01,
+      "feature_fraction": 0.5,
+      "lambda_l2": 0.0
+     },
+     "mean_rank_ic": 0.11162441976304201,
+     "values": [
+      0.07572077426759957,
+      0.14269488925971505,
+      0.07489778965571287,
+      0.14724035074556246,
+      0.07678076352069299,
+      0.15241195112896913
+     ]
+    },
+    {
+     "config": {
+      "num_leaves": 31,
+      "learning_rate": 0.05,
+      "n_estimators": 100,
+      "min_child_frac": 0.0005,
+      "feature_fraction": 0.5,
+      "lambda_l2": 1.0
+     },
+     "mean_rank_ic": 0.10884218971183324,
+     "values": [
+      0.07887901236898592,
+      0.14053325931477118,
+      0.0788041315757377,
+      0.1382145836235856,
+      0.0780955046509417,
+      0.13852664673697737
+     ]
+    },
+    {
+     "config": {
+      "num_leaves": 31,
+      "learning_rate": 0.05,
+      "n_estimators": 200,
+      "min_child_frac": 0.002,
+      "feature_fraction": 0.5,
+      "lambda_l2": 10.0
+     },
+     "mean_rank_ic": 0.11288432954255406,
+     "values": [
+      0.07799309146839176,
+      0.14698720443914012,
+      0.07997600082752877,
+      0.1431125056396823,
+      0.08588308954473671,
+      0.1433540853358447
+     ]
+    }
+   ]
+  },
+  "ridge": {
+   "chosen": {
+    "model": "ridge",
+    "alpha": 100.0
+   },
+   "tuning": [
+    {
+     "config": {
+      "model": "ridge",
+      "alpha": 1.0
+     },
+     "mean_rank_ic": 0.08491777122709246,
+     "values": [
+      0.058620091085574116,
+      0.1112154513686108
+     ]
+    },
+    {
+     "config": {
+      "model": "ridge",
+      "alpha": 100.0
+     },
+     "mean_rank_ic": 0.0851627577035385,
+     "values": [
+      0.05741487105431195,
+      0.11291064435276504
+     ]
+    },
+    {
+     "config": {
+      "model": "ridge",
+      "alpha": 1000.0
+     },
+     "mean_rank_ic": 0.08478151697423392,
+     "values": [
+      0.05470012028414291,
+      0.11486291366432494
+     ]
+    },
+    {
+     "config": {
+      "model": "enet",
+      "alpha": 0.001
+     },
+     "mean_rank_ic": 0.08304993072901368,
+     "values": [
+      0.05739641276906869,
+      0.10870344868895866
+     ]
+    }
+   ]
+  }
+ },
+ "standard_orders": {
+  "n": 635728,
+  "filled": 633601,
+  "by_reason": {
+   "filled": 633601,
+   "S1": 1227,
+   "S2": 900
+  },
+  "unresolved": 0,
+  "o1_outcome": {
+   "value": 633482,
+   "": 2127,
+   "U": 119
+  }
+ },
+ "tuning": {
+  "lgbm|LOSS-LR(-Z)": {
+   "configs": [
+    {
+     "C": 0.001
+    },
+    {
+     "C": 0.01
+    },
+    {
+     "C": 1.0
+    },
+    {
+     "C": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0002862781868852193,
+    -0.00014042045203143847,
+    -9.128173584498132e-05,
+    -9.953951845845672e-05
+   ],
+   "chosen": 0,
+   "reused": true
+  },
+  "lgbm|LOSS(-Z)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.00028364686374224,
+    0.00029944415561102846,
+    0.00020452843123025275,
+    0.00027463804250381954
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "lgbm|LOSS(+Z_H)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.00014624464339294487,
+    0.0005775245223714854,
+    0.0003923260733606885,
+    0.0005520876522740556
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "lgbm|LOSS(+Z_O)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0001262223145222892,
+    -2.58117479846116e-05,
+    0.0004074279345777753,
+    0.000379203217903217
+   ],
+   "chosen": 2,
+   "reused": true
+  },
+  "lgbm|LOSS(+Z_H+Z_O)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    -4.7193492077826816e-05,
+    0.0004801328196953054,
+    0.00033684811248479123,
+    0.0003476919987364421
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "lgbm|LOSS(+perm Z_H)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.00026031178384865633,
+    0.0004062021482656761,
+    0.0002671025961179152,
+    0.00022678722762181405
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "lgbm|LOSS(+perm Z_O)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0001480686973156813,
+    0.00043362853303691683,
+    -5.028609661426989e-05,
+    0.0003977990417301384
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "lgbm|NET-K(-Z)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.00047667622764750527,
+    0.0008061533575744805,
+    0.0004225150145200373,
+    0.000366467157818607
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "lgbm|NET-K(+Z_H)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0005796321326130587,
+    0.0009446185140099695,
+    0.0004507866682714106,
+    0.0007665919619536805
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "lgbm|NET-K(+Z_O)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0002614225588653762,
+    0.0004639987046128513,
+    0.00012788485206926048,
+    0.0004902318539041578
+   ],
+   "chosen": 3,
+   "reused": true
+  },
+  "lgbm|NET-U(-Z)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0019089413079676962,
+    0.002901645670113928,
+    0.0006510601999084985,
+    0.003135732261575918
+   ],
+   "chosen": 3,
+   "reused": true
+  },
+  "ridge|LOSS-LR(-Z)": {
+   "configs": [
+    {
+     "C": 0.001
+    },
+    {
+     "C": 0.01
+    },
+    {
+     "C": 1.0
+    },
+    {
+     "C": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0005124722873814249,
+    0.00042603055082649573,
+    0.00017484844879012737,
+    0.00020323696353469754
+   ],
+   "chosen": 0,
+   "reused": true
+  },
+  "ridge|LOSS(-Z)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0006241356434210041,
+    0.0007973888498066789,
+    0.00047095069427100585,
+    0.0005635501336485899
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "ridge|LOSS(+Z_H)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0004403846380135105,
+    0.0006925187113481708,
+    0.0010661563143607277,
+    0.0007658044467054163
+   ],
+   "chosen": 2,
+   "reused": true
+  },
+  "ridge|LOSS(+Z_O)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.00010805591769099472,
+    0.00038560626935821724,
+    0.000401625232963385,
+    0.000543812383543278
+   ],
+   "chosen": 3,
+   "reused": true
+  },
+  "ridge|LOSS(+Z_H+Z_O)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.00019006813599404477,
+    0.000651998279117051,
+    0.00028937921302194837,
+    0.0005393260227081175
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "ridge|LOSS(+perm Z_H)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0003561638848604449,
+    0.0006731191258637709,
+    0.0010446175090189896,
+    0.0008887461470357639
+   ],
+   "chosen": 2,
+   "reused": true
+  },
+  "ridge|LOSS(+perm Z_O)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0006500046268599786,
+    0.00042817745705948424,
+    0.00044715687162569825,
+    0.0006609897426792313
+   ],
+   "chosen": 3,
+   "reused": true
+  },
+  "ridge|NET-K(-Z)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.0003442041560385428,
+    0.0006531011977491608,
+    0.0003819263841491488,
+    0.0006372323189341421
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "ridge|NET-K(+Z_H)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.00044420407738981826,
+    0.0009666147028644322,
+    0.00037347193942318307,
+    0.0007275212299352034
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "ridge|NET-K(+Z_O)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.00012777793709780244,
+    0.0007889251089977971,
+    0.00014481720146089334,
+    0.000612693580735758
+   ],
+   "chosen": 1,
+   "reused": true
+  },
+  "ridge|NET-U(-Z)": {
+   "configs": [
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 15,
+     "learning_rate": 0.1,
+     "n_estimators": 400,
+     "min_child_frac": 0.01,
+     "feature_fraction": 0.5,
+     "lambda_l2": 0.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 100,
+     "min_child_frac": 0.0005,
+     "feature_fraction": 0.5,
+     "lambda_l2": 1.0
+    },
+    {
+     "num_leaves": 31,
+     "learning_rate": 0.05,
+     "n_estimators": 200,
+     "min_child_frac": 0.002,
+     "feature_fraction": 0.5,
+     "lambda_l2": 10.0
+    }
+   ],
+   "criterion_mean_theta_sel": [
+    0.003191320967633061,
+    0.003700008258973488,
+    0.0014186310862694055,
+    0.0021254671509775506
+   ],
+   "chosen": 1,
+   "reused": true
+  }
+ },
+ "timing": {
+  "1_list": {
+   "seconds": 0.6
+  },
+  "2_market": {
+   "seconds": 42.1
+  },
+  "3_panel": {
+   "seconds": 11.0
+  },
+  "4_universe": {
+   "seconds": 0.8
+  },
+  "5_features": {
+   "seconds": 37.3
+  },
+  "6_base": {
+   "seconds": 1080.1
+  },
+  "7_standard_orders": {
+   "seconds": 21.7
+  },
+  "8_gates": {
+   "seconds": 2228.9
+  }
+ },
+ "data_cutoff": "2021-12-31",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ }
+}

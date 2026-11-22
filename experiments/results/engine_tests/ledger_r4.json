@@ -1,0 +1,158 @@
+{
+ "module": "ledger_r4",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ },
+ "n": 20,
+ "passed": 20,
+ "failed": 0,
+ "seconds": 0.02,
+ "results": [
+  {
+   "test": "test_dividend_no_trade_three_tax_regimes",
+   "doc": "R4(a) + rule-calendar case: record date before 2013, 2013-2015-09-07, from 2015-09-08.",
+   "status": "pass",
+   "info": {
+    "2012-12-28": {
+     "W_open_ex": 99942.245,
+     "W_final": 100025.20019999999
+    },
+    "2014-06-10": {
+     "W_open_ex": 99892.245,
+     "W_final": 99975.20019999999
+    },
+    "2016-03-03": {
+     "W_open_ex": 99892.3,
+     "W_final": 99975.308
+    }
+   }
+  },
+  {
+   "test": "test_dividend_pay_date_after_ex_date",
+   "doc": "Receivable until the pay date: wealth moves at the ex-date, spendable cash at the pay date.",
+   "status": "pass"
+  },
+  {
+   "test": "test_split_two_for_one_no_trade",
+   "doc": "R4(b): share multiplier 2, price halves: q doubles, wealth unchanged, traded amount exactly 0.",
+   "status": "pass"
+  },
+  {
+   "test": "test_pure_price_move_no_trade",
+   "doc": "R4(c): unchanged position through a price move: traded amount 0 (not h_t - h_{t-1}).",
+   "status": "pass"
+  },
+  {
+   "test": "test_every_cost_once",
+   "doc": "Buy 1000 @ 10.00, sell @ 11.00 with non-zero slippage: wealth change = 1000 - 7.7 - 19.47.",
+   "status": "pass"
+  },
+  {
+   "test": "test_cash_return_cost_debited_at_trade",
+   "doc": "Lemma 3 round-3 counterexample: cash 100, cost 1 at the start, cash return 10% -> 108.9, not 109.",
+   "status": "pass"
+  },
+  {
+   "test": "test_transfer_fee_sse_per_share_vs_szse",
+   "doc": "Buy 1000 @ 10.00 on 2015-07-30: SSE 1000 x 0.000375 = 0.375; SZSE 10000 x 0.0000255 = 0.255.",
+   "status": "pass"
+  },
+  {
+   "test": "test_stamp_duty_2023_08_25_vs_28",
+   "doc": "Sell 1000 @ 10.00: stamp 10.00 on 2023-08-25, 5.00 on 2023-08-28.",
+   "status": "pass",
+   "info": {
+    "stamp": [
+     10.0,
+     5.0
+    ]
+   }
+  },
+  {
+   "test": "test_K2_no_trade_day_and_K3_missing_close",
+   "doc": "K2: suspended day -> intraday return exactly 0, next overnight carries the move.",
+   "status": "pass"
+  },
+  {
+   "test": "test_split_effective_on_a_suspended_day",
+   "doc": "2-for-1 with ex-date inside a suspension: q doubles on the ex-date, P1 value halves, no trade.",
+   "status": "pass"
+  },
+  {
+   "test": "test_cv_is_immaterial_for_open_to_open_position",
+   "doc": "Replacing every CV by an arbitrary positive number leaves the P&L of a position held from",
+   "status": "pass",
+   "info": {
+    "pnl": 653.5380000000005,
+    "max_abs_diff_track_total": 7.048583938740194e-12
+   }
+  },
+  {
+   "test": "test_rights_issue_P1R_ledger_and_label",
+   "doc": "Mark day inside the payment-period suspension: convention P1-R of instantiation_ashare.md.",
+   "status": "pass",
+   "info": {
+    "P1R_mark": 10.45695059625213,
+    "cum_rights_close": 10.66
+   }
+  },
+  {
+   "test": "test_P1_restatement_uses_gross_dividend",
+   "doc": "Suspended across an ex-date: m = (10 - 0.5 gross) / 1.25 = 7.6; cash D gets the NET amount.",
+   "status": "pass"
+  },
+  {
+   "test": "test_label_values_by_hand",
+   "doc": "Buy 1000 @ 10.00 (basis 10007.7), H = 2, mark at the open of day 3.",
+   "status": "pass"
+  },
+  {
+   "test": "test_label_branches_P4_U_M_Sd_Se",
+   "doc": "",
+   "status": "pass"
+  },
+  {
+   "test": "test_ledger_delisting_U_cashout_exchange",
+   "doc": "Ledger side of U / S-d / S-e: write-off at the U33 value, cash-out and succession are not trades.",
+   "status": "pass"
+  },
+  {
+   "test": "test_suspension_spanning_exit_and_long_spell",
+   "doc": "Scheduled exit inside a suspension: O1 marks by P1 (spell length reported), LP retries the sale.",
+   "status": "pass"
+  },
+  {
+   "test": "test_label_frozen_and_reads_nothing_after_mark_day",
+   "doc": "The label of an entry of day t is set at begin_day(t+H+1), never recomputed, and equals the label",
+   "status": "pass"
+  },
+  {
+   "test": "test_two_strategies_same_name_entry_exit_same_day_and_zero_baseline",
+   "doc": "G sells A on day 3 while B buys A on day 3; C is held by G only; B has zero exposure on days 1-2;",
+   "status": "pass",
+   "info": {
+    "max_R2_daily_abs": 7.321432349272072e-11,
+    "residuals": {
+     "zero": 4.547473508864641e-13,
+     "A": -4.547473508864641e-13,
+     "A+C": 4.547473508864641e-13
+    },
+    "terms_minus_wealth_diff": 2.5011104298755527e-11
+   }
+  },
+  {
+   "test": "test_reference_path_no_trade_on_dividend_and_split",
+   "doc": "R4 (a), (b) with the tolerances of PLAN 3.9 as amended in v0.7 (E-8):",
+   "status": "pass",
+   "info": {
+    "max_reference_trade_after_entry": 2.2282620193436743e-12,
+    "tolerance": 1e-05,
+    "C_E_open": 7.700000000000004,
+    "C_E_close": 1.7595311874174514e-15,
+    "note": "reference path: zero to 1e-10 x W_0, not bit-exact; real strategy: bitwise zero"
+   }
+  }
+ ]
+}

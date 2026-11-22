@@ -1,0 +1,131 @@
+{
+ "module": "v07_components",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ },
+ "n": 15,
+ "passed": 15,
+ "failed": 0,
+ "seconds": 1.65,
+ "results": [
+  {
+   "test": "test_event_two_and_three_source_confirmation",
+   "doc": "Rule 2: confirmed iff two of EV1-EV3 agree on cash (0.0001), ratio and record date.  The step",
+   "status": "pass"
+  },
+  {
+   "test": "test_event_single_source_and_disagreement_go_to_hand_check",
+   "doc": "Rule 3.  Pending rule: not booked, outcome U on the ex-date (forced_class 'U'); the step of that",
+   "status": "pass"
+  },
+  {
+   "test": "test_event_status_filter_implemented_only",
+   "doc": "Rule 10 (G-2): a row enters only if its status says implemented AND it has an ex-date.  A row",
+   "status": "pass"
+  },
+  {
+   "test": "test_event_step_without_event_goes_to_URS",
+   "doc": "Rule 4: a reference-price step that no event explains -> hand check; unresolved -> URS (label U).",
+   "status": "pass"
+  },
+  {
+   "test": "test_event_ex_date_inside_suspension_step_at_resumption",
+   "doc": "Rule 9 (a) with rule 7: ex-date (day 5) inside a suspension (days 4-6); the bar source carries",
+   "status": "pass"
+  },
+  {
+   "test": "test_event_date_conflict_decidable_and_undecidable",
+   "doc": "Rule 9 (b): the sources' ex-date (day 3) is a traded day without a step; an unexplained step",
+   "status": "pass"
+  },
+  {
+   "test": "test_event_without_any_step",
+   "doc": "Rule 9 (c): amounts imply a step of 0.50 but `preclose` never moves and no announcement",
+   "status": "pass"
+  },
+  {
+   "test": "test_event_record_date_rule_and_amount_consistency",
+   "doc": "Rule 10 (E-11): record date must be the trading day before the ex-date; a confirmed event that",
+   "status": "pass"
+  },
+  {
+   "test": "test_event_rights_rows",
+   "doc": "Rule 5: rights issues from the Sina rights table; each goes to the hand-check list; a dated row",
+   "status": "pass"
+  },
+  {
+   "test": "test_loader_status_filter_delisting_and_flags",
+   "doc": "ENG-8 (a), G-3, ENG-13 (b), on an imitation of data/raw in a temporary directory.",
+   "status": "pass",
+   "info": {
+    "sina_not_in_table": [
+     "sh.600001 2008-03-20: ex-date present but status '预案' (hand check)",
+     "sh.600001 announced 2008-03-25: rights row without dates (hand check)"
+    ],
+    "merged_counts": {
+     "confirmed_2_sources": 1,
+     "booked_dist_events": 1,
+     "hand_check_items": 3
+    }
+   }
+  },
+  {
+   "test": "test_FC_A4_no_factor_or_adjusted_price_is_read",
+   "doc": "FC-A4: labels and ledger never read a vendor adjustment factor or an adjusted price.",
+   "status": "pass",
+   "info": {
+    "files_opened": 3,
+    "refused_variants": 5
+   }
+  },
+  {
+   "test": "test_universe_screen_by_hand",
+   "doc": "U-LIQ on a screen day (window 5, at least 3 traded days, at least 5 days listed, N_U = 2 / 3):",
+   "status": "pass",
+   "info": {
+    "members_N2": [
+     "sz.300004",
+     "sz.000007"
+    ],
+    "counts": {
+     "screen_day": "2021-03-10",
+     "names_with_a_row": 8,
+     "eligible": 4,
+     "members": 2,
+     "excluded_board": 1,
+     "excluded_listing_age": 1,
+     "excluded_inactive": 1,
+     "excluded_st_or_no_row": 1
+    }
+   }
+  },
+  {
+   "test": "test_screen_days_and_membership_validity",
+   "doc": "Screen day = last market trading day of a calendar month; its membership is used for the",
+   "status": "pass"
+  },
+  {
+   "test": "test_candidate_filters_by_hand",
+   "doc": "C_t = members, listed at least 3 days (U11 scaled down), not suspended on t-1, with a row on",
+   "status": "pass",
+   "info": {
+    "members": 6,
+    "removed_listing_age": 1,
+    "removed_suspended": 1,
+    "removed_no_row": 1,
+    "removed_st_lookback": 1,
+    "candidates": 2
+   }
+  },
+  {
+   "test": "test_universe_and_candidates_depend_on_past_data_only",
+   "doc": "Truncation test: every row dated after the screen day s (after t-1 for the candidate set) is",
+   "status": "pass",
+   "info": {
+    "comparisons": 30
+   }
+  }
+ ]
+}

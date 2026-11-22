@@ -1,0 +1,7 @@
+2026-11-15 17:30:46 [run] id=universe_20261115_173046 stage=universe sources=['bs_stock_basic', 'bs_trade_dates', 'bs_stock_industry', 'sse_delist', 'szse_delist'] limit=0 codes_file=- period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\universe_20261115_173046.log
+2026-11-15 17:30:46 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=0, progress_units=20, progress_seconds=300.0, resume=True, retry_empty=False, run_id='universe_20261115_173046')
+2026-11-15 17:30:46 [start] universe: units total=5 already done (verified)=5 to fetch=0
+2026-11-15 17:30:46 [final] universe: done=5/5 (this run 0: ok=0 empty=0 failed=0; resumed-skip=5) success=nan% mean=0.0s/unit ETA=n/a requests this run: baostock=0 http=0 pauses=0
+2026-11-15 17:30:46 [universe] work list: 5478 A-shares listed at any time in [2008-01-01, 2026-06-30] -> universe/a_share_worklist.csv
+2026-11-15 17:30:46 [universe] summary written to C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\universe_summary.json: worklist_n=5478 by_board={'sse_main': 1816, 'chinext': 1439, 'szse_main(sme_until_2021)': 973, 'szse_main': 636, 'star': 613, 'chinext(prefix_302_unverified)': 1}
+2026-11-15 17:30:46 [exit] code=0

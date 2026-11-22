@@ -1,0 +1,174 @@
+{
+ "note": "share of nominated orders (evaluation years); no outcome read",
+ "n_rows": 216360,
+ "lgbm": {
+  "zo_lhb_ind_1": {
+   "share_one": 0.001294139397300795,
+   "share_nan": 0.0
+  },
+  "zo_lhb_ind_5": {
+   "share_one": 0.0064891846921797,
+   "share_nan": 0.0
+  },
+  "zo_lhb_ind_20": {
+   "share_one": 0.04066370863375855,
+   "share_nan": 0.0
+  },
+  "zo_blk_ind_1": {
+   "share_one": 0.035579589572934,
+   "share_nan": 0.0
+  },
+  "zo_blk_ind_5": {
+   "share_one": 0.11701793307450545,
+   "share_nan": 0.0
+  },
+  "zo_blk_ind_20": {
+   "share_one": 0.26960621186910705,
+   "share_nan": 0.0
+  },
+  "zo_ins_buy_ind_1": {
+   "share_one": 0.0019227213902754667,
+   "share_nan": 0.0
+  },
+  "zo_ins_buy_ind_5": {
+   "share_one": 0.008855611018672582,
+   "share_nan": 0.0
+  },
+  "zo_ins_buy_ind_20": {
+   "share_one": 0.03251063043076354,
+   "share_nan": 0.0
+  },
+  "zo_ins_sell_ind_1": {
+   "share_one": 0.003632834165280089,
+   "share_nan": 0.0
+  },
+  "zo_ins_sell_ind_5": {
+   "share_one": 0.015159918654095026,
+   "share_nan": 0.0
+  },
+  "zo_ins_sell_ind_20": {
+   "share_one": 0.04500831946755408,
+   "share_nan": 0.0
+  },
+  "zo_lhb_has_prior": {
+   "share_one": 0.39434276206322794,
+   "share_nan": 0.0
+  },
+  "zo_blk_has_prior": {
+   "share_one": 0.78611573303753,
+   "share_nan": 0.0
+  },
+  "zo_ins_buy_has_prior": {
+   "share_one": 0.23001479016454057,
+   "share_nan": 0.0
+  },
+  "zo_ins_sell_has_prior": {
+   "share_one": 0.28276021445738586,
+   "share_nan": 0.0
+  },
+  "any_class_ind_1": {
+   "share_one": 0.041625069328896286,
+   "mean_nominations_per_day": 1.2487520798668885
+  },
+  "any_class_ind_5": {
+   "share_one": 0.13887040118321317,
+   "mean_nominations_per_day": 4.166112035496395
+  },
+  "any_class_ind_20": {
+   "share_one": 0.3346552042891477,
+   "mean_nominations_per_day": 10.039656128674432
+  },
+  "any_class_ind_20_by_year": {
+   "2017": 0.2937158469945355,
+   "2018": 0.2643804298125286,
+   "2019": 0.3646174863387978,
+   "2020": 0.3442615454961134,
+   "2021": 0.41106237816764135
+  }
+ },
+ "ridge": {
+  "zo_lhb_ind_1": {
+   "share_one": 0.003300055463117027,
+   "share_nan": 0.0
+  },
+  "zo_lhb_ind_5": {
+   "share_one": 0.018080976150859678,
+   "share_nan": 0.0
+  },
+  "zo_lhb_ind_20": {
+   "share_one": 0.07787021630615641,
+   "share_nan": 0.0
+  },
+  "zo_blk_ind_1": {
+   "share_one": 0.05011092623405435,
+   "share_nan": 0.0
+  },
+  "zo_blk_ind_5": {
+   "share_one": 0.14977814753189128,
+   "share_nan": 0.0
+  },
+  "zo_blk_ind_20": {
+   "share_one": 0.29231835829173597,
+   "share_nan": 0.0
+  },
+  "zo_ins_buy_ind_1": {
+   "share_one": 0.0026067665002773156,
+   "share_nan": 0.0
+  },
+  "zo_ins_buy_ind_5": {
+   "share_one": 0.011259012756516916,
+   "share_nan": 0.0
+  },
+  "zo_ins_buy_ind_20": {
+   "share_one": 0.03613422074320577,
+   "share_nan": 0.0
+  },
+  "zo_ins_sell_ind_1": {
+   "share_one": 0.0023849140321686078,
+   "share_nan": 0.0
+  },
+  "zo_ins_sell_ind_5": {
+   "share_one": 0.018663338879645035,
+   "share_nan": 0.0
+  },
+  "zo_ins_sell_ind_20": {
+   "share_one": 0.043233499722684414,
+   "share_nan": 0.0
+  },
+  "zo_lhb_has_prior": {
+   "share_one": 0.48236272878535774,
+   "share_nan": 0.0
+  },
+  "zo_blk_has_prior": {
+   "share_one": 0.7562118691070439,
+   "share_nan": 0.0
+  },
+  "zo_ins_buy_has_prior": {
+   "share_one": 0.2589295618413755,
+   "share_nan": 0.0
+  },
+  "zo_ins_sell_has_prior": {
+   "share_one": 0.2757071547420965,
+   "share_nan": 0.0
+  },
+  "any_class_ind_1": {
+   "share_one": 0.05773710482529118,
+   "mean_nominations_per_day": 1.7321131447587355
+  },
+  "any_class_ind_5": {
+   "share_one": 0.18469217970049917,
+   "mean_nominations_per_day": 5.5407653910149754
+  },
+  "any_class_ind_20": {
+   "share_one": 0.3858014420410427,
+   "mean_nominations_per_day": 11.574043261231282
+  },
+  "any_class_ind_20_by_year": {
+   "2017": 0.3206284153005464,
+   "2018": 0.33017832647462275,
+   "2019": 0.3521857923497268,
+   "2020": 0.4244170096021948,
+   "2021": 0.5096491228070176
+  }
+ }
+}

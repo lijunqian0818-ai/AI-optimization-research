@@ -1,0 +1,35 @@
+{
+ "label": "QC:q001@6bdc3fe7d9efdda7b1d1775668a1073561c6feea0765d91363bcadf047368bbb",
+ "decisions": [
+  {
+   "id": "R00013",
+   "d": "exclude",
+   "code": "E2",
+   "why": "Student questionnaire on investment preferences vs poker; no trading model"
+  },
+  {
+   "id": "R00014",
+   "d": "exclude",
+   "code": "E2",
+   "why": "Statistical-physics model of poker skill; no financial trading application"
+  },
+  {
+   "id": "R00065",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL for HFT; unclear whether agent/opponent or risk modelling is present"
+  },
+  {
+   "id": "R00068",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "Multi-agent RL order-book market simulation; informed-trader or adverse-selection content not stated"
+  },
+  {
+   "id": "R00070",
+   "d": "exclude",
+   "code": "E5",
+   "why": "DQN market-maker implementation in simulated market; no informed-trading or adverse-selection model stated"
+  }
+ ]
+}

@@ -1,0 +1,716 @@
+{
+ "note": "diagnostic on development data; not a confirmatory statistic",
+ "dump": "experiments\\results\\confirm\\smoke_r2",
+ "years": [
+  2021
+ ],
+ "tolerance": 1e-10,
+ "lgbm": {
+  "P1: LOSS(-Z) - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 18.35650077961207,
+   "V_h_bp": 24.895858918936472,
+   "delta_bp": -6.539358139324404,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 8.673245614035087,
+   "mean_daily_overlap_share_of_Sg": 0.5782163742690057,
+   "n_added_seedavg": 1442.5,
+   "n_removed_seedavg": 1442.5,
+   "mean_rho_added_bp": 13.717058624685691,
+   "mean_rho_removed_bp": 29.22111743681011,
+   "daily_identity_max_abs_residual": 4.440892098500626e-16,
+   "identity_delta_bp": -6.539358139324407,
+   "identity_residual": 3.2526065174565133e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -6.539358139324404,
+     "mean_daily_overlap_share_of_Sg": 0.5782163742690057,
+     "mean_rho_added_bp": 13.717058624685691,
+     "mean_rho_removed_bp": 29.22111743681011
+    }
+   }
+  },
+  "P2: LOSS(+Z_H) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 20.517840322723806,
+   "V_h_bp": 18.356500779612063,
+   "delta_bp": 2.161339543111742,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 10.070175438596491,
+   "mean_daily_overlap_share_of_Sg": 0.671345029239766,
+   "n_added_seedavg": 1124.0,
+   "n_removed_seedavg": 1124.0,
+   "mean_rho_added_bp": 15.117143119733331,
+   "mean_rho_removed_bp": 8.540825292827481,
+   "daily_identity_max_abs_residual": 2.7755575615628914e-16,
+   "identity_delta_bp": 2.1613395431117475,
+   "identity_residual": 5.421010862427522e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 2.161339543111742,
+     "mean_daily_overlap_share_of_Sg": 0.671345029239766,
+     "mean_rho_added_bp": 15.117143119733331,
+     "mean_rho_removed_bp": 8.540825292827481
+    }
+   }
+  },
+  "P3: LOSS(+Z_O*) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 14.891256327618006,
+   "V_h_bp": 18.356500779612063,
+   "delta_bp": -3.4652444519940575,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 9.87719298245614,
+   "mean_daily_overlap_share_of_Sg": 0.6584795321637427,
+   "n_added_seedavg": 1168.0,
+   "n_removed_seedavg": 1168.0,
+   "mean_rho_added_bp": 10.99306256819602,
+   "mean_rho_removed_bp": 21.139583138247115,
+   "daily_identity_max_abs_residual": 2.220446049250313e-16,
+   "identity_delta_bp": -3.4652444519940584,
+   "identity_residual": 1.0842021724855044e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -3.4652444519940575,
+     "mean_daily_overlap_share_of_Sg": 0.6584795321637427,
+     "mean_rho_added_bp": 10.99306256819602,
+     "mean_rho_removed_bp": 21.139583138247115
+    }
+   }
+  },
+  "P4: NET-K(-Z) - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 20.42305712903275,
+   "V_h_bp": 24.895858918936472,
+   "delta_bp": -4.472801789903724,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 8.412280701754385,
+   "mean_daily_overlap_share_of_Sg": 0.5608187134502923,
+   "n_added_seedavg": 1502.0,
+   "n_removed_seedavg": 1502.0,
+   "mean_rho_added_bp": 13.907050533925634,
+   "mean_rho_removed_bp": 24.091459403080577,
+   "daily_identity_max_abs_residual": 2.220446049250313e-16,
+   "identity_delta_bp": -4.47280178990372,
+   "identity_residual": 4.336808689942018e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -4.472801789903724,
+     "mean_daily_overlap_share_of_Sg": 0.5608187134502923,
+     "mean_rho_added_bp": 13.907050533925634,
+     "mean_rho_removed_bp": 24.091459403080577
+    }
+   }
+  },
+  "P5: LOSS(-Z) - BASE-V": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 18.35650077961207,
+   "V_h_bp": 24.895858918936472,
+   "delta_bp": -6.539358139324404,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 8.673245614035087,
+   "mean_daily_overlap_share_of_Sg": 0.5782163742690057,
+   "n_added_seedavg": 1442.5,
+   "n_removed_seedavg": 1442.5,
+   "mean_rho_added_bp": 13.717058624685691,
+   "mean_rho_removed_bp": 29.22111743681011,
+   "daily_identity_max_abs_residual": 4.440892098500626e-16,
+   "identity_delta_bp": -6.539358139324407,
+   "identity_residual": 3.2526065174565133e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -6.539358139324404,
+     "mean_daily_overlap_share_of_Sg": 0.5782163742690057,
+     "mean_rho_added_bp": 13.717058624685691,
+     "mean_rho_removed_bp": 29.22111743681011
+    }
+   }
+  },
+  "P6: NET-K(-Z) - BASE-V": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 20.42305712903275,
+   "V_h_bp": 24.895858918936472,
+   "delta_bp": -4.472801789903724,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 8.412280701754385,
+   "mean_daily_overlap_share_of_Sg": 0.5608187134502923,
+   "n_added_seedavg": 1502.0,
+   "n_removed_seedavg": 1502.0,
+   "mean_rho_added_bp": 13.907050533925634,
+   "mean_rho_removed_bp": 24.091459403080577,
+   "daily_identity_max_abs_residual": 2.220446049250313e-16,
+   "identity_delta_bp": -4.47280178990372,
+   "identity_residual": 4.336808689942018e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -4.472801789903724,
+     "mean_daily_overlap_share_of_Sg": 0.5608187134502923,
+     "mean_rho_added_bp": 13.907050533925634,
+     "mean_rho_removed_bp": 24.091459403080577
+    }
+   }
+  },
+  "S-BASEV: BASE-V - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 24.895858918936472,
+   "V_h_bp": 24.895858918936472,
+   "delta_bp": 0.0,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 15.0,
+   "mean_daily_overlap_share_of_Sg": 1.0,
+   "n_added_seedavg": 0.0,
+   "n_removed_seedavg": 0.0,
+   "mean_rho_added_bp": null,
+   "mean_rho_removed_bp": null,
+   "daily_identity_max_abs_residual": 0.0,
+   "identity_delta_bp": 0.0,
+   "identity_residual": 0.0,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 0.0,
+     "mean_daily_overlap_share_of_Sg": 1.0,
+     "mean_rho_added_bp": null,
+     "mean_rho_removed_bp": null
+    }
+   }
+  },
+  "S-NETU15: NET-U15(-Z) - BASE-V": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 16.838358824183572,
+   "V_h_bp": 24.895858918936472,
+   "delta_bp": -8.057500094752902,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 5.962719298245614,
+   "mean_daily_overlap_share_of_Sg": 0.397514619883041,
+   "n_added_seedavg": 2060.5,
+   "n_removed_seedavg": 2060.5,
+   "mean_rho_added_bp": 13.924472117216066,
+   "mean_rho_removed_bp": 27.29824077727669,
+   "daily_identity_max_abs_residual": 3.3306690738754696e-16,
+   "identity_delta_bp": -8.057500094752898,
+   "identity_residual": 3.2526065174565133e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -8.057500094752902,
+     "mean_daily_overlap_share_of_Sg": 0.397514619883041,
+     "mean_rho_added_bp": 13.924472117216066,
+     "mean_rho_removed_bp": 27.29824077727669
+    }
+   }
+  },
+  "S-NETU15-SCORE: NET-U15(-Z) - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 16.838358824183572,
+   "V_h_bp": 24.895858918936472,
+   "delta_bp": -8.057500094752902,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 5.962719298245614,
+   "mean_daily_overlap_share_of_Sg": 0.397514619883041,
+   "n_added_seedavg": 2060.5,
+   "n_removed_seedavg": 2060.5,
+   "mean_rho_added_bp": 13.924472117216066,
+   "mean_rho_removed_bp": 27.29824077727669,
+   "daily_identity_max_abs_residual": 3.3306690738754696e-16,
+   "identity_delta_bp": -8.057500094752898,
+   "identity_residual": 3.2526065174565133e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -8.057500094752902,
+     "mean_daily_overlap_share_of_Sg": 0.397514619883041,
+     "mean_rho_added_bp": 13.924472117216066,
+     "mean_rho_removed_bp": 27.29824077727669
+    }
+   }
+  },
+  "S-RERANK: BASEV-RERANK - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 24.895858918936472,
+   "V_h_bp": 24.895858918936472,
+   "delta_bp": 0.0,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 15.0,
+   "mean_daily_overlap_share_of_Sg": 1.0,
+   "n_added_seedavg": 0.0,
+   "n_removed_seedavg": 0.0,
+   "mean_rho_added_bp": null,
+   "mean_rho_removed_bp": null,
+   "daily_identity_max_abs_residual": 0.0,
+   "identity_delta_bp": 0.0,
+   "identity_residual": 0.0,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 0.0,
+     "mean_daily_overlap_share_of_Sg": 1.0,
+     "mean_rho_added_bp": null,
+     "mean_rho_removed_bp": null
+    }
+   }
+  },
+  "S-OBJ: NET-K(-Z) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 20.423057129032745,
+   "V_h_bp": 18.356500779612063,
+   "delta_bp": 2.066556349420684,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 8.93421052631579,
+   "mean_daily_overlap_share_of_Sg": 0.5956140350877194,
+   "n_added_seedavg": 1383.0,
+   "n_removed_seedavg": 1383.0,
+   "mean_rho_added_bp": 17.856612541209454,
+   "mean_rho_removed_bp": 12.746256275830746,
+   "daily_identity_max_abs_residual": 2.7755575615628914e-16,
+   "identity_delta_bp": 2.066556349420688,
+   "identity_residual": 4.607859233063394e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 2.066556349420684,
+     "mean_daily_overlap_share_of_Sg": 0.5956140350877194,
+     "mean_rho_added_bp": 17.856612541209454,
+     "mean_rho_removed_bp": 12.746256275830746
+    }
+   }
+  },
+  "S-HO: LOSS(+Z_H+Z_O*) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 24.08398216083236,
+   "V_h_bp": 18.356500779612066,
+   "delta_bp": 5.727481381220294,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 9.859649122807017,
+   "mean_daily_overlap_share_of_Sg": 0.6573099415204678,
+   "n_added_seedavg": 1172.0,
+   "n_removed_seedavg": 1172.0,
+   "mean_rho_added_bp": 12.979816044540872,
+   "mean_rho_removed_bp": -3.733482866528595,
+   "daily_identity_max_abs_residual": 3.3306690738754696e-16,
+   "identity_delta_bp": 5.727481381220297,
+   "identity_residual": 4.336808689942018e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 5.727481381220294,
+     "mean_daily_overlap_share_of_Sg": 0.6573099415204678,
+     "mean_rho_added_bp": 12.979816044540872,
+     "mean_rho_removed_bp": -3.733482866528595
+    }
+   }
+  },
+  "S-INS: LOSS(+Z_O) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 22.414175185889118,
+   "V_h_bp": 18.356500779612063,
+   "delta_bp": 4.057674406277053,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 10.107456140350877,
+   "mean_daily_overlap_share_of_Sg": 0.6738304093567251,
+   "n_added_seedavg": 1115.5,
+   "n_removed_seedavg": 1115.5,
+   "mean_rho_added_bp": 16.587574636961822,
+   "mean_rho_removed_bp": 4.14719232457498,
+   "daily_identity_max_abs_residual": 2.7755575615628914e-16,
+   "identity_delta_bp": 4.057674406277053,
+   "identity_residual": 0.0,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 4.057674406277053,
+     "mean_daily_overlap_share_of_Sg": 0.6738304093567251,
+     "mean_rho_added_bp": 16.587574636961822,
+     "mean_rho_removed_bp": 4.14719232457498
+    }
+   }
+  }
+ },
+ "ridge": {
+  "P1: LOSS(-Z) - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 15.695219196455986,
+   "V_h_bp": 16.103029246759753,
+   "delta_bp": -0.4078100503037687,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 8.326754385964913,
+   "mean_daily_overlap_share_of_Sg": 0.5551169590643275,
+   "n_added_seedavg": 1521.5,
+   "n_removed_seedavg": 1521.5,
+   "mean_rho_added_bp": 9.293107371426448,
+   "mean_rho_removed_bp": 10.209775378024455,
+   "daily_identity_max_abs_residual": 4.440892098500626e-16,
+   "identity_delta_bp": -0.40781005030376377,
+   "identity_residual": 4.946672411965114e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -0.4078100503037687,
+     "mean_daily_overlap_share_of_Sg": 0.5551169590643275,
+     "mean_rho_added_bp": 9.293107371426448,
+     "mean_rho_removed_bp": 10.209775378024455
+    }
+   }
+  },
+  "P2: LOSS(+Z_H) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 18.81575328604178,
+   "V_h_bp": 15.695219196455986,
+   "delta_bp": 3.120534089585793,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 11.280701754385966,
+   "mean_daily_overlap_share_of_Sg": 0.7520467836257309,
+   "n_added_seedavg": 848.0,
+   "n_removed_seedavg": 848.0,
+   "mean_rho_added_bp": 13.446914787614503,
+   "mean_rho_removed_bp": 0.8617419263133297,
+   "daily_identity_max_abs_residual": 3.3306690738754696e-16,
+   "identity_delta_bp": 3.1205340895857883,
+   "identity_residual": 4.87890977618477e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 3.120534089585793,
+     "mean_daily_overlap_share_of_Sg": 0.7520467836257309,
+     "mean_rho_added_bp": 13.446914787614503,
+     "mean_rho_removed_bp": 0.8617419263133297
+    }
+   }
+  },
+  "P3: LOSS(+Z_O*) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 12.218914896715424,
+   "V_h_bp": 15.695219196455986,
+   "delta_bp": -3.4763042997405615,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 9.875,
+   "mean_daily_overlap_share_of_Sg": 0.6583333333333333,
+   "n_added_seedavg": 1168.5,
+   "n_removed_seedavg": 1168.5,
+   "mean_rho_added_bp": 0.037256412546278636,
+   "mean_rho_removed_bp": 10.211805582518657,
+   "daily_identity_max_abs_residual": 4.440892098500626e-16,
+   "identity_delta_bp": -3.476304299740563,
+   "identity_residual": 1.0842021724855044e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -3.4763042997405615,
+     "mean_daily_overlap_share_of_Sg": 0.6583333333333333,
+     "mean_rho_added_bp": 0.037256412546278636,
+     "mean_rho_removed_bp": 10.211805582518657
+    }
+   }
+  },
+  "P4: NET-K(-Z) - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 18.134654310065237,
+   "V_h_bp": 16.103029246759753,
+   "delta_bp": 2.031625063305482,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 8.094298245614034,
+   "mean_daily_overlap_share_of_Sg": 0.5396198830409357,
+   "n_added_seedavg": 1574.5,
+   "n_removed_seedavg": 1574.5,
+   "mean_rho_added_bp": 29.220495007739764,
+   "mean_rho_removed_bp": 24.807565368803736,
+   "daily_identity_max_abs_residual": 3.3306690738754696e-16,
+   "identity_delta_bp": 2.0316250633054884,
+   "identity_residual": 5.963111948670274e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 2.031625063305482,
+     "mean_daily_overlap_share_of_Sg": 0.5396198830409357,
+     "mean_rho_added_bp": 29.220495007739764,
+     "mean_rho_removed_bp": 24.807565368803736
+    }
+   }
+  },
+  "P5: LOSS(-Z) - BASE-V": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 15.695219196455982,
+   "V_h_bp": 20.721183206236972,
+   "delta_bp": -5.025964009780991,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 8.06359649122807,
+   "mean_daily_overlap_share_of_Sg": 0.5375730994152047,
+   "n_added_seedavg": 1581.5,
+   "n_removed_seedavg": 1581.5,
+   "mean_rho_added_bp": 6.101632237784121,
+   "mean_rho_removed_bp": 16.97029927126562,
+   "daily_identity_max_abs_residual": 4.440892098500626e-16,
+   "identity_delta_bp": -5.025964009780991,
+   "identity_residual": 0.0,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -5.025964009780991,
+     "mean_daily_overlap_share_of_Sg": 0.5375730994152047,
+     "mean_rho_added_bp": 6.101632237784121,
+     "mean_rho_removed_bp": 16.97029927126562
+    }
+   }
+  },
+  "P6: NET-K(-Z) - BASE-V": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 18.134654310065233,
+   "V_h_bp": 20.721183206236976,
+   "delta_bp": -2.5865288961717425,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 8.010964912280702,
+   "mean_daily_overlap_share_of_Sg": 0.53406432748538,
+   "n_added_seedavg": 1593.5,
+   "n_removed_seedavg": 1593.5,
+   "mean_rho_added_bp": 27.38953596952279,
+   "mean_rho_removed_bp": 32.940793468680205,
+   "daily_identity_max_abs_residual": 3.3306690738754696e-16,
+   "identity_delta_bp": -2.5865288961717376,
+   "identity_residual": 4.87890977618477e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -2.5865288961717425,
+     "mean_daily_overlap_share_of_Sg": 0.53406432748538,
+     "mean_rho_added_bp": 27.38953596952279,
+     "mean_rho_removed_bp": 32.940793468680205
+    }
+   }
+  },
+  "S-BASEV: BASE-V - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 20.721183206236976,
+   "V_h_bp": 16.103029246759753,
+   "delta_bp": 4.618153959477225,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 13.592105263157896,
+   "mean_daily_overlap_share_of_Sg": 0.9061403508771931,
+   "n_added_seedavg": 321.0,
+   "n_removed_seedavg": 321.0,
+   "mean_rho_added_bp": 16.161018889296763,
+   "mean_rho_removed_bp": -33.04174292195592,
+   "daily_identity_max_abs_residual": 1.942890293094024e-16,
+   "identity_delta_bp": 4.618153959477225,
+   "identity_residual": 5.421010862427522e-20,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 4.618153959477225,
+     "mean_daily_overlap_share_of_Sg": 0.9061403508771931,
+     "mean_rho_added_bp": 16.161018889296763,
+     "mean_rho_removed_bp": -33.04174292195592
+    }
+   }
+  },
+  "S-NETU15: NET-U15(-Z) - BASE-V": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 16.838358824183572,
+   "V_h_bp": 20.721183206236972,
+   "delta_bp": -3.8828243820534007,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 4.530701754385965,
+   "mean_daily_overlap_share_of_Sg": 0.30204678362573095,
+   "n_added_seedavg": 2387.0,
+   "n_removed_seedavg": 2387.0,
+   "mean_rho_added_bp": 17.626113476326864,
+   "mean_rho_removed_bp": 23.189271996068225,
+   "daily_identity_max_abs_residual": 3.885780586188048e-16,
+   "identity_delta_bp": -3.882824382053398,
+   "identity_residual": 2.710505431213761e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -3.8828243820534007,
+     "mean_daily_overlap_share_of_Sg": 0.30204678362573095,
+     "mean_rho_added_bp": 17.626113476326864,
+     "mean_rho_removed_bp": 23.189271996068225
+    }
+   }
+  },
+  "S-NETU15-SCORE: NET-U15(-Z) - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 16.838358824183572,
+   "V_h_bp": 16.103029246759753,
+   "delta_bp": 0.73532957742382,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 4.651315789473684,
+   "mean_daily_overlap_share_of_Sg": 0.3100877192982456,
+   "n_added_seedavg": 2359.5,
+   "n_removed_seedavg": 2359.5,
+   "mean_rho_added_bp": 18.534414549327487,
+   "mean_rho_removed_bp": 17.46858401116708,
+   "daily_identity_max_abs_residual": 4.440892098500626e-16,
+   "identity_delta_bp": 0.7353295774238228,
+   "identity_residual": 2.846030702774449e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 0.73532957742382,
+     "mean_daily_overlap_share_of_Sg": 0.3100877192982456,
+     "mean_rho_added_bp": 18.534414549327487,
+     "mean_rho_removed_bp": 17.46858401116708
+    }
+   }
+  },
+  "S-RERANK: BASEV-RERANK - SCORE": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 20.274711922770706,
+   "V_h_bp": 16.103029246759753,
+   "delta_bp": 4.171682676010953,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 13.596491228070175,
+   "mean_daily_overlap_share_of_Sg": 0.9064327485380118,
+   "n_added_seedavg": 320.0,
+   "n_removed_seedavg": 320.0,
+   "mean_rho_added_bp": 9.827171469531994,
+   "mean_rho_removed_bp": -34.757687130335086,
+   "daily_identity_max_abs_residual": 1.8041124150158794e-16,
+   "identity_delta_bp": 4.171682676010954,
+   "identity_residual": 2.168404344971009e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 4.171682676010953,
+     "mean_daily_overlap_share_of_Sg": 0.9064327485380118,
+     "mean_rho_added_bp": 9.827171469531994,
+     "mean_rho_removed_bp": -34.757687130335086
+    }
+   }
+  },
+  "S-OBJ: NET-K(-Z) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 18.134654310065233,
+   "V_h_bp": 15.695219196455986,
+   "delta_bp": 2.439435113609249,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 9.052631578947368,
+   "mean_daily_overlap_share_of_Sg": 0.6035087719298246,
+   "n_added_seedavg": 1356.0,
+   "n_removed_seedavg": 1356.0,
+   "mean_rho_added_bp": 9.835345821994602,
+   "mean_rho_removed_bp": 3.6827882345730414,
+   "daily_identity_max_abs_residual": 4.440892098500626e-16,
+   "identity_delta_bp": 2.4394351136092505,
+   "identity_residual": 1.3552527156068805e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 2.439435113609249,
+     "mean_daily_overlap_share_of_Sg": 0.6035087719298246,
+     "mean_rho_added_bp": 9.835345821994602,
+     "mean_rho_removed_bp": 3.6827882345730414
+    }
+   }
+  },
+  "S-HO: LOSS(+Z_H+Z_O*) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 19.041036965474447,
+   "V_h_bp": 15.695219196455986,
+   "delta_bp": 3.3458177690184625,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 9.861842105263158,
+   "mean_daily_overlap_share_of_Sg": 0.6574561403508771,
+   "n_added_seedavg": 1171.5,
+   "n_removed_seedavg": 1171.5,
+   "mean_rho_added_bp": 17.025902490252115,
+   "mean_rho_removed_bp": 7.258342293885783,
+   "daily_identity_max_abs_residual": 4.440892098500626e-16,
+   "identity_delta_bp": 3.345817769018467,
+   "identity_residual": 4.336808689942018e-19,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": 3.3458177690184625,
+     "mean_daily_overlap_share_of_Sg": 0.6574561403508771,
+     "mean_rho_added_bp": 17.025902490252115,
+     "mean_rho_removed_bp": 7.258342293885783
+    }
+   }
+  },
+  "S-INS: LOSS(+Z_O) - LOSS(-Z)": {
+   "days_seed_pairs": 456,
+   "V_g_bp": 12.784724037303224,
+   "V_h_bp": 15.695219196455986,
+   "delta_bp": -2.9104951591527604,
+   "S_g_seedavg": 3420.0,
+   "S_h_seedavg": 3420.0,
+   "days_with_unequal_counts": 0,
+   "mean_daily_overlap_names": 10.028508771929825,
+   "mean_daily_overlap_share_of_Sg": 0.6685672514619884,
+   "n_added_seedavg": 1133.5,
+   "n_removed_seedavg": 1133.5,
+   "mean_rho_added_bp": -7.930591031817918,
+   "mean_rho_removed_bp": 0.8509647196619569,
+   "daily_identity_max_abs_residual": 3.3306690738754696e-16,
+   "identity_delta_bp": -2.91049515915276,
+   "identity_residual": 5.421010862427522e-20,
+   "identity_applies": true,
+   "by_year": {
+    "2021": {
+     "delta_bp": -2.9104951591527604,
+     "mean_daily_overlap_share_of_Sg": 0.6685672514619884,
+     "mean_rho_added_bp": -7.930591031817918,
+     "mean_rho_removed_bp": 0.8509647196619569
+    }
+   }
+  }
+ },
+ "max_identity_residual": 4.440892098500626e-16,
+ "identity_check_passed": true
+}

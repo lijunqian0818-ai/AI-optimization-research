@@ -1,0 +1,128 @@
+{
+ "module": "rule_calendar",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ },
+ "n": 15,
+ "passed": 15,
+ "failed": 0,
+ "seconds": 0.77,
+ "results": [
+  {
+   "test": "test_stamp_duty_boundaries",
+   "doc": "RC-15: 2008-04-24, 2008-09-19, 2023-08-28.",
+   "status": "pass"
+  },
+  {
+   "test": "test_transfer_fee_boundaries",
+   "doc": "RC-16: 2015-08-01 (SSE per share -> rate), 2022-04-29, and the 'no 2022 cut' fallback.",
+   "status": "pass"
+  },
+  {
+   "test": "test_dividend_tax_boundaries",
+   "doc": "RC-14 by record date: 2013-01-01, 2015-09-08, and the 20% fallback before 2013.",
+   "status": "pass"
+  },
+  {
+   "test": "test_price_bands",
+   "doc": "RC-6: main 10% / ST 5%; ChiNext 10% -> 20% and ChiNext ST 5% -> 20% on 2020-08-24; STAR 20%.",
+   "status": "pass"
+  },
+  {
+   "test": "test_limit_price_rounding",
+   "doc": "RC-5: decimal half-up to 0.01; +-0.01 when the rounded limit is closer than 0.01.",
+   "status": "pass"
+  },
+  {
+   "test": "test_limit_price_full_grid_vs_integer_arithmetic",
+   "doc": "Every reference price 0.01..300.00 x bands 5/10/20%: engine vs exact integer half-up arithmetic.",
+   "status": "pass",
+   "info": {
+    "cases": 90000,
+    "upper_limits_where_builtin_float_round_differs": 787
+   }
+  },
+  {
+   "test": "test_limit_prices_for_code_and_date",
+   "doc": "ChiNext ST name on 2020-08-21 and 2020-08-24 (PLAN R4 rule-calendar case).",
+   "status": "pass"
+  },
+  {
+   "test": "test_boards_and_exchanges",
+   "doc": "",
+   "status": "pass"
+  },
+  {
+   "test": "test_lot_rounding",
+   "doc": "RC-11: main / ChiNext multiples of 100; STAR at least 200, no multiple (150 -> no order, 250 -> 250).",
+   "status": "pass"
+  },
+  {
+   "test": "test_window_and_unique_coverage",
+   "doc": "Every key has exactly one row on every calendar day of 2008-01-01..2026-06-30; outside raises.",
+   "status": "pass",
+   "info": {
+    "days_checked": 6756,
+    "keys": 26
+   }
+  },
+  {
+   "test": "test_every_boundary_changes_value",
+   "doc": "At each boundary date the value on the day differs from the value on the day before.",
+   "status": "pass",
+   "info": {
+    "boundaries": [
+     "band:chinext:0@2020-08-24",
+     "band:chinext:1@2020-08-24",
+     "close_auction:sh@2018-08-20",
+     "delist_regime@2020-12-31",
+     "divtax@2013-01-01",
+     "divtax@2015-09-08",
+     "ins_regime@2015-07-08",
+     "ins_regime@2016-01-09",
+     "ins_regime@2017-05-27",
+     "ins_regime@2024-05-24",
+     "ipo_nolimit5:chinext@2020-08-24",
+     "ipo_nolimit5:main@2023-04-10",
+     "lhb_thr:chinext@2020-08-24",
+     "lhb_topn:sh@2021-09-17",
+     "lhb_topn:sh@2021-10-08",
+     "lhb_topn:sz@2013-12-01",
+     "stamp@2008-04-24",
+     "stamp@2008-09-19",
+     "stamp@2023-08-28",
+     "transfer:sh@2015-08-01",
+     "transfer:sh@2022-04-29",
+     "transfer:sz@2015-08-01",
+     "transfer:sz@2022-04-29"
+    ]
+   }
+  },
+  {
+   "test": "test_source_status_transcription",
+   "doc": "Status fields use the plan's vocabulary; the 'must' items 1-4 of PLAN 3.10 are marked unverified.",
+   "status": "pass",
+   "info": {
+    "rows": 49,
+    "rows_with_unverified_value_or_date": 20
+   }
+  },
+  {
+   "test": "test_flagged_days_and_info_rows",
+   "doc": "",
+   "status": "pass"
+  },
+  {
+   "test": "test_disclosure_regimes_group_e",
+   "doc": "RC-18 / RC-20 (v0.7, E-20, F-20): values typed by hand from PLAN 3.10 (e) and 5.6.2a.",
+   "status": "pass"
+  },
+  {
+   "test": "test_dividend_tax_boundary_day_two_readings",
+   "doc": "E-9 (PLAN 3.10 list item 17): record date 2015-09-08 under 'from' and 'after'; tau is the same.",
+   "status": "pass"
+  }
+ ]
+}

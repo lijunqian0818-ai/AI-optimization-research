@@ -1,0 +1,98 @@
+{
+ "drawn_at": "2026-11-15 22:02:18",
+ "status": "PROVISIONAL DRAW. The plan's frame is the FROZEN first snapshot (FC-A1) restricted to ever-members of the universe; neither exists yet. This list was drawn from the raw files on disk for all SSE / SZSE A-share codes. It must be re-drawn with this script and this seed once the snapshot is frozen and the ever-member list exists, and before any original document is opened. No original has been opened and no request has been sent.",
+ "seed": 20261115,
+ "rng": "numpy.random.default_rng([seed, class index]); class index: lhb 0, blk 1, ins 2",
+ "n_per_class": 300,
+ "min_per_stratum": 5,
+ "n_hand_recheck": 30,
+ "backfill_threshold_days": 30,
+ "audit_end": "2026-06-30",
+ "members_file": null,
+ "n_members": null,
+ "sampling_unit": "row of the table (PLAN v0.7 G-4)",
+ "d_tab": "LHB / BLK: listing / trade day; INS: announcement date rolled forward to a trading day (F-9)",
+ "strata": "LHB, BLK: calendar year; INS: year x direction, split inside proportionally by back-fill status",
+ "classes": {
+  "lhb": {
+   "table": "lhb_detail",
+   "n_files": 222,
+   "files_sha256": "1bd3f9183fdf6798ec689be1be742c4d37fb916b3b25efdbbf8a87d44d413358",
+   "rows_in_table": 252219,
+   "rows_without_date": 0,
+   "rows_outside_universe_codes": 11667,
+   "rows_outside_audit_period": 0,
+   "rows_dated_on_non_trading_day": 0,
+   "rows_whose_usable_day_is_beyond_the_calendar": 0,
+   "frame_rows": 240552,
+   "n_strata": 19,
+   "sampled": 300,
+   "hand_recheck": 30,
+   "lag": 2,
+   "analysis_start": "2008-01-01",
+   "sampled_by_exchange": {
+    "SZSE": 203,
+    "SSE": 97
+   },
+   "sampled_d_tab_rolled": 0
+  },
+  "blk": {
+   "table": "dzjy_mrmx",
+   "n_files": 222,
+   "files_sha256": "a1b0b283e1e5e086ba2467156cf5f701f0fa44ddfbdd6a0e6eaef49c45a325e6",
+   "rows_in_table": 328355,
+   "rows_without_date": 0,
+   "rows_outside_universe_codes": 3014,
+   "rows_outside_audit_period": 0,
+   "rows_dated_on_non_trading_day": 0,
+   "rows_whose_usable_day_is_beyond_the_calendar": 0,
+   "frame_rows": 325341,
+   "n_strata": 19,
+   "sampled": 300,
+   "hand_recheck": 30,
+   "lag": 2,
+   "analysis_start": "2008-01-01",
+   "sampled_by_exchange": {
+    "SZSE": 163,
+    "SSE": 137
+   },
+   "sampled_d_tab_rolled": 0
+  },
+  "ins": {
+   "table": "ins_raw",
+   "n_files": 32,
+   "files_sha256": "93aa8d6e0f76e1284cbc0e114e9cf593e9b6411bcaa8fe19905ab2b0ef3958b4",
+   "rows_in_table": 147458,
+   "ins_cleaning": {
+    "rows": 147458,
+    "dropped_no_notice_date": 0,
+    "dropped_direction": 0,
+    "dropped_notice_before_end": 41,
+    "kept": 147417,
+    "share_entered_gt30d_after_notice": 0.4118453095640259
+   },
+   "rows_outside_universe_codes": 1413,
+   "rows_outside_audit_period": 4893,
+   "rows_dated_on_non_trading_day": 21888,
+   "rows_whose_usable_day_is_beyond_the_calendar": 0,
+   "frame_rows": 141111,
+   "n_strata": 38,
+   "sampled": 300,
+   "hand_recheck": 0,
+   "lag": 2,
+   "analysis_start": "2008-01-01",
+   "sampled_by_exchange": {
+    "SZSE": 221,
+    "SSE": 79
+   },
+   "sampled_d_tab_rolled": 48,
+   "sampled_backfilled": 136,
+   "frame_backfilled_share": 0.40920268441156255
+  }
+ },
+ "sample_file": "oa10_sample.csv",
+ "sample_sha256": "9146e53ede4925b139042d731851a2d66a7cb6e9a9c0ee633bc559528bf33289",
+ "strata_file": "oa10_sample_strata.csv",
+ "numpy": "2.5.4",
+ "pandas": "3.1.1"
+}

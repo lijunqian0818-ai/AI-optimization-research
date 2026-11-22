@@ -1,0 +1,46 @@
+{
+  "review_title": "Poker-style abstention for equity trading (related work / novelty)",
+  "exclusion_codes": [
+    {"code": "E1", "short": "source type", "label": "Not a scholarly source (blog, marketing, opinion without method)"},
+    {"code": "E2", "short": "off topic", "label": "Meets none of the topic conditions T1-T7"},
+    {"code": "E3", "short": "prediction only", "label": "Price/return forecasting with no decision or risk-control component"},
+    {"code": "E4", "short": "poker engineering", "label": "Poker / game-AI engineering unrelated to finance or decision theory, not foundational"},
+    {"code": "E5", "short": "HFT engineering", "label": "High-frequency order-book / market-making engineering without an informed-trading model"},
+    {"code": "E6", "short": "crypto only", "label": "Cryptocurrency-specific, method not transferable to equities"},
+    {"code": "E7", "short": "date", "label": "Before 2010 and not foundational"},
+    {"code": "E9", "short": "other", "label": "Other (explained)"}
+  ],
+  "core_criteria": ["at least one topic condition T1-T7 (game-theoretic trading, selective action/abstention, risk-aware RL trading, factor timing, other-participant-state factors, bet sizing, or foundational work)", "a scholarly source"],
+  "personas": {
+    "A": "You are REVIEWER A, a quantitative-finance and machine-learning researcher with expertise in selective prediction, market microstructure and factor investing.",
+    "B": "You are REVIEWER B, a methodologist experienced in literature screening for integrative reviews in machine learning and finance."
+  },
+  "conflict_policy": "adjudicate",
+  "qc": {
+    "near_miss": {
+      "action": ["abstain", "abstention", "reject", "selective", "no-trade", "meta-label", "conformal", "弃权"],
+      "finance": ["trad", "stock", "portfolio", "financ", "market", "交易"]
+    },
+    "random_exclusion_sample": 20,
+    "random_seed": 2026,
+    "policy": "advance"
+  },
+  "seeds": [
+    {"label": "Chalkidis & Savani 2021, ICAIF", "doi": "", "pmid": "", "title": "Trading via Selective Classification"},
+    {"label": "Zhang et al. 2023, arXiv", "doi": "", "pmid": "", "title": "Learning to Abstain From Uninformative Data"}
+  ],
+  "languages_allowed": ["English", "Chinese"],
+  "models": {"A": "sonnet", "B": "sonnet", "ADJ": "sonnet", "QC": "sonnet", "FTA": "sonnet", "FTB": "sonnet", "FTADJ": "sonnet"},
+  "model_labels": {
+    "A": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+    "B": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+    "ADJ": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+    "QC": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+    "FTA": "not used",
+    "FTB": "not used",
+    "FTADJ": "not used"
+  },
+  "agent_type": "academic-research-skills:screening-reviewer-agent",
+  "batching": {"max_records": 40, "max_chars": 90000, "wrap": 150},
+  "dedup": {"doi_title_guard": true}
+}

@@ -1,0 +1,6 @@
+2026-11-15 17:31:42 [run] id=factors_events_20261115_173142 stage=factors_events sources=['bs_dividend'] limit=0 codes_file=experiments/results/data_fetch/trial_codes_div_delisted.txt period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\factors_events_20261115_173142.log
+2026-11-15 17:31:42 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=12, progress_units=20, progress_seconds=300.0, resume=True, retry_empty=False, run_id='factors_events_20261115_173142')
+2026-11-15 17:31:42 [start] factors_events: units total=1 already done (verified)=0 to fetch=1
+2026-11-15 17:31:44 [baostock] login ok (login #1)
+2026-11-15 17:32:03 [final] factors_events: done=1/1 (this run 1: ok=1 empty=0 failed=0; resumed-skip=0) success=100.0% mean=21.4s/unit ETA=0.0min requests this run: baostock=9 http=0 pauses=0
+2026-11-15 17:32:05 [exit] code=0

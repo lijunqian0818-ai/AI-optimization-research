@@ -1,0 +1,33 @@
+{
+ "created": "2026-11-17 12:48:46",
+ "cutoff": null,
+ "data_cutoff": "2021-12-31",
+ "groups": [
+  "B0",
+  "Z_H",
+  "R_H-sum",
+  "R_H-hist",
+  "Z_O",
+  "R_O",
+  "DIAG"
+ ],
+ "zo_strict": true,
+ "zo_covered_trading_days": {
+  "lhb": 3407,
+  "jg": 3407,
+  "blk": 3407,
+  "ins": 3407
+ },
+ "catalogue_sha256": "9628afd1efc76dc733ed7cf87432704854538af8dcccbac133f2a2bda28db41d",
+ "lhb_reason_map_sha256": "8c245758b45934a7b361383a244b8a1c17f57a41c85f3cbe73b4a27eaa976808",
+ "n_columns": 370,
+ "zo_lag": {
+  "lhb": 2,
+  "blk": 2,
+  "ins": 2
+ },
+ "chip_init": "renormalise",
+ "cgo_skip": 1,
+ "ins_intensity_enabled": true,
+ "raw_root": "C:\\Users\\lijun\\AppData\\Local\\Temp\\claude\\7dc3241753d402cb\\6264ec4d-6267-4fe9-b6c0-5bfd1988cc73\\scratchpad\\ci_trees\\tree_B"
+}

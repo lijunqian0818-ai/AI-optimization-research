@@ -1,0 +1,214 @@
+BATCH b002 -- 40 records: R00041 .. R00080
+
+### R00041 | 2025 | Journal article | Lang: n/a
+TI: A Simple Strategy to Deal with Toxic Flow
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C041; identifier arXiv:2503.18005] 应对有毒订单流（知情交易者）的简单策略
+KW: search direction 3
+
+### R00042 | 2021 | Journal article | Lang: n/a
+TI: Phase Transitions in Kyle's Model with Market Maker Profit Incentives
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C042; identifier arXiv:2103.04481] Kyle 模型中做市商有盈利激励时的相变
+KW: search direction 3
+
+### R00043 | 2013 | Journal article | Lang: n/a
+TI: Dynamic Trading with Predictable Returns and Transaction Costs
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C043; identifier doi:10.1111/jofi.12080] 可预测收益 + 交易成本下的动态交易
+KW: search direction 3
+
+### R00044 | 2012 | Journal article | Lang: n/a
+TI: Flow Toxicity and Liquidity in a High-frequency World
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C044; identifier doi:10.1093/rfs/hhs053] VPIN：订单流毒性度量（可作“信息劣势”代理变量）
+KW: search direction 3
+
+### R00045 | 1996 | Journal article | Lang: n/a
+TI: Liquidity, Information, and Infrequently Traded Stocks
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C045; identifier doi:10.1111/j.1540-6261.1996.tb04074.x] PIN
+    模型：知情交易概率的估计
+KW: search direction 3
+
+### R00046 | 1990 | Journal article | Lang: n/a
+TI: Portfolio Selection with Transaction Costs
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C046; identifier doi:10.1287/moor.15.4.676]
+    Davis-Norman：比例交易成本下的组合选择与无交易区域（奠基）
+KW: search direction 3
+
+### R00047 | 1986 | Journal article | Lang: n/a
+TI: Capital Market Equilibrium with Transaction Costs
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C047; identifier doi:10.1086/261410] Constantinides
+    1986：交易成本下的市场均衡与无交易区间
+KW: search direction 3
+
+### R00048 | 1982 | Journal article | Lang: n/a
+TI: On the Possibility of Speculation under Rational Expectations
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C048; identifier doi:10.2307/1911868] Tirole
+    1982：理性预期下投机的不可能性（no-trade 结果）
+KW: search direction 3
+
+### R00049 | 2024 | Journal article | Lang: n/a
+TI: Comparative Statics of Trading Boundary in Finite Horizon Portfolio Selection with Proportional Transaction Costs
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C049; identifier arXiv:2412.13669] 比例交易成本下 Merton 问题的买卖边界与无交易区域的比较静态
+KW: search direction 3
+
+### R00050 | 2023 | Journal article | Lang: n/a
+TI: Trading with the crowd
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C050; identifier doi:10.1111/mafi.12390] Trading with the
+    crowd：与群体交易的博弈模型
+KW: search direction 3
+
+### R00051 | 1994 | Journal article | Lang: n/a
+TI: Optimal Investment and Consumption with Transaction Costs
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C051; identifier doi:10.1214/aoap/1177004966] Shreve-Soner
+    1994：交易成本下最优投资消费（无交易区域的严格分析）
+KW: search direction 3
+
+### R00052 | 1992 | Journal article | Lang: n/a
+TI: Insider Trading in Continuous Time
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C052; identifier doi:10.1093/rfs/5.3.387] Back 1992：连续时间内幕交易
+KW: search direction 3
+
+### R00053 | 1990 | Journal article | Lang: n/a
+TI: Noise Trader Risk in Financial Markets
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C053; identifier doi:10.1086/261703] 噪声交易者风险（DSSW 1990）
+KW: search direction 3
+
+### R00054 | 1976 | Journal article | Lang: n/a
+TI: Portfolio selection with transactions costs
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C054; identifier doi:10.1016/0022-0531(76)90018-1]
+    Magill-Constantinides 1976：含交易成本的组合选择
+KW: search direction 3
+
+### R00055 | 2025 | Journal article | Lang: n/a
+TI: FinRL-DeepSeek: LLM-Infused Risk-Sensitive Reinforcement Learning for Trading Agents
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C055; identifier arXiv:2502.07393] CVaR 约束 PPO（CPPO）+ LLM
+    信号做股票交易；下行风险约束 RL 基线
+KW: search direction 4
+
+### R00056 | 2025 | Journal article | Lang: n/a
+TI: Reinforcement learning based multi-factor dynamic stock trading strategy design
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C056; identifier doi:10.1145/3800000.3800082] 基于 RL
+    的多因子动态股票交易策略设计（仅核实题录）
+KW: search direction 4
+
+### R00057 | 2024 | Journal article | Lang: n/a
+TI: A Deep Reinforcement Learning Framework for Dynamic Portfolio Optimization: Evidence from China's Stock Market
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C057; identifier arXiv:2412.18563] 中国股市动态组合优化的深度 RL 框架
+KW: search direction 4
+
+### R00058 | 2024 | Journal article | Lang: n/a
+TI: Deep Reinforcement Learning for Adaptive Stock Trading
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C058; identifier doi:10.4018/JOEUC.335083] 信息不一致下的 DQN
+    自适应股票交易（据检索摘要：含冲突/合作博弈情景；未读全文）
+KW: search direction 4
+
+### R00059 | 2021 | Journal article | Lang: n/a
+TI: Conditional Value-at-Risk for Quantitative Trading: A Direct Reinforcement Learning Approach
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C059; identifier arXiv:2109.14438] 以 CVaR 为目标的直接强化学习交易系统（凸形式）
+KW: search direction 4
+
+### R00060 | 2020 | Journal article | Lang: n/a
+TI: FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C060; identifier arXiv:2011.09607] FinRL：股票交易深度 RL 库，常用基线实现
+KW: search direction 4
+
+### R00061 | 2019 | Journal article | Lang: n/a
+TI: Reinforcement Learning for Market Making in a Multi-agent Dealer Market
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C061; identifier arXiv:1911.05892] 多智能体交易商市场中的 RL 做市
+KW: search direction 4
+
+### R00062 | 2019 | Journal article | Lang: n/a
+TI: AlphaStock: A Buying-Winners-and-Selling-Losers Investment Strategy using Interpretable Deep Reinforcement Attention Networks
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C062; identifier arXiv:1908.02646] AlphaStock：可解释深度 RL 注意力网络做买赢卖输策略
+KW: search direction 4
+
+### R00063 | 2015 | Journal article | Lang: n/a
+TI: Risk-Constrained Reinforcement Learning with Percentile Risk Criteria
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C063; identifier arXiv:1512.01629] 带分位数/CVaR 约束的风险约束 RL（理论 + 算法）
+KW: search direction 4
+
+### R00064 | 2025 | Journal article | Lang: n/a
+TI: Emergence from Emergence: Financial Market Simulation via Learning with Heterogeneous Preferences
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C064; identifier arXiv:2511.05207] 异质偏好智能体的多智能体 RL 市场模拟
+KW: search direction 4
+
+### R00065 | 2025 | Journal article | Lang: n/a
+TI: JaxMARL-HFT: GPU-Accelerated Large-Scale Multi-Agent Reinforcement Learning for High-Frequency Trading
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C065; identifier arXiv:2511.02136] 高频交易多智能体 RL 环境
+KW: search direction 4
+
+### R00066 | 2025 | Journal article | Lang: n/a
+TI: ABIDES-MARL: A Multi-Agent Reinforcement Learning Environment for Optimal Execution with Endogenous Liquidity
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C066; identifier arXiv:2511.02016] 带内生流动性的多智能体 RL 最优执行环境（摘要提及 Kyle
+    类模型）
+KW: search direction 4
+
+### R00067 | 2025 | Journal article | Lang: n/a
+TI: Multi-Agent Reinforcement Learning for Market Making: Competition without Collusion
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C067; identifier arXiv:2510.25929] 多智能体 RL 做市：竞争而无合谋
+KW: search direction 4
+
+### R00068 | 2023 | Journal article | Lang: n/a
+TI: Order book regulatory impact on stock market quality: a multi-agent reinforcement learning perspective
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C068; identifier arXiv:2302.04184] 多智能体 RL 视角下订单簿监管对市场质量的影响
+KW: search direction 4
+
+### R00069 | 2023 | Journal article | Lang: n/a
+TI: Optimizing Trading Strategies in Quantitative Markets using Multi-Agent Reinforcement Learning
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C069; identifier arXiv:2303.11959] 多智能体 RL 优化量化交易策略
+KW: search direction 4
+
+### R00070 | 2021 | Journal article | Lang: n/a
+TI: Deep Q-Learning Market Makers in a Multi-Agent Simulated Stock Market
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C070; identifier arXiv:2112.04494] 多智能体模拟股市中的深度 Q 学习做市商
+KW: search direction 4
+
+### R00071 | 2021 | Journal article | Lang: n/a
+TI: Recent Advances in Reinforcement Learning in Finance
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C071; identifier arXiv:2112.04553] 金融中 RL 的综述
+KW: search direction 4
+
+### R00072 | 2021 | Journal article | Lang: n/a
+TI: Reinforcement Learning for Quantitative Trading
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C072; identifier arXiv:2109.13851] 量化交易 RL 综述
+KW: search direction 4
+
+### R00073 | 2021 | Journal article | Lang: n/a
+TI: Reinforcement Learning with Dynamic Convex Risk Measures
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C073; identifier arXiv:2112.13414] 动态凸风险测度下的 RL
+KW: search direction 4
+
+### R00074 | 2021 | Journal article | Lang: n/a
+TI: Deep Reinforcement Learning in Quantitative Algorithmic Trading: A Review
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C074; identifier arXiv:2106.00123] 量化交易深度 RL 综述
+KW: search direction 4
+
+### R00075 | 2021 | Journal article | Lang: n/a
+TI: Deep Reinforcement Learning for Trading—A Critical Survey
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C075; identifier doi:10.3390/data6110119] 交易深度 RL 批判性综述
+KW: search direction 4
+
+### R00076 | 2020 | Journal article | Lang: n/a
+TI: Mean-Variance Efficient Reinforcement Learning with Applications to Dynamic Financial Investment
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C076; identifier arXiv:2010.01404] 均值-方差高效 RL 及其在动态投资中的应用
+KW: search direction 4
+
+### R00077 | 2019 | Journal article | Lang: n/a
+TI: Stock price formation: useful insights from a multi-agent reinforcement learning model
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C077; identifier arXiv:1910.05137] 多智能体 RL 模型下的股价形成
+KW: search direction 4
+
+### R00078 | 2019 | Journal article | Lang: n/a
+TI: Fairness in Multi-agent Reinforcement Learning for Stock Trading
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C078; identifier arXiv:2001.00918] 多智能体 RL 股票交易中的公平性
+KW: search direction 4
+
+### R00079 | 2019 | Journal article | Lang: n/a
+TI: Deep Robust Reinforcement Learning for Practical Algorithmic Trading
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C079; identifier doi:10.1109/access.2019.2932789] 稳健深度 RL 算法交易
+KW: search direction 4
+
+### R00080 | 2017 | Journal article | Lang: n/a
+TI: A Deep Reinforcement Learning Framework for the Financial Portfolio Management Problem
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C080; identifier arXiv:1706.10059] 组合管理深度 RL 经典框架（EIIE）
+KW: search direction 4
+
+=== END OF BATCH b002 (40 records) ===

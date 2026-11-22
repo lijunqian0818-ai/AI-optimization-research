@@ -1,0 +1,3 @@
+unit tests: run=135 failures=0 errors=0 skipped=0
+synthetic look-ahead: 330 checks on 30 stock-days, 330 bit-identical; non-NaN columns compared per row: 187-369 of 370
+ALL PASSED

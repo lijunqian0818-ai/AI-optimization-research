@@ -1,0 +1,124 @@
+17:11:11 +      5s run 'confirm' started; data cut-off 2021-12-31; out C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\confirm\run; T = 30; seeds (0, 1, 2, 3, 4); gate window y1; criterion V
+17:11:11 +      5s === stage 1_list
+17:11:12 +      6s list: 1000 names (frozen list), without bar file 0
+17:11:12 +      6s === stage 1_list done in 0.9 s
+17:11:12 +      6s === stage 2_market
+17:12:46 +    100s === stage 2_market done in 94.4 s
+17:12:46 +    100s === stage 3_panel
+17:12:46 +    100s [panel] provenance check: reuse
+17:13:10 +    124s === stage 3_panel done in 24.1 s
+17:13:10 +    124s === stage 4_universe
+17:13:12 +    127s === stage 4_universe done in 2.2 s
+17:13:12 +    127s === stage 5_features
+17:14:51 +    226s === stage 5_features done in 99.0 s
+17:14:51 +    226s === stage 6_standard_orders
+17:16:33 +    327s === stage 6_standard_orders done in 101.2 s
+17:16:33 +    327s === stage 7_base
+19:53:37 +   9752s [base lgbm] config 1/30 validation criteria computed (236.45 s fit time)
+19:53:37 +   9752s [base lgbm] config 2/30 validation criteria computed (175.49 s fit time)
+19:53:37 +   9752s [base lgbm] config 3/30 validation criteria computed (196.31 s fit time)
+19:53:37 +   9752s [base lgbm] config 4/30 validation criteria computed (281.58 s fit time)
+19:53:37 +   9752s [base lgbm] config 5/30 validation criteria computed (675.93 s fit time)
+19:53:37 +   9752s [base lgbm] config 6/30 validation criteria computed (343.62 s fit time)
+19:53:37 +   9752s [base lgbm] config 7/30 validation criteria computed (381.2 s fit time)
+19:53:37 +   9752s [base lgbm] config 8/30 validation criteria computed (187.38 s fit time)
+19:53:37 +   9752s [base lgbm] config 9/30 validation criteria computed (136.53 s fit time)
+19:53:37 +   9752s [base lgbm] config 10/30 validation criteria computed (380.63 s fit time)
+19:53:37 +   9752s [base lgbm] config 11/30 validation criteria computed (451.38 s fit time)
+19:53:37 +   9752s [base lgbm] config 12/30 validation criteria computed (176.11 s fit time)
+19:53:37 +   9752s [base lgbm] config 13/30 validation criteria computed (399.34 s fit time)
+19:53:37 +   9752s [base lgbm] config 14/30 validation criteria computed (217.96 s fit time)
+19:53:37 +   9752s [base lgbm] config 15/30 validation criteria computed (834.99 s fit time)
+19:53:37 +   9752s [base lgbm] config 16/30 validation criteria computed (606.81 s fit time)
+19:53:37 +   9752s [base lgbm] config 17/30 validation criteria computed (963.1 s fit time)
+19:53:37 +   9752s [base lgbm] config 18/30 validation criteria computed (253.01 s fit time)
+19:53:37 +   9752s [base lgbm] config 19/30 validation criteria computed (315.73 s fit time)
+19:53:37 +   9752s [base lgbm] config 20/30 validation criteria computed (530.42 s fit time)
+19:53:37 +   9752s [base lgbm] config 21/30 validation criteria computed (2142.83 s fit time)
+19:53:37 +   9752s [base lgbm] config 22/30 validation criteria computed (2376.12 s fit time)
+19:53:37 +   9752s [base lgbm] config 23/30 validation criteria computed (667.78 s fit time)
+19:53:37 +   9752s [base lgbm] config 24/30 validation criteria computed (701.6 s fit time)
+19:53:37 +   9752s [base lgbm] config 25/30 validation criteria computed (1443.99 s fit time)
+19:53:37 +   9752s [base lgbm] config 26/30 validation criteria computed (771.98 s fit time)
+19:53:37 +   9752s [base lgbm] config 27/30 validation criteria computed (1144.71 s fit time)
+19:53:37 +   9752s [base lgbm] config 28/30 validation criteria computed (513.78 s fit time)
+19:53:37 +   9752s [base lgbm] config 29/30 validation criteria computed (956.87 s fit time)
+19:53:37 +   9752s [base lgbm] config 30/30 validation criteria computed (347.68 s fit time)
+21:35:20 +  15854s [base lgbm] configuration 14, seed 0: deployment fits done
+21:35:21 +  15855s [base lgbm] configuration 14, seed 1: deployment fits done
+21:35:21 +  15856s [base lgbm] configuration 14, seed 2: deployment fits done
+21:35:22 +  15856s [base lgbm] configuration 14, seed 3: deployment fits done
+21:35:23 +  15857s [base lgbm] configuration 14, seed 4: deployment fits done
+22:19:28 +  18503s [base ridge] config 1/8 validation criteria computed (20.53 s fit time)
+22:19:28 +  18503s [base ridge] config 2/8 validation criteria computed (17.21 s fit time)
+22:19:28 +  18503s [base ridge] config 3/8 validation criteria computed (18.53 s fit time)
+22:19:28 +  18503s [base ridge] config 4/8 validation criteria computed (18.48 s fit time)
+22:19:28 +  18503s [base ridge] config 5/8 validation criteria computed (19.54 s fit time)
+22:19:28 +  18503s [base ridge] config 6/8 validation criteria computed (1333.53 s fit time)
+22:19:28 +  18503s [base ridge] config 7/8 validation criteria computed (3702.4 s fit time)
+22:19:28 +  18503s [base ridge] config 8/8 validation criteria computed (125.78 s fit time)
+22:22:04 +  18658s [base ridge] configuration 3, seed 0: deployment fits done
+23:58:35 +  24449s [base ridge] configuration 6, seed 0: deployment fits done
+01:01:37 +  28231s [NET-U15] config 1/30 validation criteria computed (131.2 s fit time)
+01:01:37 +  28231s [NET-U15] config 2/30 validation criteria computed (103.47 s fit time)
+01:01:37 +  28231s [NET-U15] config 3/30 validation criteria computed (119.12 s fit time)
+01:01:37 +  28231s [NET-U15] config 4/30 validation criteria computed (138.75 s fit time)
+01:01:37 +  28231s [NET-U15] config 5/30 validation criteria computed (285.64 s fit time)
+01:01:37 +  28231s [NET-U15] config 6/30 validation criteria computed (158.44 s fit time)
+01:01:37 +  28231s [NET-U15] config 7/30 validation criteria computed (218.05 s fit time)
+01:01:37 +  28231s [NET-U15] config 8/30 validation criteria computed (87.14 s fit time)
+01:01:37 +  28231s [NET-U15] config 9/30 validation criteria computed (71.91 s fit time)
+01:01:37 +  28231s [NET-U15] config 10/30 validation criteria computed (248.47 s fit time)
+01:01:37 +  28231s [NET-U15] config 11/30 validation criteria computed (272.66 s fit time)
+01:01:37 +  28231s [NET-U15] config 12/30 validation criteria computed (104.08 s fit time)
+01:01:37 +  28231s [NET-U15] config 13/30 validation criteria computed (257.96 s fit time)
+01:01:37 +  28231s [NET-U15] config 14/30 validation criteria computed (132.0 s fit time)
+01:01:37 +  28231s [NET-U15] config 15/30 validation criteria computed (326.09 s fit time)
+01:01:37 +  28231s [NET-U15] config 16/30 validation criteria computed (150.9 s fit time)
+01:01:37 +  28231s [NET-U15] config 17/30 validation criteria computed (266.48 s fit time)
+01:01:37 +  28231s [NET-U15] config 18/30 validation criteria computed (92.24 s fit time)
+01:01:37 +  28231s [NET-U15] config 19/30 validation criteria computed (118.61 s fit time)
+01:01:37 +  28231s [NET-U15] config 20/30 validation criteria computed (134.69 s fit time)
+01:01:37 +  28231s [NET-U15] config 21/30 validation criteria computed (479.7 s fit time)
+01:01:37 +  28231s [NET-U15] config 22/30 validation criteria computed (598.2 s fit time)
+01:01:37 +  28231s [NET-U15] config 23/30 validation criteria computed (205.77 s fit time)
+01:01:37 +  28231s [NET-U15] config 24/30 validation criteria computed (203.76 s fit time)
+01:01:37 +  28231s [NET-U15] config 25/30 validation criteria computed (410.17 s fit time)
+01:01:37 +  28231s [NET-U15] config 26/30 validation criteria computed (393.02 s fit time)
+01:01:37 +  28231s [NET-U15] config 27/30 validation criteria computed (646.4 s fit time)
+01:01:37 +  28231s [NET-U15] config 28/30 validation criteria computed (390.82 s fit time)
+01:01:37 +  28231s [NET-U15] config 29/30 validation criteria computed (563.17 s fit time)
+01:01:37 +  28231s [NET-U15] config 30/30 validation criteria computed (234.8 s fit time)
+01:48:18 +  31032s [NET-U15] configuration 28, seed 0: deployment fits done
+01:48:19 +  31033s [NET-U15] configuration 28, seed 1: deployment fits done
+01:48:19 +  31033s [NET-U15] configuration 28, seed 2: deployment fits done
+01:48:20 +  31034s [NET-U15] configuration 28, seed 3: deployment fits done
+01:48:20 +  31034s [NET-U15] configuration 28, seed 4: deployment fits done
+01:50:15 +  31150s === stage 7_base done in 30822.7 s
+01:50:15 +  31150s === stage 8_gates
+02:15:30 +  32664s [gates lgbm] LOSS-LR(-Z): tuned over 5 configurations
+16:24:52 +  83626s [gates lgbm] LOSS(-Z): tuned over 30 configurations
+16:24:52 +  83626s [gates lgbm] LOSS(+Z_H): tuned over 30 configurations
+16:44:27 +  84801s [gates lgbm] LOSS(+Z_O*): tuned over 30 configurations
+16:48:25 +  85039s [gates lgbm] LOSS(+Z_O): tuned over 30 configurations
+17:09:21 +  86295s [gates lgbm] LOSS(+Z_H+Z_O*): tuned over 30 configurations
+20:48:41 +  99455s [gates lgbm] NET-K(-Z): tuned over 30 configurations
+20:50:03 +  99537s [gates lgbm] NET-K(+Z_H): tuned over 30 configurations
+21:00:33 + 100167s [gates lgbm] NET-K(+Z_O*): tuned over 30 configurations
+22:58:15 + 107229s [gates lgbm] NET-U(-Z): tuned over 30 configurations
+22:58:15 + 107229s [gates lgbm] LOSS(-Z)-thr: tuned over 30 configurations
+10:15:29 + 147863s [gates lgbm] LOSS(+Z_H)-thr: tuned over 30 configurations
+10:15:29 + 147863s [gates lgbm] LOSS(+Z_O)-thr: tuned over 30 configurations
+10:15:29 + 147863s [gates ridge] LOSS-LR(-Z): tuned over 5 configurations
+18:31:40 + 177635s [gates ridge] LOSS(-Z): tuned over 30 configurations
+18:31:54 + 177649s [gates ridge] LOSS(+Z_H): tuned over 30 configurations
+22:21:43 + 191437s [gates ridge] LOSS(+Z_O*): tuned over 30 configurations
+11:15:55 + 237889s [gates ridge] LOSS(+Z_O): tuned over 30 configurations
+11:15:55 + 237889s [gates ridge] LOSS(+Z_H+Z_O*): tuned over 30 configurations
+12:40:50 + 242984s [gates ridge] NET-K(-Z): tuned over 30 configurations
+12:40:50 + 242984s [gates ridge] NET-K(+Z_H): tuned over 30 configurations
+16:58:40 + 258454s [gates ridge] NET-K(+Z_O*): tuned over 30 configurations
+20:47:39 + 272193s [gates ridge] NET-U(-Z): tuned over 30 configurations
+20:47:39 + 272193s [gates ridge] LOSS(-Z)-thr: tuned over 30 configurations
+20:47:39 + 272193s [gates ridge] LOSS(+Z_H)-thr: tuned over 30 configurations
+20:47:39 + 272193s [gates ridge] LOSS(+Z_O)-thr: tuned over 30 configurations

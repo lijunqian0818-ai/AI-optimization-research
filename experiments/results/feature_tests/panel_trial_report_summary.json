@@ -1,0 +1,21 @@
+{
+ "n_names_requested": 20,
+ "n_names_ok": 20,
+ "n_names_error": 0,
+ "n_names_no_bar_file": 0,
+ "errors": [],
+ "rows_total": 48139,
+ "n_columns": 370,
+ "n_inf_total": 0,
+ "n_features_never_computed": 0,
+ "features_never_computed": [],
+ "names_with_missing_rows": 2,
+ "missing_rows_total": 2,
+ "names_with_rows_filled_from_xsrc": 0,
+ "rows_filled_from_xsrc_total": 0,
+ "stock_days_V_gt_1": 0,
+ "lhb_unclassified_rows": 68,
+ "lhb_stock_days_multi_only": 72,
+ "build_seconds_total": 70.15,
+ "warmup_n_feature_name_pairs_earlier_than_declared": 73
+}

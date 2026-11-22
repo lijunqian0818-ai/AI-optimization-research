@@ -1,0 +1,197 @@
+BATCH b004 -- 36 records: R00121 .. R00156
+
+### R00121 | 2025 | Journal article | Lang: n/a
+TI: Tackling estimation risk in Kelly investing using options
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C121; identifier arXiv:2508.18868] 用期权处理 Kelly 投资中的估计风险
+KW: search direction 7
+
+### R00122 | 2018 | Journal article | Lang: n/a
+TI: Distributional Robust Kelly Gambling: Optimal Strategy under Uncertainty in the Long-Run
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C122; identifier arXiv:1812.10371] 分布鲁棒 Kelly：分布不确定下的长期最优下注
+KW: search direction 7
+
+### R00123 | 2017 | Journal article | Lang: n/a
+TI: Kelly betting on horse races with uncertainty in probability estimates
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C123; identifier arXiv:1701.02814] 概率估计有不确定性时的 Kelly 下注（多结果）
+KW: search direction 7
+
+### R00124 | 2016 | Journal article | Lang: n/a
+TI: Risk-Constrained Kelly Gambling
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C124; identifier arXiv:1603.06183] 风险约束 Kelly：在回撤风险约束下的凸优化下注
+KW: search direction 7
+
+### R00125 | 2013 | Journal article | Lang: n/a
+TI: Optimal Betting Under Parameter Uncertainty: Improving the Kelly Criterion
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C125; identifier doi:10.1287/deca.2013.0271] 参数不确定下的最优下注：收缩 Kelly
+KW: search direction 7
+
+### R00126 | 2012 | Journal article | Lang: n/a
+TI: Partial Kelly portfolios and shrinkage estimators
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C126; identifier doi:10.1109/isit.2012.6283549] 部分 Kelly 组合与收缩估计
+KW: search direction 7
+
+### R00127 | 2010 | Journal article | Lang: n/a
+TI: Long-term capital growth: the good and bad properties of the Kelly and fractional Kelly capital growth criteria
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C127; identifier doi:10.1080/14697688.2010.506108] Kelly 与分数 Kelly
+    的优劣性质
+KW: search direction 7
+
+### R00128 | 2008 | Journal article | Lang: n/a
+TI: The kelly criterion in blackjack sports betting, and the stock market
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C128; identifier doi:10.1016/B978-044453248-0.50015-0] Thorp：Kelly
+    准则在二十一点、体育博彩与股市中的应用
+KW: search direction 7
+
+### R00129 | 2025 | Journal article | Lang: n/a
+TI: Optimal Betting: Beyond the Long-Term Growth
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C129; identifier arXiv:2503.17927] 超越长期增长的最优下注（含分数 Kelly 讨论）
+KW: search direction 7
+
+### R00130 | 2018 | Journal article | Lang: n/a
+TI: Generalized framework for applying the Kelly criterion to stock markets
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C130; identifier arXiv:1806.05293] Kelly 准则应用于股票市场的一般框架
+KW: search direction 7
+
+### R00131 | 2018 | Journal article | Lang: n/a
+TI: Shrinkage estimation of Kelly portfolios
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C131; identifier doi:10.1080/14697688.2018.1483583] Kelly 组合的收缩估计
+KW: search direction 7
+
+### R00132 | 2017 | Journal article | Lang: n/a
+TI: Kelly Betting Can Be Too Conservative
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C132; identifier arXiv:1710.01786] Kelly 下注可能过于保守的情形
+KW: search direction 7
+
+### R00133 | 2007 | Journal article | Lang: n/a
+TI: Analysis of Kelly-optimal portfolios
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C133; identifier arXiv:0712.2771] Kelly 最优组合分析
+KW: search direction 7
+
+### R00134 | 2007 | Journal article | Lang: n/a
+TI: Optimal Portfolio Choice with Parameter Uncertainty
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C134; identifier doi:10.1017/S0022109000004129]
+    参数不确定下的最优组合选择（Kan-Zhou）
+KW: search direction 7
+
+### R00135 | 2022 | Journal article | Lang: n/a
+TI: Conformal Risk Control
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C135; identifier arXiv:2208.02814] Conformal Risk
+    Control（奠基；分布无关期望损失控制）
+KW: search direction 8
+
+### R00136 | 2019 | Journal article | Lang: n/a
+TI: SelectiveNet: A Deep Neural Network with an Integrated Reject Option
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C136; identifier arXiv:1901.09192] SelectiveNet：内置拒绝选项的深度网络（奠基 / 基线）
+KW: search direction 8
+
+### R00137 | 2019 | Journal article | Lang: n/a
+TI: Superhuman AI for multiplayer poker
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C137; identifier doi:10.1126/science.aay2400] Pluribus 多人扑克（奠基）
+KW: search direction 8
+
+### R00138 | 2018 | Journal article | Lang: n/a
+TI: Superhuman AI for heads-up no-limit poker: Libratus beats top professionals
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C138; identifier doi:10.1126/science.aao1733] Libratus（奠基）
+KW: search direction 8
+
+### R00139 | 2017 | Journal article | Lang: n/a
+TI: DeepStack: Expert-Level Artificial Intelligence in No-Limit Poker
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C139; identifier arXiv:1701.01724] DeepStack：无限注德扑达到专家水平（奠基；Science
+    DOI 10.1126/science.aam6960）
+KW: search direction 8
+
+### R00140 | 2017 | Journal article | Lang: n/a
+TI: Selective Classification for Deep Neural Networks
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C140; identifier arXiv:1705.08500] 深度网络的选择性分类（风险-覆盖率保证）（奠基）
+KW: search direction 8
+
+### R00141 | 2016 | Journal article | Lang: n/a
+TI: Learning with Rejection
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C141; identifier doi:10.1007/978-3-319-46379-7_5] Learning with
+    Rejection：带拒绝的学习理论（ALT 2016）
+KW: search direction 8
+
+### R00142 | 2010 | Journal article | Lang: n/a
+TI: On the Foundations of Noise-free Selective Classification
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C142; identifier https://www.jmlr.org/papers/v11/el-yaniv10a.html]
+    选择性分类理论奠基（风险-覆盖率权衡）
+KW: search direction 8
+
+### R00143 | 2007 | Journal article | Lang: n/a
+TI: Regret Minimization in Games with Incomplete Information
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C143; identifier
+    https://papers.nips.cc/paper/2007/hash/08d98638c6fcd194a4b1e6992063e944-Abstract.html] CFR 原始论文（奠基）
+KW: search direction 8
+
+### R00144 | 1985 | Journal article | Lang: n/a
+TI: Continuous Auctions and Insider Trading
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C144; identifier doi:10.2307/1913210] Kyle 1985：连续拍卖与内幕交易（奠基）
+KW: search direction 8
+
+### R00145 | 1985 | Journal article | Lang: n/a
+TI: Bid, ask and transaction prices in a specialist market with heterogeneously informed traders
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C145; identifier doi:10.1016/0304-405X(85)90044-3] Glosten-Milgrom
+    1985：异质信息下的买卖价差（奠基）
+KW: search direction 8
+
+### R00146 | 1982 | Journal article | Lang: n/a
+TI: Information, trade and common knowledge
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C146; identifier doi:10.1016/0022-0531(82)90046-1] Milgrom-Stokey
+    1982：no-trade 定理（奠基）
+KW: search direction 8
+
+### R00147 | 1970 | Journal article | Lang: n/a
+TI: On optimum recognition error and reject tradeoff
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C147; identifier doi:10.1109/TIT.1970.1054406] Chow
+    1970：最优错误-拒绝权衡（拒绝选项奠基）
+KW: search direction 8
+
+### R00148 | 1956 | Journal article | Lang: n/a
+TI: A New Interpretation of Information Rate
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C148; identifier doi:10.1002/j.1538-7305.1956.tb03809.x] Kelly
+    1956（奠基）
+KW: search direction 8
+
+### R00149 | 2024 | Journal article | Lang: n/a
+TI: A Survey on Game Theory Optimal Poker
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C149; identifier arXiv:2401.06168] GTO 扑克综述
+KW: search direction 8
+
+### R00150 | 2021 | Journal article | Lang: n/a
+TI: Student of Games: A unified learning algorithm for both perfect and imperfect information games
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C150; identifier arXiv:2112.03178] Student of Games：统一完全/不完全信息博弈的算法
+KW: search direction 8
+
+### R00151 | 2020 | Journal article | Lang: n/a
+TI: Combining Deep Reinforcement Learning and Search for Imperfect-Information Games
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C151; identifier arXiv:2007.13544] ReBeL：不完全信息博弈中 RL + 搜索（奠基）
+KW: search direction 8
+
+### R00152 | 2018 | Journal article | Lang: n/a
+TI: Deep Counterfactual Regret Minimization
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C152; identifier arXiv:1811.00164] Deep CFR（奠基）
+KW: search direction 8
+
+### R00153 | 2016 | Journal article | Lang: n/a
+TI: Deep Reinforcement Learning from Self-Play in Imperfect-Information Games
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C153; identifier arXiv:1603.01121] NFSP：不完全信息博弈自博弈深度 RL（奠基）
+KW: search direction 8
+
+### R00154 | 2015 | Journal article | Lang: n/a
+TI: Heads-up limit hold’em poker is solved
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C154; identifier doi:10.1126/science.1259433] 限注德扑被解出（奠基）
+KW: search direction 8
+
+### R00155 | 2008 | Journal article | Lang: n/a
+TI: Classification with a Reject Option using a Hinge Loss
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C155; identifier https://www.jmlr.org/papers/v9/bartlett08a.html]
+    带拒绝选项分类的代理损失理论（奠基）
+KW: search direction 8
+
+### R00156 | 2023 | Journal article | Lang: n/a
+TI: Learning to Abstain From Uninformative Data
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C156; identifier arXiv:2309.14240]
+    以金融等高噪声领域为动机：数据中大量样本无信息，提出受选择性学习理论启发的损失，联合训练预测器与选择器，有近最优保证（组长在 ARS lit-review 中补充，arXiv API 核实）
+KW: search direction 2
+
+=== END OF BATCH b004 (36 records) ===

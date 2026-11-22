@@ -1,0 +1,23 @@
+{
+ "stage": "ta",
+ "tool": "sr-screener 1.0.0",
+ "complete": true,
+ "pending_records": 0,
+ "state_problems": [],
+ "identified_by_database": {
+  "candidates_for_screening": 156
+ },
+ "identified_total": 156,
+ "duplicates_removed": 0,
+ "records_screened": 156,
+ "records_to_screen": 156,
+ "records_excluded": 3,
+ "excluded_by_code": {
+  "E2": 2,
+  "E5": 1
+ },
+ "reports_sought_for_retrieval": 153,
+ "advanced_include": 111,
+ "advanced_unclear": 42,
+ "advanced_outside_allowed_languages": 0
+}

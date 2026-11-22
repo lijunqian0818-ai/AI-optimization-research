@@ -1,0 +1,88 @@
+23:14:58 +      0s run 'smoke' started; data cut-off 2021-12-31; out C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\pilot\smoke
+23:14:58 +      0s === stage 1_list
+23:14:58 +      0s list: 100 names, ready 100, skipped 0
+23:14:58 +      0s === stage 1_list done in 0.1 s
+23:14:58 +      0s === stage 2_market
+23:15:02 +      5s === stage 2_market done in 4.6 s
+23:15:02 +      5s === stage 3_panel
+[panel] 100/100 names built, 65s
+23:16:10 +     73s === stage 3_panel done in 68.0 s
+23:16:10 +     73s === stage 4_universe
+23:16:10 +     73s === stage 4_universe done in 0.1 s
+23:16:10 +     73s === stage 5_features
+23:16:15 +     77s === stage 5_features done in 4.2 s
+23:16:15 +     77s === stage 6_base
+23:16:24 +     86s [base lgbm] config 1/2 mean validation RankIC computed
+23:16:43 +    106s [base lgbm] config 2/2 mean validation RankIC computed
+23:17:28 +    151s [base lgbm] seed 0: deployment fits done
+23:18:07 +    190s [base lgbm] seed 1: deployment fits done
+23:18:48 +    230s [base lgbm] seed 2: deployment fits done
+23:18:48 +    231s [base ridge] config 1/2 mean validation RankIC computed
+23:18:49 +    231s [base ridge] config 2/2 mean validation RankIC computed
+23:18:52 +    235s [base ridge] seed 0: deployment fits done
+23:18:59 +    242s === stage 6_base done in 164.7 s
+23:18:59 +    242s === stage 7_standard_orders
+23:19:06 +    248s === stage 7_standard_orders done in 6.7 s
+23:19:06 +    248s === stage 8_gates
+23:19:16 +    259s [gates lgbm] LOSS-LR(-Z): tuned over 2 configurations
+23:19:43 +    286s [gates lgbm] LOSS(-Z): tuned over 2 configurations
+23:20:22 +    325s [gates lgbm] LOSS(+Z_H): tuned over 2 configurations
+23:21:07 +    369s [gates lgbm] LOSS(+Z_O): tuned over 2 configurations
+23:21:37 +    399s [gates lgbm] LOSS(+Z_H+Z_O): tuned over 2 configurations
+23:22:05 +    427s [gates lgbm] LOSS(+perm Z_H): tuned over 2 configurations
+23:22:35 +    457s [gates lgbm] LOSS(+perm Z_O): tuned over 2 configurations
+23:22:59 +    481s [gates lgbm] NET-K(-Z): tuned over 2 configurations
+23:23:39 +    522s [gates lgbm] NET-K(+Z_H): tuned over 2 configurations
+23:24:17 +    560s [gates lgbm] NET-K(+Z_O): tuned over 2 configurations
+23:25:01 +    603s [gates lgbm] NET-U(-Z): tuned over 2 configurations
+23:25:12 +    614s [gates ridge] LOSS-LR(-Z): tuned over 2 configurations
+23:25:48 +    650s [gates ridge] LOSS(-Z): tuned over 2 configurations
+23:26:41 +    703s [gates ridge] LOSS(+Z_H): tuned over 2 configurations
+23:27:37 +    759s [gates ridge] LOSS(+Z_O): tuned over 2 configurations
+23:28:16 +    799s [gates ridge] LOSS(+Z_H+Z_O): tuned over 2 configurations
+23:28:49 +    831s [gates ridge] LOSS(+perm Z_H): tuned over 2 configurations
+23:29:41 +    883s [gates ridge] LOSS(+perm Z_O): tuned over 2 configurations
+23:30:25 +    928s [gates ridge] NET-K(-Z): tuned over 2 configurations
+23:31:15 +    977s [gates ridge] NET-K(+Z_H): tuned over 2 configurations
+23:31:46 +   1009s [gates ridge] NET-K(+Z_O): tuned over 2 configurations
+23:32:31 +   1053s [gates ridge] NET-U(-Z): tuned over 2 configurations
+23:32:31 +   1053s === stage 8_gates done in 804.7 s
+23:32:31 +   1053s === stage 9_backtests
+23:32:47 +   1069s main backtests: 108 runs
+23:33:48 +   1130s second-stage backtests: 84 runs
+23:34:38 +   1180s === stage 9_backtests done in 127.0 s
+23:34:38 +   1180s === stage 10_estimands
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\src\pilot\run_pilot.py:545: RuntimeWarning: Mean of empty slice
+  ent[k] = float(np.nanmean(v))
+23:34:52 +   1195s === stage 10_estimands done in 14.6 s
+23:34:54 +   1197s run finished: ok

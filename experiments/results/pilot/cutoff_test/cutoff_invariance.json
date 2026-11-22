@@ -1,0 +1,24 @@
+{
+ "runs": [
+  "experiments/results/pilot/smoke",
+  "C:/Users/lijun/AppData/Local/Temp/claude/7dc3241753d402cb/d5862b53-ca29-4bef-8196-d9ed1a8dc7be/scratchpad/cutoff_trees/run_A3",
+  "C:/Users/lijun/AppData/Local/Temp/claude/7dc3241753d402cb/d5862b53-ca29-4bef-8196-d9ed1a8dc7be/scratchpad/cutoff_trees/run_B3"
+ ],
+ "results_hash": [
+  "8394d220b246881f13f556f64e241e193a5f112b0731c3ab713f67a3696f30ab",
+  "8394d220b246881f13f556f64e241e193a5f112b0731c3ab713f67a3696f30ab",
+  "8394d220b246881f13f556f64e241e193a5f112b0731c3ab713f67a3696f30ab"
+ ],
+ "standard_orders_hash": [
+  "fd5c4cf469abf8a9f89cd2ac5760674f45899c23bcb4704742a138aae6e85655",
+  "fd5c4cf469abf8a9f89cd2ac5760674f45899c23bcb4704742a138aae6e85655",
+  "fd5c4cf469abf8a9f89cd2ac5760674f45899c23bcb4704742a138aae6e85655"
+ ],
+ "feature_files": {
+  "compared": 97,
+  "identical_in_all_runs": 97
+ },
+ "results_identical": true,
+ "standard_orders_identical": true,
+ "pass": true
+}

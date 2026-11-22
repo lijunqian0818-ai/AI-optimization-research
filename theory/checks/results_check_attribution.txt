@@ -1,0 +1,84 @@
+paths per seed = 300, seeds = [7, 8, 9]; T=500 days, 50 assets, k=10, kappa=0.001
+unit: P&L in units of one day's full exposure (exposure 1 = 1 dollar)
+
+--- baseline zero-exposure days: 0%; fallback w^B on those days: equal_all ---
+seed  Pi^G-Pi^B        exposure term     composition term   -(C^G-C^B)       max|identity resid|  max|gross G-E - comp|  max|net G-E resid|  max|E-B resid|
+7     +0.6770(se 0.0100)  +0.3991(se 0.0055)  -0.0016(se 0.0077)  +0.2795(se 0.0009)  4.44e-16             2.08e-16               2.08e-16            3.33e-16
+8     +0.6935(se 0.0108)  +0.4035(se 0.0055)  +0.0092(se 0.0081)  +0.2807(se 0.0009)  4.44e-16             1.67e-16               1.67e-16            3.33e-16
+9     +0.6772(se 0.0094)  +0.4000(se 0.0051)  -0.0035(se 0.0071)  +0.2807(se 0.0009)  2.22e-16             1.67e-16               1.67e-16            2.22e-16
+alternative ordering (reference e^B w^G), last seed:
+   exposure_alt +0.4080(se 0.0052)  composition_alt -0.0115(se 0.0106)  interaction +0.0080(se 0.0060)
+   max|identity resid (alt)| = 4.44e-16 ; max|(expo_alt - expo) - interaction| = 2.22e-16
+
+--- baseline zero-exposure days: 20%; fallback w^B on those days: equal_all ---
+seed  Pi^G-Pi^B        exposure term     composition term   -(C^G-C^B)       max|identity resid|  max|gross G-E - comp|  max|net G-E resid|  max|E-B resid|
+7     +0.5447(se 0.0092)  +0.3932(se 0.0055)  +0.0008(se 0.0072)  +0.1507(se 0.0011)  3.33e-16             1.67e-16               1.67e-16            3.33e-16
+8     +0.5678(se 0.0101)  +0.4045(se 0.0053)  +0.0112(se 0.0077)  +0.1521(se 0.0011)  2.22e-16             1.67e-16               1.67e-16            2.22e-16
+9     +0.5519(se 0.0092)  +0.4033(se 0.0052)  -0.0037(se 0.0068)  +0.1524(se 0.0012)  2.22e-16             2.67e-16               2.67e-16            2.22e-16
+alternative ordering (reference e^B w^G), last seed:
+   exposure_alt +0.4076(se 0.0058)  composition_alt -0.0081(se 0.0093)  interaction +0.0044(se 0.0057)
+   max|identity resid (alt)| = 3.33e-16 ; max|(expo_alt - expo) - interaction| = 1.39e-16
+
+--- baseline zero-exposure days: 20%; fallback w^B on those days: keep ---
+seed  Pi^G-Pi^B        exposure term     composition term   -(C^G-C^B)       max|identity resid|  max|gross G-E - comp|  max|net G-E resid|  max|E-B resid|
+7     +0.5447(se 0.0092)  +0.3956(se 0.0060)  -0.0016(se 0.0077)  +0.1507(se 0.0011)  2.78e-16             2.08e-16               2.08e-16            2.22e-16
+8     +0.5678(se 0.0101)  +0.4064(se 0.0057)  +0.0092(se 0.0081)  +0.1521(se 0.0011)  2.22e-16             1.67e-16               1.67e-16            2.22e-16
+9     +0.5519(se 0.0092)  +0.4030(se 0.0056)  -0.0035(se 0.0071)  +0.1524(se 0.0012)  2.22e-16             1.67e-16               1.67e-16            2.22e-16
+alternative ordering (reference e^B w^G), last seed:
+   exposure_alt +0.4076(se 0.0058)  composition_alt -0.0081(se 0.0093)  interaction +0.0046(se 0.0060)
+   max|identity resid (alt)| = 3.33e-16 ; max|(expo_alt - expo) - interaction| = 1.39e-16
+
+--- same paths (seed 7), 20% zero-exposure baseline days, two fallback conventions ---
+fallback=equal_all  expo=+0.393202 comp=+0.000834 expo+comp=+0.394036 lhs+dcost=+0.394036
+fallback=keep       expo=+0.395609 comp=-0.001573 expo+comp=+0.394036 lhs+dcost=+0.394036
+
+--- cost formula (review item D7) ---
+unit test: 1 share bought at 100 on day 1 and held; price 100 -> 110 -> 121 (x = 0.10, 0.10)
+  dollar traded, corrected formula: 100.000000  (true value: 100, the initial purchase)
+  dollar traded, naive |h_t - h_(t-1)|: 121.000000
+simulation (seed 7, baseline never at zero exposure): mean total cost per path
+  C^B: corrected 0.800810   naive 0.799181   relative difference -0.2033%
+  C^G: corrected 0.521280   naive 0.520412   relative difference -0.1665%
+  C^E: corrected 0.520942   naive 0.520072   relative difference -0.1670%
+
+--- adversarial accounting cases (round-2 review items G3, G4; round-3 item K1) ---
+(i) cash dividend: 1 share bought at 100; dividend 1 per share; ex-dividend price 99; NO trade
+  [PASS] period-1 trade (initial purchase), share-based: value +100.000000, required +100.000000
+  [PASS] period-2 trade, share-based formula (s_t - s_{t-}) * p_t: value +0.000000, required +0.000000
+  [PASS] period-2 trade, return shortcut with ex-distribution price return: value +0.000000, required +0.000000
+  [info] period-2 trade, return shortcut with TOTAL return (+0.0000) -- wrong, reports a sale: -1.000000
+  [PASS] cash distribution credited to the cash ledger: value +1.000000, required +1.000000
+  [PASS] wealth change equals h_1 * total return (P&L uses total return): value +0.000000, required +0.000000
+(ii) split: 1 share bought at 100; 2-for-1 split; post-split price 50; NO trade
+  [PASS] period-1 trade (initial purchase), share-based: value +100.000000, required +100.000000
+  [PASS] period-2 trade, share-based formula with s_{t-} = s_{t-1} * phi_t: value +0.000000, required +0.000000
+  [PASS] period-2 trade, return shortcut with split-adjusted price return: value +0.000000, required +0.000000
+  [info] period-2 trade, share difference WITHOUT the corporate-action update -- wrong, reports a purchase: +50.000000
+  [info] period-2 trade, return shortcut with RAW price ratio (-0.5000) -- wrong, reports a purchase: +50.000000
+(iii) controls: a genuine trade on the corporate-action date must still be reported
+  [PASS] dividend 1 + purchase of 1 more share at 99: value +99.000000, required +99.000000
+  [PASS] 2-for-1 split + sale of 1 of the 2 post-split shares at 50: value -50.000000, required -50.000000
+(iv) slippage counted once: buy 1 share, benchmark price 100, actual execution price 101, end price 110, explicit fee 0.10
+  [info] true wealth change: +8.900000
+  [PASS] convention A (execution-price accounting, C = explicit fees only) minus true wealth change: value +0.000000, required +0.000000
+  [PASS] convention B (benchmark-price accounting, C = fees + shortfall) minus true wealth change: value +0.000000, required +0.000000
+  [info] inconsistent mixture (execution-price holdings AND slippage in C) minus true wealth change -- wrong: -1.000000
+(v) non-zero cash return (round-3 item K1): wealth from an explicit cash/share ledger versus Pi + cash-benchmark term
+  [PASS] reviewer's example, start-of-period charge: terminal wealth from the ledger: value +108.900000, required +108.900000
+  [PASS]   wealth change: value +8.900000, required +8.900000
+  [PASS]   Pi (= -cost; no risky holdings): value -1.000000, required -1.000000
+  [PASS]   wealth change minus [Pi + sum rho_t (W_t - c_t)]  (corrected formula): value +0.000000, required +0.000000
+  [info]   Pi + sum rho_t W_t  (round-2 formula; gives 9, not 8.9): +9.000000
+  [info]   wealth change minus [Pi + sum rho_t W_t]  -- wrong for start-of-period charges: -0.100000
+  [PASS] same example, charge debited at the END of the period: wealth change: value +9.000000, required +9.000000
+  [PASS]   wealth change minus [Pi + sum rho_t W_t]  (end-of-period formula): value +0.000000, required +0.000000
+    multi-period case: T=8, 3 assets, seed 2026, initial cash 300, fees in [0,0.5], execution prices within 0.2% of benchmark, rho_t in [0,2%]
+  [info]   multi-period: wealth change (ledger): +15.132843
+  [info]   multi-period: Pi: -10.465308
+  [info]   multi-period: sum rho_t W_t: +25.620576
+  [info]   multi-period: sum rho_t c_t: +0.022425
+  [PASS]   multi-period, costs at the trade: wealth change minus [Pi + sum rho_t (W_t - c_t)]: value +0.000000, required +0.000000
+  [info]   multi-period, costs at the trade: wealth change minus [Pi + sum rho_t W_t]  -- wrong (= -sum rho_t c_t): -0.022425
+  [PASS]   multi-period, no shortfall, fees at period END: wealth change minus [Pi + sum rho_t W_t]: value -0.000000, required +0.000000
+  [PASS]   multi-period, rho = 0 (W4): wealth change minus Pi: value -0.000000, required +0.000000
+adversarial cases: 21 of 21 required equalities hold -> ALL PASS

@@ -1,0 +1,233 @@
+BATCH b001 -- 40 records: R00001 .. R00040
+
+### R00001 | 2008 | Journal article | Lang: n/a
+TI: Microstructure Bluffing with Nested Information
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C001; identifier doi:10.1257/aer.98.2.280]
+    微观结构“诈唬”：知情内幕者逆信息方向交易以误导跟随者；把扑克式 bluff 形式化为交易博弈均衡
+KW: search direction 1
+
+### R00002 | 2025 | Journal article | Lang: n/a
+TI: Algorithmic Aspects of Strategic Trading
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C002; identifier arXiv:2502.07606]
+    把多交易者建仓建模为博弈，用无悔动态计算（粗相关）均衡；博弈论算法用于交易
+KW: search direction 1
+
+### R00003 | 2024 | Journal article | Lang: n/a
+TI: Optimal position-building strategies in competition
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C003; identifier arXiv:2409.03586] 竞争环境下的最优建仓策略（交易者间博弈的均衡）
+KW: search direction 1
+
+### R00004 | 2024 | Journal article | Lang: n/a
+TI: Competitive equilibria in trading
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C004; identifier arXiv:2410.13583] 交易中的竞争均衡（多方策略性交易博弈）
+KW: search direction 1
+
+### R00005 | 2020 | Journal article | Lang: n/a
+TI: Imperfect Oracles: The Effect of Strategic Information on Stock Markets
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C005; identifier arXiv:2011.10837]
+    模拟市场中交易者获得关于他人策略的带噪信息（不完美预言机）时的获利能力
+KW: search direction 1
+
+### R00006 | 2020 | Journal article | Lang: n/a
+TI: Deep Investing in Kyle's Single Period Model
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C006; identifier arXiv:2006.13889] 用神经网络在 Kyle 单期模型中学习内幕交易者与做市商的均衡策略
+KW: search direction 1
+
+### R00007 | 2020 | Journal article | Lang: n/a
+TI: Robust Market Making via Adversarial Reinforcement Learning
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C007; identifier arXiv:2003.01820] 把做市建模为与对手的零和博弈，用对抗 RL 获得稳健策略
+KW: search direction 1
+
+### R00008 | 2019 | Journal article | Lang: n/a
+TI: On the Importance of Opponent Modeling in Auction Markets
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C008; identifier arXiv:1911.12816] 拍卖市场中对手建模的重要性（RL 交易智能体）
+KW: search direction 1
+
+### R00009 | 2004 | Journal article | Lang: n/a
+TI: Informed manipulation
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C009; identifier doi:10.1016/s0022-0531(03)00101-7]
+    知情操纵：内幕者在均衡中的操纵性交易
+KW: search direction 1
+
+### R00010 | 2026 | Journal article | Lang: n/a
+TI: SafeAdapt-Poker: Counterfactual Risk Calibration for Budgeted Adaptation under Opponent Shift
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C010; identifier arXiv:2610.20473]
+    纯扑克：对手行为漂移下带预算的反事实风险校准（“何时偏离均衡”）；思想可借鉴
+KW: search direction 1
+
+### R00011 | 2022 | Journal article | Lang: n/a
+TI: Opponent Modeling in Multiplayer Imperfect-Information Games
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C011; identifier arXiv:2212.06027] 多人不完全信息博弈中的对手建模（纯博弈算法）
+KW: search direction 1
+
+### R00012 | 2019 | Journal article | Lang: n/a
+TI: Artificial intelligence approach to momentum risk-taking
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C012; identifier arXiv:1911.08448] 动量风险承担的数学模型与自动交易系统；摘要检索命中
+    poker，关联程度未读全文确认
+KW: search direction 1
+
+### R00013 | 2019 | Journal article | Lang: n/a
+TI: The preferences in capital allocation among economics students in Poland. Investments on the Warsaw Stock Exchange and forex in comparison to a
+    poker game
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C013; identifier doi:10.22367/jem.2019.38.04]
+    问卷研究：经济系学生的股票/外汇投资与扑克对比
+KW: search direction 1
+
+### R00014 | 2015 | Journal article | Lang: n/a
+TI: Poker as a skill game: rational versus irrational behaviors
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C014; identifier doi:10.1088/1742-5468/2015/03/p03018]
+    扑克作为技巧游戏：理性与非理性行为的统计物理模型（arXiv:1409.6843）
+KW: search direction 1
+
+### R00015 | 2026 | Journal article | Lang: n/a
+TI: When Alpha Breaks: Two-Level Uncertainty for Safe Deployment of Cross-Sectional Stock Rankers
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C015; identifier arXiv:2603.13252] 截面选股排序模型的两层不确定性：策略层“是否交易”门控 +
+    个股层风险控制（DEUP 认知不确定性）；与“弃权层叠加在多因子打分上”高度接近
+KW: search direction 2
+
+### R00016 | 2026 | Journal article | Lang: n/a
+TI: FinAbstain: Uncertainty-Calibrated Multimodal RAG for Selective Financial Forecasting
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C016; identifier arXiv:2607.24875] LLM 多模态 RAG
+    做异常收益方向预测，带校准弃权与风险-覆盖率曲线、交易指标评估
+KW: search direction 2
+
+### R00017 | 2026 | Journal article | Lang: n/a
+TI: Safe Portfolio Learning from Untrusted Predictions: Signed Trust, Abstention, and Cross-Universe Polarity Failure
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C017; identifier arXiv:2611.04826] 组合层面的 Safe/Follow/Reverse 动作 +
+    证据门控弃权，带切换遗憾界与路径式抵押安全界；“弃权 + 理论保证 + 组合”三者兼具
+KW: search direction 2
+
+### R00018 | 2026 | Journal article | Lang: n/a
+TI: Conformal Risk Certificates for Portfolio Optimization Under Uncertainty: A Gated Reinforcement-Learning Approach
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C018; identifier arXiv:2611.14699] RL 组合策略外加 conformal
+    风险证书门控：下行风险超界则不执行；“RL + 弃权门 + 分布无关保证”
+KW: search direction 2
+
+### R00019 | 2023 | Journal article | Lang: n/a
+TI: Conservative Predictions on Noisy Financial Data
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C019; identifier arXiv:2310.11815]
+    级联模型在不确定样本上弃权，只对有把握的样本给出涨跌预测并据此交易（高精度低覆盖）
+KW: search direction 2
+
+### R00020 | 2022 | Journal article | Lang: n/a
+TI: Meta-Labeling: Theory and Framework
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C020; identifier doi:10.3905/jfds.2022.1.098] Meta-Labeling
+    理论与框架：二级模型判断一级信号是否值得出手（过滤假阳性）；量化业界版的“弃权层”，必须对比的基线（仅核实题录，未读摘要）
+KW: search direction 2
+
+### R00021 | 2021 | Journal article | Lang: n/a
+TI: Trading via Selective Classification
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C021; identifier arXiv:2110.14914]
+    把选择性分类（二分类/三分类+弃权）直接用于交易策略：分类器弃权时不持仓，商品期货回测显示风险调整后收益改善；与“弃权层”最直接重合（DOI 10.1145/3490354.3494379）
+KW: search direction 2
+
+### R00022 | 2011 | Journal article | Lang: n/a
+TI: Selective Prediction of Financial Trends with Hidden Markov Models
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C022; identifier
+    https://papers.nips.cc/paper/2011/hash/dd458505749b2941217ddd59394240e8-Abstract.html] 可弃权的 HMM 金融短期趋势预测：比较 Chow 式拒绝与 selective
+    HMM（在低质量隐状态弃权）；最早的“弃权 + 金融预测”工作
+KW: search direction 2
+
+### R00023 | 2026 | Journal article | Lang: n/a
+TI: Adversarially Robust Control of Conditional Value-at-Risk via Rockafellar-Uryasev Conformal Inference
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C023; identifier arXiv:2606.00320] 在线、对抗环境下的 CVaR conformal
+    控制（分布无关），可作下行风险保证的理论工具
+KW: search direction 2
+
+### R00024 | 2026 | Journal article | Lang: n/a
+TI: Taming Tail Risk in Financial Markets: Conformal Calibration for Nonstationary Portfolio VaR
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C024; identifier arXiv:2602.03903] 非平稳下组合 VaR 的 conformal
+    校准，下行尾部风险控制
+KW: search direction 2
+
+### R00025 | 2026 | Journal article | Lang: n/a
+TI: Selective Prediction and the Persistence Illusion: A Diagnostic Decomposition of VIX Regime Classification
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C025; identifier doi:10.3390/jrfm19080609] VIX
+    状态分类上的选择性预测诊断分解（“持续性假象”，对弃权增益的警示；仅核实题录）
+KW: search direction 2
+
+### R00026 | 2025 | Journal article | Lang: n/a
+TI: Selective Conformal Risk Control
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C026; identifier arXiv:2512.12844] 选择性 conformal 风险控制：把弃权与 CRC
+    结合，理论工具
+KW: search direction 2
+
+### R00027 | 2025 | Journal article | Lang: n/a
+TI: Classification with Reject Option: Distribution-free Error Guarantees via Conformal Prediction
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C027; identifier arXiv:2506.21802] 带拒绝选项的分类：用 conformal
+    给出分布无关误差保证；可借用于“出手子集的错误率保证”
+KW: search direction 2
+
+### R00028 | 2024 | Journal article | Lang: n/a
+TI: Conformal Predictive Portfolio Selection
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C028; identifier arXiv:2410.16333] 用 conformal 预测区间做组合选择（CPPS）
+KW: search direction 2
+
+### R00029 | 2023 | Journal article | Lang: n/a
+TI: Conformal Decision Theory: Safe Autonomous Decisions from Imperfect Predictions
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C029; identifier arXiv:2310.05921] Conformal Decision
+    Theory：直接对决策（而非预测集）做风险校准
+KW: search direction 2
+
+### R00030 | 2023 | Journal article | Lang: n/a
+TI: Robust Market Making: To Quote, or not To Quote
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C030; identifier arXiv:2508.16588] 稳健做市：把“是否报价”作为动作（to quote or
+    not），对抗 RL；“不出手”选项的博弈化处理
+KW: search direction 2
+
+### R00031 | 2023 | Journal article | Lang: n/a
+TI: Meta-Labeling: Calibration and Position Sizing
+AB: [Search-agent note, not the paper's abstract; read level: metadata; source id C031; identifier doi:10.3905/jfds.2023.1.119]
+    Meta-Labeling：概率校准与仓位（仅核实题录）
+KW: search direction 2
+
+### R00032 | 2021 | Journal article | Lang: n/a
+TI: Learn then Test: Calibrating Predictive Algorithms to Achieve Risk Control
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C032; identifier arXiv:2110.01052] Learn then
+    Test：用多重检验校准阈值以获得有限样本风险控制，可用于弃权阈值选择
+KW: search direction 2
+
+### R00033 | 2021 | Journal article | Lang: n/a
+TI: Distribution-Free, Risk-Controlling Prediction Sets
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C033; identifier arXiv:2101.02703] RCPS：分布无关的风险控制预测集，弃权阈值保证的理论基础
+KW: search direction 2
+
+### R00034 | 2021 | Journal article | Lang: n/a
+TI: Adaptive Conformal Inference Under Distribution Shift
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C034; identifier arXiv:2106.00170] 自适应 conformal
+    推断（ACI），处理分布漂移；金融非平稳下的校准工具
+KW: search direction 2
+
+### R00035 | 2019 | Journal article | Lang: n/a
+TI: Deep Gamblers: Learning to Abstain with Portfolio Theory
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C035; identifier arXiv:1907.00208] 把分类弃权建模为赌博/组合问题（m+1
+    类），弃权学习的代表方法，可作基线
+KW: search direction 2
+
+### R00036 | 2018 | Journal article | Lang: n/a
+TI: Optimal trading using signals
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C036; identifier arXiv:1811.03718]
+    以信号阈值为控制变量的最优交易数学框架（随机逼近），与“阈值式出手规则”相关
+KW: search direction 2
+
+### R00037 | 2018 | Journal article | Lang: n/a
+TI: BDLOB: Bayesian Deep Convolutional Neural Networks for Limit Order Books
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C037; identifier arXiv:1811.10041] 贝叶斯深度网络估计不确定性并用于仓位/是否交易的决策（限价单簿）
+KW: search direction 2
+
+### R00038 | 2021 | Journal article | Lang: n/a
+TI: A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C038; identifier arXiv:2107.07511] conformal prediction 入门综述
+KW: search direction 2
+
+### R00039 | 2025 | Journal article | Lang: n/a
+TI: Will AI Trade? A Computational Inversion of the No-Trade Theorem
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C039; identifier arXiv:2512.17952] 从计算有限理性角度重新审视 no-trade 定理
+KW: search direction 3
+
+### R00040 | 2025 | Journal article | Lang: n/a
+TI: When AI Trading Agents Compete: Adverse Selection of Meta-Orders by Reinforcement Learning-Based Market Making
+AB: [Search-agent note, not the paper's abstract; read level: abstract; source id C040; identifier arXiv:2510.27334] RL 做市商对中频交易者元订单造成的逆向选择
+KW: search direction 3
+
+=== END OF BATCH b001 (40 records) ===

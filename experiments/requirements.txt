@@ -1,0 +1,13 @@
+# experiments/.venv  (Python 3.14.4, Windows 11) -- versions actually installed and imported on 2026-11-15
+# Full freeze incl. transitive dependencies: experiments/results/data_audit/logs/pip_freeze.txt
+akshare==1.20.63
+baostock==0.9.4
+pandas==3.1.1
+numpy==2.5.4
+pyarrow==26.0.1
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+lightgbm==4.7.0
+# tool dependency of the ARS review scripts (not used by experiments)
+jsonschema==4.26.0

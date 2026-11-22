@@ -1,0 +1,161 @@
+run at 2026-11-15 23:11:33; python 3.14.4; numpy 2.5.4; pandas 3.1.1
+test_count_is_158 (features.tests.test_b0.TestB0Hand.test_count_is_158) ... ok
+test_full_window_only (features.tests.test_b0.TestB0Hand.test_full_window_only) ... ok
+test_kbar_hand (features.tests.test_b0.TestB0Hand.test_kbar_hand) ... ok
+test_non_traded_day_has_no_b0 (features.tests.test_b0.TestB0Hand.test_non_traded_day_has_no_b0) ... ok
+test_rolling_hand_linear_series (features.tests.test_b0.TestB0Hand.test_rolling_hand_linear_series) ... ok
+test_nan_in_window_gives_nan_and_no_partial_windows (features.tests.test_b0.TestOpsAgainstPandas.test_nan_in_window_gives_nan_and_no_partial_windows) ... ok
+test_rank_ties (features.tests.test_b0.TestOpsAgainstPandas.test_rank_ties) ... ok
+test_regression_ops_against_polyfit (features.tests.test_b0.TestOpsAgainstPandas.test_regression_ops_against_polyfit) ... ok
+test_simple_ops (features.tests.test_b0.TestOpsAgainstPandas.test_simple_ops) ... ok
+test_window_value_independent_of_series_start (features.tests.test_b0.TestOpsAgainstPandas.test_window_value_independent_of_series_start) ... ok
+test_bad_preclose_gives_nan_from_there (features.tests.test_bars_adjust.TestAdjust.test_bad_preclose_gives_nan_from_there) ... ok
+test_cutoff_must_be_trading_day_and_truncation_is_strict (features.tests.test_bars_adjust.TestAdjust.test_cutoff_must_be_trading_day_and_truncation_is_strict) ... ok
+test_first_row_is_anchor_and_past_never_changes (features.tests.test_bars_adjust.TestAdjust.test_first_row_is_anchor_and_past_never_changes) ... ok
+test_hand_example_split_and_dividend (features.tests.test_bars_adjust.TestAdjust.test_hand_example_split_and_dividend) ... ok
+test_missing_vendor_row_is_inserted_as_nan (features.tests.test_bars_adjust.TestAdjust.test_missing_vendor_row_is_inserted_as_nan) ... ok
+test_prepare_bars_suspension_and_empty_strings (features.tests.test_bars_adjust.TestAdjust.test_prepare_bars_suspension_and_empty_strings) ... ok
+test_turnover_above_one_is_counted_not_clipped (features.tests.test_bars_adjust.TestAdjust.test_turnover_above_one_is_counted_not_clipped) ... ok
+test_bins_hand (features.tests.test_controls.TestRHHist.test_bins_hand) ... ok
+test_bins_tile_the_window (features.tests.test_controls.TestRHHist.test_bins_tile_the_window) ... ok
+test_hand (features.tests.test_controls.TestRHSum.test_hand) ... ok
+test_warmup (features.tests.test_controls.TestRHSum.test_warmup) ... ok
+test_deviation_uses_index_and_star_uses_raw_change (features.tests.test_controls.TestRO.test_deviation_uses_index_and_star_uses_raw_change) ... ok
+test_limit_counts_nan_over_first_five_trading_days (features.tests.test_controls.TestRO.test_limit_counts_nan_over_first_five_trading_days)
+FEA-7 (c) / ruling F-20: whatever the board and the listing date. ... ok
+test_on_synthetic_bars_ranges (features.tests.test_controls.TestRO.test_on_synthetic_bars_ranges) ... ok
+test_regime_columns (features.tests.test_controls.TestRO.test_regime_columns) ... ok
+test_trigger_and_limit_counts_hand (features.tests.test_controls.TestRO.test_trigger_and_limit_counts_hand) ... ok
+test_boards (features.tests.test_controls.TestRules.test_boards) ... ok
+test_first_trading_rows (features.tests.test_controls.TestRules.test_first_trading_rows) ... ok
+test_group_e_is_read_from_the_engine_calendar (features.tests.test_controls.TestRules.test_group_e_is_read_from_the_engine_calendar)
+Ruling F-20: one calendar. The adapter holds no row of its own and returns, on every day, what the ... ok
+test_ins_regime_boundaries (features.tests.test_controls.TestRules.test_ins_regime_boundaries) ... ok
+test_limit_band_is_the_calendar_band (features.tests.test_controls.TestRules.test_limit_band_is_the_calendar_band) ... ok
+test_limit_prices_agree_with_the_calendar_decimal_version (features.tests.test_controls.TestRules.test_limit_prices_agree_with_the_calendar_decimal_version) ... ok
+test_limit_prices_half_up (features.tests.test_controls.TestRules.test_limit_prices_half_up) ... ok
+test_no_second_copy_of_rule_dates_in_config (features.tests.test_controls.TestRules.test_no_second_copy_of_rule_dates_in_config) ... ok
+test_threshold_regime_boundaries (features.tests.test_controls.TestRules.test_threshold_regime_boundaries) ... ok
+test_top5_regime_is_three_valued (features.tests.test_controls.TestRules.test_top5_regime_is_three_valued)
+Ruling F-13. ... ok
+test_all_checks_bit_identical (features.tests.test_lookahead.TestLookahead.test_all_checks_bit_identical) ... ok
+test_bitwise_equal_semantics (features.tests.test_lookahead.TestLookahead.test_bitwise_equal_semantics) ... ok
+test_corruption_really_changes_the_data (features.tests.test_lookahead.TestLookahead.test_corruption_really_changes_the_data) ... ok
+test_detects_bar_leak (features.tests.test_lookahead.TestLookahead.test_detects_bar_leak) ... ok
+test_detects_too_short_event_lag (features.tests.test_lookahead.TestLookahead.test_detects_too_short_event_lag) ... ok
+test_blocks (features.tests.test_nuisance.TestPermutation.test_blocks) ... ok
+test_columns_of_a_block_move_together_and_blocks_move_independently (features.tests.test_nuisance.TestPermutation.test_columns_of_a_block_move_together_and_blocks_move_independently) ... ok
+test_deterministic_and_seed_dependent (features.tests.test_nuisance.TestPermutation.test_deterministic_and_seed_dependent) ... ok
+test_independent_of_row_order_and_of_other_days (features.tests.test_nuisance.TestPermutation.test_independent_of_row_order_and_of_other_days) ... ok
+test_marginals_missingness_and_event_counts_per_day (features.tests.test_nuisance.TestPermutation.test_marginals_missingness_and_event_counts_per_day) ... ok
+test_other_columns_untouched_and_content_removed (features.tests.test_nuisance.TestPermutation.test_other_columns_untouched_and_content_removed) ... ok
+test_population_mask (features.tests.test_nuisance.TestPermutation.test_population_mask) ... ok
+test_rank_and_zscore_use_same_day_rows_only (features.tests.test_nuisance.TestPreprocess.test_rank_and_zscore_use_same_day_rows_only) ... ok
+test_winsorisation (features.tests.test_nuisance.TestPreprocess.test_winsorisation) ... ok
+test_never_exceeds_a_stratum (features.tests.test_oa10.TestAllocation.test_never_exceeds_a_stratum) ... ok
+test_proportional_with_minimum (features.tests.test_oa10.TestAllocation.test_proportional_with_minimum) ... ok
+test_d_tab_is_the_date_the_pipeline_uses (features.tests.test_oa10.TestSampling.test_d_tab_is_the_date_the_pipeline_uses) ... ok
+test_members_file_restricts_the_frame (features.tests.test_oa10.TestSampling.test_members_file_restricts_the_frame) ... ok
+test_no_blacklisted_field_in_the_sample (features.tests.test_oa10.TestSampling.test_no_blacklisted_field_in_the_sample) ... ok
+test_reproducible_and_seed_recorded (features.tests.test_oa10.TestSampling.test_reproducible_and_seed_recorded) ... ok
+test_rows_are_real_rows_of_the_raw_files_and_unique (features.tests.test_oa10.TestSampling.test_rows_are_real_rows_of_the_raw_files_and_unique) ... ok
+test_sizes_strata_and_hand_recheck (features.tests.test_oa10.TestSampling.test_sizes_strata_and_hand_recheck) ... ok
+test_clopper_pearson_matches_the_plan (features.tests.test_oa10.TestVerdict.test_clopper_pearson_matches_the_plan) ... ok
+test_input_checks (features.tests.test_oa10.TestVerdict.test_input_checks) ... ok
+test_pass_rule_at_n_300 (features.tests.test_oa10.TestVerdict.test_pass_rule_at_n_300) ... ok
+test_signed_quantities (features.tests.test_oa10.TestVerdict.test_signed_quantities) ... ok
+test_against_naive_reference_and_engine_convention (features.tests.test_panel.TestADV.test_against_naive_reference_and_engine_convention) ... ok
+test_bitwise_independent_of_history_length_and_of_later_rows (features.tests.test_panel.TestADV.test_bitwise_independent_of_history_length_and_of_later_rows) ... ok
+test_hand (features.tests.test_panel.TestADV.test_hand) ... ok
+test_lhb_denominator_in_the_panel_is_this_adv (features.tests.test_panel.TestADV.test_lhb_denominator_in_the_panel_is_this_adv) ... ok
+test_long_suspension_denominator_is_the_pre_suspension_mean (features.tests.test_panel.TestADV.test_long_suspension_denominator_is_the_pre_suspension_mean) ... ok
+test_twenty_traded_days_with_suspensions_inside (features.tests.test_panel.TestADV.test_twenty_traded_days_with_suspensions_inside) ... ok
+test_cutoff_argument_truncates (features.tests.test_panel.TestMarketPanel.test_cutoff_argument_truncates) ... ok
+test_files_manifest_and_columns (features.tests.test_panel.TestMarketPanel.test_files_manifest_and_columns) ... ok
+test_missing_zo_file_stops_the_run_in_strict_mode (features.tests.test_panel.TestMarketPanel.test_missing_zo_file_stops_the_run_in_strict_mode) ... ok
+test_report (features.tests.test_panel.TestMarketPanel.test_report) ... ok
+test_resume_skips_finished_names_and_parallel_gives_the_same_files (features.tests.test_panel.TestMarketPanel.test_resume_skips_finished_names_and_parallel_gives_the_same_files) ... ok
+test_stored_values_equal_a_direct_build_bit_for_bit (features.tests.test_panel.TestMarketPanel.test_stored_values_equal_a_direct_build_bit_for_bit) ... ok
+test_diagnostic_column_is_not_a_model_feature (features.tests.test_panel.TestRepairedRows.test_diagnostic_column_is_not_a_model_feature) ... ok
+test_repaired_row_is_an_ordinary_row_and_is_flagged (features.tests.test_panel.TestRepairedRows.test_repaired_row_is_an_ordinary_row_and_is_flagged) ... ok
+test_unrepaired_missing_row_blanks_the_windows_and_nothing_is_filled (features.tests.test_panel.TestRepairedRows.test_unrepaired_missing_row_blanks_the_windows_and_nothing_is_filled) ... ok
+test_columns_equal_catalogue (features.tests.test_registry.TestRegistry.test_columns_equal_catalogue) ... ok
+test_eitime_never_reaches_a_feature (features.tests.test_registry.TestRegistry.test_eitime_never_reaches_a_feature) ... ok
+test_real_files_are_read_through_the_whitelist (features.tests.test_registry.TestRegistry.test_real_files_are_read_through_the_whitelist) ... ok
+test_rows_never_exceed_cutoff (features.tests.test_registry.TestRegistry.test_rows_never_exceed_cutoff) ... ok
+test_whitelist_excludes_ex_post_fields (features.tests.test_registry.TestRegistry.test_whitelist_excludes_ex_post_fields) ... ok
+test_catalogue_source_column (features.tests.test_v08.TestC3Cum3.test_catalogue_source_column) ... ok
+test_copy_deleted_and_read_from_calendar (features.tests.test_v08.TestC3Cum3.test_copy_deleted_and_read_from_calendar) ... ok
+test_all_implausible_gives_nan_with_indicator_one (features.tests.test_v08.TestC4BlockPremium.test_all_implausible_gives_nan_with_indicator_one) ... ok
+test_bars_are_required (features.tests.test_v08.TestC4BlockPremium.test_bars_are_required) ... ok
+test_no_traded_row_is_implausible_and_bounds_are_inclusive (features.tests.test_v08.TestC4BlockPremium.test_no_traded_row_is_implausible_and_bounds_are_inclusive) ... ok
+test_trade_above_limit_is_excluded_from_the_premium (features.tests.test_v08.TestC4BlockPremium.test_trade_above_limit_is_excluded_from_the_premium) ... ok
+test_vendor_column_is_not_read (features.tests.test_v08.TestC4BlockPremium.test_vendor_column_is_not_read) ... ok
+test_factor_directory_is_never_opened (features.tests.test_v08.TestC6NoAdjustment.test_factor_directory_is_never_opened)
+A file that is not parquet at all sits in the factor directory: a full panel build through ... ok
+test_refused_inputs (features.tests.test_v08.TestC6NoAdjustment.test_refused_inputs) ... ok
+test_no_default_and_rows_after_the_cutoff_are_not_read (features.tests.test_v08.TestC8Cutoff.test_no_default_and_rows_after_the_cutoff_are_not_read) ... ok
+test_panel_records_the_cutoff_and_ignores_later_data (features.tests.test_v08.TestC8Cutoff.test_panel_records_the_cutoff_and_ignores_later_data)
+(c) panel_meta.json and every manifest row carry the cut-off; replacing every raw row after the ... ok
+test_zo_files_after_the_cutoff_are_never_opened (features.tests.test_v08.TestC8Cutoff.test_zo_files_after_the_cutoff_are_never_opened) ... ok
+test_constant_turnover (features.tests.test_zh.TestATO.test_constant_turnover) ... ok
+test_hand (features.tests.test_zh.TestATO.test_hand) ... ok
+test_zero_turnover_is_nan_not_inf (features.tests.test_zh.TestATO.test_zero_turnover_is_nan_not_inf) ... ok
+test_columns_primary_and_variants (features.tests.test_zh.TestCGO.test_columns_primary_and_variants) ... ok
+test_hand_example (features.tests.test_zh.TestCGO.test_hand_example) ... ok
+test_no_trading_in_window_is_nan (features.tests.test_zh.TestCGO.test_no_trading_in_window_is_nan) ... ok
+test_primary_is_nolag_variant_shifted_one_row (features.tests.test_zh.TestCGO.test_primary_is_nolag_variant_shifted_one_row) ... ok
+test_reference_price_inside_window_range_and_scale_invariant (features.tests.test_zh.TestCGO.test_reference_price_inside_window_range_and_scale_invariant) ... ok
+test_suspended_day_contributes_zero_and_full_turnover_resets (features.tests.test_zh.TestCGO.test_suspended_day_contributes_zero_and_full_turnover_resets) ... ok
+test_turnover_cap_modes (features.tests.test_zh.TestCGO.test_turnover_cap_modes) ... ok
+test_weekly_variant_constant_within_a_decision_week_and_warmup (features.tests.test_zh.TestCGO.test_weekly_variant_constant_within_a_decision_week_and_warmup) ... ok
+test_weekly_variant_is_literal_transcription (features.tests.test_zh.TestCGO.test_weekly_variant_is_literal_transcription) ... ok
+test_weights_plus_survivor_mass_sum_to_one (features.tests.test_zh.TestCGO.test_weights_plus_survivor_mass_sum_to_one) ... ok
+test_zero_when_price_equals_reference_price (features.tests.test_zh.TestCGO.test_zero_when_price_equals_reference_price) ... ok
+test_constant_price_history (features.tests.test_zh.TestChips.test_constant_price_history) ... ok
+test_grid_quantiles_against_fine_grid (features.tests.test_zh.TestChips.test_grid_quantiles_against_fine_grid) ... ok
+test_hand_example_two_days (features.tests.test_zh.TestChips.test_hand_example_two_days) ... ok
+test_total_mass_and_monotone (features.tests.test_zh.TestChips.test_total_mass_and_monotone) ... ok
+test_triangular_cdf (features.tests.test_zh.TestChips.test_triangular_cdf) ... ok
+test_turnover_above_one_capped_or_window_dropped (features.tests.test_zh.TestChips.test_turnover_above_one_capped_or_window_dropped) ... ok
+test_two_initialisations_agree_when_the_window_turned_over_completely (features.tests.test_zh.TestChips.test_two_initialisations_agree_when_the_window_turned_over_completely) ... ok
+test_warmup_and_post_suspension_blank (features.tests.test_zh.TestChips.test_warmup_and_post_suspension_blank) ... ok
+test_zero_turnover_window_is_nan_under_renormalise (features.tests.test_zh.TestChips.test_zero_turnover_window_is_nan_under_renormalise) ... ok
+test_amount_weighted_premium_and_ratio (features.tests.test_zo.TestBLK.test_amount_weighted_premium_and_ratio) ... ok
+test_missing_float_value_gives_nan_intensity_not_zero (features.tests.test_zo.TestBLK.test_missing_float_value_gives_nan_intensity_not_zero) ... ok
+test_analysis_start_is_2008 (features.tests.test_zo.TestCoverage.test_analysis_start_is_2008) ... ok
+test_ins_coverage_by_announcement_year (features.tests.test_zo.TestCoverage.test_ins_coverage_by_announcement_year) ... ok
+test_non_strict_keeps_the_nan_behaviour (features.tests.test_zo.TestCoverage.test_non_strict_keeps_the_nan_behaviour) ... ok
+test_strict_is_the_default_of_the_assembly (features.tests.test_zo.TestCoverage.test_strict_is_the_default_of_the_assembly) ... ok
+test_strict_raises_on_a_missing_file_inside_the_analysis_period (features.tests.test_zo.TestCoverage.test_strict_raises_on_a_missing_file_inside_the_analysis_period) ... ok
+test_announcement_date_not_trade_date_and_weekend_roll (features.tests.test_zo.TestINS.test_announcement_date_not_trade_date_and_weekend_roll) ... ok
+test_backfilled_row_is_used_from_its_announcement_day_only (features.tests.test_zo.TestINS.test_backfilled_row_is_used_from_its_announcement_day_only) ... ok
+test_cleaning_rules (features.tests.test_zo.TestINS.test_cleaning_rules) ... ok
+test_intensity_switch_off_blanks_intensities_and_keeps_indicators (features.tests.test_zo.TestINS.test_intensity_switch_off_blanks_intensities_and_keeps_indicators)
+FEA-13 (ruling F-10). ... ok
+test_missing_ratio_propagates_as_nan (features.tests.test_zo.TestINS.test_missing_ratio_propagates_as_nan) ... ok
+test_code_mapping (features.tests.test_zo.TestLHB.test_code_mapping) ... ok
+test_cutoff_drops_events_not_yet_usable (features.tests.test_zo.TestLHB.test_cutoff_drops_events_not_yet_usable) ... ok
+test_days_since_and_has_prior_250_day_lookback (features.tests.test_zo.TestLHB.test_days_since_and_has_prior_250_day_lookback) ... ok
+test_days_since_independent_of_the_start_of_the_raw_data (features.tests.test_zo.TestLHB.test_days_since_independent_of_the_start_of_the_raw_data) ... ok
+test_days_since_nan_until_250_plus_lag_days_of_coverage (features.tests.test_zo.TestLHB.test_days_since_nan_until_250_plus_lag_days_of_coverage) ... ok
+test_institutional_table_same_rule (features.tests.test_zo.TestLHB.test_institutional_table_same_rule) ... ok
+test_intensity_and_exact_zero_without_event (features.tests.test_zo.TestLHB.test_intensity_and_exact_zero_without_event) ... ok
+test_lag_one_parameter (features.tests.test_zo.TestLHB.test_lag_one_parameter) ... ok
+test_lag_two_window_one (features.tests.test_zo.TestLHB.test_lag_two_window_one) ... ok
+test_missing_adv_with_an_event_is_nan_not_zero (features.tests.test_zo.TestLHB.test_missing_adv_with_an_event_is_nan_not_zero) ... ok
+test_reason_table (features.tests.test_zo.TestLHB.test_reason_table) ... ok
+test_reason_table_is_reproduced_by_its_builder_rule (features.tests.test_zo.TestLHB.test_reason_table_is_reproduced_by_its_builder_rule) ... ok
+test_same_day_rows_choice_and_ties (features.tests.test_zo.TestLHB.test_same_day_rows_choice_and_ties) ... ok
+test_single_day_rows_followed_by_three_day_cumulative_row_are_not_added_twice (features.tests.test_zo.TestLHB.test_single_day_rows_followed_by_three_day_cumulative_row_are_not_added_twice) ... ok
+test_stock_day_with_multi_day_rows_only (features.tests.test_zo.TestLHB.test_stock_day_with_multi_day_rows_only) ... ok
+test_unclassified_reason_counts_for_the_indicator_only (features.tests.test_zo.TestLHB.test_unclassified_reason_counts_for_the_indicator_only) ... ok
+test_uncovered_period_is_nan_with_data_flag_zero (features.tests.test_zo.TestLHB.test_uncovered_period_is_nan_with_data_flag_zero) ... ok
+test_windows_5_and_20 (features.tests.test_zo.TestLHB.test_windows_5_and_20) ... ok
+
+----------------------------------------------------------------------
+Ran 147 tests in 87.641s
+
+OK
+
+unit tests: run=147 failures=0 errors=0 skipped=0

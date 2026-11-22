@@ -1,0 +1,9 @@
+2026-11-15 17:15:32 [run] id=crosscheck_20261115_171532 stage=crosscheck sources=['sina_daily'] limit=20 codes_file=experiments/results/data_fetch/trial_codes.txt period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\crosscheck_20261115_171532.log
+2026-11-15 17:15:32 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=3, pause_seconds=1800.0, max_pauses=0, ratelimit_wait=330.0, daily_unit_cap=1000, max_requests=60, progress_units=5, progress_seconds=300.0, resume=True, retry_empty=False, run_id='crosscheck_20261115_171532')
+2026-11-15 17:15:32 [start] crosscheck: units total=20 already done (verified)=0 to fetch=20
+2026-11-15 17:16:01 [progress] crosscheck: done=5/20 (this run 5: ok=5 empty=0 failed=0; resumed-skip=0) success=100.0% mean=5.8s/unit ETA=1.4min requests this run: baostock=0 http=10 pauses=0
+2026-11-15 17:16:33 [progress] crosscheck: done=10/20 (this run 10: ok=10 empty=0 failed=0; resumed-skip=0) success=100.0% mean=6.1s/unit ETA=1.0min requests this run: baostock=0 http=20 pauses=0
+2026-11-15 17:17:05 [progress] crosscheck: done=15/20 (this run 15: ok=15 empty=0 failed=0; resumed-skip=0) success=100.0% mean=6.2s/unit ETA=0.5min requests this run: baostock=0 http=30 pauses=0
+2026-11-15 17:17:36 [progress] crosscheck: done=20/20 (this run 20: ok=20 empty=0 failed=0; resumed-skip=0) success=100.0% mean=6.2s/unit ETA=0.0min requests this run: baostock=0 http=40 pauses=0
+2026-11-15 17:17:36 [final] crosscheck: done=20/20 (this run 20: ok=20 empty=0 failed=0; resumed-skip=0) success=100.0% mean=6.2s/unit ETA=0.0min requests this run: baostock=0 http=40 pauses=0
+2026-11-15 17:17:36 [exit] code=0

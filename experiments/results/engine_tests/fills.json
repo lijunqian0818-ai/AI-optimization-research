@@ -1,0 +1,193 @@
+{
+ "module": "fills",
+ "conventions_hash": {
+  "config.py": "f07256ed1bcdf53db7b77e6ff7d712308584be1a11b5a60e180710fa17960d83",
+  "rule_calendar.py": "050265366e8af902007f9746b7ff68eade67a4c1d3c84894f50dc73d2c8007bb",
+  "combined": "6ed8db719e11d017e58078a19cecfabff3ce7133da61d07ce2d5c7e87d6f86e8"
+ },
+ "n": 30,
+ "passed": 30,
+ "failed": 0,
+ "seconds": 2.43,
+ "results": [
+  {
+   "test": "test_buy_inside_band_filled_by_all",
+   "doc": "",
+   "status": "pass"
+  },
+  {
+   "test": "test_buy_open_at_limit_up",
+   "doc": "Open = P_up (11.00): SF not filled (S2), SF-strict not filled, SF-loose filled.",
+   "status": "pass"
+  },
+  {
+   "test": "test_buy_strict_band_threshold",
+   "doc": "SF-strict: open <= ref x (1 + 0.8 x 10%) = 10.80.",
+   "status": "pass"
+  },
+  {
+   "test": "test_buy_open_above_computed_limit",
+   "doc": "No-limit day / wrong preclose: open 11.20 > P_up 11.00 -> not filled under all three rules.",
+   "status": "pass"
+  },
+  {
+   "test": "test_s1_cases",
+   "doc": "Suspended row; flagged trading with zero volume; no row; flagged suspended WITH volume: all S1.",
+   "status": "pass"
+  },
+  {
+   "test": "test_capacity_cap",
+   "doc": "ADV20 = 1e6 -> cap 1e4 (SF), 1e3 (SF-strict), none (SF-loose).",
+   "status": "pass"
+  },
+  {
+   "test": "test_adv_window_uses_days_before_t_only",
+   "doc": "ADV_t (PLAN 3.7, v0.7 E-5): the 20 most recent TRADED days dated <= t-1; days without a trade",
+   "status": "pass"
+  },
+  {
+   "test": "test_adv_window_with_suspended_days_inside",
+   "doc": "(b) 5 suspended days inside the window: ADV = mean of the 20 traded days (by hand).",
+   "status": "pass"
+  },
+  {
+   "test": "test_adv_fewer_than_20_traded_days_and_none",
+   "doc": "(c) listed for 3 traded days: mean of those that exist (2e6, 4e6, 9e6 -> 5e6); none: cap 0.",
+   "status": "pass"
+  },
+  {
+   "test": "test_sell_order_value_uses_day_t_preclose_on_ex_date",
+   "doc": "(d) sell on the ex-date of a 2-for-1 split: order value = quantity AFTER the split x the day's",
+   "status": "pass"
+  },
+  {
+   "test": "test_stale_cap_fill_is_counted",
+   "doc": "(e) a fill whose ADV window reaches back more than 60 market days is a 'stale-cap fill' (U59).",
+   "status": "pass"
+  },
+  {
+   "test": "test_sf_strict_fills_are_a_subset_of_sf_fills",
+   "doc": "E-6: property test on random bars (incl. reference prices below 0.10 yuan, opens off the tick",
+   "status": "pass",
+   "info": {
+    "decisions": 28800,
+    "SF_fills": 16462,
+    "SF_strict_fills": 10583
+   }
+  },
+  {
+   "test": "test_sf_strict_reference_price_below_ten_cents",
+   "doc": "E-6 boundary: reference 0.05, band 10%: P_up = 0.06, P_down = 0.04 (+-0.01 rule); the strict",
+   "status": "pass"
+  },
+  {
+   "test": "test_no_ref_is_not_part_of_S_t",
+   "doc": "E-17: no row (or no reference price) on the order day -> no order, reason 'no_ref', outside S_t;",
+   "status": "pass"
+  },
+  {
+   "test": "test_min_commission_binding_and_not_binding",
+   "doc": "E-4: q = (slot - 5) / (P_up (1 + kappa) + f); commission = max(rate x value, 5), once per order.",
+   "status": "pass",
+   "info": {
+    "5005.0": {
+     "commission": 5.0,
+     "binds": true
+    },
+    "100005.0": {
+     "commission": 23.84527550150021,
+     "binds": false
+    }
+   }
+  },
+  {
+   "test": "test_min_commission_slot_too_small",
+   "doc": "E-4: slot cash <= 5 yuan: nothing is left after the reserve -> no order, reason 'min_commission'.",
+   "status": "pass"
+  },
+  {
+   "test": "test_min_commission_merged_sell_charged_once_pro_rata",
+   "doc": "E-4 (d): two lots of one name sold in ONE order: one minimum commission, split pro rata to shares.",
+   "status": "pass",
+   "info": {
+    "order_commission": 5.0,
+    "order_cost": 14.83787937833323
+   }
+  },
+  {
+   "test": "test_min_commission_cash_never_negative_with_lot_rounding",
+   "doc": "E-4 (c): lot-rounding robustness configuration with the 5-yuan minimum on random markets: after",
+   "status": "pass",
+   "info": {
+    "buys": 7320,
+    "buys_with_binding_minimum": 7319,
+    "min_sleeve_cash_after_buy": 4461.906640051649
+   }
+  },
+  {
+   "test": "test_non_netting_unequal_buy_and_sell",
+   "doc": "E-3, unequal sizes: sell v (lot 1), buy v/2 (scale 0.5).  Net = v/2 (a sell); non-netting amount",
+   "status": "pass"
+  },
+  {
+   "test": "test_sell_side_mirror",
+   "doc": "Sell: SF open > P_down (9.00); SF-strict open >= 9.20; SF-loose open >= 9.00; below P_down nobody.",
+   "status": "pass"
+  },
+  {
+   "test": "test_rounding_boundary_in_fill",
+   "doc": "preclose 10.05 -> P_up 11.06 (half-up).  Open 11.05 is strictly below: filled under SF.",
+   "status": "pass"
+  },
+  {
+   "test": "test_bands_by_board_date_status",
+   "doc": "ChiNext ST 2020-08-21 (5%) vs 2020-08-24 (20%); STAR 20%; main ST 5%.",
+   "status": "pass"
+  },
+  {
+   "test": "test_only_three_fields_of_day_t_bar_are_read",
+   "doc": "Changing close / amount of day t and everything after t leaves every decision unchanged;",
+   "status": "pass"
+  },
+  {
+   "test": "test_unfilled_buy_is_cancelled_not_retried",
+   "doc": "Limit-up open on the order day: no lot; the cash stays; no order on later days.",
+   "status": "pass"
+  },
+  {
+   "test": "test_limit_down_sequence_exit_is_retried",
+   "doc": "Exit due on day 3; days 3 and 4 open at limit-down (not filled, retried); day 5 fills.",
+   "status": "pass"
+  },
+  {
+   "test": "test_two_lots_due_same_day_one_order_cap_on_total",
+   "doc": "Lot A (entry day 1, due day 3, blocked by limit-down) meets lot B (entry day 2, due day 4):",
+   "status": "pass"
+  },
+  {
+   "test": "test_buy_and_sell_same_name_same_day_not_netted",
+   "doc": "E-3: a lot is due for sale on a day on which the same name is bought again: two orders, two",
+   "status": "pass",
+   "info": {
+    "order_turnover_day3": 181678.28953523972,
+    "net_day3": 0.0,
+    "non_netting_cost_day3": 230.73142770975443
+   }
+  },
+  {
+   "test": "test_quantity_predetermined_and_affordable",
+   "doc": "q = slot / (P_up (1 + kappa) + per-share fee): uses P_up, not the open; cash never negative,",
+   "status": "pass"
+  },
+  {
+   "test": "test_lot_rounding_by_board",
+   "doc": "Lot-rounding run: STAR order of ~150 shares -> no order; ~250 -> 250; main board 250 -> 200.",
+   "status": "pass"
+  },
+  {
+   "test": "test_circuit_breaker_days_flagged_in_trade_ledger",
+   "doc": "",
+   "status": "pass"
+  }
+ ]
+}

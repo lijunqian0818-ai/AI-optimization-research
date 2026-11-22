@@ -1,0 +1,17 @@
+{
+ "label": "ADJ:b003@6bdc3fe7d9efdda7b1d1775668a1073561c6feea0765d91363bcadf047368bbb",
+ "decisions": [
+  {
+   "id": "R00096",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "China A-share multi-factor benchmark; dynamic factor weighting/timing (T4) not stated"
+  },
+  {
+   "id": "R00099",
+   "d": "unclear",
+   "code": "UNC",
+   "why": "China stock characteristics/factor evidence; T4 plausible but timing not stated"
+  }
+ ]
+}

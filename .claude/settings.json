@@ -1,0 +1,41 @@
+{
+  "model": "fable",
+  "effortLevel": "medium",
+  "fallbackModel": ["opus"],
+  "permissions": {
+    "allow": [
+      "Bash(python tools/ask_reviewer.py *)",
+      "Bash(python tools/search_resources.py *)",
+      "Bash(python tools/fetch_resource.py *)",
+      "PowerShell(python tools/ask_reviewer.py *)",
+      "PowerShell(python tools/search_resources.py *)",
+      "PowerShell(python tools/fetch_resource.py *)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/tools/dashboard_hook.py\" 2>/dev/null || true", "async": true, "timeout": 10 }] }
+    ],
+    "Stop": [
+      { "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/tools/dashboard_hook.py\" 2>/dev/null || true", "async": true, "timeout": 10 }] }
+    ],
+    "Notification": [
+      { "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/tools/dashboard_hook.py\" 2>/dev/null || true", "async": true, "timeout": 10 }] }
+    ],
+    "PreToolUse": [
+      { "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/tools/dashboard_hook.py\" 2>/dev/null || true", "async": true, "timeout": 10 }] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Agent|Task|Skill", "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/tools/dashboard_hook.py\" 2>/dev/null || true", "async": true, "timeout": 10 }] }
+    ],
+    "PostToolUseFailure": [
+      { "matcher": "Agent|Task|Skill", "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/tools/dashboard_hook.py\" 2>/dev/null || true", "async": true, "timeout": 10 }] }
+    ],
+    "SubagentStart": [
+      { "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/tools/dashboard_hook.py\" 2>/dev/null || true", "async": true, "timeout": 10 }] }
+    ],
+    "SubagentStop": [
+      { "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/tools/dashboard_hook.py\" 2>/dev/null || true", "async": true, "timeout": 10 }] }
+    ]
+  }
+}

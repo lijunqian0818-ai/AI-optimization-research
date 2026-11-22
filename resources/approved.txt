@@ -1,0 +1,12 @@
+# 用户已批准下载的资源（每行一个标识符，例如 github:owner/repo、hf-dataset:org/name）。
+# 只有组长在用户于关卡批准下载清单之后，才可以往这里加行。论文 PDF 不需要列在这里。
+# 2026-11-15 用户在对话中回复"全部批准"（针对 resources/DOWNLOAD_LIST.md 当时的全部条目）
+github:myhhub/stock
+github:microsoft/qlib
+github:chenditc/investment_data
+hf-dataset:ellendan/a-share-prices
+hf-dataset:joshuaxql/qlib_data
+github:Z-T-WANG/NIPS2019DeepGamblers
+github:gatheluck/pytorch-SelectiveNet
+github:aangelopoulos/conformal-risk
+github:datamllab/rlcard

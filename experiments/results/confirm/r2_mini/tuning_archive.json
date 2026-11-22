@@ -1,0 +1,634 @@
+{
+ "code_hash": "d430548bebe680372588298d8bda9c575502bb930949a6a9db12427a9ccce9f4",
+ "created": "2026-11-17T12:20:25",
+ "data_cutoff": "2021-12-31",
+ "entries": {
+  "base|lgbm": {
+   "chosen": {
+    "V": 0,
+    "rank_ic": 0
+   },
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ]
+  },
+  "base|ridge": {
+   "chosen": {
+    "V": 0,
+    "rank_ic": 0
+   },
+   "configs": [
+    {
+     "alpha": 1000.0,
+     "model": "ridge"
+    }
+   ]
+  },
+  "gate|lgbm|LOSS(+Z_H)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|lgbm|LOSS(+Z_H)-thr": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "theta_sel"
+  },
+  "gate|lgbm|LOSS(+Z_H+Z_O*)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|lgbm|LOSS(+Z_O)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|lgbm|LOSS(+Z_O)-thr": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "theta_sel"
+  },
+  "gate|lgbm|LOSS(+Z_O*)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|lgbm|LOSS(-Z)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|lgbm|LOSS(-Z)-thr": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "theta_sel"
+  },
+  "gate|lgbm|LOSS-LR(-Z)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "C": 0.1
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|lgbm|NET-K(+Z_H)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|lgbm|NET-K(+Z_O*)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|lgbm|NET-K(-Z)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|lgbm|NET-U(-Z)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "theta_sel"
+  },
+  "gate|ridge|LOSS(+Z_H)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|ridge|LOSS(+Z_H)-thr": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "theta_sel"
+  },
+  "gate|ridge|LOSS(+Z_H+Z_O*)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|ridge|LOSS(+Z_O)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|ridge|LOSS(+Z_O)-thr": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "theta_sel"
+  },
+  "gate|ridge|LOSS(+Z_O*)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|ridge|LOSS(-Z)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|ridge|LOSS(-Z)-thr": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "theta_sel"
+  },
+  "gate|ridge|LOSS-LR(-Z)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "C": 0.1
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|ridge|NET-K(+Z_H)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|ridge|NET-K(+Z_O*)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|ridge|NET-K(-Z)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "V"
+  },
+  "gate|ridge|NET-U(-Z)": {
+   "chosen": 0,
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ],
+   "criterion": "theta_sel"
+  },
+  "grid|lgbm|PERF": {
+   "chosen": 0,
+   "configs": [
+    {
+     "halflife": 20,
+     "thr": 0.02
+    }
+   ]
+  },
+  "grid|lgbm|TREND": {
+   "chosen": 0,
+   "configs": [
+    {
+     "L": 60,
+     "thr": 0.0
+    }
+   ]
+  },
+  "grid|ridge|PERF": {
+   "chosen": 0,
+   "configs": [
+    {
+     "halflife": 20,
+     "thr": 0.02
+    }
+   ]
+  },
+  "grid|ridge|TREND": {
+   "chosen": 0,
+   "configs": [
+    {
+     "L": 60,
+     "thr": 0.0
+    }
+   ]
+  },
+  "netu15": {
+   "chosen": {
+    "V": 0
+   },
+   "configs": [
+    {
+     "feature_fraction": 0.8,
+     "lambda_l2": 0.0,
+     "learning_rate": 0.05,
+     "min_child_frac": 0.0005,
+     "n_estimators": 100,
+     "num_leaves": 31
+    }
+   ]
+  },
+  "vt|lgbm|0": {
+   "sigma_star": 0.004665180941790097
+  },
+  "vt|ridge|0": {
+   "sigma_star": 0.00471253064271299
+  }
+ },
+ "format": "confirm tuning archive v1",
+ "tuning_spec": {
+  "H": 5,
+  "K": 30,
+  "K_tr_mult": 3,
+  "N_U": 300,
+  "W0": 10000000.0,
+  "base_deploy_start": 2018,
+  "base_features": "-Z",
+  "base_tune_years": [
+   2017
+  ],
+  "bases": [
+   "lgbm",
+   "ridge"
+  ],
+  "blas_threads": 2,
+  "block_mean": 24,
+  "c": 0.5,
+  "codes_subset": [
+   "sh.600000",
+   "sh.600011",
+   "sh.600023",
+   "sh.600035",
+   "sh.600054",
+   "sh.600064",
+   "sh.600075",
+   "sh.600085",
+   "sh.600096",
+   "sh.600106",
+   "sh.600116",
+   "sh.600127",
+   "sh.600138",
+   "sh.600152",
+   "sh.600163",
+   "sh.600175",
+   "sh.600186",
+   "sh.600197",
+   "sh.600209",
+   "sh.600220",
+   "sh.600231",
+   "sh.600241",
+   "sh.600253",
+   "sh.600265",
+   "sh.600276",
+   "sh.600287",
+   "sh.600299",
+   "sh.600310",
+   "sh.600321",
+   "sh.600332",
+   "sh.600346",
+   "sh.600358",
+   "sh.600369",
+   "sh.600380",
+   "sh.600391",
+   "sh.600403",
+   "sh.600420",
+   "sh.600435",
+   "sh.600456",
+   "sh.600469",
+   "sh.600483",
+   "sh.600496",
+   "sh.600507",
+   "sh.600518",
+   "sh.600529",
+   "sh.600540",
+   "sh.600553",
+   "sh.600565",
+   "sh.600576",
+   "sh.600586",
+   "sh.600596",
+   "sh.600606",
+   "sh.600616",
+   "sh.600627",
+   "sh.600638",
+   "sh.600649",
+   "sh.600660",
+   "sh.600673",
+   "sh.600683",
+   "sh.600693",
+   "sh.600704",
+   "sh.600715",
+   "sh.600725",
+   "sh.600735",
+   "sh.600745",
+   "sh.600756",
+   "sh.600767",
+   "sh.600778",
+   "sh.600789",
+   "sh.600800",
+   "sh.600810",
+   "sh.600821",
+   "sh.600831",
+   "sh.600841",
+   "sh.600851",
+   "sh.600862",
+   "sh.600872",
+   "sh.600883",
+   "sh.600893",
+   "sh.600906",
+   "sh.600928",
+   "sh.600956",
+   "sh.600968",
+   "sh.600980",
+   "sh.600990",
+   "sh.688048",
+   "sh.688077",
+   "sh.688180",
+   "sh.688268",
+   "sh.688625",
+   "sh.688785",
+   "sh.689009",
+   "sz.000090",
+   "sz.000537",
+   "sz.000752",
+   "sz.000792",
+   "sz.001211",
+   "sz.001332",
+   "sz.002450",
+   "sz.300104"
+  ],
+  "criterion_resolved_only": true,
+  "decision_cutoff": "",
+  "e_const_dev_for": [
+   "SCORE",
+   "CONF",
+   "LOSS(-Z)",
+   "LOSS(+Z_H)",
+   "LOSS(+Z_O*)"
+  ],
+  "eval_years": [
+   2021
+  ],
+  "failed_score": "exclude",
+  "first_feature_year": 2015,
+  "gate_criterion": "V",
+  "gate_rule": "fixed_count",
+  "gate_tune_years": [
+   2020
+  ],
+  "gate_window": "y1",
+  "lgbm_threads": 2,
+  "methods": [
+   "G0",
+   "SCORE",
+   "CONF",
+   "LOSS-LR(-Z)",
+   "LOSS(-Z)",
+   "LOSS(+Z_H)",
+   "LOSS(+Z_O*)",
+   "LOSS(+Z_O)",
+   "LOSS(+Z_H+Z_O*)",
+   "NET-K(-Z)",
+   "NET-K(+Z_H)",
+   "NET-K(+Z_O*)",
+   "NET-U(-Z)",
+   "NET-U15(-Z)",
+   "BASE-V",
+   "BASEV-RERANK",
+   "VOL",
+   "LIQ",
+   "LOSS(-Z)-thr",
+   "LOSS(+Z_H)-thr",
+   "LOSS(+Z_O)-thr",
+   "TREND",
+   "PERF",
+   "VT"
+  ],
+  "n_configs": 1,
+  "netu15_base_rank_input": false,
+  "perm_draws": 1,
+  "perm_groups": [
+   "Z_H",
+   "Z_O*"
+  ],
+  "rnd_for": [
+   "CONF",
+   "LOSS(-Z)",
+   "LOSS(+Z_H)",
+   "LOSS(+Z_O*)"
+  ],
+  "seeds": [
+   0
+  ],
+  "universe_csv": "experiments/data/universe_pilot_v1.csv",
+  "universe_sha256": "10abefede7b7c6facebf3f3f9adf71e757f3abd02860f037ee30855bade28fdd"
+ },
+ "tuning_spec_hash": "c0e44d0ea749e04fdc688e7a0f9f97ff786f1cc9e9c18b2458cf898b84a57263"
+}

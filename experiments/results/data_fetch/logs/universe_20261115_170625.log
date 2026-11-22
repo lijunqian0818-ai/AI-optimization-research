@@ -1,0 +1,9 @@
+2026-11-15 17:06:25 [run] id=universe_20261115_170625 stage=universe sources=['bs_stock_basic', 'bs_trade_dates', 'bs_stock_industry', 'sse_delist', 'szse_delist'] limit=0 codes_file=- period=2008-01-01..2026-06-30 log=C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\logs\universe_20261115_170625.log
+2026-11-15 17:06:25 [cfg] Cfg(bs_gap=1.0, bs_timeout=180.0, bs_relogin_every=400, bs_relogin_minutes=25.0, http_gap=1.5, http_daily_cap=3000, backoff=(5.0, 20.0, 60.0), max_consec_fail=5, pause_seconds=1800.0, max_pauses=6, ratelimit_wait=330.0, daily_unit_cap=0, max_requests=0, progress_units=20, progress_seconds=300.0, resume=True, retry_empty=False, run_id='universe_20261115_170625')
+2026-11-15 17:06:25 [start] universe: units total=5 already done (verified)=0 to fetch=5
+2026-11-15 17:06:27 [baostock] login ok (login #1)
+2026-11-15 17:08:10 [error] universe/szse_delist/all attempt 0: ConnectionError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)) | last http status=200 head='{"actionErrors":[],"actionMessages":[],"fieldErrors":{},"isPagination":"true","j'
+2026-11-15 17:08:18 [final] universe: done=5/5 (this run 5: ok=5 empty=0 failed=0; resumed-skip=0) success=100.0% mean=22.5s/unit ETA=0.0min requests this run: baostock=3 http=3 pauses=0
+2026-11-15 17:08:18 [universe] work list: 5478 A-shares listed at any time in [2008-01-01, 2026-06-30] -> universe/a_share_worklist.csv
+2026-11-15 17:08:18 [universe] summary written to C:\Users\lijun\Desktop\AI-Optimization-Research\experiments\results\data_fetch\universe_summary.json: worklist_n=5478 by_board={'sse_main': 1816, 'chinext': 1439, 'szse_main(sme_until_2021)': 973, 'szse_main': 636, 'star': 613, 'chinext(prefix_302_unverified)': 1}
+2026-11-15 17:08:19 [exit] code=0
